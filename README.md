@@ -1,4 +1,4 @@
-# Cloud & DevOps Hands-On Labs (KodeKloud Engineer)
+# Cloud & DevOps Hands-On Labs
 
 ## Overview
 This repository contains hands-on cloud and DevOps labs completed as part of the KodeKloud Engineer program. The labs simulate real-world infrastructure, automation, and deployment scenarios across AWS, Azure, Linux, Docker, Kubernetes, CI/CD, and Infrastructure as Code.
