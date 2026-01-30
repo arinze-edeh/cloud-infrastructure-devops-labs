@@ -32,12 +32,6 @@ Key pairs are required for secure SSH access to EC2 instances and are a foundati
 ## Step 1: Confirm AWS Region
 
 <img width="1041" height="880" alt="image" src="https://github.com/user-attachments/assets/f0f4b053-6032-4924-9152-d2b329c1f20d" />
-```bash
-aws configure get region
-
-
-
-
 
 ## Step 2: Create EC2 Key Pair
 
