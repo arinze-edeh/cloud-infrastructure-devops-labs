@@ -37,3 +37,5 @@ Confirmed the working region is set to `us-east-1` before creating resources.
 ```bash
 aws configure get region
 
+<img width="1109" height="948" alt="image" src="https://github.com/user-attachments/assets/650da4fc-6985-47d3-aa1f-5526b7674019" />
+
