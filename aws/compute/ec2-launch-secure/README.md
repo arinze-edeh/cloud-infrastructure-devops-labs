@@ -2,40 +2,94 @@
 
 ## Overview
 This lab demonstrates how to create and securely manage an Amazon EC2 key pair using the AWS CLI.  
-Key pairs are required for SSH-based authentication into EC2 instances and are a foundational security component in AWS environments.
+Key pairs are required for secure SSH access to EC2 instances and are a foundational security control in AWS environments.
 
 ---
 
 ## Objectives
 - Create an EC2 key pair using RSA encryption
-- Store the private key securely
-- Apply correct Linux file permissions
-- Verify key pair creation via AWS CLI
+- Secure the private key with proper Linux permissions
+- Verify key pair creation using AWS CLI
+- Prepare credentials for secure EC2 access
 
 ---
 
-## Tools & Services
+## Tools & Services Used
 - AWS EC2
 - AWS CLI
 - Linux Shell
-- AWS IAM (preconfigured lab credentials)
+- IAM (Preconfigured lab credentials)
 
 ---
 
-## Architecture Context
-- Region: `us-east-1`
-- Authentication Method: SSH (Key Pair)
-- Encryption Type: RSA
+## Environment Details
+- AWS Region: `us-east-1`
+- Authentication Method: SSH Key Pair
+- Key Type: RSA
 
 ---
 
-## Implementation Steps
+## Step 1: Confirm AWS Region
 
-### Step 1: Verify AWS Region
-Confirmed the working region is set to `us-east-1` before creating resources.
-
+<img width="1041" height="880" alt="image" src="https://github.com/user-attachments/assets/f0f4b053-6032-4924-9152-d2b329c1f20d" />
 ```bash
 aws configure get region
 
+<img width="1041" height="880" alt="image" src="https://github.com/user-attachments/assets/f0f4b053-6032-4924-9152-d2b329c1f20d" />
 <img width="1109" height="948" alt="image" src="https://github.com/user-attachments/assets/650da4fc-6985-47d3-aa1f-5526b7674019" />
+<img width="1099" height="902" alt="image" src="https://github.com/user-attachments/assets/4dd0aabd-ebcf-45c8-a0c5-440fe9b40481" />
+<img width="1068" height="911" alt="image" src="https://github.com/user-attachments/assets/edd63c96-09dd-4acb-b4fd-d3be90c7ec9b" />
 
+## Step 2: Create EC2 Key Pair
+
+- Created an RSA-based EC2 key pair named xfusion-kp using the AWS CLI
+
+aws ec2 create-key-pair \
+  --key-name xfusion-kp \
+  --key-type rsa \
+  --query 'KeyMaterial' \
+  --output text > xfusion-kp.pem
+
+## Step 3: Secure the Private Key
+
+- Applied strict file permissions to protect the private key as required by SSH.
+
+chmod 400 xfusion-kp.pem
+
+- Verified permissions
+
+ls -l xfusion-kp.pem
+
+## Step 4: Verify Key Pair Creation in AWS
+
+- Confirmed the key pair exists in AWS.
+
+## Result
+
+- EC2 key pair successfully created
+
+- Private key securely stored
+
+- Key pair verified and ready for EC2 instance launches
+
+## Security Best Practices
+
+- Never commit private keys to GitHub
+
+- Restrict key permissions to the owner only
+
+- Rotate keys periodically in production environments
+
+## Real-World Relevance
+
+- This workflow reflects how Cloud and DevOps Engineers securely provision access to EC2 instances in real production environments using CLI-based automation.
+
+## Skills Demonstrated
+
+- AWS EC2 access management
+
+- AWS CLI usage
+
+- Linux file permission management
+
+- Cloud security fundamentals
