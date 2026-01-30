@@ -38,7 +38,7 @@ aws configure get region
 <img width="1041" height="880" alt="image" src="https://github.com/user-attachments/assets/f0f4b053-6032-4924-9152-d2b329c1f20d" />
 <img width="1109" height="948" alt="image" src="https://github.com/user-attachments/assets/650da4fc-6985-47d3-aa1f-5526b7674019" />
 <img width="1099" height="902" alt="image" src="https://github.com/user-attachments/assets/4dd0aabd-ebcf-45c8-a0c5-440fe9b40481" />
-<img width="1068" height="911" alt="image" src="https://github.com/user-attachments/assets/edd63c96-09dd-4acb-b4fd-d3be90c7ec9b" />
+
 
 ## Step 2: Create EC2 Key Pair
 
@@ -49,6 +49,8 @@ aws ec2 create-key-pair \
   --key-type rsa \
   --query 'KeyMaterial' \
   --output text > xfusion-kp.pem
+
+<img width="1068" height="911" alt="image" src="https://github.com/user-attachments/assets/edd63c96-09dd-4acb-b4fd-d3be90c7ec9b" />
 
 ## Step 3: Secure the Private Key
 
