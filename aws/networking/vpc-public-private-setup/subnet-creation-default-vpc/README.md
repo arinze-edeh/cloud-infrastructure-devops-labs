@@ -112,6 +112,7 @@ aws ec2 describe-subnets \
   --output table
 
 📸 Screenshot: Final verification output
+<img width="1034" height="861" alt="Screenshot 2026-02-01 045806" src="https://github.com/user-attachments/assets/0c970cc3-0f01-488a-93cd-2d0c8c3036c7" />
 
 ---
 
