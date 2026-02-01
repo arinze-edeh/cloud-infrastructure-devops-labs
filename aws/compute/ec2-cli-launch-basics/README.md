@@ -217,7 +217,7 @@ This workflow mirrors how DevOps and Cloud Engineers:
 
 
 
-<img width="1028" height="805" alt="image" src="https://github.com/user-attachments/assets/01bc1758-068b-41fa-a006-707a6e0fa560" />
+
 
 
 
