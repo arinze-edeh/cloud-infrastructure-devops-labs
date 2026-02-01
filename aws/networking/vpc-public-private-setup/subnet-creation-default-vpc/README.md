@@ -9,9 +9,7 @@
 ---
 
 ## Scenario
--  As part of an incremental cloud migration,
--  a DevOps team needs to prepare network segmentation
--  within AWS before deploying compute resources.
+-  As part of an incremental cloud migration, a DevOps team needs to prepare network segmentation within AWS before deploying compute resources.
 -  A new subnet is required under the default VPC.
 
 ---
