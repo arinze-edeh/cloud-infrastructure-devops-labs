@@ -29,12 +29,12 @@ Cloud and DevOps roles.
 ---
 
 ## Environment Details
-REGION = us-east-1
-INSTANCE NAME = devops-ec2
-INSTANCE TYPE = t2.micro
-AMI = Amazon Linux
-KEY PAIR = devops-kp (RSA)
-SECURITY GRP = Default
+- REGION = us-east-1
+- INSTANCE NAME = devops-ec2
+- INSTANCE TYPE = t2.micro
+- AMI = Amazon Linux
+- KEY PAIR = devops-kp (RSA)
+- SECURITY GRP = Default
 
 
 ---
@@ -49,8 +49,8 @@ EXPECTED:
 - Credentials configured
 - Region set to us-east-1
 
-📸 Screenshot Placeholder:
-> Insert screenshot showing AWS CLI configured with region and credentials
+📸 Screenshot:
+<img width="1034" height="696" alt="image" src="https://github.com/user-attachments/assets/64b72aaf-dbc2-4e27-b98e-2ab1bfbbee5c" />
 
 ---
 
@@ -213,7 +213,7 @@ This workflow mirrors how DevOps and Cloud Engineers:
 - Linux permissions handling
 
 
-<img width="1034" height="696" alt="image" src="https://github.com/user-attachments/assets/64b72aaf-dbc2-4e27-b98e-2ab1bfbbee5c" />
+
 <img width="1033" height="813" alt="image" src="https://github.com/user-attachments/assets/6ac265fe-8a00-4a7c-92ad-3d328dd22c22" />
 <img width="1028" height="805" alt="image" src="https://github.com/user-attachments/assets/01bc1758-068b-41fa-a006-707a6e0fa560" />
 <img width="1029" height="804" alt="image" src="https://github.com/user-attachments/assets/5ae60d3a-b9ab-458e-a216-8e0040f3a111" />
