@@ -86,7 +86,7 @@ aws ec2 describe-subnets \
 
 aws ec2 create-subnet \
   --vpc-id <DEFAULT_VPC_ID> \
-  --cidr-block 172.31.128.0/24 \
+  --cidr-block 172.31.96.0/20 \
   --availability-zone us-east-1a
 
 📸 Screenshot: Subnet creation output
