@@ -38,7 +38,7 @@ recoverability are required for managed cloud storage resources.
 - Cloud Provider: AWS
 - Service: Amazon S3
 - Region: us-east-1
-- Bucket Name: nautilus-s3-3937
+- Bucket Name: nautilus-s3-9397
 - Access Method: AWS CLI
 
 ---
@@ -68,7 +68,7 @@ Command:
   aws s3 ls
 
 Expected Result:
-  nautilus-s3-3937 is listed
+  nautilus-s3-9397 is listed
 
 Screenshot:
  <img width="1035" height="869" alt="image" src="https://github.com/user-attachments/assets/a9a975f2-dd3d-4918-8e64-7d56b26d567f" />
@@ -82,10 +82,10 @@ Screenshot:
 
 Command:
   aws s3api get-bucket-versioning \
-    --bucket nautilus-s3-3937
+    --bucket nautilus-s3-9397
 
 Expected Result (before change):
-  empty output OR Status: Suspended
+  empty output
 
 Screenshot:
   <img width="1031" height="850" alt="image" src="https://github.com/user-attachments/assets/1626b4ac-67bd-4f62-90f6-1ae061c2cf5f" />
@@ -99,7 +99,7 @@ Screenshot:
 
 Command:
   aws s3api put-bucket-versioning \
-    --bucket nautilus-s3-3937 \
+    --bucket nautilus-s3-9397 \
     --versioning-configuration Status=Enabled
 
 Expected Result:
@@ -117,7 +117,7 @@ Screenshot:
 
 Command:
   aws s3api get-bucket-versioning \
-    --bucket nautilus-s3-3937
+    --bucket nautilus-s3-9397
 
 Expected Result:
   Status: Enabled
