@@ -85,6 +85,7 @@ EXPECTED:
 
 📸 Screenshot:
 <img width="1031" height="814" alt="image" src="https://github.com/user-attachments/assets/4288311b-ecd2-4e54-902c-849c361203c5" />
+<img width="1023" height="839" alt="image" src="https://github.com/user-attachments/assets/fbacab15-f778-4cd4-bb7d-5d354a59f312" />
 
 ---
 
@@ -220,6 +221,6 @@ This workflow mirrors how DevOps and Cloud Engineers:
 
 
 
-<img width="1023" height="839" alt="image" src="https://github.com/user-attachments/assets/fbacab15-f778-4cd4-bb7d-5d354a59f312" />
+
 
 
