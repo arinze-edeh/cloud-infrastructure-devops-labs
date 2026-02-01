@@ -95,3 +95,10 @@ aws ec2 describe-key-pairs --key-names xfusion-kp
 - Linux file permission management
 
 - Cloud security fundamentals
+
+<img width="1035" height="861" alt="image" src="https://github.com/user-attachments/assets/68cb9cd9-87cd-40cd-9900-a5645d558212" />
+<img width="1035" height="865" alt="image" src="https://github.com/user-attachments/assets/b0e78cff-d0a8-4919-b356-7463cdeb7f4d" />
+<img width="1036" height="772" alt="image" src="https://github.com/user-attachments/assets/046f5460-03f7-404e-bd87-8adb6de5a423" />
+
+
+
