@@ -50,7 +50,7 @@ Expected Output:
 - us-east-1
 
 📸 Screenshot: Region verification
-
+<img width="1035" height="861" alt="image" src="https://github.com/user-attachments/assets/68cb9cd9-87cd-40cd-9900-a5645d558212" />
 ---
 
 ## Step 2: Identify the Default VPC
@@ -63,6 +63,7 @@ aws ec2 describe-vpcs \
 // Store the VPC ID where IsDefault = true
 
 📸 Screenshot: Default VPC details
+<img width="1035" height="861" alt="image" src="https://github.com/user-attachments/assets/68cb9cd9-87cd-40cd-9900-a5645d558212" />
 
 ---
 
