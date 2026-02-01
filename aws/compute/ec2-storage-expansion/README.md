@@ -136,7 +136,7 @@ ELSE
 validate, and manage block storage independently to support scalable EC2-based
 applications and services.
 
-- Skills Demonstrated
+## Skills Demonstrated
 
 - AWS EC2 storage management
 
