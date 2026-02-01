@@ -168,10 +168,10 @@ EXPECTED:
 ## Step 8: Verify EC2 Instance Status
 
 COMMAND:
-aws ec2 describe-instances
---filters Name=tag:Name,Values=devops-ec2
---query "Reservations[].Instances[].[InstanceId,State.Name]"
---output table
+- aws ec2 describe-instances
+- --filters Name=tag:Name,Values=devops-ec2
+- --query "Reservations[].Instances[].[InstanceId,State.Name]"
+- --output table
 
 
 EXPECTED:
