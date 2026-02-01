@@ -78,7 +78,7 @@ aws ec2 describe-subnets \
 - Select an unused CIDR block within the VPC range
 
 📸 Screenshot: Existing subnet CIDRs
-
+<img width="1035" height="865" alt="image" src="https://github.com/user-attachments/assets/b0e78cff-d0a8-4919-b356-7463cdeb7f4d" />
 ---
 
 ## Step 4: Create the Subnet
@@ -90,7 +90,7 @@ aws ec2 create-subnet \
   --availability-zone us-east-1a
 
 📸 Screenshot: Subnet creation output
-
+<img width="1036" height="772" alt="image" src="https://github.com/user-attachments/assets/046f5460-03f7-404e-bd87-8adb6de5a423" />
 ---
 
 ## Step 5: Tag the Subnet
@@ -101,7 +101,7 @@ aws ec2 create-tags \
   --tags Key=Name,Value=devops-subnet
 
 📸 Screenshot: Subnet tagging confirmation
-
+<img width="1038" height="692" alt="image" src="https://github.com/user-attachments/assets/fdc3b988-379d-4df3-98f7-70f2684f1db0" />
 ---
 
 ## Step 6: Final Verification
