@@ -45,7 +45,6 @@ recoverability are required for managed cloud storage resources.
 
 ## Step 1: Confirm Active AWS Region
 
-Pseudo-code:
   verify aws region is set
   ensure region equals us-east-1
 
@@ -62,7 +61,6 @@ Screenshot:
 
 ## Step 2: Verify Target S3 Bucket Exists
 
-Pseudo-code:
   list all s3 buckets
   confirm target bucket is present
 
@@ -79,7 +77,6 @@ Screenshot:
 
 ## Step 3: Check Current Versioning Status
 
-Pseudo-code:
   query bucket versioning configuration
   determine if versioning is disabled or suspended
 
@@ -97,7 +94,6 @@ Screenshot:
 
 ## Step 4: Enable S3 Bucket Versioning
 
-Pseudo-code:
   apply versioning configuration
   set status to Enabled
 
@@ -116,7 +112,6 @@ Screenshot:
 
 ## Step 5: Verify Versioning Is Enabled
 
-Pseudo-code:
   re-check bucket versioning configuration
   confirm status is Enabled
 
