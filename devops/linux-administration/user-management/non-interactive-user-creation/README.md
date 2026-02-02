@@ -116,4 +116,4 @@ Login attempt blocked
 
 - Service account configuration
 
--- Enterprise Linux administration
+- Enterprise Linux administration
