@@ -35,7 +35,8 @@ Target Server:
 
 CONNECT to jump host
 SSH into App Server 1 as authorized user
-📸 Screenshot
+
+📸 Screenshot:
 
 <img width="1039" height="846" alt="image" src="https://github.com/user-attachments/assets/962db087-ee56-4ffe-a993-148b17d66c36" />
 
@@ -47,8 +48,10 @@ SSH login to stapp01
 - USERNAME = kareem
 - sudo useradd -s /sbin/nologin kareem
 
-📸 Screenshot
+📸 Screenshot:
+
 <img width="1029" height="847" alt="image" src="https://github.com/user-attachments/assets/673bea01-484d-43c7-887b-37f1558f8190" />
+
 Command execution output
 
 ## Step 3: Verify User Configuration
@@ -59,8 +62,10 @@ Command execution output
 
 kareem:x:1005:1005::/home/kareem:/sbin/nologin
 
-📸 Screenshot
+📸 Screenshot:
+
 <img width="1033" height="815" alt="image" src="https://github.com/user-attachments/assets/a1bf8a6e-5e55-434f-affc-d67ca1bd42bf" />
+
 passwd entry showing /sbin/nologin
 
 ## Step 4: Confirm Login Is Disabled
@@ -72,8 +77,10 @@ Expected Result:
 
 This account is currently not available.
 
-📸 Screenshot
+📸 Screenshot:
+
 <img width="1043" height="429" alt="image" src="https://github.com/user-attachments/assets/fd9ee0da-2144-4556-98f2-c6b64760b416" />
+
 Login attempt blocked
 
 ## Result
