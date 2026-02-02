@@ -36,6 +36,7 @@ Target Server:
 CONNECT to jump host
 SSH into App Server 1 as authorized user
 📸 Screenshot
+
 <img width="1039" height="846" alt="image" src="https://github.com/user-attachments/assets/962db087-ee56-4ffe-a993-148b17d66c36" />
 
 SSH login to stapp01
