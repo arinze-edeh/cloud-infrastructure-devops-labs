@@ -60,7 +60,7 @@ Command execution output
 - getent passwd kareem
 - Expected Output (example):
 
-kareem:x:1005:1005::/home/kareem:/sbin/nologin
+kareem:x:1002:1002::/home/kareem:/sbin/nologin
 
 📸 Screenshot:
 
@@ -75,13 +75,11 @@ passwd entry showing /sbin/nologin
 
 Expected Result:
 
-This account is currently not available.
+Login attempt blocked.
 
 📸 Screenshot:
 
 <img width="1043" height="429" alt="image" src="https://github.com/user-attachments/assets/fd9ee0da-2144-4556-98f2-c6b64760b416" />
-
-Login attempt blocked
 
 ## Result
 - Non-interactive user created successfully
