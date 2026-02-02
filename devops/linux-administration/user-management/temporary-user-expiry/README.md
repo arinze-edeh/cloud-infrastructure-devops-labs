@@ -40,6 +40,8 @@ Target Server:
 📸 Screenshot:
 
 <img width="1035" height="743" alt="image" src="https://github.com/user-attachments/assets/4fdaa99f-8114-4747-a020-95d183d34738" />
+<img width="1034" height="832" alt="image" src="https://github.com/user-attachments/assets/66e1854a-ccb3-44ea-9604-4421c8d85d89" />
+
 SSH session connected to stapp03
 
 ## Step 2: Create Temporary User with Expiry Date
@@ -50,7 +52,7 @@ SSH session connected to stapp03
 - sudo useradd -e 2026-12-07 mariyam
 
 📸 Screenshot: 
-<img width="1034" height="832" alt="image" src="https://github.com/user-attachments/assets/66e1854a-ccb3-44ea-9604-4421c8d85d89" />
+
 
 useradd command execution
 
