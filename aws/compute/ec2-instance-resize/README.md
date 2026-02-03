@@ -23,14 +23,14 @@ GOAL:
 -  Ensure instance remains healthy and running post-change
 Preconditions
 ## REQUIREMENTS:
--  Instance exists with name "devops-ec2"
+-  Instance exists with name "nautilus-ec2"
 -  Status checks must pass before modification
 -  Instance must be stopped before resizing
 
 ## Step 1: Authenticate into AWS Console
 - OPEN AWS Console
 - LOGIN using provided credentials
-- VERIFY region == us-east-1
+- VERIFY region = us-east-1
 
 📸 Screenshot:
 <img width="1741" height="945" alt="image" src="https://github.com/user-attachments/assets/a9491e94-5d4f-4216-aca0-4bdef15b1af9" />
@@ -39,11 +39,11 @@ AWS Console dashboard with region set to us-east-1
 ## Step 2: Locate EC2 Instance
 - NAVIGATE to EC2 Dashboard
 - OPEN Instances
-- SEARCH for instance named "devops-ec2"
+- SEARCH for instance named "nautilus-ec2"
 
 📸 Screenshot:
 <img width="1761" height="915" alt="image" src="https://github.com/user-attachments/assets/d80b6ca9-1bfa-46ad-9aa0-9bb11c03664a" />
-EC2 instance list showing devops-ec2
+EC2 instance list showing nautilus-ec2
 
 ## Step 3: Verify Instance Health
 - CHECK instance status
@@ -55,7 +55,7 @@ EC2 instance list showing devops-ec2
 Instance status checks showing 2/2 passed
 
 ## Step 4: Stop EC2 Instance
-- SELECT devops-ec2
+- SELECT nautilus-ec2
 - CHANGE instance state → Stop
 - WAIT until instance state == stopped
 
@@ -74,9 +74,9 @@ Instance state showing "stopped"
 Change instance type dialog with t2.nano selected
 
 ## Step 6: Start EC2 Instance
-- SELECT devops-ec2
+- SELECT nautilus-ec2
 - CHANGE instance state → Start
-- WAIT until instance state == running
+- WAIT until instance state = running
 
 📸 Screenshot:
 <img width="1904" height="950" alt="image" src="https://github.com/user-attachments/assets/172ffa53-09c9-42ec-b839-589f158e8408" />
@@ -85,7 +85,7 @@ Instance state showing "running"
 ## Step 7: Final Validation
 
 - VERIFY:
-  -  Instance name == devops-ec2
+  -  Instance name = nautilus-ec2
   -  Instance type == t2.nano
   -  Instance state == running
   -  Region == us-east-1
@@ -109,8 +109,8 @@ SKILLS:
 ## Recruiter Notes
 - This project reflects real-world DevOps practices:
 
-- Production-safe instance modification
+  -  Production-safe instance modification
 
-- Cost-awareness in cloud environments
+  -  Cost-awareness in cloud environments
 
-- Operational discipline using health checks
+  -  Operational discipline using health checks
