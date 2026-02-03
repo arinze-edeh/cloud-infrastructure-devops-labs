@@ -36,11 +36,14 @@ This is a standard security control to enforce least privilege and reduce brute-
 - SSH into target app server (non-root user)
 
 📸 Screenshot: SSH session to app server
+<img width="1027" height="825" alt="image" src="https://github.com/user-attachments/assets/c81c1b0e-aa68-43b2-972e-1cfe9ae6bb5c" />
 
 ## Step 3: Elevate Privileges
 - SWITCH to root using sudo
 
 📸 Screenshot: Root shell confirmation
+<img width="1032" height="764" alt="image" src="https://github.com/user-attachments/assets/7303bde5-2fe5-4d20-98f1-f669aeb14da2" />
+<img width="1037" height="866" alt="image" src="https://github.com/user-attachments/assets/706dd8cd-f0cc-4743-9c5b-9e83153a7439" />
 
 ## Step 4: Edit SSH Configuration
 - OPEN /etc/ssh/sshd_config
@@ -95,10 +98,3 @@ This is a standard security control to enforce least privilege and reduce brute-
 - Privilege management
 
 - Operational security best practices
-
-<img width="1027" height="825" alt="image" src="https://github.com/user-attachments/assets/c81c1b0e-aa68-43b2-972e-1cfe9ae6bb5c" />
-<img width="1032" height="764" alt="image" src="https://github.com/user-attachments/assets/7303bde5-2fe5-4d20-98f1-f669aeb14da2" />
-<img width="1037" height="866" alt="image" src="https://github.com/user-attachments/assets/706dd8cd-f0cc-4743-9c5b-9e83153a7439" />
-
-
-
