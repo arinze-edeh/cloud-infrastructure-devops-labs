@@ -47,8 +47,8 @@ EC2 instance list showing nautilus-ec2
 
 ## Step 3: Verify Instance Health
 - CHECK instance status
-- WAIT until Status Checks == "2/2 checks passed"
-- DO NOT proceed if status == initializing
+- WAIT until Status Checks = "2/2 checks passed"
+- DO NOT proceed if status = initializing
 
 📸 Screenshot:
 <img width="1685" height="949" alt="image" src="https://github.com/user-attachments/assets/34a63182-a9d2-44f3-9ba3-3b3db04b5127" />
@@ -57,7 +57,7 @@ Instance status checks showing 2/2 passed
 ## Step 4: Stop EC2 Instance
 - SELECT nautilus-ec2
 - CHANGE instance state → Stop
-- WAIT until instance state == stopped
+- WAIT until instance state = stopped
 
 📸 Screenshot:
 <img width="1917" height="950" alt="image" src="https://github.com/user-attachments/assets/d3931cd9-eb7b-434f-a3d0-2f9cd51dcc58" />
@@ -86,9 +86,9 @@ Instance state showing "running"
 
 - VERIFY:
   -  Instance name = nautilus-ec2
-  -  Instance type == t2.nano
-  -  Instance state == running
-  -  Region == us-east-1
+  -  Instance type = t2.nano
+  -  Instance state = running
+  -  Region = us-east-1
 
 📸 Screenshot:
 <img width="1904" height="950" alt="image" src="https://github.com/user-attachments/assets/172ffa53-09c9-42ec-b839-589f158e8408" />
