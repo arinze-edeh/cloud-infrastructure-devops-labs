@@ -49,6 +49,9 @@ This is a standard security control to enforce least privilege and reduce brute-
 - SAVE configuration
 
 📸 Screenshot: sshd_config edited
+<img width="1038" height="863" alt="image" src="https://github.com/user-attachments/assets/5f94446f-2de4-4bc0-84d1-45773eaced14" />
+<img width="1030" height="842" alt="image" src="https://github.com/user-attachments/assets/986f2b6c-4efd-4166-a38c-35f09d0fc897" />
+<img width="1037" height="866" alt="image" src="https://github.com/user-attachments/assets/1746211a-dc77-4765-bed9-6a023843431f" />
 
 ## Step 5: Restart SSH Service
 - RESTART sshd service to apply changes
@@ -93,16 +96,9 @@ This is a standard security control to enforce least privilege and reduce brute-
 
 - Operational security best practices
 
-
-
-
-
-<img width="1038" height="863" alt="image" src="https://github.com/user-attachments/assets/5f94446f-2de4-4bc0-84d1-45773eaced14" />
 <img width="1027" height="825" alt="image" src="https://github.com/user-attachments/assets/c81c1b0e-aa68-43b2-972e-1cfe9ae6bb5c" />
 <img width="1032" height="764" alt="image" src="https://github.com/user-attachments/assets/7303bde5-2fe5-4d20-98f1-f669aeb14da2" />
 <img width="1037" height="866" alt="image" src="https://github.com/user-attachments/assets/706dd8cd-f0cc-4743-9c5b-9e83153a7439" />
-<img width="1030" height="842" alt="image" src="https://github.com/user-attachments/assets/986f2b6c-4efd-4166-a38c-35f09d0fc897" />
 
-<img width="1037" height="866" alt="image" src="https://github.com/user-attachments/assets/1746211a-dc77-4765-bed9-6a023843431f" />
 
 
