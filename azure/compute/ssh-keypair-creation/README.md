@@ -10,7 +10,7 @@ The objective is to ensure the SSH key exists as a **native Azure resource**, al
 - Create an SSH key pair in Azure
 - SSH key name: **`devops-kp`**
 - Key type: **RSA**
-- Method: **Azure Portal (UI only)**
+- Method: **Azure Portal**
 
 ---
 
