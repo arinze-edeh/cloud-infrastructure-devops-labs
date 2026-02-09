@@ -1,12 +1,12 @@
 # Azure Virtual Machine Creation – Ubuntu 22.04
 
 ## 📌 Overview
-This lab documents the creation of an **Azure Virtual Machine** using the **Azure Portal UI** as part of the Nautilus DevOps team’s incremental cloud migration strategy.
+- This lab documents the creation of an **Azure Virtual Machine** using the **Azure Portal UI** as part of the Nautilus DevOps team’s incremental cloud migration strategy.
 
 ---
 
 ## 🎯 Objective
-Provision an Azure VM with the following specifications:
+- Provision an Azure VM with the following specifications:
 
 - VM Name: `xfusion-vm`
 - Region: `East US (eastus)`
@@ -26,74 +26,84 @@ Provision an Azure VM with the following specifications:
 
 ## 🧭 High-Level Workflow (Pseudo-Code)
 
-Login to Azure Portal
-→ Create Virtual Machine
-→ Configure basics (name, region, image, size)
-→ Configure networking (allow SSH)
-→ Configure disk (30 GB Standard HDD)
-→ Review and deploy VM
-→ SSH into VM to validate access
-🛠️ Step-by-Step Implementation
-Step 1: Login
-Access https://portal.azure.com
-Authenticate with provided credentials
+- Login to Azure Portal
+  -  → Create Virtual Machine
+  -  → Configure basics (name, region, image, size)
+  -  → Configure networking (allow SSH)
+  -  → Configure disk (30 GB Standard HDD)
+  -  → Review and deploy VM
+  -  → SSH into VM to validate access
+
+## 🛠️ Step-by-Step Implementation
+
+## Step 1: Login
+
+- Access https://portal.azure.com
+- Authenticate with provided credentials
+
 📸 Screenshot: Azure Portal login page
 
-Step 2: Create Virtual Machine
-Navigate to Virtual Machines
-Click "+ Create" → Azure Virtual Machine
+## Step 2: Create Virtual Machine
+- Navigate to Virtual Machines
+- Click "+ Create" → Azure Virtual Machine
+
 📸 Screenshot: Virtual Machines dashboard
 
-Step 3: Configure Basics
-Resource Group: Existing RG
-VM Name: xfusion-vm
-Region: East US
-Image: Ubuntu Server 22.04 LTS
-Size: Standard_B1s
+## Step 3: Configure Basics
+- Resource Group: Existing RG
+- VM Name: xfusion-vm
+- Region: East US
+- Image: Ubuntu Server 22.04 LTS
+- Size: Standard_B1s
+
 📸 Screenshot: Basics tab configuration
 
-Step 4: Networking
-Use default VNet and subnet
-Allow inbound SSH (port 22)
-Attach default NSG
+## Step 4: Networking
+- Use default VNet and subnet
+- Allow inbound SSH (port 22)
+- Attach default NSG
+
 📸 Screenshot: Networking tab with SSH allowed
 
-Step 5: Disk Configuration
-OS Disk Type: Standard HDD
-Disk Size: 30 GB
+## Step 5: Disk Configuration
+- OS Disk Type: Standard HDD
+- Disk Size: 30 GB
+
 📸 Screenshot: Disk configuration tab
 
-Step 6: Review and Create
-Leave remaining settings as default
-Validate configuration
-Deploy VM
+## Step 6: Review and Create
+- Leave remaining settings as default
+- Validate configuration
+- Deploy VM
+
 📸 Screenshot: Validation passed screen
 
-Step 7: SSH Verification
-Download SSH private key
-Connect to VM via SSH
-Confirm successful login
+## Step 7: SSH Verification
+- Download SSH private key
+- Connect to VM via SSH
+- Confirm successful login
+
 📸 Screenshot: SSH connection or terminal access
 
-✅ Validation Checklist
-✔ VM exists with correct name
-✔ Region is eastus
-✔ Ubuntu 22.04 installed
-✔ VM size is Standard_B1s
-✔ SSH access confirmed
-✔ Disk size is 30 GB Standard HDD
+## Validation Checklist
+- VM exists with correct name
+- Region is eastus
+-  Ubuntu 22.04 installed
+- VM size is Standard_B1s
+- SSH access confirmed
+- Disk size is 30 GB Standard HDD
 
-🧠 Key Learnings
-Azure VM provisioning via Portal
+## Key Learnings
+- Azure VM provisioning via Portal
 
-Importance of correct region and VM sizing
+- Importance of correct region and VM sizing
 
-NSG rules control access, not the VM itself
+- NSG rules control access, not the VM itself
 
-SSH verification is mandatory for validation
+- SSH verification is mandatory for validation
 
-🏁 Conclusion
-This lab validates the ability to provision and access an Azure Virtual Machine using best practices, forming a core building block for cloud infrastructure migration.
+## Conclusion
+- This lab validates the ability to provision and access an Azure Virtual Machine using best practices, forming a core building block for cloud infrastructure migration.
 
 
 
