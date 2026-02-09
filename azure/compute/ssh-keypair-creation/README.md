@@ -1,6 +1,6 @@
 # Azure SSH Key Pair Creation (Azure Portal)
 
-## 📌 Overview
+## Overview
 This lab demonstrates the creation of an **Azure-managed SSH key pair** using the **Azure Portal UI**.  
 The objective is to ensure the SSH key exists as a **native Azure resource**, aligning with Azure’s managed infrastructure standards.
 
@@ -20,16 +20,16 @@ The objective is to ensure the SSH key exists as a **native Azure resource**, al
 
 ---
 
-## 🧭 High-Level Workflow (Pseudo-Code)
+## High-Level Workflow
 
-Login to Azure Portal
-→ Navigate to SSH Keys service
-→ Create new SSH key
-→ Configure key properties
-→ Generate and store key in Azure
-→ Verify key existence
+- Login to Azure Portal
+  -  → Navigate to SSH Keys service
+  -  → Create new SSH key
+  -  → Configure key properties
+  -  → Generate and store key in Azure
+  -  → Verify key existence
 
-## 🧩 Step-by-Step Implementation
+## Step-by-Step Implementation
 
 - Step 1: Log in to Azure Portal
   -  Open https://portal.azure.com
@@ -78,6 +78,7 @@ Step 6: Verify SSH Key Creation
 - Task successfully completed
 
 ## Key Learnings
+
 - Azure SSH keys must exist as Azure-managed resources
 
 - Local SSH key generation does not satisfy cloud validation
