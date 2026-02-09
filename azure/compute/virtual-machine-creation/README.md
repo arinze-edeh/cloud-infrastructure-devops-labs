@@ -1,3 +1,100 @@
+# Azure Virtual Machine Creation – Ubuntu 22.04
+
+## 📌 Overview
+This lab documents the creation of an **Azure Virtual Machine** using the **Azure Portal UI** as part of the Nautilus DevOps team’s incremental cloud migration strategy.
+
+---
+
+## 🎯 Objective
+Provision an Azure VM with the following specifications:
+
+- VM Name: `xfusion-vm`
+- Region: `East US (eastus)`
+- OS Image: Ubuntu Server 22.04 LTS
+- VM Size: Standard_B1s
+- Disk: 30 GB Standard HDD
+- Network: Default NSG allowing SSH (port 22)
+- Access: SSH connectivity verified
+
+---
+
+## ☁️ Cloud Platform
+- Microsoft Azure
+- Azure Portal (UI)
+
+---
+
+## 🧭 High-Level Workflow (Pseudo-Code)
+
+Login to Azure Portal
+→ Create Virtual Machine
+→ Configure basics (name, region, image, size)
+→ Configure networking (allow SSH)
+→ Configure disk (30 GB Standard HDD)
+→ Review and deploy VM
+→ SSH into VM to validate access
+🛠️ Step-by-Step Implementation
+Step 1: Login
+Access https://portal.azure.com
+Authenticate with provided credentials
+📸 Screenshot: Azure Portal login page
+
+Step 2: Create Virtual Machine
+Navigate to Virtual Machines
+Click "+ Create" → Azure Virtual Machine
+📸 Screenshot: Virtual Machines dashboard
+
+Step 3: Configure Basics
+Resource Group: Existing RG
+VM Name: xfusion-vm
+Region: East US
+Image: Ubuntu Server 22.04 LTS
+Size: Standard_B1s
+📸 Screenshot: Basics tab configuration
+
+Step 4: Networking
+Use default VNet and subnet
+Allow inbound SSH (port 22)
+Attach default NSG
+📸 Screenshot: Networking tab with SSH allowed
+
+Step 5: Disk Configuration
+OS Disk Type: Standard HDD
+Disk Size: 30 GB
+📸 Screenshot: Disk configuration tab
+
+Step 6: Review and Create
+Leave remaining settings as default
+Validate configuration
+Deploy VM
+📸 Screenshot: Validation passed screen
+
+Step 7: SSH Verification
+Download SSH private key
+Connect to VM via SSH
+Confirm successful login
+📸 Screenshot: SSH connection or terminal access
+
+✅ Validation Checklist
+✔ VM exists with correct name
+✔ Region is eastus
+✔ Ubuntu 22.04 installed
+✔ VM size is Standard_B1s
+✔ SSH access confirmed
+✔ Disk size is 30 GB Standard HDD
+
+🧠 Key Learnings
+Azure VM provisioning via Portal
+
+Importance of correct region and VM sizing
+
+NSG rules control access, not the VM itself
+
+SSH verification is mandatory for validation
+
+🏁 Conclusion
+This lab validates the ability to provision and access an Azure Virtual Machine using best practices, forming a core building block for cloud infrastructure migration.
+
 
 
 
@@ -22,5 +119,6 @@
 <img width="1797" height="947" alt="image" src="https://github.com/user-attachments/assets/42c71886-3210-4224-9fd6-de1305170fb8" />
 <img width="1829" height="949" alt="image" src="https://github.com/user-attachments/assets/fb929034-c46b-43da-9585-765f3d847868" />
 <img width="1048" height="882" alt="image" src="https://github.com/user-attachments/assets/e0856254-42d0-4e40-8143-0986680e26b5" />
+<img width="1031" height="875" alt="image" src="https://github.com/user-attachments/assets/e852c320-8da5-4c9c-9c6f-dbc18400b2e6" />
 
 
