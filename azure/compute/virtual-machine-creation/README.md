@@ -42,12 +42,14 @@
 - Authenticate with provided credentials
 
 📸 Screenshot: Azure Portal login page
+<img width="1740" height="949" alt="image" src="https://github.com/user-attachments/assets/4abac257-12d7-4c63-9e74-abfed162ac04" />
 
 ## Step 2: Create Virtual Machine
 - Navigate to Virtual Machines
 - Click "+ Create" → Azure Virtual Machine
 
 📸 Screenshot: Virtual Machines dashboard
+<img width="1781" height="950" alt="image" src="https://github.com/user-attachments/assets/38a332d6-c73e-4323-9a68-6753e13a661b" />
 
 ## Step 3: Configure Basics
 - Resource Group: Existing RG
@@ -57,6 +59,9 @@
 - Size: Standard_B1s
 
 📸 Screenshot: Basics tab configuration
+<img width="1761" height="951" alt="image" src="https://github.com/user-attachments/assets/8bc3d40a-0529-4f80-9f17-1e6fbf4b368a" />
+<img width="1749" height="945" alt="image" src="https://github.com/user-attachments/assets/d0b77cc1-9876-4330-a833-ad82eb1ab5a5" />
+<img width="1747" height="943" alt="image" src="https://github.com/user-attachments/assets/69e781e6-d20c-42cb-9924-7e36faa93c59" />
 
 ## Step 4: Networking
 - Use default VNet and subnet
@@ -64,6 +69,7 @@
 - Attach default NSG
 
 📸 Screenshot: Networking tab with SSH allowed
+
 
 ## Step 5: Disk Configuration
 - OS Disk Type: Standard HDD
@@ -108,11 +114,9 @@
 
 
 
-<img width="1740" height="949" alt="image" src="https://github.com/user-attachments/assets/4abac257-12d7-4c63-9e74-abfed162ac04" />
-<img width="1781" height="950" alt="image" src="https://github.com/user-attachments/assets/38a332d6-c73e-4323-9a68-6753e13a661b" />
-<img width="1761" height="951" alt="image" src="https://github.com/user-attachments/assets/8bc3d40a-0529-4f80-9f17-1e6fbf4b368a" />
-<img width="1749" height="945" alt="image" src="https://github.com/user-attachments/assets/d0b77cc1-9876-4330-a833-ad82eb1ab5a5" />
-<img width="1747" height="943" alt="image" src="https://github.com/user-attachments/assets/69e781e6-d20c-42cb-9924-7e36faa93c59" />
+
+
+
 <img width="1760" height="951" alt="image" src="https://github.com/user-attachments/assets/f5be68e5-085e-4ee5-99c4-b913e6e86175" />
 <img width="1783" height="943" alt="image" src="https://github.com/user-attachments/assets/77949321-80e8-4872-88b0-ba7574d026ea" />
 <img width="1760" height="947" alt="image" src="https://github.com/user-attachments/assets/29d18b57-43f2-46d6-9c7a-8a99fd67a63d" />
