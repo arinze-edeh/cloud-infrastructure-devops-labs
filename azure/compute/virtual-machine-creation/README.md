@@ -1,4 +1,4 @@
-# Azure Virtual Machine Creation – Ubuntu 22.04
+# Azure Virtual Machine Creation – Ubuntu 22.04 LTS
 
 ## 📌 Overview
 - This lab documents the creation of an **Azure Virtual Machine** using the **Azure Portal UI** as part of the Nautilus DevOps team’s incremental cloud migration strategy.
@@ -10,7 +10,7 @@
 
 - VM Name: `xfusion-vm`
 - Region: `Central US (centralus)`
-- OS Image: Ubuntu Server 22.04 LTS
+- OS Image: Ubuntu 22.04 LTS
 - VM Size: Standard_B1s
 - Disk: 30 GB Standard HDD
 - Network: Default NSG allowing SSH (port 22)
@@ -107,7 +107,7 @@
 
 ## Validation Checklist
 - VM exists with correct name
-- Region is eastus
+- Region is centralus
 -  Ubuntu 22.04 installed
 - VM size is Standard_B1s
 - SSH access confirmed
