@@ -1,8 +1,8 @@
 # Azure VM Creation Using Azure CLI – Compute Lab
 
 ## Lab Overview
-This lab demonstrates how to create an Azure Virtual Machine using the Azure CLI without access to the Azure Portal.  
-All infrastructure provisioning is performed via command-line automation.
+- This lab demonstrates how to create an Azure Virtual Machine using the Azure CLI without access to the Azure Portal.  
+- All infrastructure provisioning is performed via command-line automation.
 
 ---
 
@@ -44,42 +44,43 @@ All infrastructure provisioning is performed via command-line automation.
   -  Standard storage
   -  30GB disk
 
-VERIFY VM power state
-CONFIRM VM is running
-🛠️ Implementation Steps
-Step 1: Azure CLI Login
+- VERIFY VM power state
+- CONFIRM VM is running
+
+## 🛠️ Implementation Steps
+
+## Step 1: Azure CLI Login
 📸 Screenshot Placeholder
-![Azure CLI Login](screenshots/azure-login.png)
 
-Step 2: Resource Group Creation
+
+## Step 2: Resource Group Creation
 📸 Screenshot Placeholder
-![Resource Group](screenshots/resource-group.png)
 
-Step 3: VM Creation via Azure CLI
+
+## Step 3: VM Creation via Azure CLI
 📸 Screenshot Placeholder
-![VM Creation](screenshots/vm-create.png)
 
-Step 4: VM Running Verification
+## Step 4: VM Running Verification
 📸 Screenshot Placeholder
-![VM Running](screenshots/vm-running.png)
 
-✅ Outcome
-✔ Azure VM successfully created
-✔ SSH access enabled
-✔ VM running state confirmed
-✔ No Azure Portal usage
 
-📚 Key Azure Concepts Demonstrated
-Azure CLI usage
+## Outcome
+- Azure VM successfully created
+- SSH access enabled
+- VM running state confirmed
+- No Azure Portal usage
 
-Virtual machine provisioning
+## Key Azure Concepts Demonstrated
+- Azure CLI usage
 
-SSH-based authentication
+- Virtual machine provisioning
 
-Azure compute resource management
+- SSH-based authentication
 
-🏷️ Tags
-azure vm compute azure-cli cloud-infrastructure
+- Azure compute resource management
+
+## Tags
+`azure` `vm` `compute` `azure-cli` `cloud-infrastructure`
 
 
 
