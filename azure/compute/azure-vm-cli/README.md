@@ -83,15 +83,3 @@
 
 ## Tags
 `azure` `vm` `compute` `azure-cli` `cloud-infrastructure`
-
-
-
-
-
-<img width="1031" height="688" alt="image" src="https://github.com/user-attachments/assets/d555ad61-25a9-4c24-b629-199515c68329" />
-
-
-
-
-
-
