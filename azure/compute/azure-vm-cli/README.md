@@ -30,7 +30,7 @@
 
 ---
 
-## High-Level Logic (Pseudo-Code)
+## High-Level Logic
 
 - LOGIN to Azure using CLI
 
