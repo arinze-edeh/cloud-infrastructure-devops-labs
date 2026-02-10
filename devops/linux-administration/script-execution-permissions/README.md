@@ -53,7 +53,7 @@
 - ssh tony@stapp01.stratos.xfusioncorp.com
 
 📸 Screenshot:
-
+<img width="1040" height="531" alt="image" src="https://github.com/user-attachments/assets/a752e1df-151a-476c-adc9-e82b0b8d609a" />
 
 ## Step 3: Verify Script Existence
 - ls -l /tmp/xfusioncorp.sh
@@ -107,7 +107,7 @@ Expected:
 
 
 
-<img width="1040" height="531" alt="image" src="https://github.com/user-attachments/assets/a752e1df-151a-476c-adc9-e82b0b8d609a" />
+
 <img width="716" height="513" alt="image" src="https://github.com/user-attachments/assets/06281ee9-e830-4eb5-8fae-832ac18e9f8d" />
 <img width="1009" height="802" alt="image" src="https://github.com/user-attachments/assets/b531f87c-1e4b-43c9-bb7c-7f08407f8feb" />
 
