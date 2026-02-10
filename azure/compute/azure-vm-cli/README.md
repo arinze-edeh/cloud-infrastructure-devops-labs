@@ -37,12 +37,12 @@ All infrastructure provisioning is performed via command-line automation.
 - CREATE resource group
 
 - CREATE virtual machine with:
-  -  - Ubuntu image
-  -  - Defined VM size
-  -  - Admin username
-  -  - SSH authentication
-  -  - Standard storage
-  -  - 30GB disk
+  -  Ubuntu image
+  -  Defined VM size
+  -  Admin username
+  -  SSH authentication
+  -  Standard storage
+  -  30GB disk
 
 VERIFY VM power state
 CONFIRM VM is running
