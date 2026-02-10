@@ -1,8 +1,8 @@
 # Enable EC2 Termination Protection
 
 ## Lab Overview
-This lab demonstrates how to enable **termination protection** on an existing Amazon EC2 instance using the AWS Management Console.  
-Termination protection prevents accidental deletion of critical compute resources.
+- This lab demonstrates how to enable **termination protection** on an existing Amazon EC2 instance using the AWS Management Console.  
+- Termination protection prevents accidental deletion of critical compute resources.
 
 ---
 
