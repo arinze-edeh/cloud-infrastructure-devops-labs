@@ -46,14 +46,14 @@
 ## Step 1: Connect to Jump Host
 - ssh thor@jump_host.stratos.xfusioncorp.com
 
-📸 Screenshot Placeholder:
-![Jump Host Login](screenshots/jump-host-login.png)
+📸 Screenshot:
+
 
 ## Step 2: SSH into App Server 1
 - ssh tony@stapp01.stratos.xfusioncorp.com
 
-📸 Screenshot Placeholder:
-![App Server Login](screenshots/app-server-login.png)
+📸 Screenshot:
+
 
 ## Step 3: Verify Script Existence
 - ls -l /tmp/xfusioncorp.sh
@@ -64,15 +64,15 @@ Expected:
 
 - Missing execute (x) permissions
 
-📸 Screenshot Placeholder:
-![Script Without Execute Permission](screenshots/script-missing-permissions.png)
+📸 Screenshot:
+
 
 ## Step 4: Grant Execute Permission to All Users
 - sudo chmod a+x /tmp/xfusioncorp.sh
 - a+x ensures user, group, and others can execute the script.
 
-📸 Screenshot Placeholder:
-![chmod Execution](screenshots/chmod-execution.png)
+📸 Screenshot:
+
 
 ## Step 5: Verify Final Permissions
 - ls -l /tmp/xfusioncorp.sh
@@ -81,8 +81,7 @@ Expected:
 
 -r-xr-xr-x 1 root root ...
 
-📸 Screenshot Placeholder:
-![Final Permission Verification](screenshots/final-verification.png)
+📸 Screenshot:
 
 ## Result
 
