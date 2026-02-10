@@ -47,7 +47,7 @@
 - ssh thor@jump_host.stratos.xfusioncorp.com
 
 📸 Screenshot:
-
+<img width="1026" height="556" alt="image" src="https://github.com/user-attachments/assets/400833d8-d281-4262-9834-bfab5a99dafd" />
 
 ## Step 2: SSH into App Server 1
 - ssh tony@stapp01.stratos.xfusioncorp.com
@@ -65,14 +65,14 @@ Expected:
 - Missing execute (x) permissions
 
 📸 Screenshot:
-
+<img width="958" height="816" alt="image" src="https://github.com/user-attachments/assets/4a8be63b-45eb-466d-a64f-10e1a18c19c4" />
 
 ## Step 4: Grant Execute Permission to All Users
 - sudo chmod a+x /tmp/xfusioncorp.sh
 - a+x ensures user, group, and others can execute the script.
 
 📸 Screenshot:
-
+<img width="976" height="874" alt="image" src="https://github.com/user-attachments/assets/954d1bec-78b7-49ff-81fd-2a55a34d2499" />
 
 ## Step 5: Verify Final Permissions
 - ls -l /tmp/xfusioncorp.sh
@@ -82,6 +82,8 @@ Expected:
 -r-xr-xr-x 1 root root ...
 
 📸 Screenshot:
+<img width="1043" height="872" alt="image" src="https://github.com/user-attachments/assets/1d8bfc47-a2ec-48bc-a517-d4e5ab26dc93" />
+<img width="965" height="877" alt="image" src="https://github.com/user-attachments/assets/17ca42ed-05af-4a64-87d7-b86bdf560499" />
 
 ## Result
 
@@ -104,14 +106,13 @@ Expected:
 
 
 
-<img width="1026" height="556" alt="image" src="https://github.com/user-attachments/assets/400833d8-d281-4262-9834-bfab5a99dafd" />
+
 <img width="1040" height="531" alt="image" src="https://github.com/user-attachments/assets/a752e1df-151a-476c-adc9-e82b0b8d609a" />
 <img width="716" height="513" alt="image" src="https://github.com/user-attachments/assets/06281ee9-e830-4eb5-8fae-832ac18e9f8d" />
 <img width="1009" height="802" alt="image" src="https://github.com/user-attachments/assets/b531f87c-1e4b-43c9-bb7c-7f08407f8feb" />
-<img width="958" height="816" alt="image" src="https://github.com/user-attachments/assets/4a8be63b-45eb-466d-a64f-10e1a18c19c4" />
-<img width="976" height="874" alt="image" src="https://github.com/user-attachments/assets/954d1bec-78b7-49ff-81fd-2a55a34d2499" />
-<img width="1043" height="872" alt="image" src="https://github.com/user-attachments/assets/1d8bfc47-a2ec-48bc-a517-d4e5ab26dc93" />
-<img width="965" height="877" alt="image" src="https://github.com/user-attachments/assets/17ca42ed-05af-4a64-87d7-b86bdf560499" />
+
+
+
 
 
 
