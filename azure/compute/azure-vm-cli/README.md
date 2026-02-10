@@ -49,13 +49,13 @@
 
 ## 🛠️ Implementation Steps
 
-## Step 1: Azure CLI Login
+## Step 1: Verifying CLI Version and Session
 📸 Screenshot:
+<img width="1022" height="819" alt="image" src="https://github.com/user-attachments/assets/46ef8a6a-d6f6-46ae-90b3-b551d42559bd" />
 
-
-## Step 2: Resource Group Creation
+## Step 2: Resource Group Verification
 📸 Screenshot:
-
+<img width="1030" height="698" alt="image" src="https://github.com/user-attachments/assets/cd85dce5-746d-4461-864d-ab3b3212b120" />
 
 ## Step 3: VM Creation via Azure CLI
 📸 Screenshot:
@@ -89,8 +89,8 @@
 
 
 <img width="1031" height="688" alt="image" src="https://github.com/user-attachments/assets/d555ad61-25a9-4c24-b629-199515c68329" />
-<img width="1022" height="819" alt="image" src="https://github.com/user-attachments/assets/46ef8a6a-d6f6-46ae-90b3-b551d42559bd" />
-<img width="1030" height="698" alt="image" src="https://github.com/user-attachments/assets/cd85dce5-746d-4461-864d-ab3b3212b120" />
+
+
 
 
 
