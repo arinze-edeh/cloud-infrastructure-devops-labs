@@ -1,4 +1,75 @@
+# Disable SELinux on App Server 1
 
+## 📌 Lab Overview
+- Following a security audit, xFusionCorp Industries initiated SELinux
+testing on their application servers. For initial testing, SELinux
+must be permanently disabled on App Server 1.
+
+- This lab demonstrates how to safely disable SELinux without rebooting
+the server immediately.
+
+---
+
+## 🎯 Objectives
+- Install required SELinux packages
+- Permanently disable SELinux via configuration
+- Avoid immediate reboot
+- Ensure SELinux is disabled after scheduled reboot
+
+---
+
+## 🧠 High-Level Logic
+
+CONNECT to App Server 1
+INSTALL required SELinux packages
+
+OPEN SELinux configuration file
+SET SELINUX=disabled
+SAVE configuration
+
+DO NOT reboot system
+CONFIRM configuration is applied
+
+## 🛠️ Implementation Steps
+
+## Step 1: Connect to App Server
+- `ssh tony@stapp01`
+
+📸 screenshot:
+
+## Step 2: Install SELinux Packages
+- `sudo yum install -y selinux-policy selinux-policy-targeted policycoreutils`
+
+📸 screenshot:
+
+## Step 3: Modify SELinux Configuration
+- `sudo vi /etc/selinux/config`
+Set:
+
+- SELINUX=disabled
+📸 screenshot:
+
+## Step 4: No Reboot Required
+- Server reboot is not performed
+
+📸 screenshot:
+
+## Step 5: Status Check (Informational)
+- `sestatus`
+
+📸 screenshot:
+
+## ✅ Final Outcome
+- SELinux packages installed
+
+- SELinux permanently disabled
+
+- No immediate reboot performed
+
+- System compliant with security audit requirements
+
+🏷️ Tags
+`linux` `selinux` `security` `system-administration` `devops`
 
 <img width="1031" height="556" alt="image" src="https://github.com/user-attachments/assets/d4340256-8c8b-426d-b807-6570015e8a36" />
 <img width="1033" height="856" alt="image" src="https://github.com/user-attachments/assets/0d5526fa-ae42-423b-9b77-8af470abf278" />
