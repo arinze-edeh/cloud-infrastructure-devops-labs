@@ -63,7 +63,7 @@ Step 1: Retrieve AWS Credentials
 
 - Command: `aws ec2 allocate-address --domain vpc --region us-east-1`
 
-- Outcome: Provisioned Public IP `34.236.196.188` with Allocation ID `eipalloc-08ea08b020614768c`
+- Outcome: Provisioned Public IP `34.237.96.234` with Allocation ID `eipalloc-09658a3b506276415`
 
 📸 screenshot:
 <img width="1024" height="543" alt="image" src="https://github.com/user-attachments/assets/dfc8b6f6-fe6a-49ce-8212-b60f7fd6a9ef" />
