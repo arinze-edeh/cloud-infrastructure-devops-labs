@@ -75,7 +75,7 @@ the server immediately.
 
 - System compliant with security audit requirements
 
-🏷️ Tags
+## 🏷️ Tags
 `linux` `selinux` `security` `system-administration` `devops`
 
 
