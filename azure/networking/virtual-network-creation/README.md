@@ -53,7 +53,7 @@ az group create \
 
 ## Step 4: Create Virtual Network
 - `az network vnet create \
-  --resource-group xfusion-rg \
+  --resource-group kml_rg_main-2de2f556a3f04cf0 \
   --name xfusion-vnet \
   --location centralus \
   --address-prefixes 10.0.0.0/16`
@@ -63,7 +63,7 @@ az group create \
 
 ## Step 5: Verify Virtual Network
 - `az network vnet show \
-  --resource-group xfusion-rg \
+  --resource-group kml_rg_main-2de2f556a3f04cf0 \
   --name xfusion-vnet \
   --output table`
 
