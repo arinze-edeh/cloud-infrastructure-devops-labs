@@ -20,15 +20,15 @@ the server immediately.
 
 ## 🧠 High-Level Logic
 
-CONNECT to App Server 1
-INSTALL required SELinux packages
+- CONNECT to App Server 1
+- INSTALL required SELinux packages
 
-OPEN SELinux configuration file
-SET SELINUX=disabled
-SAVE configuration
+- OPEN SELinux configuration file
+- SET SELINUX=disabled
+- SAVE configuration
 
-DO NOT reboot system
-CONFIRM configuration is applied
+- DO NOT reboot system
+- CONFIRM configuration is applied
 
 ## 🛠️ Implementation Steps
 
@@ -36,11 +36,13 @@ CONFIRM configuration is applied
 - `ssh tony@stapp01`
 
 📸 screenshot:
+<img width="1031" height="556" alt="image" src="https://github.com/user-attachments/assets/d4340256-8c8b-426d-b807-6570015e8a36" />
 
 ## Step 2: Install SELinux Packages
 - `sudo yum install -y selinux-policy selinux-policy-targeted policycoreutils`
 
 📸 screenshot:
+<img width="1033" height="856" alt="image" src="https://github.com/user-attachments/assets/0d5526fa-ae42-423b-9b77-8af470abf278" />
 
 ## Step 3: Modify SELinux Configuration
 - `sudo vi /etc/selinux/config`
@@ -58,6 +60,7 @@ Set:
 - `sestatus`
 
 📸 screenshot:
+<img width="1031" height="859" alt="image" src="https://github.com/user-attachments/assets/6d417c93-378a-4dc2-9d1d-237124c85035" />
 
 ## ✅ Final Outcome
 - SELinux packages installed
@@ -71,9 +74,8 @@ Set:
 🏷️ Tags
 `linux` `selinux` `security` `system-administration` `devops`
 
-<img width="1031" height="556" alt="image" src="https://github.com/user-attachments/assets/d4340256-8c8b-426d-b807-6570015e8a36" />
-<img width="1033" height="856" alt="image" src="https://github.com/user-attachments/assets/0d5526fa-ae42-423b-9b77-8af470abf278" />
+
+
 <img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/b1072b6b-359f-4fb4-b969-ab8d223a0f29" />
 <img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/26cb4d73-0391-4c5f-9390-b418e9caee07" />
-<img width="1031" height="859" alt="image" src="https://github.com/user-attachments/assets/6d417c93-378a-4dc2-9d1d-237124c85035" />
 
