@@ -58,6 +58,7 @@ the server immediately.
 - Server reboot is not performed
 
 📸 screenshot:
+<img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/26cb4d73-0391-4c5f-9390-b418e9caee07" />
 
 ## Step 5: Status Check (Informational)
 - `sestatus`
