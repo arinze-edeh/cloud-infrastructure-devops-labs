@@ -34,7 +34,7 @@ Step 1: Retrieve Azure Credentials
 - `showcreds`
 
 📸 screenshot:
-<img width="1022" height="742" alt="image" src="https://github.com/user-attachments/assets/82eb4020-f4c5-493e-9842-c7954aa9701b" />
+<img width="1022" height="742" alt="548048236-82eb4020-f4c5-493e-9842-c7954aa9701b" src="https://github.com/user-attachments/assets/f5fd2742-f96f-42cd-8fb0-397fdc26e930" />
 
 ## Step 2: Verify Azure Login
 - `az account show`
