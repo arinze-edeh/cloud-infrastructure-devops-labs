@@ -48,8 +48,10 @@ the server immediately.
 - `sudo vi /etc/selinux/config`
 Set:
 
-- SELINUX=disabled
+  -  SELINUX=disabled
+
 📸 screenshot:
+<img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/26cb4d73-0391-4c5f-9390-b418e9caee07" />
 
 ## Step 4: No Reboot Required
 - Server reboot is not performed
@@ -77,5 +79,4 @@ Set:
 
 
 <img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/b1072b6b-359f-4fb4-b969-ab8d223a0f29" />
-<img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/26cb4d73-0391-4c5f-9390-b418e9caee07" />
 
