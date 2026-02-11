@@ -30,7 +30,7 @@ using the Azure CLI as part of a phased cloud migration strategy.
 - VERIFY VNet exists and is active
 
 ## 🛠️ Implementation Steps
-Step 1: Retrieve Azure Credentials
+## Step 1: Retrieve Azure Credentials
 - `showcreds`
 
 📸 screenshot:
