@@ -14,7 +14,7 @@ to an existing EC2 instance using the AWS CLI in the us-east-1 region.
 
 ---
 
-## High-Level Flow (Pseudo-Code)
+## High-Level Flow
 
 - AUTHENTICATE to AWS using the showcreds command to retrieve current IAM session details.
 
@@ -41,7 +41,7 @@ Step 1: Retrieve AWS Credentials
 - Region Config: Validated that the CLI was targeting us-east-1 via aws configure get region.
 
 📸 screenshot:
-<img width="1036" height="654" alt="image" src="https://github.com/user-attachments/assets/a23c1cdc-fe91-462e-ad00-02e285a87d37" />
+<img width="1036" height="654" alt="548028635-a23c1cdc-fe91-462e-ad00-02e285a87d37" src="https://github.com/user-attachments/assets/7a535a17-b9ca-48dc-b895-a9ce8e54253d" />
 <img width="1032" height="577" alt="image" src="https://github.com/user-attachments/assets/383aa7f6-606e-4813-82a3-2c7e678d6c6d" />
 
 ## Step 2: Resource Discovery
