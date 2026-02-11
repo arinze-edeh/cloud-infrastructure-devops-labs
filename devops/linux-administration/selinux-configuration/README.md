@@ -43,6 +43,7 @@ the server immediately.
 
 📸 screenshot:
 <img width="1033" height="856" alt="image" src="https://github.com/user-attachments/assets/0d5526fa-ae42-423b-9b77-8af470abf278" />
+<img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/b1072b6b-359f-4fb4-b969-ab8d223a0f29" />
 
 ## Step 3: Modify SELinux Configuration
 - `sudo vi /etc/selinux/config`
@@ -78,5 +79,5 @@ Set:
 
 
 
-<img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/b1072b6b-359f-4fb4-b969-ab8d223a0f29" />
+
 
