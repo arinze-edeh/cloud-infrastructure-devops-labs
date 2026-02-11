@@ -47,7 +47,7 @@ the server immediately.
 
 ## Step 3: Modify SELinux Configuration
 - `sudo vi /etc/selinux/config`
-Set:
+- Set:
 
   -  SELINUX=disabled
 
