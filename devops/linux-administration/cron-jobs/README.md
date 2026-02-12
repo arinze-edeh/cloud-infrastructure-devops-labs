@@ -16,6 +16,16 @@ to validate cron functionality across all servers.
 
 ---
 
+## 🧱 Environment
+
+- Jump Host: jumphost
+
+- App Servers: `stapp01` `stapp02` `stapp03`
+
+- OS: CentOS Stream 9
+
+- Scheduler: cron (cronie package)
+
 ## 🧠 High-Level Logic
 - CONNECT to jump host
 - FOR each app server:
