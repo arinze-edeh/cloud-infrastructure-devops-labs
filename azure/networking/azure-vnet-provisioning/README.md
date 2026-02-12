@@ -53,7 +53,7 @@ networking layer for upcoming Azure services.
 
 ## Step 4: Create Virtual Network
 - az network vnet create \
-  -  --resource-group nautilus-rg \
+  -  --resource-group kml_rg_main-d61c7f18084c43a8 \
   -  --name nautilus-vnet \
   -  --address-prefix 192.168.0.0/24 \
   -  --location eastus
@@ -64,7 +64,7 @@ networking layer for upcoming Azure services.
 
 ## Step 5: Verify VNet
 - az network vnet show \
-  -  --resource-group nautilus-rg \
+  -  --resource-group kml_rg_main-d61c7f18084c43a8 \
   -  --name nautilus-vnet \
   -  --output table
 
@@ -80,12 +80,3 @@ networking layer for upcoming Azure services.
 
 ## 🏷️ Tags
 `azure` `vnet` `networking` `cloud-infrastructure` `devops`
-
-
-
-
-
-
-<img width="1395" height="846" alt="image" src="https://github.com/user-attachments/assets/1381be95-b43f-46ce-b3de-50a803e2fa16" />
-
-
