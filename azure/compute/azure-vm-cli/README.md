@@ -1,4 +1,4 @@
-# Azure VM Creation Using Azure CLI – Compute Lab
+# Azure VM Creation Using Azure CLI
 
 ## Lab Overview
 - This lab demonstrates how to create an Azure Virtual Machine using the Azure CLI without access to the Azure Portal.  
