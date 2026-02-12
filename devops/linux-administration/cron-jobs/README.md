@@ -27,7 +27,7 @@ to validate cron functionality across all servers.
 ## 🛠️ Implementation Steps
 ⚠️ `The following steps were performed individually on each app server.`
 
-## Step 1: Login to Jump Host
+## Step 1: SSH into the Server
 - ssh tony@stapp01
 - ssh steve@stapp02
 - ssh banner@stapp03
@@ -37,10 +37,16 @@ to validate cron functionality across all servers.
 <img width="1039" height="866" alt="image" src="https://github.com/user-attachments/assets/aa017631-f3cd-49fd-bd94-e4547f322de7" />
 <img width="1036" height="876" alt="image" src="https://github.com/user-attachments/assets/58f777cb-8792-4d6a-bea3-3e193bde2489" />
 
-## Step 2: Connect to App Server
-- ssh tony@stapp01.stratos.xfusioncorp.com
+## Step 2: Install and Start Cron
+- Install the Package
+  -  sudo yum install -y cronie
+- Start and Enable the Service
+`Start the crond service and enable it so it persists after a reboot`
+  -  sudo systemctl start crond
+  -  sudo systemctl enable crond
 
 📸 screenshots:
+
 
 ## Step 3: Install Cronie
 - sudo yum install -y cronie
