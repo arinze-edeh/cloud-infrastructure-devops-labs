@@ -1,4 +1,74 @@
+# Azure Infrastructure: Provisioning Virtual Networks via Azure CLI
 
+## 📌 Lab Overview
+- As part of a phased migration to Microsoft Azure, the Nautilus DevOps team
+provisioned a Virtual Network (VNet) to serve as the foundational
+networking layer for upcoming Azure services.
+
+- This lab demonstrates how to create a Virtual Network using the Azure CLI.
+
+---
+
+## 🎯 Objectives
+- Create a Virtual Network in Azure
+- Define an IPv4 CIDR block
+- Deploy the VNet in the correct region
+- Validate successful creation
+
+---
+
+## 🧠 High-Level Logic (Pseudo-Code)
+
+- AUTHENTICATE to Azure
+- VERIFY subscription and region
+
+- CREATE resource group
+- CREATE virtual network with CIDR block
+
+- VERIFY VNet exists
+
+## 🛠️ Implementation Steps
+
+## Step 1: Verify Azure CLI
+- az version
+📸 screenshots/az-version.png
+
+## Step 2: Confirm Azure Login
+- az account show
+📸 screenshots/az-account-show.png
+
+## Step 3: Create / Select Resource Group
+- az group create \
+  -  --name nautilus-rg \
+  -  --location eastus
+📸 screenshot:
+
+## Step 4: Create Virtual Network
+- az network vnet create \
+  -  --resource-group nautilus-rg \
+  -  --name nautilus-vnet \
+  -  --address-prefix 192.168.0.0/24 \
+  -  --location eastus
+
+📸 screenshots:
+
+## Step 5: Verify VNet
+- az network vnet show \
+  -  --resource-group nautilus-rg \
+  -  --name nautilus-vnet \
+  -  --output table
+
+📸 screenshot:
+
+## ✅ Final Outcome
+- Virtual Network nautilus-vnet created successfully
+
+- CIDR block 192.168.0.0/24 assigned
+
+- VNet deployed in eastus region
+
+## 🏷️ Tags
+`azure` `vnet` `networking` `cloud-infrastructure` `devops`
 
 <img width="1033" height="647" alt="image" src="https://github.com/user-attachments/assets/7252cdbb-b2d0-426a-85cf-3db13d5684c6" />
 <img width="1032" height="689" alt="image" src="https://github.com/user-attachments/assets/c1a716b1-39d4-41aa-b255-9c761d3f51ca" />
