@@ -43,9 +43,7 @@ networking layer for upcoming Azure services.
 <img width="1032" height="689" alt="image" src="https://github.com/user-attachments/assets/c1a716b1-39d4-41aa-b255-9c761d3f51ca" />
 
 ## Step 3: Select Resource Group
-- az group create \
-  -  --name nautilus-rg \
-  -  --location eastus
+- az account show
 
 📸 screenshot:
 <img width="1031" height="737" alt="image" src="https://github.com/user-attachments/assets/38d93dde-6d8a-4b50-86f6-29626959ec50" />
