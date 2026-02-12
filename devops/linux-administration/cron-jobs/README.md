@@ -27,21 +27,24 @@ to validate cron functionality across all servers.
 ## 🛠️ Implementation Steps
 
 ## Step 1: Login to Jump Host
-ssh thor@jump_host.stratos.xfusioncorp.com
+- ssh thor@jump_host.stratos.xfusioncorp.com
 
 📸 screenshots/jumphost-login.png
 
 ## Step 2: Connect to App Server
-ssh tony@stapp01.stratos.xfusioncorp.com
+- ssh tony@stapp01.stratos.xfusioncorp.com
+
 📸 screenshots/app-server-login.png
 
 ## Step 3: Install Cronie
-sudo yum install -y cronie
+- sudo yum install -y cronie
+
 📸 screenshots/cronie-install.png
 
 ## Step 4: Start and Enable Cron Service
-sudo systemctl start crond
-sudo systemctl enable crond
+- sudo systemctl start crond
+- sudo systemctl enable crond
+
 📸 screenshots/crond-status.png
 
 ## Step 5: Configure Root Cron Job
@@ -49,22 +52,24 @@ sudo crontab -e
 Cron entry:
 
 */5 * * * * echo hello > /tmp/cron_text
+
 📸 screenshots/root-crontab.png
 
 ## Step 6: Verify Cron Execution
-sudo crontab -l
-ls -l /tmp/cron_text
-cat /tmp/cron_text
+- sudo crontab -l
+- ls -l /tmp/cron_text
+- cat /tmp/cron_text
+
 📸 screenshots/cron-output.png
 
 ## ✅ Final Outcome
-Cron service installed and running
+- Cron service installed and running
 
-Root cron job scheduled every 5 minutes
+- Root cron job scheduled every 5 minutes
 
-Output successfully written to /tmp/cron_text
+- Output successfully written to /tmp/cron_text
 
-Configuration applied across all app servers
+- Configuration applied across all app servers
 
 ## 🏷️ Tags
 `linux` `cron` `cronie` `system-administration` `automation`
