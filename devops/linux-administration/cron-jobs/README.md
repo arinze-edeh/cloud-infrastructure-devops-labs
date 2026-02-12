@@ -1,4 +1,73 @@
+# Linux Cron Job Scheduling (cronie)
 
+## 📌 Lab Overview
+The Nautilus system administration team is preparing to deploy
+automation scripts across multiple application servers. Before
+scheduling production jobs, a sample cron job was configured
+to validate cron functionality across all servers.
+
+---
+
+## 🎯 Objectives
+- Install the `cronie` package
+- Start and enable the `crond` service
+- Schedule a recurring cron job for the root user
+- Verify cron execution output
+
+---
+
+## 🧠 High-Level Logic
+- CONNECT to jump host
+- FOR each app server:
+  -  INSTALL cron service
+  -  START and ENABLE cron daemon
+  -  CONFIGURE root cron job
+  -  VERIFY cron execution
+
+## 🛠️ Implementation Steps
+
+## Step 1: Login to Jump Host
+ssh thor@jump_host.stratos.xfusioncorp.com
+
+📸 screenshots/jumphost-login.png
+
+## Step 2: Connect to App Server
+ssh tony@stapp01.stratos.xfusioncorp.com
+📸 screenshots/app-server-login.png
+
+## Step 3: Install Cronie
+sudo yum install -y cronie
+📸 screenshots/cronie-install.png
+
+## Step 4: Start and Enable Cron Service
+sudo systemctl start crond
+sudo systemctl enable crond
+📸 screenshots/crond-status.png
+
+## Step 5: Configure Root Cron Job
+sudo crontab -e
+Cron entry:
+
+*/5 * * * * echo hello > /tmp/cron_text
+📸 screenshots/root-crontab.png
+
+## Step 6: Verify Cron Execution
+sudo crontab -l
+ls -l /tmp/cron_text
+cat /tmp/cron_text
+📸 screenshots/cron-output.png
+
+## ✅ Final Outcome
+Cron service installed and running
+
+Root cron job scheduled every 5 minutes
+
+Output successfully written to /tmp/cron_text
+
+Configuration applied across all app servers
+
+## 🏷️ Tags
+`linux` `cron` `cronie` `system-administration` `automation`
 
 <img width="1034" height="666" alt="image" src="https://github.com/user-attachments/assets/19c263a8-0787-4e9e-981a-c0b45835cfe3" />
 <img width="1036" height="851" alt="image" src="https://github.com/user-attachments/assets/2f546048-df6a-4433-bb28-4366f66b7506" />
