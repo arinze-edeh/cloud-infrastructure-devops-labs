@@ -60,13 +60,17 @@ to validate cron functionality across all servers.
 <img width="1034" height="853" alt="image" src="https://github.com/user-attachments/assets/58da6179-0709-467f-96fc-4f061833f44d" />
 
 ## Step 3: Add the Cron Job
-- sudo yum install -y cronie
+- The task requires adding a cron job specifically for the root user.
+- `sudo crontab -e -u root`
+- Add the Cron Entry
+- `*/5 * * * * echo hello > /tmp/cron_text`
 
 📸 screenshots:
 
+
 ## Step 4: Verification
-- sudo systemctl start crond
-- sudo systemctl enable crond
+- `sudo crontab -l -u root`
+- `exit`
 
 📸 screenshots:
 <img width="1026" height="859" alt="image" src="https://github.com/user-attachments/assets/7577a943-68d8-46c1-a55b-445a6f01d243" />
