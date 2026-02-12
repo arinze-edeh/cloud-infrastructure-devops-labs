@@ -41,7 +41,7 @@ to validate cron functionality across all servers.
 - Install the Package
   -  sudo yum install -y cronie
 - Start and Enable the Service
-`Start the crond service and enable it so it persists after a reboot`
+- `Start the crond service and enable it so it persists after a reboot`
   -  sudo systemctl start crond
   -  sudo systemctl enable crond
 
