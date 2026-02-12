@@ -49,12 +49,12 @@ to validate cron functionality across all servers.
 <img width="1036" height="851" alt="image" src="https://github.com/user-attachments/assets/2f546048-df6a-4433-bb28-4366f66b7506" />
 <img width="1034" height="853" alt="image" src="https://github.com/user-attachments/assets/58da6179-0709-467f-96fc-4f061833f44d" />
 
-## Step 3: Install Cronie
+## Step 3: Add the Cron Job
 - sudo yum install -y cronie
 
 📸 screenshots:
 
-## Step 4: Start and Enable Cron Service
+## Step 4: Verification
 - sudo systemctl start crond
 - sudo systemctl enable crond
 
