@@ -64,18 +64,18 @@ using the AWS CLI and verify successful attachment.
 
 ## Step 5: Attach ENI to EC2
 - aws ec2 attach-network-interface \
-  --network-interface-id <eni-id> \
-  --instance-id <instance-id> \
-  --device-index 1
+  -  --network-interface-id <eni-id> \
+  -  --instance-id <instance-id> \
+  -  --device-index 1
 
 📸 screenshot:
 <img width="1042" height="661" alt="image" src="https://github.com/user-attachments/assets/69392dba-668e-462a-988d-288f1cda754d" />
 
 ## Step 6: Verify ENI Attachment Status
-aws ec2 describe-network-interfaces \
-  --network-interface-ids <eni-id> \
-  --query "NetworkInterfaces[].Status" \
-  --output table
+- aws ec2 describe-network-interfaces \
+  -  --network-interface-ids <eni-id> \
+  -  --query "NetworkInterfaces[].Status" \
+  -  --output table
 
 📸 screenshot:
 <img width="1037" height="870" alt="image" src="https://github.com/user-attachments/assets/1a2c8142-8257-4b03-b496-d9ce358d359d" />
@@ -90,12 +90,3 @@ aws ec2 describe-network-interfaces \
 
 ## 🏷️ Tags
 - aws ec2 eni networking devops
-
-
-
-
-
-
-
-
-
