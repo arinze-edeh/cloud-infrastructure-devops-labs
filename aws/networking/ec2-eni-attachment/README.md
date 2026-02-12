@@ -32,7 +32,7 @@ using the AWS CLI and verify successful attachment.
 ## 🛠️ Implementation Steps
 
 ## Step 1: Authenticate AWS CLI
-- aws configure
+- showcred
 
 📸 screenshot:
 <img width="1040" height="644" alt="image" src="https://github.com/user-attachments/assets/da70b1ed-7e8b-442e-8cae-779c76ebdc0e" />
