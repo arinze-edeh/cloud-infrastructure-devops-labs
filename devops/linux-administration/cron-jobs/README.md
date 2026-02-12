@@ -58,6 +58,9 @@ to validate cron functionality across all servers.
 📸 screenshots:
 <img width="1036" height="851" alt="image" src="https://github.com/user-attachments/assets/2f546048-df6a-4433-bb28-4366f66b7506" />
 <img width="1034" height="853" alt="image" src="https://github.com/user-attachments/assets/58da6179-0709-467f-96fc-4f061833f44d" />
+<img width="1042" height="862" alt="image" src="https://github.com/user-attachments/assets/a715db10-e659-48f9-af15-884f9d19fa0d" />
+<img width="1036" height="869" alt="image" src="https://github.com/user-attachments/assets/7e5bc2a2-ab8f-49e0-8086-f22f134d5741" />
+<img width="1030" height="859" alt="image" src="https://github.com/user-attachments/assets/3c8748f4-1a76-4898-a98c-3a8ce8ba05f1" />
 
 ## Step 3: Add the Cron Job
 - The task requires adding a cron job specifically for the root user.
@@ -93,19 +96,6 @@ to validate cron functionality across all servers.
 
 
 
-<img width="1042" height="862" alt="image" src="https://github.com/user-attachments/assets/a715db10-e659-48f9-af15-884f9d19fa0d" />
-
-
-
-
-
-<img width="1036" height="869" alt="image" src="https://github.com/user-attachments/assets/7e5bc2a2-ab8f-49e0-8086-f22f134d5741" />
-
-
-
-
-
-<img width="1030" height="859" alt="image" src="https://github.com/user-attachments/assets/3c8748f4-1a76-4898-a98c-3a8ce8ba05f1" />
 
 
 
