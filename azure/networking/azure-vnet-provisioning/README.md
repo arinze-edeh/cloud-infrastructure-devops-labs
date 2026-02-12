@@ -59,7 +59,8 @@ networking layer for upcoming Azure services.
   -  --location eastus
 
 📸 screenshots:
-
+<img width="1025" height="879" alt="image" src="https://github.com/user-attachments/assets/39a626f2-8104-42c3-b0eb-7f5527b44643" />
+<img width="1036" height="868" alt="image" src="https://github.com/user-attachments/assets/44ec61f8-70c0-4189-993d-64bee992cbfb" />
 
 ## Step 5: Verify VNet
 - az network vnet show \
@@ -84,8 +85,7 @@ networking layer for upcoming Azure services.
 
 
 
-<img width="1025" height="879" alt="image" src="https://github.com/user-attachments/assets/39a626f2-8104-42c3-b0eb-7f5527b44643" />
-<img width="1036" height="868" alt="image" src="https://github.com/user-attachments/assets/44ec61f8-70c0-4189-993d-64bee992cbfb" />
+
 <img width="1395" height="846" alt="image" src="https://github.com/user-attachments/assets/1381be95-b43f-46ce-b3de-50a803e2fa16" />
 
 
