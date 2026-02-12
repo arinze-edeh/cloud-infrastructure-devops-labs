@@ -25,6 +25,7 @@ to validate cron functionality across all servers.
   -  VERIFY cron execution
 
 ## 🛠️ Implementation Steps
+⚠️ `The following steps were performed individually on each app server.`
 
 ## Step 1: Login to Jump Host
 - ssh thor@jump_host.stratos.xfusioncorp.com
