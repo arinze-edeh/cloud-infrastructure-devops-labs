@@ -46,7 +46,8 @@ to validate cron functionality across all servers.
   -  sudo systemctl enable crond
 
 📸 screenshots:
-
+<img width="1036" height="851" alt="image" src="https://github.com/user-attachments/assets/2f546048-df6a-4433-bb28-4366f66b7506" />
+<img width="1034" height="853" alt="image" src="https://github.com/user-attachments/assets/58da6179-0709-467f-96fc-4f061833f44d" />
 
 ## Step 3: Install Cronie
 - sudo yum install -y cronie
@@ -88,8 +89,7 @@ Cron entry:
 `linux` `cron` `cronie` `system-administration` `automation`
 
 
-<img width="1036" height="851" alt="image" src="https://github.com/user-attachments/assets/2f546048-df6a-4433-bb28-4366f66b7506" />
-<img width="1034" height="853" alt="image" src="https://github.com/user-attachments/assets/58da6179-0709-467f-96fc-4f061833f44d" />
+
 <img width="1042" height="862" alt="image" src="https://github.com/user-attachments/assets/a715db10-e659-48f9-af15-884f9d19fa0d" />
 <img width="1035" height="882" alt="image" src="https://github.com/user-attachments/assets/067a0da0-3b97-45a2-b0f2-1830500208c4" />
 <img width="1026" height="859" alt="image" src="https://github.com/user-attachments/assets/7577a943-68d8-46c1-a55b-445a6f01d243" />
