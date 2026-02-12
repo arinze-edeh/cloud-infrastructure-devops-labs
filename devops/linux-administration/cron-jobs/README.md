@@ -66,7 +66,9 @@ to validate cron functionality across all servers.
 - `*/5 * * * * echo hello > /tmp/cron_text`
 
 📸 screenshots:
-
+<img width="1035" height="882" alt="image" src="https://github.com/user-attachments/assets/067a0da0-3b97-45a2-b0f2-1830500208c4" />
+<img width="1038" height="890" alt="image" src="https://github.com/user-attachments/assets/cafad6e7-1a35-4a41-9509-41c779dcb83c" />
+<img width="1037" height="876" alt="image" src="https://github.com/user-attachments/assets/9401e24a-6951-4b21-a11f-f31d47906e4b" />
 
 ## Step 4: Verification
 - `sudo crontab -l -u root`
@@ -76,23 +78,6 @@ to validate cron functionality across all servers.
 <img width="1026" height="859" alt="image" src="https://github.com/user-attachments/assets/7577a943-68d8-46c1-a55b-445a6f01d243" />
 <img width="1039" height="871" alt="image" src="https://github.com/user-attachments/assets/a33c92bb-3fe2-4353-9e16-04dc3eda3b76" />
 <img width="1027" height="857" alt="image" src="https://github.com/user-attachments/assets/4d9e2505-4efe-474f-af0d-fe9a95fcc839" />
-
-
-## Step 5: Configure Root Cron Job
-sudo crontab -e
-Cron entry:
-
-*/5 * * * * echo hello > /tmp/cron_text
-
-📸 screenshots:
-
-## Step 6: Verify Cron Execution
-- sudo crontab -l
-- ls -l /tmp/cron_text
-- cat /tmp/cron_text
-
-📸 screenshots:
-
 
 ## ✅ Final Outcome
 - Cron service installed and running
@@ -109,19 +94,19 @@ Cron entry:
 
 
 <img width="1042" height="862" alt="image" src="https://github.com/user-attachments/assets/a715db10-e659-48f9-af15-884f9d19fa0d" />
-<img width="1035" height="882" alt="image" src="https://github.com/user-attachments/assets/067a0da0-3b97-45a2-b0f2-1830500208c4" />
+
 
 
 
 
 <img width="1036" height="869" alt="image" src="https://github.com/user-attachments/assets/7e5bc2a2-ab8f-49e0-8086-f22f134d5741" />
-<img width="1038" height="890" alt="image" src="https://github.com/user-attachments/assets/cafad6e7-1a35-4a41-9509-41c779dcb83c" />
+
 
 
 
 
 <img width="1030" height="859" alt="image" src="https://github.com/user-attachments/assets/3c8748f4-1a76-4898-a98c-3a8ce8ba05f1" />
-<img width="1037" height="876" alt="image" src="https://github.com/user-attachments/assets/9401e24a-6951-4b21-a11f-f31d47906e4b" />
+
 
 
 
