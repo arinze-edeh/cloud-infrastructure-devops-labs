@@ -30,23 +30,23 @@ to validate cron functionality across all servers.
 ## Step 1: Login to Jump Host
 - ssh thor@jump_host.stratos.xfusioncorp.com
 
-📸 screenshots/jumphost-login.png
+📸 screenshots:
 
 ## Step 2: Connect to App Server
 - ssh tony@stapp01.stratos.xfusioncorp.com
 
-📸 screenshots/app-server-login.png
+📸 screenshots:
 
 ## Step 3: Install Cronie
 - sudo yum install -y cronie
 
-📸 screenshots/cronie-install.png
+📸 screenshots:
 
 ## Step 4: Start and Enable Cron Service
 - sudo systemctl start crond
 - sudo systemctl enable crond
 
-📸 screenshots/crond-status.png
+📸 screenshots:
 
 ## Step 5: Configure Root Cron Job
 sudo crontab -e
@@ -54,14 +54,15 @@ Cron entry:
 
 */5 * * * * echo hello > /tmp/cron_text
 
-📸 screenshots/root-crontab.png
+📸 screenshots:
 
 ## Step 6: Verify Cron Execution
 - sudo crontab -l
 - ls -l /tmp/cron_text
 - cat /tmp/cron_text
 
-📸 screenshots/cron-output.png
+📸 screenshots:
+
 
 ## ✅ Final Outcome
 - Cron service installed and running
