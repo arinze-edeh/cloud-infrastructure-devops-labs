@@ -35,7 +35,8 @@ using the AWS CLI and verify successful attachment.
 - showcred
 
 📸 screenshot:
-<img width="1040" height="644" alt="image" src="https://github.com/user-attachments/assets/da70b1ed-7e8b-442e-8cae-779c76ebdc0e" />
+
+<img width="1040" height="644" alt="548544348-da70b1ed-7e8b-442e-8cae-779c76ebdc0e" src="https://github.com/user-attachments/assets/77d11d15-16ae-47bf-bc73-49410931eb3f" />
 
 ## Step 2: Verify AWS Region
 - aws configure get region
