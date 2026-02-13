@@ -22,7 +22,7 @@ verification of block storage resources.
 
 - Verify successful attachment status
 
-## 🧠 High-Level Logic (Pseudo-Code)
+## 🧠 High-Level Logic
 - CONNECT to AWS client host
 - CONFIGURE AWS CLI credentials
 - SET region to us-east-1
@@ -42,7 +42,7 @@ verification of block storage resources.
 
 ## 🛠️ Implementation Steps
 
-## Step 1: Login to AWS Client Host
+## Step 1: Configure & Verify Region
 
 - Access the AWS client machine provided for the lab.
 
@@ -50,8 +50,9 @@ verification of block storage resources.
 
 
 📸 screenshot:
+<img width="1031" height="686" alt="image" src="https://github.com/user-attachments/assets/aa34b752-7134-4b73-90af-19b23af74e75" />
 
-## Step 2: Configure AWS CLI
+## Step 2: Identify Resource IDs
 
 - Configure credentials and ensure the correct region is set.
 
@@ -62,7 +63,8 @@ aws configure
 
 📸 screenshots:
 
-## Step 3: Identify EC2 Instance
+
+## Step 3: Attach Volume to Instance
 
 - Retrieve the instance ID for the target EC2 instance.
 
@@ -73,7 +75,7 @@ aws configure
 
 📸 screenshot:
 
-## Step 4: Identify EBS Volume
+## Step 4:Verify Attachment Status
 
 Retrieve the volume ID for the existing EBS volume.
 
@@ -95,6 +97,8 @@ Retrieve the volume ID for the existing EBS volume.
 
 
 📸 screenshot:
+
+
 ## Step 6: Verify Volume Attachment
 
 - Confirm the volume is attached and in-use.
@@ -125,7 +129,7 @@ Attachment status: attached
 `aws` `ec2` `ebs` `storage` `cloud` `devops` `infrastructure`
 
 
-<img width="1031" height="686" alt="image" src="https://github.com/user-attachments/assets/aa34b752-7134-4b73-90af-19b23af74e75" />
+
 <img width="1029" height="678" alt="image" src="https://github.com/user-attachments/assets/093ab8b8-b14e-4273-9852-42afc5f93ce0" />
 <img width="1025" height="613" alt="image" src="https://github.com/user-attachments/assets/2b4385b3-6293-4358-9083-02849ae476a8" />
 <img width="1033" height="756" alt="image" src="https://github.com/user-attachments/assets/fad3c318-9cd6-4038-99a4-d58bec0b3c12" />
