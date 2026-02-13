@@ -89,14 +89,20 @@ verification of block storage resources.
 
 - Confirm the volume is attached.
 
-- aws ec2 attach-volume \
-  -  --volume-id <VOLUME_ID> \
-  -  --instance-id <INSTANCE_ID> \
-  -  --device /dev/sdb
+- `aws ec2 describe-volumes \`
+  -  `--volume-ids $VOLUME_ID \`
+  -  `--query "Volumes[0].Attachments[0].State"`
 
+- Expected state:
 
-📸 screenshot:
+  - State: attached
 
+  - Device: /dev/sdb
+
+📸 screenshotS:
+<img width="1024" height="836" alt="image" src="https://github.com/user-attachments/assets/8e918200-00e1-41df-8b11-620764529996" />
+<img width="1027" height="813" alt="image" src="https://github.com/user-attachments/assets/c7cf1337-8ce1-426a-b77b-47bac3402406" />
+<img width="1038" height="861" alt="image" src="https://github.com/user-attachments/assets/7596bc69-0f0c-4039-b083-0fe2ee761fcd" />
 
 ## ✅ Final Outcome
 
@@ -116,7 +122,5 @@ verification of block storage resources.
 
 
 
-<img width="1024" height="836" alt="image" src="https://github.com/user-attachments/assets/8e918200-00e1-41df-8b11-620764529996" />
-<img width="1027" height="813" alt="image" src="https://github.com/user-attachments/assets/c7cf1337-8ce1-426a-b77b-47bac3402406" />
-<img width="1038" height="861" alt="image" src="https://github.com/user-attachments/assets/7596bc69-0f0c-4039-b083-0fe2ee761fcd" />
+
 
