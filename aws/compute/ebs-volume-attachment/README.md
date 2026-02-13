@@ -53,55 +53,54 @@ verification of block storage resources.
 
 ## Step 2: Configure AWS CLI
 
-Configure credentials and ensure the correct region is set.
+- Configure credentials and ensure the correct region is set.
 
 aws configure
 
 
-Default region: us-east-1
+- Default region: us-east-1
 
 📸 screenshots:
 
 ## Step 3: Identify EC2 Instance
 
-Retrieve the instance ID for the target EC2 instance.
+- Retrieve the instance ID for the target EC2 instance.
 
-aws ec2 describe-instances \
-  --filters "Name=tag:Name,Values=devops-ec2" \
-  --query "Reservations[].Instances[].InstanceId"
+- aws ec2 describe-instances \
+  -  --filters "Name=tag:Name,Values=devops-ec2" \
+  -  --query "Reservations[].Instances[].InstanceId"
 
 
-📸 screenshots/ec2-instance-id.png
+📸 screenshot:
 
 ## Step 4: Identify EBS Volume
 
 Retrieve the volume ID for the existing EBS volume.
 
-aws ec2 describe-volumes \
-  --filters "Name=tag:Name,Values=devops-volume" \
-  --query "Volumes[].VolumeId"
+- aws ec2 describe-volumes \
+  -  --filters "Name=tag:Name,Values=devops-volume" \
+  -  --query "Volumes[].VolumeId"
 
 
 📸 screenshots/ebs-volume-id.png
 
 ## Step 5: Attach Volume to EC2 Instance
 
-Attach the volume to the instance using the required device name.
+- Attach the volume to the instance using the required device name.
 
-aws ec2 attach-volume \
-  --volume-id <VOLUME_ID> \
-  --instance-id <INSTANCE_ID> \
-  --device /dev/sdb
+- aws ec2 attach-volume \
+  -  --volume-id <VOLUME_ID> \
+  -  --instance-id <INSTANCE_ID> \
+  -  --device /dev/sdb
 
 
-📸 screenshots/attach-volume.png
-
+📸 screenshot:
 ## Step 6: Verify Volume Attachment
 
-Confirm the volume is attached and in-use.
+- Confirm the volume is attached and in-use.
 
-aws ec2 describe-volumes \
-  --volume-ids <VOLUME_ID>
+- aws ec2 describe-volumes \
+  - --volume-ids <VOLUME_ID>
 
 
 Expected state:
@@ -110,17 +109,17 @@ State: in-use
 
 Attachment status: attached
 
-📸 screenshots/volume-attached.png
+📸 screenshot:
 
 ## ✅ Final Outcome
 
-Existing EBS volume successfully attached to EC2 instance
+- Existing EBS volume successfully attached to EC2 instance
 
-Device name correctly set to /dev/sdb
+- Device name correctly set to /dev/sdb
 
-Volume state confirmed as in-use
+- Volume state confirmed as in-use
 
-Task completed within the us-east-1 region
+- Task completed within the us-east-1 region
 
 ## 🏷️ Tags
 `aws` `ec2` `ebs` `storage` `cloud` `devops` `infrastructure`
