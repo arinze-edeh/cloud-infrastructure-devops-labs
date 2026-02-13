@@ -1,4 +1,129 @@
+# AWS EC2 Volume Attachment (EBS)
 
+## 📌 Lab Overview
+
+- The Nautilus DevOps team is managing AWS infrastructure using
+incremental migration tasks. As part of storage management,
+an existing EBS volume must be attached to an already running
+EC2 instance using AWS tooling in the us-east-1 region.
+
+This lab validates correct identification, attachment, and
+verification of block storage resources.
+
+## 🎯 Objectives
+
+- Identify an existing EC2 instance
+
+- Identify an existing EBS volume
+
+- Attach the EBS volume to the EC2 instance
+
+- Set the correct device name during attachment
+
+- Verify successful attachment status
+
+## 🧠 High-Level Logic (Pseudo-Code)
+- CONNECT to AWS client host
+- CONFIGURE AWS CLI credentials
+- SET region to us-east-1
+
+- LOCATE EC2 instance by name
+- CONFIRM instance exists
+
+- LOCATE EBS volume by name
+- CONFIRM volume is available
+- CONFIRM volume and instance are in same AZ
+
+- ATTACH volume to instance
+- SET device name to /dev/sdb
+
+- VERIFY volume state is in-use
+- CONFIRM attachment is successful
+
+## 🛠️ Implementation Steps
+
+## Step 1: Login to AWS Client Host
+
+- Access the AWS client machine provided for the lab.
+
+- ssh cloud_user@aws-client
+
+
+📸 screenshot:
+
+## Step 2: Configure AWS CLI
+
+Configure credentials and ensure the correct region is set.
+
+aws configure
+
+
+Default region: us-east-1
+
+📸 screenshots:
+
+## Step 3: Identify EC2 Instance
+
+Retrieve the instance ID for the target EC2 instance.
+
+aws ec2 describe-instances \
+  --filters "Name=tag:Name,Values=devops-ec2" \
+  --query "Reservations[].Instances[].InstanceId"
+
+
+📸 screenshots/ec2-instance-id.png
+
+## Step 4: Identify EBS Volume
+
+Retrieve the volume ID for the existing EBS volume.
+
+aws ec2 describe-volumes \
+  --filters "Name=tag:Name,Values=devops-volume" \
+  --query "Volumes[].VolumeId"
+
+
+📸 screenshots/ebs-volume-id.png
+
+## Step 5: Attach Volume to EC2 Instance
+
+Attach the volume to the instance using the required device name.
+
+aws ec2 attach-volume \
+  --volume-id <VOLUME_ID> \
+  --instance-id <INSTANCE_ID> \
+  --device /dev/sdb
+
+
+📸 screenshots/attach-volume.png
+
+## Step 6: Verify Volume Attachment
+
+Confirm the volume is attached and in-use.
+
+aws ec2 describe-volumes \
+  --volume-ids <VOLUME_ID>
+
+
+Expected state:
+
+State: in-use
+
+Attachment status: attached
+
+📸 screenshots/volume-attached.png
+
+## ✅ Final Outcome
+
+Existing EBS volume successfully attached to EC2 instance
+
+Device name correctly set to /dev/sdb
+
+Volume state confirmed as in-use
+
+Task completed within the us-east-1 region
+
+## 🏷️ Tags
+`aws` `ec2` `ebs` `storage` `cloud` `devops` `infrastructure`
 
 
 <img width="1031" height="686" alt="image" src="https://github.com/user-attachments/assets/aa34b752-7134-4b73-90af-19b23af74e75" />
