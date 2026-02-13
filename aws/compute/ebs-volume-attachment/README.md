@@ -12,34 +12,32 @@ verification of block storage resources.
 
 ## 🎯 Objectives
 
-- Identify an existing EC2 instance
+- Identify an existing EC2 instance: `nautilus-ec2`
 
-- Identify an existing EBS volume
+- Identify an existing EBS volume: `nautilus-volume`
 
 - Attach the EBS volume to the EC2 instance
 
-- Set the correct device name during attachment
+- Set the correct device name during attachment (/dev/sdb)
 
 - Verify successful attachment status
 
 ## 🧠 High-Level Logic
-- CONNECT to AWS client host
 - CONFIGURE AWS CLI credentials
 - SET region to us-east-1
 
-- LOCATE EC2 instance by name
-- CONFIRM instance exists
+- LOCATE EC2 instance by tag "Name=nautilus-ec2"
+- CONFIRM instance exists AND retrieve InstanceID
 
-- LOCATE EBS volume by name
-- CONFIRM volume is available
-- CONFIRM volume and instance are in same AZ
+- LOCATE EBS volume by tag "Name=nautilus-volume"
+- CONFIRM volume is available AND retrieve VolumeID
 
 - ATTACH volume to instance
 - SET device name to /dev/sdb
 
-- VERIFY volume state is in-use
-- CONFIRM attachment is successful
-
+- VERIFY volume state is "attached"
+- CONFIRM attachment is successful via CLI
+  
 ## 🛠️ Implementation Steps
 
 ## Step 1: Configure & Verify Region
