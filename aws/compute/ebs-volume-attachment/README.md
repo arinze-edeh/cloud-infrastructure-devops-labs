@@ -7,7 +7,7 @@ incremental migration tasks. As part of storage management,
 an existing EBS volume must be attached to an already running
 EC2 instance using AWS tooling in the us-east-1 region.
 
-This lab validates correct identification, attachment, and
+- This lab validates correct identification, attachment, and
 verification of block storage resources.
 
 ## 🎯 Objectives
