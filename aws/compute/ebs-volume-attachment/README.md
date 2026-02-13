@@ -52,7 +52,7 @@ verification of block storage resources.
 📸 screenshot:
 <img width="1031" height="686" alt="image" src="https://github.com/user-attachments/assets/aa34b752-7134-4b73-90af-19b23af74e75" />
 
-## Step 2: Identify Resource IDs
+## Step 2: Identify EC2 Instance
 
 - Configure credentials and ensure the correct region is set.
 
@@ -64,7 +64,7 @@ aws configure
 📸 screenshots:
 
 
-## Step 3: Attach Volume to Instance
+## Step 3: Identify EBS Volume
 
 - Retrieve the instance ID for the target EC2 instance.
 
@@ -75,7 +75,7 @@ aws configure
 
 📸 screenshot:
 
-## Step 4:Verify Attachment Status
+## Step 4:Attach Volume to EC2 Instance
 
 Retrieve the volume ID for the existing EBS volume.
 
@@ -86,7 +86,7 @@ Retrieve the volume ID for the existing EBS volume.
 
 📸 screenshots/ebs-volume-id.png
 
-## Step 5: Attach Volume to EC2 Instance
+## Step 5: Verify Volume Attachment
 
 - Attach the volume to the instance using the required device name.
 
@@ -99,31 +99,15 @@ Retrieve the volume ID for the existing EBS volume.
 📸 screenshot:
 
 
-## Step 6: Verify Volume Attachment
-
-- Confirm the volume is attached and in-use.
-
-- aws ec2 describe-volumes \
-  - --volume-ids <VOLUME_ID>
-
-
-Expected state:
-
-State: in-use
-
-Attachment status: attached
-
-📸 screenshot:
-
 ## ✅ Final Outcome
 
 - Existing EBS volume successfully attached to EC2 instance
 
-- Device name correctly set to /dev/sdb
+- Device name correctly set to `/dev/sdb`
 
-- Volume state confirmed as in-use
+- Volume state confirmed as `attached`
 
-- Task completed within the us-east-1 region
+- Task completed within the `us-east-1` region
 
 ## 🏷️ Tags
 `aws` `ec2` `ebs` `storage` `cloud` `devops` `infrastructure`
