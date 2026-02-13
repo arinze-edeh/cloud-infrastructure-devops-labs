@@ -39,9 +39,6 @@ Azure CLI within an existing resource group.
   -  SET subnet name = nautilus-subnet
   -  SET subnet CIDR = 10.0.1.0/24
 
-- VERIFY VNet provisioning state
-- VERIFY subnet association
-
 ## 🛠️ Implementation Steps
 
 ## Step 1: Retrieve Azure Credentials
