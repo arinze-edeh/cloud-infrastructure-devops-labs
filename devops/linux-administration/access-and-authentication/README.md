@@ -53,20 +53,22 @@ ls -l ~/.ssh/id_rsa*
 <img width="919" height="662" alt="image" src="https://github.com/user-attachments/assets/18f2abe1-aaef-49e0-b596-6f8d2003ea1a" />
 
 ## Step 4: Copy SSH Key to App Server 1
-ssh-copy-id tony@172.16.238.10
-Accept authenticity prompt
+- ssh-copy-id tony@172.16.238.10
 
-Enter user password once
-
-📸 screenshots/ssh-copy-id-stapp01.png
+📸 screenshot:
+<img width="1030" height="860" alt="image" src="https://github.com/user-attachments/assets/486fe75b-b3a5-4b77-bd54-6b559757a4ec" />
 
 ## Step 5: Copy SSH Key to App Server 2
 ssh-copy-id steve@172.16.238.11
-📸 screenshots/ssh-copy-id-stapp02.png
+
+📸 screenshot:
+<img width="1030" height="855" alt="image" src="https://github.com/user-attachments/assets/c2a3ce55-ddbd-44bd-b86e-abec1599d643" />
 
 ## Step 6: Copy SSH Key to App Server 3
 ssh-copy-id banner@172.16.238.12
-📸 screenshots/ssh-copy-id-stapp03.png
+
+📸 screenshot:
+<img width="1029" height="865" alt="image" src="https://github.com/user-attachments/assets/abaed342-6e98-4d5d-b897-8c4cb1dbd8d9" />
 
 ## Step 7: Verify Password-less SSH Access
 - App Server 1
@@ -97,9 +99,9 @@ ssh-copy-id banner@172.16.238.12
 
 
 
-<img width="1030" height="860" alt="image" src="https://github.com/user-attachments/assets/486fe75b-b3a5-4b77-bd54-6b559757a4ec" />
-<img width="1030" height="855" alt="image" src="https://github.com/user-attachments/assets/c2a3ce55-ddbd-44bd-b86e-abec1599d643" />
-<img width="1029" height="865" alt="image" src="https://github.com/user-attachments/assets/abaed342-6e98-4d5d-b897-8c4cb1dbd8d9" />
+
+
+
 
 
 
