@@ -75,18 +75,19 @@ verification of block storage resources.
 
 ## Step 4:Attach Volume to EC2 Instance
 
-- Retrieve the volume ID for the existing EBS volume.
+- Attach the volume to the instance using the required device name.
 
-- aws ec2 describe-volumes \
-  -  --filters "Name=tag:Name,Values=devops-volume" \
-  -  --query "Volumes[].VolumeId"
+- `aws ec2 attach-volume \`
+  -  `--volume-id $VOLUME_ID \`
+  -  `--instance-id $INSTANCE_ID \`
+  -  `--device /dev/sdb`
 
-
-📸 screenshots/ebs-volume-id.png
+📸 screenshot:
+<img width="1033" height="756" alt="image" src="https://github.com/user-attachments/assets/fad3c318-9cd6-4038-99a4-d58bec0b3c12" />
 
 ## Step 5: Verify Volume Attachment
 
-- Attach the volume to the instance using the required device name.
+- Confirm the volume is attached.
 
 - aws ec2 attach-volume \
   -  --volume-id <VOLUME_ID> \
@@ -114,7 +115,7 @@ verification of block storage resources.
 
 
 
-<img width="1033" height="756" alt="image" src="https://github.com/user-attachments/assets/fad3c318-9cd6-4038-99a4-d58bec0b3c12" />
+
 <img width="1024" height="836" alt="image" src="https://github.com/user-attachments/assets/8e918200-00e1-41df-8b11-620764529996" />
 <img width="1027" height="813" alt="image" src="https://github.com/user-attachments/assets/c7cf1337-8ce1-426a-b77b-47bac3402406" />
 <img width="1038" height="861" alt="image" src="https://github.com/user-attachments/assets/7596bc69-0f0c-4039-b083-0fe2ee761fcd" />
