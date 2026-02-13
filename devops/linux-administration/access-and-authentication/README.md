@@ -44,10 +44,13 @@ uninterrupted across servers without manual password entry.
 - ssh-keygen -t rsa
 
 📸 screenshot:
+<img width="919" height="662" alt="image" src="https://github.com/user-attachments/assets/18f2abe1-aaef-49e0-b596-6f8d2003ea1a" />
 
 ## Step 3: Verify SSH Key Files
 ls -l ~/.ssh/id_rsa*
-📸 screenshots/ssh-key-files.png
+
+📸 screenshot:
+<img width="919" height="662" alt="image" src="https://github.com/user-attachments/assets/18f2abe1-aaef-49e0-b596-6f8d2003ea1a" />
 
 ## Step 4: Copy SSH Key to App Server 1
 ssh-copy-id tony@172.16.238.10
@@ -93,7 +96,7 @@ ssh-copy-id banner@172.16.238.12
 
 
 
-<img width="919" height="662" alt="image" src="https://github.com/user-attachments/assets/18f2abe1-aaef-49e0-b596-6f8d2003ea1a" />
+
 <img width="1030" height="860" alt="image" src="https://github.com/user-attachments/assets/486fe75b-b3a5-4b77-bd54-6b559757a4ec" />
 <img width="1030" height="855" alt="image" src="https://github.com/user-attachments/assets/c2a3ce55-ddbd-44bd-b86e-abec1599d643" />
 <img width="1029" height="865" alt="image" src="https://github.com/user-attachments/assets/abaed342-6e98-4d5d-b897-8c4cb1dbd8d9" />
