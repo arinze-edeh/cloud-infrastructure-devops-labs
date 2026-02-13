@@ -40,24 +40,17 @@ verification of block storage resources.
   
 ## 🛠️ Implementation Steps
 
-## Step 1: Configure & Verify Region
+## Step 1: Verify Region
 
-- Access the AWS client machine provided for the lab.
-
-- ssh cloud_user@aws-client
-
+- Ensure the correct region is set.
+- `aws configure get region`
 
 📸 screenshot:
 <img width="1031" height="686" alt="image" src="https://github.com/user-attachments/assets/aa34b752-7134-4b73-90af-19b23af74e75" />
 
 ## Step 2: Identify EC2 Instance
 
-- Configure credentials and ensure the correct region is set.
-
-aws configure
-
-
-- Default region: us-east-1
+- Retrieve the instance ID for the target EC2 instance.
 
 📸 screenshots:
 
