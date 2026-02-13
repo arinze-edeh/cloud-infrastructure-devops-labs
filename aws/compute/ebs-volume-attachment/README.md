@@ -51,24 +51,31 @@ verification of block storage resources.
 ## Step 2: Identify EC2 Instance
 
 - Retrieve the instance ID for the target EC2 instance.
+- `INSTANCE_ID=$(aws ec2 describe-instances \
+  --filters "Name=tag:Name,Values=nautilus-ec2" \
+  --query "Reservations[].Instances[].InstanceId" \
+  --output text)
+echo $INSTANCE_ID`
 
 📸 screenshots:
-
+<img width="1029" height="678" alt="image" src="https://github.com/user-attachments/assets/093ab8b8-b14e-4273-9852-42afc5f93ce0" />
 
 ## Step 3: Identify EBS Volume
 
-- Retrieve the instance ID for the target EC2 instance.
+- Retrieve the volume ID for the existing EBS volume.
 
-- aws ec2 describe-instances \
-  -  --filters "Name=tag:Name,Values=devops-ec2" \
-  -  --query "Reservations[].Instances[].InstanceId"
+- `VOLUME_ID=$(aws ec2 describe-volumes \`
+  -  `--filters "Name=tag:Name,Values=nautilus-volume" \`
+  -  `--query "Volumes[].VolumeId" \`
+  -  `--output text)`
+  - `echo $VOLUME_ID`
 
 
 📸 screenshot:
 
 ## Step 4:Attach Volume to EC2 Instance
 
-Retrieve the volume ID for the existing EBS volume.
+- Retrieve the volume ID for the existing EBS volume.
 
 - aws ec2 describe-volumes \
   -  --filters "Name=tag:Name,Values=devops-volume" \
@@ -105,7 +112,7 @@ Retrieve the volume ID for the existing EBS volume.
 
 
 
-<img width="1029" height="678" alt="image" src="https://github.com/user-attachments/assets/093ab8b8-b14e-4273-9852-42afc5f93ce0" />
+
 <img width="1025" height="613" alt="image" src="https://github.com/user-attachments/assets/2b4385b3-6293-4358-9083-02849ae476a8" />
 <img width="1033" height="756" alt="image" src="https://github.com/user-attachments/assets/fad3c318-9cd6-4038-99a4-d58bec0b3c12" />
 <img width="1024" height="836" alt="image" src="https://github.com/user-attachments/assets/8e918200-00e1-41df-8b11-620764529996" />
