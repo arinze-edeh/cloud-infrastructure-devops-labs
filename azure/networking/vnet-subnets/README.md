@@ -45,7 +45,7 @@ Azure CLI within an existing resource group.
 - showcreds
 
 📸 screenshot:
-<img width="1031" height="551" alt="image" src="https://github.com/user-attachments/assets/d3519e2b-60e8-48c1-9aff-7270941064d9" />
+<img width="1031" height="551" alt="549549591-d3519e2b-60e8-48c1-9aff-7270941064d9" src="https://github.com/user-attachments/assets/a96a79f3-ca3f-4150-a57f-3d9386a97dc2" />
 
 ## Step 2: List Existing Resource Groups
 - az group list --output table
