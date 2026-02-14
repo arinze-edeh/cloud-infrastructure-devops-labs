@@ -8,6 +8,7 @@ management tool due to its simplicity and minimal prerequisites.
 the Ansible binary is globally accessible to all users.
 
 ## OBJECTIVES
+
 - Upgrade pip3 on the Jump Host
 - Install Ansible version 4.7.0 using pip3
 - Resolve pip3 PATH issue
@@ -16,81 +17,84 @@ the Ansible binary is globally accessible to all users.
 
 ## HIGH-LEVEL LOGIC
 
-CONNECT to Jump Host
-UPGRADE pip3
-ATTEMPT Ansible installation using pip3
-IF pip3 not found in PATH:
-    USE absolute pip3 path
-INSTALL Ansible 4.7.0
-VERIFY Ansible binary location
-CONFIRM Ansible runs globally
-VALIDATE Ansible version
+- CONNECT to Jump Host
+- UPGRADE pip3
+- ATTEMPT Ansible installation using pip3
+- IF pip3 not found in PATH:
+  -  USE absolute pip3 path
+- INSTALL Ansible 4.7.0
+- VERIFY Ansible binary location
+- CONFIRM Ansible runs globally
+- VALIDATE Ansible version
 
 ## IMPLEMENTATION STEPS
 
 ## STEP 1: LOGIN TO JUMP HOST
-COMMAND:
-ssh thor@jumphost
+
+- COMMAND:
+`ssh thor@jumphost`
 
 SCREENSHOT:
 screenshots/jumphost-login.png
 
 ## STEP 2: UPGRADE PIP3
+
 - COMMAND:
-sudo pip3 install --upgrade pip
+
+`sudo pip3 install --upgrade pip`
 
 - RESULT:
-pip upgraded
-warning about /usr/local/bin not in PATH (acceptable)
+- pip upgraded
+- warning about /usr/local/bin not in PATH (acceptable)
 
 ## SCREENSHOT:
 screenshots/pip-upgrade.png
 
 ## STEP 3: ATTEMPT ANSIBLE INSTALLATION (FAILURE)
 COMMAND:
-sudo pip3 install ansible==4.7.0
+`sudo pip3 install ansible==4.7.0`
 
 ERROR:
-pip3 command not found
+`pip3 command not found`
 
 CAUSE:
-pip3 installed in /usr/local/bin
-sudo PATH does not include this directory
+- pip3 installed in /usr/local/bin
+- sudo PATH does not include this directory
 
 SCREENSHOT:
 screenshots/pip3-not-found.png
 
 ## STEP 4: INSTALL ANSIBLE USING ABSOLUTE PIP3 PATH
-COMMAND:
-sudo /usr/local/bin/pip3 install ansible==4.7.0
+- COMMAND:
+`sudo /usr/local/bin/pip3 install ansible==4.7.0`
 
 ACTION:
-Downloads Ansible 4.7.0
-Installs ansible-core 2.11.12
-Installs required dependencies
+- Downloads Ansible 4.7.0
+- Installs ansible-core 2.11.12
+- Installs required dependencies
 
 SCREENSHOT:
 screenshots/ansible-install.png
 
 ## STEP 5: VERIFY ANSIBLE BINARY LOCATION
-COMMAND:
-ls -l /usr/local/bin/ansible
+- COMMAND:
+`ls -l /usr/local/bin/ansible`
 
-EXPECTED RESULT:
-Executable file owned by root
-Permissions allow execution by all users
+- EXPECTED RESULT:
+`Executable file owned by root`
+- Permissions allow execution by all users
 
 SCREENSHOT:
 screenshots/ansible-binary.png
 
 ## STEP 6: VERIFY ANSIBLE INSTALLATION
-COMMAND:
-ansible --version
+- COMMAND:
+`ansible --version`
 
 EXPECTED RESULT:
-Ansible version 4.7.0
-Executable location: /usr/local/bin/ansible
-Python version 3.9.x
+- Ansible version 4.7.0
+- Executable location: /usr/local/bin/ansible
+- Python version 3.9.x
 
 SCREENSHOT:
 screenshots/ansible-version.png
