@@ -67,7 +67,7 @@ while handling SKU and allocation constraints.
 Command fails due to Standard SKU requiring Static allocation
 
 📸 screenshot:
-<img width="1031" height="696" alt="image" src="https://github.com/user-attachments/assets/74256c3c-dbe8-4a92-941c-6e18efcdb916" />
+
 
 ## Step 4: Create Public IP with Static Allocation (Corrected)
 - Recreate Public IP using Static allocation and Standard SKU:
@@ -79,6 +79,7 @@ Command fails due to Standard SKU requiring Static allocation
   -  --sku Standard
 
 📸 screenshot:
+<img width="1031" height="696" alt="image" src="https://github.com/user-attachments/assets/74256c3c-dbe8-4a92-941c-6e18efcdb916" />
 
 ## Step 5: Verify Public IP Configuration
 - Confirm Public IP details and provisioning state:
@@ -88,6 +89,7 @@ Command fails due to Standard SKU requiring Static allocation
   -  --resource-group kml_rg_main-6b125c0390d64b55
 
 📸 screenshot:
+<img width="1030" height="858" alt="image" src="https://github.com/user-attachments/assets/d86ce8a9-9f96-4f51-9c17-feb916c3d10b" />
 
 ## ✅ Final Outcome
 - Public IP devops-pip successfully created
@@ -108,7 +110,7 @@ Command fails due to Standard SKU requiring Static allocation
 
 
 
-<img width="1030" height="858" alt="image" src="https://github.com/user-attachments/assets/d86ce8a9-9f96-4f51-9c17-feb916c3d10b" />
+
 
 
 
