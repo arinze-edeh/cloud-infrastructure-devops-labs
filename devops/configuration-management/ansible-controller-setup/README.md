@@ -86,7 +86,7 @@ SCREENSHOT:
 EXPECTED RESULT:
 - Ansible version 4.7.0
 - Executable location: /usr/local/bin/ansible
-- Python version 3.9.x
+- Python version 3.9.18
 
 SCREENSHOT:
 <img width="1035" height="856" alt="image" src="https://github.com/user-attachments/assets/f4716738-959e-436e-81ba-764aa67ee9a6" />
