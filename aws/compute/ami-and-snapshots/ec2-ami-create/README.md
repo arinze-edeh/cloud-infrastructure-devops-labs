@@ -64,7 +64,7 @@ deployments, backups, and scaling operations.
 
 📸 screenshot:
 <img width="1793" height="944" alt="image" src="https://github.com/user-attachments/assets/1e8e3179-629c-4970-9e98-c6b755bf1a7e" />
-<img width="1821" height="943" alt="image" src="https://github.com/user-attachments/assets/86838675-4cf1-4eb6-b4a5-9e1ad27cf5b4" />
+
 
 ## Step 4: Configure AMI Details
 - AMI Name: nautilus-ec2-ami
@@ -74,6 +74,7 @@ deployments, backups, and scaling operations.
 - Click Create image
 
 📸 screenshot:
+<img width="1821" height="943" alt="image" src="https://github.com/user-attachments/assets/86838675-4cf1-4eb6-b4a5-9e1ad27cf5b4" />
 
 ## Step 5: Monitor AMI Creation Status
 - Navigate to AMIs
