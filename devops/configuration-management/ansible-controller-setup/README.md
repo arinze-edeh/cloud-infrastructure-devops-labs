@@ -29,15 +29,7 @@ the Ansible binary is globally accessible to all users.
 
 ## IMPLEMENTATION STEPS
 
-## STEP 1: LOGIN TO JUMP HOST
-
-- COMMAND:
-`ssh thor@jumphost`
-
-SCREENSHOT:
-<img width="1038" height="485" alt="image" src="https://github.com/user-attachments/assets/35ba1ee9-058c-40a1-9711-6b7fc1e9b67b" />
-
-## STEP 2: UPGRADE PIP3
+## STEP 1: UPGRADE PIP3
 
 - COMMAND:
 
@@ -48,9 +40,9 @@ SCREENSHOT:
 - warning about /usr/local/bin not in PATH (acceptable)
 
 ## SCREENSHOT:
-screenshots/pip-upgrade.png
+<img width="1038" height="485" alt="image" src="https://github.com/user-attachments/assets/35ba1ee9-058c-40a1-9711-6b7fc1e9b67b" />
 
-## STEP 3: ATTEMPT ANSIBLE INSTALLATION (FAILURE)
+## STEP 2: ATTEMPT ANSIBLE INSTALLATION (FAILURE)
 COMMAND:
 `sudo pip3 install ansible==4.7.0`
 
@@ -62,9 +54,9 @@ CAUSE:
 - sudo PATH does not include this directory
 
 SCREENSHOT:
-screenshots/pip3-not-found.png
+<img width="1030" height="858" alt="image" src="https://github.com/user-attachments/assets/5a235ad7-c556-462b-9925-be48e3be8f21" />
 
-## STEP 4: INSTALL ANSIBLE USING ABSOLUTE PIP3 PATH
+## STEP 3: INSTALL ANSIBLE USING ABSOLUTE PIP3 PATH
 - COMMAND:
 `sudo /usr/local/bin/pip3 install ansible==4.7.0`
 
@@ -74,9 +66,9 @@ ACTION:
 - Installs required dependencies
 
 SCREENSHOT:
-screenshots/ansible-install.png
+<img width="1035" height="862" alt="image" src="https://github.com/user-attachments/assets/c874d292-26ba-426f-82e4-3fc4eb3de4d1" />
 
-## STEP 5: VERIFY ANSIBLE BINARY LOCATION
+## STEP 4: VERIFY ANSIBLE BINARY LOCATION
 - COMMAND:
 `ls -l /usr/local/bin/ansible`
 
@@ -85,9 +77,9 @@ screenshots/ansible-install.png
 - Permissions allow execution by all users
 
 SCREENSHOT:
-screenshots/ansible-binary.png
+<img width="1038" height="869" alt="image" src="https://github.com/user-attachments/assets/7ce4deb1-6a7e-42ca-8290-eb81c2c05ee1" />
 
-## STEP 6: VERIFY ANSIBLE INSTALLATION
+## STEP 5: VERIFY ANSIBLE INSTALLATION
 - COMMAND:
 `ansible --version`
 
@@ -97,7 +89,7 @@ EXPECTED RESULT:
 - Python version 3.9.x
 
 SCREENSHOT:
-screenshots/ansible-version.png
+<img width="1035" height="856" alt="image" src="https://github.com/user-attachments/assets/f4716738-959e-436e-81ba-764aa67ee9a6" />
 
 ## FINAL OUTCOME
 
@@ -114,11 +106,3 @@ screenshots/ansible-version.png
 `automation`
 `pip3`
 `linux`
-
-
-
-<img width="1030" height="858" alt="image" src="https://github.com/user-attachments/assets/5a235ad7-c556-462b-9925-be48e3be8f21" />
-<img width="1035" height="862" alt="image" src="https://github.com/user-attachments/assets/c874d292-26ba-426f-82e4-3fc4eb3de4d1" />
-<img width="1038" height="869" alt="image" src="https://github.com/user-attachments/assets/7ce4deb1-6a7e-42ca-8290-eb81c2c05ee1" />
-<img width="1035" height="856" alt="image" src="https://github.com/user-attachments/assets/f4716738-959e-436e-81ba-764aa67ee9a6" />
-
