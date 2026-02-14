@@ -41,6 +41,7 @@ deployments, backups, and scaling operations.
 - Ensure region is set to us-east-1
 
 📸 screenshot:
+<img width="1791" height="941" alt="image" src="https://github.com/user-attachments/assets/30502e7a-8fae-4566-93dc-bfeddb7d7a1c" />
 
 ## Step 2: Navigate to EC2 Service
 - Open EC2 Dashboard
@@ -50,6 +51,7 @@ deployments, backups, and scaling operations.
 - Locate instance named nautilus-ec2
 
 📸 screenshot:
+<img width="1785" height="937" alt="image" src="https://github.com/user-attachments/assets/cf69143b-126a-4e75-998d-2171c3803bab" />
 
 ## Step 3: Create AMI from EC2 Instance
 - Select the instance nautilus-ec2
@@ -61,6 +63,7 @@ deployments, backups, and scaling operations.
 - Click Create image
 
 📸 screenshot:
+
 
 ## Step 4: Configure AMI Details
 - AMI Name: nautilus-ec2-ami
@@ -102,8 +105,8 @@ deployments, backups, and scaling operations.
 `aws` `ec2` `ami` `snapshots` `cloud-migration` `devops` `infrastructure`
 
 
-<img width="1791" height="941" alt="image" src="https://github.com/user-attachments/assets/30502e7a-8fae-4566-93dc-bfeddb7d7a1c" />
-<img width="1785" height="937" alt="image" src="https://github.com/user-attachments/assets/cf69143b-126a-4e75-998d-2171c3803bab" />
+
+
 <img width="1793" height="944" alt="image" src="https://github.com/user-attachments/assets/1e8e3179-629c-4970-9e98-c6b755bf1a7e" />
 <img width="1821" height="943" alt="image" src="https://github.com/user-attachments/assets/86838675-4cf1-4eb6-b4a5-9e1ad27cf5b4" />
 <img width="1856" height="940" alt="image" src="https://github.com/user-attachments/assets/0b007ee7-b952-4cda-8860-d366cf4a3861" />
