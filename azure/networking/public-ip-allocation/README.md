@@ -20,7 +20,7 @@ while handling SKU and allocation constraints.
 
 ---
 
-## 🧠 High-Level Logic (Pseudo-Code)
+## 🧠 High-Level Logic
 
 - CONNECT to azure-client host
 - RETRIEVE Azure credentials using showcreds
