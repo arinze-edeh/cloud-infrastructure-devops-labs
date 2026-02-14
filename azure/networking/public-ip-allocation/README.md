@@ -61,7 +61,8 @@ while handling SKU and allocation constraints.
   -  --name devops-pip \
   -  --resource-group kml_rg_main-6b125c0390d64b55 \
   -  --allocation-method Dynamic
-EXPECTED RESULT:
+
+- EXPECTED RESULT:
 
 Command fails due to Standard SKU requiring Static allocation
 
