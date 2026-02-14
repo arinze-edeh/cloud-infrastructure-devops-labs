@@ -84,6 +84,7 @@ deployments, backups, and scaling operations.
 - Wait until status changes to available
 
 📸 screenshot:
+<img width="1856" height="940" alt="image" src="https://github.com/user-attachments/assets/0b007ee7-b952-4cda-8860-d366cf4a3861" />
 
 ## Step 6: Verify AMI Availability
 - Confirm AMI state is available
@@ -93,6 +94,7 @@ deployments, backups, and scaling operations.
 - Validate readiness for EC2 launches
 
 📸 screenshot:
+<img width="1861" height="945" alt="image" src="https://github.com/user-attachments/assets/8f892b1d-576d-4f36-b16a-1e6400649aaf" />
 
 ## ✅ Final Outcome
 - AMI successfully created from existing EC2 instance
@@ -103,13 +105,5 @@ deployments, backups, and scaling operations.
 
 - AMI ready for reuse, scaling, and recovery operations
 
-🏷️ Tags
+## 🏷️ Tags
 `aws` `ec2` `ami` `snapshots` `cloud-migration` `devops` `infrastructure`
-
-
-
-
-
-<img width="1856" height="940" alt="image" src="https://github.com/user-attachments/assets/0b007ee7-b952-4cda-8860-d366cf4a3861" />
-<img width="1861" height="945" alt="image" src="https://github.com/user-attachments/assets/8f892b1d-576d-4f36-b16a-1e6400649aaf" />
-
