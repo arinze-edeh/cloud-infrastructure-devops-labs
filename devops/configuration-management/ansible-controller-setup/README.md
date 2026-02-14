@@ -1,10 +1,10 @@
-README.md — Ansible Controller Setup on Jump Host (pip3)
+# Ansible Controller Setup on Jump Host (pip3)
 
-LAB OVERVIEW
-The Nautilus DevOps team selected Ansible as the configuration
+## LAB OVERVIEW
+- The Nautilus DevOps team selected Ansible as the configuration
 management tool due to its simplicity and minimal prerequisites.
-The Jump Host is designated as the Ansible Controller.
-This task installs Ansible version 4.7.0 using pip3 only and ensures
+- The Jump Host is designated as the Ansible Controller.
+- This task installs Ansible version 4.7.0 using pip3 only and ensures
 the Ansible binary is globally accessible to all users.
 
 OBJECTIVES
@@ -14,7 +14,7 @@ OBJECTIVES
 - Verify Ansible is globally executable
 - Confirm correct Ansible version
 
-HIGH-LEVEL LOGIC (PSEUDO-CODE)
+HIGH-LEVEL LOGIC
 
 CONNECT to Jump Host
 UPGRADE pip3
@@ -95,14 +95,14 @@ Python version 3.9.x
 SCREENSHOT:
 screenshots/ansible-version.png
 
-FINAL OUTCOME
+## FINAL OUTCOME
 
 Ansible version 4.7.0 installed successfully
 Ansible binary available globally
 Jump Host configured as Ansible Controller
 All users can run Ansible commands
 
-TAGS
+## TAGS
 
 ansible
 configuration-management
