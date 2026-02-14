@@ -67,6 +67,7 @@ while handling SKU and allocation constraints.
 Command fails due to Standard SKU requiring Static allocation
 
 📸 screenshot:
+<img width="1026" height="863" alt="image" src="https://github.com/user-attachments/assets/e5f490b7-f71c-40ba-8f68-dcc1e55cdcd0" />
 
 
 ## Step 4: Create Public IP with Static Allocation (Corrected)
