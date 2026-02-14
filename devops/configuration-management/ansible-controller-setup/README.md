@@ -66,6 +66,7 @@ ACTION:
 - Installs required dependencies
 
 SCREENSHOT:
+<img width="1030" height="858" alt="image" src="https://github.com/user-attachments/assets/5a235ad7-c556-462b-9925-be48e3be8f21" />
 <img width="1035" height="862" alt="image" src="https://github.com/user-attachments/assets/c874d292-26ba-426f-82e4-3fc4eb3de4d1" />
 
 ## STEP 4: VERIFY ANSIBLE BINARY LOCATION
