@@ -7,14 +7,14 @@ management tool due to its simplicity and minimal prerequisites.
 - This task installs Ansible version 4.7.0 using pip3 only and ensures
 the Ansible binary is globally accessible to all users.
 
-OBJECTIVES
+## OBJECTIVES
 - Upgrade pip3 on the Jump Host
 - Install Ansible version 4.7.0 using pip3
 - Resolve pip3 PATH issue
 - Verify Ansible is globally executable
 - Confirm correct Ansible version
 
-HIGH-LEVEL LOGIC
+## HIGH-LEVEL LOGIC
 
 CONNECT to Jump Host
 UPGRADE pip3
@@ -26,27 +26,27 @@ VERIFY Ansible binary location
 CONFIRM Ansible runs globally
 VALIDATE Ansible version
 
-IMPLEMENTATION STEPS
+## IMPLEMENTATION STEPS
 
-STEP 1: LOGIN TO JUMP HOST
+## STEP 1: LOGIN TO JUMP HOST
 COMMAND:
 ssh thor@jumphost
 
 SCREENSHOT:
 screenshots/jumphost-login.png
 
-STEP 2: UPGRADE PIP3
-COMMAND:
+## STEP 2: UPGRADE PIP3
+- COMMAND:
 sudo pip3 install --upgrade pip
 
-RESULT:
+- RESULT:
 pip upgraded
 warning about /usr/local/bin not in PATH (acceptable)
 
-SCREENSHOT:
+## SCREENSHOT:
 screenshots/pip-upgrade.png
 
-STEP 3: ATTEMPT ANSIBLE INSTALLATION (FAILURE)
+## STEP 3: ATTEMPT ANSIBLE INSTALLATION (FAILURE)
 COMMAND:
 sudo pip3 install ansible==4.7.0
 
@@ -60,7 +60,7 @@ sudo PATH does not include this directory
 SCREENSHOT:
 screenshots/pip3-not-found.png
 
-STEP 4: INSTALL ANSIBLE USING ABSOLUTE PIP3 PATH
+## STEP 4: INSTALL ANSIBLE USING ABSOLUTE PIP3 PATH
 COMMAND:
 sudo /usr/local/bin/pip3 install ansible==4.7.0
 
@@ -72,7 +72,7 @@ Installs required dependencies
 SCREENSHOT:
 screenshots/ansible-install.png
 
-STEP 5: VERIFY ANSIBLE BINARY LOCATION
+## STEP 5: VERIFY ANSIBLE BINARY LOCATION
 COMMAND:
 ls -l /usr/local/bin/ansible
 
@@ -83,7 +83,7 @@ Permissions allow execution by all users
 SCREENSHOT:
 screenshots/ansible-binary.png
 
-STEP 6: VERIFY ANSIBLE INSTALLATION
+## STEP 6: VERIFY ANSIBLE INSTALLATION
 COMMAND:
 ansible --version
 
@@ -97,19 +97,19 @@ screenshots/ansible-version.png
 
 ## FINAL OUTCOME
 
-Ansible version 4.7.0 installed successfully
-Ansible binary available globally
-Jump Host configured as Ansible Controller
-All users can run Ansible commands
+- Ansible version 4.7.0 installed successfully
+- Ansible binary available globally
+- Jump Host configured as Ansible Controller
+- All users can run Ansible commands
 
 ## TAGS
 
-ansible
-configuration-management
-devops
-automation
-pip3
-linux
+`ansible`
+`configuration-management`
+`devops`
+`automation`
+`pip3`
+`linux`
 
 
 <img width="1038" height="485" alt="image" src="https://github.com/user-attachments/assets/35ba1ee9-058c-40a1-9711-6b7fc1e9b67b" />
