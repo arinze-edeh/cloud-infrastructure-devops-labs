@@ -44,7 +44,8 @@ while handling SKU and allocation constraints.
 - showcreds
 
 📸 screenshot:
-<img width="1031" height="319" alt="image" src="https://github.com/user-attachments/assets/88c04b3d-296a-4572-a54f-6e8f54ec5d66" />
+<img width="1031" height="319" alt="549753232-88c04b3d-296a-4572-a54f-6e8f54ec5d66" src="https://github.com/user-attachments/assets/e6a6e216-86d5-4312-ba6f-94c9413f5f67" />
+
 
 ## Step 2: Identify Resource Group
 - List all resource groups in the subscription:
