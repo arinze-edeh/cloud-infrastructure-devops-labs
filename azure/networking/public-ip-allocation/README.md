@@ -52,6 +52,7 @@ while handling SKU and allocation constraints.
 - az group list --output table
 
 📸 screenshot:
+<img width="1037" height="573" alt="image" src="https://github.com/user-attachments/assets/6bfa2a5b-4911-40b1-8495-14a84f29cf5e" />
 
 ## Step 3: Attempt Public IP Creation (Dynamic Allocation)
 - Initial attempt using Dynamic allocation:
@@ -103,7 +104,7 @@ Command fails due to Standard SKU requiring Static allocation
 `azure` `networking` `public-ip` `cloud-migration` `devops` `azure-cli`
 
 
-<img width="1037" height="573" alt="image" src="https://github.com/user-attachments/assets/6bfa2a5b-4911-40b1-8495-14a84f29cf5e" />
+
 <img width="1031" height="696" alt="image" src="https://github.com/user-attachments/assets/74256c3c-dbe8-4a92-941c-6e18efcdb916" />
 <img width="1030" height="858" alt="image" src="https://github.com/user-attachments/assets/d86ce8a9-9f96-4f51-9c17-feb916c3d10b" />
 
