@@ -106,7 +106,7 @@ Command fails due to Standard SKU requiring Static allocation
 
 - Resource ready for attachment to Azure services
 
-🏷️ Tags
+## 🏷️ Tags
 `azure` `networking` `public-ip` `cloud-migration` `devops` `azure-cli`
 
 
