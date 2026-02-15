@@ -41,11 +41,11 @@ screenshot: `db-server-ssh-login`
 <img width="1034" height="549" alt="image" src="https://github.com/user-attachments/assets/ede259d2-c69d-4e5c-8cc0-057129e9f87a" />
 
 ## Step 2: Verify MariaDB Data Directory Ownership
-- CHECK ownership of /var/lib/mysql
+- CHECK ownership of `/var/lib/mysql`
 
  -EXPECTED:
-  -  owner = mysql
-  -  group = mysql
+  -  owner = `mysql`
+  -  group = `mysql`
 
 
 screenshot: `mysql-directory-permissions`
@@ -59,6 +59,7 @@ screenshot: `mysql-directory-permissions`
 
 
 screenshot: `mysql-permission-fix`
+<img width="1031" height="497" alt="image" src="https://github.com/user-attachments/assets/73ccd9b6-16fa-4dae-90ad-35b7f2ebae02" />
 
 ## Step 4: Start MariaDB Service
 - START mariadb service using systemctl
@@ -106,15 +107,3 @@ screenshot: 'mariadb-service-status'
 `production-incident`
 `devops`
 `infrastructure-operations`
-
-
-
-
-<img width="1031" height="497" alt="image" src="https://github.com/user-attachments/assets/73ccd9b6-16fa-4dae-90ad-35b7f2ebae02" />
-
-
-
-
-
-
-
