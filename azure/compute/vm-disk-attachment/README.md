@@ -29,17 +29,19 @@
 
 ---
 
-### Step 2: Login to Azure Portal
+### Step 1: Login to Azure Portal
 - OPEN Azure Portal using Portal URL
 - ENTER username
 - ENTER password
 - CONFIRM successful login
 
-`screenshot: azure-portal-login`
+screenshot: `azure-portal-login`
+
+<img width="1828" height="946" alt="image" src="https://github.com/user-attachments/assets/3830c7b2-363a-47e4-bea4-c5c816c3ff06" />
 
 ---
 
-### Step 3: Verify Virtual Machine
+### Step 2: Verify Virtual Machine
 - NAVIGATE to `Virtual Machines`
 - SELECT `devops-vm`
 - VERIFY:
@@ -47,11 +49,12 @@
   - Region = eastus
   - Status = Running or Initialized
 
-`screenshot: vm-overview`
+screenshot: `vm-overview`
+<img width="1830" height="950" alt="image" src="https://github.com/user-attachments/assets/05e3d5ad-6c1a-43ca-82e9-a1f6f8318c82" />
 
 ---
 
-### Step 4: Verify Managed Disk
+### Step 3: Verify Managed Disk
 - NAVIGATE to `Disks`
 - SELECT `devops-disk`
 - VERIFY:
@@ -59,11 +62,11 @@
   - Region = eastus
   - Disk is not attached to any VM
 
-`screenshot: disk-overview`
+screenshot: `disk-overview`
 
 ---
 
-### Step 5: Attach Managed Disk to VM
+### Step 4: Attach Managed Disk to VM
 - OPEN virtual machine `devops-vm`
 - NAVIGATE to `Settings → Disks`
 - CLICK `Attach existing disk`
@@ -71,11 +74,11 @@
 - SET disk type = Data disk
 - CLICK `Save`
 
-`screenshot: attach-disk-configuration`
+screenshot: `attach-disk-configuration`
 
 ---
 
-### Step 6: Validate Disk Attachment
+### Step 5: Validate Disk Attachment
 - WAIT for deployment to complete
 - CONFIRM:
   - Disk appears under Data disks
@@ -106,8 +109,8 @@
 
 
 
-<img width="1828" height="946" alt="image" src="https://github.com/user-attachments/assets/3830c7b2-363a-47e4-bea4-c5c816c3ff06" />
-<img width="1830" height="950" alt="image" src="https://github.com/user-attachments/assets/05e3d5ad-6c1a-43ca-82e9-a1f6f8318c82" />
+
+
 <img width="1855" height="946" alt="image" src="https://github.com/user-attachments/assets/26a4cc7f-79ca-4314-9a20-de66e74760f5" />
 
 
