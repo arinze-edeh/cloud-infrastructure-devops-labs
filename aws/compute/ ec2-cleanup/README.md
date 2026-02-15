@@ -49,52 +49,52 @@ SCREENSHOT:
   -  SELECT EC2
 
 SCREENSHOT:
-screenshots/ec2-dashboard.png
+<img width="1839" height="889" alt="image" src="https://github.com/user-attachments/assets/df932739-dbd6-42e2-99a7-2acce0c7841c" />
 
 ## STEP 4: LOCATE TARGET INSTANCE
-ACTION:
-OPEN Instances
-SEARCH for instance name "devops-ec2"
+- ACTION:
+  -  OPEN Instances
+  -  SEARCH for instance name "devops-ec2"
 
-EXPECTED RESULT:
-Instance visible in instance list
+- EXPECTED RESULT:
+  -  Instance visible in instance list
 
 SCREENSHOT:
-screenshots/ec2-instance-listed.png
+<img width="1840" height="893" alt="image" src="https://github.com/user-attachments/assets/8b9886c6-3473-40a2-be02-9db11770c87e" />
 
 ## STEP 5: TERMINATE INSTANCE
-ACTION:
-SELECT devops-ec2
-CLICK Instance State
-SELECT Terminate Instance
-CONFIRM termination
+- ACTION:
+  -  SELECT devops-ec2
+  -  CLICK Instance State
+  -  SELECT Terminate Instance
+  -  CONFIRM termination
 
 SCREENSHOT:
 <img width="1805" height="892" alt="image" src="https://github.com/user-attachments/assets/543dedde-d4b9-4136-ba33-84c4aee0c6d4" />
 
 ## STEP 6: VERIFY TERMINATION
-ACTION:
-WAIT until instance state changes
-CONFIRM state == terminated
+- ACTION:
+  -  WAIT until instance state changes
+  -  CONFIRM state == terminated
 
 SCREENSHOT:
 <img width="1844" height="897" alt="image" src="https://github.com/user-attachments/assets/7ca6003f-9dfd-481d-9779-6a114a7ce22b" />
 
 ## FINAL VERIFICATION
 
-INSTANCE NAME:
-devops-ec2
+- INSTANCE NAME:
+`devops-ec2`
 
 REGION:
-us-east-1
+`us-east-1`
 
 FINAL STATE:
-terminated
+`terminated`
 
 TASK STATUS:
-SUCCESSFUL
+`SUCCESSFUL`
 
-TAGS
+## TAGS
 
 `aws`
 `ec2`
@@ -106,8 +106,8 @@ TAGS
 
 
 
-<img width="1839" height="889" alt="image" src="https://github.com/user-attachments/assets/df932739-dbd6-42e2-99a7-2acce0c7841c" />
-<img width="1840" height="893" alt="image" src="https://github.com/user-attachments/assets/8b9886c6-3473-40a2-be02-9db11770c87e" />
+
+
 <img width="1802" height="892" alt="image" src="https://github.com/user-attachments/assets/51017336-e867-4939-b36a-deaf5995b441" />
 
 
