@@ -70,6 +70,7 @@ SCREENSHOT:
   -  CONFIRM termination
 
 SCREENSHOT:
+<img width="1802" height="892" alt="image" src="https://github.com/user-attachments/assets/51017336-e867-4939-b36a-deaf5995b441" />
 <img width="1805" height="892" alt="image" src="https://github.com/user-attachments/assets/543dedde-d4b9-4136-ba33-84c4aee0c6d4" />
 
 ## STEP 6: VERIFY TERMINATION
@@ -108,7 +109,7 @@ TASK STATUS:
 
 
 
-<img width="1802" height="892" alt="image" src="https://github.com/user-attachments/assets/51017336-e867-4939-b36a-deaf5995b441" />
+
 
 
 
