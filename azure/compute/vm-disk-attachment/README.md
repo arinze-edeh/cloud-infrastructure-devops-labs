@@ -1,4 +1,4 @@
-# Project: Attach Existing Managed Disk to Azure Virtual Machine
+# Attach Existing Managed Disk to Azure Virtual Machine
 
 
 ## Objective
