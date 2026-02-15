@@ -46,8 +46,8 @@ screenshot: `azure-portal-login`
 - SELECT `devops-vm`
 - VERIFY:
   - VM exists
-  - Region = eastus
-  - Status = Running
+  - Region = `eastus`
+  - Status = `Running`
 
 screenshot: `vm-overview`
 <img width="1830" height="950" alt="image" src="https://github.com/user-attachments/assets/05e3d5ad-6c1a-43ca-82e9-a1f6f8318c82" />
@@ -59,7 +59,7 @@ screenshot: `vm-overview`
 - SELECT `devops-disk`
 - VERIFY:
   - Disk exists
-  - Region = eastus
+  - Region = `eastus`
   - Disk is not attached to any VM
 
 screenshot: `disk-overview`
