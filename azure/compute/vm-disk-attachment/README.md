@@ -47,7 +47,7 @@ screenshot: `azure-portal-login`
 - VERIFY:
   - VM exists
   - Region = eastus
-  - Status = Running or Initialized
+  - Status = Running
 
 screenshot: `vm-overview`
 <img width="1830" height="950" alt="image" src="https://github.com/user-attachments/assets/05e3d5ad-6c1a-43ca-82e9-a1f6f8318c82" />
