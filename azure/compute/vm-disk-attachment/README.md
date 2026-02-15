@@ -63,6 +63,7 @@ screenshot: `vm-overview`
   - Disk is not attached to any VM
 
 screenshot: `disk-overview`
+<img width="1855" height="946" alt="image" src="https://github.com/user-attachments/assets/26a4cc7f-79ca-4314-9a20-de66e74760f5" />
 
 ---
 
@@ -75,6 +76,8 @@ screenshot: `disk-overview`
 - CLICK `Save`
 
 screenshot: `attach-disk-configuration`
+<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/a929ec8e-dfcf-48ba-bd53-9e3d3f740366" />
+<img width="1869" height="949" alt="image" src="https://github.com/user-attachments/assets/ebb5dec2-5d87-493c-9aac-e89486f5c6dc" />
 
 ---
 
@@ -89,7 +92,7 @@ screenshot: `disk-attached-success`
 
 ---
 
-## Validation Checklist
+### Validation Checklist
 - VM `devops-vm` is running
 - Disk `devops-disk` is attached as a data disk
 - No deployment or configuration errors
@@ -97,26 +100,10 @@ screenshot: `disk-attached-success`
 
 ---
 
-## Tags
+### Tags
 `azure` `compute`
 `virtual-machine`
 `managed-disk`
 `storage`
 `devops`
 `cloud-operations`
-
----
-
-
-
-
-
-
-<img width="1855" height="946" alt="image" src="https://github.com/user-attachments/assets/26a4cc7f-79ca-4314-9a20-de66e74760f5" />
-
-
-<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/a929ec8e-dfcf-48ba-bd53-9e3d3f740366" />
-<img width="1869" height="949" alt="image" src="https://github.com/user-attachments/assets/ebb5dec2-5d87-493c-9aac-e89486f5c6dc" />
-
-
-
