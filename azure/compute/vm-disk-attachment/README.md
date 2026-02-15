@@ -84,7 +84,8 @@ screenshot: `attach-disk-configuration`
   - Disk appears under Data disks
   - Disk status = Attached
 
-`screenshot: disk-attached-success`
+screenshot: `disk-attached-success`
+<img width="1822" height="952" alt="image" src="https://github.com/user-attachments/assets/c177604c-3614-4571-8452-45bb3d19cc8a" />
 
 ---
 
@@ -116,7 +117,6 @@ screenshot: `attach-disk-configuration`
 
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/a929ec8e-dfcf-48ba-bd53-9e3d3f740366" />
 <img width="1869" height="949" alt="image" src="https://github.com/user-attachments/assets/ebb5dec2-5d87-493c-9aac-e89486f5c6dc" />
-<img width="1822" height="952" alt="image" src="https://github.com/user-attachments/assets/c177604c-3614-4571-8452-45bb3d19cc8a" />
 
 
 
