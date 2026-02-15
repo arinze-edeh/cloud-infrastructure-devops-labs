@@ -1,3 +1,107 @@
+# Project: Attach Existing Managed Disk to Azure Virtual Machine
+
+
+## Objective
+- Attach an existing Azure managed disk to an existing virtual machine
+- Ensure the disk is attached as a **data disk**
+- Validate that the virtual machine initialization is complete
+
+---
+
+## Environment Details
+- Cloud Provider: Azure
+- Region: eastus
+- Virtual Machine Name: devops-vm
+- Managed Disk Name: devops-disk
+
+---
+
+## Prerequisites
+- Azure Portal access
+- Existing virtual machine
+- Existing managed disk
+- VM and disk must be in the same region
+- VM must be initialized before submission
+
+---
+
+## Step-by-Step Implementation (Pseudo-Code)
+
+---
+
+### Step 2: Login to Azure Portal
+- OPEN Azure Portal using Portal URL
+- ENTER username
+- ENTER password
+- CONFIRM successful login
+
+`screenshot: azure-portal-login`
+
+---
+
+### Step 3: Verify Virtual Machine
+- NAVIGATE to `Virtual Machines`
+- SELECT `devops-vm`
+- VERIFY:
+  - VM exists
+  - Region = eastus
+  - Status = Running or Initialized
+
+`screenshot: vm-overview`
+
+---
+
+### Step 4: Verify Managed Disk
+- NAVIGATE to `Disks`
+- SELECT `devops-disk`
+- VERIFY:
+  - Disk exists
+  - Region = eastus
+  - Disk is not attached to any VM
+
+`screenshot: disk-overview`
+
+---
+
+### Step 5: Attach Managed Disk to VM
+- OPEN virtual machine `devops-vm`
+- NAVIGATE to `Settings → Disks`
+- CLICK `Attach existing disk`
+- SELECT disk `devops-disk`
+- SET disk type = Data disk
+- CLICK `Save`
+
+`screenshot: attach-disk-configuration`
+
+---
+
+### Step 6: Validate Disk Attachment
+- WAIT for deployment to complete
+- CONFIRM:
+  - Disk appears under Data disks
+  - Disk status = Attached
+
+`screenshot: disk-attached-success`
+
+---
+
+## Validation Checklist
+- VM `devops-vm` is running
+- Disk `devops-disk` is attached as a data disk
+- No deployment or configuration errors
+- VM initialization completed
+
+---
+
+## Tags
+`azure` `compute`
+`virtual-machine`
+`managed-disk`
+`storage`
+`devops`
+`cloud-operations`
+
+---
 
 
 
