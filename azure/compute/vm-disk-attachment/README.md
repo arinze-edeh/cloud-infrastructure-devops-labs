@@ -9,10 +9,10 @@
 ---
 
 ## Environment Details
-- Cloud Provider: Azure
-- Region: eastus
-- Virtual Machine Name: devops-vm
-- Managed Disk Name: devops-disk
+- Cloud Provider: `Azure`
+- Region: `eastus`
+- Virtual Machine Name: `devops-vm`
+- Managed Disk Name: `devops-disk`
 
 ---
 
@@ -25,7 +25,7 @@
 
 ---
 
-## Step-by-Step Implementation (Pseudo-Code)
+## Step-by-Step Implementation
 
 ---
 
