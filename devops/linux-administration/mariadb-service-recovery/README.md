@@ -49,6 +49,7 @@ screenshot: `db-server-ssh-login`
 
 
 screenshot: `mysql-directory-permissions`
+<img width="1018" height="582" alt="image" src="https://github.com/user-attachments/assets/86beddd4-614f-4066-a307-22df36e6f12d" />
 
 ## Step 3: Fix MariaDB Directory Permissions
 - IF ownership is incorrect:
@@ -72,8 +73,8 @@ screenshot: 'mariadb-service-start'
 
 `sudo systemctl enable mariadb`
 
-
 screenshot: 'mariadb-enable-service'
+<img width="1036" height="551" alt="image" src="https://github.com/user-attachments/assets/c2d018cd-76f3-4896-b5ce-b37d0cef8add" />
 
 ## Step 6: Verify MariaDB Service Status
 - CHECK mariadb service status
@@ -107,9 +108,9 @@ screenshot: 'mariadb-service-status'
 
 
 
-<img width="1018" height="582" alt="image" src="https://github.com/user-attachments/assets/86beddd4-614f-4066-a307-22df36e6f12d" />
+
 <img width="1031" height="497" alt="image" src="https://github.com/user-attachments/assets/73ccd9b6-16fa-4dae-90ad-35b7f2ebae02" />
-<img width="1036" height="551" alt="image" src="https://github.com/user-attachments/assets/c2d018cd-76f3-4896-b5ce-b37d0cef8add" />
+
 
 
 
