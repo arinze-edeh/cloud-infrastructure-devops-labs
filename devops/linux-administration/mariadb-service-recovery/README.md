@@ -67,6 +67,7 @@ screenshot: `mysql-permission-fix`
 
 
 screenshot: 'mariadb-service-start'
+<img width="1036" height="551" alt="image" src="https://github.com/user-attachments/assets/c2d018cd-76f3-4896-b5ce-b37d0cef8add" />
 
 ## Step 5: Enable MariaDB at Boot
 - ENABLE mariadb service to persist across reboots
