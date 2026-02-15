@@ -2,12 +2,12 @@
 
 ## PROJECT OVERVIEW
 - During infrastructure migration, obsolete AWS resources were identified.
-- An EC2 instance named "devops-ec2" is no longer required and must be deleted.
+- An EC2 instance named "xfusion-ec2" is no longer required and must be deleted.
 - The task ensures proper cleanup and confirms the instance reaches
 the TERMINATED state.
 
 ## OBJECTIVES
-- Identify EC2 instance named devops-ec2
+- Identify EC2 instance named xfusion-ec2
 - Ensure correct AWS region (us-east-1)
 - Terminate the instance
 - Verify instance is fully terminated
@@ -17,7 +17,7 @@ the TERMINATED state.
 - LOGIN to AWS Console
 - SET region to us-east-1
 - OPEN EC2 service
-- SEARCH for instance named devops-ec2
+- SEARCH for instance named xfusion-ec2
 - IF instance exists:
   -  TERMINATE instance
   -  WAIT for termination
@@ -54,7 +54,7 @@ SCREENSHOT:
 ## STEP 4: LOCATE TARGET INSTANCE
 - ACTION:
   -  OPEN Instances
-  -  SEARCH for instance name "devops-ec2"
+  -  SEARCH for instance name "xfusion-ec2"
 
 - EXPECTED RESULT:
   -  Instance visible in instance list
@@ -64,7 +64,7 @@ SCREENSHOT:
 
 ## STEP 5: TERMINATE INSTANCE
 - ACTION:
-  -  SELECT devops-ec2
+  -  SELECT xfusion-ec2
   -  CLICK Instance State
   -  SELECT Terminate Instance
   -  CONFIRM termination
@@ -84,7 +84,7 @@ SCREENSHOT:
 ## FINAL VERIFICATION
 
 - INSTANCE NAME:
-`devops-ec2`
+`xfusion-ec2`
 
 REGION:
 `us-east-1`
