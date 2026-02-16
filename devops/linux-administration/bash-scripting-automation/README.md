@@ -1,5 +1,134 @@
+# Website Backup Automation – App Server 2
 
 
+## 📌 Project Overview
+GOAL:
+- Create a bash script to back up a static website
+- Archive website files into a ZIP file
+- Store backup locally and on a remote backup server
+- Ensure passwordless copy (SSH key-based auth)
+- Do NOT use sudo inside the script
+
+## 🧱 Infrastructure Details
+APP SERVER:
+- Hostname: stapp02.stratos.xfusioncorp.com
+- IP: 172.16.238.11
+- User: steve
+
+BACKUP SERVER:
+- Hostname: stbkp01.stratos.xfusioncorp.com
+- IP: 172.16.238.16
+- User: clint
+
+WEBSITE DIRECTORY:
+- /var/www/html/official
+
+📂 Script Location
+/scripts/official_backup.sh
+
+## 🛠 Step-by-Step Implementation (Pseudo-Code)
+
+## Step 1: Connect to App Server 2
+ssh steve@172.16.238.11
+
+screenshot:'ssh-to-app-server'
+
+## Step 2: Install Required Package (Outside Script)
+IF zip is NOT installed:
+    sudo yum install zip -y
+
+screenshot:'zip-installation'
+
+## Step 3: Configure Passwordless SSH to Backup Server
+GENERATE SSH KEY:
+    ssh-keygen -t rsa
+
+COPY SSH KEY TO BACKUP SERVER:
+    ssh-copy-id clint@172.16.238.16
+
+VERIFY PASSWORDLESS LOGIN:
+    ssh clint@172.16.238.16
+
+screenshot:'ssh-key-auth-success'
+
+## Step 4: Prepare Required Directories
+- CREATE /scripts DIRECTORY:
+  -  sudo mkdir -p /scripts
+  -  sudo chown steve:steve /scripts
+
+- CREATE /backup DIRECTORY:
+  -  sudo mkdir -p /backup
+  -  sudo chown steve:steve /backup
+
+screenshot:'directories-created'
+
+## Step 5: Create Backup Script
+CREATE FILE:
+    /scripts/official_backup.sh
+
+SCRIPT LOGIC (PSEUDO-CODE):
+
+START
+    SET SOURCE_DIR = /var/www/html/official
+    SET ARCHIVE_NAME = xfusioncorp_official.zip
+    SET LOCAL_BACKUP_DIR = /backup
+    SET REMOTE_USER = clint
+    SET REMOTE_HOST = 172.16.238.16
+    SET REMOTE_BACKUP_DIR = /backup
+
+    CREATE ZIP ARCHIVE FROM SOURCE_DIR
+        zip -r /backup/xfusioncorp_official.zip /var/www/html/official
+
+    COPY ARCHIVE TO BACKUP SERVER
+        scp /backup/xfusioncorp_official.zip clint@172.16.238.16:/backup
+
+END
+
+NOTE:
+- NO sudo inside script
+- Script must be executable
+
+screenshot:'script-content'
+
+## Step 6: Make Script Executable
+chmod +x /scripts/official_backup.sh
+
+screenshot:'chmod-script'
+
+## Step 7: Execute Backup Script
+RUN SCRIPT:
+    /scripts/official_backup.sh
+
+screenshot:'script-execution'
+
+## Step 8: Verify Local Backup
+CHECK FILE EXISTS:
+    ls -l /backup/xfusioncorp_official.zip
+
+screenshot:'local-backup-verified'
+
+## Step 9: Verify Remote Backup
+CHECK FILE ON BACKUP SERVER:
+    ssh clint@172.16.238.16 "ls -l /backup/xfusioncorp_official.zip"
+
+screenshot:'remote-backup-verified'
+
+## ✅ Validation Checklist
+
+- ZIP archive created successfully
+- Backup stored in /backup on App Server 2
+- Backup copied to Nautilus Backup Server
+- No password prompt during SCP
+- Script runs without sudo
+- Script located under /scripts
+
+## Tags
+`linux`
+`bash`
+`backup`
+`ssh`
+`automation`
+`production-support`
 
 
 
