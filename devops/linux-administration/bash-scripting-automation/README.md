@@ -142,18 +142,3 @@ screenshot:`remote-backup-verified`
 `ssh`
 `automation`
 `production-support`
-
-
-
-
-
-
-<img width="1155" height="847" alt="image" src="https://github.com/user-attachments/assets/0e361e15-d992-4aee-9f68-124de8b5c051" />
-<img width="1158" height="856" alt="image" src="https://github.com/user-attachments/assets/797d7c5b-0209-44ca-ba1c-f66d266b3ff8" />
-
-
-
-
-
-
-
