@@ -124,11 +124,11 @@ screenshot:`remote-backup-verified`
 ## ✅ Validation Checklist
 
 - ZIP archive created successfully
-- Backup stored in /backup on App Server 2
+- Backup stored in `/backup` on App Server 2
 - Backup copied to Nautilus Backup Server
 - No password prompt during SCP
 - Script runs without sudo
-- Script located under /scripts
+- Script located under `/scripts`
 
 ## Tags
 `linux`
