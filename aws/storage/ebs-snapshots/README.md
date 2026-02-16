@@ -51,6 +51,7 @@ screenshot: `create-snapshot-form`
 - CONFIRM snapshot status = completed
 
 screenshot: `snapshot-completed-status`
+<img width="1841" height="948" alt="image" src="https://github.com/user-attachments/assets/eeac0f39-5b70-4a8f-b265-7c167ec1a174" />
 
 ## ✅ Final Outcome
 
@@ -77,7 +78,7 @@ screenshot: `snapshot-completed-status`
 <img width="1835" height="933" alt="image" src="https://github.com/user-attachments/assets/258918b6-ff67-431a-81de-f58c607571f0" />
 <img width="1845" height="945" alt="image" src="https://github.com/user-attachments/assets/7436774a-0f71-4175-be4f-04c178bac0c3" />
 <img width="1842" height="944" alt="image" src="https://github.com/user-attachments/assets/b003fca4-bf49-413c-af81-fb75a52b0e4f" />
-<img width="1841" height="948" alt="image" src="https://github.com/user-attachments/assets/eeac0f39-5b70-4a8f-b265-7c167ec1a174" />
+
 
 
 
