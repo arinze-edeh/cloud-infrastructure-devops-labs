@@ -4,7 +4,7 @@
 
 The Nautilus DevOps team requires regular backups of critical AWS volumes.
 As part of the initial backup strategy, a manual snapshot is created for an
-existing EBS volume in the us-east-1 region.
+existing EBS volume in the `us-east-1` region.
 
 ## 🎯 Objectives
 
