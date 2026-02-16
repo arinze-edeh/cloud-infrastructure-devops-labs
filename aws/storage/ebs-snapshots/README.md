@@ -1,3 +1,71 @@
+# AWS EBS Snapshot Creation – DevOps Volume
+
+## 📌 Lab Overview
+
+The Nautilus DevOps team requires regular backups of critical AWS volumes.
+As part of the initial backup strategy, a manual snapshot is created for an
+existing EBS volume in the us-east-1 region.
+
+## 🎯 Objectives
+
+- Identify existing EBS volume
+- Create snapshot with required name and description
+- Ensure snapshot creation completes successfully
+
+## 🧠 High-Level Logic
+- IF target volume exists in correct region:
+  -  CREATE snapshot
+  -  WAIT until snapshot status is completed
+- ELSE:
+  -  FAIL task
+
+## 🛠️ Implementation Steps
+
+## Step 1: Login to AWS Console
+- LOGIN using provided AWS credentials
+- SET region to us-east-1
+
+screenshot: `aws-console-login`
+
+## Step 2: Locate EBS Volume
+- NAVIGATE to EC2 Dashboard
+- OPEN Volumes section
+- SEARCH for devops-vol
+
+screenshot: `ebs-volume-list`
+
+## Step 3: Create Snapshot
+- SELECT volume devops-vol
+- CLICK Create Snapshot
+
+- SET:
+  -  Name = `devops-vol-ss`
+  -  Description = `devops Snapshot`
+
+screenshot: `create-snapshot-form`
+
+## Step 4: Verify Snapshot Status
+- NAVIGATE to Snapshots section
+- CONFIRM snapshot status = completed
+
+screenshot: `snapshot-completed-status`
+
+## ✅ Final Outcome
+
+- Snapshot created successfully
+- Snapshot name matches requirement
+- Snapshot description applied correctly
+- Snapshot status confirmed as completed
+
+## 🏷️ Tags
+
+`aws`
+`ebs`
+`snapshots`
+`storage`
+`backup`
+`cloud-infrastructure`
+`devops`
 
 
 
