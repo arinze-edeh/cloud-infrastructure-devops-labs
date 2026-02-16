@@ -31,6 +31,7 @@
     `kml_rg_main-ae708aa3b65d4be6`
 
 screenshot: `az-group-list`
+<img width="1032" height="692" alt="image" src="https://github.com/user-attachments/assets/e72f0ede-4262-4b54-915f-2b9d59b27314" />
 
 ## Step 2: Deallocate the Virtual Machine
 - REASON:
@@ -42,6 +43,7 @@ screenshot: `az-group-list`
     -  `--name nautilus-vm`
 
 screenshot: `vm-deallocated`
+<img width="1031" height="781" alt="image" src="https://github.com/user-attachments/assets/ab6d4de4-31c7-450e-b110-1ae142658f99" />
 
 ## Step 3: Attach Network Interface to VM
 - COMMAND:
@@ -55,6 +57,7 @@ screenshot: `vm-deallocated`
     - nautilus-nic attached as secondary NIC
 
 screenshot: `nic-attached-cli-output`
+<img width="1031" height="693" alt="image" src="https://github.com/user-attachments/assets/ac4e0c9e-215f-44df-bf03-95f118088ebf" />
 
 ## Step 4: Start the Virtual Machine
 - COMMAND:
@@ -63,7 +66,7 @@ screenshot: `nic-attached-cli-output`
     -  `--name nautilus-vm`
 
 screenshot: `vm-started`
-
+<img width="1036" height="671" alt="image" src="https://github.com/user-attachments/assets/f5602539-adee-4844-acd3-c3632b26bbbf" />
 
 ## Step 5: Verify VM Power State
 - COMMAND:
@@ -76,6 +79,7 @@ screenshot: `vm-started`
     `"VM running"`
 
 screenshot: `vm-running-status`
+<img width="1036" height="683" alt="image" src="https://github.com/user-attachments/assets/3b53d975-7360-4bef-add4-218ca705fc83" />
 
 ## Validation Checklist
 - VM state == `running`
@@ -97,10 +101,3 @@ screenshot: `vm-running-status`
 `virtual-machines`
 `nic`
 `cloud-operations`
-
-<img width="1032" height="692" alt="image" src="https://github.com/user-attachments/assets/e72f0ede-4262-4b54-915f-2b9d59b27314" />
-<img width="1031" height="781" alt="image" src="https://github.com/user-attachments/assets/ab6d4de4-31c7-450e-b110-1ae142658f99" />
-<img width="1031" height="693" alt="image" src="https://github.com/user-attachments/assets/ac4e0c9e-215f-44df-bf03-95f118088ebf" />
-<img width="1036" height="671" alt="image" src="https://github.com/user-attachments/assets/f5602539-adee-4844-acd3-c3632b26bbbf" />
-<img width="1036" height="683" alt="image" src="https://github.com/user-attachments/assets/3b53d975-7360-4bef-add4-218ca705fc83" />
-
