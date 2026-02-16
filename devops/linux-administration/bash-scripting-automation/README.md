@@ -102,7 +102,6 @@ screenshot:`script-content`
 `chmod +x /scripts/official_backup.sh`
 
 screenshot:`chmod-script`
-<img width="1146" height="733" alt="image" src="https://github.com/user-attachments/assets/9ee47ab7-fc39-4494-9f15-b146460bdcce" />
 <img width="1125" height="857" alt="image" src="https://github.com/user-attachments/assets/b2d592da-4ef8-4a19-bda5-950a9bb530f5" />
 
 ## Step 7: Execute Backup Script
