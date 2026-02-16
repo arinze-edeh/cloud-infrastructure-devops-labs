@@ -2,18 +2,18 @@
 
 ## Project Overview
 
-TASK:
-    Attach an existing Network Interface (NIC) to an Azure Virtual Machine using Azure CLI
+- TASK:
+  -  Attach an existing Network Interface (NIC) to an Azure Virtual Machine using Azure CLI
 
-GOAL:
-    Ensure NIC is attached successfully and VM is running
+- GOAL:
+  -  Ensure NIC is attached successfully and VM is running
 
 ## Infrastructure Details
 
-Cloud Provider   : Azure
-Region           : eastus
-Virtual Machine  : nautilus-vm
-Network Interface: nautilus-nic
+- Cloud Provider   : `Azure`
+- Region           : `eastus`
+- Virtual Machine  : `nautilus-vm`
+- Network Interface: `nautilus-nic`
 
 ## Preconditions
 - Azure CLI installed and authenticated
@@ -24,51 +24,58 @@ Network Interface: nautilus-nic
 ## Step-by-Step Implementation (Azure CLI)
 
 ## Step 1: Identify Resource Group
-COMMAND:
-    az group list --query "[].name" -o tsv
+- COMMAND:
+    `az group list --query "[].name" -o tsv`
 
-OUTPUT:
-    kml_rg_main-ae708aa3b65d4be6
-screenshot: 'az-group-list'
+- OUTPUT:
+    `kml_rg_main-ae708aa3b65d4be6`
+
+screenshot: `az-group-list`
 
 ## Step 2: Deallocate the Virtual Machine
-REASON:
-    Azure requires VM to be deallocated before NIC changes
+- REASON:
+  -  Azure requires VM to be deallocated before NIC changes
 
-COMMAND:
-    az vm deallocate \
-      --resource-group kml_rg_main-ae708aa3b65d4be6 \
-      --name nautilus-vm
-screenshot: 'vm-deallocated'
+- COMMAND:
+  -  `az vm deallocate \`
+    -  `--resource-group kml_rg_main-ae708aa3b65d4be6 \`
+    -  `--name nautilus-vm`
+
+screenshot: `vm-deallocated`
 
 ## Step 3: Attach Network Interface to VM
-COMMAND:
-    az vm nic add \
-      --resource-group kml_rg_main-ae708aa3b65d4be6 \
-      --vm-name nautilus-vm \
-      --nics nautilus-nic
-EXPECTED OUTPUT:
+- COMMAND:
+  -  `az vm nic add \`
+    -  `--resource-group kml_rg_main-ae708aa3b65d4be6 \`
+    -  `--vm-name nautilus-vm \`
+    -  `--nics nautilus-nic`
+
+- EXPECTED OUTPUT:
     - Existing primary NIC retained
     - nautilus-nic attached as secondary NIC
-screenshot: 'nic-attached-cli-output'
+
+screenshot: `nic-attached-cli-output`
 
 ## Step 4: Start the Virtual Machine
-COMMAND:
-    az vm start \
-      --resource-group kml_rg_main-ae708aa3b65d4be6 \
-      --name nautilus-vm
-screenshot: 'vm-started'
+- COMMAND:
+  -  `az vm start \`
+    -  `--resource-group kml_rg_main-ae708aa3b65d4be6 \`
+    -  `--name nautilus-vm`
+
+screenshot: `vm-started`
+
 
 ## Step 5: Verify VM Power State
-COMMAND:
-    az vm show -d \
-      --resource-group kml_rg_main-ae708aa3b65d4be6 \
-      --name nautilus-vm \
-      --query "powerState"
+- COMMAND:
+  -  `az vm show -d \`
+    -  `--resource-group kml_rg_main-ae708aa3b65d4be6 \`
+    -  `--name nautilus-vm \`
+    -  `--query "powerState"`
 
-EXPECTED OUTPUT:
-    "VM running"
-screenshot: 'vm-running-status'
+- EXPECTED OUTPUT:
+    `"VM running"`
+
+screenshot: `vm-running-status`
 
 ## Validation Checklist
 - VM state == `running`
