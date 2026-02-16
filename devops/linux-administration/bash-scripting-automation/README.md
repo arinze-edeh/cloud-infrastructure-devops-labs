@@ -59,12 +59,12 @@ screenshot:`ssh-key-auth-success`
 
 ## Step 4: Prepare Required Directories
 - CREATE /scripts DIRECTORY:
-  -  sudo mkdir -p /scripts
-  -  sudo chown steve:steve /scripts
+  -  `sudo mkdir -p /scripts`
+  -  `sudo chown steve:steve /scripts`
 
 - CREATE /backup DIRECTORY:
-  -  sudo mkdir -p /backup
-  -  sudo chown steve:steve /backup
+  -  `sudo mkdir -p /backup`
+  -  `sudo chown steve:steve /backup`
 
 screenshot:`directories-created`
 
@@ -83,10 +83,10 @@ SCRIPT LOGIC:
   -  SET REMOTE_BACKUP_DIR = `/backup`
 
   -  CREATE ZIP ARCHIVE FROM SOURCE_DIR
-      -  zip -r /backup/xfusioncorp_official.zip /var/www/html/official
+      -  `zip -r /backup/xfusioncorp_official.zip /var/www/html/official`
 
   -  COPY ARCHIVE TO BACKUP SERVER
-      -  scp /backup/xfusioncorp_official.zip clint@172.16.238.16:/backup
+      -  `scp /backup/xfusioncorp_official.zip clint@172.16.238.16:/backup`
 
 END
 
