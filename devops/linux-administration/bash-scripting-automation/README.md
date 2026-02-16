@@ -67,6 +67,7 @@ screenshot:`ssh-key-auth-success`
   -  `sudo chown steve:steve /backup`
 
 screenshot:`directories-created`
+<img width="1144" height="861" alt="image" src="https://github.com/user-attachments/assets/78b39b94-17b6-4855-879d-e11def40c121" />
 
 ## Step 5: Create Backup Script
 CREATE FILE:
@@ -95,17 +96,21 @@ NOTE:
 - Script must be executable
 
 screenshot:`script-content`
+<img width="1154" height="861" alt="image" src="https://github.com/user-attachments/assets/4d62259d-e92c-418e-8e57-48bf9ad09209" />
 
 ## Step 6: Make Script Executable
 `chmod +x /scripts/official_backup.sh`
 
 screenshot:`chmod-script`
+<img width="1146" height="733" alt="image" src="https://github.com/user-attachments/assets/9ee47ab7-fc39-4494-9f15-b146460bdcce" />
+<img width="1125" height="857" alt="image" src="https://github.com/user-attachments/assets/b2d592da-4ef8-4a19-bda5-950a9bb530f5" />
 
 ## Step 7: Execute Backup Script
 RUN SCRIPT:
     `/scripts/official_backup.sh`
 
 screenshot:`script-execution`
+<img width="1150" height="865" alt="image" src="https://github.com/user-attachments/assets/5c700f07-a37e-4752-a377-cadb9f17472e" />
 
 ## Step 8: Verify Local Backup
 CHECK FILE EXISTS:
@@ -145,10 +150,10 @@ screenshot:`remote-backup-verified`
 
 <img width="1155" height="847" alt="image" src="https://github.com/user-attachments/assets/0e361e15-d992-4aee-9f68-124de8b5c051" />
 <img width="1158" height="856" alt="image" src="https://github.com/user-attachments/assets/797d7c5b-0209-44ca-ba1c-f66d266b3ff8" />
-<img width="1144" height="861" alt="image" src="https://github.com/user-attachments/assets/78b39b94-17b6-4855-879d-e11def40c121" />
-<img width="1154" height="861" alt="image" src="https://github.com/user-attachments/assets/4d62259d-e92c-418e-8e57-48bf9ad09209" />
-<img width="1125" height="857" alt="image" src="https://github.com/user-attachments/assets/b2d592da-4ef8-4a19-bda5-950a9bb530f5" />
-<img width="1146" height="733" alt="image" src="https://github.com/user-attachments/assets/9ee47ab7-fc39-4494-9f15-b146460bdcce" />
-<img width="1150" height="865" alt="image" src="https://github.com/user-attachments/assets/5c700f07-a37e-4752-a377-cadb9f17472e" />
+
+
+
+
+
 
 
