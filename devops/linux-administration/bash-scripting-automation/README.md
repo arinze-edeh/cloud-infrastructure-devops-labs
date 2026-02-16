@@ -1,4 +1,4 @@
-# Website Backup Automation – App Server 2
+# Website Backup Automation
 
 
 ## 📌 Project Overview
@@ -11,45 +11,45 @@ GOAL:
 
 ## 🧱 Infrastructure Details
 APP SERVER:
-- Hostname: stapp02.stratos.xfusioncorp.com
-- IP: 172.16.238.11
-- User: steve
+- Hostname: `stapp02.stratos.xfusioncorp.com`
+- IP: `172.16.238.11`
+- User: `steve`
 
 BACKUP SERVER:
-- Hostname: stbkp01.stratos.xfusioncorp.com
-- IP: 172.16.238.16
-- User: clint
+- Hostname: `stbkp01.stratos.xfusioncorp.com`
+- IP: `172.16.238.16`
+- User: `clint`
 
 WEBSITE DIRECTORY:
-- /var/www/html/official
+- `/var/www/html/official`
 
 📂 Script Location
-/scripts/official_backup.sh
+`/scripts/official_backup.sh`
 
 ## 🛠 Step-by-Step Implementation (Pseudo-Code)
 
 ## Step 1: Connect to App Server 2
-ssh steve@172.16.238.11
+`ssh steve@172.16.238.11`
 
 screenshot:'ssh-to-app-server'
 
 ## Step 2: Install Required Package (Outside Script)
 IF zip is NOT installed:
-    sudo yum install zip -y
+  -  `sudo yum install zip -y`
 
-screenshot:'zip-installation'
+screenshot:`zip-installation`
 
 ## Step 3: Configure Passwordless SSH to Backup Server
 GENERATE SSH KEY:
-    ssh-keygen -t rsa
+    `ssh-keygen -t rsa`
 
 COPY SSH KEY TO BACKUP SERVER:
-    ssh-copy-id clint@172.16.238.16
+  -  `ssh-copy-id clint@172.16.238.16`
 
 VERIFY PASSWORDLESS LOGIN:
-    ssh clint@172.16.238.16
+  -  `ssh clint@172.16.238.16`
 
-screenshot:'ssh-key-auth-success'
+screenshot:`ssh-key-auth-success`
 
 ## Step 4: Prepare Required Directories
 - CREATE /scripts DIRECTORY:
@@ -60,27 +60,27 @@ screenshot:'ssh-key-auth-success'
   -  sudo mkdir -p /backup
   -  sudo chown steve:steve /backup
 
-screenshot:'directories-created'
+screenshot:`directories-created`
 
 ## Step 5: Create Backup Script
 CREATE FILE:
-    /scripts/official_backup.sh
+  -  `/scripts/official_backup.sh`
 
-SCRIPT LOGIC (PSEUDO-CODE):
+SCRIPT LOGIC:
 
-START
-    SET SOURCE_DIR = /var/www/html/official
-    SET ARCHIVE_NAME = xfusioncorp_official.zip
-    SET LOCAL_BACKUP_DIR = /backup
-    SET REMOTE_USER = clint
-    SET REMOTE_HOST = 172.16.238.16
-    SET REMOTE_BACKUP_DIR = /backup
+- START
+  -  SET SOURCE_DIR = `/var/www/html/official`
+  -  SET ARCHIVE_NAME = `xfusioncorp_official.zip`
+  -  SET LOCAL_BACKUP_DIR = `/backup`
+  -  SET REMOTE_USER = `clint`
+  -  SET REMOTE_HOST = `172.16.238.16`
+  -  SET REMOTE_BACKUP_DIR = `/backup`
 
-    CREATE ZIP ARCHIVE FROM SOURCE_DIR
-        zip -r /backup/xfusioncorp_official.zip /var/www/html/official
+  -  CREATE ZIP ARCHIVE FROM SOURCE_DIR
+      -  zip -r /backup/xfusioncorp_official.zip /var/www/html/official
 
-    COPY ARCHIVE TO BACKUP SERVER
-        scp /backup/xfusioncorp_official.zip clint@172.16.238.16:/backup
+  -  COPY ARCHIVE TO BACKUP SERVER
+      -  scp /backup/xfusioncorp_official.zip clint@172.16.238.16:/backup
 
 END
 
@@ -88,30 +88,30 @@ NOTE:
 - NO sudo inside script
 - Script must be executable
 
-screenshot:'script-content'
+screenshot:`script-content`
 
 ## Step 6: Make Script Executable
-chmod +x /scripts/official_backup.sh
+`chmod +x /scripts/official_backup.sh`
 
-screenshot:'chmod-script'
+screenshot:`chmod-script`
 
 ## Step 7: Execute Backup Script
 RUN SCRIPT:
-    /scripts/official_backup.sh
+    `/scripts/official_backup.sh`
 
-screenshot:'script-execution'
+screenshot:`script-execution`
 
 ## Step 8: Verify Local Backup
 CHECK FILE EXISTS:
-    ls -l /backup/xfusioncorp_official.zip
+    `ls -l /backup/xfusioncorp_official.zip`
 
-screenshot:'local-backup-verified'
+screenshot:`local-backup-verified`
 
 ## Step 9: Verify Remote Backup
 CHECK FILE ON BACKUP SERVER:
-    ssh clint@172.16.238.16 "ls -l /backup/xfusioncorp_official.zip"
+    `ssh clint@172.16.238.16 "ls -l /backup/xfusioncorp_official.zip"`
 
-screenshot:'remote-backup-verified'
+screenshot:`remote-backup-verified`
 
 ## ✅ Validation Checklist
 
