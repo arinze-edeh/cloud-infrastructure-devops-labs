@@ -76,6 +76,7 @@ Assign datacenter-pip using the correct configuration name:
 
 screenshot: `nic-public-ip-attachment'`
 <img width="1034" height="795" alt="image" src="https://github.com/user-attachments/assets/1b2fe9c1-d95f-4bc6-8400-aedc332749f7" />
+<img width="1040" height="834" alt="image" src="https://github.com/user-attachments/assets/fcc044cd-7b7e-4fa6-adb9-29a8fe7047f9" />
 
 ## Step 5: Verification
 CHECK:
