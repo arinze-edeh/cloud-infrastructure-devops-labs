@@ -31,79 +31,84 @@ Tools Used
 
 - Systemd (Systemctl).
 
-Deployment Steps
-Step 1: SSH to App Server
+## Deployment Steps
+
+## Step 1: SSH to App Server
 Accessed stapp02 via SSH from the Jump Host using user steve.
 
 Authenticated with the password Am3ric@.
 
-screenshot:'ssh-login'
+screenshot:`ssh-login`
+<img width="1034" height="585" alt="image" src="https://github.com/user-attachments/assets/212d3909-4d0d-4e62-ae7d-76fdefa9f604" />
 
-Step 2: Install Tomcat
-Ran sudo yum install tomcat -y to install the application server and its dependencies.
+## Step 2: Install Tomcat
+Ran `sudo yum install tomcat -y to install` the application server and its dependencies.
 
 Verified the installation of tomcat-1:9.0.87-7.el9.noarch.
 
-screenshot:'tomcat-installed'
+screenshot:`tomcat-installed`
 
-Step 3: Configure Tomcat Port
+## Step 3: Configure Tomcat Port
 Modified the configuration file located at /etc/tomcat/server.xml.
 
-Changed the default HTTP connector port from 8080 to 3000.
+Changed the default HTTP connector port from `8080` to `3000`.
 
-screenshot:'port-configuration'
+screenshot:`port-configuration`
 
-Step 4: Start and Enable Tomcat
-Used systemctl to initialize and manage the Tomcat service.
+## Step 4: Start and Enable Tomcat
+Used `systemctl` to initialize and manage the Tomcat service.
 
 Ensured the service was configured to persist across system reboots.
 
-screenshot:'tomcat-running'
+screenshot:`tomcat-running`
 
-Step 5: Transfer Application File
-Successfully transferred ROOT.war from the Jump Host to stapp02:/tmp/ using SCP.
+## Step 5: Transfer Application File
+Successfully transferred `ROOT.war` from the `Jump Host` to `stapp02:/tmp/` using `SCP`.
 
 Confirmed the 100% transfer of the 4529-byte file.
 
-screenshot:'war-transfer'
+screenshot:`war-transfer`
 
-Step 6: Deploy Application
+## Step 6: Deploy Application
 Cleaned the deployment directory by removing default ROOT files.
 
-Moved the artifact using sudo mv /tmp/ROOT.war /var/lib/tomcat/webapps/.
+Moved the artifact using `sudo mv /tmp/ROOT.war /var/lib/tomcat/webapps/`.
 
-Updated file ownership with sudo chown tomcat:tomcat /var/lib/tomcat/webapps/ROOT.war.
+Updated file ownership with `sudo chown tomcat:tomcat /var/lib/tomcat/webapps/ROOT.war`.
 
-screenshot:'war-deployed'
+screenshot:`war-deployed`
 
-Step 7: Restart Tomcat
-Executed sudo systemctl restart tomcat to apply the new configuration and deploy the .war file.
+## Step 7: Restart Tomcat
+Executed `sudo systemctl restart tomcat` to apply the new configuration and deploy the `.war` file.
 
-screenshot:'tomcat-restarted'
+screenshot:`tomcat-restarted`
 
-Step 8: Verify Application
-Performed a final check using curl http://stapp02:3000.
+## Step 8: Verify Application
+Performed a final check using `curl http://stapp02:3000`.
 
 Confirmed the application returned the message: "Welcome to xFusionCorp Industries!".
 
-screenshot:'app-working'
+screenshot:`app-working`
+<img width="1033" height="770" alt="image" src="https://github.com/user-attachments/assets/fa86c5e2-6824-4776-b579-7061d3c9de1d" />
 
-Outcome
-Tomcat successfully installed on CentOS Stream 9.
+## Outcome
 
-Service successfully reconfigured to listen on port 3000.
+- Tomcat successfully installed on `CentOS Stream 9`.
 
-ROOT application successfully deployed and accessible via the base URL.
+- Service successfully reconfigured to listen on `port 3000`.
 
-Deployment completed successfully for the Nautilus project.
+- ROOT application successfully deployed and accessible via the base URL.
 
-devops linux-administration tomcat deployment centos automation
+- Deployment completed successfully for the Nautilus project.
+
+## Tags
+`devops` `linux-administration` `tomcat` `deployment` `centos` `automation`
 
 
 
 
 
-<img width="1034" height="585" alt="image" src="https://github.com/user-attachments/assets/212d3909-4d0d-4e62-ae7d-76fdefa9f604" />
+
 <img width="1038" height="835" alt="image" src="https://github.com/user-attachments/assets/1d0248ec-574f-4320-ab13-b89a811bb069" />
 <img width="1039" height="857" alt="image" src="https://github.com/user-attachments/assets/28a9e849-5e80-4478-8462-6d75c89550f5" />
 <img width="1032" height="856" alt="image" src="https://github.com/user-attachments/assets/891e23f0-10bd-4467-8c8d-54567c3dc7a0" />
@@ -119,4 +124,4 @@ devops linux-administration tomcat deployment centos automation
 <img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/d595a582-df93-4da9-b516-550841b9af91" />
 <img width="1035" height="442" alt="image" src="https://github.com/user-attachments/assets/a680425e-d506-4333-8a4c-62f5d8528afb" />
 <img width="1032" height="657" alt="image" src="https://github.com/user-attachments/assets/f082a3a4-15c5-403b-bc43-a85530c24ade" />
-<img width="1033" height="770" alt="image" src="https://github.com/user-attachments/assets/fa86c5e2-6824-4776-b579-7061d3c9de1d" />
+
