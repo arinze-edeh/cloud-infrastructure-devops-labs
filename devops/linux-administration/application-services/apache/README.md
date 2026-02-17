@@ -3,11 +3,11 @@
 
 
 ## Objective
-- Install Apache Tomcat on App Server 2.
+- Install `Apache Tomcat` on `App Server 2`.
 
-- Configure Tomcat to run on port 3000.
+- Configure `Tomcat` to run on `port 3000`.
 
-- Deploy Java ROOT.war application.
+- Deploy Java `ROOT.war` application.
 
 - Ensure application loads on base URL.
 
