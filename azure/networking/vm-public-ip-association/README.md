@@ -77,14 +77,7 @@ Assign datacenter-pip using the correct configuration name:
 screenshot: `nic-public-ip-attachment'`
 <img width="1034" height="795" alt="image" src="https://github.com/user-attachments/assets/1b2fe9c1-d95f-4bc6-8400-aedc332749f7" />
 
-## Step 5: Start VM
-COMMAND:
-
-Restart VM: `az vm start --resource-group kml_rg_main-bf56eb2fed794029 --name datacenter-vm-pip.`
-
-screenshot: `vm-started`
-
-## Step 6: Verification
+## Step 5: Verification
 CHECK:
 
 Verify JSON response for "provisioningState": "Succeeded".
@@ -134,9 +127,3 @@ screenshot: `public-ip-confirmed`
 `public-ip`
 `nic`
 `azure-cli`
-
-
-
-
-
-
