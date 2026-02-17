@@ -3,26 +3,26 @@
 
 
 ## Objective
-Install Apache Tomcat on App Server 2.
+- Install Apache Tomcat on App Server 2.
 
-Configure Tomcat to run on port 3000.
+- Configure Tomcat to run on port 3000.
 
-Deploy Java ROOT.war application.
+- Deploy Java ROOT.war application.
 
-Ensure application loads on base URL.
+- Ensure application loads on base URL.
 
 ## Environment
-DATA CENTER: `Stratos DC.`
+- DATA CENTER: `Stratos DC.`
 
-SERVER: `App Server 2 (stapp02).`
+- SERVER: `App Server 2 (stapp02).`
 
-IP ADDRESS: `172.16.238.11.`
+- IP ADDRESS: `172.16.238.11.`
 
-APPLICATION: `Java-based ROOT.war.`
+- APPLICATION: `Java-based ROOT.war.`
 
-PORT: `3000.`
+- PORT: `3000.`
 
-Tools Used
+## Tools Used
 - Linux (CentOS Stream 9).
 
 - Apache Tomcat 9.0.87.
