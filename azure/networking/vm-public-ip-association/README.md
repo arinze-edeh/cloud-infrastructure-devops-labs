@@ -37,7 +37,7 @@ ACTION:
 
 Login to Azure using provided credentials
 
-screenshot:'azure-login'
+screenshot:`azure-login`
 
 
 ---
@@ -92,7 +92,7 @@ Restart VM
 `az vm start --resource-group <rg> --name datacenter-vm-pip`
 
 screenshot:`vm-started`
-
+<img width="1034" height="795" alt="image" src="https://github.com/user-attachments/assets/1b2fe9c1-d95f-4bc6-8400-aedc332749f7" />
 
 ---
 
@@ -104,7 +104,7 @@ VM has Public IP assigned
 `az vm show -d --resource-group <rg> --name datacenter-vm-pip --query publicIps`
 
 screenshot:`public-ip-confirmed`
-
+<img width="1040" height="834" alt="image" src="https://github.com/user-attachments/assets/fcc044cd-7b7e-4fa6-adb9-29a8fe7047f9" />
 
 ---
 
@@ -138,5 +138,5 @@ screenshot:`public-ip-confirmed`
 <img width="1034" height="685" alt="image" src="https://github.com/user-attachments/assets/148eb405-1bf8-4fd6-99bf-778d8c06b1e2" />
 <img width="1033" height="558" alt="image" src="https://github.com/user-attachments/assets/f5bdaee4-17d4-44aa-96c4-7929c8e5a2df" />
 <img width="1034" height="681" alt="image" src="https://github.com/user-attachments/assets/0d6a2286-b3ab-47a1-9adc-9e7b1048913b" />
-<img width="1034" height="795" alt="image" src="https://github.com/user-attachments/assets/1b2fe9c1-d95f-4bc6-8400-aedc332749f7" />
-<img width="1040" height="834" alt="image" src="https://github.com/user-attachments/assets/fcc044cd-7b7e-4fa6-adb9-29a8fe7047f9" />
+
+
