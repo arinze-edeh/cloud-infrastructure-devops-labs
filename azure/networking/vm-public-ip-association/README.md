@@ -52,13 +52,14 @@ screenshots: `resource-validation`
 ## Step 3: Troubleshoot & Deallocate
 COMMAND:
 
-`Initial attempt to update using generic name ipconfig1 failed with ResourceNotFoundError.`
+`An initial attempt using the generic name ipconfig1 resulted in a ResourceNotFoundError.`
 
-Discovery: Found actual IP configuration name: `az network nic show --name datacenter-vm-pipVMNic --resource-group kml_rg_main-bf56eb2fed794029 --query "ipConfigurations[].name" (Result: ipconfigdatacenter-vm-pip).`
+Discovery: Queried the NIC to find the exact internal IP configuration name:
+`az network nic show --name datacenter-vm-pipVMNic --resource-group kml_rg_main-bf56eb2fed794029 --query "ipConfigurations[].name".`
 
-Optional: `az vm deallocate --resource-group kml_rg_main-bf56eb2fed794029 --name datacenter-vm-pip.`
+Result: Identified the correct name as `"ipconfigdatacenter-vm-pip".`
 
-screenshot: `vm-deallocated`
+screenshot: `nic-config-discovery`
 <img width="1034" height="681" alt="image" src="https://github.com/user-attachments/assets/0d6a2286-b3ab-47a1-9adc-9e7b1048913b" />
 
 ## Step 4: Attach Public IP to NIC
