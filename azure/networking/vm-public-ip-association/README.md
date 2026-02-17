@@ -49,7 +49,7 @@ screenshots: `resource-validation`
 <img width="1034" height="685" alt="image" src="https://github.com/user-attachments/assets/148eb405-1bf8-4fd6-99bf-778d8c06b1e2" />
 <img width="1033" height="558" alt="image" src="https://github.com/user-attachments/assets/f5bdaee4-17d4-44aa-96c4-7929c8e5a2df" />
 
-## Step 3: Troubleshoot & Deallocate
+## Step 3: Troubleshoot IP Configuration Name
 - COMMAND:
 
   -  `An initial attempt using the generic name ipconfig1 resulted in a ResourceNotFoundError.`
