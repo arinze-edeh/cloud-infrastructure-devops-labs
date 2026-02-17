@@ -70,6 +70,7 @@ Screenshots:`port-configuration`
 - Ensured the service was configured to persist across system reboots.
 
 Screenshot:`tomcat-running`
+<img width="843" height="148" alt="image" src="https://github.com/user-attachments/assets/ce82d5cc-83f5-44f5-a58a-265dcc976fc9" />
 
 ## Step 5: Transfer Application File
 - Successfully transferred `ROOT.war` from the `Jump Host` to `stapp02:/tmp/` using `SCP`.
