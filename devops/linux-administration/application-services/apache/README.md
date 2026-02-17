@@ -77,6 +77,7 @@ Screenshot:`tomcat-running`
 - Confirmed the 100% transfer of the 4529-byte file.
 
 Screenshot:`war-transfer`
+<img width="1029" height="866" alt="image" src="https://github.com/user-attachments/assets/24dc75a2-370a-461f-af35-09bd715fb157" />
 
 ## Step 6: Deploy Application
 - Cleaned the deployment directory by removing default ROOT files.
@@ -123,7 +124,7 @@ Screenshot:`app-working`
 
 
 <img width="1029" height="868" alt="image" src="https://github.com/user-attachments/assets/0a295bc6-3d05-4cc4-a5ba-7a8fc1eb7c8f" />
-<img width="1029" height="866" alt="image" src="https://github.com/user-attachments/assets/24dc75a2-370a-461f-af35-09bd715fb157" />
+
 <img width="1028" height="873" alt="image" src="https://github.com/user-attachments/assets/3ff96d01-7b89-4655-9ba1-977b02d09f0c" />
 <img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/d595a582-df93-4da9-b516-550841b9af91" />
 <img width="1035" height="442" alt="image" src="https://github.com/user-attachments/assets/a680425e-d506-4333-8a4c-62f5d8528afb" />
