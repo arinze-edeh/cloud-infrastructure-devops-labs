@@ -91,6 +91,8 @@ Confirm Public IP address is assigned: az vm list-ip-addresses --name datacenter
 
 screenshot: `public-ip-confirmed`
 
+<img width="1040" height="834" alt="image" src="https://github.com/user-attachments/assets/fcc044cd-7b7e-4fa6-adb9-29a8fe7047f9" />
+
 ## Validation Checklist
 
 - Public IP ID captured successfully
@@ -135,5 +137,4 @@ screenshot: `public-ip-confirmed`
 <img width="1034" height="681" alt="image" src="https://github.com/user-attachments/assets/0d6a2286-b3ab-47a1-9adc-9e7b1048913b" />
 <img width="1034" height="795" alt="image" src="https://github.com/user-attachments/assets/1b2fe9c1-d95f-4bc6-8400-aedc332749f7" />
 
-<img width="1040" height="834" alt="image" src="https://github.com/user-attachments/assets/fcc044cd-7b7e-4fa6-adb9-29a8fe7047f9" />
 
