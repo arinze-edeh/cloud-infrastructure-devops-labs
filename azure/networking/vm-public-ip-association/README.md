@@ -43,7 +43,7 @@ CONFIRM:
 
 - Verify Public IP details: `az network public-ip list --resource-group kml_rg_main-bf56eb2fed794029 --output table.`
 
-screenshots: `resource-validation`
+Screenshots: `resource-validation`
 <img width="1030" height="696" alt="image" src="https://github.com/user-attachments/assets/d8acd204-f1a9-43bd-b85c-6df6fc14ff53" />
 <img width="1035" height="716" alt="image" src="https://github.com/user-attachments/assets/6cbf15a4-f744-433f-aee9-145e9aa1d1f8" />
 <img width="1034" height="685" alt="image" src="https://github.com/user-attachments/assets/148eb405-1bf8-4fd6-99bf-778d8c06b1e2" />
@@ -59,7 +59,7 @@ screenshots: `resource-validation`
 
 - Result: Identified the correct name as `"ipconfigdatacenter-vm-pip".`
 
-screenshot: `nic-config-discovery`
+Screenshot: `nic-config-discovery`
 <img width="1034" height="681" alt="image" src="https://github.com/user-attachments/assets/0d6a2286-b3ab-47a1-9adc-9e7b1048913b" />
 
 ## Step 4: Attach Public IP to NIC
@@ -75,7 +75,7 @@ Assign datacenter-pip using the correct configuration name:
   -  `--resource-group kml_rg_main-bf56eb2fed794029 \`
   -  `--public-ip-address $PIP_ID`
 
-screenshot: `nic-public-ip-attachment'`
+Screenshots: `nic-public-ip-attachment'`
 <img width="1034" height="795" alt="image" src="https://github.com/user-attachments/assets/1b2fe9c1-d95f-4bc6-8400-aedc332749f7" />
 <img width="1040" height="834" alt="image" src="https://github.com/user-attachments/assets/fcc044cd-7b7e-4fa6-adb9-29a8fe7047f9" />
 
@@ -86,7 +86,7 @@ Verify JSON response for "provisioningState": "Succeeded".
 
 Confirm Public IP address is assigned: `az vm list-ip-addresses --name datacenter-vm-pip --resource-group kml_rg_main-bf56eb2fed794029 --output table.`
 
-screenshot: `public-ip-confirmed`
+Screenshot: `public-ip-confirmed`
 
 <img width="1040" height="834" alt="image" src="https://github.com/user-attachments/assets/fcc044cd-7b7e-4fa6-adb9-29a8fe7047f9" />
 
