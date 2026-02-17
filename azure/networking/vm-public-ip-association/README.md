@@ -59,6 +59,7 @@ Discovery: Found actual IP configuration name: `az network nic show --name datac
 Optional: `az vm deallocate --resource-group kml_rg_main-bf56eb2fed794029 --name datacenter-vm-pip.`
 
 screenshot: `vm-deallocated`
+<img width="1034" height="681" alt="image" src="https://github.com/user-attachments/assets/0d6a2286-b3ab-47a1-9adc-9e7b1048913b" />
 
 ## Step 4: Attach Public IP to NIC
 COMMAND:
@@ -135,7 +136,7 @@ screenshot: `public-ip-confirmed`
 `azure-cli`
 
 
-<img width="1034" height="681" alt="image" src="https://github.com/user-attachments/assets/0d6a2286-b3ab-47a1-9adc-9e7b1048913b" />
+
 
 
 
