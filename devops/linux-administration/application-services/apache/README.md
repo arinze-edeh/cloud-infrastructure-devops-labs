@@ -59,7 +59,7 @@ Screenshots:`tomcat-installed`
 
 - Changed the default HTTP connector port from `8080` to `3000`.
 
-Screenshot:`port-configuration`
+Screenshots:`port-configuration`
 <img width="1036" height="861" alt="image" src="https://github.com/user-attachments/assets/58446ba4-3dbf-4713-981c-9df468747060" />
 <img width="1014" height="855" alt="image" src="https://github.com/user-attachments/assets/34597781-359e-4062-a2dc-05f7df19cbc3" />
 <img width="1042" height="865" alt="image" src="https://github.com/user-attachments/assets/9dc42913-2ea2-4692-b829-25fae9cb191a" />
@@ -91,7 +91,8 @@ Screenshot:`war-deployed`
 ## Step 7: Restart Tomcat
 - Executed `sudo systemctl restart tomcat` to apply the new configuration and deploy the `.war` file.
 
-screenshot:`tomcat-restarted`
+Screenshot:`tomcat-restarted`
+<img width="1033" height="770" alt="image" src="https://github.com/user-attachments/assets/fa86c5e2-6824-4776-b579-7061d3c9de1d" />
 
 ## Step 8: Verify Application
 - Performed a final check using `curl http://stapp02:3000`.
