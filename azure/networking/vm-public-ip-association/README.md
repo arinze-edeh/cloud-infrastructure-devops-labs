@@ -34,8 +34,6 @@ ACTION:
 
 Login to Azure using provided credentials.
 
-screenshot: 'azure-login'
-
 ## Step 2: Validate Resources & Discovery
 CONFIRM:
 
@@ -45,7 +43,11 @@ CONFIRM:
 
 - Verify Public IP details: `az network public-ip list --resource-group kml_rg_main-bf56eb2fed794029 --output table.`
 
-screenshot: `resource-validation`
+screenshots: `resource-validation`
+<img width="1030" height="696" alt="image" src="https://github.com/user-attachments/assets/d8acd204-f1a9-43bd-b85c-6df6fc14ff53" />
+<img width="1035" height="716" alt="image" src="https://github.com/user-attachments/assets/6cbf15a4-f744-433f-aee9-145e9aa1d1f8" />
+<img width="1034" height="685" alt="image" src="https://github.com/user-attachments/assets/148eb405-1bf8-4fd6-99bf-778d8c06b1e2" />
+<img width="1033" height="558" alt="image" src="https://github.com/user-attachments/assets/f5bdaee4-17d4-44aa-96c4-7929c8e5a2df" />
 
 ## Step 3: Troubleshoot & Deallocate
 COMMAND:
@@ -129,10 +131,7 @@ screenshot: `public-ip-confirmed`
 `nic`
 `azure-cli`
 
-<img width="1030" height="696" alt="image" src="https://github.com/user-attachments/assets/d8acd204-f1a9-43bd-b85c-6df6fc14ff53" />
-<img width="1035" height="716" alt="image" src="https://github.com/user-attachments/assets/6cbf15a4-f744-433f-aee9-145e9aa1d1f8" />
-<img width="1034" height="685" alt="image" src="https://github.com/user-attachments/assets/148eb405-1bf8-4fd6-99bf-778d8c06b1e2" />
-<img width="1033" height="558" alt="image" src="https://github.com/user-attachments/assets/f5bdaee4-17d4-44aa-96c4-7929c8e5a2df" />
+
 <img width="1034" height="681" alt="image" src="https://github.com/user-attachments/assets/0d6a2286-b3ab-47a1-9adc-9e7b1048913b" />
 <img width="1034" height="795" alt="image" src="https://github.com/user-attachments/assets/1b2fe9c1-d95f-4bc6-8400-aedc332749f7" />
 
