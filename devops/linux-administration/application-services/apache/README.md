@@ -60,6 +60,9 @@ Modified the configuration file located at /etc/tomcat/server.xml.
 Changed the default HTTP connector port from `8080` to `3000`.
 
 Screenshot:`port-configuration`
+<img width="1036" height="861" alt="image" src="https://github.com/user-attachments/assets/58446ba4-3dbf-4713-981c-9df468747060" />
+<img width="1014" height="855" alt="image" src="https://github.com/user-attachments/assets/34597781-359e-4062-a2dc-05f7df19cbc3" />
+<img width="1042" height="865" alt="image" src="https://github.com/user-attachments/assets/9dc42913-2ea2-4692-b829-25fae9cb191a" />
 
 ## Step 4: Start and Enable Tomcat
 Used `systemctl` to initialize and manage the Tomcat service.
@@ -116,9 +119,7 @@ Screenshot:`app-working`
 
 
 
-<img width="1036" height="861" alt="image" src="https://github.com/user-attachments/assets/58446ba4-3dbf-4713-981c-9df468747060" />
-<img width="1014" height="855" alt="image" src="https://github.com/user-attachments/assets/34597781-359e-4062-a2dc-05f7df19cbc3" />
-<img width="1042" height="865" alt="image" src="https://github.com/user-attachments/assets/9dc42913-2ea2-4692-b829-25fae9cb191a" />
+
 <img width="1029" height="868" alt="image" src="https://github.com/user-attachments/assets/0a295bc6-3d05-4cc4-a5ba-7a8fc1eb7c8f" />
 <img width="1029" height="866" alt="image" src="https://github.com/user-attachments/assets/24dc75a2-370a-461f-af35-09bd715fb157" />
 <img width="1028" height="873" alt="image" src="https://github.com/user-attachments/assets/3ff96d01-7b89-4655-9ba1-977b02d09f0c" />
