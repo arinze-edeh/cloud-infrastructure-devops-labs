@@ -86,6 +86,7 @@ Moved the artifact using `sudo mv /tmp/ROOT.war /var/lib/tomcat/webapps/`.
 Updated file ownership with `sudo chown tomcat:tomcat /var/lib/tomcat/webapps/ROOT.war`.
 
 Screenshot:`war-deployed`
+<img width="1032" height="657" alt="image" src="https://github.com/user-attachments/assets/f082a3a4-15c5-403b-bc43-a85530c24ade" />
 
 ## Step 7: Restart Tomcat
 Executed `sudo systemctl restart tomcat` to apply the new configuration and deploy the `.war` file.
@@ -125,5 +126,5 @@ Screenshot:`app-working`
 <img width="1028" height="873" alt="image" src="https://github.com/user-attachments/assets/3ff96d01-7b89-4655-9ba1-977b02d09f0c" />
 <img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/d595a582-df93-4da9-b516-550841b9af91" />
 <img width="1035" height="442" alt="image" src="https://github.com/user-attachments/assets/a680425e-d506-4333-8a4c-62f5d8528afb" />
-<img width="1032" height="657" alt="image" src="https://github.com/user-attachments/assets/f082a3a4-15c5-403b-bc43-a85530c24ade" />
+
 
