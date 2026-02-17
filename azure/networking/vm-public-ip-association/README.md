@@ -84,7 +84,7 @@ CHECK:
 
 Verify JSON response for "provisioningState": "Succeeded".
 
-Confirm Public IP address is assigned: az vm list-ip-addresses --name datacenter-vm-pip --resource-group kml_rg_main-bf56eb2fed794029 --output table.
+Confirm Public IP address is assigned: `az vm list-ip-addresses --name datacenter-vm-pip --resource-group kml_rg_main-bf56eb2fed794029 --output table.`
 
 screenshot: `public-ip-confirmed`
 
