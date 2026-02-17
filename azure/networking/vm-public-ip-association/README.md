@@ -74,6 +74,7 @@ Assign datacenter-pip using the correct configuration name:
   -  `--public-ip-address $PIP_ID`
 
 screenshot: `nic-public-ip-attachment'`
+<img width="1034" height="795" alt="image" src="https://github.com/user-attachments/assets/1b2fe9c1-d95f-4bc6-8400-aedc332749f7" />
 
 ## Step 5: Start VM
 COMMAND:
@@ -135,6 +136,6 @@ screenshot: `public-ip-confirmed`
 
 
 <img width="1034" height="681" alt="image" src="https://github.com/user-attachments/assets/0d6a2286-b3ab-47a1-9adc-9e7b1048913b" />
-<img width="1034" height="795" alt="image" src="https://github.com/user-attachments/assets/1b2fe9c1-d95f-4bc6-8400-aedc332749f7" />
+
 
 
