@@ -50,14 +50,14 @@ screenshots: `resource-validation`
 <img width="1033" height="558" alt="image" src="https://github.com/user-attachments/assets/f5bdaee4-17d4-44aa-96c4-7929c8e5a2df" />
 
 ## Step 3: Troubleshoot & Deallocate
-COMMAND:
+- COMMAND:
 
-`An initial attempt using the generic name ipconfig1 resulted in a ResourceNotFoundError.`
+  -  `An initial attempt using the generic name ipconfig1 resulted in a ResourceNotFoundError.`
 
-Discovery: Queried the NIC to find the exact internal IP configuration name:
-`az network nic show --name datacenter-vm-pipVMNic --resource-group kml_rg_main-bf56eb2fed794029 --query "ipConfigurations[].name".`
+- Discovery: Queried the NIC to find the exact internal IP configuration name:
+  -  `az network nic show --name datacenter-vm-pipVMNic --resource-group kml_rg_main-bf56eb2fed794029 --query "ipConfigurations[].name".`
 
-Result: Identified the correct name as `"ipconfigdatacenter-vm-pip".`
+- Result: Identified the correct name as `"ipconfigdatacenter-vm-pip".`
 
 screenshot: `nic-config-discovery`
 <img width="1034" height="681" alt="image" src="https://github.com/user-attachments/assets/0d6a2286-b3ab-47a1-9adc-9e7b1048913b" />
