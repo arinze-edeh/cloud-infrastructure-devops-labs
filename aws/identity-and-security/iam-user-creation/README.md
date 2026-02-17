@@ -1,6 +1,4 @@
-# AWS IAM User Creation – iamuser_jim
-
-
+# AWS IAM User Creation
 
 ---
 
@@ -11,7 +9,7 @@ Create an IAM user using AWS CLI
 
 Verify successful creation
 
-Perform actions in us-east-1 region
+Perform actions in `us-east-1` region
 
 
 ---
@@ -23,7 +21,7 @@ AWS Identity and Access Management (IAM)
 
 REGION:
 
-us-east-1
+`us-east-1`
 
 ACCESS METHOD:
 
@@ -45,17 +43,17 @@ screenshot: `aws-cli-region-confirmation`
 ## Step 2: Create IAM User
 COMMAND:
 
-Create IAM user named iamuser_jim
+  -  Create IAM user named `iamuser_jim`
 
-aws iam create-user --user-name iamuser_jim
+`aws iam create-user --user-name iamuser_jim`
 
 EXPECTED OUTPUT:
 
-UserName: iamuser_jim
+  -  UserName: `iamuser_jim`
 
-ARN returned
+  -  ARN returned
 
-CreationDate populated
+  -  CreationDate populated
 
 screenshot:`iamuser_jim-create-user`
 <img width="1026" height="679" alt="image" src="https://github.com/user-attachments/assets/1ef77d6b-5f26-4b10-b533-52dcf39f4abb" />
@@ -71,7 +69,7 @@ aws iam list-users
 
 VALIDATION:
 
-iamuser_jim must appear in the users list
+`iamuser_jim` must appear in the users list
 
 screenshot:`iamuser_jim-listed`
 <img width="1025" height="826" alt="image" src="https://github.com/user-attachments/assets/85bdec04-80c2-4671-b362-b688e83131e4" />
