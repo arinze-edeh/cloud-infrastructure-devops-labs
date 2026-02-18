@@ -40,7 +40,8 @@
 
 Screenshots: 
 
-<img width="1027" height="665" alt="551255128-36733923-687f-4a6e-8e18-6780d182edf9" src="https://github.com/user-attachments/assets/6026a19e-8f01-4c83-9249-628c814bd77d" />
+<img width="1028" height="665" alt="Screenshot 2026-02-18 013947" src="https://github.com/user-attachments/assets/78c8b537-13a1-499b-a8ec-d33081cff2a6" />
+
 
 - This confirmed:
 
