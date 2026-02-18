@@ -66,7 +66,11 @@ PORT: 8087
 
 ## Step-by-Step Implementation
 
-## Step 1: Initial Diagnosis and Identification of Port Conflict
+## Step 1: SSH Into App Server
+COMMAND:
+RUN ssh tony@172.16.238.10
+
+## Step 2: Initial Diagnosis and Identification of Port Conflict
 COMMAND:
 
 RESULT:
@@ -76,7 +80,17 @@ SCREENSHOT:
 [Screenshot: Netstat output showing PID 491 using port 8087]
 <img width="1029" height="715" alt="image" src="https://github.com/user-attachments/assets/bab783de-b251-46c6-a048-cf0d3f5459ca" />
 
-## Step 2: Termination of Conflicting Process
+## Step 3: Check Apache Service Status
+COMMAND:
+RUN sudo systemctl status httpd
+
+RESULT:
+Service failed to start due to "Address already in use" and syntax errors.
+
+SCREENSHOT:
+[Screenshot: Apache service failed status]
+
+## Step 4: Termination of Conflicting Process
 COMMAND:
 
 RESULT:
@@ -85,8 +99,18 @@ RESULT:
 SCREENSHOT:
 <img width="1029" height="715" alt="image" src="https://github.com/user-attachments/assets/27bd64ab-ec14-46b4-80ad-c986ccd8223f" />
 
+## Step 5: Identify and Resolve Port Conflict
+COMMAND:
+RUN sudo netstat -tunlp | grep 8087
+RUN sudo kill -9 491
 
-## Step 3: Repairing Apache Configuration and Syntax Error
+RESULT:
+Identified sendmail (PID 491) on port 8087 and terminated the process.
+
+SCREENSHOT:
+[Screenshot: Netstat conflict and PID kill]
+
+## Step 6: Repairing Apache Configuration and Syntax Error
 - COMMAND:
   -  RUN `sudo vi /etc/httpd/conf/httpd.conf` (Set to Listen `8087`)
   -  RUN `sudo httpd -t`
@@ -98,7 +122,7 @@ SCREENSHOT:
 [Screenshot: Terminal output showing Syntax OK]
 <img width="1031" height="316" alt="image" src="https://github.com/user-attachments/assets/55832b85-84bb-44bc-af62-5e5a03c13776" />
 
-## Step 4: Starting and Verifying the Apache Service
+## Step 7: Starting and Verifying the Apache Service
 - COMMAND:
   -  `RUN sudo systemctl start httpd`
   -  `RUN sudo systemctl status httpd`
@@ -110,7 +134,7 @@ SCREENSHOT:
 [Screenshot: Systemctl status showing active running]
 <img width="1033" height="868" alt="image" src="https://github.com/user-attachments/assets/e5dfc3f4-a745-47d0-9e60-20af9e0f84ec" />
 
-## Step 5: Configuring the Firewall for Accessibility
+## Step 8: Configuring the Firewall for Accessibility
 COMMAND: RUN `sudo iptables -I INPUT 1 -p tcp --dport 8087 -j ACCEPT`
 
 RESULT:
@@ -120,7 +144,7 @@ SCREENSHOT:
 <img width="1039" height="860" alt="image" src="https://github.com/user-attachments/assets/d88aa054-3921-47f3-ac82-052e4b8387a2" />
 
 
-## Step 6: Final Validation From Jump Host
+## Step 9: Final Validation From Jump Host
 COMMAND: RUN `curl http://stapp01:8087`
 
 RESULT:
