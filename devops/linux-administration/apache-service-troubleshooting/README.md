@@ -74,6 +74,7 @@ RESULT:
 
 SCREENSHOT:
 [Screenshot: Netstat output showing PID 491 using port 8087]
+<img width="1029" height="715" alt="image" src="https://github.com/user-attachments/assets/bab783de-b251-46c6-a048-cf0d3f5459ca" />
 
 ## Step 2: Termination of Conflicting Process
 COMMAND:
