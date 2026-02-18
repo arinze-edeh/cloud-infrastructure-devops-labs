@@ -163,9 +163,9 @@ SCREENSHOT:
 
 
 ## Validation Checklist
-- Apache service running
+- Apache service `running`
 
-- Port 8087 listening
+- `Port 8087` listening
 
 - Conflicting sendmail process terminated
 
