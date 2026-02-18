@@ -87,7 +87,9 @@ SCREENSHOT:
 
 
 ## Step 3: Repairing Apache Configuration and Syntax Error
-COMMAND:
+- COMMAND:
+  -  RUN `sudo vi /etc/httpd/conf/httpd.conf` (Set to Listen `8087`)
+  -  RUN `sudo httpd -t`
 
 RESULT:
 `Removed syntax error and confirmed "Syntax OK".`
@@ -97,7 +99,9 @@ SCREENSHOT:
 <img width="1031" height="316" alt="image" src="https://github.com/user-attachments/assets/55832b85-84bb-44bc-af62-5e5a03c13776" />
 
 ## Step 4: Starting and Verifying the Apache Service
-COMMAND:
+- COMMAND:
+  -  `RUN sudo systemctl start httpd`
+  -  `RUN sudo systemctl status httpd`
 
 RESULT:
 `Service status changed to active (running).`
@@ -107,7 +111,7 @@ SCREENSHOT:
 <img width="1033" height="868" alt="image" src="https://github.com/user-attachments/assets/e5dfc3f4-a745-47d0-9e60-20af9e0f84ec" />
 
 ## Step 5: Configuring the Firewall for Accessibility
-COMMAND:
+COMMAND: RUN `sudo iptables -I INPUT 1 -p tcp --dport 8087 -j ACCEPT`
 
 RESULT:
 `Allowed incoming traffic on port 8087, resolving the "not reachable" error reported by monitoring.`
@@ -117,7 +121,7 @@ SCREENSHOT:
 
 
 ## Step 6: Final Validation From Jump Host
-COMMAND:
+COMMAND: RUN `curl http://stapp01:8087`
 
 RESULT:
 `Received the CentOS HTTP Server Test Page HTML content.`
