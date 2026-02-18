@@ -52,7 +52,7 @@ This task validates hands-on skills in:
 
 ---
 
-## Step-by-Step Implementation (Pseudo Code)
+## Step-by-Step Implementation
 
 ### Step 1: Retrieve Azure Credentials
 
@@ -102,7 +102,7 @@ SCREENSHOT:
 ACTION:
 - Check the current hardware size of the VM
 
-COMMAND (PSEUDO):
+COMMAND:
     RUN az vm show
         --resource-group KML_RG_MAIN-9642FE6E452040F1
         --name xfusion-vm
@@ -121,7 +121,7 @@ SCREENSHOT:
 ACTION:
 - Update the VM hardware profile to a larger SKU
 
-COMMAND (PSEUDO):
+COMMAND:
     RUN az vm update
         --resource-group KML_RG_MAIN-9642FE6E452040F1
         --name xfusion-vm
@@ -145,7 +145,7 @@ SCREENSHOT:
 ACTION:
 - Ensure the VM is powered on after resize
 
-COMMAND (PSEUDO):
+COMMAND:
     RUN az vm start
         --resource-group KML_RG_MAIN-9642FE6E452040F1
         --name xfusion-vm
@@ -163,7 +163,7 @@ SCREENSHOT:
 ACTION:
 - Confirm the VM size and running status
 
-COMMAND (PSEUDO):
+COMMAND:
     RUN az vm get-instance-view
         --resource-group KML_RG_MAIN-9642FE6E452040F1
         --name xfusion-vm
@@ -192,10 +192,10 @@ SCREENSHOT:
 
 ## Outcome
 
-The Virtual Machine "xfusion-vm" was successfully resized from
-Standard_B1s to Standard_B2s using Azure CLI.
+- The Virtual Machine `"xfusion-vm"` was successfully resized from
+`Standard_B1s` to `Standard_B2s` using `Azure CLI`.
 
-The VM remained operational and was verified to be running
+- The VM remained operational and was verified to be running
 after the resize operation, meeting all project requirements.
 
 
