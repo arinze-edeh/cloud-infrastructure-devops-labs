@@ -189,7 +189,7 @@ SCREENSHOT:
 - Original VM size verified
 - VM resized successfully
 - VM is running after resize
-- Final size confirmed as Standard_B2s
+- Final size confirmed as `Standard_B2s`
 
 ---
 
@@ -200,10 +200,3 @@ SCREENSHOT:
 
 - The VM remained operational and was verified to be running
 after the resize operation, meeting all project requirements.
-
-
-
-
-
-
-
