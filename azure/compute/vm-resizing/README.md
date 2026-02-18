@@ -9,11 +9,11 @@ REGION: centralus
 
 ## Project Overview
 
-This project demonstrates how to resize an existing Azure Virtual Machine
+- This project demonstrates how to resize an existing Azure Virtual Machine
 using the Azure CLI in order to optimize resource usage.
 
-A running VM named "xfusion-vm" was identified as underutilized.
-The VM was resized from a smaller SKU to a larger SKU while ensuring
+- A running VM named "xfusion-vm" was identified as underutilized.
+- The VM was resized from a smaller SKU to a larger SKU while ensuring
 that the VM remains in a running state after the operation.
 
 This task validates hands-on skills in:
@@ -36,10 +36,10 @@ This task validates hands-on skills in:
 
 ## Azure Scope and Constraints
 
-SUBSCRIPTION: Azure Free Lab Environment  
-RESOURCE GROUP: KML_RG_MAIN-9642FE6E452040F1  
-VIRTUAL MACHINE NAME: xfusion-vm  
-LOCATION: centralus  
+SUBSCRIPTION: `Azure Free Lab Environment`
+RESOURCE GROUP: `KML_RG_MAIN-9642FE6E452040F1`  
+VIRTUAL MACHINE NAME: `xfusion-vm`  
+LOCATION: `centralus`  
 
 ---
 
