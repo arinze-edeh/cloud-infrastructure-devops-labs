@@ -93,7 +93,7 @@ EXPECTED RESULT:
 - Location confirmed as centralus
 
 SCREENSHOT:
-    [Screenshot: VM list table]
+   <img width="1029" height="555" alt="image" src="https://github.com/user-attachments/assets/09466e95-8808-4ab4-bc4e-3a2f9ca970b0" />
 
 ---
 
@@ -200,7 +200,7 @@ after the resize operation, meeting all project requirements.
 
 
 
-<img width="1029" height="555" alt="image" src="https://github.com/user-attachments/assets/09466e95-8808-4ab4-bc4e-3a2f9ca970b0" />
+
 <img width="1028" height="577" alt="image" src="https://github.com/user-attachments/assets/a67aa12e-9d6a-44a2-826a-66287742fb54" />
 <img width="1037" height="825" alt="image" src="https://github.com/user-attachments/assets/3115eb1a-2257-40d4-a724-86617c7551e7" />
 <img width="1035" height="826" alt="image" src="https://github.com/user-attachments/assets/93424d0b-a961-487a-b292-554a03f0bcb2" />
