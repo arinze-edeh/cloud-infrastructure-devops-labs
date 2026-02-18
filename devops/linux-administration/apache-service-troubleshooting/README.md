@@ -68,7 +68,11 @@ PORT: 8087
 
 ## Step 1: SSH Into App Server
 COMMAND:
-RUN ssh tony@172.16.238.10
+RUN `ssh tony@172.16.238.10`
+
+SCREENSHOT:
+<img width="1036" height="362" alt="image" src="https://github.com/user-attachments/assets/e879d55b-6c3a-473e-beba-5e6e941bd74f" />
+
 
 ## Step 2: Initial Diagnosis and Identification of Port Conflict
 COMMAND:
