@@ -50,19 +50,7 @@ USER: tony
 PORT: 8087
 
 ## Tools Used
-`ssh`
-
-`systemctl`
-
-`netstat`
-
-`kill`
-
-`vi / sed`
-
-`iptables`
-
-`curl`
+`ssh` `systemctl` `netstat` `kill` `vi / sed` `iptables` `curl`
 
 ## Step-by-Step Implementation
 
