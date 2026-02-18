@@ -80,15 +80,15 @@ ACTION:
 - Display VM name, resource group, and location
 
 COMMAND:
-    RUN az vm list
+    `RUN az vm list
         FILTER output to:
             VM_Name
             ResourceGroup
             Location
-        FORMAT output as table
+        FORMAT output as table`
 
 EXPECTED RESULT:
-- VM "xfusion-vm" found
+- VM `"xfusion-vm"` found
 - Resource group confirmed
 - Location confirmed as centralus
 
@@ -103,10 +103,10 @@ ACTION:
 - Check the current hardware size of the VM
 
 COMMAND:
-    RUN az vm show
+    `RUN az vm show
         --resource-group KML_RG_MAIN-9642FE6E452040F1
         --name xfusion-vm
-        QUERY hardwareProfile.vmSize
+        QUERY hardwareProfile.vmSize`
 
 EXPECTED RESULT:
     Standard_B1s
@@ -122,13 +122,13 @@ ACTION:
 - Update the VM hardware profile to a larger SKU
 
 COMMAND:
-    RUN az vm update
+    `RUN az vm update
         --resource-group KML_RG_MAIN-9642FE6E452040F1
         --name xfusion-vm
-        --size Standard_B2s
+        --size Standard_B2s`
 
 SYSTEM NOTE:
-- "--size" parameter is currently in preview
+- `"--size"` parameter is currently in preview
 - Operation updates VM hardware profile successfully
 
 EXPECTED RESULT:
@@ -146,9 +146,9 @@ ACTION:
 - Ensure the VM is powered on after resize
 
 COMMAND:
-    RUN az vm start
+    `RUN az vm start
         --resource-group KML_RG_MAIN-9642FE6E452040F1
-        --name xfusion-vm
+        --name xfusion-vm`
 
 EXPECTED RESULT:
 - VM transitions to running state
@@ -164,19 +164,19 @@ ACTION:
 - Confirm the VM size and running status
 
 COMMAND:
-    RUN az vm get-instance-view
+    `RUN az vm get-instance-view
         --resource-group KML_RG_MAIN-9642FE6E452040F1
         --name xfusion-vm
         QUERY:
             hardwareProfile.vmSize
-            instanceView.statuses[1].displayStatus
+            instanceView.statuses[1].displayStatus`
 
 EXPECTED RESULT:
     Size  = Standard_B2s
     State = VM running
 
 SCREENSHOT:
-    [Screenshot: Final VM size and running state]
+    <img width="1031" height="870" alt="image" src="https://github.com/user-attachments/assets/90502930-4c46-4749-9edb-f7f20fc9ef99" />
 
 ---
 
@@ -207,5 +207,5 @@ after the resize operation, meeting all project requirements.
 <img width="1037" height="829" alt="image" src="https://github.com/user-attachments/assets/9e8c714c-12d8-48e8-a0b5-6c623a16f935" />
 <img width="1037" height="650" alt="image" src="https://github.com/user-attachments/assets/d5abc90e-4c9a-4575-a1ca-f1545543fae4" />
 <img width="1031" height="867" alt="image" src="https://github.com/user-attachments/assets/38a6cbf7-df18-4384-89e8-8da11e630de8" />
-<img width="1031" height="870" alt="image" src="https://github.com/user-attachments/assets/90502930-4c46-4749-9edb-f7f20fc9ef99" />
+
 
