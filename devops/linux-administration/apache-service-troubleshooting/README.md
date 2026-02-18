@@ -114,6 +114,8 @@ Identified sendmail (PID 491) on port 8087 and terminated the process.
 
 SCREENSHOT:
 [Screenshot: Netstat conflict and PID kill]
+<img width="1029" height="715" alt="image" src="https://github.com/user-attachments/assets/f25774e2-ad1e-4a07-b77d-f71121ca4a7d" />
+
 
 ## Step 6: Repairing Apache Configuration and Syntax Error
 - COMMAND:
@@ -167,13 +169,13 @@ SCREENSHOT:
 
 - Conflicting sendmail process terminated
 
-- Configuration syntax errors resolved
+- Configuration `syntax errors` resolved
 
-- Firewall rules updated for 8087
+- Firewall rules updated for `8087`
 
 - Service reachable from jump host
 
-- index.html untouched
+- `index.html` untouched
 
 ## Outcome
 - The Apache service was successfully restored on port 8087. The port conflict with PID 491 was resolved, the configuration file was repaired, and network accessibility was enabled via iptables.
