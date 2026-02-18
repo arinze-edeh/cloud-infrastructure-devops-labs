@@ -135,8 +135,11 @@ EXPECTED RESULT:
 - VM size changed to `Standard_B2s`
 - Provisioning state shows `"Succeeded"`
 
-SCREENSHOT:
-    [Screenshot: VM resize command execution]
+SCREENSHOTS:
+<img width="1037" height="825" alt="image" src="https://github.com/user-attachments/assets/3115eb1a-2257-40d4-a724-86617c7551e7" />
+<img width="1035" height="826" alt="image" src="https://github.com/user-attachments/assets/93424d0b-a961-487a-b292-554a03f0bcb2" />
+<img width="1037" height="829" alt="image" src="https://github.com/user-attachments/assets/9e8c714c-12d8-48e8-a0b5-6c623a16f935" />
+<img width="1037" height="650" alt="image" src="https://github.com/user-attachments/assets/d5abc90e-4c9a-4575-a1ca-f1545543fae4" />
 
 ---
 
@@ -154,7 +157,7 @@ EXPECTED RESULT:
 - VM transitions to running state
 
 SCREENSHOT:
-    [Screenshot: VM start command]
+<img width="1031" height="867" alt="image" src="https://github.com/user-attachments/assets/38a6cbf7-df18-4384-89e8-8da11e630de8" />
 
 ---
 
@@ -202,10 +205,5 @@ after the resize operation, meeting all project requirements.
 
 
 
-<img width="1037" height="825" alt="image" src="https://github.com/user-attachments/assets/3115eb1a-2257-40d4-a724-86617c7551e7" />
-<img width="1035" height="826" alt="image" src="https://github.com/user-attachments/assets/93424d0b-a961-487a-b292-554a03f0bcb2" />
-<img width="1037" height="829" alt="image" src="https://github.com/user-attachments/assets/9e8c714c-12d8-48e8-a0b5-6c623a16f935" />
-<img width="1037" height="650" alt="image" src="https://github.com/user-attachments/assets/d5abc90e-4c9a-4575-a1ca-f1545543fae4" />
-<img width="1031" height="867" alt="image" src="https://github.com/user-attachments/assets/38a6cbf7-df18-4384-89e8-8da11e630de8" />
 
 
