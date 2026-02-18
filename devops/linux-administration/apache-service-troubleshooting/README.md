@@ -81,6 +81,10 @@ COMMAND:
 RESULT:
 `Port 8087 was freed for Apache use.`
 
+SCREENSHOT:
+<img width="1029" height="715" alt="image" src="https://github.com/user-attachments/assets/27bd64ab-ec14-46b4-80ad-c986ccd8223f" />
+
+
 ## Step 3: Repairing Apache Configuration and Syntax Error
 COMMAND:
 
@@ -89,6 +93,7 @@ RESULT:
 
 SCREENSHOT:
 [Screenshot: Terminal output showing Syntax OK]
+<img width="1031" height="316" alt="image" src="https://github.com/user-attachments/assets/55832b85-84bb-44bc-af62-5e5a03c13776" />
 
 ## Step 4: Starting and Verifying the Apache Service
 COMMAND:
@@ -98,12 +103,17 @@ RESULT:
 
 SCREENSHOT:
 [Screenshot: Systemctl status showing active running]
+<img width="1033" height="868" alt="image" src="https://github.com/user-attachments/assets/e5dfc3f4-a745-47d0-9e60-20af9e0f84ec" />
 
 ## Step 5: Configuring the Firewall for Accessibility
 COMMAND:
 
 RESULT:
 `Allowed incoming traffic on port 8087, resolving the "not reachable" error reported by monitoring.`
+
+SCREENSHOT:
+<img width="1039" height="860" alt="image" src="https://github.com/user-attachments/assets/d88aa054-3921-47f3-ac82-052e4b8387a2" />
+
 
 ## Step 6: Final Validation From Jump Host
 COMMAND:
@@ -113,6 +123,8 @@ RESULT:
 
 SCREENSHOT:
 [Screenshot: Successful curl output]
+<img width="1044" height="879" alt="image" src="https://github.com/user-attachments/assets/3efad4a6-b97c-4916-b246-2d64e32c2501" />
+
 
 ## Validation Checklist
 - Apache service running
