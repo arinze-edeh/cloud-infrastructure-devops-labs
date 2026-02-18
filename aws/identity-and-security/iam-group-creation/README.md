@@ -39,8 +39,8 @@
 `showcreds`
 
 Screenshots: 
-<img width="1028" height="665" alt="image" src="https://github.com/user-attachments/assets/36733923-687f-4a6e-8e18-6780d182edf9" />
 
+<img width="1027" height="665" alt="551255128-36733923-687f-4a6e-8e18-6780d182edf9" src="https://github.com/user-attachments/assets/2e37ab81-2b4c-44dc-9ef9-e24ef031187a" />
 
 - This confirmed:
 
