@@ -25,16 +25,16 @@
 ---
 
 ## 🔐 Authentication
-Temporary AWS credentials were generated and used to access the AWS account via the CLI.
+- Temporary AWS credentials were generated and used to access the AWS account via the CLI.
 
-AWS Console URL: https://954973595150.signin.aws.amazon.com/console
-Region: us-east-1
-`⚠️ Note: Credentials shown in this lab are temporary and automatically expire.`
+- AWS Console URL: https://954973595150.signin.aws.amazon.com/console
+- Region: us-east-1
+  -  `⚠️ Note: Credentials shown in this lab are temporary and automatically expire.`
 
 ## 🚀 Implementation Steps
 
 ## Step 1: Verify AWS Credentials
-- The showcreds command was used to confirm active AWS credentials and session validity.
+- The `showcreds` command was used to confirm active AWS credentials and session validity.
 
 `showcreds`
 
@@ -58,7 +58,7 @@ An IAM group named iamgroup_ammar was created using the AWS CLI.
 Screenshots: 
 <img width="1028" height="541" alt="image" src="https://github.com/user-attachments/assets/05e1715b-a278-4f71-b674-7e764e8041f2" />
 
-## ✅ Result:
+### ✅ Result:
 
 - IAM group successfully created
 
@@ -73,7 +73,7 @@ Screenshots:
 
 <img width="1031" height="626" alt="image" src="https://github.com/user-attachments/assets/57fa7f74-ce12-485d-8c05-1372bb10fad5" />
 
-## ✅ Result:
+### ✅ Result:
 
 - Group exists
 
