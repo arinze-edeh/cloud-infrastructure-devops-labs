@@ -69,7 +69,7 @@ EXPECTED OUTPUT:
 - Session expiry time
 
 SCREENSHOT:
-  <img width="1034" height="659" alt="image" src="https://github.com/user-attachments/assets/7355fc86-7d19-40c3-9455-d30adda8155a" />
+<img width="1034" height="659" alt="551277876-7355fc86-7d19-40c3-9455-d30adda8155a" src="https://github.com/user-attachments/assets/a6d7b673-18a2-4a40-a879-443502dfc12b" />
 
 ---
 
