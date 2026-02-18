@@ -80,7 +80,7 @@ ACTION:
 - Display VM name, resource group, and location
 
 COMMAND:
-    `RUN az vm list
+    RUN `az vm list
         FILTER output to:
             VM_Name
             ResourceGroup
@@ -103,16 +103,16 @@ ACTION:
 - Check the current hardware size of the VM
 
 COMMAND:
-    `RUN az vm show
+    RUN `az vm show
         --resource-group KML_RG_MAIN-9642FE6E452040F1
         --name xfusion-vm
         QUERY hardwareProfile.vmSize`
 
 EXPECTED RESULT:
-    Standard_B1s
+    `Standard_B1s`
 
 SCREENSHOT:
-    [Screenshot: VM size before resize]
+   <img width="1028" height="577" alt="image" src="https://github.com/user-attachments/assets/a67aa12e-9d6a-44a2-826a-66287742fb54" />
 
 ---
 
@@ -132,8 +132,8 @@ SYSTEM NOTE:
 - Operation updates VM hardware profile successfully
 
 EXPECTED RESULT:
-- VM size changed to Standard_B2s
-- Provisioning state shows "Succeeded"
+- VM size changed to `Standard_B2s`
+- Provisioning state shows `"Succeeded"`
 
 SCREENSHOT:
     [Screenshot: VM resize command execution]
@@ -172,8 +172,8 @@ COMMAND:
             instanceView.statuses[1].displayStatus`
 
 EXPECTED RESULT:
-    Size  = Standard_B2s
-    State = VM running
+    Size  = `Standard_B2s`
+    State = `VM running`
 
 SCREENSHOT:
     <img width="1031" height="870" alt="image" src="https://github.com/user-attachments/assets/90502930-4c46-4749-9edb-f7f20fc9ef99" />
@@ -201,7 +201,7 @@ after the resize operation, meeting all project requirements.
 
 
 
-<img width="1028" height="577" alt="image" src="https://github.com/user-attachments/assets/a67aa12e-9d6a-44a2-826a-66287742fb54" />
+
 <img width="1037" height="825" alt="image" src="https://github.com/user-attachments/assets/3115eb1a-2257-40d4-a724-86617c7551e7" />
 <img width="1035" height="826" alt="image" src="https://github.com/user-attachments/assets/93424d0b-a961-487a-b292-554a03f0bcb2" />
 <img width="1037" height="829" alt="image" src="https://github.com/user-attachments/assets/9e8c714c-12d8-48e8-a0b5-6c623a16f935" />
