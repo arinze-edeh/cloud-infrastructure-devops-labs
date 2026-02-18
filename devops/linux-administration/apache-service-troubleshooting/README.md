@@ -20,7 +20,7 @@ PORT: `8087`
 
 - `Port 8087` occupied by a conflicting sendmail process (PID 491).
 
-- `Syntax error` detected on line 45 of httpd.conf.
+- `Syntax error` detected on line 45 of `httpd.conf`.
 
 - Access from jump host failed due to firewall settings.
 
@@ -34,11 +34,11 @@ PORT: `8087`
 
 - Fix Apache configuration `syntax errors`.
 
-- Ensure Apache listens on port 8087.
+- Ensure Apache listens on `port 8087`.
 
 - Validate and update firewall configuration.
 
-- Confirm resolution using curl from the jump host.
+- Confirm resolution using `curl` from the jump host.
 
 ## Environment Details
 JUMP HOST: jumphost
@@ -166,6 +166,6 @@ SCREENSHOT:
 - `index.html` untouched
 
 ## Outcome
-- The Apache service was successfully restored on port 8087. The port conflict with PID 491 was resolved, the configuration file was repaired, and network accessibility was enabled via iptables.
+- The Apache service was successfully restored on `port 8087`. The port conflict with PID 491 was resolved, the configuration file was repaired, and network accessibility was enabled via iptables.
 
 
