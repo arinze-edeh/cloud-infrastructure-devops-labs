@@ -1,9 +1,9 @@
 # Azure VM Resize Using Azure CLI
 
-PROJECT TYPE: Azure Compute  
-SERVICE: Virtual Machines  
-OPERATION: VM Resize (SKU Change)  
-REGION: centralus  
+- PROJECT TYPE: `Azure Compute`  
+- SERVICE: `Virtual Machines`  
+- OPERATION: `VM Resize (SKU Change)`  
+- REGION: `centralus`  
 
 ---
 
@@ -12,7 +12,7 @@ REGION: centralus
 - This project demonstrates how to resize an existing Azure Virtual Machine
 using the Azure CLI in order to optimize resource usage.
 
-- A running VM named "xfusion-vm" was identified as underutilized.
+- A running VM named `"xfusion-vm"` was identified as underutilized.
 - The VM was resized from a smaller SKU to a larger SKU while ensuring
 that the VM remains in a running state after the operation.
 
@@ -36,10 +36,10 @@ This task validates hands-on skills in:
 
 ## Azure Scope and Constraints
 
-SUBSCRIPTION: `Azure Free Lab Environment`
-RESOURCE GROUP: `KML_RG_MAIN-9642FE6E452040F1`  
-VIRTUAL MACHINE NAME: `xfusion-vm`  
-LOCATION: `centralus`  
+- SUBSCRIPTION: `Azure Free Lab Environment`
+- RESOURCE GROUP: `KML_RG_MAIN-9642FE6E452040F1`  
+- VIRTUAL MACHINE NAME: `xfusion-vm`  
+- LOCATION: `centralus`  
 
 ---
 
@@ -59,8 +59,8 @@ LOCATION: `centralus`
 ACTION:
 - Display Azure lab credentials
 
-COMMAND (PSEUDO):
-    RUN showcreds
+COMMAND:
+    RUN `showcreds`
 
 EXPECTED OUTPUT:
 - Azure portal URL
@@ -79,7 +79,7 @@ ACTION:
 - List all VMs in the subscription
 - Display VM name, resource group, and location
 
-COMMAND (PSEUDO):
+COMMAND:
     RUN az vm list
         FILTER output to:
             VM_Name
