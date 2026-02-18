@@ -86,13 +86,14 @@ SCREENSHOT:
 
 ## Step 3: Check Apache Service Status
 COMMAND:
-RUN sudo systemctl status httpd
+RUN `sudo systemctl status httpd`
 
 RESULT:
 Service failed to start due to "Address already in use" and syntax errors.
 
 SCREENSHOT:
 [Screenshot: Apache service failed status]
+<img width="1033" height="862" alt="image" src="https://github.com/user-attachments/assets/305eec9d-4f95-4254-a2f1-9db83d63404f" />
 
 ## Step 4: Termination of Conflicting Process
 COMMAND:
@@ -105,8 +106,8 @@ SCREENSHOT:
 
 ## Step 5: Identify and Resolve Port Conflict
 COMMAND:
-RUN sudo netstat -tunlp | grep 8087
-RUN sudo kill -9 491
+RUN `sudo netstat -tunlp | grep 8087`
+RUN `sudo kill -9 491`
 
 RESULT:
 Identified sendmail (PID 491) on port 8087 and terminated the process.
