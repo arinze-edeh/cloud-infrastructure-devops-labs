@@ -9,30 +9,30 @@ SERVICE: `Apache HTTP Server`
 PORT: `8087`
 
 ## Project Overview
-- This project demonstrates troubleshooting an Apache web service that became unreachable on a non-default port (8087).
+- This project demonstrates troubleshooting an Apache web service that became unreachable on a non-default `port (8087)`.
 
 - The monitoring system reported that Apache was not accessible, which was discovered to be caused by a combination of a port conflict with an existing process, a configuration syntax error, and firewall restrictions.
 
 - The issue was diagnosed and resolved by terminating the conflicting process, repairing the configuration file, and updating security rules.
 
 ## Problem Statement
-- Apache service not reachable on port 8087.
+- Apache service not reachable on `port 8087`.
 
-- Port 8087 occupied by a conflicting sendmail process (PID 491).
+- `Port 8087` occupied by a conflicting sendmail process (PID 491).
 
-- Syntax error detected on line 45 of httpd.conf.
+- `Syntax error` detected on line 45 of httpd.conf.
 
 - Access from jump host failed due to firewall settings.
 
-- index.html must not be modified.
+- `index.html` must not be modified.
 
 ## Objectives
 
-- Verify Apache service status and error logs.
+- Verify Apache service status and `error logs`.
 
-- Identify and resolve port conflicts on 8087.
+- Identify and resolve port conflicts on `8087`.
 
-- Fix Apache configuration syntax errors.
+- Fix Apache configuration `syntax errors`.
 
 - Ensure Apache listens on port 8087.
 
@@ -81,7 +81,7 @@ RESULT:
 `Found process sendmail with PID 491 listening on 127.0.0.1:8087.`
 
 SCREENSHOT:
-[Screenshot: Netstat output showing PID 491 using port 8087]
+
 <img width="1029" height="715" alt="image" src="https://github.com/user-attachments/assets/bab783de-b251-46c6-a048-cf0d3f5459ca" />
 
 ## Step 3: Check Apache Service Status
@@ -92,7 +92,7 @@ RESULT:
 Service failed to start due to "Address already in use" and syntax errors.
 
 SCREENSHOT:
-[Screenshot: Apache service failed status]
+
 <img width="1033" height="862" alt="image" src="https://github.com/user-attachments/assets/305eec9d-4f95-4254-a2f1-9db83d63404f" />
 
 ## Step 4: Termination of Conflicting Process
@@ -113,7 +113,7 @@ RESULT:
 Identified sendmail (PID 491) on port 8087 and terminated the process.
 
 SCREENSHOT:
-[Screenshot: Netstat conflict and PID kill]
+
 <img width="1029" height="715" alt="image" src="https://github.com/user-attachments/assets/f25774e2-ad1e-4a07-b77d-f71121ca4a7d" />
 
 
@@ -126,7 +126,7 @@ RESULT:
 `Removed syntax error and confirmed "Syntax OK".`
 
 SCREENSHOT:
-[Screenshot: Terminal output showing Syntax OK]
+
 <img width="1031" height="316" alt="image" src="https://github.com/user-attachments/assets/55832b85-84bb-44bc-af62-5e5a03c13776" />
 
 ## Step 7: Starting and Verifying the Apache Service
@@ -138,7 +138,7 @@ RESULT:
 `Service status changed to active (running).`
 
 SCREENSHOT:
-[Screenshot: Systemctl status showing active running]
+
 <img width="1033" height="868" alt="image" src="https://github.com/user-attachments/assets/e5dfc3f4-a745-47d0-9e60-20af9e0f84ec" />
 
 ## Step 8: Configuring the Firewall for Accessibility
@@ -158,7 +158,7 @@ RESULT:
 `Received the CentOS HTTP Server Test Page HTML content.`
 
 SCREENSHOT:
-[Screenshot: Successful curl output]
+
 <img width="1044" height="879" alt="image" src="https://github.com/user-attachments/assets/3efad4a6-b97c-4916-b246-2d64e32c2501" />
 
 
