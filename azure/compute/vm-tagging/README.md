@@ -8,16 +8,16 @@ TASK:
     using Azure CLI
 
 VM NAME:
-    devops-vm
+    `devops-vm`
 
 TAG APPLIED:
-    Environment=dev
+    `Environment=dev`
 
 SUBSCRIPTION:
-    Azure Free Labs
+    `Azure Free Labs`
 
 REGION:
-    southcentralus
+    `southcentralus`
 
 ---
 
@@ -135,9 +135,12 @@ COMMAND:
       --set tags.Environment=dev
 
 EXPECTED RESULT:
-    - ProvisioningState = Succeeded
-    - Tag added successfully
-    - VM remains running
+    
+- ProvisioningState = Succeeded
+    
+- Tag added successfully
+    
+- VM remains running
 
 SCREENSHOTS: `az vm update success output`
 <img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/f27a2e76-65fa-46bd-b9b2-dd2199327d5b" />
@@ -181,7 +184,7 @@ SCREENSHOT: `VM tags verification output`
 
 ## Final Outcome
 
-The virtual machine "devops-vm"
+The virtual machine `"devops-vm"`
 was successfully tagged using Azure CLI.
 
 Tag Applied:
