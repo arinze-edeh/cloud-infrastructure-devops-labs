@@ -29,9 +29,6 @@ Tagging helps with:
 - Environment identification
 - Cost management
 - Governance and automation
-
-The task was completed without stopping or restarting the VM.
-
 ---
 
 ## Problem Statement
