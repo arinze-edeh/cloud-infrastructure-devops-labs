@@ -136,9 +136,9 @@ ACTION:
     Use AWS CLI to create IAM policy
 
 COMMAND:
-    aws iam create-policy \
-        --policy-name iampolicy_kirsty \
-        --policy-document file://policy.json
+    - `aws iam create-policy \`
+      -  `--policy-name iampolicy_kirsty \`
+      -  `--policy-document file://policy.json`
 
 EXPECTED OUTPUT:
     - PolicyName
