@@ -96,7 +96,7 @@ COMMAND:
 
 EXPECTED RESULT:
 - Azure Free Labs subscription
-- IsDefault = True
+- IsDefault = `True`
 
 SCREENSHOT: `az account list output`
 <img width="1029" height="847" alt="image" src="https://github.com/user-attachments/assets/c4144f14-6073-4529-b12a-d49e7fe87403" />
