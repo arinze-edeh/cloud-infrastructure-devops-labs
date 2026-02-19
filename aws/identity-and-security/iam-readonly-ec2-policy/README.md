@@ -91,25 +91,12 @@ OUTPUT:
     - AWS Password
     - Session expiration time
 
-SCREENSHOT:
-    [Screenshot: showcreds output]
+SCREENSHOT: `showcreds output`
+<img width="1029" height="685" alt="551840440-7a75c81b-dd0c-438b-97b0-7b143515fd8f" src="https://github.com/user-attachments/assets/7606d269-008c-4f0a-9816-05412a6b5988" />
 
 ---
 
-### Step 2: Login Context Confirmation
-
-ACTION:
-    Confirm active AWS region
-
-EXPECTED:
-    us-east-1
-
-SCREENSHOT:
-    [Screenshot: terminal showing active region]
-
----
-
-### Step 3: Create IAM Policy JSON File
+### Step 2: Create IAM Policy JSON File
 
 ACTION:
     Create policy.json file using shell redirection
@@ -138,12 +125,12 @@ EOF
 PURPOSE:
     Define read-only EC2 permissions
 
-SCREENSHOT:
-    [Screenshot: policy.json file contents]
+SCREENSHOT: `policy.json file contents`
+<img width="1034" height="650" alt="image" src="https://github.com/user-attachments/assets/5120b923-cb2b-4a57-85ee-4945fb56c245" />
 
 ---
 
-### Step 4: Create IAM Policy Using AWS CLI
+### Step 3: Create IAM Policy Using AWS CLI
 
 ACTION:
     Use AWS CLI to create IAM policy
@@ -159,12 +146,12 @@ EXPECTED OUTPUT:
     - Policy ARN
     - CreateDate
 
-SCREENSHOT:
-    [Screenshot: create-policy command output]
+SCREENSHOT: `create-policy command output`
+<img width="1032" height="770" alt="image" src="https://github.com/user-attachments/assets/8cb66d29-4ae3-46ab-81fb-b02f271fe667" />
 
 ---
 
-### Step 5: Verify Policy Creation
+### Step 4: Verify Policy Creation
 
 ACTION:
     List local IAM policies and filter by policy name
@@ -178,8 +165,8 @@ COMMAND:
 EXPECTED RESULT:
     `arn:aws:iam::<account-id>:policy/iampolicy_kirsty`
 
-SCREENSHOT:
-    [Screenshot: policy verification output]
+SCREENSHOT: `policy verification output`
+<img width="1033" height="858" alt="image" src="https://github.com/user-attachments/assets/092cc3e3-20f5-49e3-be83-965eaea2cf0e" />
 
 ---
 
@@ -209,9 +196,8 @@ in a real-world DevOps workflow.
 
 
 
-<img width="1029" height="685" alt="551840440-7a75c81b-dd0c-438b-97b0-7b143515fd8f" src="https://github.com/user-attachments/assets/7606d269-008c-4f0a-9816-05412a6b5988" />
 
-<img width="1034" height="650" alt="image" src="https://github.com/user-attachments/assets/5120b923-cb2b-4a57-85ee-4945fb56c245" />
-<img width="1032" height="770" alt="image" src="https://github.com/user-attachments/assets/8cb66d29-4ae3-46ab-81fb-b02f271fe667" />
-<img width="1033" height="858" alt="image" src="https://github.com/user-attachments/assets/092cc3e3-20f5-49e3-be83-965eaea2cf0e" />
+
+
+
 
