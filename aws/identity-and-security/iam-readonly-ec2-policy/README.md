@@ -24,16 +24,16 @@ using the AWS CLI.
 
 - The policy grants **read-only access** to Amazon EC2 resources,
 specifically allowing users to view:
-  -  - EC2 instances
-  -  - AMIs
-  -  - Snapshots
+  -  EC2 instances
+  -  AMIs
+  -  Snapshots
 
 - No write, modify, or delete permissions are included.
 
 - This lab emphasizes:
-  -  - IAM fundamentals
-  -  - Least-privilege access
-  -  - Infrastructure administration via CLI
+  -  IAM fundamentals
+  -  Least-privilege access
+  -  Infrastructure administration via CLI
 
 ---
 
