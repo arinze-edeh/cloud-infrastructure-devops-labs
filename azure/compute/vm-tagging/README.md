@@ -1,11 +1,10 @@
 # Azure VM Tagging Using Azure CLI
 
 PROJECT TYPE:
-    Azure Compute – Virtual Machine Management
+    `Azure Compute – Virtual Machine Management`
 
 TASK:
-    Apply an Environment tag to an existing Azure Virtual Machine
-    using Azure CLI
+    `Apply an Environment tag to an existing Azure Virtual Machine using Azure CLI`
 
 VM NAME:
     `devops-vm`
