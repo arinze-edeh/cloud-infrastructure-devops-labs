@@ -40,9 +40,9 @@ specifically allowing users to view:
 ## Problem Statement
 
 - The DevOps team requires a custom IAM policy that:
-  -  - Allows read-only visibility into EC2 resources
-  -  - Is created programmatically using AWS CLI
-  -  - Exists only in the us-east-1 region
+  -  Allows read-only visibility into EC2 resources
+  -  Is created programmatically using AWS CLI
+  -  Exists only in the us-east-1 region
 
 ---
 
