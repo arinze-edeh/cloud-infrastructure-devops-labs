@@ -70,7 +70,7 @@ The objective was to:
 ### Step 1: Verify Azure Account Context
 
 ACTION:
-    Confirm active Azure subscription and login context
+- Confirm active Azure subscription and login context
 
 COMMAND:
     `az account show`
@@ -89,10 +89,10 @@ SCREENSHOT: `az account show output`
 ### Step 2: List Available Subscriptions
 
 ACTION:
-    Verify correct subscription is set as default
+- Verify correct subscription is set as default
 
 COMMAND:
-    `az account list --output table`
+- `az account list --output table`
 
 EXPECTED RESULT:
 - Azure Free Labs subscription
@@ -182,10 +182,10 @@ SCREENSHOT: `VM tags verification output`
 
 - The virtual machine `"devops-vm"` was successfully tagged using Azure CLI.
 
-Tag Applied:
+- Tag Applied:
     `Environment=dev`
 
-This ensures improved governance, resource visibility, and alignment with DevOps best practices.
+- This ensures improved governance, resource visibility, and alignment with DevOps best practices.
 
 
 
