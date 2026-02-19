@@ -102,10 +102,10 @@ ACTION:
     Create policy.json file using shell redirection
 
 COMMAND:
-    cat <<EOF > policy.json
+-    `cat <<EOF > policy.json`
 
 POLICY CONTENT:
-{
+ `{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -118,9 +118,9 @@ POLICY CONTENT:
             "Resource": "*"
         }
     ]
-}
+ }
 
-EOF
+ EOF
 
 PURPOSE:
     Define read-only EC2 permissions
@@ -177,7 +177,7 @@ SCREENSHOT: `policy verification output`
 - Correct policy name applied
 - Read-only EC2 permissions confirmed
 - Policy visible in IAM policy list
-- Region set to us-east-1
+- Region set to `us-east-1`
 
 ---
 
