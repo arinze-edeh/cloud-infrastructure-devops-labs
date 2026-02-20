@@ -172,10 +172,10 @@ SCREENSHOT: `iptables rules saved`
 ### Step 10: Repeat on All Application Servers
 
 - ACTION:
-    Repeat Steps 1–9 on:
-        - stapp01
-        - stapp02
-        - stapp03
+  -  Repeat Steps 1–9 on:
+      -  stapp01
+      -  stapp02
+      -  stapp03
 
 SCREENSHOT: `firewall applied on all app servers`
 
