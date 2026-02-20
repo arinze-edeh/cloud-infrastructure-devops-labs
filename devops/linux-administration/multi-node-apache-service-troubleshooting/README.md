@@ -72,7 +72,7 @@ Exit code due to socket binding failure
 `sudo systemctl start httpd`
 
 📸 Screenshot: `httpd started successfully`
-
+<img width="1035" height="485" alt="image" src="https://github.com/user-attachments/assets/1d05e776-0e5a-4e46-a7ba-90005b14bd6d" />
 
 ## 3. Validate Port Binding
 `sudo ss -tulnp | grep :8086`
@@ -136,7 +136,7 @@ configuration consistency:
 
 
 
-<img width="1035" height="485" alt="image" src="https://github.com/user-attachments/assets/1d05e776-0e5a-4e46-a7ba-90005b14bd6d" />
+
 <img width="1035" height="528" alt="image" src="https://github.com/user-attachments/assets/fe25907f-faa1-4a43-b83b-6669ee6a4246" />
 <img width="1034" height="403" alt="image" src="https://github.com/user-attachments/assets/2bda11df-b624-4009-84af-2276752951b0" />
 <img width="1036" height="659" alt="image" src="https://github.com/user-attachments/assets/ae7cbf40-79a3-4d75-98fe-59a9efe2fb96" />
