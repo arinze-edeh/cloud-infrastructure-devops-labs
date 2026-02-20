@@ -25,11 +25,11 @@ Servers configured:
 
 ## Security Requirement
 
-CURRENT STATE:
+- CURRENT STATE:
     - Application port 5001 was publicly accessible
     - No firewall rules were enforced
 
-TARGET STATE:
+- TARGET STATE:
     - Port 5001 accessible ONLY from LBR host (172.16.238.14)
     - All other incoming traffic to port 5001 blocked
     - SSH access (port 22) preserved
@@ -53,11 +53,11 @@ TARGET STATE:
 
 ### Step 1: Access Application Server
 
-ACTION:
-    Connect to application server via jump host
+- ACTION:
+  -  Connect to application server via jump host
 
-COMMAND:
-    ssh <user>@<stapp-server>
+- COMMAND:
+  -  `ssh <user>@<stapp-server>`
 
 SCREENSHOT: `SSH login to application server`
 
@@ -65,11 +65,11 @@ SCREENSHOT: `SSH login to application server`
 
 ### Step 2: Switch to Root User
 
-ACTION:
+- ACTION:
     Gain administrative privileges
 
-COMMAND:
-    sudo -i
+- COMMAND:
+   - `sudo -i`
 
 SCREENSHOT: `sudo root access`
 
@@ -77,14 +77,14 @@ SCREENSHOT: `sudo root access`
 
 ### Step 3: Install iptables Services
 
-ACTION:
-    Install iptables persistence service
+- ACTION:
+  -  Install iptables persistence service
 
-COMMAND:
-    yum install iptables-services -y
+- COMMAND:
+  -  `yum install iptables-services -y`
 
-EXPECTED RESULT:
-    iptables-services package installed successfully
+- EXPECTED RESULT:
+  -  iptables-services package installed successfully
 
 SCREENSHOT: `iptables-services installation`
 
