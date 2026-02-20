@@ -183,17 +183,17 @@ SCREENSHOT: `firewall applied on all app servers`
 
 ## Validation
 
-TEST CASE 1:
-    From LBR host:
-        Access port 5001 → SUCCESS
+- TEST CASE 1:
+  -  From LBR host:
+        `Access port 5001 → SUCCESS`
 
-TEST CASE 2:
-    From any other host:
-        Access port 5001 → BLOCKED
+- TEST CASE 2:
+  -  From any other host:
+        `Access port 5001 → BLOCKED`
 
-TEST CASE 3:
-    Reboot server:
-        Firewall rules persist → SUCCESS
+- TEST CASE 3:
+  -  Reboot server:
+        `Firewall rules persist → SUCCESS`
 
 SCREENSHOT:
     [Screenshot: LBR access successful]
