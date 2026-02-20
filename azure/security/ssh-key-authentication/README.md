@@ -1,16 +1,126 @@
-# Azure VM SSH Key Authentication (Root Access)
+# Secure Password-less Root SSH Access on Azure VM (devops-vm)
 
-## Project Overview
-This project configures secure, password-less SSH access to an Azure Virtual Machine
-by adding the root user's public SSH key from the Azure client host to the VM.
+## 📌 Project Overview
 
----
+## OBJECTIVE:
+- Provision secure, password-less root SSH access to an Azure Linux VM
+using asymmetric cryptography, while preserving Azure default security
+controls and least-privilege access patterns.
 
-## VM Details
-VM Name: datacenter-vm
-Region: centralus
-Default SSH User: azureuser
-Target User: root
+## Environment:
+
+- Cloud Provider: `Azure`
+
+- Region: `southcentralus`
+
+- VM Name: `devops-vm`
+
+- OS: `Ubuntu 22.04 LTS`
+
+- Default Admin User: `azureuser`
+
+## Design Rationale
+
+### RATIONALE:
+- Root login via SSH passwords is insecure and disabled by default
+- SSH key-based authentication provides cryptographic identity assurance
+- Azure images restrict root SSH by default; configuration must be explicit
+- All changes must be auditable, reversible, and production-safe
+
+### Implementation ensures:
+
+- Key-based authentication only
+
+- Azure admin access preserved
+
+- CIS & cloud security best practices followed
+
+### 🧩 System Flow
+[ Azure Client / Landing Host ]
+  └── root
+      └── /root/.ssh/id_rsa.pub   → source of trust
+
+[ Azure VM: devops-vm ]
+  └── root
+      └── /root/.ssh/authorized_keys  ← trust anchor
+
+## Step 1 — Validate Root SSH Public Key (Landing Host)
+- `cat /root/.ssh/id_rsa.pub`
+
+📸 Screenshot: `root public key verified`
+
+## Step 2 — Define Target VM Endpoint
+`VM_IP="20.97.7.111"`
+
+📸 Screenshot: `vm ip defined`
+
+## Step 3 — Enforce Private Key Security
+`chmod 600 /root/.ssh/id_rsa`
+
+📸 Screenshot:`private key permissions`
+
+## Step 4 — Provision Root SSH Trust on VM
+`cat /root/.ssh/id_rsa.pub | ssh azureuser@$VM_IP \
+"sudo mkdir -p /root/.ssh && \
+sudo tee -a /root/.ssh/authorized_keys > /dev/null && \
+sudo chown -R root:root /root/.ssh && \
+sudo chmod 700 /root/.ssh && \
+sudo chmod 600 /root/.ssh/authorized_keys"`
+
+📸 Screenshot: `authorized_keys created`
+
+## Step 5 — Configure SSH Daemon (Key-Based Root Access Only)
+`ssh azureuser@$VM_IP \
+"sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin prohibit-password/' /etc/ssh/sshd_config && \
+sudo systemctl restart ssh"`
+
+📸 Screenshot Placeholder: `sshd root policy`
+
+## Step 6 — Normalize authorized_keys
+`ssh azureuser@$VM_IP \
+"sudo sed -i 's/.*ssh-rsa/ssh-rsa/' /root/.ssh/authorized_keys"`
+
+📸 Screenshot: `authorized_keys sanitized`
+
+## Step 7 — Enforce SSH Policy Consistency
+`ssh azureuser@$VM_IP \
+"echo 'PermitRootLogin prohibit-password' | sudo tee -a /etc/ssh/sshd_config && \
+sudo systemctl restart ssh"`
+
+📸 Screenshot: `policy enforced`
+
+## Step 8 — Verify Password-less Root SSH Access
+`ssh -i /root/.ssh/id_rsa root@20.97.7.111`
+
+- Expected Result:
+
+`root@devops-vm:~#`
+
+📸 Screenshot:`root ssh success`
+
+## Validation Checklist
+
+- Root public key installed correctly
+- Strict permissions enforced (700 / 600)
+- SSH daemon hardened
+- Password authentication disabled
+- Root SSH access verified cryptographically
+
+## Security Posture
+
+- No plaintext credentials used
+- No password-based root access
+- No permanent privilege escalation
+- Fully auditable changes
+- Cloud-provider defaults respected
+
+## SRE Signal
+
+- Demonstrates secure access control design
+- Highlights SSH key management and troubleshooting
+- Shows cloud image security constraints
+- Illustrates production-grade operational hygiene
+- Suitable for portfolio submission for SRE/DevOps roles
 
 
 
