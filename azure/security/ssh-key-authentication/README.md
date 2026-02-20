@@ -60,41 +60,42 @@ controls and least-privilege access patterns.
 📸 Screenshot:`private key permissions`
 
 ## Step 4: Provision Root SSH Trust on VM
-`cat /root/.ssh/id_rsa.pub | ssh azureuser@$VM_IP \
-"sudo mkdir -p /root/.ssh && \
-sudo tee -a /root/.ssh/authorized_keys > /dev/null && \
-sudo chown -R root:root /root/.ssh && \
-sudo chmod 700 /root/.ssh && \
-sudo chmod 600 /root/.ssh/authorized_keys"`
+
+- `cat /root/.ssh/id_rsa.pub | ssh azureuser@$VM_IP \`
+- `"sudo mkdir -p /root/.ssh && \`
+- `sudo tee -a /root/.ssh/authorized_keys > /dev/null && \`
+- `sudo chown -R root:root /root/.ssh && \`
+- `sudo chmod 700 /root/.ssh && \`
+- `sudo chmod 600 /root/.ssh/authorized_keys"`
 
 📸 Screenshot: `authorized_keys created`
 
 ## Step 5: Configure SSH Daemon (Key-Based Root Access Only)
-`ssh azureuser@$VM_IP \
-"sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin prohibit-password/' /etc/ssh/sshd_config && \
-sudo systemctl restart ssh"`
+- `ssh azureuser@$VM_IP \`
+- `"sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin prohibit-password/' /etc/ssh/sshd_config && \`
+- `sudo systemctl restart ssh"`
 
 📸 Screenshot: `sshd root policy`
 
 ## Step 6: Normalize authorized_keys
-`ssh azureuser@$VM_IP \
-"sudo sed -i 's/.*ssh-rsa/ssh-rsa/' /root/.ssh/authorized_keys"`
+- `ssh azureuser@$VM_IP \`
+- `"sudo sed -i 's/.*ssh-rsa/ssh-rsa/' /root/.ssh/authorized_keys"`
 
 📸 Screenshot: `authorized_keys sanitized`
 
 ## Step 7 — Enforce SSH Policy Consistency
-`ssh azureuser@$VM_IP \
-"echo 'PermitRootLogin prohibit-password' | sudo tee -a /etc/ssh/sshd_config && \
-sudo systemctl restart ssh"`
+- `ssh azureuser@$VM_IP \`
+- `"echo 'PermitRootLogin prohibit-password' | sudo tee -a /etc/ssh/sshd_config && \`
+- `sudo systemctl restart ssh"`
 
 📸 Screenshot: `policy enforced`
 
 ## Step 8: Verify Password-less Root SSH Access
-`ssh -i /root/.ssh/id_rsa root@20.97.7.111`
+- `ssh -i /root/.ssh/id_rsa root@20.97.7.111`
 
 - Expected Result:
 
-`root@devops-vm:~#`
+- `root@devops-vm:~#`
 
 📸 Screenshot:`root ssh success`
 
