@@ -36,13 +36,13 @@ controls and least-privilege access patterns.
 - CIS & cloud security best practices followed
 
 ### 🧩 System Flow
-[ Azure Client / Landing Host ]
-  └── root
-      └── /root/.ssh/id_rsa.pub   → source of trust
+- [ Azure Client / Landing Host ]
+-  └── root
+-      └── /root/.ssh/id_rsa.pub   → source of trust
 
-[ Azure VM: devops-vm ]
-  └── root
-      └── /root/.ssh/authorized_keys  ← trust anchor
+- [ Azure VM: devops-vm ]
+-  └── root
+-      └── /root/.ssh/authorized_keys  ← trust anchor
 
 ## Step 1 — Validate Root SSH Public Key (Landing Host)
 - `cat /root/.ssh/id_rsa.pub`
