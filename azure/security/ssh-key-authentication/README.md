@@ -48,16 +48,19 @@ controls and least-privilege access patterns.
 - `cat /root/.ssh/id_rsa.pub`
 
 📸 Screenshot: `root public key verified`
+<img width="1035" height="331" alt="image" src="https://github.com/user-attachments/assets/6e24d391-fe6d-4aba-aba1-67858d6fa784" />
 
 ## Step 2: Define Target VM Endpoint
 `VM_IP="20.97.7.111"`
 
 📸 Screenshot: `vm ip defined`
+<img width="1033" height="597" alt="image" src="https://github.com/user-attachments/assets/8ec98848-2d99-4418-b5f4-e38a48cf89b5" />
 
 ## Step 3: Enforce Private Key Security
 `chmod 600 /root/.ssh/id_rsa`
 
 📸 Screenshot:`private key permissions`
+<img width="1031" height="585" alt="image" src="https://github.com/user-attachments/assets/ded7f036-41d6-4dae-99ba-ccb99a2d9acc" />
 
 ## Step 4: Provision Root SSH Trust on VM
 
@@ -69,6 +72,7 @@ controls and least-privilege access patterns.
 - `sudo chmod 600 /root/.ssh/authorized_keys"`
 
 📸 Screenshot: `authorized_keys created`
+<img width="1031" height="585" alt="image" src="https://github.com/user-attachments/assets/ded7f036-41d6-4dae-99ba-ccb99a2d9acc" />
 
 ## Step 5: Configure SSH Daemon (Key-Based Root Access Only)
 - `ssh azureuser@$VM_IP \`
@@ -76,12 +80,14 @@ controls and least-privilege access patterns.
 - `sudo systemctl restart ssh"`
 
 📸 Screenshot: `sshd root policy`
+<img width="1034" height="728" alt="image" src="https://github.com/user-attachments/assets/304367d3-6df4-4367-9004-c8c65f0b5280" />
 
 ## Step 6: Normalize authorized_keys
 - `ssh azureuser@$VM_IP \`
 - `"sudo sed -i 's/.*ssh-rsa/ssh-rsa/' /root/.ssh/authorized_keys"`
 
 📸 Screenshot: `authorized_keys sanitized`
+<img width="1031" height="786" alt="image" src="https://github.com/user-attachments/assets/b2f23a73-6abb-400d-b5f9-5c1469cb8db3" />
 
 ## Step 7 — Enforce SSH Policy Consistency
 - `ssh azureuser@$VM_IP \`
@@ -129,11 +135,11 @@ controls and least-privilege access patterns.
 
 
 
-<img width="1035" height="331" alt="image" src="https://github.com/user-attachments/assets/6e24d391-fe6d-4aba-aba1-67858d6fa784" />
-<img width="1033" height="597" alt="image" src="https://github.com/user-attachments/assets/8ec98848-2d99-4418-b5f4-e38a48cf89b5" />
-<img width="1031" height="585" alt="image" src="https://github.com/user-attachments/assets/ded7f036-41d6-4dae-99ba-ccb99a2d9acc" />
-<img width="1034" height="728" alt="image" src="https://github.com/user-attachments/assets/304367d3-6df4-4367-9004-c8c65f0b5280" />
-<img width="1031" height="786" alt="image" src="https://github.com/user-attachments/assets/b2f23a73-6abb-400d-b5f9-5c1469cb8db3" />
+
+
+
+
+
 <img width="1034" height="860" alt="image" src="https://github.com/user-attachments/assets/ab1c99b6-6fa7-44cb-bc02-3c21ca651a94" />
 
 
