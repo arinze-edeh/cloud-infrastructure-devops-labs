@@ -1,5 +1,6 @@
 # AWS Cloud Labs
 
+<img width="1749" height="655" alt="image" src="https://github.com/user-attachments/assets/20e0eff2-9a66-446d-aaa6-608111bb1dd3" />
 
 
 ~ on ☁️  (us-east-1) ➜  aws sts get-caller-identity
