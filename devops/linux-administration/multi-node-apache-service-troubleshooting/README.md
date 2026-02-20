@@ -65,13 +65,13 @@ Exit code due to socket binding failure
 ## 1. Stop Conflicting Service
 `sudo systemctl stop sendmail`
 
-📸 Screenshot: sendmail stopped
-
+📸 Screenshot: `sendmail stopped`
+<img width="1033" height="412" alt="image" src="https://github.com/user-attachments/assets/0c023d6f-1e3c-44c3-9089-f3afe1f2c3a0" />
 
 ## 2. Restore Apache Service
 `sudo systemctl start httpd`
 
-📸 Screenshot: httpd started successfully
+📸 Screenshot: `httpd started successfully`
 
 
 ## 3. Validate Port Binding
@@ -135,7 +135,7 @@ configuration consistency:
 <img width="805" height="830" alt="image" src="https://github.com/user-attachments/assets/9465cb53-f146-4931-a77a-f4416a3b2d86" />
 
 
-<img width="1033" height="412" alt="image" src="https://github.com/user-attachments/assets/0c023d6f-1e3c-44c3-9089-f3afe1f2c3a0" />
+
 <img width="1035" height="485" alt="image" src="https://github.com/user-attachments/assets/1d05e776-0e5a-4e46-a7ba-90005b14bd6d" />
 <img width="1035" height="528" alt="image" src="https://github.com/user-attachments/assets/fe25907f-faa1-4a43-b83b-6669ee6a4246" />
 <img width="1034" height="403" alt="image" src="https://github.com/user-attachments/assets/2bda11df-b624-4009-84af-2276752951b0" />
