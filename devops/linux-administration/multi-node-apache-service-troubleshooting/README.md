@@ -49,6 +49,7 @@ status during startup.
 Exit code due to socket binding failure
 
 📸 Screenshot: `httpd failed service status`
+<img width="1033" height="824" alt="image" src="https://github.com/user-attachments/assets/464c0840-06ba-4115-ba60-66af0bf9bfa2" />
 
 `sudo ss -tulnp | grep :8086`
 
@@ -65,7 +66,7 @@ Exit code due to socket binding failure
 `sudo systemctl stop sendmail`
 
 📸 Screenshot: sendmail stopped
-<img width="1033" height="824" alt="image" src="https://github.com/user-attachments/assets/464c0840-06ba-4115-ba60-66af0bf9bfa2" />
+
 
 ## 2. Restore Apache Service
 `sudo systemctl start httpd`
