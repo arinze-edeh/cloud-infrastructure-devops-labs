@@ -82,24 +82,29 @@ Exit code due to socket binding failure
 Apache successfully listening on required port
 
 📸 Screenshot: `httpd bound to port 8086`
-
+<img width="1035" height="528" alt="image" src="https://github.com/user-attachments/assets/fe25907f-faa1-4a43-b83b-6669ee6a4246" />
 
 ## 4. Enforce Persistence
 `sudo systemctl enable httpd`
 
 📸 Screenshot: `httpd enabled at boot`
-
+<img width="1035" height="528" alt="image" src="https://github.com/user-attachments/assets/fe25907f-faa1-4a43-b83b-6669ee6a4246" />
 
 ## 5. Cross-Node Validation
 
 - The following checks were performed on all application servers to ensure
 configuration consistency:
 
-`sudo ss -tulnp | grep :8086`
-`sudo systemctl status httpd`
-`sudo systemctl enable httpd`
+- `sudo ss -tulnp | grep :8086`
+- `sudo systemctl status httpd`
+- `sudo systemctl enable httpd`
 
-📸 Screenshot: `Apache running and enabled on all nodes`
+📸 Screenshots: `Apache running and enabled on all nodes`
+<img width="1034" height="403" alt="image" src="https://github.com/user-attachments/assets/2bda11df-b624-4009-84af-2276752951b0" />
+<img width="1036" height="659" alt="image" src="https://github.com/user-attachments/assets/ae7cbf40-79a3-4d75-98fe-59a9efe2fb96" />
+<img width="1030" height="404" alt="image" src="https://github.com/user-attachments/assets/6a7f53c9-36f9-4796-85f6-0258cc754285" />
+<img width="1030" height="383" alt="image" src="https://github.com/user-attachments/assets/ee6783e7-1902-485e-925d-17f1a1626530" />
+
 <img width="1038" height="267" alt="image" src="https://github.com/user-attachments/assets/c40573c4-db2c-4afc-81a1-f022ef4e76c0" />
 
 
@@ -128,23 +133,3 @@ configuration consistency:
 - Multi-node consistency validation
 
 - Production reliability mindset
-
-
-
-
-<img width="805" height="830" alt="image" src="https://github.com/user-attachments/assets/9465cb53-f146-4931-a77a-f4416a3b2d86" />
-
-
-
-
-<img width="1035" height="528" alt="image" src="https://github.com/user-attachments/assets/fe25907f-faa1-4a43-b83b-6669ee6a4246" />
-<img width="1034" height="403" alt="image" src="https://github.com/user-attachments/assets/2bda11df-b624-4009-84af-2276752951b0" />
-<img width="1036" height="659" alt="image" src="https://github.com/user-attachments/assets/ae7cbf40-79a3-4d75-98fe-59a9efe2fb96" />
-<img width="1030" height="404" alt="image" src="https://github.com/user-attachments/assets/6a7f53c9-36f9-4796-85f6-0258cc754285" />
-<img width="1030" height="383" alt="image" src="https://github.com/user-attachments/assets/ee6783e7-1902-485e-925d-17f1a1626530" />
-
-
-
-
-
-
