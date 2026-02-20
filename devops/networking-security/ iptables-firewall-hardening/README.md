@@ -8,18 +8,18 @@
 
 ## Project Overview
 
-This project secures application servers by configuring host-based firewall rules using iptables.
+- This project secures application servers by configuring host-based firewall rules using iptables.
 
-The objective was to:
-    - Install and enable iptables on all application servers
-    - Restrict access to application port 5001
-    - Allow traffic only from the LBR host
-    - Persist firewall rules across reboots
+- The objective was to:
+  -  Install and enable iptables on all application servers
+  -  Restrict access to application port 5001
+  -  Allow traffic only from the LBR host
+  -  Persist firewall rules across reboots
 
-Servers configured:
-    - stapp01
-    - stapp02
-    - stapp03
+- Servers configured:
+  -  stapp01
+  -  stapp02
+  -  stapp03
 
 ---
 
