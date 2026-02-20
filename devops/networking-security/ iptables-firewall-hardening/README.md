@@ -1,9 +1,5 @@
 # iptables Firewall Configuration for Application Servers
 
-## ENVIRONMENT:
-  -  Nautilus Infrastructure
-  -  Stratos Datacenter
-
 ---
 
 ## Project Overview
