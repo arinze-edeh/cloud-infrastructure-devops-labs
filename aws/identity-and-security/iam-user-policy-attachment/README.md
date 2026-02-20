@@ -3,7 +3,7 @@
 ## 📌 Project Overview
 
 - This project demonstrates how to securely attach an existing AWS IAM policy to an existing IAM user using the AWS CLI.
-- The task validates identity, locates the policy, attaches it to the user, and verifies successful attachment — following IAM best practices.
+- The task validates identity, locates the policy, attaches it to the user, and verifies successful attachment, following IAM best practices.
 
 - All actions were executed exclusively in the `us-east-1` region.
 
