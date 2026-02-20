@@ -197,29 +197,6 @@ SCREENSHOTS: `firewall applied on all app servers`
 <img width="1033" height="600" alt="image" src="https://github.com/user-attachments/assets/c746837e-10cc-44d9-9c05-f4614bb58ba0" />
 <img width="1034" height="690" alt="image" src="https://github.com/user-attachments/assets/d5123376-a85c-4d7f-b938-81888e2539b9" />
 
-
-
-
----
-
-## Validation
-
-- TEST CASE 1:
-  -  From LBR host:
-        `Access port 5001 → SUCCESS`
-
-- TEST CASE 2:
-  -  From any other host:
-        `Access port 5001 → BLOCKED`
-
-- TEST CASE 3:
-  -  Reboot server:
-        `Firewall rules persist → SUCCESS`
-
-SCREENSHOTS:
-     `[LBR access successful]`
-    `[non-LBR access blocked]`
-
 ---
 
 ## Final Outcome
