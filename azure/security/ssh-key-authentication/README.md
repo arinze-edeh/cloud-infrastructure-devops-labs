@@ -89,12 +89,13 @@ controls and least-privilege access patterns.
 📸 Screenshot: `authorized_keys sanitized`
 <img width="1031" height="786" alt="image" src="https://github.com/user-attachments/assets/b2f23a73-6abb-400d-b5f9-5c1469cb8db3" />
 
-## Step 7 — Enforce SSH Policy Consistency
+## Step 7: Enforce SSH Policy Consistency
 - `ssh azureuser@$VM_IP \`
 - `"echo 'PermitRootLogin prohibit-password' | sudo tee -a /etc/ssh/sshd_config && \`
 - `sudo systemctl restart ssh"`
 
 📸 Screenshot: `policy enforced`
+<img width="1031" height="786" alt="image" src="https://github.com/user-attachments/assets/b2f23a73-6abb-400d-b5f9-5c1469cb8db3" />
 
 ## Step 8: Verify Password-less Root SSH Access
 - `ssh -i /root/.ssh/id_rsa root@20.97.7.111`
@@ -104,6 +105,7 @@ controls and least-privilege access patterns.
 - `root@devops-vm:~#`
 
 📸 Screenshot:`root ssh success`
+<img width="1034" height="860" alt="image" src="https://github.com/user-attachments/assets/ab1c99b6-6fa7-44cb-bc02-3c21ca651a94" />
 
 ## Validation Checklist
 
@@ -128,24 +130,3 @@ controls and least-privilege access patterns.
 - Shows cloud image security constraints
 - Illustrates production-grade operational hygiene
 - Suitable for portfolio submission for SRE/DevOps roles
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1034" height="860" alt="image" src="https://github.com/user-attachments/assets/ab1c99b6-6fa7-44cb-bc02-3c21ca651a94" />
-
-
-
-
-
-
-
-
