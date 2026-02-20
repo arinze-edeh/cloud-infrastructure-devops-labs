@@ -195,9 +195,9 @@ SCREENSHOT: `firewall applied on all app servers`
   -  Reboot server:
         `Firewall rules persist → SUCCESS`
 
-SCREENSHOT:
-    [Screenshot: LBR access successful]
-    [Screenshot: non-LBR access blocked]
+SCREENSHOTS:
+     `[LBR access successful]`
+    `[non-LBR access blocked]`
 
 ---
 
