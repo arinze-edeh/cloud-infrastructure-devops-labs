@@ -58,7 +58,7 @@ Exit code due to socket binding failure
 `Port 8086 occupied by sendmail`
 
 📸 Screenshot: `sendmail listening on port 8086`
-
+<img width="1027" height="579" alt="image" src="https://github.com/user-attachments/assets/d47fea25-7236-4572-931a-2634fc474d60" />
 
 ## Remediation Steps
 
@@ -133,7 +133,8 @@ configuration consistency:
 
 
 <img width="805" height="830" alt="image" src="https://github.com/user-attachments/assets/9465cb53-f146-4931-a77a-f4416a3b2d86" />
-<img width="1027" height="579" alt="image" src="https://github.com/user-attachments/assets/d47fea25-7236-4572-931a-2634fc474d60" />
+
+
 <img width="1033" height="412" alt="image" src="https://github.com/user-attachments/assets/0c023d6f-1e3c-44c3-9089-f3afe1f2c3a0" />
 <img width="1035" height="485" alt="image" src="https://github.com/user-attachments/assets/1d05e776-0e5a-4e46-a7ba-90005b14bd6d" />
 <img width="1035" height="528" alt="image" src="https://github.com/user-attachments/assets/fe25907f-faa1-4a43-b83b-6669ee6a4246" />
