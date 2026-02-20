@@ -1,18 +1,14 @@
 # iptables Firewall Configuration for Application Servers
 
-PROJECT CATEGORY:
-    DevOps → Linux Administration → Networking & Security
-
-ENVIRONMENT:
-    Nautilus Infrastructure
-    Stratos Datacenter
+## ENVIRONMENT:
+  -  Nautilus Infrastructure
+  -  Stratos Datacenter
 
 ---
 
 ## Project Overview
 
-This project secures application servers by configuring
-host-based firewall rules using iptables.
+This project secures application servers by configuring host-based firewall rules using iptables.
 
 The objective was to:
     - Install and enable iptables on all application servers
@@ -63,8 +59,7 @@ ACTION:
 COMMAND:
     ssh <user>@<stapp-server>
 
-SCREENSHOT:
-    [Screenshot: SSH login to application server]
+SCREENSHOT: `SSH login to application server`
 
 ---
 
@@ -76,8 +71,7 @@ ACTION:
 COMMAND:
     sudo -i
 
-SCREENSHOT:
-    [Screenshot: sudo root access]
+SCREENSHOT: `sudo root access`
 
 ---
 
@@ -92,106 +86,98 @@ COMMAND:
 EXPECTED RESULT:
     iptables-services package installed successfully
 
-SCREENSHOT:
-    [Screenshot: iptables-services installation]
+SCREENSHOT: `iptables-services installation`
 
 ---
 
 ### Step 4: Enable and Start iptables Service
 
-ACTION:
-    Ensure iptables starts automatically on boot
+- ACTION:
+  -  Ensure iptables starts automatically on boot
 
-COMMAND:
-    systemctl enable iptables
-    systemctl start iptables
+- COMMAND:
+  -  `systemctl enable iptables`
+  -  `systemctl start iptables`
 
-SCREENSHOT:
-    [Screenshot: iptables service enabled and started]
+SCREENSHOT: `iptables service enabled and started`
 
 ---
 
 ### Step 5: Flush Existing Firewall Rules
 
-ACTION:
-    Clear any pre-existing firewall rules
+- ACTION:
+  -  Clear any pre-existing firewall rules
 
-COMMAND:
-    iptables -F
+- COMMAND:
+  -  `iptables -F`
 
-SCREENSHOT:
-    [Screenshot: iptables rules flushed]
+SCREENSHOT: `iptables rules flushed`
 
 ---
 
 ### Step 6: Allow SSH Access
 
-ACTION:
-    Ensure SSH access is not interrupted
+- ACTION:
+    `Ensure SSH access is not interrupted`
 
-COMMAND:
-    iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+- COMMAND:
+  -  `iptables -A INPUT -p tcp --dport 22 -j ACCEPT`
 
-SCREENSHOT:
-    [Screenshot: SSH allow rule added]
+SCREENSHOT: `SSH allow rule added`
 
 ---
 
 ### Step 7: Allow LBR Host to Access Application Port
 
-ACTION:
-    Permit application traffic from Load Balancer host only
+- ACTION:
+  -  Permit application traffic from Load Balancer host only
 
-LBR IP:
-    172.16.238.14
+- LBR IP:
+    `172.16.238.14`
 
-COMMAND:
-    iptables -A INPUT -p tcp -s 172.16.238.14 --dport 5001 -j ACCEPT
+- COMMAND:
+  -  `iptables -A INPUT -p tcp -s 172.16.238.14 --dport 5001 -j ACCEPT`
 
-SCREENSHOT:
-    [Screenshot: LBR allow rule for port 5001]
+SCREENSHOT: `LBR allow rule for port 5001`
 
 ---
 
 ### Step 8: Block All Other Access to Application Port
 
-ACTION:
-    Deny application port access from all other sources
+- ACTION:
+  -  Deny application port access from all other sources
 
-COMMAND:
-    iptables -A INPUT -p tcp --dport 5001 -j DROP
+- COMMAND:
+  -  `iptables -A INPUT -p tcp --dport 5001 -j DROP`
 
-SCREENSHOT:
-    [Screenshot: DROP rule for port 5001]
+SCREENSHOT: `DROP rule for port 5001`
 
 ---
 
 ### Step 9: Save Firewall Rules
 
-ACTION:
-    Persist firewall rules across system reboots
+- ACTION:
+  -  Persist firewall rules across system reboots
 
-COMMAND:
-    service iptables save
+- COMMAND:
+  -  service iptables save
 
-EXPECTED RESULT:
-    Rules saved to /etc/sysconfig/iptables
+- EXPECTED RESULT:
+  -  Rules saved to `/etc/sysconfig/iptables`
 
-SCREENSHOT:
-    [Screenshot: iptables rules saved]
+SCREENSHOT: `iptables rules saved`
 
 ---
 
 ### Step 10: Repeat on All Application Servers
 
-ACTION:
+- ACTION:
     Repeat Steps 1–9 on:
         - stapp01
         - stapp02
         - stapp03
 
-SCREENSHOT:
-    [Screenshot: firewall applied on all app servers]
+SCREENSHOT: `firewall applied on all app servers`
 
 ---
 
@@ -222,7 +208,3 @@ SCREENSHOT:
 - SSH access maintained
 - Firewall rules persisted across reboots
 - Infrastructure security posture improved
-
-
-
-
