@@ -65,7 +65,7 @@ Exit code due to socket binding failure
 `sudo systemctl stop sendmail`
 
 📸 Screenshot: sendmail stopped
-
+<img width="1033" height="824" alt="image" src="https://github.com/user-attachments/assets/464c0840-06ba-4115-ba60-66af0bf9bfa2" />
 
 ## 2. Restore Apache Service
 `sudo systemctl start httpd`
@@ -99,7 +99,7 @@ configuration consistency:
 `sudo systemctl enable httpd`
 
 📸 Screenshot: `Apache running and enabled on all nodes`
-
+<img width="1038" height="267" alt="image" src="https://github.com/user-attachments/assets/c40573c4-db2c-4afc-81a1-f022ef4e76c0" />
 
 
 ## Post-Incident State
@@ -130,7 +130,7 @@ configuration consistency:
 
 
 
-<img width="1033" height="824" alt="image" src="https://github.com/user-attachments/assets/464c0840-06ba-4115-ba60-66af0bf9bfa2" />
+
 <img width="805" height="830" alt="image" src="https://github.com/user-attachments/assets/9465cb53-f146-4931-a77a-f4416a3b2d86" />
 <img width="1027" height="579" alt="image" src="https://github.com/user-attachments/assets/d47fea25-7236-4572-931a-2634fc474d60" />
 <img width="1033" height="412" alt="image" src="https://github.com/user-attachments/assets/0c023d6f-1e3c-44c3-9089-f3afe1f2c3a0" />
@@ -140,7 +140,7 @@ configuration consistency:
 <img width="1036" height="659" alt="image" src="https://github.com/user-attachments/assets/ae7cbf40-79a3-4d75-98fe-59a9efe2fb96" />
 <img width="1030" height="404" alt="image" src="https://github.com/user-attachments/assets/6a7f53c9-36f9-4796-85f6-0258cc754285" />
 <img width="1030" height="383" alt="image" src="https://github.com/user-attachments/assets/ee6783e7-1902-485e-925d-17f1a1626530" />
-<img width="1038" height="267" alt="image" src="https://github.com/user-attachments/assets/c40573c4-db2c-4afc-81a1-f022ef4e76c0" />
+
 
 
 
