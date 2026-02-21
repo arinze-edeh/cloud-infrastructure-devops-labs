@@ -40,17 +40,19 @@ repeatability, and auditability.
 
 ### Step 1: Verify Azure Account Context
 
-RUN az account show
+- RUN `az account show`
+
 CONFIRM:
 
-Subscription is active
+- Subscription is active
 
-Authentication type = servicePrincipal
+- Authentication type = servicePrincipal
 
-Correct tenant and subscription in use
+- Correct tenant and subscription in use
 
 
 📸 Screenshot: Azure CLI – Account Details
+<img width="1032" height="618" alt="image" src="https://github.com/user-attachments/assets/42db5718-90c9-461f-a78a-2025ac7a127d" />
 
 ---
 
@@ -133,7 +135,7 @@ nautilus-disk kml_rg_main-d71f6b2326b14421 eastus Standard_LRS 2 Succeeded
 
 
 
-<img width="1032" height="618" alt="image" src="https://github.com/user-attachments/assets/42db5718-90c9-461f-a78a-2025ac7a127d" />
+
 <img width="1028" height="621" alt="image" src="https://github.com/user-attachments/assets/d22205e4-6aff-482f-8496-9beef4330202" />
 <img width="1025" height="858" alt="image" src="https://github.com/user-attachments/assets/f1fd5a65-6a3b-4d75-aba8-28447eee72c7" />
 <img width="1028" height="866" alt="image" src="https://github.com/user-attachments/assets/6b9e0617-3466-4451-801d-fe4970c01423" />
