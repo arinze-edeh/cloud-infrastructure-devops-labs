@@ -1,4 +1,4 @@
-# AWS IAM Role for EC2 — Security-First Implementation
+# AWS IAM Role for EC2 - Security-First Implementation
 
 ## Overview
 - This lab demonstrates the creation of an AWS IAM Role for EC2 using the AWS CLI, following **least-privilege**, **explicit trust relationships**, and **credential verification** best practices.
