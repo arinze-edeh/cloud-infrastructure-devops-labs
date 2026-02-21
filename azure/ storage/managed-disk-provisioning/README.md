@@ -1,4 +1,4 @@
-# Azure Managed Disk Creation (Standard_LRS) – Nautilus DevOps Lab
+# Azure Managed Disk Creation (Standard_LRS)
 
 ## Project Overview
 - As part of an incremental cloud migration strategy, the Nautilus DevOps team is
@@ -74,11 +74,11 @@ CONFIRM:
 
 ### Step 3: Create the Managed Disk
 
-RUN az disk create
+RUN `az disk create
 --resource-group kml_rg_main-d71f6b2326b14421
 --name nautilus-disk
 --sku Standard_LRS
---size-gb 2
+--size-gb 2`
 
 
 EXPECTED RESULT:
