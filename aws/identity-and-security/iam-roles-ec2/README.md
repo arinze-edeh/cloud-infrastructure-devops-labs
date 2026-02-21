@@ -83,6 +83,8 @@ aws iam create-role \
 
 📸 Screenshot:
 
+<img width="1019" height="860" alt="image" src="https://github.com/user-attachments/assets/63ae9ea4-a359-40d0-82e1-87c73f613bd6" />
+
 - Why roles (not users)
 
   -  Eliminates long-lived credentials
@@ -102,6 +104,7 @@ echo $POLICY_ARN
 arn:aws:iam::472012609282:policy/iampolicy_kareem
 
 📸 Screenshot:
+<img width="1031" height="642" alt="image" src="https://github.com/user-attachments/assets/7697860a-21b4-4ac4-bf5f-6afb910bac68" />
 
 - Engineering Signal
 
@@ -162,8 +165,7 @@ aws iam list-attached-role-policies \
 
 
 
-<img width="1019" height="860" alt="image" src="https://github.com/user-attachments/assets/63ae9ea4-a359-40d0-82e1-87c73f613bd6" />
-<img width="1031" height="642" alt="image" src="https://github.com/user-attachments/assets/7697860a-21b4-4ac4-bf5f-6afb910bac68" />
+
 
 
 
