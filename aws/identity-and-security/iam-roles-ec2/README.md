@@ -6,7 +6,7 @@
 - The role is configured with:
   -  A service trust relationship for EC2
   -  An existing customer-managed IAM policy
-  -  Deployment scoped strictly to **us-east-1**
+  -  Deployment scoped strictly to `us-east-1`
 
 - This mirrors real-world production workflows used in regulated and large-scale cloud environments.
 
