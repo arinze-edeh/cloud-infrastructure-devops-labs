@@ -84,11 +84,10 @@
 
 - The policy ARN is queried dynamically to avoid hard-coding and improve script portability.
 
-POLICY_ARN=$(aws iam list-policies \
+- `POLICY_ARN=$(aws iam list-policies \
   --query "Policies[?PolicyName=='iampolicy_kareem'].Arn" \
-  --output text)
-echo $POLICY_ARN
-arn:aws:iam::472012609282:policy/iampolicy_kareem
+  --output text)`
+- `echo $POLICY_ARN`
 
 📸 Screenshot:
 <img width="1031" height="642" alt="image" src="https://github.com/user-attachments/assets/7697860a-21b4-4ac4-bf5f-6afb910bac68" />
