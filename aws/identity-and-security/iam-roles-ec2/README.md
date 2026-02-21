@@ -127,7 +127,7 @@
 - IAM role created successfully
 - EC2 configured as the only trusted service
 - Policy attached and verified
-- Deployment restricted to us-east-1
+- Deployment restricted to `us-east-1`
 
 ## Security & DevOps Principles Demonstrated
 
