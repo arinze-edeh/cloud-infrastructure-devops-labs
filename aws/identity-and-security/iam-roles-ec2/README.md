@@ -65,6 +65,7 @@ EOF
 📸 Screenshot: screenshots/trust-policy-json.png
 
 ## Security Notes
+<img width="1027" height="692" alt="image" src="https://github.com/user-attachments/assets/a84053b7-ee50-411e-9352-b40fac8d2a03" />
 
 - No wildcard principals
 
@@ -160,7 +161,7 @@ aws iam list-attached-role-policies \
 
 
 
-<img width="1027" height="692" alt="image" src="https://github.com/user-attachments/assets/a84053b7-ee50-411e-9352-b40fac8d2a03" />
+
 <img width="1019" height="860" alt="image" src="https://github.com/user-attachments/assets/63ae9ea4-a359-40d0-82e1-87c73f613bd6" />
 <img width="1031" height="642" alt="image" src="https://github.com/user-attachments/assets/7697860a-21b4-4ac4-bf5f-6afb910bac68" />
 
