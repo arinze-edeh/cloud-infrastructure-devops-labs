@@ -94,13 +94,14 @@ Test configuration:
 `sudo nginx -t`
 
 📸 Screenshot: `Nginx configuration test successful`
+<img width="1036" height="824" alt="image" src="https://github.com/user-attachments/assets/20cd2bd9-d532-4aff-9cee-d142503add67" />
 <img width="896" height="885" alt="image" src="https://github.com/user-attachments/assets/7f7a0a97-6f19-4e3d-8b4c-25775c212748" />
 
 ## Step 6: Deploy Landing Page
 `echo "Welcome!" | sudo tee /usr/share/nginx/html/index.html`
 
 📸 Screenshot: `index.html content`
-
+<img width="1036" height="824" alt="image" src="https://github.com/user-attachments/assets/20cd2bd9-d532-4aff-9cee-d142503add67" />
 
 ## Step 7: Restart Nginx
 `sudo systemctl restart nginx`
@@ -144,7 +145,7 @@ content-length: 9
 
 
 
-<img width="1036" height="824" alt="image" src="https://github.com/user-attachments/assets/20cd2bd9-d532-4aff-9cee-d142503add67" />
+
 <img width="1031" height="391" alt="image" src="https://github.com/user-attachments/assets/8260e090-27be-4e7d-a344-18258052881b" />
 <img width="1035" height="342" alt="image" src="https://github.com/user-attachments/assets/c22cedd0-3851-40c8-afd4-989b424278e5" />
 <img width="1033" height="575" alt="image" src="https://github.com/user-attachments/assets/172cf54f-d96a-4767-9a85-8e8fd0ab8a30" />
