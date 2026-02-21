@@ -47,7 +47,7 @@
 
 - A trust policy is created to explicitly allow only EC2 to assume the role.
 
-`cat <<EOF > trust-policy.json`
+- `cat <<EOF > trust-policy.json`
 
 📸 Screenshot: screenshots/trust-policy-json.png
 
@@ -141,11 +141,3 @@ arn:aws:iam::472012609282:policy/iampolicy_kareem
 - Audit-Friendly CLI Operations
 
 - Production-grade IAM design
-
-
-
-
-
-
-
-
