@@ -43,7 +43,7 @@
   -  Required in enterprise change-management workflows
 
 
-## Step 2 — Define Explicit Trust Policy (EC2 Only)
+## Step 2: Define Explicit Trust Policy (EC2 Only)
 
 - A trust policy is created to explicitly allow only EC2 to assume the role.
 
@@ -72,7 +72,7 @@ EOF
 
 - Service-scoped assumption only
 
-## Step 3 — Create IAM Role
+## Step 3: Create IAM Role
 
 - The IAM role is created using the defined trust policy.
 
@@ -80,7 +80,7 @@ aws iam create-role \
     --role-name iamrole_kareem \
     --assume-role-policy-document file://trust-policy.json
 
-📸 Screenshot: screenshots/iam-create-role.png
+📸 Screenshot:
 
 - Why roles (not users)
 
@@ -90,7 +90,7 @@ aws iam create-role \
 
   -  Required for EC2, ECS, and EKS workloads
 
-## Step 4 — Discover Policy ARN Dynamically
+## Step 4: Discover Policy ARN Dynamically
 
 - The policy ARN is queried dynamically to avoid hard-coding and improve script portability.
 
