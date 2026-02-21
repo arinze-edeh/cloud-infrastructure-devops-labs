@@ -83,10 +83,10 @@ RUN az disk create
 
 EXPECTED RESULT:
 
-provisioningState: Succeeded
-diskState: Unattached
-diskSizeGb: 2
-sku: Standard_LRS
+provisioningState: `Succeeded`
+diskState: `Unattached`
+diskSizeGb: `2`
+sku: `Standard_LRS`
 
 
 📸 ScreenshotS: `Disk Creation Output`
@@ -98,17 +98,17 @@ sku: Standard_LRS
 
 ### Step 4: Verify Disk Creation
 
-RUN az disk show
+- RUN `az disk show
 --resource-group kml_rg_main-d71f6b2326b14421
 --name nautilus-disk
---output table
+--output table`
 
 
 EXPECTED OUTPUT:
 
-Name ResourceGroup Location Sku SizeGb ProvisioningState
-
-nautilus-disk kml_rg_main-d71f6b2326b14421 eastus Standard_LRS 2 Succeeded
+| Name           | Resource Group                | Location | SKU          | Size (GiB) | Provisioning State |
+|----------------|--------------------------------|----------|--------------|------------|--------------------|
+| nautilus-disk  | kml_rg_main-d71f6b2326b14421   | eastus   | Standard_LRS | 2          | Succeeded          |
 
 
 📸 Screenshot: `Managed Disk Verification`
