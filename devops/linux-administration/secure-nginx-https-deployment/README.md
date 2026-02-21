@@ -35,6 +35,7 @@ Accept host key
 Authenticate with password
 
 📸 Screenshot: SSH login
+<img width="1028" height="632" alt="image" src="https://github.com/user-attachments/assets/304d9926-ff38-4586-b15d-21effecc1561" />
 
 ## Step 2: Install Nginx
 - `sudo yum install -y nginx`
@@ -135,7 +136,7 @@ content-length: 9
 
 - Remote Infrastructure Validation using `curl`
 
-<img width="1028" height="632" alt="image" src="https://github.com/user-attachments/assets/304d9926-ff38-4586-b15d-21effecc1561" />
+
 <img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/87826513-204d-415b-80d5-af62bedc0c57" />
 <img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/452cdda5-67ca-4a9c-9510-fbb7f3423977" />
 <img width="1037" height="692" alt="image" src="https://github.com/user-attachments/assets/0238cb83-3818-4b48-b8fa-d2ffccc5d8d7" />
