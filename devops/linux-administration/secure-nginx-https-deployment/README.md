@@ -107,6 +107,7 @@ Test configuration:
 `sudo systemctl restart nginx`
 
 📸 Screenshot: `Nginx restarted successfully`
+<img width="1035" height="342" alt="image" src="https://github.com/user-attachments/assets/c22cedd0-3851-40c8-afd4-989b424278e5" />
 
 ## Step 8: Validate HTTPS Access from Jump Host
 
@@ -126,7 +127,7 @@ content-type: text/html
 content-length: 9
 
 📸 Screenshot: `curl HTTPS response headers`
-
+<img width="1033" height="575" alt="image" src="https://github.com/user-attachments/assets/172cf54f-d96a-4767-9a85-8e8fd0ab8a30" />
 
 ## Outcome & Skills Demonstrated
 
@@ -147,6 +148,5 @@ content-length: 9
 
 
 <img width="1031" height="391" alt="image" src="https://github.com/user-attachments/assets/8260e090-27be-4e7d-a344-18258052881b" />
-<img width="1035" height="342" alt="image" src="https://github.com/user-attachments/assets/c22cedd0-3851-40c8-afd4-989b424278e5" />
-<img width="1033" height="575" alt="image" src="https://github.com/user-attachments/assets/172cf54f-d96a-4767-9a85-8e8fd0ab8a30" />
+
 
