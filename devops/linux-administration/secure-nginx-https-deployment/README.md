@@ -45,6 +45,8 @@ Verify installation:
 `nginx -v`
 
 📸 Screenshot: `Nginx version output`
+<img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/87826513-204d-415b-80d5-af62bedc0c57" />
+<img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/452cdda5-67ca-4a9c-9510-fbb7f3423977" />
 
 ## Step 3: Enable and Start Nginx
 - `sudo systemctl enable nginx`
@@ -137,8 +139,7 @@ content-length: 9
 - Remote Infrastructure Validation using `curl`
 
 
-<img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/87826513-204d-415b-80d5-af62bedc0c57" />
-<img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/452cdda5-67ca-4a9c-9510-fbb7f3423977" />
+
 <img width="1037" height="692" alt="image" src="https://github.com/user-attachments/assets/0238cb83-3818-4b48-b8fa-d2ffccc5d8d7" />
 <img width="1031" height="759" alt="image" src="https://github.com/user-attachments/assets/d4860fee-388e-4049-82ae-f74ab827139f" />
 <img width="896" height="885" alt="image" src="https://github.com/user-attachments/assets/7f7a0a97-6f19-4e3d-8b4c-25775c212748" />
