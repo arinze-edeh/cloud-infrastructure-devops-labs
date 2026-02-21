@@ -47,20 +47,7 @@
 
 - A trust policy is created to explicitly allow only EC2 to assume the role.
 
-cat <<EOF > trust-policy.json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-EOF
+`cat <<EOF > trust-policy.json`
 
 📸 Screenshot: screenshots/trust-policy-json.png
 
@@ -77,9 +64,9 @@ EOF
 
 - The IAM role is created using the defined trust policy.
 
-aws iam create-role \
-    --role-name iamrole_kareem \
-    --assume-role-policy-document file://trust-policy.json
+- `aws iam create-role \`
+  -  `--role-name iamrole_kareem \`
+  -  `--assume-role-policy-document file://trust-policy.json`
 
 📸 Screenshot:
 
@@ -118,9 +105,9 @@ arn:aws:iam::472012609282:policy/iampolicy_kareem
 
 - The customer-managed policy is attached to the IAM role.
 
-aws iam attach-role-policy \
-    --role-name iamrole_kareem \
-    --policy-arn $POLICY_ARN
+- `aws iam attach-role-policy \`
+  -  `--role-name iamrole_kareem \`
+  -  `--policy-arn $POLICY_ARN`
 
 📸 Screenshot:
 <img width="1031" height="856" alt="image" src="https://github.com/user-attachments/assets/c4619b7b-bd8b-417f-a690-8abf6447a00b" />
@@ -129,16 +116,9 @@ aws iam attach-role-policy \
 
 - Final validation confirms the policy attachment and role integrity.
 
-aws iam list-attached-role-policies \
-    --role-name iamrole_kareem
-{
-    "AttachedPolicies": [
-        {
-            "PolicyName": "iampolicy_kareem",
-            "PolicyArn": "arn:aws:iam::472012609282:policy/iampolicy_kareem"
-        }
-    ]
-}
+- `aws iam list-attached-role-policies \`
+  -  `--role-name iamrole_kareem`
+
 
 📸 Screenshot:
 <img width="1033" height="856" alt="image" src="https://github.com/user-attachments/assets/1d091c3a-05ff-4dee-acb0-ec347678e240" />
