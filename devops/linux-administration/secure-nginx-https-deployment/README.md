@@ -93,9 +93,10 @@ Test configuration:
 
 `sudo nginx -t`
 
-📸 Screenshot: `Nginx configuration test successful`
+📸 Screenshots: `Nginx configuration test successful`
 <img width="1036" height="824" alt="image" src="https://github.com/user-attachments/assets/20cd2bd9-d532-4aff-9cee-d142503add67" />
 <img width="896" height="885" alt="image" src="https://github.com/user-attachments/assets/7f7a0a97-6f19-4e3d-8b4c-25775c212748" />
+<img width="1031" height="391" alt="image" src="https://github.com/user-attachments/assets/8260e090-27be-4e7d-a344-18258052881b" />
 
 ## Step 6: Deploy Landing Page
 `echo "Welcome!" | sudo tee /usr/share/nginx/html/index.html`
@@ -140,13 +141,3 @@ content-length: 9
 - Systemd service management
 
 - Remote Infrastructure Validation using `curl`
-
-
-
-
-
-
-
-<img width="1031" height="391" alt="image" src="https://github.com/user-attachments/assets/8260e090-27be-4e7d-a344-18258052881b" />
-
-
