@@ -6,17 +6,6 @@
 
 - This project focuses on the final migration step: configuring an Nginx-based HTTP Load Balancer (LBR) to distribute traffic across multiple Apache application servers without modifying existing backend ports, following real-world production constraints.
 
-## Architecture
-
-Client (HTTP Requests)
-  |
-  v
-Nginx Load Balancer (Port 80)
-  |
-  +-- stapp01 : Apache (5004)
-  +-- stapp02 : Apache (5004)
-  +-- stapp03 : Apache (5004)
-
   ## Architecture
 
 ```text
