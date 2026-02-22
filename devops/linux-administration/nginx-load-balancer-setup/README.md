@@ -46,6 +46,7 @@
 `ssh loki@172.16.238.14`
 
 📸 Screenshot: `SSH login to Load Balancer (stlb01)`
+<img width="1021" height="183" alt="image" src="https://github.com/user-attachments/assets/31ddbf55-3e92-4f88-b5af-f1544a73e02c" />
 
 ## Step 2: Install & Enable Nginx
 - sudo yum install -y nginx
@@ -54,6 +55,10 @@
 - sudo systemctl status nginx
 
 📸 Screenshot: `Nginx installation and active service status`
+<img width="1039" height="859" alt="image" src="https://github.com/user-attachments/assets/2f23828e-6ee0-4c17-b988-9de4310d0e9a" />
+<img width="1028" height="853" alt="image" src="https://github.com/user-attachments/assets/568108e7-fd09-481d-87e5-a0ae00c39a33" />
+<img width="1041" height="181" alt="image" src="https://github.com/user-attachments/assets/95b84ad9-7d70-464d-86b1-e342fbd8584e" />
+<img width="1031" height="862" alt="image" src="https://github.com/user-attachments/assets/a7678bd7-bc2d-4896-81e9-93756376f015" />
 
 ## Step 3: Verify Apache on App Servers (No Port Changes)
 
@@ -172,12 +177,9 @@ Resolution:
 
 - Configuration changes must be validated before reloads
 
-<img width="1021" height="183" alt="image" src="https://github.com/user-attachments/assets/31ddbf55-3e92-4f88-b5af-f1544a73e02c" />
 
-<img width="1039" height="859" alt="image" src="https://github.com/user-attachments/assets/2f23828e-6ee0-4c17-b988-9de4310d0e9a" />
-<img width="1028" height="853" alt="image" src="https://github.com/user-attachments/assets/568108e7-fd09-481d-87e5-a0ae00c39a33" />
-<img width="1041" height="181" alt="image" src="https://github.com/user-attachments/assets/95b84ad9-7d70-464d-86b1-e342fbd8584e" />
-<img width="1031" height="862" alt="image" src="https://github.com/user-attachments/assets/a7678bd7-bc2d-4896-81e9-93756376f015" />
+
+
 <img width="1038" height="861" alt="image" src="https://github.com/user-attachments/assets/2fc983e2-bc90-4232-b781-6a3e64de1d98" />
 <img width="1033" height="854" alt="image" src="https://github.com/user-attachments/assets/355640a1-9ba2-4886-b73e-daf5055cc02c" />
 <img width="1031" height="841" alt="image" src="https://github.com/user-attachments/assets/ffdbf250-7ddf-45ca-8223-3ebce461e9fa" />
