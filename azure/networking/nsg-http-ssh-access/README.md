@@ -21,107 +21,108 @@
 
 ## Prerequisites
 
-Azure CLI installed
+- Azure CLI installed
 
-Active Azure subscription
+- Active Azure subscription
 
-Authenticated Azure CLI session
+- Authenticated Azure CLI session
 
 ## Step 1: Verify Azure Authentication
 
-Confirm the active Azure account and subscription context.
+- Confirm the active Azure account and subscription context.
 
-az account show
+- `az account show`
 
 Expected Outcome
 
-Subscription state is Enabled
+- Subscription state is Enabled
 
-Correct tenant and subscription are active
+- Correct tenant and subscription are active
 
-📸 SCREENSHOT: Azure CLI authenticated account details
+📸 SCREENSHOT: `Azure CLI authenticated account details`
+<img width="1034" height="556" alt="image" src="https://github.com/user-attachments/assets/6665d16e-1a21-4a8a-a45c-f257e0430949" />
 
 ## Step 2: Identify Target Resource Group
 
-Retrieve the resource group used for NSG deployment.
+- Retrieve the resource group used for NSG deployment.
 
-RG_NAME=$(az group list --query "[0].name" -o tsv)
-echo "Your Resource Group is: $RG_NAME"
+`RG_NAME=$(az group list --query "[0].name" -o tsv)
+echo "Your Resource Group is: $RG_NAME"`
 
-📸 SCREENSHOT: Resource group resolution output
+📸 SCREENSHOT: `Resource group resolution output`
 
 ## Step 3: Create the Network Security Group
 
-Create the NSG within the identified resource group.
+- Create the NSG within the identified resource group.
 
-az network nsg create \
+- `az network nsg create \
   --resource-group $RG_NAME \
-  --name nautilus-nsg
+  --name nautilus-nsg`
 
 Result
 
-NSG is created with Azure default inbound and outbound rules
+- NSG is created with Azure default inbound and outbound rules
 
-Provisioning state is Succeeded
+- Provisioning state is Succeeded
 
-📸 SCREENSHOT: NSG creation success output
+📸 SCREENSHOT: `NSG creation success output`
 
 ## Step 4: Add Inbound Rule – Allow HTTP (Port 80)
 
-Allow inbound HTTP traffic from any source.
+- Allow inbound HTTP traffic from any source.
 
-az network nsg rule create \
+- `az network nsg rule create \
   --resource-group $RG_NAME \
   --nsg-name nautilus-nsg \
   --name Allow-HTTP \
   --priority 100 \
   --destination-port-ranges 80 \
   --access Allow \
-  --protocol Tcp
+  --protocol Tcp`
 
-📸 SCREENSHOT: Allow-HTTP inbound rule configuration
+📸 SCREENSHOT: `Allow-HTTP inbound rule configuration`
 
 ## Step 5: Add Inbound Rule – Allow SSH (Port 22)
 
-Allow inbound SSH access for secure remote administration.
+- Allow inbound SSH access for secure remote administration.
 
-az network nsg rule create \
+- `az network nsg rule create \
   --resource-group $RG_NAME \
   --nsg-name nautilus-nsg \
   --name Allow-SSH \
   --priority 110 \
   --destination-port-ranges 22 \
   --access Allow \
-  --protocol Tcp
+  --protocol Tcp`
 
-📸 SCREENSHOT: Allow-SSH inbound rule configuration
+📸 SCREENSHOT: `Allow-SSH inbound rule configuration`
 
 ## Step 6: Validate NSG Rules
 
-Verify that the inbound rules are correctly applied and prioritized.
+- Verify that the inbound rules are correctly applied and prioritized.
 
-az network nsg rule list \
+- `az network nsg rule list \
   --resource-group $RG_NAME \
   --nsg-name nautilus-nsg \
-  --output table
+  --output table`
 
 Expected Output
 
-Allow-HTTP → Priority 100 → Port 80
+- `Allow-HTTP → Priority 100 → Port 80`
 
-Allow-SSH → Priority 110 → Port 22
+- `Allow-SSH → Priority 110 → Port 22`
 
-📸 SCREENSHOT: Final NSG inbound rules table
+📸 SCREENSHOT: `Final NSG inbound rules table`
 
 ## Automation Script
 
-To ensure repeatability and consistency, the entire configuration was automated using a Bash script.
+- To ensure repeatability and consistency, the entire configuration was automated using a Bash script.
 
 File: az-nsg-nautilus.sh
 
 #!/bin/bash
 # Azure Network Security Group Automation Script
-# Project: Nautilus Infrastructure Migration
+# Project: Nautilus Infrastructure Migration`
 
 RG_NAME="kml_rg_main-f56fa9d90d7842e1"
 NSG_NAME="nautilus-nsg"
@@ -169,7 +170,7 @@ az network nsg rule list -g $RG_NAME --nsg-name $NSG_NAME --output table
 - Secure network design
 
 
-<img width="1034" height="556" alt="image" src="https://github.com/user-attachments/assets/6665d16e-1a21-4a8a-a45c-f257e0430949" />
+
 <img width="1033" height="629" alt="image" src="https://github.com/user-attachments/assets/15612c68-a301-48ff-bbdf-7a7899224078" />
 <img width="1034" height="870" alt="image" src="https://github.com/user-attachments/assets/1a4497d3-66a0-4072-b6c0-c4549f39f23f" />
 <img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/8c18d50c-366a-4d35-87da-34ef00b3c2bc" />
