@@ -120,6 +120,8 @@ syntax is `ok`
 test is successful
 
 📸 Screenshot: `Successful Nginx configuration test`
+<img width="1038" height="487" alt="image" src="https://github.com/user-attachments/assets/feee1d48-774c-46ed-ae04-bf92109c97c5" />
+<img width="1030" height="699" alt="image" src="https://github.com/user-attachments/assets/0965d1d1-b11c-4cd9-8e62-b02cf011cce8" />
 
 ## Application Validation
 
@@ -187,8 +189,8 @@ Resolution:
 
 
 
-<img width="1038" height="487" alt="image" src="https://github.com/user-attachments/assets/feee1d48-774c-46ed-ae04-bf92109c97c5" />
+
 <img width="1019" height="867" alt="image" src="https://github.com/user-attachments/assets/bc473fd7-2a06-4687-8c7e-e997243e7684" />
 <img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/2855ea06-b822-4561-a336-3b770e5da9ba" />
-<img width="1030" height="699" alt="image" src="https://github.com/user-attachments/assets/0965d1d1-b11c-4cd9-8e62-b02cf011cce8" />
+
 
