@@ -128,6 +128,7 @@ test is successful
 - No 502 / 504 errors observed
 
 📸 Screenshot: `Application loading successfully via StaticApp URL`
+<img width="1664" height="1006" alt="image" src="https://github.com/user-attachments/assets/7ad29568-fd91-4d75-8b72-237f106617a0" />
 
 ## Key Troubleshooting Insight
 
@@ -188,4 +189,4 @@ Resolution:
 <img width="1019" height="867" alt="image" src="https://github.com/user-attachments/assets/bc473fd7-2a06-4687-8c7e-e997243e7684" />
 <img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/2855ea06-b822-4561-a336-3b770e5da9ba" />
 <img width="1030" height="699" alt="image" src="https://github.com/user-attachments/assets/0965d1d1-b11c-4cd9-8e62-b02cf011cce8" />
-<img width="1664" height="1006" alt="image" src="https://github.com/user-attachments/assets/7ad29568-fd91-4d75-8b72-237f106617a0" />
+
