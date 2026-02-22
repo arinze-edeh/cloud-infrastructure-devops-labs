@@ -53,12 +53,12 @@
 <img width="1021" height="183" alt="image" src="https://github.com/user-attachments/assets/31ddbf55-3e92-4f88-b5af-f1544a73e02c" />
 
 ## Step 2: Install & Enable Nginx
-- sudo yum install -y nginx
-- sudo systemctl enable nginx
-- sudo systemctl start nginx
-- sudo systemctl status nginx
+- `sudo yum install -y nginx`
+- `sudo systemctl enable nginx`
+- `sudo systemctl start nginx`
+- `sudo systemctl status nginx`
 
-📸 Screenshot: `Nginx installation and active service status`
+📸 Screenshots: `Nginx installation and active service status`
 <img width="1039" height="859" alt="image" src="https://github.com/user-attachments/assets/2f23828e-6ee0-4c17-b988-9de4310d0e9a" />
 <img width="1028" height="853" alt="image" src="https://github.com/user-attachments/assets/568108e7-fd09-481d-87e5-a0ae00c39a33" />
 <img width="1041" height="181" alt="image" src="https://github.com/user-attachments/assets/95b84ad9-7d70-464d-86b1-e342fbd8584e" />
@@ -70,14 +70,10 @@
 
 - Verification performed on all app servers:
 
-`sudo systemctl status httpd`
-`sudo ss -lntp | grep httpd`
+- `sudo systemctl status httpd`
+- `sudo ss -lntp | grep httpd`
 
-Expected output:
-
-LISTEN 0 511 0.0.0.0:5004
-
-📸 Screenshot: `Apache running and listening on port 5004`
+📸 Screenshots: `Apache running and listening on port 5004`
 <img width="1033" height="854" alt="image" src="https://github.com/user-attachments/assets/355640a1-9ba2-4886-b73e-daf5055cc02c" />
 <img width="1031" height="841" alt="image" src="https://github.com/user-attachments/assets/ffdbf250-7ddf-45ca-8223-3ebce461e9fa" />
 <img width="1033" height="858" alt="image" src="https://github.com/user-attachments/assets/f815f010-ff60-435e-bb25-7691b40eae34" />
@@ -116,15 +112,15 @@ http {
 <img width="1019" height="867" alt="image" src="https://github.com/user-attachments/assets/bc473fd7-2a06-4687-8c7e-e997243e7684" />
 
 ## Step 5: Validate & Reload Nginx
-`sudo nginx -t`
-`sudo systemctl reload nginx`
+- `sudo nginx -t`
+- `sudo systemctl reload nginx`
 
 Expected result:
 
 syntax is `ok`
 test is successful
 
-📸 Screenshot: `Successful Nginx configuration test`
+📸 Screenshots: `Successful Nginx configuration test`
 <img width="1038" height="487" alt="image" src="https://github.com/user-attachments/assets/feee1d48-774c-46ed-ae04-bf92109c97c5" />
 <img width="1030" height="699" alt="image" src="https://github.com/user-attachments/assets/0965d1d1-b11c-4cd9-8e62-b02cf011cce8" />
 
@@ -175,13 +171,13 @@ Resolution:
 
 - Network troubleshooting (502 Bad Gateway)
 
-- HA infrastructure validation
+- High Availability (HA) infrastructure validation
 
 - DevOps documentation best practices
 
 ## Notes
 
-- This setup mirrors real-world enterprise environments where:
+This setup mirrors real-world enterprise environments where:
 
 - Backend ports cannot be changed
 
