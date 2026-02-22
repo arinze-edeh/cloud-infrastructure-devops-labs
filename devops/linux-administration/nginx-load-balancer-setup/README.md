@@ -8,10 +8,10 @@
 
 ## Architecture
 
-Client
+- Client
    |
    v
-Nginx Load Balancer (stlb01)
+- Nginx Load Balancer (stlb01)
    |
    +-- App Server 1 (stapp01:5004)
    +-- App Server 2 (stapp02:5004)
