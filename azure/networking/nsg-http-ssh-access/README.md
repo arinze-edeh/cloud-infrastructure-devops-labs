@@ -1,4 +1,4 @@
-# Azure Network Security Group (NSG) – HTTP & SSH Access
+# Azure Network Security Group (NSG) - HTTP & SSH Access
 
 ## Overview
 - This project demonstrates the creation and configuration of an **Azure Network Security Group (NSG)** using the **Azure CLI** as part of the Nautilus infrastructure migration strategy.  
