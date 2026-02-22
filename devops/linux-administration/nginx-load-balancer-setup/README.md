@@ -28,58 +28,56 @@ Nginx Load Balancer (stlb01)
 
 ## Objectives
 
-Install and configure Nginx on the Load Balancer
+- Install and configure Nginx on the Load Balancer
 
-Configure HTTP load balancing using the main config file:
+- Configure HTTP load balancing using the main config file:
 
-/etc/nginx/nginx.conf
+`/etc/nginx/nginx.conf`
 
-Preserve existing Apache ports on backend servers
+- Preserve existing Apache ports on backend servers
 
-Validate service health and traffic routing
+- Validate service health and traffic routing
 
-Access application via StaticApp URL
+- Access application via StaticApp URL
 
 ## Implementation Steps
 
 ## Step 1: Access the Load Balancer
-ssh loki@172.16.238.14
+`ssh loki@172.16.238.14`
 
 📸 Screenshot: `SSH login to Load Balancer (stlb01)`
 
 ## Step 2: Install & Enable Nginx
-sudo yum install -y nginx
-sudo systemctl enable nginx
-sudo systemctl start nginx
-sudo systemctl status nginx
+- sudo yum install -y nginx
+- sudo systemctl enable nginx
+- sudo systemctl start nginx
+- sudo systemctl status nginx
 
-📸 Screenshot Placeholder:
-
-Nginx installation and active service status
+📸 Screenshot: `Nginx installation and active service status`
 
 ## Step 3: Verify Apache on App Servers (No Port Changes)
 
-Apache was already configured to run on port 5004 and must not be modified.
+- Apache was already configured to run on port 5004 and must not be modified.
 
-Verification performed on all app servers:
+- Verification performed on all app servers:
 
-sudo systemctl status httpd
-sudo ss -lntp | grep httpd
+`sudo systemctl status httpd`
+`sudo ss -lntp | grep httpd`
 
 Expected output:
 
 LISTEN 0 511 0.0.0.0:5004
 
-📸 Screenshot Placeholder:
-
-Apache running and listening on port 5004
+📸 Screenshot: `Apache running and listening on port 5004`
 
 ## Step 4: Configure Nginx Load Balancing
 
 ⚠️ `Only /etc/nginx/nginx.conf was modified as required.`
 
-sudo vi /etc/nginx/nginx.conf
+`sudo vi /etc/nginx/nginx.conf`
+
 ## Final http {} Configuration (Relevant Section)
+
 http {
 
     upstream app_servers {
