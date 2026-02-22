@@ -50,6 +50,7 @@ Expected Outcome
 echo "Your Resource Group is: $RG_NAME"`
 
 📸 SCREENSHOT: `Resource group resolution output`
+<img width="1033" height="629" alt="image" src="https://github.com/user-attachments/assets/15612c68-a301-48ff-bbdf-7a7899224078" />
 
 ## Step 3: Create the Network Security Group
 
@@ -66,6 +67,7 @@ Result
 - Provisioning state is Succeeded
 
 📸 SCREENSHOT: `NSG creation success output`
+
 
 ## Step 4: Add Inbound Rule – Allow HTTP (Port 80)
 
@@ -171,7 +173,7 @@ az network nsg rule list -g $RG_NAME --nsg-name $NSG_NAME --output table
 
 
 
-<img width="1033" height="629" alt="image" src="https://github.com/user-attachments/assets/15612c68-a301-48ff-bbdf-7a7899224078" />
+
 <img width="1034" height="870" alt="image" src="https://github.com/user-attachments/assets/1a4497d3-66a0-4072-b6c0-c4549f39f23f" />
 <img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/8c18d50c-366a-4d35-87da-34ef00b3c2bc" />
 <img width="1034" height="869" alt="image" src="https://github.com/user-attachments/assets/7c5520f2-0b7d-4d10-aace-8abf58acafc4" />
