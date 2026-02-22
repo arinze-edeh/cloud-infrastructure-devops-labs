@@ -108,7 +108,8 @@ http {
 }
 
 📸 Screenshot: `Nginx upstream and server block configuration`
-<img width="1038" height="861" alt="image" src="https://github.com/user-attachments/assets/2fc983e2-bc90-4232-b781-6a3e64de1d98" />
+
+<img width="1019" height="867" alt="image" src="https://github.com/user-attachments/assets/bc473fd7-2a06-4687-8c7e-e997243e7684" />
 
 ## Step 5: Validate & Reload Nginx
 `sudo nginx -t`
@@ -190,7 +191,7 @@ Resolution:
 
 
 
-<img width="1019" height="867" alt="image" src="https://github.com/user-attachments/assets/bc473fd7-2a06-4687-8c7e-e997243e7684" />
+
 <img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/2855ea06-b822-4561-a336-3b770e5da9ba" />
 
 
