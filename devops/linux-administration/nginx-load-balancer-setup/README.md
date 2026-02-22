@@ -8,14 +8,29 @@
 
 ## Architecture
 
- Client
-   |
-   v
+Client (HTTP Requests)
+  |
+  v
+Nginx Load Balancer (Port 80)
+  |
+  +-- stapp01 : Apache (5004)
+  +-- stapp02 : Apache (5004)
+  +-- stapp03 : Apache (5004)
+
+  ## Architecture
+
+```text
+       Client
+          |
+          v
  Nginx Load Balancer (stlb01)
-   |
-   +-- App Server 1 (stapp01:5004)
-   +-- App Server 2 (stapp02:5004)
-   +-- App Server 3 (stapp03:5004)
+          |
+    +-----+-----+
+    |     |     |
+    v     v     v
+ stapp01 stapp02 stapp03
+ (5004)  (5004)  (5004)
+```
    
 ## Infrastructure Details
 | Role          | Hostname | IP Address    | Service            |
