@@ -4,7 +4,7 @@
 - This project demonstrates the creation and configuration of an **Azure Network Security Group (NSG)** using the **Azure CLI** as part of the Nautilus infrastructure migration strategy.  
 - The NSG enforces inbound access control by explicitly allowing **HTTP (port 80)** and **SSH (port 22)** traffic while relying on Azure’s default deny rules for all other inbound traffic.
 
-- The implementation follows **cloud-native, least-privilege, and automation-first** principles expected in FAANG-level environments.
+- The implementation follows **cloud-native, least-privilege, and automation-first** principles.
 
 ---
 
