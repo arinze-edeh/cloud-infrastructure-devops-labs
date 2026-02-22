@@ -1,6 +1,6 @@
 # AWS EC2 Instance with Elastic IP (CLI Provisioning)
 
-## 📌 Project Overview
+## Project Overview
 - This project demonstrates how to provision an Amazon EC2 instance using the AWS CLI and associate a static Elastic IP (EIP) to ensure a consistent public endpoint.  
 - The setup is performed entirely via CLI commands in the **us-east-1** region, following best practices for reproducibility and validation.
 
