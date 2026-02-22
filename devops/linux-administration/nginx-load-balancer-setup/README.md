@@ -184,14 +184,3 @@ Resolution:
 - Bastion (jump) hosts are required
 
 - Configuration changes must be validated before reloads
-
-
-
-
-
-
-
-
-<img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/2855ea06-b822-4561-a336-3b770e5da9ba" />
-
-
