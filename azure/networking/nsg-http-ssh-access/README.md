@@ -66,7 +66,7 @@ Result
 
 - Provisioning state is Succeeded
 
-📸 SCREENSHOT: `NSG creation success output`
+📸 SCREENSHOTS: `NSG creation success output`
 <img width="1034" height="870" alt="image" src="https://github.com/user-attachments/assets/1a4497d3-66a0-4072-b6c0-c4549f39f23f" />
 <img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/8c18d50c-366a-4d35-87da-34ef00b3c2bc" />
 <img width="1034" height="869" alt="image" src="https://github.com/user-attachments/assets/7c5520f2-0b7d-4d10-aace-8abf58acafc4" />
@@ -125,26 +125,29 @@ Expected Output
 
 - To ensure repeatability and consistency, the entire configuration was automated using a Bash script.
 
-File: az-nsg-nautilus.sh
+File: `az-nsg-nautilus.sh`
 
-#!/bin/bash
-# Azure Network Security Group Automation Script
-# Project: Nautilus Infrastructure Migration`
+- `#!/bin/bash`
+- `# Azure Network Security Group Automation Script`
+- `# Project: Nautilus Infrastructure Migration`
 
-RG_NAME="kml_rg_main-f56fa9d90d7842e1"
-NSG_NAME="nautilus-nsg"
+- `RG_NAME="kml_rg_main-f56fa9d90d7842e1"`
+- `NSG_NAME="nautilus-nsg"`
 
-echo "Creating NSG..."
-az network nsg create -g $RG_NAME -n $NSG_NAME
+- `echo "Creating NSG..."`
+- `az network nsg create -g $RG_NAME -n $NSG_NAME`
 
-echo "Adding Inbound Rules..."
-az network nsg rule create -g $RG_NAME --nsg-name $NSG_NAME -n Allow-HTTP --priority 100 --destination-port-ranges 80 --access Allow --protocol Tcp
-az network nsg rule create -g $RG_NAME --nsg-name $NSG_NAME -n Allow-SSH --priority 110 --destination-port-ranges 22 --access Allow --protocol Tcp
+- `echo "Adding Inbound Rules..."`
+- `az network nsg rule create -g $RG_NAME --nsg-name $NSG_NAME -n Allow-HTTP --priority 100 --destination-port-ranges 80 --access Allow --protocol Tcp`
+- `az network nsg rule create -g $RG_NAME --nsg-name $NSG_NAME -n Allow-SSH --priority 110 --destination-port-ranges 22 --access Allow --protocol Tcp`
 
-echo "Final Configuration:"
-az network nsg rule list -g $RG_NAME --nsg-name $NSG_NAME --output table
+- `echo "Final Configuration:"`
+- `az network nsg rule list -g $RG_NAME --nsg-name $NSG_NAME --output table`
 
-📸 SCREENSHOT: Script execution and final rule verification
+📸 SCREENSHOTS: `Script execution and final rule verification`
+<img width="1183" height="822" alt="image" src="https://github.com/user-attachments/assets/e62d9a05-72c5-4bce-a648-7945093ca168" />
+<img width="1187" height="436" alt="image" src="https://github.com/user-attachments/assets/d2ad0bab-6fb5-4b7b-8fc3-c0feddb64280" />
+<img width="1187" height="438" alt="image" src="https://github.com/user-attachments/assets/db576d75-3954-470a-bc18-1a66cd11ac68" />
 
 ## Security Considerations
 
@@ -175,16 +178,3 @@ az network nsg rule list -g $RG_NAME --nsg-name $NSG_NAME --output table
 - Infrastructure as Code mindset
 
 - Secure network design
-
-
-
-
-
-
-
-
-
-<img width="1183" height="822" alt="image" src="https://github.com/user-attachments/assets/e62d9a05-72c5-4bce-a648-7945093ca168" />
-<img width="1187" height="436" alt="image" src="https://github.com/user-attachments/assets/d2ad0bab-6fb5-4b7b-8fc3-c0feddb64280" />
-<img width="1187" height="438" alt="image" src="https://github.com/user-attachments/assets/db576d75-3954-470a-bc18-1a66cd11ac68" />
-
