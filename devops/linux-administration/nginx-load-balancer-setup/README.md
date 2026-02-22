@@ -74,6 +74,9 @@ Expected output:
 LISTEN 0 511 0.0.0.0:5004
 
 📸 Screenshot: `Apache running and listening on port 5004`
+<img width="1033" height="854" alt="image" src="https://github.com/user-attachments/assets/355640a1-9ba2-4886-b73e-daf5055cc02c" />
+<img width="1031" height="841" alt="image" src="https://github.com/user-attachments/assets/ffdbf250-7ddf-45ca-8223-3ebce461e9fa" />
+<img width="1033" height="858" alt="image" src="https://github.com/user-attachments/assets/f815f010-ff60-435e-bb25-7691b40eae34" />
 
 ## Step 4: Configure Nginx Load Balancing
 
@@ -182,9 +185,7 @@ Resolution:
 
 
 <img width="1038" height="861" alt="image" src="https://github.com/user-attachments/assets/2fc983e2-bc90-4232-b781-6a3e64de1d98" />
-<img width="1033" height="854" alt="image" src="https://github.com/user-attachments/assets/355640a1-9ba2-4886-b73e-daf5055cc02c" />
-<img width="1031" height="841" alt="image" src="https://github.com/user-attachments/assets/ffdbf250-7ddf-45ca-8223-3ebce461e9fa" />
-<img width="1033" height="858" alt="image" src="https://github.com/user-attachments/assets/f815f010-ff60-435e-bb25-7691b40eae34" />
+
 <img width="1038" height="487" alt="image" src="https://github.com/user-attachments/assets/feee1d48-774c-46ed-ae04-bf92109c97c5" />
 <img width="1019" height="867" alt="image" src="https://github.com/user-attachments/assets/bc473fd7-2a06-4687-8c7e-e997243e7684" />
 <img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/2855ea06-b822-4561-a336-3b770e5da9ba" />
