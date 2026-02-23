@@ -52,7 +52,7 @@ v
 - `ssh-keygen -t rsa -b 2048 -f /root/.ssh/id_rsa -N ""`
 
 📸 Screenshot:
-
+<img width="1024" height="444" alt="image" src="https://github.com/user-attachments/assets/493117f2-1b1a-4b97-8ac8-f86b0184423f" />
 
 ## Step 3️: Retrieve Latest Amazon Linux 2 AMI
 `aws ec2 describe-images \
@@ -121,7 +121,7 @@ EOF`
   --output text`
 
 📸 Screenshot:
-
+<img width="1031" height="373" alt="image" src="https://github.com/user-attachments/assets/0faefc88-a7b1-48cc-bbbc-c32c528e8a8f" />
 
 ## Step 8️: SSH into the Instance
 `ssh root@<PUBLIC_IP>`
@@ -168,7 +168,7 @@ In production environments:
 - DevOps-ready troubleshooting mindset
 
 
-<img width="1024" height="444" alt="image" src="https://github.com/user-attachments/assets/493117f2-1b1a-4b97-8ac8-f86b0184423f" />
+
 <img width="1033" height="659" alt="image" src="https://github.com/user-attachments/assets/aa49f081-1ffd-4cc7-8ec5-2b3b954d6b78" />
 <img width="1029" height="770" alt="image" src="https://github.com/user-attachments/assets/a4bca0e2-a61a-47c5-a97c-63ca0b2fda4b" />
 <img width="1035" height="834" alt="image" src="https://github.com/user-attachments/assets/58e6806f-94bd-45e7-89b7-229832088d0e" />
@@ -180,6 +180,5 @@ In production environments:
 <img width="1026" height="858" alt="image" src="https://github.com/user-attachments/assets/b1d26184-c6a6-4369-848e-d557c5330c5c" />
 <img width="1013" height="861" alt="image" src="https://github.com/user-attachments/assets/0dba9622-4705-4796-82bf-aef693c1ad2d" />
 <img width="1032" height="857" alt="image" src="https://github.com/user-attachments/assets/c0eaea9c-80f8-4d79-9f39-c545dfacef2c" />
-<img width="1031" height="373" alt="image" src="https://github.com/user-attachments/assets/0faefc88-a7b1-48cc-bbbc-c32c528e8a8f" />
 
 
