@@ -51,7 +51,7 @@ Screenshot:
  - `--sku Standard_LRS \`
  - `--kind StorageV2`
 
-Screenshot:
+Screenshots:
 <img width="1036" height="864" alt="image" src="https://github.com/user-attachments/assets/1083ca38-86cf-4842-bbe0-43f9f0644a77" />
 <img width="1019" height="862" alt="image" src="https://github.com/user-attachments/assets/da411152-ee9e-4c04-ae1b-b9283bd4dcc1" />
 
