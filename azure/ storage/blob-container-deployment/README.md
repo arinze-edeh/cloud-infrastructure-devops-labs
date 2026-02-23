@@ -4,7 +4,7 @@
 
 - As part of the ongoing data migration process, the Nautilus DevOps team consolidated storage into Azure by creating private Blob containers. This project documents the deployment of:
 
-- Storage Account: devopsst1752
+- Storage Account: `devopsst1752`
 
 - Private Blob Container: `devops-blob-25744`
 
@@ -39,7 +39,7 @@ Screenshot:
 - `az group list --output table`
 
 Screenshot:
-
+<img width="1024" height="543" alt="image" src="https://github.com/user-attachments/assets/39880a81-5550-4350-a3ae-5f21c755ce2e" />
 
 ## Step 3: Create Storage Account
 - Create a new Storage Account named `devopsst1752`
@@ -52,8 +52,10 @@ Screenshot:
  - `--kind StorageV2`
 
 Screenshot:
+<img width="1036" height="864" alt="image" src="https://github.com/user-attachments/assets/1083ca38-86cf-4842-bbe0-43f9f0644a77" />
+<img width="1019" height="862" alt="image" src="https://github.com/user-attachments/assets/da411152-ee9e-4c04-ae1b-b9283bd4dcc1" />
 
-4. Create Private Blob Container
+## Step 4. Create Private Blob Container
 
 - Create a private Blob container
 - `az storage container create \`
@@ -62,7 +64,7 @@ Screenshot:
  - `--public-access off`
 
 Screenshot:
-
+<img width="1028" height="423" alt="image" src="https://github.com/user-attachments/assets/f58d3962-5185-426c-8aa2-3a397bbae847" />
 
 ## Step 5: Verify Blob Container
 
@@ -83,13 +85,3 @@ Screenshot:
 - Private Blob Container `devops-blob-25744` successfully provisioned.
 
 - Deployment verified using Azure CLI.
-
-
-
-
-<img width="1024" height="543" alt="image" src="https://github.com/user-attachments/assets/39880a81-5550-4350-a3ae-5f21c755ce2e" />
-<img width="1036" height="864" alt="image" src="https://github.com/user-attachments/assets/1083ca38-86cf-4842-bbe0-43f9f0644a77" />
-<img width="1019" height="862" alt="image" src="https://github.com/user-attachments/assets/da411152-ee9e-4c04-ae1b-b9283bd4dcc1" />
-<img width="1028" height="423" alt="image" src="https://github.com/user-attachments/assets/f58d3962-5185-426c-8aa2-3a397bbae847" />
-
-
