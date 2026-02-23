@@ -13,21 +13,13 @@ This workflow mirrors **real-world DevOps and Cloud Engineering practices**.
 
 ---
 
-## 🧱 Architecture
-- **Cloud Provider:** AWS
-- **Region:** us-east-1
-- **AMI:** Amazon Linux 2
-- **Instance Type:** t2.micro
-- **Access Method:** SSH (Key-based)
-- **Security Layer:** EC2 Security Group (Port 22)
-
-
-[ Local AWS Client ]
-|
-| SSH (TCP 22)
-v
-[ EC2 Instance (Amazon Linux 2) ]
-
+## Architecture
+- **Cloud Provider:** `AWS`
+- **Region:** `us-east-1`
+- **AMI:** `Amazon Linux 2`
+- **Instance Type:** `t2.micro`
+- **Access Method:** `SSH (Key-based`)
+- **Security Layer:** `EC2 Security Group (Port 22)`
 
 ---
 
@@ -52,7 +44,7 @@ v
 - `ssh-keygen -t rsa -b 2048 -f /root/.ssh/id_rsa -N ""`
 
 📸 Screenshot:
-<img width="1024" height="444" alt="image" src="https://github.com/user-attachments/assets/493117f2-1b1a-4b97-8ac8-f86b0184423f" />
+<img width="1033" height="659" alt="image" src="https://github.com/user-attachments/assets/aa49f081-1ffd-4cc7-8ec5-2b3b954d6b78" />
 
 ## Step 3️: Retrieve Latest Amazon Linux 2 AMI
 `aws ec2 describe-images \
@@ -62,7 +54,7 @@ v
   --output text`
 
 📸 Screenshot:
-
+<img width="1032" height="777" alt="image" src="https://github.com/user-attachments/assets/d475f0f6-56d2-4643-a16f-845435edd201" />
 
 ## Step 4️: Create Security Group (SSH Access)
 `aws ec2 create-security-group \
@@ -75,7 +67,7 @@ aws ec2 authorize-security-group-ingress \
   --cidr 0.0.0.0/0`
 
 📸 Screenshot:
-
+<img width="1028" height="742" alt="image" src="https://github.com/user-attachments/assets/9e2924d5-603e-4c39-a6a1-37a71663270a" />
 
 ## Step 5️: Configure EC2 User-Data (Bootstrapping)
 
@@ -101,7 +93,7 @@ systemctl restart sshd
 EOF`
 
 📸 Screenshot:
-
+<img width="1035" height="735" alt="image" src="https://github.com/user-attachments/assets/bf2e812a-6b10-4e79-9086-e4739113a413" />
 
 ## Step 6️: Launch EC2 Instance
 `aws ec2 run-instances \
@@ -111,8 +103,11 @@ EOF`
   --user-data file:///tmp/userdata.sh \
   --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=datacenter-ec2}]'`
 
-📸 Screenshot:
-
+📸 Screenshots:
+<img width="1017" height="855" alt="image" src="https://github.com/user-attachments/assets/97ffb5a1-b8fd-462e-999d-e889b564b3d3" />
+<img width="1026" height="858" alt="image" src="https://github.com/user-attachments/assets/b1d26184-c6a6-4369-848e-d557c5330c5c" />
+<img width="1013" height="861" alt="image" src="https://github.com/user-attachments/assets/0dba9622-4705-4796-82bf-aef693c1ad2d" />
+<img width="1032" height="857" alt="image" src="https://github.com/user-attachments/assets/c0eaea9c-80f8-4d79-9f39-c545dfacef2c" />
 
 ## Step 7️: Retrieve Public IP
 `aws ec2 describe-instances \
@@ -169,16 +164,13 @@ In production environments:
 
 
 
-<img width="1033" height="659" alt="image" src="https://github.com/user-attachments/assets/aa49f081-1ffd-4cc7-8ec5-2b3b954d6b78" />
+
 <img width="1029" height="770" alt="image" src="https://github.com/user-attachments/assets/a4bca0e2-a61a-47c5-a97c-63ca0b2fda4b" />
 <img width="1035" height="834" alt="image" src="https://github.com/user-attachments/assets/58e6806f-94bd-45e7-89b7-229832088d0e" />
-<img width="1032" height="777" alt="image" src="https://github.com/user-attachments/assets/d475f0f6-56d2-4643-a16f-845435edd201" />
+
 <img width="1032" height="508" alt="image" src="https://github.com/user-attachments/assets/13f8fc82-43e2-4669-959b-6cd74352781a" />
-<img width="1028" height="742" alt="image" src="https://github.com/user-attachments/assets/9e2924d5-603e-4c39-a6a1-37a71663270a" />
-<img width="1035" height="735" alt="image" src="https://github.com/user-attachments/assets/bf2e812a-6b10-4e79-9086-e4739113a413" />
-<img width="1017" height="855" alt="image" src="https://github.com/user-attachments/assets/97ffb5a1-b8fd-462e-999d-e889b564b3d3" />
-<img width="1026" height="858" alt="image" src="https://github.com/user-attachments/assets/b1d26184-c6a6-4369-848e-d557c5330c5c" />
-<img width="1013" height="861" alt="image" src="https://github.com/user-attachments/assets/0dba9622-4705-4796-82bf-aef693c1ad2d" />
-<img width="1032" height="857" alt="image" src="https://github.com/user-attachments/assets/c0eaea9c-80f8-4d79-9f39-c545dfacef2c" />
+
+
+
 
 
