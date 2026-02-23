@@ -1,4 +1,4 @@
-# Azure Blob Storage Deployment – DevOps Project
+# Azure Blob Storage Deployment - DevOps Project
 
 ## Project Overview
 
