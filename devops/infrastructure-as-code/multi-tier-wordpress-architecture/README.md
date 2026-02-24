@@ -180,8 +180,9 @@ X-Powered-By: PHP
 App is able to connect to the database using user kodekloud_cap
 ```
 
-📸 **Screenshot Placeholder:**
-`docs/screenshots/lbr-success.png`
+📸 **Screenshot:**
+
+<img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/561d7ffd-54cd-4f6d-b188-a6297f75e704" />
 
 ---
 
@@ -241,5 +242,5 @@ App is able to connect to the database using user kodekloud_cap
 <img width="1032" height="293" alt="image" src="https://github.com/user-attachments/assets/27b88a05-1bba-4b23-9344-5345ae9a8388" />
 <img width="1025" height="459" alt="image" src="https://github.com/user-attachments/assets/da73f4f8-28a4-4eff-ba16-3dc800b536ce" />
 <img width="1034" height="786" alt="image" src="https://github.com/user-attachments/assets/8a3f2a43-11fa-4a36-a789-7c2a9516501f" />
-<img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/561d7ffd-54cd-4f6d-b188-a6297f75e704" />
+
 
