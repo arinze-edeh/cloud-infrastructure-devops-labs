@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-- Objective: Create a storage account and public blob container in Azure.
+- Objective: `Create a storage account and public blob container in Azure.`
 
 - Storage Account Name: `devopsst26155`
 
@@ -71,7 +71,7 @@ Screenshot:
 Expected Outcome:
 - Storage account is created with public blob access enabled.
 
-Screenshot:
+Screenshots:
 <img width="1032" height="858" alt="image" src="https://github.com/user-attachments/assets/c5ee1461-0399-440a-bfe0-7a684efbe722" />
 <img width="1031" height="864" alt="image" src="https://github.com/user-attachments/assets/68bfe97e-f8ad-4916-a2b3-a8d4252e2902" />
 <img width="1039" height="629" alt="image" src="https://github.com/user-attachments/assets/9909116d-edaf-4152-a63b-7948eba7dc8c" />
@@ -132,12 +132,3 @@ Screenshot:
 - Result: Storage account and public blob container deployed successfully.
 
 - Access: Files in the container can be accessed anonymously via the container URL.
-
-- Next Steps: Use this container as the central repository for publicly accessible data during the migration process.
-
-
-
-
-
-
-
