@@ -1,4 +1,114 @@
+# AWS S3 Bucket Data Migration & Sync
 
+## Project Overview
+
+As part of a data migration initiative, this project demonstrates how to:
+- Create a **new private S3 bucket**
+- Migrate all data from an existing S3 bucket
+- Verify **data consistency and integrity**
+- Perform all operations using **AWS CLI**
+
+This task is executed entirely in the **us-east-1** region.
+
+---
+
+## Architecture Diagram (Logical)
+
+SOURCE S3 BUCKET
+    |
+    |  aws s3 sync
+    v
+DESTINATION S3 BUCKET (PRIVATE)
+
+---
+
+## Prerequisites
+
+- AWS CLI installed
+- IAM user with:
+  - S3 full access
+- Configured AWS credentials
+- Correct AWS region set
+
+---
+
+## Step 1: Verify AWS CLI Authentication
+
+aws sts get-caller-identity
+
+📸 Screenshot Placeholder:
+
+screenshots/01-aws-identity.png
+
+## Step 2: Set AWS Region
+aws configure set region us-east-1
+
+📸 Screenshot Placeholder:
+
+screenshots/02-set-region.png
+
+## Step 3: Create New Private S3 Bucket
+aws s3 mb s3://xfusion-sync-10728 --region us-east-1
+
+📸 Screenshot Placeholder:
+
+screenshots/03-create-bucket.png
+
+## Step 4: Verify Source Bucket Contents
+aws s3 ls s3://xfusion-s3-16544
+
+📸 Screenshot Placeholder:
+
+screenshots/04-source-bucket-list.png
+
+## Step 5: Sync Data from Source to Destination
+aws s3 sync s3://xfusion-s3-16544 s3://xfusion-sync-10728
+
+📸 Screenshot Placeholder:
+
+screenshots/05-sync-operation.png
+
+## Step 6: Validate Destination Bucket Data
+aws s3 ls s3://xfusion-sync-10728 --recursive
+
+📸 Screenshot Placeholder:
+
+screenshots/06-destination-bucket-list.png
+
+## Step 7: Verify Data Consistency (Optional Dry Run)
+aws s3 sync s3://xfusion-s3-16544 s3://xfusion-sync-10728 --dryrun
+
+📸 Screenshot Placeholder:
+
+screenshots/07-dry-run-check.png
+
+## Validation Checklist
+
+- Destination bucket created successfully
+
+- Bucket is private
+
+- All objects copied successfully
+
+- Object count matches source
+
+- No sync errors reported
+
+## Key AWS Services Used
+
+- Amazon Web Services
+
+- Amazon S3
+
+- AWS CLI
+
+- IAM
+
+## Outcome
+
+- Successful migration of all objects
+-  No data loss or corruption
+- Data consistency verified
 
 
 <img width="1036" height="469" alt="image" src="https://github.com/user-attachments/assets/2ef857c9-3fdb-4f53-8984-e59dfb9d55b8" />
