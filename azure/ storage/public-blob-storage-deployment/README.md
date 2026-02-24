@@ -1,4 +1,4 @@
-# Azure Blob Storage Deployment – Nautilus DevOps
+# Azure Blob Storage Deployment (Nautilus DevOps)
 
 As part of the data migration process, the Nautilus DevOps team is creating a new Azure storage account, `devopsst26155`, with a `public Blob container` named `devops-blob-23782`. Anonymous `read access` is `enabled` for both the `container` and `blobs`, allowing public access to the data and consolidating storage within the Azure environment as part of the ongoing infrastructure migration.
 
