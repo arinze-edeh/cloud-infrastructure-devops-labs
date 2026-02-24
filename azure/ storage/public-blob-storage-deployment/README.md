@@ -1,6 +1,6 @@
 # Azure Blob Storage Deployment – Nautilus DevOps
 
-- This repository documents the creation of a public Azure Blob container for the Nautilus DevOps data migration project. The goal is to centralize storage within Azure and provide public access to selected data.
+As part of the data migration process, the Nautilus DevOps team is creating a new Azure storage account, `devopsst26155`, with a `public Blob container` named `devops-blob-23782`. Anonymous `read access` is `enabled` for both the `container` and `blobs`, allowing public access to the data and consolidating storage within the Azure environment as part of the ongoing infrastructure migration.
 
 ## Project Overview
 
