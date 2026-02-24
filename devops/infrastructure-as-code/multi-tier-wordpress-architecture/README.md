@@ -126,7 +126,7 @@ sudo systemctl start httpd
 sudo systemctl enable httpd
 ```
 
-📸 **Screenshot Placeholder:**
+📸 **Screenshot:**
 `docs/screenshots/httpd-port-3002.png`
 
 ---
@@ -145,8 +145,8 @@ define( 'DB_HOST', '172.16.239.10' );
 EOF
 ```
 
-📸 **Screenshot Placeholder:**
-`docs/screenshots/wp-config.png`
+📸 **Screenshot:**
+<img width="1041" height="428" alt="image" src="https://github.com/user-attachments/assets/0ba7f6c2-44e2-44f1-8437-c83dd22781b6" />
 
 ---
 
@@ -238,7 +238,7 @@ App is able to connect to the database using user kodekloud_cap
 
 
 <img width="1035" height="453" alt="image" src="https://github.com/user-attachments/assets/655b8912-5aa0-4cac-806b-0ee6326fc982" />
-<img width="1041" height="428" alt="image" src="https://github.com/user-attachments/assets/0ba7f6c2-44e2-44f1-8437-c83dd22781b6" />
+
 <img width="1031" height="451" alt="image" src="https://github.com/user-attachments/assets/b9745257-3321-4834-b9ac-a16c7928229c" />
 <img width="1035" height="467" alt="image" src="https://github.com/user-attachments/assets/c96d5254-0749-4c75-b87b-919f952e7b86" />
 <img width="1032" height="293" alt="image" src="https://github.com/user-attachments/assets/27b88a05-1bba-4b23-9344-5345ae9a8388" />
