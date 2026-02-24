@@ -1,6 +1,222 @@
+# WordPress Multi-Host Deployment on Stratos Datacenter
 
+## Project Overview
 
+This project documents the deployment of a **highly available WordPress application** across multiple application servers with a centralized MariaDB backend inside the **Stratos Datacenter**.
+The infrastructure was preconfigured with a **shared NFS volume** mounted at `/var/www/html` across all application hosts, enabling consistent WordPress content delivery behind a Load Balancer (LBR).
 
+The objective was to validate **end-to-end application-to-database connectivity** through the LBR endpoint.
+
+---
+
+## Architecture Summary
+
+```
+                  ┌───────────────┐
+                  │ Load Balancer │
+                  │   (LBR UI)    │
+                  └───────┬───────┘
+                          │
+        ┌─────────────────┼─────────────────┐
+        │                 │                 │
+ ┌──────▼──────┐   ┌──────▼──────┐   ┌──────▼──────┐
+ │ App Server  │   │ App Server  │   │ App Server  │
+ │  stapp01    │   │  stapp02    │   │  stapp03    │
+ │ Apache:3002 │   │ Apache:3002 │   │ Apache:3002 │
+ └──────┬──────┘   └──────┬──────┘   └──────┬──────┘
+        │                 │                 │
+        └────────── Shared NFS ─────────────┘
+                   /var/www/html
+                          │
+                   ┌──────▼──────┐
+                   │ DB Server   │
+                   │ MariaDB     │
+                   │ kodekloud_db5│
+                   └─────────────┘
+```
+
+---
+
+## 🔧 Technologies Used
+
+* **Apache HTTP Server (httpd)**
+* **PHP 8.x**
+* **MariaDB 10.5**
+* **CentOS Stream 9**
+* **NFS Shared Storage**
+* **Linux Systemd Services**
+* **Load Balancer (LBR)**
+
+---
+
+## 📂 Shared Storage
+
+* **Storage Server Path:** `/vaw/www/html`
+* **Mounted On App Hosts:** `/var/www/html`
+* Purpose: Single source of truth for WordPress files across all app servers
+
+---
+
+## 🚀 Implementation Steps
+
+### 1️⃣ Database Server Configuration (stdb01)
+
+#### Install & Enable MariaDB
+
+```bash
+sudo yum install -y mariadb-server
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+```
+
+📸 **Screenshot Placeholder:**
+`docs/screenshots/mariadb-install.png`
+
+---
+
+#### Database & User Setup
+
+```sql
+CREATE DATABASE kodekloud_db5;
+CREATE USER 'kodekloud_cap'@'%' IDENTIFIED BY 'ksH85UJjhb';
+GRANT ALL PRIVILEGES ON kodekloud_db5.* TO 'kodekloud_cap'@'%';
+FLUSH PRIVILEGES;
+```
+
+📸 **Screenshot Placeholder:**
+`docs/screenshots/database-user-creation.png`
+
+---
+
+### 2️⃣ Application Servers Setup (stapp01, stapp02, stapp03)
+
+#### Install Apache & PHP Dependencies
+
+```bash
+sudo yum install -y httpd php php-mysqlnd php-gd php-mbstring
+```
+
+📸 **Screenshot Placeholder:**
+`docs/screenshots/php-httpd-install.png`
+
+---
+
+#### Configure Apache to Listen on Port 3002
+
+```bash
+sudo sed -i 's/Listen 80/Listen 3002/g' /etc/httpd/conf/httpd.conf
+```
+
+---
+
+#### Start & Enable Apache
+
+```bash
+sudo systemctl start httpd
+sudo systemctl enable httpd
+```
+
+📸 **Screenshot Placeholder:**
+`docs/screenshots/httpd-port-3002.png`
+
+---
+
+### 3️⃣ WordPress Database Configuration
+
+Create `wp-config.php` inside the shared directory:
+
+```bash
+sudo tee /var/www/html/wp-config.php <<EOF
+<?php
+define( 'DB_NAME', 'kodekloud_db5' );
+define( 'DB_USER', 'kodekloud_cap' );
+define( 'DB_PASSWORD', 'ksH85UJjhb' );
+define( 'DB_HOST', '172.16.239.10' );
+EOF
+```
+
+📸 **Screenshot Placeholder:**
+`docs/screenshots/wp-config.png`
+
+---
+
+### 4️⃣ Service Restart (All App Servers)
+
+```bash
+sudo systemctl restart httpd
+```
+
+---
+
+## 🔍 Validation & Health Checks
+
+### Apache Reachability
+
+```bash
+curl -I http://<app-server-ip>:3002
+```
+
+**Expected Result**
+
+```
+HTTP/1.1 200 OK
+Server: Apache/2.4.x
+X-Powered-By: PHP
+```
+
+📸 **Screenshot Placeholder:**
+`docs/screenshots/httpd-healthcheck.png`
+
+---
+
+### LBR Application Verification
+
+* Navigate to **LBR UI**
+* Click **App** button on the top bar
+
+✅ **Expected Message**
+
+```
+App is able to connect to the database using user kodekloud_cap
+```
+
+📸 **Screenshot Placeholder:**
+`docs/screenshots/lbr-success.png`
+
+---
+
+## ✅ Validation Checklist
+
+| Check                              | Status |
+| ---------------------------------- | ------ |
+| MariaDB installed & running        | ✅      |
+| Database created                   | ✅      |
+| DB user created & privileged       | ✅      |
+| Apache installed on all app hosts  | ✅      |
+| Apache listening on port 3002      | ✅      |
+| Shared storage mounted             | ✅      |
+| WordPress DB connectivity verified | ✅      |
+| LBR access successful              | ✅      |
+
+---
+
+## 🎯 Final Outcome
+
+* WordPress successfully deployed across **multiple app servers**
+* Database centralized on a **dedicated MariaDB host**
+* Application accessible via **Load Balancer**
+* Verified **end-to-end database connectivity**
+* Architecture supports **horizontal scaling & high availability**
+
+---
+
+## 🧠 Key Learnings
+
+* Multi-tier WordPress deployments require strict **port consistency**
+* Shared storage simplifies multi-host content synchronization
+* Explicit database grants prevent silent WordPress failures
+* LBR validation is the final proof of full-stack correctness
+---
 
 
 
