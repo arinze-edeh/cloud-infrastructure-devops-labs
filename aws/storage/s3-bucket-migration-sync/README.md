@@ -41,43 +41,50 @@ DESTINATION S3 BUCKET (PRIVATE)
 
 ## Step 2: Create the Destination Bucket
 - `aws s3 mb s3://xfusion-sync-10728 --region us-east-1`
+
 📸 Screenshot:
 <img width="1032" height="673" alt="image" src="https://github.com/user-attachments/assets/dbc26f33-dad8-4508-ba1e-3fb8c9d4d34e" />
+
+
+## Step 3: Check Source Bucket
+- `aws s3 ls s3://xfusion-s3-16544 --recursive --summarize | tail -n 2`
+
+📸 Screenshot:
+<img width="1028" height="648" alt="image" src="https://github.com/user-attachments/assets/49a14bd2-4b55-48d0-be54-9e4fb0d8a44b" />
 
 ## Step 3: Create New Private S3 Bucket
 aws s3 mb s3://xfusion-sync-10728 --region us-east-1
 
-📸 Screenshot Placeholder:
+📸 Screenshot:
 
-screenshots/03-create-bucket.png
 
 ## Step 4: Verify Source Bucket Contents
-aws s3 ls s3://xfusion-s3-16544
+- `aws s3 ls s3://xfusion-s3-16544`
 
-📸 Screenshot Placeholder:
+📸 Screenshot:
 
-screenshots/04-source-bucket-list.png
+<img width="1026" height="828" alt="image" src="https://github.com/user-attachments/assets/99237cf2-97d8-4081-86d1-929c97df4280" />
 
 ## Step 5: Sync Data from Source to Destination
-aws s3 sync s3://xfusion-s3-16544 s3://xfusion-sync-10728
+- `aws s3 sync s3://xfusion-s3-16544 s3://xfusion-sync-10728`
 
-📸 Screenshot Placeholder:
+📸 Screenshot:
 
-screenshots/05-sync-operation.png
+<img width="1032" height="499" alt="image" src="https://github.com/user-attachments/assets/c1122a7d-f7dd-4f4d-bc5b-a6055f2dd381" />
 
 ## Step 6: Validate Destination Bucket Data
-aws s3 ls s3://xfusion-sync-10728 --recursive
+- `aws s3 ls s3://xfusion-sync-10728 --recursive`
 
-📸 Screenshot Placeholder:
+📸 Screenshot:
 
-screenshots/06-destination-bucket-list.png
+<img width="1000" height="857" alt="image" src="https://github.com/user-attachments/assets/104fbab7-db51-4bcd-8601-ebc27ac917fb" />
 
-## Step 7: Verify Data Consistency (Optional Dry Run)
-aws s3 sync s3://xfusion-s3-16544 s3://xfusion-sync-10728 --dryrun
+## Step 7: Verify Data Consistency (Optional)
+- `aws s3 sync s3://xfusion-s3-16544 s3://xfusion-sync-10728 --dryrun`
 
-📸 Screenshot Placeholder:
+📸 Screenshot:
 
-screenshots/07-dry-run-check.png
+<img width="1025" height="335" alt="image" src="https://github.com/user-attachments/assets/fae5892a-d31c-4285-a7db-98263a3e8aef" />
 
 ## Validation Checklist
 
@@ -110,9 +117,9 @@ screenshots/07-dry-run-check.png
 
 
 
-<img width="1028" height="648" alt="image" src="https://github.com/user-attachments/assets/49a14bd2-4b55-48d0-be54-9e4fb0d8a44b" />
-<img width="1026" height="828" alt="image" src="https://github.com/user-attachments/assets/99237cf2-97d8-4081-86d1-929c97df4280" />
+
+
 <img width="1023" height="865" alt="image" src="https://github.com/user-attachments/assets/eca421ab-64eb-4be7-9643-ac847db4ed84" />
-<img width="1032" height="499" alt="image" src="https://github.com/user-attachments/assets/c1122a7d-f7dd-4f4d-bc5b-a6055f2dd381" />
-<img width="1000" height="857" alt="image" src="https://github.com/user-attachments/assets/104fbab7-db51-4bcd-8601-ebc27ac917fb" />
-<img width="1025" height="335" alt="image" src="https://github.com/user-attachments/assets/fae5892a-d31c-4285-a7db-98263a3e8aef" />
+
+
+
