@@ -119,11 +119,12 @@ sudo sed -i 's/Listen 80/Listen 3002/g' /etc/httpd/conf/httpd.conf
 
 ---
 
-#### Start & Enable Apache
+#### Start, Restart, & Enable Apache
 
 ```bash
 sudo systemctl start httpd
 sudo systemctl enable httpd
+sudo systemctl restart httpd
 ```
 
 📸 **Screenshot:**
@@ -238,11 +239,3 @@ App is able to connect to the database using user kodekloud_cap
 * Explicit database grants prevent silent WordPress failures
 * LBR validation is the final proof of full-stack correctness
 ---
-
-
-
-
-
-
-
-
