@@ -226,8 +226,6 @@ App is able to connect to the database using user kodekloud_cap
 
 
 
-
-<img width="1031" height="613" alt="image" src="https://github.com/user-attachments/assets/7b1b962f-9c06-4c71-aa41-b6b2f36f54be" />
 <img width="1033" height="853" alt="image" src="https://github.com/user-attachments/assets/2efd2453-0c8d-4708-8a9e-baedb72b0e7b" />
 <img width="1031" height="859" alt="image" src="https://github.com/user-attachments/assets/9cc8556c-d09a-4002-84b7-244d31f5129e" />
 <img width="1033" height="438" alt="image" src="https://github.com/user-attachments/assets/3422a69d-ced5-44b6-a0b0-4243c91ac126" />
