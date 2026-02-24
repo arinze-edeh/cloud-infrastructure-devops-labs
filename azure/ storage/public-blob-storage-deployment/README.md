@@ -104,11 +104,11 @@ Screenshot:
 
 ## Key Services Used
 
-- Azure Storage Account (StorageV2) – scalable blob storage.
+- Azure Storage Account (StorageV2) - scalable blob storage.
 
-- Azure Blob Storage – public container for data hosting.
+- Azure Blob Storage - public container for data hosting.
 
-- Azure CLI – command-line tool for resource creation and management.
+- Azure CLI - command-line tool for resource creation and management.
 
 ## Outcome
 
