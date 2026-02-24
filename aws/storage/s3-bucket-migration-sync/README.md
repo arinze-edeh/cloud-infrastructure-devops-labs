@@ -42,18 +42,19 @@ This task is executed entirely in the **us-east-1** region.
 📸 Screenshot:
 <img width="1028" height="648" alt="image" src="https://github.com/user-attachments/assets/49a14bd2-4b55-48d0-be54-9e4fb0d8a44b" />
 
-## Step 3: Create New Private S3 Bucket
-aws s3 mb s3://xfusion-sync-10728 --region us-east-1
-
-📸 Screenshot:
-
-
 ## Step 4: Verify Source Bucket Contents
 - `aws s3 ls s3://xfusion-s3-16544`
 
 📸 Screenshot:
 
 <img width="1026" height="828" alt="image" src="https://github.com/user-attachments/assets/99237cf2-97d8-4081-86d1-929c97df4280" />
+
+
+## Step 5: Check Destination Bucket
+-`aws s3 ls s3://xfusion-sync-10728 --recursive --summarize | tail -n 2`
+
+📸 Screenshot:
+<img width="1023" height="865" alt="image" src="https://github.com/user-attachments/assets/eca421ab-64eb-4be7-9643-ac847db4ed84" />
 
 ## Step 5: Sync Data from Source to Destination
 - `aws s3 sync s3://xfusion-s3-16544 s3://xfusion-sync-10728`
@@ -103,13 +104,3 @@ aws s3 mb s3://xfusion-sync-10728 --region us-east-1
 - Successful migration of all objects
 -  No data loss or corruption
 - Data consistency verified
-
-
-
-
-
-
-<img width="1023" height="865" alt="image" src="https://github.com/user-attachments/assets/eca421ab-64eb-4be7-9643-ac847db4ed84" />
-
-
-
