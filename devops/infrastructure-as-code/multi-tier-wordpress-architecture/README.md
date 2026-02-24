@@ -69,8 +69,12 @@ sudo systemctl start mariadb
 sudo systemctl enable mariadb
 ```
 
-📸 **Screenshot Placeholder:**
-`docs/screenshots/mariadb-install.png`
+📸 **Screenshot:**
+<img width="1028" height="486" alt="image" src="https://github.com/user-attachments/assets/6f26cdb4-4926-48b4-8417-3418eab7eec0" />
+<img width="1036" height="859" alt="image" src="https://github.com/user-attachments/assets/0a44a21e-5397-432d-9309-e824aef942b5" />
+<img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/cffbbb38-fa55-4346-9b68-043da2c5774f" />
+<img width="1032" height="655" alt="image" src="https://github.com/user-attachments/assets/f03b1e76-4ebf-44d2-98c1-81838af57a7b" />
+<img width="1032" height="598" alt="image" src="https://github.com/user-attachments/assets/60cdf792-9b8e-4be7-917e-fc385bfded1a" />
 
 ---
 
@@ -222,11 +226,7 @@ App is able to connect to the database using user kodekloud_cap
 
 
 
-<img width="1028" height="486" alt="image" src="https://github.com/user-attachments/assets/6f26cdb4-4926-48b4-8417-3418eab7eec0" />
-<img width="1036" height="859" alt="image" src="https://github.com/user-attachments/assets/0a44a21e-5397-432d-9309-e824aef942b5" />
-<img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/cffbbb38-fa55-4346-9b68-043da2c5774f" />
-<img width="1032" height="655" alt="image" src="https://github.com/user-attachments/assets/f03b1e76-4ebf-44d2-98c1-81838af57a7b" />
-<img width="1032" height="598" alt="image" src="https://github.com/user-attachments/assets/60cdf792-9b8e-4be7-917e-fc385bfded1a" />
+
 <img width="1031" height="613" alt="image" src="https://github.com/user-attachments/assets/7b1b962f-9c06-4c71-aa41-b6b2f36f54be" />
 <img width="1033" height="853" alt="image" src="https://github.com/user-attachments/assets/2efd2453-0c8d-4708-8a9e-baedb72b0e7b" />
 <img width="1031" height="859" alt="image" src="https://github.com/user-attachments/assets/9cc8556c-d09a-4002-84b7-244d31f5129e" />
