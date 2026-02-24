@@ -12,16 +12,6 @@ This task is executed entirely in the **us-east-1** region.
 
 ---
 
-## Architecture Diagram (Logical)
-
-SOURCE S3 BUCKET
-    |
-    |  aws s3 sync
-    v
-DESTINATION S3 BUCKET (PRIVATE)
-
----
-
 ## Prerequisites
 
 - AWS CLI installed
