@@ -69,12 +69,12 @@ sudo systemctl start mariadb
 sudo systemctl enable mariadb
 ```
 
-📸 **Screenshot:**
+📸 **Screenshots:**
 <img width="1028" height="486" alt="image" src="https://github.com/user-attachments/assets/6f26cdb4-4926-48b4-8417-3418eab7eec0" />
 <img width="1036" height="859" alt="image" src="https://github.com/user-attachments/assets/0a44a21e-5397-432d-9309-e824aef942b5" />
 <img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/cffbbb38-fa55-4346-9b68-043da2c5774f" />
 <img width="1032" height="655" alt="image" src="https://github.com/user-attachments/assets/f03b1e76-4ebf-44d2-98c1-81838af57a7b" />
-<img width="1032" height="598" alt="image" src="https://github.com/user-attachments/assets/60cdf792-9b8e-4be7-917e-fc385bfded1a" />
+
 
 ---
 
@@ -87,8 +87,8 @@ GRANT ALL PRIVILEGES ON kodekloud_db5.* TO 'kodekloud_cap'@'%';
 FLUSH PRIVILEGES;
 ```
 
-📸 **Screenshot Placeholder:**
-`docs/screenshots/database-user-creation.png`
+📸 **Screenshot:**
+<img width="1032" height="598" alt="image" src="https://github.com/user-attachments/assets/60cdf792-9b8e-4be7-917e-fc385bfded1a" />
 
 ---
 
