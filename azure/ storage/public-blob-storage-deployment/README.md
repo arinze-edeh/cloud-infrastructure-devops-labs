@@ -24,21 +24,6 @@
 
 - Knowledge of the target resource group and naming conventions.
 
-
-## Architecture
-
-Storage Account: Standard_LRS, StorageV2, public blob access enabled.
-
-Blob Container: Public read access (container level).
-
-+---------------------------+
-| Storage Account: devopsst26155 |
-| Region: East US           |
-| ------------------------  |
-| Blob Container: devops-blob-23782 |
-| Public Access: Container  |
-+---------------------------+
-
 ## Deployment Steps
 
 ## Step 1: Verify Azure Account
@@ -111,13 +96,11 @@ Screenshot:
 
 - Target resource group exists.
 
-- Storage account devopsst26155 created successfully.
+- Storage account `devopsst26155` created successfully.
 
-- Public blob container devops-blob-23782 created successfully.
+- Public blob container `devops-blob-23782` created successfully.
 
 - Anonymous read access for blobs and containers verified.
-
-- Container accessible via its primary endpoint URL.
 
 ## Key Services Used
 
@@ -131,4 +114,3 @@ Screenshot:
 
 - Result: Storage account and public blob container deployed successfully.
 
-- Access: Files in the container can be accessed anonymously via the container URL.
