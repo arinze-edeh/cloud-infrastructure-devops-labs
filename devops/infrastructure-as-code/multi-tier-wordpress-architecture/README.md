@@ -127,7 +127,16 @@ sudo systemctl enable httpd
 ```
 
 📸 **Screenshot:**
-`docs/screenshots/httpd-port-3002.png`
+
+<img width="1033" height="438" alt="image" src="https://github.com/user-attachments/assets/3422a69d-ced5-44b6-a0b0-4243c91ac126" />
+
+
+<img width="1035" height="453" alt="image" src="https://github.com/user-attachments/assets/655b8912-5aa0-4cac-806b-0ee6326fc982" />
+
+<img width="1031" height="451" alt="image" src="https://github.com/user-attachments/assets/b9745257-3321-4834-b9ac-a16c7928229c" />
+<img width="1035" height="467" alt="image" src="https://github.com/user-attachments/assets/c96d5254-0749-4c75-b87b-919f952e7b86" />
+<img width="1032" height="293" alt="image" src="https://github.com/user-attachments/assets/27b88a05-1bba-4b23-9344-5345ae9a8388" />
+<img width="1025" height="459" alt="image" src="https://github.com/user-attachments/assets/da73f4f8-28a4-4eff-ba16-3dc800b536ce" />
 
 ---
 
@@ -234,15 +243,6 @@ App is able to connect to the database using user kodekloud_cap
 
 
 
-<img width="1033" height="438" alt="image" src="https://github.com/user-attachments/assets/3422a69d-ced5-44b6-a0b0-4243c91ac126" />
-
-
-<img width="1035" height="453" alt="image" src="https://github.com/user-attachments/assets/655b8912-5aa0-4cac-806b-0ee6326fc982" />
-
-<img width="1031" height="451" alt="image" src="https://github.com/user-attachments/assets/b9745257-3321-4834-b9ac-a16c7928229c" />
-<img width="1035" height="467" alt="image" src="https://github.com/user-attachments/assets/c96d5254-0749-4c75-b87b-919f952e7b86" />
-<img width="1032" height="293" alt="image" src="https://github.com/user-attachments/assets/27b88a05-1bba-4b23-9344-5345ae9a8388" />
-<img width="1025" height="459" alt="image" src="https://github.com/user-attachments/assets/da73f4f8-28a4-4eff-ba16-3dc800b536ce" />
 
 
 
