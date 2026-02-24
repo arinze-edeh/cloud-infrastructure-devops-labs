@@ -34,18 +34,15 @@ DESTINATION S3 BUCKET (PRIVATE)
 
 ## Step 1: Verify AWS CLI Authentication
 
-aws sts get-caller-identity
+- `aws sts get-caller-identity`
 
-📸 Screenshot Placeholder:
+📸 Screenshot:
+<img width="1036" height="469" alt="image" src="https://github.com/user-attachments/assets/2ef857c9-3fdb-4f53-8984-e59dfb9d55b8" />
 
-screenshots/01-aws-identity.png
-
-## Step 2: Set AWS Region
-aws configure set region us-east-1
-
-📸 Screenshot Placeholder:
-
-screenshots/02-set-region.png
+## Step 2: Create the Destination Bucket
+- `aws s3 mb s3://xfusion-sync-10728 --region us-east-1`
+📸 Screenshot:
+<img width="1032" height="673" alt="image" src="https://github.com/user-attachments/assets/dbc26f33-dad8-4508-ba1e-3fb8c9d4d34e" />
 
 ## Step 3: Create New Private S3 Bucket
 aws s3 mb s3://xfusion-sync-10728 --region us-east-1
@@ -111,8 +108,8 @@ screenshots/07-dry-run-check.png
 - Data consistency verified
 
 
-<img width="1036" height="469" alt="image" src="https://github.com/user-attachments/assets/2ef857c9-3fdb-4f53-8984-e59dfb9d55b8" />
-<img width="1032" height="673" alt="image" src="https://github.com/user-attachments/assets/dbc26f33-dad8-4508-ba1e-3fb8c9d4d34e" />
+
+
 <img width="1028" height="648" alt="image" src="https://github.com/user-attachments/assets/49a14bd2-4b55-48d0-be54-9e4fb0d8a44b" />
 <img width="1026" height="828" alt="image" src="https://github.com/user-attachments/assets/99237cf2-97d8-4081-86d1-929c97df4280" />
 <img width="1023" height="865" alt="image" src="https://github.com/user-attachments/assets/eca421ab-64eb-4be7-9643-ac847db4ed84" />
