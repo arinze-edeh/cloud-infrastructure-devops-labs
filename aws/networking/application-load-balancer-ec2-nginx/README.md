@@ -75,7 +75,7 @@ Subnet: subnet-00b5049732d6fd4eb
 Security Group: default
 ```
 
-📸 Screenshots: EC2 instance details (running state)
+📸 Screenshots: `EC2 instance details (running state)`
 <img width="1039" height="805" alt="image" src="https://github.com/user-attachments/assets/9db485cd-3b2d-4b09-b3b9-d049498a51fb" />
 <img width="1034" height="828" alt="image" src="https://github.com/user-attachments/assets/a96ff6d9-c1e7-4ef8-80cf-5222400f45b8" />
 <img width="1033" height="829" alt="image" src="https://github.com/user-attachments/assets/e9412cb5-c775-4336-9de0-ca9f7f66fcde" />
