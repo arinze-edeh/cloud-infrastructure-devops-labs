@@ -13,20 +13,20 @@
 ## Architecture Summary
 
              ┌────────────────────────┐
-             │  Application Load       │
-             │  Balancer (ALB)         │
-             │  HTTP :80               │
+             │  Application Load      │
+             │  Balancer (ALB)        │
+             │  HTTP :80              │
              └───────────┬────────────┘
                          │
                ┌─────────▼─────────┐
-               │ Target Group       │
-               │ HTTP :80           │
+               │ Target Group      │
+               │ HTTP :80          │
                └─────────┬─────────┘
                          │
                 ┌────────▼────────┐
-                │ EC2 Instance     │
-                │ devops-ec2       │
-                │ Nginx :80        │
+                │ EC2 Instance    │
+                │ devops-ec2      │
+                │ Nginx :80       │
                 └─────────────────┘
 
 
