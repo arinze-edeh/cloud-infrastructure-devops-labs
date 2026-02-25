@@ -128,6 +128,7 @@ aws elbv2 create-target-group \
 ```
 
 📸 Screenshot: `Target group configuration`
+<img width="1039" height="863" alt="image" src="https://github.com/user-attachments/assets/e72780dc-56fa-48f8-9a0a-7308b2d2faee" />
 
 ### 5️⃣ Register EC2 Instance with Target Group
 ```bash
@@ -254,7 +255,6 @@ Nginx default welcome page loads successfully
 
 
 
-<img width="1039" height="863" alt="image" src="https://github.com/user-attachments/assets/e72780dc-56fa-48f8-9a0a-7308b2d2faee" />
 
 
 
