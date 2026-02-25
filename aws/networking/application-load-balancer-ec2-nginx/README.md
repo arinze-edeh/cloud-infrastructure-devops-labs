@@ -2,11 +2,11 @@
 
 ## Project Overview
 
-This project documents the deployment of an **internet-facing AWS Application Load Balancer (ALB)** that routes HTTP traffic to an existing **EC2 instance running Nginx** in the **us-east-1** region.
+- This project documents the deployment of an **internet-facing AWS Application Load Balancer (ALB)** that routes HTTP traffic to an existing **EC2 instance running Nginx** in the **us-east-1** region.
 
-The objective was to validate **end-to-end Layer 7 traffic flow** from the public internet through the ALB to the backend EC2 instance using **target groups and security group isolation**.
+- The objective was to validate **end-to-end Layer 7 traffic flow** from the public internet through the ALB to the backend EC2 instance using **target groups and security group isolation**.
 
-This setup represents a foundational **web ingress architecture** commonly used in scalable cloud environments.
+- This setup represents a foundational **web ingress architecture** commonly used in scalable cloud environments.
 
 ---
 
@@ -28,11 +28,6 @@ This setup represents a foundational **web ingress architecture** commonly used 
                 │ devops-ec2       │
                 │ Nginx :80        │
                 └─────────────────┘
-
-📸 **Screenshot Placeholder**
-
-
-[ Screenshot: ALB → Target Group → EC2 architecture ]
 
 
 ---
@@ -89,14 +84,14 @@ aws ec2 describe-vpcs \
   --query "Vpcs[0].VpcId" \
   --output text
 
-📸 Screenshot
+📸 Screenshot: `Default VPC verification` 
 
-[ Screenshot: Default VPC verification ]
 
 ### 3️⃣ Create Security Group for ALB
 
 Create a dedicated security group to allow public HTTP traffic.
 
+```bash
 aws ec2 create-security-group \
   --group-name devops-sg \
   --description "Security group for devops-alb" \
@@ -109,26 +104,25 @@ aws ec2 authorize-security-group-ingress \
   --protocol tcp \
   --port 80 \
   --cidr 0.0.0.0/0
+```
 
-📸 Screenshots
+📸 Screenshots: `ALB security group creation` `Inbound rule allowing HTTP :80` 
 
-[ Screenshot: ALB security group creation ]
-[ Screenshot: Inbound rule allowing HTTP :80 ]
 
 ### 4️⃣ Create Target Group
 
 Define where the ALB will forward incoming traffic.
 
+```bash
 aws elbv2 create-target-group \
   --name devops-tg \
   --protocol HTTP \
   --port 80 \
   --vpc-id vpc-0c3f56dfe99c83d0d \
   --target-type instance
+```
 
-📸 Screenshot
-
-[ Screenshot: Target group configuration ]
+📸 Screenshot: `Target group configuration`
 
 ### 5️⃣ Register EC2 Instance with Target Group
 aws elbv2 register-targets \
