@@ -75,8 +75,11 @@ Subnet: subnet-00b5049732d6fd4eb
 Security Group: default
 ```
 
-📸 Screenshot: EC2 instance details (running state)
+📸 Screenshots: EC2 instance details (running state)
 <img width="1039" height="805" alt="image" src="https://github.com/user-attachments/assets/9db485cd-3b2d-4b09-b3b9-d049498a51fb" />
+<img width="1034" height="828" alt="image" src="https://github.com/user-attachments/assets/a96ff6d9-c1e7-4ef8-80cf-5222400f45b8" />
+<img width="1033" height="829" alt="image" src="https://github.com/user-attachments/assets/e9412cb5-c775-4336-9de0-ca9f7f66fcde" />
+<img width="1035" height="870" alt="image" src="https://github.com/user-attachments/assets/fb14a97a-917f-4b14-bd57-19e73b2ff7dc" />
 
 ### 2️⃣ Confirm Default VPC
 ```bash
@@ -249,9 +252,7 @@ Nginx default welcome page loads successfully
 
 
 
-<img width="1034" height="828" alt="image" src="https://github.com/user-attachments/assets/a96ff6d9-c1e7-4ef8-80cf-5222400f45b8" />
-<img width="1033" height="829" alt="image" src="https://github.com/user-attachments/assets/e9412cb5-c775-4336-9de0-ca9f7f66fcde" />
-<img width="1035" height="870" alt="image" src="https://github.com/user-attachments/assets/fb14a97a-917f-4b14-bd57-19e73b2ff7dc" />
+
 <img width="1041" height="368" alt="image" src="https://github.com/user-attachments/assets/8935f55e-8710-4c3d-9334-7b7f34e8b579" />
 <img width="1047" height="481" alt="image" src="https://github.com/user-attachments/assets/7dfe32e8-0ebf-4b76-a6d3-2e480b3da011" />
 <img width="1034" height="695" alt="image" src="https://github.com/user-attachments/assets/2d437a9b-50f3-4b8a-8f7f-8ce02c2c561e" />
