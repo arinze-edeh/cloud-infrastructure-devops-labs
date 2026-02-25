@@ -175,7 +175,8 @@ aws elbv2 create-listener \
   --default-actions Type=forward,TargetGroupArn=<TARGET_GROUP_ARN>
 ```
 
-📸 Screenshot: `Listener forwarding HTTP :80 traffi`
+📸 Screenshot: `Listener forwarding HTTP :80 traffic`
+<img width="1221" height="865" alt="image" src="https://github.com/user-attachments/assets/0212a8f0-806b-4eba-80d1-8834d412a0f8" />
 
 
 ### 9️⃣ Allow ALB Traffic to EC2
@@ -191,7 +192,7 @@ aws ec2 authorize-security-group-ingress \
 ```
 
 📸 Screenshot: `EC2 security group allowing ALB source`
-
+<img width="1229" height="861" alt="image" src="https://github.com/user-attachments/assets/605fc323-a727-4452-bed5-c23254f06eb4" />
 
 ### 🔍 Validation & Health Checks
 ```bash
@@ -257,7 +258,6 @@ Nginx default welcome page loads successfully
 <img width="1036" height="727" alt="image" src="https://github.com/user-attachments/assets/4782d0f9-177e-4c39-9f97-eb559ea407d2" />
 <img width="1228" height="862" alt="image" src="https://github.com/user-attachments/assets/6802a510-d17f-4f87-ad93-eb2c49e6a645" />
 <img width="1223" height="854" alt="image" src="https://github.com/user-attachments/assets/0589ef65-e44c-4742-8ec8-a196f8be51a1" />
-<img width="1221" height="865" alt="image" src="https://github.com/user-attachments/assets/0212a8f0-806b-4eba-80d1-8834d412a0f8" />
-<img width="1229" height="861" alt="image" src="https://github.com/user-attachments/assets/605fc323-a727-4452-bed5-c23254f06eb4" />
+
 
 
