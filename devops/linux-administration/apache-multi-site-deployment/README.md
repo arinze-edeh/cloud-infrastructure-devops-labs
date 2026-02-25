@@ -84,11 +84,10 @@
 ````
 sudo systemctl start httpd
 sudo systemctl enable httpd
-sudo systemctl restart httpd
 ````
 
 📸 Screenshot:`Apache start and enable`
-
+<img width="1033" height="566" alt="image" src="https://github.com/user-attachments/assets/3f9fefa7-6ffd-43dd-8a0a-80448f67a547" />
 
 ## Step 5: Move Websites to DocumentRoot
 ````
@@ -96,7 +95,7 @@ sudo mv /tmp/ecommerce /var/www/html/
 sudo mv /tmp/demo /var/www/html/
 ````
 📸 Screenshot: `Move websites`
-
+<img width="1036" height="472" alt="image" src="https://github.com/user-attachments/assets/578240d7-883c-4421-94f0-77db2aea525c" />
 
 ## Step 6: Set Ownership and Permissions
 ````
@@ -105,7 +104,7 @@ sudo chown -R apache:apache /var/www/html/demo
 ````
 
 📸 Screenshot: ` set ownership`
-
+<img width="1036" height="429" alt="image" src="https://github.com/user-attachments/assets/3567b2fe-b0c4-4f96-b55b-6a13aef6835a" />
 
 ## Step 7: Validate Local Access via Curl
 
@@ -159,16 +158,3 @@ Websites accessible locally on:
 - Correct ownership and permissions prevent common access errors
 
 - Custom ports require explicit configuration in `httpd.conf`
-
-
-
-
-
-
-<img width="1036" height="472" alt="image" src="https://github.com/user-attachments/assets/578240d7-883c-4421-94f0-77db2aea525c" />
-<img width="1036" height="429" alt="image" src="https://github.com/user-attachments/assets/3567b2fe-b0c4-4f96-b55b-6a13aef6835a" />
-<img width="1033" height="566" alt="image" src="https://github.com/user-attachments/assets/3f9fefa7-6ffd-43dd-8a0a-80448f67a547" />
-
-
-
-
