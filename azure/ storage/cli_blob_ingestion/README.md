@@ -38,12 +38,13 @@
 
 ## 🚀 Implementation Steps
 
-1️⃣ Login to Azure
-az login
+### Step 1️: Login to Azure
+
+- `az login`
 
 Check your account details:
 
-az account show
+- `az account show`
 
 Expected Output:
 ````
@@ -65,7 +66,7 @@ Expected Output:
 📸 Screenshots:
 
 
-2️⃣ Verify Local File
+### 2️⃣ Verify Local File
 ls -l /tmp/xfusion.txt
 
 Expected Output:
@@ -75,7 +76,7 @@ Expected Output:
 📸 Screenshots:
 
 
-3️⃣ List Storage Accounts
+### 3️⃣ List Storage Accounts
 az storage account list --query "[].name" -o table
 
 Expected Output:
@@ -87,7 +88,7 @@ xfusionst15842
 📸 Screenshots:
 
 
-4️⃣ Upload File to Blob Container
+### 4️⃣ Upload File to Blob Container
 az storage blob upload \
   --account-name xfusionst15842 \
   --container-name xfusion-blob-29364 \
@@ -110,7 +111,7 @@ Expected Output:
 📸 Screenshots:
 
 
-5️⃣ Verify Upload
+### 5️⃣ Verify Upload
 az storage blob list \
   --account-name xfusionst15842 \
   --container-name xfusion-blob-29364 \
@@ -118,14 +119,19 @@ az storage blob list \
 
 Expected Output:
 
-Name         Blob Type    Blob Tier    Length    Content Type    Last Modified
------------  -----------  -----------  --------  --------------  -------------------------
-xfusion.txt  BlockBlob    Hot          33        text/plain      2026-02-25T02:40:19+00:00
+| Property       | Value                         |
+|----------------|-------------------------------|
+| Name           | xfusion.txt                   |
+| Blob Type      | BlockBlob                     |
+| Blob Tier      | Hot                           |
+| Length         | 33                            |
+| Content Type   | text/plain                    |
+| Last Modified  | 2026-02-25T02:40:19+00:00    |
 
 📸 Screenshots:
 
 
-✅ Validation Checklist
+### Validation Checklist
 
 | Check                      | Status |
 | -------------------------- | ------ |
@@ -136,13 +142,13 @@ xfusion.txt  BlockBlob    Hot          33        text/plain      2026-02-25T02:4
 | Blob visible in container  | ✅      |
 
 
-🎯 Final Outcome
+### Final Outcome
 
-Successfully uploaded /tmp/xfusion.txt to Azure Blob Storage.
+- Successfully uploaded /tmp/xfusion.txt to Azure Blob Storage.
 
-Verified end-to-end file upload using Azure CLI.
+- Verified end-to-end file upload using Azure CLI.
 
-Data is stored in a public Blob container for further access.
+- Data is stored in a public Blob container for further access.
 
 <img width="1031" height="569" alt="image" src="https://github.com/user-attachments/assets/488fecf2-3b9c-4ba1-aa0e-1f067bc76b65" />
 <img width="1029" height="587" alt="image" src="https://github.com/user-attachments/assets/018e6fe3-79c1-47eb-af59-a720025af1eb" />
