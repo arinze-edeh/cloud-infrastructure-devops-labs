@@ -67,37 +67,40 @@ Expected Output:
 
 
 ### 2️⃣ Verify Local File
-ls -l /tmp/xfusion.txt
+- `ls -l /tmp/xfusion.txt`
 
 Expected Output:
 
--rw-r--r-- 1 root root 33 Feb 25 02:21 /tmp/xfusion.txt
+- `-rw-r--r-- 1 root root 33 Feb 25 02:21 /tmp/xfusion.txt`
 
 📸 Screenshots:
 
 
 ### 3️⃣ List Storage Accounts
-az storage account list --query "[].name" -o table
+- `az storage account list --query "[].name" -o table`
 
 Expected Output:
-
+````
 Result
 --------------
 xfusionst15842
+````
 
 📸 Screenshots:
 
 
 ### 4️⃣ Upload File to Blob Container
+````
 az storage blob upload \
   --account-name xfusionst15842 \
   --container-name xfusion-blob-29364 \
   --name xfusion.txt \
   --file /tmp/xfusion.txt \
   --auth-mode login
+````
 
 Expected Output:
-
+````
 {
   "client_request_id": "5234cbe2-11f3-11f1-935a-da0a61c5debf",
   "content_md5": "Lu7zilatbGguzSz2Ecn5IQ==",
@@ -107,16 +110,17 @@ Expected Output:
   "request_server_encrypted": true,
   "version": "2022-11-02"
 }
-
+````
 📸 Screenshots:
 
 
 ### 5️⃣ Verify Upload
+````
 az storage blob list \
   --account-name xfusionst15842 \
   --container-name xfusion-blob-29364 \
   --output table
-
+````
 Expected Output:
 
 | Property       | Value                         |
