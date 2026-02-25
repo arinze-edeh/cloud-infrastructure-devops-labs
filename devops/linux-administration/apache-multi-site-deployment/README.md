@@ -52,7 +52,6 @@
 `scp -r /home/thor/demo steve@172.16.238.11:/tmp/`
 
 📸 Screenshot: `SCP transfer from jump_host to stapp02`
-<img width="1032" height="563" alt="image" src="https://github.com/user-attachments/assets/440f9138-d63b-442f-9eee-a9a66026a3b2" />
 <img width="1028" height="593" alt="image" src="https://github.com/user-attachments/assets/3192f0e8-070b-4298-a452-e75709d4f092" />
 
 ### 1.2 SSH into App Server 2
