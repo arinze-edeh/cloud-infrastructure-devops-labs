@@ -111,7 +111,7 @@ aws ec2 authorize-security-group-ingress \
   --cidr 0.0.0.0/0
 ```
 
-📸 Screenshots: `ALB security group creation` `Inbound rule allowing HTTP :80` 
+📸 Screenshot: `ALB security group creation` `Inbound rule allowing HTTP :80` 
 <img width="1034" height="695" alt="image" src="https://github.com/user-attachments/assets/2d437a9b-50f3-4b8a-8f7f-8ce02c2c561e" />
 
 ### 4️⃣ Create Target Group
