@@ -89,11 +89,14 @@ sudo systemctl restart httpd
 
 📸 Screenshot:`Apache start and enable`
 
+
 ## Step 5: Move Websites to DocumentRoot
 ````
 sudo mv /tmp/ecommerce /var/www/html/
 sudo mv /tmp/demo /var/www/html/
 ````
+📸 Screenshot: `Move websites`
+
 
 ## Step 6: Set Ownership and Permissions
 ````
@@ -101,16 +104,16 @@ sudo chown -R apache:apache /var/www/html/ecommerce
 sudo chown -R apache:apache /var/www/html/demo
 ````
 
-📸 Screenshot Placeholder:
-![Move websites and set ownership](./screenshots/move_ownership.png)
+📸 Screenshot: ` set ownership`
+
 
 ## Step 7: Validate Local Access via Curl
 
 ### 7.1 Ecommerce Site
-curl http://localhost:8085/ecommerce/
+`curl http://localhost:8085/ecommerce/`
 
 ### 7.2 Demo Site
-curl http://localhost:8085/demo/
+`curl http://localhost:8085/demo/`
 
 Expected Output: HTML content of respective websites
 
