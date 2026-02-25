@@ -59,7 +59,7 @@
 
 ## 🚀 Implementation Steps
 
-### 1️⃣ Discover Existing EC2 Instance
+### Step 1: Discover Existing EC2 Instance
 
 Identify the backend EC2 instance that will receive traffic.
 
@@ -81,7 +81,7 @@ Security Group: default
 <img width="1033" height="829" alt="image" src="https://github.com/user-attachments/assets/e9412cb5-c775-4336-9de0-ca9f7f66fcde" />
 <img width="1035" height="870" alt="image" src="https://github.com/user-attachments/assets/fb14a97a-917f-4b14-bd57-19e73b2ff7dc" />
 
-### 2️⃣ Confirm Default VPC
+###  Step 2: Confirm Default VPC
 ```bash
 aws ec2 describe-vpcs \
   --filters "Name=is-default,Values=true" \
@@ -92,7 +92,7 @@ aws ec2 describe-vpcs \
 📸 Screenshot: `Default VPC verification` 
 <img width="1041" height="368" alt="image" src="https://github.com/user-attachments/assets/8935f55e-8710-4c3d-9334-7b7f34e8b579" />
 
-### 3️⃣ Create Security Group for ALB
+### Step 3: Create Security Group for ALB
 
 Create a dedicated security group to allow public HTTP traffic.
 
@@ -114,7 +114,7 @@ aws ec2 authorize-security-group-ingress \
 📸 Screenshot: `ALB security group creation` `Inbound rule allowing HTTP :80` 
 <img width="1034" height="695" alt="image" src="https://github.com/user-attachments/assets/2d437a9b-50f3-4b8a-8f7f-8ce02c2c561e" />
 
-### 4️⃣ Create Target Group
+### Step 4: Create Target Group
 
 Define where the ALB will forward incoming traffic.
 
@@ -130,7 +130,7 @@ aws elbv2 create-target-group \
 📸 Screenshot: `Target group configuration`
 <img width="1039" height="863" alt="image" src="https://github.com/user-attachments/assets/e72780dc-56fa-48f8-9a0a-7308b2d2faee" />
 
-### 5️⃣ Register EC2 Instance with Target Group
+### Step 5: Register EC2 Instance with Target Group
 ```bash
 aws elbv2 register-targets \
   --target-group-arn <TARGET_GROUP_ARN> \
@@ -140,7 +140,7 @@ aws elbv2 register-targets \
 📸 Screenshot: `Target instance registered and healthy`
 <img width="1036" height="727" alt="image" src="https://github.com/user-attachments/assets/4782d0f9-177e-4c39-9f97-eb559ea407d2" />
 
-### 6️⃣ Retrieve Subnets for ALB
+### Step 6: Retrieve Subnets for ALB
 ```bash
 aws ec2 describe-subnets \
   --filters "Name=vpc-id,Values=vpc-0c3f56dfe99c83d0d" \
@@ -153,7 +153,7 @@ aws ec2 describe-subnets \
 📸 Screenshot: `Subnets in default VPC`
 <img width="1228" height="862" alt="image" src="https://github.com/user-attachments/assets/6802a510-d17f-4f87-ad93-eb2c49e6a645" />
 
-### 7️⃣ Create Application Load Balancer
+### Step 7: Create Application Load Balancer
 ```bash
 aws elbv2 create-load-balancer \
   --name devops-alb \
@@ -164,7 +164,7 @@ aws elbv2 create-load-balancer \
 📸 Screenshot: `ALB successfully created`
 <img width="1223" height="854" alt="image" src="https://github.com/user-attachments/assets/0589ef65-e44c-4742-8ec8-a196f8be51a1" />
 
-### 8️⃣ Create HTTP Listener
+### Step 8: Create HTTP Listener
 
 - Configure ALB to forward HTTP traffic to the target group.
 
@@ -180,7 +180,7 @@ aws elbv2 create-listener \
 <img width="1221" height="865" alt="image" src="https://github.com/user-attachments/assets/0212a8f0-806b-4eba-80d1-8834d412a0f8" />
 
 
-### 9️⃣ Allow ALB Traffic to EC2
+### Step 9: Allow ALB Traffic to EC2
 
 - Update EC2 security group to accept traffic only from the ALB.
 
@@ -195,7 +195,7 @@ aws ec2 authorize-security-group-ingress \
 📸 Screenshot: `EC2 security group allowing ALB source`
 <img width="1229" height="861" alt="image" src="https://github.com/user-attachments/assets/605fc323-a727-4452-bed5-c23254f06eb4" />
 
-### 🔍 Validation & Health Checks
+### 🔍 Validation Check
 ```bash
 Retrieve ALB DNS Name
 aws elbv2 describe-load-balancers \
@@ -204,15 +204,11 @@ aws elbv2 describe-load-balancers \
   --output text
 ```
 
-Access in browser:
+Expected Result:
 
 `http://devops-alb-1274082417.us-east-1.elb.amazonaws.com`
 
-Expected Result
-
-Nginx default welcome page loads successfully
-
-📸 Screenshot: `Nginx page accessed via ALB DNS`
+📸 Screenshot: `Retrieved Application Load Balancer DNS Endpoint`
 <img width="1215" height="862" alt="image" src="https://github.com/user-attachments/assets/38b8cdc3-dbf3-45b5-98c0-a909ca30eb99" />
 
 ### ✅ Validation Checklist
