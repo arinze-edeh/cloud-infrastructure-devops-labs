@@ -1,4 +1,155 @@
+# Static Websites Deployment on App Server 2 – xFusionCorp Industries
 
+## Project Overview
+
+- This project documents the deployment of two static websites (ecommerce and demo) on App Server 2 (stapp02) in the Stratos Datacenter. Apache HTTP Server is installed and configured to serve the websites on custom port 8085.
+
+- Website backups are initially stored on the jump_host and need to be migrated to stapp02 before deployment. The objective is to ensure local accessibility of the websites via curl commands.
+
+## Architecture Summary
+
+             ┌───────────────┐
+             │ Jump Host     │
+             │ (thor@jump)  │
+             └───────┬──────┘
+                     │ SCP Transfer
+                     ▼
+             ┌───────────────┐
+             │ App Server 2  │
+             │ stapp02       │
+             │ Apache:8085   │
+             └───────┬──────┘
+                     │
+      ┌──────────────┴──────────────┐
+      │ Web Root (/var/www/html)    │
+      │ ┌───────────┐  ┌─────────┐ │
+      │ │ ecommerce │  │ demo    │ │
+      │ └───────────┘  └─────────┘ │
+      └────────────────────────────┘
+
+## 🔧 Technologies Used
+
+- Apache HTTP Server (httpd)
+
+- CentOS Stream 9
+
+- Linux Systemd Services
+
+- SCP (Secure Copy Protocol)
+
+- Bash Shell Scripting
+
+## Step 1: Transfer Website Backups from Jump Host to App Server 2
+
+### 1.1 Execute SCP Commands from Jump Host (thor@jump_host)
+
+- Transfer the ecommerce backup
+ 
+`scp -r /home/thor/ecommerce steve@172.16.238.11:/tmp/`
+
+- Transfer the demo backup
+
+`scp -r /home/thor/demo steve@172.16.238.11:/tmp/`
+
+### 1.2 SSH into App Server 2
+
+`ssh steve@172.16.238.11`
+
+📸 Screenshot: `SCP transfer from jump_host to stapp02`
+
+
+## Step 2: Install Apache HTTP Server
+- `sudo yum install -y httpd`
+
+📸 Screenshot: `Apache installation`
+
+
+## Step 3: Configure Apache to Listen on Port 8085
+
+### Update the listening port from 80 to 8085
+`sudo sed -i 's/Listen 80/Listen 8085/g' /etc/httpd/conf/httpd.conf`
+
+### Verify the change
+`grep "Listen 8085" /etc/httpd/conf/httpd.conf`
+
+📸 Screenshot Placeholder:
+![Apache port configuration](./screenshots/apache_port.png)
+
+Step 4: Start and Enable Apache Service
+````
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo systemctl restart httpd
+````
+
+📸 Screenshot Placeholder:
+![Apache start and enable](./screenshots/apache_service.png)
+
+Step 5: Move Websites to DocumentRoot
+````
+sudo mv /tmp/ecommerce /var/www/html/
+sudo mv /tmp/demo /var/www/html/
+````
+
+Step 6: Set Ownership and Permissions
+````
+sudo chown -R apache:apache /var/www/html/ecommerce
+sudo chown -R apache:apache /var/www/html/demo
+````
+
+📸 Screenshot Placeholder:
+![Move websites and set ownership](./screenshots/move_ownership.png)
+
+## Step 7: Validate Local Access via Curl
+
+### 7.1 Ecommerce Site
+curl http://localhost:8085/ecommerce/
+
+### 7.2 Demo Site
+curl http://localhost:8085/demo/
+
+Expected Output: HTML content of respective websites
+
+📸 Screenshot Placeholder:
+![Curl validation - ecommerce](./screenshots/curl_ecommerce.png)
+![Curl validation - demo](./screenshots/curl_demo.png)
+
+✅ Validation Checklist
+| **Check**                      | **Status** |
+| ------------------------------ | ---------- |
+| Apache installed & running     | ✅          |
+| Apache listening on port 8085  | ✅          |
+| Website backups transferred    | ✅          |
+| Websites moved to DocumentRoot | ✅          |
+| Ownership & permissions set    | ✅          |
+| Websites reachable via curl    | ✅          |
+
+
+## Final Outcome
+
+- Two static websites deployed on stapp02
+
+Websites accessible locally on:
+
+- `http://localhost:8085/ecommerce/`
+
+- `http://localhost:8085/demo/`
+
+- Apache configured on custom `port 8085`
+
+- Ownership and permissions configured for proper access
+
+- Ready for further integration with production environment
+
+## Key Learnings
+
+- SCP is essential for transferring files across servers
+
+- Apache allows serving multiple websites via subdirectories
+
+- Correct ownership and permissions prevent common access errors
+
+- Custom ports require explicit configuration in `httpd.conf`
 
 
 <img width="1032" height="563" alt="image" src="https://github.com/user-attachments/assets/440f9138-d63b-442f-9eee-a9a66026a3b2" />
