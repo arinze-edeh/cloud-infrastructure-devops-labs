@@ -90,7 +90,7 @@ aws ec2 describe-vpcs \
 ```
 
 📸 Screenshot: `Default VPC verification` 
-
+<img width="1041" height="368" alt="image" src="https://github.com/user-attachments/assets/8935f55e-8710-4c3d-9334-7b7f34e8b579" />
 
 ### 3️⃣ Create Security Group for ALB
 
@@ -112,7 +112,7 @@ aws ec2 authorize-security-group-ingress \
 ```
 
 📸 Screenshots: `ALB security group creation` `Inbound rule allowing HTTP :80` 
-
+<img width="1034" height="695" alt="image" src="https://github.com/user-attachments/assets/2d437a9b-50f3-4b8a-8f7f-8ce02c2c561e" />
 
 ### 4️⃣ Create Target Group
 
@@ -253,9 +253,6 @@ Nginx default welcome page loads successfully
 
 
 
-<img width="1041" height="368" alt="image" src="https://github.com/user-attachments/assets/8935f55e-8710-4c3d-9334-7b7f34e8b579" />
-<img width="1047" height="481" alt="image" src="https://github.com/user-attachments/assets/7dfe32e8-0ebf-4b76-a6d3-2e480b3da011" />
-<img width="1034" height="695" alt="image" src="https://github.com/user-attachments/assets/2d437a9b-50f3-4b8a-8f7f-8ce02c2c561e" />
 <img width="1039" height="863" alt="image" src="https://github.com/user-attachments/assets/e72780dc-56fa-48f8-9a0a-7308b2d2faee" />
 <img width="1036" height="727" alt="image" src="https://github.com/user-attachments/assets/4782d0f9-177e-4c39-9f97-eb559ea407d2" />
 <img width="1228" height="862" alt="image" src="https://github.com/user-attachments/assets/6802a510-d17f-4f87-ad93-eb2c49e6a645" />
