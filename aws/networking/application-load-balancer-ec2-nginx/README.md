@@ -137,7 +137,7 @@ aws elbv2 register-targets \
 ```
 
 📸 Screenshot: `Target instance registered and healthy`
-
+<img width="1036" height="727" alt="image" src="https://github.com/user-attachments/assets/4782d0f9-177e-4c39-9f97-eb559ea407d2" />
 
 ### 6️⃣ Retrieve Subnets for ALB
 ```bash
@@ -255,7 +255,7 @@ Nginx default welcome page loads successfully
 
 
 <img width="1039" height="863" alt="image" src="https://github.com/user-attachments/assets/e72780dc-56fa-48f8-9a0a-7308b2d2faee" />
-<img width="1036" height="727" alt="image" src="https://github.com/user-attachments/assets/4782d0f9-177e-4c39-9f97-eb559ea407d2" />
+
 
 
 
