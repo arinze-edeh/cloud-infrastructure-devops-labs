@@ -79,10 +79,12 @@ Security Group: default
 <img width="1039" height="805" alt="image" src="https://github.com/user-attachments/assets/9db485cd-3b2d-4b09-b3b9-d049498a51fb" />
 
 ### 2️⃣ Confirm Default VPC
+```bash
 aws ec2 describe-vpcs \
   --filters "Name=is-default,Values=true" \
   --query "Vpcs[0].VpcId" \
   --output text
+```
 
 📸 Screenshot: `Default VPC verification` 
 
@@ -125,87 +127,91 @@ aws elbv2 create-target-group \
 📸 Screenshot: `Target group configuration`
 
 ### 5️⃣ Register EC2 Instance with Target Group
+```bash
 aws elbv2 register-targets \
   --target-group-arn <TARGET_GROUP_ARN> \
   --targets Id=i-011ae72a16b4398f6
+```
 
-📸 Screenshot
+📸 Screenshot: `Target instance registered and healthy`
 
-[ Screenshot: Target instance registered and healthy ]
 
 ### 6️⃣ Retrieve Subnets for ALB
+```bash
 aws ec2 describe-subnets \
   --filters "Name=vpc-id,Values=vpc-0c3f56dfe99c83d0d" \
   --query "Subnets[*].SubnetId" \
   --output text
+```
 
-Two subnets were selected to ensure high availability.
+- Two subnets were selected to ensure high availability.
 
-📸 Screenshot
+📸 Screenshot: `Subnets in default VPC`
 
-[ Screenshot: Subnets in default VPC ]
 
 ### 7️⃣ Create Application Load Balancer
+```bash
 aws elbv2 create-load-balancer \
   --name devops-alb \
   --subnets subnet-09d0365261e4c44c6 subnet-00b5049732d6fd4eb \
   --security-groups sg-0f2b9556d703a6a3c
+```
 
-📸 Screenshot
+📸 Screenshot: `ALB successfully created`
 
-[ Screenshot: ALB successfully created ]
 
 ### 8️⃣ Create HTTP Listener
 
-Configure ALB to forward HTTP traffic to the target group.
+- Configure ALB to forward HTTP traffic to the target group.
 
+```bash
 aws elbv2 create-listener \
   --load-balancer-arn <ALB_ARN> \
   --protocol HTTP \
   --port 80 \
   --default-actions Type=forward,TargetGroupArn=<TARGET_GROUP_ARN>
+```
 
-📸 Screenshot
-
-[ Screenshot: Listener forwarding HTTP :80 traffic ]
+📸 Screenshot: `Listener forwarding HTTP :80 traffi`
 
 
 ### 9️⃣ Allow ALB Traffic to EC2
 
-Update EC2 security group to accept traffic only from the ALB.
+- Update EC2 security group to accept traffic only from the ALB.
 
+```bash
 aws ec2 authorize-security-group-ingress \
   --group-id sg-0d5e8ddf23e6d5ab3 \
   --protocol tcp \
   --port 80 \
   --source-group sg-0f2b9556d703a6a3c
+```
 
-📸 Screenshot
-
-[ Screenshot: EC2 security group allowing ALB source ]
+📸 Screenshot: `EC2 security group allowing ALB source`
 
 
 ### 🔍 Validation & Health Checks
+```bash
 Retrieve ALB DNS Name
 aws elbv2 describe-load-balancers \
   --names devops-alb \
   --query 'LoadBalancers[0].DNSName' \
   --output text
+```
 
 Access in browser:
 
-http://devops-alb-1274082417.us-east-1.elb.amazonaws.com
+`http://devops-alb-1274082417.us-east-1.elb.amazonaws.com`
+
 Expected Result
 
 Nginx default welcome page loads successfully
 
-📸 Screenshot
-
-[ Screenshot: Nginx page accessed via ALB DNS ]
-
+📸 Screenshot: `Nginx page accessed via ALB DNS`
+<img width="1215" height="862" alt="image" src="https://github.com/user-attachments/assets/38b8cdc3-dbf3-45b5-98c0-a909ca30eb99" />
 
 ### ✅ Validation Checklist
-Check	Status
+
 | Check                             | Status |
 | --------------------------------- | ------ |
 | EC2 instance running              | ✅      |
@@ -255,5 +261,5 @@ Check	Status
 <img width="1223" height="854" alt="image" src="https://github.com/user-attachments/assets/0589ef65-e44c-4742-8ec8-a196f8be51a1" />
 <img width="1221" height="865" alt="image" src="https://github.com/user-attachments/assets/0212a8f0-806b-4eba-80d1-8834d412a0f8" />
 <img width="1229" height="861" alt="image" src="https://github.com/user-attachments/assets/605fc323-a727-4452-bed5-c23254f06eb4" />
-<img width="1215" height="862" alt="image" src="https://github.com/user-attachments/assets/38b8cdc3-dbf3-45b5-98c0-a909ca30eb99" />
+
 
