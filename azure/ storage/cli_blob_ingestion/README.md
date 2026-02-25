@@ -64,7 +64,7 @@ Expected Output:
 ````
 
 📸 Screenshots:
-
+<img width="1031" height="569" alt="image" src="https://github.com/user-attachments/assets/488fecf2-3b9c-4ba1-aa0e-1f067bc76b65" />
 
 ### 2️⃣ Verify Local File
 - `ls -l /tmp/xfusion.txt`
@@ -74,7 +74,7 @@ Expected Output:
 - `-rw-r--r-- 1 root root 33 Feb 25 02:21 /tmp/xfusion.txt`
 
 📸 Screenshots:
-
+<img width="1029" height="587" alt="image" src="https://github.com/user-attachments/assets/018e6fe3-79c1-47eb-af59-a720025af1eb" />
 
 ### 3️⃣ List Storage Accounts
 - `az storage account list --query "[].name" -o table`
@@ -87,7 +87,7 @@ xfusionst15842
 ````
 
 📸 Screenshots:
-
+<img width="1027" height="640" alt="image" src="https://github.com/user-attachments/assets/a583967d-4e89-47bb-9280-6f026aaf07a5" />
 
 ### 4️⃣ Upload File to Blob Container
 ````
@@ -112,7 +112,7 @@ Expected Output:
 }
 ````
 📸 Screenshots:
-
+<img width="1032" height="862" alt="image" src="https://github.com/user-attachments/assets/85fe9add-ba1a-4682-802c-0481995bca75" />
 
 ### 5️⃣ Verify Upload
 ````
@@ -133,7 +133,7 @@ Expected Output:
 | Last Modified  | 2026-02-25T02:40:19+00:00    |
 
 📸 Screenshots:
-
+<img width="1036" height="855" alt="image" src="https://github.com/user-attachments/assets/a3af339f-51ec-420e-ae01-dc6776d8441c" />
 
 ### Validation Checklist
 
@@ -153,12 +153,3 @@ Expected Output:
 - Verified end-to-end file upload using Azure CLI.
 
 - Data is stored in a public Blob container for further access.
-
-<img width="1031" height="569" alt="image" src="https://github.com/user-attachments/assets/488fecf2-3b9c-4ba1-aa0e-1f067bc76b65" />
-<img width="1029" height="587" alt="image" src="https://github.com/user-attachments/assets/018e6fe3-79c1-47eb-af59-a720025af1eb" />
-<img width="1027" height="640" alt="image" src="https://github.com/user-attachments/assets/a583967d-4e89-47bb-9280-6f026aaf07a5" />
-<img width="1032" height="862" alt="image" src="https://github.com/user-attachments/assets/85fe9add-ba1a-4682-802c-0481995bca75" />
-<img width="1036" height="855" alt="image" src="https://github.com/user-attachments/assets/a3af339f-51ec-420e-ae01-dc6776d8441c" />
-
-
-
