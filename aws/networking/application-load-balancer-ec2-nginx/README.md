@@ -251,13 +251,3 @@ Nginx default welcome page loads successfully
 - ALB DNS endpoint becomes the public entry point
 
 - Multi-subnet ALB enables high availability
-
-
-
-
-
-
-
-
-
-
