@@ -1,4 +1,191 @@
+# PHP 8.1 Application Deployment with Nginx (Unix Socket)
 
+## Project Overview
+This project documents the deployment of a **PHP-based application**
+using **Nginx and PHP-FPM 8.1** on a Nautilus application server
+within the Stratos Datacenter.
+
+The architecture uses **Unix socket communication**
+between Nginx and PHP-FPM for performance and security optimization.
+
+---
+
+## Infrastructure Context
+
+| Component | Value |
+|--------|------|
+| Server | stapp03 |
+| OS | CentOS Stream 9 |
+| Web Server | Nginx |
+| PHP Runtime | PHP-FPM 8.1 |
+| Port | 8096 |
+| Document Root | /var/www/html |
+| PHP Socket | /var/run/php-fpm/default.sock |
+
+---
+
+## Objectives
+
+- Install and configure Nginx on a non-default port
+- Install PHP-FPM version 8.1
+- Configure PHP-FPM to use a Unix socket
+- Integrate Nginx with PHP-FPM
+- Validate application accessibility from jump host
+
+---
+
+## Step 1: Access Application Server
+
+
+CONNECT to jump_host
+SSH into stapp03
+ACCEPT SSH fingerprint if prompted
+VERIFY successful login
+
+📸 Screenshot:
+
+
+Step 2: Enable PHP 8.1 Repository
+
+INSTALL Remi repository for EL9
+RESET default PHP module stream
+ENABLE php:remi-8.1 module
+VERIFY module activation
+
+📸 Screenshot:
+
+**
+
+Step 3: Install Required Packages
+
+INSTALL nginx package
+INSTALL php-fpm package
+VERIFY installation success
+
+📸 Screenshot Placeholder
+
+
+
+Step 4: Configure PHP-FPM Unix Socket
+
+EDIT PHP-FPM pool configuration
+SET listen path to /var/run/php-fpm/default.sock
+SET socket owner to nginx
+SET socket group to nginx
+SET socket permissions to 0660
+SAVE configuration
+
+📸 Screenshot:
+
+Step 5: Prepare Socket Directory
+
+CREATE /var/run/php-fpm directory if missing
+SET ownership to nginx:nginx
+VERIFY permissions
+
+📸 Screenshot Placeholder
+
+
+
+Step 6: Configure Nginx for PHP Application
+
+CREATE nginx server configuration
+SET listen port to 8096
+SET document root to /var/www/html
+DEFINE index files
+CONFIGURE PHP request handling
+PASS PHP requests to Unix socket
+SET SCRIPT_FILENAME parameter
+SAVE configuration
+
+📸 Screenshot:
+
+
+Step 7: Enable and Start Services
+
+ENABLE nginx service at boot
+ENABLE php-fpm service at boot
+START nginx
+START php-fpm
+VERIFY services are active
+
+📸 Screenshot:
+
+
+
+Step 8: Local Application Validation
+
+SEND HTTP request to localhost:8096
+CONFIRM HTTP 200 response
+VERIFY PHP version in headers
+
+📸 Screenshot:
+
+Step 9: Remote Validation from Jump Host
+
+EXIT stapp03 session
+FROM jump_host
+SEND HTTP request to stapp03:8096
+CONFIRM application output
+
+📸 Screenshot:
+
+System Design Notes
+Architecture Overview
+
+CLIENT REQUEST
+  → Nginx (Port 8096)
+    → PHP-FPM (Unix Socket)
+      → PHP Runtime Execution
+        → HTML Response
+
+📸 Screenshot:
+
+Design Decisions
+
+USE Unix socket instead of TCP
+REASON: Lower latency and reduced overhead
+USE non-default port (8096)
+REASON: Avoid port conflicts and improve service isolation
+USE php-fpm pool separation
+REASON: Better process control and scalability
+Performance Considerations
+Unix sockets reduce network stack overhead
+Faster IPC between Nginx and PHP-FPM
+Lower CPU utilization under load
+Security Considerations
+LIMIT socket access via owner/group permissions
+AVOID exposing PHP-FPM over TCP
+RUN services with least privilege
+Scalability Notes
+CAN add multiple PHP-FPM pools per application
+CAN front Nginx with load balancer
+CAN integrate with CI/CD for config automation
+Failure Scenarios & Mitigation
+IF socket missing → php-fpm service down
+MITIGATION: systemd monitoring and restart
+IF port unavailable → nginx startup failure
+MITIGATION: pre-flight port validation
+Result
+
+Nginx serves PHP application on port 8096
+
+PHP-FPM executes requests via Unix socket
+
+Application accessible from jump host
+
+Design aligns with production best practices
+
+Completion Checklist
+
+| Status | Item |
+|------|------|
+| ✅ | PHP 8.1 Installed |
+| ✅ | Nginx Configured |
+| ✅ | Unix Socket Enabled |
+| ✅ | Services Running |
+| ✅ | System Design Documented |
+| ✅ | Application Verified |
 
 
 <img width="1035" height="551" alt="image" src="https://github.com/user-attachments/assets/71d7736e-16a3-458f-8e6c-7c38f1b2e591" />
