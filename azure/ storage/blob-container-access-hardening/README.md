@@ -1,6 +1,6 @@
 # Azure Blob Container Access Hardening (Public → Private)
 
-## 📌 Project Overview
+## Project Overview
 
 This project documents a **security hardening operation** performed on an Azure Blob Storage container.
 A publicly accessible blob container was converted to **private access** to restrict data exposure and
@@ -11,7 +11,7 @@ authentication mechanism when explicit credentials were not provided.
 
 ---
 
-## 🏗️ Architecture Context
+## Architecture Context
 
 **Azure Subscription** 
 - `Azure Free Labs`
@@ -67,7 +67,7 @@ az account show
 📸 Screenshot:
 <img width="1030" height="580" alt="image" src="https://github.com/user-attachments/assets/867e0c69-c3cf-4264-8787-5e1ef4f96237" />
 
-📍 Step 2: Define Environment Variables
+## Step 2: Define Environment Variables
 ```
 export STORAGE_ACCOUNT="nautilusst17006"
 export TARGET_CONTAINER="nautilus-container-11818"
