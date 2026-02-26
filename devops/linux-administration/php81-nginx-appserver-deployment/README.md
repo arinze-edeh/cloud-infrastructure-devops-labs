@@ -110,8 +110,7 @@ START php-fpm
 VERIFY services are active
 ```
 📸 Screenshot:
-
-
+<img width="1034" height="357" alt="image" src="https://github.com/user-attachments/assets/efee23e6-2526-4af2-b0b1-a39ef054c667" />
 
 ## Step 8: Local Application Validation
 ```
@@ -208,7 +207,7 @@ MITIGATION: pre-flight port validation
 
 <img width="1034" height="584" alt="image" src="https://github.com/user-attachments/assets/8f25e5f8-8c67-4135-8c02-bce20d808320" />
 <img width="1032" height="307" alt="image" src="https://github.com/user-attachments/assets/a8aa66db-d62e-4543-9222-1a08f841a421" />
-<img width="1034" height="357" alt="image" src="https://github.com/user-attachments/assets/efee23e6-2526-4af2-b0b1-a39ef054c667" />
+
 
 
 
