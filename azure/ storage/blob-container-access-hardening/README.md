@@ -1,6 +1,7 @@
 # Azure Blob Container Access Hardening (Public → Private)
 
 ## 📌 Project Overview
+
 This project documents a **security hardening operation** performed on an Azure Blob Storage container.
 A publicly accessible blob container was converted to **private access** to restrict data exposure and
 align the storage account with internal-only access requirements.
@@ -19,20 +20,20 @@ Azure Free Labs
 
 **Storage Layer**
 
-Storage Account: nautilusst17006
-Region: eastus
+Storage Account: `nautilusst17006`
+Region: `eastus`
 
 
 **Blob Containers**
 
-nautilus-container-11818 (PUBLIC → PRIVATE)
+`nautilus-container-11818` (PUBLIC → PRIVATE)
 
-nautilus-priv-17871 (PRIVATE, unchanged)
+`nautilus-priv-17871` (PRIVATE, unchanged)
 
 
 ---
 
-## 🔐 Security Objective
+## Security Objective
 
 - Remove public access from a blob container
 - Prevent anonymous read access
@@ -41,7 +42,7 @@ nautilus-priv-17871 (PRIVATE, unchanged)
 
 ---
 
-## 🛠️ Tooling & Environment
+## Tooling & Environment
 
 - Azure CLI
 - Azure Cloud Environment
@@ -58,49 +59,53 @@ az account show
 
 #### Expected Outcome
 
-Subscription is Enabled
+- Subscription is Enabled
 
-Correct tenant and subscription selected
+- Correct tenant and subscription selected
 
-Service principal authenticated
+- Service principal authenticated
 
-📸 Screenshot Placeholder
-# screenshots/01-azure-account-show.png
+📸 Screenshot:
 
 📍 Step 2: Define Environment Variables
+```
 export STORAGE_ACCOUNT="nautilusst17006"
 export TARGET_CONTAINER="nautilus-container-11818"
 export REGION="eastus"
+```
 
 #### Purpose
 
-Avoid hard-coding values
+- Avoid hard-coding values
 
-Improve command readability
+- Improve command readability
 
-Enable reusability
+- Enable reusability
 
-📸 Screenshot Placeholder
-## screenshots/02-environment-variables.png
+📸 Screenshot:
 
-📍 Step 3: Check Current Container Access Level
+
+## Step 3: Check Current Container Access Level
+```
 az storage container show \
   --name $TARGET_CONTAINER \
   --account-name $STORAGE_ACCOUNT \
   --query "properties.publicAccess" \
   --output tsv
+```
 
 #### Observed Behavior
 
-CLI prompts for credentials
+- CLI prompts for credentials
 
-Azure automatically queries storage account key
+- Azure automatically queries storage account key
 
-Output returns container, confirming public access
+- Output returns container, confirming public access
 
 📸 Screenshot:
 
-📍 Step 4: Attempt RBAC Authentication (Observed Limitation)
+
+## Step 4: Attempt RBAC Authentication (Observed Limitation)
 ```
 az storage container set-permission \
   --name $TARGET_CONTAINER \
@@ -111,84 +116,92 @@ az storage container set-permission \
 
 #### Result
 
-Command fails
+- Command fails
 
---auth-mode login not supported in this context
+- --auth-mode login not supported in this context
 
-Allowed value defaults to key-based authentication
+- Allowed value defaults to key-based authentication
 
-📸 Screenshot Placeholder
-### screenshots/04-auth-mode-login-error.png
+📸 Screenshot:
 
-📍 Step 5: Convert Public Container to Private (Successful)
+
+## Step 5: Convert Public Container to Private (Successful)
+```
 az storage container set-permission \
   --name $TARGET_CONTAINER \
   --account-name $STORAGE_ACCOUNT \
   --public-access off
-Outcome
+```
 
-Azure CLI automatically retrieves storage account key
+#### Outcome
 
-Public access successfully disabled
+- Azure CLI automatically retrieves storage account key
 
-No impact on container contents
+- Public access successfully disabled
 
-📸 Screenshot Placeholder
-## screenshots/05-set-container-private.png
+- No impact on container contents
 
-📍 Step 6: Verify Access Level After Change
+📸 Screenshot:
+
+
+## Step 6: Verify Access Level After Change
+```
 az storage container show \
   --name $TARGET_CONTAINER \
   --account-name $STORAGE_ACCOUNT \
   --query "properties.publicAccess" \
   --output tsv
-Expected Output
-null
+```
+#### Expected Output
+
+`null`
 
 This confirms:
 
-No anonymous access
+- No anonymous access
 
-Container is fully private
+- Container is fully private
 
-📸 Screenshot Placeholder
-## screenshots/06-verify-private-access.png
+📸 Screenshot:
 
-📍 Step 7: List All Containers for Final Validation
+## Step 7: List All Containers for Final Validation
+```
 az storage container list \
   --account-name $STORAGE_ACCOUNT \
   --query "[].{Name:name, PublicAccess:properties.publicAccess}" \
   --output table
-Validation Results
+```
 
-nautilus-container-11818 → Private
+#### Validation Results
 
-nautilus-priv-17871 → Private (unchanged)
+- `nautilus-container-11818 → Private`
 
-📸 Screenshot Placeholder
-## screenshots/07-container-list-validation.png
+- `nautilus-priv-17871 → Private (unchanged)`
 
-✅ Final Outcome
+📸 Screenshot:
 
-✔ Public access successfully removed
 
-✔ No container recreation
+## Final Outcome
 
-✔ No data loss
+- Public access successfully removed
 
-✔ Existing private container preserved
+- No container recreation
 
-✔ Security posture improved
+- No data loss
 
-🧠 Key Learnings
+- Existing private container preserved
 
-Azure CLI will fallback to account keys if credentials are not explicitly supplied
+- Security posture improved
 
-Not all storage operations support --auth-mode login
+## Key Learnings
 
-Public blob access should be disabled unless explicitly required
+- Azure CLI will fallback to account keys if credentials are not explicitly supplied
 
-Validation steps are critical in security-sensitive operations
+- Not all storage operations support `--auth-mode login`
+
+- Public blob access should be disabled unless explicitly required
+
+- Validation steps are critical in security-sensitive operations
 
 
 ## Why This Matters
