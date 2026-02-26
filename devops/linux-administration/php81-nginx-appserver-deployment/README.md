@@ -126,8 +126,7 @@ SEND HTTP request to stapp03:8096
 CONFIRM application output
 ```
 📸 Screenshot:
-
-
+<img width="1036" height="584" alt="image" src="https://github.com/user-attachments/assets/b24fe68e-29a9-482d-a53a-bbe5c23d76a2" />
 
 ## System Design Notes
 
@@ -209,5 +208,5 @@ MITIGATION: pre-flight port validation
 <img width="1032" height="307" alt="image" src="https://github.com/user-attachments/assets/a8aa66db-d62e-4543-9222-1a08f841a421" />
 <img width="1034" height="357" alt="image" src="https://github.com/user-attachments/assets/efee23e6-2526-4af2-b0b1-a39ef054c667" />
 <img width="1037" height="507" alt="image" src="https://github.com/user-attachments/assets/c8c661f5-7291-4069-a704-d7e6030261c8" />
-<img width="1036" height="584" alt="image" src="https://github.com/user-attachments/assets/b24fe68e-29a9-482d-a53a-bbe5c23d76a2" />
+
 
