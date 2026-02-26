@@ -85,7 +85,7 @@ SET ownership to nginx:nginx
 VERIFY permissions
 ```
 📸 Screenshot:
-<img width="1036" height="828" alt="image" src="https://github.com/user-attachments/assets/71c1c0bd-70d6-4165-a19e-d8a12ba73635" />
+
 
 ## Step 6: Configure Nginx for PHP Application
 ```
@@ -99,6 +99,7 @@ SET SCRIPT_FILENAME parameter
 SAVE configuration
 ```
 📸 Screenshot:
+<img width="1036" height="828" alt="image" src="https://github.com/user-attachments/assets/71c1c0bd-70d6-4165-a19e-d8a12ba73635" />
 
 
 ## Step 7: Enable and Start Services
