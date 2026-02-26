@@ -6,7 +6,7 @@ This project demonstrates a **production-style monitoring setup** where an **EC2
 
 Upon breach, notifications are sent via an existing **SNS topic**, enabling proactive incident awareness.
 
-The implementation follows **CLI-first**, **least-assumption**, and **FAANG-style operational documentation** principles.
+The implementation follows **CLI-first**, **least-assumption**, and **Operational-style documentation** principles.
 
 ---
 
