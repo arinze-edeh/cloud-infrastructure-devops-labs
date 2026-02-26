@@ -73,6 +73,7 @@ aws ec2 describe-images \
 `Latest Ubuntu AMI ID retrieved`
 
 📸 Screenshot:
+<img width="1032" height="671" alt="image" src="https://github.com/user-attachments/assets/18aaebac-3a33-4963-bdbe-2c9039e5763e" />
 
 ### Step 3: Launch EC2 Instance
 ```
@@ -196,7 +197,7 @@ aws ec2 describe-instance-status \
 - Production-aligned observability pattern
 
 
-<img width="1032" height="671" alt="image" src="https://github.com/user-attachments/assets/18aaebac-3a33-4963-bdbe-2c9039e5763e" />
+
 <img width="1036" height="830" alt="image" src="https://github.com/user-attachments/assets/0e59112a-a29a-4ec1-8487-1afe5d85d9a5" />
 <img width="1032" height="825" alt="image" src="https://github.com/user-attachments/assets/521d1d1c-97c2-46e0-9c6a-87db195b9fb9" />
 <img width="1037" height="831" alt="image" src="https://github.com/user-attachments/assets/ff03585c-72da-48e9-8ce7-d96de01b2279" />
