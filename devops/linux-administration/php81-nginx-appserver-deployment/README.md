@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project documents the deployment of a PHP-based application on app server 3 within the Nautilus infrastructure at Stratos Datacenter, focusing on a production-ready setup. The deployment involves installing and configuring nginx to serve content on port 8096 with the document root /var/www/html, setting up PHP-FPM 8.1 to use the Unix socket /var/run/php-fpm/default.sock, and integrating nginx with PHP-FPM for optimized PHP processing. The pre-provided application files (index.php and info.php) are preserved without modification, and the configuration is verified from the jump host using curl http://stapp03:8096/index.php to ensure full functionality and accessibility.
+This project documents the deployment of a `PHP-based application` on app server 3 within the Nautilus infrastructure at Stratos Datacenter, focusing on a production-ready setup. The deployment involves installing and configuring nginx to serve content on port 8096 with the document root `/var/www/html`, setting up `PHP-FPM 8.1` to use the Unix socket `/var/run/php-fpm/default.sock`, and integrating `nginx with PHP-FPM for optimized PHP processing`. The pre-provided application files `(index.php and info.php)` are preserved without modification, and the configuration is verified from the jump host using `curl http://stapp03:8096/index.php` to ensure full functionality and accessibility.
 
 ---
 
