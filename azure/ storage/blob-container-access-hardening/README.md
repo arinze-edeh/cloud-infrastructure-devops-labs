@@ -50,11 +50,13 @@ nautilus-priv-17871 (PRIVATE, unchanged)
 
 ---
 
-## 📍 Step 1: Validate Active Azure Account
+## Step 1: Validate Active Azure Account
 
-```bash
+```
 az account show
-Expected Outcome
+```
+
+#### Expected Outcome
 
 Subscription is Enabled
 
@@ -69,7 +71,8 @@ Service principal authenticated
 export STORAGE_ACCOUNT="nautilusst17006"
 export TARGET_CONTAINER="nautilus-container-11818"
 export REGION="eastus"
-Purpose
+
+#### Purpose
 
 Avoid hard-coding values
 
@@ -86,7 +89,8 @@ az storage container show \
   --account-name $STORAGE_ACCOUNT \
   --query "properties.publicAccess" \
   --output tsv
-Observed Behavior
+
+#### Observed Behavior
 
 CLI prompts for credentials
 
@@ -94,16 +98,18 @@ Azure automatically queries storage account key
 
 Output returns container, confirming public access
 
-📸 Screenshot Placeholder
-### screenshots/03-container-public-access.png
+📸 Screenshot:
 
 📍 Step 4: Attempt RBAC Authentication (Observed Limitation)
+```
 az storage container set-permission \
   --name $TARGET_CONTAINER \
   --account-name $STORAGE_ACCOUNT \
   --public-access off \
   --auth-mode login
-Result
+```
+
+#### Result
 
 Command fails
 
@@ -185,18 +191,19 @@ Public blob access should be disabled unless explicitly required
 Validation steps are critical in security-sensitive operations
 
 
-⭐ Why This Matters
+## Why This Matters
 
-Misconfigured public storage is one of the top cloud security risks.
+- Misconfigured public storage is one of the top cloud security risks.
+
 This project demonstrates:
 
-Practical cloud governance
+- Practical cloud governance
 
-Defensive security thinking
+- Defensive security thinking
 
-Real-world CLI troubleshooting
+- Real-world CLI troubleshooting
 
-Verification-driven execution
+- Verification-driven execution
 
 
 <img width="1030" height="580" alt="image" src="https://github.com/user-attachments/assets/867e0c69-c3cf-4264-8787-5e1ef4f96237" />
