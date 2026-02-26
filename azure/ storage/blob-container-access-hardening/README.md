@@ -103,7 +103,7 @@ az storage container show \
 - Output returns container, confirming public access
 
 📸 Screenshot:
-
+<img width="1034" height="850" alt="image" src="https://github.com/user-attachments/assets/ca111580-4f2d-48db-abf4-b3081a07056c" />
 
 ## Step 4: Attempt RBAC Authentication (Observed Limitation)
 ```
@@ -221,7 +221,7 @@ This project demonstrates:
 
 
 
-<img width="1034" height="850" alt="image" src="https://github.com/user-attachments/assets/ca111580-4f2d-48db-abf4-b3081a07056c" />
+
 <img width="1032" height="672" alt="image" src="https://github.com/user-attachments/assets/e18a314d-1593-4b43-beb6-f45da6924d16" />
 <img width="1032" height="510" alt="image" src="https://github.com/user-attachments/assets/1e648b06-5cb4-4352-a41a-f821935864ee" />
 <img width="1033" height="539" alt="image" src="https://github.com/user-attachments/assets/0874306a-f075-47e8-89a7-4f54a2d5567a" />
