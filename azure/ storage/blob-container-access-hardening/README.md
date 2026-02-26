@@ -65,6 +65,7 @@ az account show
 - Service principal authenticated
 
 📸 Screenshot:
+<img width="1030" height="580" alt="image" src="https://github.com/user-attachments/assets/867e0c69-c3cf-4264-8787-5e1ef4f96237" />
 
 📍 Step 2: Define Environment Variables
 ```
@@ -178,7 +179,7 @@ az storage container list \
 - `nautilus-priv-17871 → Private (unchanged)`
 
 📸 Screenshot:
-
+<img width="1039" height="425" alt="image" src="https://github.com/user-attachments/assets/7a391df4-3019-467c-953e-e311257ff107" />
 
 ## Final Outcome
 
@@ -218,11 +219,11 @@ This project demonstrates:
 - Verification-driven execution
 
 
-<img width="1030" height="580" alt="image" src="https://github.com/user-attachments/assets/867e0c69-c3cf-4264-8787-5e1ef4f96237" />
+
 <img width="1031" height="751" alt="image" src="https://github.com/user-attachments/assets/1122a816-f0af-4940-a243-b86c5fbacdff" />
 <img width="1034" height="850" alt="image" src="https://github.com/user-attachments/assets/ca111580-4f2d-48db-abf4-b3081a07056c" />
 <img width="1032" height="672" alt="image" src="https://github.com/user-attachments/assets/e18a314d-1593-4b43-beb6-f45da6924d16" />
 <img width="1032" height="510" alt="image" src="https://github.com/user-attachments/assets/1e648b06-5cb4-4352-a41a-f821935864ee" />
 <img width="1033" height="539" alt="image" src="https://github.com/user-attachments/assets/0874306a-f075-47e8-89a7-4f54a2d5567a" />
-<img width="1039" height="425" alt="image" src="https://github.com/user-attachments/assets/7a391df4-3019-467c-953e-e311257ff107" />
+
 
