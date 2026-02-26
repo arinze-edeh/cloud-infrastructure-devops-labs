@@ -118,74 +118,81 @@ aws cloudwatch put-metric-alarm \
   --alarm-actions <sns-topic-arn> \
   --unit Percent
 ```
-Alarm Logic
 
-Metric: CPUUtilization
+#### Alarm Logic
 
-Threshold: ≥ 90%
+- Metric: CPUUtilization
 
-Period: 5 minutes
+- Threshold: ≥ 90%
 
-Evaluation: 1 datapoint
+- Period: 5 minutes
 
-📸 Screenshot Placeholder
-screenshots/cloudwatch-alarm-creation.png
+- Evaluation: 1 datapoint
 
-6️⃣ Validate Alarm Configuration
+📸 Screenshot:
+
+
+### Step 6: Validate Alarm Configuration
+```
 aws cloudwatch describe-alarms \
   --alarm-names "nautilus-alarm"
+```
 
-Expected Outcome
-
+#### Expected Outcome
+```
 Alarm exists
 
 State = OK
 
 SNS action attached
+```
+📸 Screenshot:
 
-📸 Screenshot Placeholder
-screenshots/cloudwatch-alarm-validation.png
 
-7️⃣ Confirm EC2 Health Status
+### Step 7: Confirm EC2 Health Status
+```
 aws ec2 describe-instance-status \
   --instance-ids <instance-id>
+```
 
-Expected Outcome
+#### Expected Outcome
 
-Instance state: running
+- Instance state: `running`
 
-System & instance checks: passed
+- System & instance checks: `passed`
 
-📸 Screenshot Placeholder
-screenshots/ec2-health-check.png
+📸 Screenshot:
 
-✅ Final Outcome
 
-EC2 instance successfully deployed
+## Final Outcome
 
-CPU utilization monitored via CloudWatch
+- EC2 instance successfully deployed
 
-Alarm triggers on CPU ≥ 90%
+- CPU utilization monitored via CloudWatch
 
-SNS notifications configured
+- Alarm triggers on CPU ≥ 90%
 
-Instance health validated
+- SNS notifications configured
 
-🧹 Optional Cleanup
-aws cloudwatch delete-alarms --alarm-names nautilus-alarm
-aws ec2 terminate-instances --instance-ids <instance-id>
+- Instance health validated
 
-🔐 Design Notes
+## Optional Cleanup
 
-Monitoring-first architecture
+- `aws cloudwatch delete-alarms --alarm-names nautilus-alarm`
 
-CLI-driven reproducibility
+- `aws ec2 terminate-instances --instance-ids <instance-id>`
 
-Threshold-based alerting
+## Design Notes
 
-Minimal assumptions
+- Monitoring-first architecture
 
-Production-aligned observability pattern
+- CLI-driven reproducibility
+
+- Threshold-based alerting
+
+- Minimal assumptions
+
+- Production-aligned observability pattern
 
 <img width="1032" height="504" alt="image" src="https://github.com/user-attachments/assets/4e982204-50b9-4b62-9c55-fe33589e8ac5" />
 <img width="1032" height="671" alt="image" src="https://github.com/user-attachments/assets/18aaebac-3a33-4963-bdbe-2c9039e5763e" />
