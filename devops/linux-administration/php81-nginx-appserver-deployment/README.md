@@ -40,7 +40,7 @@ VERIFY successful login
 ```
 
 📸 Screenshot:
-
+<img width="1035" height="551" alt="image" src="https://github.com/user-attachments/assets/71d7736e-16a3-458f-8e6c-7c38f1b2e591" />
 
 ## Step 2: Enable PHP 8.1 Repository
 ```
@@ -196,7 +196,7 @@ MITIGATION: pre-flight port validation
 | ✅ | Application Verified |
 
 
-<img width="1035" height="551" alt="image" src="https://github.com/user-attachments/assets/71d7736e-16a3-458f-8e6c-7c38f1b2e591" />
+
 <img width="1040" height="860" alt="image" src="https://github.com/user-attachments/assets/0495cbb4-b369-4d5f-8212-2d6c5c692b27" />
 <img width="1038" height="707" alt="image" src="https://github.com/user-attachments/assets/06564189-3b35-40ec-90b3-32918179de29" />
 <img width="1030" height="490" alt="image" src="https://github.com/user-attachments/assets/cd7d3418-c152-47ae-8335-6ef00d4a4cf3" />
