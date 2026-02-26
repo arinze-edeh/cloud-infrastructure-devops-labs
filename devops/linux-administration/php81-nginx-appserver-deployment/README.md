@@ -76,6 +76,7 @@ SET socket permissions to 0660
 SAVE configuration
 ```
 📸 Screenshot:
+<img width="1037" height="303" alt="image" src="https://github.com/user-attachments/assets/375cc71c-3bb4-4a59-823b-56caa33eb8c9" />
 
 ## Step 5: Prepare Socket Directory
 ```
@@ -83,7 +84,7 @@ CREATE /var/run/php-fpm directory if missing
 SET ownership to nginx:nginx
 VERIFY permissions
 ```
-📸 Screenshot Placeholder
+📸 Screenshot:
 
 
 
@@ -203,7 +204,7 @@ MITIGATION: pre-flight port validation
 
 
 
-<img width="1037" height="303" alt="image" src="https://github.com/user-attachments/assets/375cc71c-3bb4-4a59-823b-56caa33eb8c9" />
+
 <img width="1036" height="828" alt="image" src="https://github.com/user-attachments/assets/71c1c0bd-70d6-4165-a19e-d8a12ba73635" />
 <img width="1034" height="584" alt="image" src="https://github.com/user-attachments/assets/8f25e5f8-8c67-4135-8c02-bce20d808320" />
 <img width="1032" height="307" alt="image" src="https://github.com/user-attachments/assets/a8aa66db-d62e-4543-9222-1a08f841a421" />
