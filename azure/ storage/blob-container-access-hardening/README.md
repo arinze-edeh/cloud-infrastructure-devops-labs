@@ -118,12 +118,12 @@ az storage container set-permission \
 
 - Command fails
 
-- --auth-mode login not supported in this context
+- `--auth-mode` login not supported in this context
 
 - Allowed value defaults to key-based authentication
 
 📸 Screenshot:
-
+<img width="1032" height="672" alt="image" src="https://github.com/user-attachments/assets/e18a314d-1593-4b43-beb6-f45da6924d16" />
 
 ## Step 5: Convert Public Container to Private (Successful)
 ```
@@ -222,7 +222,7 @@ This project demonstrates:
 
 
 
-<img width="1032" height="672" alt="image" src="https://github.com/user-attachments/assets/e18a314d-1593-4b43-beb6-f45da6924d16" />
+
 <img width="1032" height="510" alt="image" src="https://github.com/user-attachments/assets/1e648b06-5cb4-4352-a41a-f821935864ee" />
 <img width="1033" height="539" alt="image" src="https://github.com/user-attachments/assets/0874306a-f075-47e8-89a7-4f54a2d5567a" />
 
