@@ -83,7 +83,7 @@ export REGION="eastus"
 - Enable reusability
 
 📸 Screenshot:
-
+<img width="1031" height="751" alt="image" src="https://github.com/user-attachments/assets/1122a816-f0af-4940-a243-b86c5fbacdff" />
 
 ## Step 3: Check Current Container Access Level
 ```
@@ -220,7 +220,7 @@ This project demonstrates:
 
 
 
-<img width="1031" height="751" alt="image" src="https://github.com/user-attachments/assets/1122a816-f0af-4940-a243-b86c5fbacdff" />
+
 <img width="1034" height="850" alt="image" src="https://github.com/user-attachments/assets/ca111580-4f2d-48db-abf4-b3081a07056c" />
 <img width="1032" height="672" alt="image" src="https://github.com/user-attachments/assets/e18a314d-1593-4b43-beb6-f45da6924d16" />
 <img width="1032" height="510" alt="image" src="https://github.com/user-attachments/assets/1e648b06-5cb4-4352-a41a-f821935864ee" />
