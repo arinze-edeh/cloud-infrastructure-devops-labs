@@ -13,22 +13,21 @@ authentication mechanism when explicit credentials were not provided.
 
 ## 🏗️ Architecture Context
 
-**Azure Subscription**
-
-Azure Free Labs
+**Azure Subscription** 
+- `Azure Free Labs`
 
 
 **Storage Layer**
 
-Storage Account: `nautilusst17006`
-Region: `eastus`
+- Storage Account: `nautilusst17006`
+- Region: `eastus`
 
 
 **Blob Containers**
 
-`nautilus-container-11818` (PUBLIC → PRIVATE)
+- `nautilus-container-11818` (PUBLIC → PRIVATE)
 
-`nautilus-priv-17871` (PRIVATE, unchanged)
+- `nautilus-priv-17871` (PRIVATE, unchanged)
 
 
 ---
