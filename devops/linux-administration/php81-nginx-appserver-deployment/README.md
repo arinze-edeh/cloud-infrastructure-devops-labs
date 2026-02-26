@@ -145,37 +145,39 @@ CLIENT REQUEST
 ```
 
 #### Design Decisions
-
+```
 USE Unix socket instead of TCP
 REASON: Lower latency and reduced overhead
 USE non-default port (8096)
 REASON: Avoid port conflicts and improve service isolation
 USE php-fpm pool separation
 REASON: Better process control and scalability
-
+```
 #### Performance Considerations
-
+```
 Unix sockets reduce network stack overhead
 Faster IPC between Nginx and PHP-FPM
 Lower CPU utilization under load
-
+```
 #### Security Considerations
-
+```
 LIMIT socket access via owner/group permissions
 AVOID exposing PHP-FPM over TCP
 RUN services with least privilege
-
+```
 #### Scalability Notes
+```
 CAN add multiple PHP-FPM pools per application
 CAN front Nginx with load balancer
 CAN integrate with CI/CD for config automation
-
+```
 #### Failure Scenarios & Mitigation
+```
 IF socket missing → php-fpm service down
 MITIGATION: systemd monitoring and restart
 IF port unavailable → nginx startup failure
 MITIGATION: pre-flight port validation
-
+```
 ## Result
 
 - Nginx serves PHP application on port 8096
