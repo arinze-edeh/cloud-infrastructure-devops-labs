@@ -106,7 +106,7 @@ aws sns list-topics \
 `SNS Topic ARN returned`
 
 📸 Screenshot:
-
+<img width="1035" height="340" alt="image" src="https://github.com/user-attachments/assets/0bdc588b-9ba4-47d6-b8db-d35684db0fb2" />
 
 ### Step 5: Create CloudWatch CPU Alarm
 ```
@@ -136,7 +136,7 @@ aws cloudwatch put-metric-alarm \
 - Evaluation: 1 datapoint
 
 📸 Screenshot:
-
+<img width="1039" height="550" alt="image" src="https://github.com/user-attachments/assets/6755463a-6c02-4807-8ff9-74eaf005a391" />
 
 ### Step 6: Validate Alarm Configuration
 ```
@@ -199,12 +199,3 @@ aws ec2 describe-instance-status \
 - Minimal assumptions
 
 - Production-aligned observability pattern
-
-
-
-
-<img width="1035" height="340" alt="image" src="https://github.com/user-attachments/assets/0bdc588b-9ba4-47d6-b8db-d35684db0fb2" />
-<img width="1039" height="550" alt="image" src="https://github.com/user-attachments/assets/6755463a-6c02-4807-8ff9-74eaf005a391" />
-
-
-
