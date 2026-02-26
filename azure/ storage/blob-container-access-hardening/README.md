@@ -142,7 +142,7 @@ az storage container set-permission \
 - No impact on container contents
 
 📸 Screenshot:
-
+<img width="1032" height="510" alt="image" src="https://github.com/user-attachments/assets/1e648b06-5cb4-4352-a41a-f821935864ee" />
 
 ## Step 6: Verify Access Level After Change
 ```
@@ -163,6 +163,7 @@ This confirms:
 - Container is fully private
 
 📸 Screenshot:
+<img width="1033" height="539" alt="image" src="https://github.com/user-attachments/assets/0874306a-f075-47e8-89a7-4f54a2d5567a" />
 
 ## Step 7: List All Containers for Final Validation
 ```
@@ -217,13 +218,3 @@ This project demonstrates:
 - Real-world CLI troubleshooting
 
 - Verification-driven execution
-
-
-
-
-
-
-<img width="1032" height="510" alt="image" src="https://github.com/user-attachments/assets/1e648b06-5cb4-4352-a41a-f821935864ee" />
-<img width="1033" height="539" alt="image" src="https://github.com/user-attachments/assets/0874306a-f075-47e8-89a7-4f54a2d5567a" />
-
-
