@@ -75,8 +75,9 @@ SET socket group to nginx
 SET socket permissions to 0660
 SAVE configuration
 ```
-📸 Screenshot:
+📸 Screenshots:
 <img width="1037" height="303" alt="image" src="https://github.com/user-attachments/assets/375cc71c-3bb4-4a59-823b-56caa33eb8c9" />
+<img width="1034" height="584" alt="image" src="https://github.com/user-attachments/assets/8f25e5f8-8c67-4135-8c02-bce20d808320" />
 
 ## Step 5: Prepare Socket Directory
 ```
@@ -197,18 +198,3 @@ MITIGATION: pre-flight port validation
 | ✅ | Services Running |
 | ✅ | System Design Documented |
 | ✅ | Application Verified |
-
-
-
-
-
-
-
-
-
-<img width="1034" height="584" alt="image" src="https://github.com/user-attachments/assets/8f25e5f8-8c67-4135-8c02-bce20d808320" />
-
-
-
-
-
