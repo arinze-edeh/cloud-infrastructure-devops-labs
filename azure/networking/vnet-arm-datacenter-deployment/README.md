@@ -69,7 +69,7 @@ sed -i 's/"addressPrefixes": \[ ".*" \]/"addressPrefixes": [ "192.168.0.0\/16" ]
 ```
 Screenshot:
 
-**
+<img width="1033" height="474" alt="image" src="https://github.com/user-attachments/assets/7a807a9f-9b2f-4117-acda-8ec340dc6844" />
 
 ## Step 7: Add Environment Tag
 `sed -i '/"displayName": "arm-vnet-datacenter"/a \                "Environment": "KKE-datacenter"' vnet-deployment-template.json`
@@ -129,7 +129,7 @@ The ARM template was successfully modified and deployed. The Virtual Network now
 
 
 
-<img width="1033" height="474" alt="image" src="https://github.com/user-attachments/assets/7a807a9f-9b2f-4117-acda-8ec340dc6844" />
+
 <img width="1034" height="754" alt="image" src="https://github.com/user-attachments/assets/6621f67f-185a-491a-ba08-f7c691c98a94" />
 <img width="1037" height="851" alt="image" src="https://github.com/user-attachments/assets/e93b790b-3a39-4644-87b0-37ade4cf5cf5" />
 <img width="1034" height="522" alt="image" src="https://github.com/user-attachments/assets/409e06a8-19c1-44bd-a655-6c14b57ebf32" />
