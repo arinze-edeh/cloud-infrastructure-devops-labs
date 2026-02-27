@@ -45,6 +45,8 @@ sudo yum install -y git
 Screenshot: yum resolving repositories and dependencies
 
 Screenshot: Git installation completed successfully
+<img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/1f55ebae-8ec2-44ca-9876-e9b5285985d6" />
+<img width="1035" height="861" alt="image" src="https://github.com/user-attachments/assets/ca30e46d-72f4-42a6-81e5-66b041ba54a2" />
 
 ## Step 4: Validate Git Installation
 ```
@@ -106,8 +108,7 @@ Screenshot: Bare Git repository directory structure
 
 
 
-<img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/1f55ebae-8ec2-44ca-9876-e9b5285985d6" />
-<img width="1035" height="861" alt="image" src="https://github.com/user-attachments/assets/ca30e46d-72f4-42a6-81e5-66b041ba54a2" />
+
 <img width="1032" height="348" alt="image" src="https://github.com/user-attachments/assets/a2b2bed4-13dc-4da4-ba3c-e8959aa4bce8" />
 
 
