@@ -138,7 +138,7 @@ EXTRACT PublicIpAddress
 
 ### Screenshot:
 
-###
+<img width="1029" height="547" alt="image" src="https://github.com/user-attachments/assets/a52ae395-0248-405d-b52f-967234e880a2" />
 
 ---
 
@@ -152,7 +152,7 @@ CONFIRM Server: nginx
 
 ### Screenshot:
 
-#
+<img width="1032" height="357" alt="image" src="https://github.com/user-attachments/assets/81672a03-be32-4869-a386-595f7ec949cb" />
 
 ---
 
@@ -199,7 +199,7 @@ REMOVE key pair if unused
 
 
 
-<img width="1029" height="547" alt="image" src="https://github.com/user-attachments/assets/a52ae395-0248-405d-b52f-967234e880a2" />
-<img width="1032" height="357" alt="image" src="https://github.com/user-attachments/assets/81672a03-be32-4869-a386-595f7ec949cb" />
+
+
 
 
