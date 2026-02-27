@@ -75,6 +75,7 @@ Screenshot:
 `sed -i '/"displayName": "arm-vnet-datacenter"/a \                "Environment": "KKE-datacenter"' vnet-deployment-template.json`
 
 Screenshot:
+<img width="1034" height="754" alt="image" src="https://github.com/user-attachments/assets/6621f67f-185a-491a-ba08-f7c691c98a94" />
 
 ## Step 8: Validate and Fix JSON Formatting (If Required)
 ```
@@ -130,7 +131,7 @@ The ARM template was successfully modified and deployed. The Virtual Network now
 
 
 
-<img width="1034" height="754" alt="image" src="https://github.com/user-attachments/assets/6621f67f-185a-491a-ba08-f7c691c98a94" />
+
 <img width="1037" height="851" alt="image" src="https://github.com/user-attachments/assets/e93b790b-3a39-4644-87b0-37ade4cf5cf5" />
 <img width="1034" height="522" alt="image" src="https://github.com/user-attachments/assets/409e06a8-19c1-44bd-a655-6c14b57ebf32" />
 <img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/dca35f19-9bfa-4d10-adfe-87af52b733b5" />
