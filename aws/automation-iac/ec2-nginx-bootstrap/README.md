@@ -185,29 +185,14 @@ Security group enforces minimal public access
 
 ```
 TERMINATE EC2 instance
-`aws ec2 terminate-instances --instance-ids $(aws ec2 describe-instances --filters "Name=tag:Name,Values=xfusion-ec2" --query "Reservations[*].Instances[*].InstanceId" --output text)`
+aws ec2 terminate-instances --instance-ids $(aws ec2 describe-instances --filters "Name=tag:Name,Values=xfusion-ec2" --query "Reservations[*].Instances[*].InstanceId" --output text)
 
 DELETE security group
 
-`aws ec2 delete-security-group --group-id sg-03934e8f38d1fb1ed`
+aws ec2 delete-security-group --group-id sg-03934e8f38d1fb1ed
 
 REMOVE key pair if unused
 
-`aws ec2 delete-key-pair --key-name [YOUR_KEY_NAME]`
+aws ec2 delete-key-pair --key-name [KEY_NAME]
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
