@@ -84,7 +84,7 @@ vi vnet-deployment-template.json
 Ensure proper comma placement and valid JSON structure before deployment.
 
 Screenshot:
-<img width="1034" height="754" alt="image" src="https://github.com/user-attachments/assets/6621f67f-185a-491a-ba08-f7c691c98a94" />
+<img width="1035" height="851" alt="image" src="https://github.com/user-attachments/assets/1726c5c9-e10f-464e-8bd4-3dca19a10e7a" />
 <img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/dca35f19-9bfa-4d10-adfe-87af52b733b5" />
 
 ## Step 9: Deploy ARM Template
@@ -126,21 +126,3 @@ Deployment State: Succeeded
 ## Outcome
 
 The ARM template was successfully modified and deployed. The Virtual Network now conforms to datacenter naming standards, uses the correct CIDR range, and includes environment-level tagging for governance and visibility.
-
-
-
-
-
-
-
-
-<img width="1037" height="851" alt="image" src="https://github.com/user-attachments/assets/e93b790b-3a39-4644-87b0-37ade4cf5cf5" />
-<img width="1034" height="522" alt="image" src="https://github.com/user-attachments/assets/409e06a8-19c1-44bd-a655-6c14b57ebf32" />
-
-
-
-
-
-
-
-
