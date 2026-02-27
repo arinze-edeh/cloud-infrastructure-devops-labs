@@ -155,14 +155,16 @@ CONFIRM Server: nginx
 
 ## Validation Checklist
 
-```
-[ ] EC2 instance name is xfusion-ec2
-[ ] Instance running in us-east-1
-[ ] Security group allows HTTP (80)
-[ ] User data executed successfully
-[ ] Nginx service active
-[ ] Web server reachable from internet
-```
+
+| Validation Check                   | Status |
+| ---------------------------------- | ------ |
+| EC2 instance name is `xfusion-ec2` | ✅      |
+| Instance running in `us-east-1`    | ✅      |
+| Security group allows HTTP (80)    | ✅      |
+| User data executed successfully    | ✅      |
+| Nginx service active               | ✅      |
+| Web server reachable from internet | ✅      |
+
 
 ---
 
