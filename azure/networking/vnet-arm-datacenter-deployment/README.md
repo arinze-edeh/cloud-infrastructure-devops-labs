@@ -61,7 +61,7 @@ sed -i 's/"name": ".*"/"name": "arm-vnet-datacenter"/g' vnet-deployment-template
 sed -i 's/"displayName": ".*"/"displayName": "arm-vnet-datacenter"/g' vnet-deployment-template.json
 ```
 Screenshot:
-
+<img width="1033" height="640" alt="image" src="https://github.com/user-attachments/assets/607b23a4-a98b-4da0-b05f-815202a04276" />
 
 ## Step 6: Update Address Space
 ```
@@ -128,7 +128,7 @@ The ARM template was successfully modified and deployed. The Virtual Network now
 
 
 
-<img width="1033" height="640" alt="image" src="https://github.com/user-attachments/assets/607b23a4-a98b-4da0-b05f-815202a04276" />
+
 <img width="1033" height="474" alt="image" src="https://github.com/user-attachments/assets/7a807a9f-9b2f-4117-acda-8ec340dc6844" />
 <img width="1034" height="754" alt="image" src="https://github.com/user-attachments/assets/6621f67f-185a-491a-ba08-f7c691c98a94" />
 <img width="1037" height="851" alt="image" src="https://github.com/user-attachments/assets/e93b790b-3a39-4644-87b0-37ade4cf5cf5" />
