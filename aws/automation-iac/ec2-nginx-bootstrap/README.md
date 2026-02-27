@@ -30,10 +30,6 @@ Valid AWS credentials configured
 Region set to us-east-1
 ```
 
-### Screenshot:
-
-#
-
 ---
 
 ## Step 1: Validate AWS Identity
@@ -45,7 +41,7 @@ CONFIRM correct Account ID and IAM user
 
 ### Screenshot:
 
-##
+<img width="1029" height="531" alt="image" src="https://github.com/user-attachments/assets/aef74ccc-011d-4f36-9670-7090f92c1f20" />
 
 ---
 
@@ -192,7 +188,7 @@ REMOVE key pair if unused
 
 
 
-<img width="1029" height="531" alt="image" src="https://github.com/user-attachments/assets/aef74ccc-011d-4f36-9670-7090f92c1f20" />
+
 <img width="1034" height="809" alt="image" src="https://github.com/user-attachments/assets/b3c344a2-e8d0-4172-9192-d9143cdc0ffd" />
 <img width="1030" height="863" alt="image" src="https://github.com/user-attachments/assets/4fa86e2f-b54a-48f3-a2aa-3283a96b0484" />
 <img width="1030" height="640" alt="image" src="https://github.com/user-attachments/assets/d38ece55-85ec-40d4-96e7-954c7576b47f" />
