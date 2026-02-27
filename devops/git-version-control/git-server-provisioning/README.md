@@ -6,12 +6,12 @@ This project documents the provisioning of a centralized Git server on the Nauti
 ---
 
 ## Environment Context
-- Datacenter: Stratos DC
-- Access Pattern: Jump Host → Storage Server
-- Target Node: ststor01
-- OS Family: CentOS Stream 9
-- Repository Type: Bare Git Repository
-- Repository Path: /opt/demo.git
+- Datacenter: `Stratos DC`
+- Access Pattern: `Jump Host → Storage Server`
+- Target Node: `ststor01`
+- OS Family: `CentOS Stream 9`
+- Repository Type: `Bare Git Repository`
+- Repository Path: `/opt/demo.git`
 
 ---
 
