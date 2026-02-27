@@ -28,13 +28,14 @@ This project documents the modification and deployment of an Azure Virtual Netwo
 az account show
 ```
 
-Screenshot
+Screenshot:
+<img width="1031" height="544" alt="image" src="https://github.com/user-attachments/assets/910fba49-f5ae-48a1-a16d-c8dcd7f39965" />
 
 ## Step 2: Navigate to ARM Templates Directory
 ```
 cd /root/arm-templates
 ```
-Screenshot
+Screenshot:
 
 **
 
@@ -42,7 +43,8 @@ Screenshot
 ```
 ls -l vnet-deployment-template.json
 ```
-Screenshot
+Screenshot:
+
 
 ## Step 4: Identify Target Resource Group
 ```
@@ -59,6 +61,7 @@ sed -i 's/"name": ".*"/"name": "arm-vnet-datacenter"/g' vnet-deployment-template
 sed -i 's/"displayName": ".*"/"displayName": "arm-vnet-datacenter"/g' vnet-deployment-template.json
 ```
 Screenshot:
+
 
 ## Step 6: Update Address Space
 ```
@@ -121,7 +124,7 @@ Deployment State: Succeeded
 
 The ARM template was successfully modified and deployed. The Virtual Network now conforms to datacenter naming standards, uses the correct CIDR range, and includes environment-level tagging for governance and visibility.
 
-<img width="1031" height="544" alt="image" src="https://github.com/user-attachments/assets/910fba49-f5ae-48a1-a16d-c8dcd7f39965" />
+
 <img width="1031" height="546" alt="image" src="https://github.com/user-attachments/assets/4698b010-f4d0-4bb5-9df2-589054894d96" />
 <img width="1033" height="612" alt="image" src="https://github.com/user-attachments/assets/d0779c4b-224e-41c7-8051-1b54b7e0e494" />
 <img width="1031" height="696" alt="image" src="https://github.com/user-attachments/assets/53dd6bad-82ce-42f7-810e-8ea459223d08" />
