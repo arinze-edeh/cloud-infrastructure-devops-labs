@@ -28,6 +28,7 @@ This project documents the provisioning of a centralized Git server on the Nauti
 ssh thor@jumphost
 ```
 Screenshot: Successful login to Jump Host
+<img width="1030" height="550" alt="image" src="https://github.com/user-attachments/assets/10e208a6-fdb4-4157-9132-4799bbda5c47" />
 
 ## Step 2: Connect to Storage Server
 ```
@@ -35,7 +36,7 @@ ssh natasha@172.16.238.15
 ```
 Screenshot: SSH authenticity prompt and connection acceptance
 
-Screenshot: Logged into ststor01 as natasha
+<img width="1030" height="550" alt="image" src="https://github.com/user-attachments/assets/10e208a6-fdb4-4157-9132-4799bbda5c47" />
 
 ## Step 3: Install Git Using yum
 ```
@@ -104,7 +105,7 @@ Screenshot: Bare Git repository directory structure
 - Default branch initialized as master (can be changed globally if required)
 
 
-<img width="1030" height="550" alt="image" src="https://github.com/user-attachments/assets/10e208a6-fdb4-4157-9132-4799bbda5c47" />
+
 <img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/1f55ebae-8ec2-44ca-9876-e9b5285985d6" />
 <img width="1035" height="861" alt="image" src="https://github.com/user-attachments/assets/ca30e46d-72f4-42a6-81e5-66b041ba54a2" />
 <img width="1032" height="348" alt="image" src="https://github.com/user-attachments/assets/a2b2bed4-13dc-4da4-ba3c-e8959aa4bce8" />
