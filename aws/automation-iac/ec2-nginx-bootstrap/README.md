@@ -104,7 +104,7 @@ systemctl enable nginx
 
 ### Screenshot:
 
----
+<img width="1030" height="620" alt="image" src="https://github.com/user-attachments/assets/5c89fc1b-48ed-4015-a4e6-3492cbd52859" />
 
 ---
 
@@ -194,7 +194,7 @@ REMOVE key pair if unused
 
 
 
-<img width="1030" height="620" alt="image" src="https://github.com/user-attachments/assets/5c89fc1b-48ed-4015-a4e6-3492cbd52859" />
+
 <img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/5f62c78b-1fa6-4672-acd6-a3d477d49bba" />
 <img width="1030" height="865" alt="image" src="https://github.com/user-attachments/assets/081e38d3-5a83-4c03-b3bd-15b072496700" />
 <img width="1025" height="859" alt="image" src="https://github.com/user-attachments/assets/3a1fc5dd-a25a-41a8-b0a7-8d1ea35df23d" />
