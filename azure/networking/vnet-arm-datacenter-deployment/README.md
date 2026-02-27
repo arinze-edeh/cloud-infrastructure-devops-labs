@@ -1,4 +1,125 @@
+# Azure ARM Virtual Network Deployment – Datacenter Standard
 
+## Project Overview
+This project documents the modification and deployment of an Azure Virtual Network using an ARM template. The goal was to standardize naming, update address space configuration, apply additional environment tagging, and deploy the infrastructure using Azure CLI in a controlled, repeatable manner.
+
+---
+
+## Scope of Work
+- Modify existing ARM template for Virtual Network
+- Update VNet name and displayName tag
+- Change address space to datacenter CIDR range
+- Add environment-specific tagging
+- Deploy ARM template using Azure CLI
+- Validate successful provisioning
+
+---
+
+## Prerequisites
+- Azure CLI installed
+- Authenticated Azure session
+- Access to ARM template files
+- Existing Azure Resource Group
+
+---
+
+## Step 1: Verify Azure Account Context
+```
+az account show
+```
+
+Screenshot
+
+## Step 2: Navigate to ARM Templates Directory
+```
+cd /root/arm-templates
+```
+Screenshot
+
+**
+
+## Step 3: Confirm ARM Template File Exists
+```
+ls -l vnet-deployment-template.json
+```
+Screenshot
+
+## Step 4: Identify Target Resource Group
+```
+az group list --query '[].name' --output table | grep 'kml'
+```
+Screenshot:
+
+**
+
+## Step 5: Update Virtual Network Name and displayName Tag
+```
+sed -i 's/"name": ".*"/"name": "arm-vnet-datacenter"/g' vnet-deployment-template.json
+
+sed -i 's/"displayName": ".*"/"displayName": "arm-vnet-datacenter"/g' vnet-deployment-template.json
+```
+Screenshot:
+
+## Step 6: Update Address Space
+```
+sed -i 's/"addressPrefixes": \[ ".*" \]/"addressPrefixes": [ "192.168.0.0\/16" ]/g' vnet-deployment-template.json
+```
+Screenshot:
+
+**
+
+## Step 7: Add Environment Tag
+`sed -i '/"displayName": "arm-vnet-datacenter"/a \                "Environment": "KKE-datacenter"' vnet-deployment-template.json`
+
+Screenshot:
+
+## Step 8: Validate and Fix JSON Formatting (If Required)
+```
+vi vnet-deployment-template.json
+```
+Ensure proper comma placement and valid JSON structure before deployment.
+
+Screenshot:
+
+**
+
+## Step 9: Deploy ARM Template
+```
+az deployment group create \
+  --resource-group kml_rg_main-7dd447df1f3c4b74 \
+  --template-file vnet-deployment-template.json
+```
+Screenshot:
+
+## Step 10: Verify Virtual Network Deployment
+```
+az network vnet show \
+  --resource-group kml_rg_main-7dd447df1f3c4b74 \
+  --name arm-vnet-datacenter \
+  --query '{Name:name, Address:addressSpace.addressPrefixes, Tags:tags}'
+```
+
+Screenshot:
+
+**
+
+## Validation Results
+```
+Virtual Network Name: arm-vnet-datacenter
+
+Address Space: 192.168.0.0/16
+```
+#### Tags Applied:
+```
+displayName: arm-vnet-datacenter
+
+Environment: KKE-datacenter
+
+Deployment State: Succeeded
+```
+## Outcome
+
+The ARM template was successfully modified and deployed. The Virtual Network now conforms to datacenter naming standards, uses the correct CIDR range, and includes environment-level tagging for governance and visibility.
 
 <img width="1031" height="544" alt="image" src="https://github.com/user-attachments/assets/910fba49-f5ae-48a1-a16d-c8dcd7f39965" />
 <img width="1031" height="546" alt="image" src="https://github.com/user-attachments/assets/4698b010-f4d0-4bb5-9df2-589054894d96" />
