@@ -94,6 +94,7 @@ az deployment group create \
   --template-file vnet-deployment-template.json
 ```
 Screenshot:
+<img width="1035" height="851" alt="image" src="https://github.com/user-attachments/assets/1726c5c9-e10f-464e-8bd4-3dca19a10e7a" />
 <img width="1031" height="858" alt="image" src="https://github.com/user-attachments/assets/54ef6b46-e35b-4075-b0cc-0163ebdec926" />
 
 ## Step 10: Verify Virtual Network Deployment
@@ -136,7 +137,7 @@ The ARM template was successfully modified and deployed. The Virtual Network now
 <img width="1037" height="851" alt="image" src="https://github.com/user-attachments/assets/e93b790b-3a39-4644-87b0-37ade4cf5cf5" />
 <img width="1034" height="522" alt="image" src="https://github.com/user-attachments/assets/409e06a8-19c1-44bd-a655-6c14b57ebf32" />
 <img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/dca35f19-9bfa-4d10-adfe-87af52b733b5" />
-<img width="1035" height="851" alt="image" src="https://github.com/user-attachments/assets/1726c5c9-e10f-464e-8bd4-3dca19a10e7a" />
+
 
 
 
