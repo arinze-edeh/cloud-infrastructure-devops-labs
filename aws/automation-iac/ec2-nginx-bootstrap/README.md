@@ -1,3 +1,194 @@
+# EC2 Nginx Web Server Deployment via AWS CLI
+
+## Project Overview
+
+This project documents a **CLI-driven provisioning of an Ubuntu EC2 instance** configured as a public-facing **Nginx web server**. The setup uses AWS CLI commands, security groups, and EC2 user data to achieve a fully automated and reproducible infrastructure workflow in the **us-east-1** region. This aligns with DevOps best practices for infrastructure automation and validation.
+
+---
+
+## Architecture Summary
+
+```
+Internet
+   |
+Port 80 (HTTP)
+   |
+AWS Security Group (xfusion-web-sg)
+   |
+EC2 Instance (Ubuntu)
+   |
+Nginx Web Server
+```
+
+---
+
+## Prerequisites
+
+```
+AWS CLI installed
+Valid AWS credentials configured
+Region set to us-east-1
+```
+
+### Screenshot:
+
+#
+
+---
+
+## Step 1: Validate AWS Identity
+
+```
+EXECUTE aws sts get-caller-identity
+CONFIRM correct Account ID and IAM user
+```
+
+### Screenshot:
+
+##
+
+---
+
+## Step 2: Identify Default VPC
+
+```
+EXECUTE aws ec2 describe-vpcs
+CONFIRM default VPC is available
+NOTE VPC ID for security group creation
+```
+
+### Screenshot:
+
+###
+
+---
+
+## Step 3: Create Security Group
+
+```
+EXECUTE aws ec2 create-security-group
+SET group-name = xfusion-web-sg
+SET description = Security group for xfusion-ec2 Nginx server
+ASSOCIATE with default VPC
+STORE Security Group ID
+```
+
+### Screenshot:
+
+*
+
+---
+
+## Step 4: Allow HTTP Ingress
+
+```
+EXECUTE aws ec2 authorize-security-group-ingress
+ALLOW TCP port 80
+SOURCE = 0.0.0.0/0
+```
+
+### Screenshot:
+
+**
+
+---
+
+## Step 5: Create User Data Script
+
+```
+CREATE file userdata.sh
+ADD the following:
+
+#!/bin/bash
+apt-get update -y
+apt-get install -y nginx
+systemctl start nginx
+systemctl enable nginx
+```
+
+### Screenshot:
+
+---
+
+---
+
+## Step 6: Launch EC2 Instance
+
+```
+EXECUTE aws ec2 run-instances
+SET AMI = Ubuntu
+SET instance-type = t2.micro
+ATTACH security group xfusion-web-sg
+ATTACH user-data file userdata.sh
+TAG instance Name=xfusion-ec2
+```
+
+### Screenshot:
+
+##
+
+---
+
+## Step 7: Retrieve Public IP Address
+
+```
+EXECUTE aws ec2 describe-instances
+FILTER by tag Name=xfusion-ec2
+EXTRACT PublicIpAddress
+```
+
+### Screenshot:
+
+###
+
+---
+
+## Step 8: Validate Nginx Deployment
+
+```
+EXECUTE curl -I http://<public-ip>
+CONFIRM HTTP/1.1 200 OK
+CONFIRM Server: nginx
+```
+
+### Screenshot:
+
+#
+
+---
+
+## Validation Checklist
+
+```
+[ ] EC2 instance name is xfusion-ec2
+[ ] Instance running in us-east-1
+[ ] Security group allows HTTP (80)
+[ ] User data executed successfully
+[ ] Nginx service active
+[ ] Web server reachable from internet
+```
+
+---
+
+## Operational Notes
+
+```
+Deployment performed entirely via AWS CLI
+User data ensures idempotent server bootstrap
+Security group enforces minimal public access
+```
+
+---
+
+## Cleanup (Optional)
+
+```
+TERMINATE EC2 instance
+DELETE security group
+REMOVE key pair if unused
+```
+
+
 
 
 
