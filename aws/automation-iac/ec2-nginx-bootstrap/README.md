@@ -55,7 +55,7 @@ NOTE VPC ID for security group creation
 
 ### Screenshot:
 
-###
+<img width="1034" height="809" alt="image" src="https://github.com/user-attachments/assets/b3c344a2-e8d0-4172-9192-d9143cdc0ffd" />
 
 ---
 
@@ -189,7 +189,7 @@ REMOVE key pair if unused
 
 
 
-<img width="1034" height="809" alt="image" src="https://github.com/user-attachments/assets/b3c344a2-e8d0-4172-9192-d9143cdc0ffd" />
+
 <img width="1030" height="863" alt="image" src="https://github.com/user-attachments/assets/4fa86e2f-b54a-48f3-a2aa-3283a96b0484" />
 <img width="1030" height="640" alt="image" src="https://github.com/user-attachments/assets/d38ece55-85ec-40d4-96e7-954c7576b47f" />
 <img width="1030" height="620" alt="image" src="https://github.com/user-attachments/assets/5c89fc1b-48ed-4015-a4e6-3492cbd52859" />
