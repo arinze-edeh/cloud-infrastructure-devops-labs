@@ -52,7 +52,7 @@ az group list --query '[].name' --output table | grep 'kml'
 ```
 Screenshot:
 
-**
+<img width="1031" height="696" alt="image" src="https://github.com/user-attachments/assets/53dd6bad-82ce-42f7-810e-8ea459223d08" />
 
 ## Step 5: Update Virtual Network Name and displayName Tag
 ```
@@ -127,7 +127,7 @@ The ARM template was successfully modified and deployed. The Virtual Network now
 
 
 
-<img width="1031" height="696" alt="image" src="https://github.com/user-attachments/assets/53dd6bad-82ce-42f7-810e-8ea459223d08" />
+
 <img width="1033" height="640" alt="image" src="https://github.com/user-attachments/assets/607b23a4-a98b-4da0-b05f-815202a04276" />
 <img width="1033" height="474" alt="image" src="https://github.com/user-attachments/assets/7a807a9f-9b2f-4117-acda-8ec340dc6844" />
 <img width="1034" height="754" alt="image" src="https://github.com/user-attachments/assets/6621f67f-185a-491a-ba08-f7c691c98a94" />
