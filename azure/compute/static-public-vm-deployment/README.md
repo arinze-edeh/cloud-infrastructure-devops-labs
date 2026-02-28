@@ -81,7 +81,7 @@ showcreds
 Screenshot: `Azure Credentials Output`
 
 
-<img width="968" height="278" alt="image" src="https://github.com/user-attachments/assets/de7cfe57-b167-403f-8047-dd1bdced1ccc" />
+<img width="968" height="278" alt="556260051-de7cfe57-b167-403f-8047-dd1bdced1ccc" src="https://github.com/user-attachments/assets/546df4c2-9d37-4ec0-844f-01cc1b6e13b0" />
 
 ## Step 4: Create a Standard Static Public IP Address
 
