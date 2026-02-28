@@ -38,6 +38,7 @@ aws sts get-caller-identity
 ```
 Screenshot: `AWS STS Identity Verification`
 <img width="1034" height="530" alt="image" src="https://github.com/user-attachments/assets/a1ee7e16-c8dc-4fb3-8149-23cdff0c7210" />
+
 ## Implementation Steps
 
 ## Step 1: Create Public VPC
@@ -58,6 +59,7 @@ create internet_gateway
 name = devops-pub-igw
 ```
 Screenshot: `Internet Gateway Created`
+<img width="1032" height="652" alt="image" src="https://github.com/user-attachments/assets/a1364c50-6851-45f4-9211-3d01a5850a3c" />
 
 ## Step 3: Attach Internet Gateway to VPC
 ```
@@ -187,7 +189,7 @@ Screenshot: End-to-End Validation
 
 
 
-<img width="1032" height="652" alt="image" src="https://github.com/user-attachments/assets/a1364c50-6851-45f4-9211-3d01a5850a3c" />
+
 <img width="1034" height="451" alt="image" src="https://github.com/user-attachments/assets/22631e7f-2c25-49b0-9d6e-e79a6a4c855a" />
 <img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/129745cc-9ef4-4bc6-b506-a0b90a49f9ec" />
 <img width="1036" height="515" alt="image" src="https://github.com/user-attachments/assets/021e1a60-62a2-4129-959d-5166a72a6e29" />
