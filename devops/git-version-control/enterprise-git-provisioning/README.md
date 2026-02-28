@@ -47,9 +47,9 @@ Screenshot: `Confirms that /opt/apps.git exists and contains Git objects (HEAD, 
 ## SStep 3: Verify / Create Target Directory
 ```
 ls -ld /usr/src/kodekloudrepos
-mkdir -p /usr/src/kodekloudrepos
 ```
 Screenshot:
+<img width="1036" height="560" alt="image" src="https://github.com/user-attachments/assets/9a6f97cd-b7cd-4507-a1d4-ecf9059f5fe0" />
 
 ## SStep 4: Navigate to Target Directory
 ```
@@ -91,9 +91,8 @@ Screenshot:
 
 
 
-<img width="1033" height="592" alt="image" src="https://github.com/user-attachments/assets/61b719a7-5d66-4892-b663-e3039c5958bc" />
 
-<img width="1036" height="560" alt="image" src="https://github.com/user-attachments/assets/9a6f97cd-b7cd-4507-a1d4-ecf9059f5fe0" />
+
 <img width="1032" height="605" alt="image" src="https://github.com/user-attachments/assets/c55cf2f6-69d9-44f9-8064-46921d0abe7e" />
 <img width="1036" height="718" alt="image" src="https://github.com/user-attachments/assets/916c568a-c7e2-4a96-9c9f-8b3165d33278" />
 <img width="1039" height="653" alt="image" src="https://github.com/user-attachments/assets/1d7ab386-bb1f-445b-9fc2-ba4d606d66db" />
