@@ -16,8 +16,7 @@ The repository, initially unused, was cloned to provide the development team wit
 
 ## Pre-Requisites
 * Access to Storage Server: `ststor01.stratos.xfusioncorp.com`  
-* User: `natasha`  
-* Password: `Bl@kW`  
+* User credentials
 * Git installed on the server  
 * Target directory: `/usr/src/kodekloudrepos`  
 
