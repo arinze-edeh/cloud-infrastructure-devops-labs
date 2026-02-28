@@ -64,8 +64,9 @@ Screenshot:
 git clone /opt/apps.git
 ```
 Screenshot:
+<img width="1039" height="653" alt="image" src="https://github.com/user-attachments/assets/1d7ab386-bb1f-445b-9fc2-ba4d606d66db" />
 
-Note: The clone created a subfolder named apps. The repository is currently empty.
+- Note: The clone created a subfolder named apps. The repository is currently empty.
 
 ## SStep 6: Navigate into Cloned Repository and Verify
 ```
@@ -94,9 +95,6 @@ Screenshot:
 
 
 
-<img width="1032" height="605" alt="image" src="https://github.com/user-attachments/assets/c55cf2f6-69d9-44f9-8064-46921d0abe7e" />
-
-<img width="1039" height="653" alt="image" src="https://github.com/user-attachments/assets/1d7ab386-bb1f-445b-9fc2-ba4d606d66db" />
 <img width="1020" height="715" alt="image" src="https://github.com/user-attachments/assets/0c39a5e7-daef-44d4-b4f0-abfe10307be8" />
 <img width="1036" height="779" alt="image" src="https://github.com/user-attachments/assets/edbb2f62-7fe6-4bad-9de3-87e42a6bc402" />
 <img width="1032" height="799" alt="image" src="https://github.com/user-attachments/assets/af4037e0-c55d-4be2-aed8-0b94196bb661" />
