@@ -170,7 +170,7 @@ Purpose
 - Supports multiple secure access paths
 
 Screenshot: `VM User SSH Key Update`
-
+<img width="1037" height="576" alt="image" src="https://github.com/user-attachments/assets/1ef78f27-88ad-417c-96c3-6fb328fca3bb" />
 
 ## Step 8: Revalidate SSH Access Using Updated Configuration
 
@@ -204,7 +204,7 @@ Validation Result
 - IP Address unchanged
 
 Screenshot: `Static Public IP Verification`
-<img width="1037" height="576" alt="image" src="https://github.com/user-attachments/assets/1ef78f27-88ad-417c-96c3-6fb328fca3bb" />
+
 
 ## Final State Summary
 
