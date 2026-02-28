@@ -57,6 +57,7 @@ cd /usr/src/kodekloudrepos
 pwd
 ```
 Screenshot:
+<img width="1036" height="718" alt="image" src="https://github.com/user-attachments/assets/916c568a-c7e2-4a96-9c9f-8b3165d33278" />
 
 ## SStep 5: Clone the Repository
 ```
@@ -94,7 +95,7 @@ Screenshot:
 
 
 <img width="1032" height="605" alt="image" src="https://github.com/user-attachments/assets/c55cf2f6-69d9-44f9-8064-46921d0abe7e" />
-<img width="1036" height="718" alt="image" src="https://github.com/user-attachments/assets/916c568a-c7e2-4a96-9c9f-8b3165d33278" />
+
 <img width="1039" height="653" alt="image" src="https://github.com/user-attachments/assets/1d7ab386-bb1f-445b-9fc2-ba4d606d66db" />
 <img width="1020" height="715" alt="image" src="https://github.com/user-attachments/assets/0c39a5e7-daef-44d4-b4f0-abfe10307be8" />
 <img width="1036" height="779" alt="image" src="https://github.com/user-attachments/assets/edbb2f62-7fe6-4bad-9de3-87e42a6bc402" />
