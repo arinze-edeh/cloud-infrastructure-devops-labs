@@ -1,3 +1,91 @@
+# Git Repository Deployment on Nautilus Storage Server
+
+## Project Overview
+This project documents the deployment of the **Apps Git repository** (`/opt/apps.git`) to the Nautilus Storage Server in the Stratos Datacenter.  
+The repository, initially unused, was cloned to provide the development team with a ready-to-use workspace for managing the Nautilus application source code.
+
+---
+
+## Objectives
+* Clone `/opt/apps.git` to `/usr/src/kodekloudrepos`  
+* Use the `natasha` user account  
+* Ensure no modifications are made to the repository or existing directories  
+* Preserve the integrity of the repository and its structure  
+
+---
+
+## Pre-Requisites
+* Access to Storage Server: `ststor01.stratos.xfusioncorp.com`  
+* User: `natasha`  
+* Password: `Bl@kW`  
+* Git installed on the server  
+* Target directory: `/usr/src/kodekloudrepos`  
+
+---
+
+## Steps to Clone Repository
+
+### Step 1: SSH into Storage Server
+```
+ssh natasha@ststor01.stratos.xfusioncorp.com
+# Password: ****
+```
+
+Screenshot:
+
+## SStep 2: Verify Source Repository
+```
+ls -ld /opt/apps.git
+ls /opt/apps.git
+```
+Screenshot:
+
+Confirms that /opt/apps.git exists and contains Git objects (HEAD, branches, config, etc.)
+
+## SStep 3: Verify / Create Target Directory
+```
+ls -ld /usr/src/kodekloudrepos
+mkdir -p /usr/src/kodekloudrepos
+```
+Screenshot:
+
+## SStep 4: Navigate to Target Directory
+```
+cd /usr/src/kodekloudrepos
+pwd
+```
+Screenshot:
+
+## SStep 5: Clone the Repository
+```
+git clone /opt/apps.git
+```
+Screenshot:
+
+Note: The clone created a subfolder named apps. The repository is currently empty.
+
+## SStep 6: Navigate into Cloned Repository and Verify
+```
+cd apps
+git status
+git remote -v
+```
+Screenshot:
+
+- git status confirms On branch master and No commits yet
+
+- git remote -v confirms the origin is set to /opt/apps.git
+
+## Validation
+
+- The repository now exists in `/usr/src/kodekloudrepos/apps`
+
+- Remote origin is correctly set to `/opt/apps.git`
+
+- No files were modified or deleted outside the repository
+
+- Ready for the development team to add files and push commits
+
 
 
 <img width="1037" height="597" alt="image" src="https://github.com/user-attachments/assets/ef3ca39b-89aa-4681-8e42-a1e6300a8b32" />
