@@ -170,7 +170,7 @@ az vm user update \
 
 - Supports multiple secure access paths
 
-Screenshot: `VM User SSH Key Update`
+Screenshots: `VM User SSH Key Update`
 <img width="1030" height="409" alt="image" src="https://github.com/user-attachments/assets/f39f547d-2fee-43cf-aba1-ac8d80e74a9f" />
 <img width="1037" height="576" alt="image" src="https://github.com/user-attachments/assets/1ef78f27-88ad-417c-96c3-6fb328fca3bb" />
 
