@@ -149,7 +149,11 @@ subnet = devops-pub-subnet
 security_group = devops-ssh-sg
 assign_public_ip = true
 ```
-Screenshot: `EC2 Instance Launch Initiated`
+Screenshots: `EC2 Instance Launch Initiated`
+<img width="1029" height="854" alt="image" src="https://github.com/user-attachments/assets/ddafa25b-4f06-4bd5-9050-2c9d76f80f98" />
+<img width="1020" height="863" alt="image" src="https://github.com/user-attachments/assets/686f19e0-2e38-4430-be8c-d42f00dea3ae" />
+<img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/022da898-e348-4b82-ac52-88a9f6a028ff" />
+<img width="1035" height="482" alt="image" src="https://github.com/user-attachments/assets/f8c6a09f-c37c-49a0-861f-42c2b979936c" />
 
 ## Step 12: Validate Public Accessibility
 ```
@@ -158,6 +162,7 @@ filter = name:devops-pub-ec2
 retrieve public_ip
 ```
 Screenshot: `Public IP Assigned`
+<img width="1040" height="801" alt="image" src="https://github.com/user-attachments/assets/9bad9d59-f2d2-4505-bc54-675b3850df24" />
 
 ## Validation Checklist
 
@@ -170,8 +175,6 @@ Screenshot: `Public IP Assigned`
 - EC2 instance has a public IP
 
 - SSH port 22 reachable from the internet
-
-Screenshot: End-to-End Validation
 
 ## Key Learnings
 
@@ -206,9 +209,6 @@ Screenshot: End-to-End Validation
 
 
 
-<img width="1029" height="854" alt="image" src="https://github.com/user-attachments/assets/ddafa25b-4f06-4bd5-9050-2c9d76f80f98" />
-<img width="1020" height="863" alt="image" src="https://github.com/user-attachments/assets/686f19e0-2e38-4430-be8c-d42f00dea3ae" />
-<img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/022da898-e348-4b82-ac52-88a9f6a028ff" />
-<img width="1035" height="482" alt="image" src="https://github.com/user-attachments/assets/f8c6a09f-c37c-49a0-861f-42c2b979936c" />
-<img width="1040" height="801" alt="image" src="https://github.com/user-attachments/assets/9bad9d59-f2d2-4505-bc54-675b3850df24" />
+
+
 
