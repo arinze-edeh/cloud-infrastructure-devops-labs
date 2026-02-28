@@ -116,6 +116,7 @@ route_table = devops-pub-rt
 subnet = devops-pub-subnet
 ```
 Screenshot: `Route Table Association`
+<img width="1035" height="418" alt="image" src="https://github.com/user-attachments/assets/2b204198-b322-43d7-891b-ac1d4928e5c6" />
 
 ## Step 9: Create Security Group (SSH Access)
 ```
@@ -125,6 +126,7 @@ vpc = devops-pub-vpc
 description = allow ssh access
 ```
 Screenshot: `Security Group Created`
+<img width="1030" height="537" alt="image" src="https://github.com/user-attachments/assets/c9868ac8-2178-47e5-ab6f-f3330eb537bd" />
 
 ## Step 10: Allow Inbound SSH
 ```
@@ -200,8 +202,8 @@ Screenshot: End-to-End Validation
 
 
 
-<img width="1035" height="418" alt="image" src="https://github.com/user-attachments/assets/2b204198-b322-43d7-891b-ac1d4928e5c6" />
-<img width="1030" height="537" alt="image" src="https://github.com/user-attachments/assets/c9868ac8-2178-47e5-ab6f-f3330eb537bd" />
+
+
 <img width="1036" height="595" alt="image" src="https://github.com/user-attachments/assets/4e5cabc6-3ffa-4683-b341-7879a0df17a9" />
 <img width="1029" height="854" alt="image" src="https://github.com/user-attachments/assets/ddafa25b-4f06-4bd5-9050-2c9d76f80f98" />
 <img width="1020" height="863" alt="image" src="https://github.com/user-attachments/assets/686f19e0-2e38-4430-be8c-d42f00dea3ae" />
