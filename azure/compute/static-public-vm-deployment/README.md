@@ -164,7 +164,7 @@ az vm user update \
   --ssh-key-value ~/.ssh/id_rsa.pub
 ```
 
-Purpose
+### Purpose
 
 - Enables key rotation
 
@@ -180,7 +180,7 @@ Screenshot: `VM User SSH Key Update`
 
 - ssh azureuser@<STATIC_PUBLIC_IP>
 
-Expected Outcome
+### Expected Outcome
 
 - SSH access remains functional
 
@@ -200,7 +200,7 @@ az network public-ip show \
   --output table
 ```
 
-Validation Result
+### Validation Result
 
 - Allocation Method: `Static`
 
