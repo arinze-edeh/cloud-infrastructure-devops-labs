@@ -2,6 +2,7 @@
 
 ## Project Overview
 This project documents the creation of a **public AWS infrastructure baseline** designed to support internet-facing workloads. The baseline includes a custom VPC, a public subnet with automatic public IP assignment, an Internet Gateway, routing configuration, a security group allowing SSH access, and a publicly accessible EC2 instance.  
+
 All resources are provisioned using the AWS CLI in the **us-east-1** region.
 
 ---
@@ -24,7 +25,7 @@ All resources are provisioned using the AWS CLI in the **us-east-1** region.
 - Route Table with 0.0.0.0/0 route
 - Security Group (SSH access)
 - EC2 Instance (t2.micro)
-- 
+  
 ---
 
 ## Environment and Preconditions
@@ -36,7 +37,7 @@ Identity Verification
 aws sts get-caller-identity
 ```
 Screenshot: `AWS STS Identity Verification`
-
+<img width="1034" height="530" alt="image" src="https://github.com/user-attachments/assets/a1ee7e16-c8dc-4fb3-8149-23cdff0c7210" />
 ## Implementation Steps
 
 ## Step 1: Create Public VPC
@@ -48,6 +49,7 @@ enable_dns_support = true
 enable_dns_hostnames = true
 ```
 Screenshot: `VPC Created Successfully`
+
 
 ## Step 2: Create Internet Gateway
 
@@ -183,7 +185,7 @@ Screenshot: End-to-End Validation
 - BASELINE_READY_FOR_EXTENSION = `true`
 
 
-<img width="1034" height="530" alt="image" src="https://github.com/user-attachments/assets/a1ee7e16-c8dc-4fb3-8149-23cdff0c7210" />
+
 <img width="1028" height="839" alt="image" src="https://github.com/user-attachments/assets/43e6bc23-6db9-4a9d-aa67-6e957d5db9bc" />
 <img width="1032" height="652" alt="image" src="https://github.com/user-attachments/assets/a1364c50-6851-45f4-9211-3d01a5850a3c" />
 <img width="1034" height="451" alt="image" src="https://github.com/user-attachments/assets/22631e7f-2c25-49b0-9d6e-e79a6a4c855a" />
