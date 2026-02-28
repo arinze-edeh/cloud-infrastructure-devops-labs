@@ -75,6 +75,7 @@ git status
 git remote -v
 ```
 Screenshot:
+<img width="1036" height="838" alt="image" src="https://github.com/user-attachments/assets/e68d956a-7867-47fe-9f7e-c9fbb2aefd1c" />
 
 - git status confirms On branch master and No commits yet
 
@@ -98,6 +99,6 @@ Screenshot:
 <img width="1020" height="715" alt="image" src="https://github.com/user-attachments/assets/0c39a5e7-daef-44d4-b4f0-abfe10307be8" />
 <img width="1036" height="779" alt="image" src="https://github.com/user-attachments/assets/edbb2f62-7fe6-4bad-9de3-87e42a6bc402" />
 <img width="1032" height="799" alt="image" src="https://github.com/user-attachments/assets/af4037e0-c55d-4be2-aed8-0b94196bb661" />
-<img width="1036" height="838" alt="image" src="https://github.com/user-attachments/assets/e68d956a-7867-47fe-9f7e-c9fbb2aefd1c" />
+
 
 
