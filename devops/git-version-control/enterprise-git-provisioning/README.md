@@ -32,6 +32,7 @@ ssh natasha@ststor01.stratos.xfusioncorp.com
 ```
 
 Screenshot:
+<img width="1037" height="597" alt="image" src="https://github.com/user-attachments/assets/ef3ca39b-89aa-4681-8e42-a1e6300a8b32" />
 
 ## SStep 2: Verify Source Repository
 ```
@@ -88,7 +89,7 @@ Screenshot:
 
 
 
-<img width="1037" height="597" alt="image" src="https://github.com/user-attachments/assets/ef3ca39b-89aa-4681-8e42-a1e6300a8b32" />
+
 <img width="1033" height="592" alt="image" src="https://github.com/user-attachments/assets/61b719a7-5d66-4892-b663-e3039c5958bc" />
 <img width="1036" height="532" alt="image" src="https://github.com/user-attachments/assets/107bd6af-454a-4155-b318-cdbf03e1d97e" />
 <img width="1036" height="560" alt="image" src="https://github.com/user-attachments/assets/9a6f97cd-b7cd-4507-a1d4-ecf9059f5fe0" />
