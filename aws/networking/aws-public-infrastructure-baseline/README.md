@@ -49,7 +49,7 @@ enable_dns_support = true
 enable_dns_hostnames = true
 ```
 Screenshot: `VPC Created Successfully`
-
+<img width="1028" height="839" alt="image" src="https://github.com/user-attachments/assets/43e6bc23-6db9-4a9d-aa67-6e957d5db9bc" />
 
 ## Step 2: Create Internet Gateway
 
@@ -186,7 +186,7 @@ Screenshot: End-to-End Validation
 
 
 
-<img width="1028" height="839" alt="image" src="https://github.com/user-attachments/assets/43e6bc23-6db9-4a9d-aa67-6e957d5db9bc" />
+
 <img width="1032" height="652" alt="image" src="https://github.com/user-attachments/assets/a1364c50-6851-45f4-9211-3d01a5850a3c" />
 <img width="1034" height="451" alt="image" src="https://github.com/user-attachments/assets/22631e7f-2c25-49b0-9d6e-e79a6a4c855a" />
 <img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/129745cc-9ef4-4bc6-b506-a0b90a49f9ec" />
