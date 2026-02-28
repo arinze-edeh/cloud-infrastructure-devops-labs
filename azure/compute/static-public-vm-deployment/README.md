@@ -46,7 +46,7 @@ az group list --output table
 - Status shows Succeeded
 
 Screenshot: `Resource Group Validation Output`
-
+<img width="1030" height="622" alt="image" src="https://github.com/user-attachments/assets/fec68cb4-d0d9-4da0-bd24-0f6f4548f329" />
 
 ## Step 2: Generate SSH Key Pair for VM Access
 
@@ -62,7 +62,7 @@ Private Key: ~/.ssh/devops-key
 Public Key: ~/.ssh/devops-key.pub
 ```
 Screenshot: `SSH Key Generation Output`
-
+<img width="1031" height="634" alt="image" src="https://github.com/user-attachments/assets/65a92e57-f870-4de3-8159-8a869ccb5903" />
 
 ## Step 3: Retrieve Azure Environment Credentials
 
@@ -204,6 +204,7 @@ Validation Result
 - IP Address unchanged
 
 Screenshot: `Static Public IP Verification`
+<img width="1037" height="576" alt="image" src="https://github.com/user-attachments/assets/1ef78f27-88ad-417c-96c3-6fb328fca3bb" />
 
 ## Final State Summary
 
@@ -227,13 +228,13 @@ Screenshot: `Static Public IP Verification`
 
 - CLI-driven deployments promote repeatability and auditability
 
-<img width="1030" height="622" alt="image" src="https://github.com/user-attachments/assets/fec68cb4-d0d9-4da0-bd24-0f6f4548f329" />
-<img width="1031" height="634" alt="image" src="https://github.com/user-attachments/assets/65a92e57-f870-4de3-8159-8a869ccb5903" />
+
+
 <img width="1032" height="709" alt="image" src="https://github.com/user-attachments/assets/f78d97be-84a3-41c0-b9dc-81e795ecf825" />
 <img width="1037" height="862" alt="image" src="https://github.com/user-attachments/assets/056ba576-455c-466f-96b9-80bbbcef4e61" />
 <img width="1028" height="845" alt="image" src="https://github.com/user-attachments/assets/770ff500-1fe4-4d55-92ca-ec13d1e5a1dc" />
 <img width="1030" height="409" alt="image" src="https://github.com/user-attachments/assets/f39f547d-2fee-43cf-aba1-ac8d80e74a9f" />
-<img width="1037" height="576" alt="image" src="https://github.com/user-attachments/assets/1ef78f27-88ad-417c-96c3-6fb328fca3bb" />
+
 
 
 
