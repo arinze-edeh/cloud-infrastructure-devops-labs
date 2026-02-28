@@ -79,6 +79,7 @@ availability_zone = us-east-1e
 name = devops-pub-subnet
 ```
 Screenshot: `Subnet Created`
+<img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/129745cc-9ef4-4bc6-b506-a0b90a49f9ec" />
 
 ## Step 5: Enable Auto-Assign Public IP on Subnet
 ```
@@ -192,7 +193,7 @@ Screenshot: End-to-End Validation
 
 
 
-<img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/129745cc-9ef4-4bc6-b506-a0b90a49f9ec" />
+
 <img width="1036" height="515" alt="image" src="https://github.com/user-attachments/assets/021e1a60-62a2-4129-959d-5166a72a6e29" />
 <img width="1032" height="705" alt="image" src="https://github.com/user-attachments/assets/97adc556-204d-4c3c-a6b8-55275af9e0a2" />
 <img width="1029" height="787" alt="image" src="https://github.com/user-attachments/assets/c5b00172-c77e-4e07-a372-be8995c44522" />
