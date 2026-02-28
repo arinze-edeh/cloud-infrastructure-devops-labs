@@ -97,6 +97,7 @@ vpc = devops-pub-vpc
 name = devops-pub-rt
 ```
 Screenshot: `Route Table Created`
+<img width="1032" height="705" alt="image" src="https://github.com/user-attachments/assets/97adc556-204d-4c3c-a6b8-55275af9e0a2" />
 
 ## Step 7: Add Internet Route
 ```
@@ -196,7 +197,7 @@ Screenshot: End-to-End Validation
 
 
 
-<img width="1032" height="705" alt="image" src="https://github.com/user-attachments/assets/97adc556-204d-4c3c-a6b8-55275af9e0a2" />
+
 <img width="1029" height="787" alt="image" src="https://github.com/user-attachments/assets/c5b00172-c77e-4e07-a372-be8995c44522" />
 <img width="1035" height="418" alt="image" src="https://github.com/user-attachments/assets/2b204198-b322-43d7-891b-ac1d4928e5c6" />
 <img width="1030" height="537" alt="image" src="https://github.com/user-attachments/assets/c9868ac8-2178-47e5-ab6f-f3330eb537bd" />
