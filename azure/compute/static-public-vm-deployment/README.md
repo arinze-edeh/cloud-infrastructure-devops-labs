@@ -171,6 +171,7 @@ Purpose
 - Supports multiple secure access paths
 
 Screenshot: `VM User SSH Key Update`
+<img width="1030" height="409" alt="image" src="https://github.com/user-attachments/assets/f39f547d-2fee-43cf-aba1-ac8d80e74a9f" />
 <img width="1037" height="576" alt="image" src="https://github.com/user-attachments/assets/1ef78f27-88ad-417c-96c3-6fb328fca3bb" />
 
 ## Step 8: Revalidate SSH Access Using Updated Configuration
@@ -186,6 +187,7 @@ Expected Outcome
 - No password authentication required
 
 Screenshot: `Post-Update SSH Login`
+<img width="1028" height="845" alt="image" src="https://github.com/user-attachments/assets/770ff500-1fe4-4d55-92ca-ec13d1e5a1dc" />
 
 ## Step 9: Confirm Static Public IP Persistence
 
@@ -229,15 +231,3 @@ Screenshot: `Static Public IP Verification`
 - SSH key-based authentication aligns with DevOps security best practices
 
 - CLI-driven deployments promote repeatability and auditability
-
-
-
-
-
-<img width="1028" height="845" alt="image" src="https://github.com/user-attachments/assets/770ff500-1fe4-4d55-92ca-ec13d1e5a1dc" />
-<img width="1030" height="409" alt="image" src="https://github.com/user-attachments/assets/f39f547d-2fee-43cf-aba1-ac8d80e74a9f" />
-
-
-
-
-
