@@ -39,10 +39,10 @@ Screenshot:
 ls -ld /opt/apps.git
 ls /opt/apps.git
 ```
-Screenshot:
+Screenshot: `Confirms that /opt/apps.git exists and contains Git objects (HEAD, branches, config, etc.)`
 <img width="1036" height="532" alt="image" src="https://github.com/user-attachments/assets/107bd6af-454a-4155-b318-cdbf03e1d97e" />
 
-Confirms that /opt/apps.git exists and contains Git objects (HEAD, branches, config, etc.)
+
 
 ## SStep 3: Verify / Create Target Directory
 ```
