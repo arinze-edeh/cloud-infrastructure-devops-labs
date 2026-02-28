@@ -137,6 +137,7 @@ port = 22
 source = 0.0.0.0/0
 ```
 Screenshot: `SSH Rule Configured`
+<img width="1036" height="595" alt="image" src="https://github.com/user-attachments/assets/4e5cabc6-3ffa-4683-b341-7879a0df17a9" /> 
 
 ## Step 11: Launch EC2 Instance
 ```
@@ -204,7 +205,7 @@ Screenshot: End-to-End Validation
 
 
 
-<img width="1036" height="595" alt="image" src="https://github.com/user-attachments/assets/4e5cabc6-3ffa-4683-b341-7879a0df17a9" />
+
 <img width="1029" height="854" alt="image" src="https://github.com/user-attachments/assets/ddafa25b-4f06-4bd5-9050-2c9d76f80f98" />
 <img width="1020" height="863" alt="image" src="https://github.com/user-attachments/assets/686f19e0-2e38-4430-be8c-d42f00dea3ae" />
 <img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/022da898-e348-4b82-ac52-88a9f6a028ff" />
