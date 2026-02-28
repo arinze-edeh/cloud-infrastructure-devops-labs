@@ -204,6 +204,7 @@ Validation Result
 - IP Address unchanged
 
 Screenshot: `Static Public IP Verification`
+<img width="1036" height="859" alt="image" src="https://github.com/user-attachments/assets/df63d106-0926-4e45-afe8-c217d784c2f5" />
 
 
 ## Final State Summary
