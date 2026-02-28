@@ -133,7 +133,7 @@ az vm create \
 - SSH allowed via Network Security Group
 
 Screenshot: `VM Creation Output`
-
+<img width="1037" height="862" alt="image" src="https://github.com/user-attachments/assets/056ba576-455c-466f-96b9-80bbbcef4e61" />
 
 ## Step 6: Validate SSH Access to the VM
 
@@ -233,7 +233,7 @@ Screenshot: `Static Public IP Verification`
 
 
 
-<img width="1037" height="862" alt="image" src="https://github.com/user-attachments/assets/056ba576-455c-466f-96b9-80bbbcef4e61" />
+
 <img width="1028" height="845" alt="image" src="https://github.com/user-attachments/assets/770ff500-1fe4-4d55-92ca-ec13d1e5a1dc" />
 <img width="1030" height="409" alt="image" src="https://github.com/user-attachments/assets/f39f547d-2fee-43cf-aba1-ac8d80e74a9f" />
 
