@@ -68,6 +68,8 @@ to vpc = devops-pub-vpc
 ```
 Screenshot: `Internet Gateway Attached to VPC`
 
+<img width="1034" height="451" alt="image" src="https://github.com/user-attachments/assets/22631e7f-2c25-49b0-9d6e-e79a6a4c855a" />
+
 ## Step 4: Create Public Subnet
 ```
 create subnet
@@ -190,7 +192,6 @@ Screenshot: End-to-End Validation
 
 
 
-<img width="1034" height="451" alt="image" src="https://github.com/user-attachments/assets/22631e7f-2c25-49b0-9d6e-e79a6a4c855a" />
 <img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/129745cc-9ef4-4bc6-b506-a0b90a49f9ec" />
 <img width="1036" height="515" alt="image" src="https://github.com/user-attachments/assets/021e1a60-62a2-4129-959d-5166a72a6e29" />
 <img width="1032" height="705" alt="image" src="https://github.com/user-attachments/assets/97adc556-204d-4c3c-a6b8-55275af9e0a2" />
