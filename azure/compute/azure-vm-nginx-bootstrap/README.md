@@ -154,6 +154,7 @@ kml_rg_main-b7a58fc8335847fe
 > 📸 **Screenshot — Subscription & Resource Group Discovery**
 
 <img width="1032" height="724" alt="image" src="https://github.com/user-attachments/assets/6f5ff40c-4081-4d46-aa46-0aa7fa98fab3" />
+
 ---
 
 ### Step 3 — Set Deployment Variables
