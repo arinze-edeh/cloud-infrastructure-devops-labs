@@ -110,7 +110,7 @@ az account show
 
 ## ⚙️ Environment Configuration
 
-### Step 1 — Authenticate & Verify Subscription
+### Step 1: Authenticate & Verify Subscription
 
 ```bash
 az account show
@@ -134,14 +134,14 @@ az account list --output table
 }
 ```
 
-> 📸 **Screenshot — Account Authentication**
+> 📸 **Screenshot: Account Authentication**
 
 <img width="1031" height="575" alt="image" src="https://github.com/user-attachments/assets/8b26b680-f89b-49fb-93f9-73596687a1b7" />
 <img width="1032" height="724" alt="image" src="https://github.com/user-attachments/assets/6f5ff40c-4081-4d46-aa46-0aa7fa98fab3" />
 
 ---
 
-### Step 2 — Discover Resource Group
+### Step 2: Discover Resource Group
 
 ```bash
 az group list --query "[].name" -o tsv
@@ -152,13 +152,13 @@ az group list --query "[].name" -o tsv
 kml_rg_main-b7a58fc8335847fe
 ```
 
-> 📸 **Screenshot — Subscription & Resource Group Discovery**
+> 📸 **Screenshot: Subscription & Resource Group Discovery**
 
 <img width="1034" height="677" alt="image" src="https://github.com/user-attachments/assets/9245ffe8-f517-48eb-b92e-324c96998c9c" />
 
 ---
 
-### Step 3 — Set Deployment Variables
+### Step 3: Set Deployment Variables
 
 ```bash
 RESOURCE_GROUP="kml_rg_main-b7a58fc8335847fe"
@@ -171,15 +171,15 @@ DISK_NAME="devops-vm-osdisk"
 VM_SIZE="Standard_B1s"
 ```
 
-> 📸 **Screenshot — Variable Configuration**
->
-> ![variables set](screenshots/03_variables_set.png)
+> 📸 **Screenshot: Variable Configuration**
+
+<img width="1029" height="735" alt="image" src="https://github.com/user-attachments/assets/cc81f9e3-421a-4f76-ade8-3cda648b36ec" />
 
 ---
 
 ## 🚀 Step-by-Step Deployment Guide
 
-### Step 4 — Create the Nginx Bootstrap Script
+### Step 4: Create the Nginx Bootstrap Script
 
 This script runs once at first boot via the Azure `--custom-data` mechanism (cloud-init compatible):
 
@@ -193,13 +193,13 @@ systemctl enable nginx
 EOF
 ```
 
-> 📸 **Screenshot — Bootstrap Script Creation**
+> 📸 **Screenshot: Bootstrap Script Creation**
 >
 > ![nginx setup script](screenshots/04_nginx_setup_script.png)
 
 ---
 
-### Step 5 — Provision the Virtual Machine
+### Step 5: Provision the Virtual Machine
 
 ```bash
 az vm create \
@@ -225,13 +225,13 @@ ResourceGroup                 PowerState    PublicIpAddress    PrivateIpAddress 
 kml_rg_main-b7a58fc8335847fe  VM running    20.51.140.233      10.0.0.4            70-A8-A5-40-80-52  eastus
 ```
 
-> 📸 **Screenshot — VM Successfully Provisioned**
+> 📸 **Screenshot: VM Successfully Provisioned**
 >
 > ![vm running](screenshots/05_vm_running.png)
 
 ---
 
-### Step 6 — Open Port 80 via NSG Rule
+### Step 6: Open Port 80 via NSG Rule
 
 ```bash
 az vm open-port \
@@ -250,11 +250,11 @@ This creates an explicit inbound NSG rule `open-port-80` permitting all internet
 | `default-allow-ssh` | 1000 | 22 | TCP | Inbound | Allow | `*` |
 | `open-port-80` | 1010 | 80 | `*` | Inbound | Allow | `*` |
 
-> 📸 **Screenshot — NSG Port 80 Rule Applied**
+> 📸 **Screenshot: NSG Port 80 Rule Applied**
 >
 > ![nsg port 80](screenshots/06_nsg_port80_applied.png)
 
-> 📸 **Screenshot — NSG JSON Confirmation**
+> 📸 **Screenshot: NSG JSON Confirmation**
 >
 > ![nsg json](screenshots/07_nsg_json_confirmation.png)
 
@@ -288,7 +288,7 @@ The `HTTP/1.1 200 OK` response with `Server: nginx/1.18.0 (Ubuntu)` confirms:
 - Nginx was successfully installed and started via cloud-init at boot
 - The NSG inbound rule on port 80 is active and functioning
 
-> 📸 **Screenshot — Live HTTP 200 OK Validation**
+> 📸 **Screenshot: Live HTTP 200 OK Validation**
 >
 > ![curl 200](screenshots/08_curl_http200.png)
 
@@ -375,7 +375,7 @@ Running `curl -I` from outside the VM is the only definitive test of public HTTP
 
 
 
-<img width="1029" height="735" alt="image" src="https://github.com/user-attachments/assets/cc81f9e3-421a-4f76-ade8-3cda648b36ec" />
+
 <img width="1030" height="492" alt="image" src="https://github.com/user-attachments/assets/b46b5d6b-699b-47c5-bd53-093b0d53cbe8" />
 <img width="1036" height="407" alt="image" src="https://github.com/user-attachments/assets/15b40892-93de-4aa7-a7c9-6c5eba8ebaea" />
 <img width="1077" height="853" alt="image" src="https://github.com/user-attachments/assets/1ba95ec7-ab36-49c5-bac1-04650293c5bf" />
