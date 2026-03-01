@@ -90,9 +90,10 @@ Before executing this workflow, confirm the following:
 
 Click the **`Gitea UI`** button in the top navigation bar of the lab environment to open the Gitea web interface in a new browser tab.
 
-> 📌 **Screenshot Placeholder**
+> 📌 **Screenshot**
 >
-> ![Step 1 — Lab task panel showing Gitea UI button in top bar](screenshots/step1-task-panel.png)
+> <img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/21202490-a5ff-46f0-baac-9d12bb3cd075" />
+
 > *Figure 1: Task panel with the `Gitea UI` button highlighted in the top navigation bar.*
 
 ---
@@ -110,7 +111,7 @@ Click **Sign In** to proceed.
 
 > 📌 **Screenshot Placeholder**
 >
-> ![Step 2 — Gitea Sign In page with username 'jon' entered](screenshots/step2-gitea-login.png)
+> <img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/21202490-a5ff-46f0-baac-9d12bb3cd075" />
 > *Figure 2: Gitea Sign In form with `jon` entered as the username before submission.*
 
 ---
@@ -245,7 +246,7 @@ Jon now has a fully isolated copy of the repository and can push branches, commi
 
 
 
-<img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/21202490-a5ff-46f0-baac-9d12bb3cd075" />
+
 <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/112455a5-f2b8-4f9e-9c94-c531ef0a0988" />
 <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/c431944a-7c15-45f6-8386-c394c90b836e" />
 <img width="1895" height="952" alt="image" src="https://github.com/user-attachments/assets/9f776b42-7d25-48f5-a90e-09f34d558ff5" />
