@@ -139,7 +139,7 @@ docker tag nautilus-ecr:latest \
 821328497772.dkr.ecr.us-east-1.amazonaws.com/nautilus-ecr:latest
 ```
 📸 Screenshot:
-
+<img width="1040" height="837" alt="image" src="https://github.com/user-attachments/assets/2cb46a28-ce5d-41f5-8d11-f12b907d0135" />
 
 ## Step 7: Push Image to ECR
 ```
@@ -150,6 +150,10 @@ Expected Result
 - All image layers pushed successfully
 
 - Digest generated for integrity verification
+
+📸 Screenshot:
+
+<img width="1037" height="471" alt="image" src="https://github.com/user-attachments/assets/a750cd1d-723b-4e3a-8637-eb82fa0688d6" />
 
 ## Step 8: Verify Image Availability
 ```
@@ -209,11 +213,3 @@ Expected Output
 ## Conclusion
 
 This implementation successfully establishes a production-ready container image workflow using AWS-native services. The Docker image is securely built, authenticated, pushed, and verified in a private ECR repository, aligning with enterprise DevOps standards and cloud security best practices.
-
-
-
-
-<img width="1040" height="837" alt="image" src="https://github.com/user-attachments/assets/2cb46a28-ce5d-41f5-8d11-f12b907d0135" />
-<img width="1037" height="471" alt="image" src="https://github.com/user-attachments/assets/a750cd1d-723b-4e3a-8637-eb82fa0688d6" />
-
-
