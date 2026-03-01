@@ -4,7 +4,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Problem Statement](#-problem-statement)
 - [Environment](#-environment)
@@ -184,7 +184,7 @@ Verify the following indicators:
 | **Pull Request Workflow** | ✅ Enabled |
 | **Jon's Contribution Path** | `jon/story-blog` → PR → `sarah/story-blog` |
 
-Jon now has a fully isolated copy of the repository and can push branches, commit changes, and submit Pull Requests back to `sarah/story-blog` following the team's standard GitOps contribution workflow.
+`Jon` now has a fully isolated copy of the repository and can push branches, commit changes, and submit Pull Requests back to `sarah/story-blog` following the team's standard GitOps contribution workflow.
 
 ---
 
