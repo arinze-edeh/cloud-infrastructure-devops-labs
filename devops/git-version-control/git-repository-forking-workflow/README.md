@@ -92,8 +92,7 @@ Click the **`Gitea UI`** button in the top navigation bar of the lab environment
 
 > 📌 **Screenshot**
 >
-> <img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/21202490-a5ff-46f0-baac-9d12bb3cd075" />
-
+> <img width="930" height="488" alt="dsffgsg" src="https://github.com/user-attachments/assets/28dfaa9b-aa56-4365-8ad4-18a8c89e520f" />
 > *Figure 1: Task panel with the `Gitea UI` button highlighted in the top navigation bar.*
 
 ---
