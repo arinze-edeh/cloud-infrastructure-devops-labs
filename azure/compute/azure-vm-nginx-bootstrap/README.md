@@ -246,12 +246,9 @@ This creates an explicit inbound NSG rule `open-port-80` permitting all internet
 | `default-allow-ssh` | 1000 | 22 | TCP | Inbound | Allow | `*` |
 | `open-port-80` | 1010 | 80 | `*` | Inbound | Allow | `*` |
 
-> 📸 **Screenshot: NSG Port 80 Rule Applied**
+> 📸 **Screenshots: NSG Port 80 Rule Applied**
 
 <img width="1077" height="853" alt="image" src="https://github.com/user-attachments/assets/1ba95ec7-ab36-49c5-bac1-04650293c5bf" />
-
-> 📸 **Screenshot: NSG JSON Confirmation**
-
 <img width="1082" height="872" alt="image" src="https://github.com/user-attachments/assets/c598926c-cd5e-413d-b385-79d0736ce7c8" />
 
 ---
