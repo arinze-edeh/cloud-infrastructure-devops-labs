@@ -77,7 +77,7 @@ Expected Outcome
 - IAM user identity confirmed
 
 📸 Screenshot:
-
+<img width="1032" height="626" alt="image" src="https://github.com/user-attachments/assets/67326ba6-d431-4512-b651-9455990240d6" />
 
 ## Step 2: Create Private ECR Repository
 ```
@@ -204,7 +204,7 @@ Expected Output
 
 This implementation successfully establishes a production-ready container image workflow using AWS-native services. The Docker image is securely built, authenticated, pushed, and verified in a private ECR repository, aligning with enterprise DevOps standards and cloud security best practices.
 
-<img width="1032" height="626" alt="image" src="https://github.com/user-attachments/assets/67326ba6-d431-4512-b651-9455990240d6" />
+
 <img width="1035" height="723" alt="image" src="https://github.com/user-attachments/assets/cc7d219d-3ffc-4944-9f85-984b7ec2f4ea" />
 <img width="1026" height="701" alt="image" src="https://github.com/user-attachments/assets/52738a9f-cff0-4680-930e-53c25aa375c4" />
 <img width="1039" height="664" alt="image" src="https://github.com/user-attachments/assets/c8f0105e-d172-4eab-a1e0-4d571c1a2e61" />
