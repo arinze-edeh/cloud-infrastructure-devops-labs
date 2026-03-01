@@ -144,17 +144,17 @@ Click **Fork Repository** to confirm.
 
 > 📌 **Screenshot Placeholder**
 >
-> ![Step 4a — sarah/story-blog repository page with Fork button highlighted](screenshots/step4a-source-repo.png)
+> <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/c431944a-7c15-45f6-8386-c394c90b836e" />
 > *Figure 4a: `sarah/story-blog` repository page. Fork count is 0. The Fork button is visible in the top-right action bar.*
 
-> 📌 **Screenshot Placeholder**
+> 📌 **Screenshot**
 >
-> ![Step 4b — New Repository Fork dialog with owner set to 'jon'](screenshots/step4b-fork-dialog.png)
+> <img width="1895" height="952" alt="image" src="https://github.com/user-attachments/assets/9f776b42-7d25-48f5-a90e-09f34d558ff5" />
 > *Figure 4b: Fork configuration dialog. Owner is set to `jon`, forking from `sarah/story-blog`.*
 
 ---
 
-### Step 5 — Verify the Fork
+### Step 5: Verify the Fork
 
 After clicking **Fork Repository**, Gitea redirects automatically to the newly created fork: **`jon/story-blog`**.
 
@@ -168,7 +168,7 @@ Verify the following indicators:
 
 > 📌 **Screenshot Placeholder**
 >
-> ![Step 5 — jon/story-blog fork page showing 'forked from sarah/story-blog'](screenshots/step5-fork-verified.png)
+> <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/4efb9d53-03fa-4eaf-b4b5-39f7e1154146" />
 > *Figure 5: Successfully forked repository `jon/story-blog`. The fork origin `sarah/story-blog` is confirmed in the subtitle. All source commits and files are present.*
 
 ---
@@ -248,7 +248,6 @@ Jon now has a fully isolated copy of the repository and can push branches, commi
 
 
 
-<img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/c431944a-7c15-45f6-8386-c394c90b836e" />
-<img width="1895" height="952" alt="image" src="https://github.com/user-attachments/assets/9f776b42-7d25-48f5-a90e-09f34d558ff5" />
-<img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/4efb9d53-03fa-4eaf-b4b5-39f7e1154146" />
+
+
 
