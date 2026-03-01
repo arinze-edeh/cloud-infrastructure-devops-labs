@@ -137,6 +137,7 @@ az account list --output table
 > 📸 **Screenshot — Account Authentication**
 
 <img width="1031" height="575" alt="image" src="https://github.com/user-attachments/assets/8b26b680-f89b-49fb-93f9-73596687a1b7" />
+<img width="1032" height="724" alt="image" src="https://github.com/user-attachments/assets/6f5ff40c-4081-4d46-aa46-0aa7fa98fab3" />
 
 ---
 
@@ -153,7 +154,7 @@ kml_rg_main-b7a58fc8335847fe
 
 > 📸 **Screenshot — Subscription & Resource Group Discovery**
 
-<img width="1032" height="724" alt="image" src="https://github.com/user-attachments/assets/6f5ff40c-4081-4d46-aa46-0aa7fa98fab3" />
+<img width="1034" height="677" alt="image" src="https://github.com/user-attachments/assets/9245ffe8-f517-48eb-b92e-324c96998c9c" />
 
 ---
 
@@ -373,7 +374,7 @@ Running `curl -I` from outside the VM is the only definitive test of public HTTP
 
 
 
-<img width="1034" height="677" alt="image" src="https://github.com/user-attachments/assets/9245ffe8-f517-48eb-b92e-324c96998c9c" />
+
 <img width="1029" height="735" alt="image" src="https://github.com/user-attachments/assets/cc81f9e3-421a-4f76-ade8-3cda648b36ec" />
 <img width="1030" height="492" alt="image" src="https://github.com/user-attachments/assets/b46b5d6b-699b-47c5-bd53-093b0d53cbe8" />
 <img width="1036" height="407" alt="image" src="https://github.com/user-attachments/assets/15b40892-93de-4aa7-a7c9-6c5eba8ebaea" />
