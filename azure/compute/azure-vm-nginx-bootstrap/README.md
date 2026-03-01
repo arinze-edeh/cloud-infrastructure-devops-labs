@@ -136,7 +136,7 @@ az account list --output table
 
 > 📸 **Screenshot — Account Authentication**
 >
-> ![az account show](screenshots/01_az_account_show.png)
+> ![az account show](<img width="1031" height="575" alt="image" src="https://github.com/user-attachments/assets/8b26b680-f89b-49fb-93f9-73596687a1b7" />)
 
 ---
 
@@ -371,7 +371,7 @@ Running `curl -I` from outside the VM is the only definitive test of public HTTP
 
 
 
-<img width="1031" height="575" alt="image" src="https://github.com/user-attachments/assets/8b26b680-f89b-49fb-93f9-73596687a1b7" />
+
 <img width="1032" height="724" alt="image" src="https://github.com/user-attachments/assets/6f5ff40c-4081-4d46-aa46-0aa7fa98fab3" />
 <img width="1034" height="677" alt="image" src="https://github.com/user-attachments/assets/9245ffe8-f517-48eb-b92e-324c96998c9c" />
 <img width="1029" height="735" alt="image" src="https://github.com/user-attachments/assets/cc81f9e3-421a-4f76-ade8-3cda648b36ec" />
