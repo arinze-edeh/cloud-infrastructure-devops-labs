@@ -77,7 +77,7 @@ Before executing this workflow, confirm the following:
 [Confirm: jon/story-blog created]
        │
        ▼
-[✅ Fork verified — Jon can now contribute via PRs]
+[Fork verified — Jon can now contribute via PRs]
 ```
 
 ---
@@ -202,7 +202,7 @@ Verify the following indicators:
 
 ### Fork exists but repository content is missing
 - Navigate to `jon/story-blog` and confirm **"forked from sarah/story-blog"** is shown
-- If the fork is empty, delete it and re-fork — Gitea may have hit a cloning timeout
+- If the fork is empty, delete it and re-fork, Gitea may have hit a cloning timeout
 
 ### Cannot access Gitea UI from the lab
 - From the jumphost terminal, verify the Gitea service is running:
@@ -215,7 +215,7 @@ Verify the following indicators:
 
 ## 🔐 Security & Best Practices
 
-- **Never commit directly to the upstream `sarah/story-blog`** — always work through your fork and submit a Pull Request
+- **Never commit directly to the upstream `sarah/story-blog`**, always work through your fork and submit a Pull Request
 - **Rotate credentials** after initial setup; the default `Jon_pass123` is a lab password and should never be used in production
 - **Enable branch protection** on `sarah/story-blog` master branch to require PR reviews before merging
 - **Use SSH keys** for local Git operations instead of HTTP Basic Auth:
@@ -224,7 +224,7 @@ Verify the following indicators:
   ssh-keygen -t ed25519 -C "jon@nautilus-project"
   # Add public key to Gitea → User Settings → SSH/GPG Keys
   ```
-- **Audit fork access** periodically — remove forks from users who are no longer active on the project
+- **Audit fork access** periodically, remove forks from users who are no longer active on the project
 
 ---
 
