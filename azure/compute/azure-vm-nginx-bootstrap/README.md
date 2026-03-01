@@ -167,8 +167,6 @@ LOCATION="eastus"
 IMAGE="Ubuntu2204"
 ADMIN_USER="azureuser"
 ADMIN_PASS="AdminPass@1234"
-DISK_NAME="devops-vm-osdisk"
-VM_SIZE="Standard_B1s"
 ```
 
 > 📸 **Screenshot: Variable Configuration**
