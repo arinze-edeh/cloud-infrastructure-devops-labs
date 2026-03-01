@@ -101,7 +101,7 @@ Key Outputs
 cd /root/pyapp
 ```
 📸 Screenshot:
-
+<img width="1026" height="701" alt="image" src="https://github.com/user-attachments/assets/52738a9f-cff0-4680-930e-53c25aa375c4" />
 
 ## Step 4: Build Docker Image from Dockerfile
 ```
@@ -206,7 +206,7 @@ This implementation successfully establishes a production-ready container image 
 
 
 
-<img width="1026" height="701" alt="image" src="https://github.com/user-attachments/assets/52738a9f-cff0-4680-930e-53c25aa375c4" />
+
 <img width="1039" height="664" alt="image" src="https://github.com/user-attachments/assets/c8f0105e-d172-4eab-a1e0-4d571c1a2e61" />
 <img width="1038" height="785" alt="image" src="https://github.com/user-attachments/assets/bee87ed7-4175-4565-be90-fa4d3048211f" />
 <img width="1040" height="837" alt="image" src="https://github.com/user-attachments/assets/2cb46a28-ce5d-41f5-8d11-f12b907d0135" />
