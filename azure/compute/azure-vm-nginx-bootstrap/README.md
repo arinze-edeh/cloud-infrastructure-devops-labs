@@ -194,8 +194,7 @@ EOF
 ```
 
 > 📸 **Screenshot: Bootstrap Script Creation**
->
-> ![nginx setup script](screenshots/04_nginx_setup_script.png)
+<img width="1030" height="492" alt="image" src="https://github.com/user-attachments/assets/b46b5d6b-699b-47c5-bd53-093b0d53cbe8" />
 
 ---
 
@@ -376,7 +375,7 @@ Running `curl -I` from outside the VM is the only definitive test of public HTTP
 
 
 
-<img width="1030" height="492" alt="image" src="https://github.com/user-attachments/assets/b46b5d6b-699b-47c5-bd53-093b0d53cbe8" />
+
 <img width="1036" height="407" alt="image" src="https://github.com/user-attachments/assets/15b40892-93de-4aa7-a7c9-6c5eba8ebaea" />
 <img width="1077" height="853" alt="image" src="https://github.com/user-attachments/assets/1ba95ec7-ab36-49c5-bac1-04650293c5bf" />
 <img width="1082" height="872" alt="image" src="https://github.com/user-attachments/assets/c598926c-cd5e-413d-b385-79d0736ce7c8" />
