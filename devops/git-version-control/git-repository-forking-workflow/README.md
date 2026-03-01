@@ -232,7 +232,7 @@ Verify the following indicators:
 | Resource | Link |
 |---|---|
 | Gitea Official Documentation | https://docs.gitea.io |
-| Gitea Forking Guide | https://docs.gitea.io/en-us/forks |
+| Gitea Forking Guide | [https://docs.gitea.io/en-us/forks](https://docs.gitea.com/usage/pull-request) |
 | Git Branching & Fork Workflow | https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project |
 | KodeKloud Nautilus Project Labs | https://kodekloud.com |
 
@@ -246,7 +246,7 @@ Verify the following indicators:
 
 
 
-https://docs.gitea.com/usage/pull-request
+
 
 
 
