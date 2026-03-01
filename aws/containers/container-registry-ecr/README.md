@@ -161,6 +161,10 @@ Expected Output
 
 - Image digest visible
 
+📸 Screenshot:
+
+<img width="1031" height="665" alt="image" src="https://github.com/user-attachments/assets/54d2759f-9b7a-410d-a6e1-0c6f3e5bcc44" />
+
 ## Final Validation Checklist
 
 | Check                  | Status      |
@@ -211,5 +215,5 @@ This implementation successfully establishes a production-ready container image 
 
 <img width="1040" height="837" alt="image" src="https://github.com/user-attachments/assets/2cb46a28-ce5d-41f5-8d11-f12b907d0135" />
 <img width="1037" height="471" alt="image" src="https://github.com/user-attachments/assets/a750cd1d-723b-4e3a-8637-eb82fa0688d6" />
-<img width="1031" height="665" alt="image" src="https://github.com/user-attachments/assets/54d2759f-9b7a-410d-a6e1-0c6f3e5bcc44" />
+
 
