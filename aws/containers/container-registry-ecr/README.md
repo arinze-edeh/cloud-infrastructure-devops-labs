@@ -96,7 +96,7 @@ Key Outputs
 📸 Screenshot:
 <img width="1035" height="723" alt="image" src="https://github.com/user-attachments/assets/cc7d219d-3ffc-4944-9f85-984b7ec2f4ea" />
 
-## Step 3: avigate to Application Directory
+## Step 3: Navigate to Application Directory
 ```
 cd /root/pyapp
 ```
