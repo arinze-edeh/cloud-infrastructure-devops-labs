@@ -134,7 +134,7 @@ az account list --output table
 }
 ```
 
-> 📸 **Screenshot: Account Authentication**
+> 📸 **Screenshots: Account Authentication**
 
 <img width="1031" height="575" alt="image" src="https://github.com/user-attachments/assets/8b26b680-f89b-49fb-93f9-73596687a1b7" />
 <img width="1032" height="724" alt="image" src="https://github.com/user-attachments/assets/6f5ff40c-4081-4d46-aa46-0aa7fa98fab3" />
@@ -225,8 +225,7 @@ kml_rg_main-b7a58fc8335847fe  VM running    20.51.140.233      10.0.0.4         
 ```
 
 > 📸 **Screenshot: VM Successfully Provisioned**
->
-> ![vm running](screenshots/05_vm_running.png)
+<img width="1036" height="407" alt="image" src="https://github.com/user-attachments/assets/15b40892-93de-4aa7-a7c9-6c5eba8ebaea" />
 
 ---
 
@@ -250,12 +249,12 @@ This creates an explicit inbound NSG rule `open-port-80` permitting all internet
 | `open-port-80` | 1010 | 80 | `*` | Inbound | Allow | `*` |
 
 > 📸 **Screenshot: NSG Port 80 Rule Applied**
->
-> ![nsg port 80](screenshots/06_nsg_port80_applied.png)
+
+<img width="1077" height="853" alt="image" src="https://github.com/user-attachments/assets/1ba95ec7-ab36-49c5-bac1-04650293c5bf" />
 
 > 📸 **Screenshot: NSG JSON Confirmation**
->
-> ![nsg json](screenshots/07_nsg_json_confirmation.png)
+
+<img width="1082" height="872" alt="image" src="https://github.com/user-attachments/assets/c598926c-cd5e-413d-b385-79d0736ce7c8" />
 
 ---
 
@@ -288,8 +287,7 @@ The `HTTP/1.1 200 OK` response with `Server: nginx/1.18.0 (Ubuntu)` confirms:
 - The NSG inbound rule on port 80 is active and functioning
 
 > 📸 **Screenshot: Live HTTP 200 OK Validation**
->
-> ![curl 200](screenshots/08_curl_http200.png)
+<img width="1083" height="869" alt="image" src="https://github.com/user-attachments/assets/f5983159-7902-494f-a452-bf84b7d236a8" />
 
 ---
 
@@ -328,7 +326,7 @@ The `HTTP/1.1 200 OK` response with `Server: nginx/1.18.0 (Ubuntu)` confirms:
 
 ## 🧠 Key Learnings
 
-**1. Specify VM size explicitly — never rely on defaults.**
+**1. Specify VM size explicitly, never rely on defaults.**
 Azure default SKUs are subject to regional capacity constraints. Targeting broadly available sizes like `Standard_B1s` ensures consistent, predictable deployments across regions and time windows.
 
 **2. Enforce storage SKU compliance from the start.**
@@ -337,7 +335,7 @@ Enterprise Azure subscriptions commonly carry Azure Policy definitions that bloc
 **3. Name your OS disk explicitly in iterative deployments.**
 Providing `--os-disk-name` prevents orphaned disk conflicts when redeploying into the same resource group — a critical pattern in CI/CD pipelines and environments with short resource lifespans.
 
-**4. Resource deletion is asynchronous — always poll before retry.**
+**4. Resource deletion is asynchronous, always poll before retry.**
 `az vm delete` returning exit code `0` does not guarantee backend teardown is complete. Polling with `az vm show` until `ResourceNotFound` eliminates race conditions on redeployment.
 
 **5. Always validate from an external client perspective.**
@@ -367,18 +365,3 @@ Running `curl -I` from outside the VM is the only definitive test of public HTTP
 `devops-vm` · `eastus` · `nginx/1.18.0` · `HTTP 200 OK`
 
 </div>
-
-
-
-
-
-
-
-
-
-<img width="1036" height="407" alt="image" src="https://github.com/user-attachments/assets/15b40892-93de-4aa7-a7c9-6c5eba8ebaea" />
-<img width="1077" height="853" alt="image" src="https://github.com/user-attachments/assets/1ba95ec7-ab36-49c5-bac1-04650293c5bf" />
-<img width="1082" height="872" alt="image" src="https://github.com/user-attachments/assets/c598926c-cd5e-413d-b385-79d0736ce7c8" />
-<img width="1083" height="869" alt="image" src="https://github.com/user-attachments/assets/f5983159-7902-494f-a452-bf84b7d236a8" />
-
-
