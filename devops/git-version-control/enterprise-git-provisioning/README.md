@@ -33,7 +33,7 @@ ssh natasha@ststor01.stratos.xfusioncorp.com
 Screenshot:
 <img width="1037" height="597" alt="image" src="https://github.com/user-attachments/assets/ef3ca39b-89aa-4681-8e42-a1e6300a8b32" />
 
-## SStep 2: Verify Source Repository
+## Step 2: Verify Source Repository
 ```
 ls -ld /opt/apps.git
 ls /opt/apps.git
@@ -43,14 +43,14 @@ Screenshot: `Confirms that /opt/apps.git exists and contains Git objects (HEAD, 
 
 
 
-## SStep 3: Verify / Create Target Directory
+## Step 3: Verify / Create Target Directory
 ```
 ls -ld /usr/src/kodekloudrepos
 ```
 Screenshot:
 <img width="1036" height="560" alt="image" src="https://github.com/user-attachments/assets/9a6f97cd-b7cd-4507-a1d4-ecf9059f5fe0" />
 
-## SStep 4: Navigate to Target Directory
+## Step 4: Navigate to Target Directory
 ```
 cd /usr/src/kodekloudrepos
 pwd
@@ -58,7 +58,7 @@ pwd
 Screenshot:
 <img width="1036" height="718" alt="image" src="https://github.com/user-attachments/assets/916c568a-c7e2-4a96-9c9f-8b3165d33278" />
 
-## SStep 5: Clone the Repository
+## Step 5: Clone the Repository
 ```
 git clone /opt/apps.git
 ```
@@ -67,7 +67,7 @@ Screenshot:
 
 - Note: The clone created a subfolder named apps. The repository is currently empty.
 
-## SStep 6: Navigate into Cloned Repository and Verify
+## Step 6: Navigate into Cloned Repository and Verify
 ```
 cd apps
 git status
