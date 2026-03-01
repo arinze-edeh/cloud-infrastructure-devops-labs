@@ -135,8 +135,8 @@ az account list --output table
 ```
 
 > 📸 **Screenshot — Account Authentication**
->
-> ![az account show](<img width="1031" height="575" alt="image" src="https://github.com/user-attachments/assets/8b26b680-f89b-49fb-93f9-73596687a1b7" />)
+
+<img width="1031" height="575" alt="image" src="https://github.com/user-attachments/assets/8b26b680-f89b-49fb-93f9-73596687a1b7" />
 
 ---
 
