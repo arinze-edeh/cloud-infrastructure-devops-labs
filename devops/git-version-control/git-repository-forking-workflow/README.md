@@ -1,4 +1,4 @@
-# 🍴 Git Repository Fork — Gitea (Nautilus Project)
+# Git Repository Fork — Gitea (Nautilus Project)
 
 > **Enterprise Git Workflow Documentation** | Nautilus Project Team | Gitea SCM Platform
 
@@ -11,11 +11,11 @@
 - [Prerequisites](#-prerequisites)
 - [Solution Overview](#-solution-overview)
 - [Step-by-Step Resolution](#-step-by-step-resolution)
-  - [Step 1 — Access the Gitea UI](#step-1--access-the-gitea-ui)
-  - [Step 2 — Authenticate as Target User](#step-2--authenticate-as-target-user)
-  - [Step 3 — Locate the Source Repository](#step-3--locate-the-source-repository)
-  - [Step 4 — Fork the Repository](#step-4--fork-the-repository)
-  - [Step 5 — Verify the Fork](#step-5--verify-the-fork)
+  - [Step 1: Access the Gitea UI](#step-1--access-the-gitea-ui)
+  - [Step 2: Authenticate as Target User](#step-2--authenticate-as-target-user)
+  - [Step 3: Locate the Source Repository](#step-3--locate-the-source-repository)
+  - [Step 4: Fork the Repository](#step-4--fork-the-repository)
+  - [Step 5: Verify the Fork](#step-5--verify-the-fork)
 - [Outcome](#-outcome)
 - [Troubleshooting](#-troubleshooting)
 - [Security & Best Practices](#-security--best-practices)
