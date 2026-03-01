@@ -76,8 +76,8 @@ Expected Outcome
 
 - IAM user identity confirmed
 
-📸 Screenshot Placeholder
-#
+📸 Screenshot:
+
 
 ## Step 2: Create Private ECR Repository
 ```
@@ -139,62 +139,68 @@ docker tag nautilus-ecr:latest \
 📸 Screenshot:
 
 
-7️⃣ Push Image to ECR
+## Step 7: Push Image to ECR
+```
 docker push 821328497772.dkr.ecr.us-east-1.amazonaws.com/nautilus-ecr:latest
-
+```
 Expected Result
 
-All image layers pushed successfully
+- All image layers pushed successfully
 
-Digest generated for integrity verification
+- Digest generated for integrity verification
 
-8️⃣ Verify Image Availability
+## Step 8: Verify Image Availability
+```
 aws ecr list-images --repository-name nautilus-ecr
-
+```
 Expected Output
 
-latest tag present
+- latest tag present
 
-Image digest visible
+- Image digest visible
 
-✅ Final Validation Checklist
-Check	Status
-ECR Repository Created	✔
-Docker Image Built	✔
-Image Tagged Correctly	✔
-Image Pushed to ECR	✔
-Image Verified in ECR	✔
-Region Compliance	✔ us-east-1
-📦 Deliverables
+## Final Validation Checklist
 
-Private ECR Repository: nautilus-ecr
+| Check                  | Status      |
+| ---------------------- | ----------- |
+| ECR Repository Created | ✔           |
+| Docker Image Built     | ✔           |
+| Image Tagged Correctly | ✔           |
+| Image Pushed to ECR    | ✔           |
+| Image Verified in ECR  | ✔           |
+| Region Compliance      | ✔ us-east-1 |
 
-Docker Image Tag: latest
+## Deliverables
 
-Registry URI:
-821328497772.dkr.ecr.us-east-1.amazonaws.com/nautilus-ecr
+- Private ECR Repository: `nautilus-ecr`
 
-🧩 Key Learnings
+- Docker Image Tag: `latest`
 
-ECR provides secure, IAM-integrated container storage
+- Registry URI:
+`821328497772.dkr.ecr.us-east-1.amazonaws.com/nautilus-ecr`
 
-Docker image tagging must align with ECR repository URIs
+## Key Learnings
 
-Authentication via get-login-password is the recommended modern approach
+- ECR provides secure, IAM-integrated container storage
 
-Image verification ensures deployment readiness
+- Docker image tagging must align with ECR repository URIs
 
-🚀 Next Steps (Optional Enhancements)
+- Authentication via get-login-password is the recommended modern approach
 
-Enable image scanning on push
+- Image verification ensures deployment readiness
 
-Add lifecycle policies for image retention
 
-Integrate with CI/CD pipelines
+## Next Steps (Optional Enhancements)
 
-Apply immutable image tags for production workloads
+- Enable image scanning on push
 
-🏁 Conclusion
+- Add lifecycle policies for image retention
+
+- Integrate with CI/CD pipelines
+
+- Apply immutable image tags for production workloads
+
+## Conclusion
 
 This implementation successfully establishes a production-ready container image workflow using AWS-native services. The Docker image is securely built, authenticated, pushed, and verified in a private ECR repository, aligning with enterprise DevOps standards and cloud security best practices.
 
