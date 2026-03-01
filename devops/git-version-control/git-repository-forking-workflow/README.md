@@ -27,7 +27,7 @@
 
 The **Nautilus project team** onboarded a new developer, **Jon**, who requires access to a shared Git repository in order to contribute to an ongoing project. Jon does not own the source repository and must work from a personal fork to maintain proper change isolation and pull request workflows.
 
-**Business Impact:** Without a proper fork, Jon cannot submit isolated contributions, cannot open Pull Requests, and risks directly modifying a shared team repository — violating standard GitOps change-management practices.
+**Business Impact:** Without a proper fork, Jon cannot submit isolated contributions, cannot open Pull Requests, and risks directly modifying a shared team repository, violating standard GitOps change-management practices.
 
 **Resolution Required:** Fork the `sarah/story-blog` repository under Jon's Gitea account (`jon`) via the Gitea Web UI.
 
