@@ -1,4 +1,4 @@
-# Git Repository Fork — Gitea (Nautilus Project)
+# Git Repository Fork - Gitea (Nautilus Project)
 
 > **Enterprise Git Workflow Documentation** | Nautilus Project Team | Gitea SCM Platform
 
