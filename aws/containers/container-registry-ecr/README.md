@@ -115,6 +115,7 @@ Validation
 
 📸 Screenshot:
 
+<img width="1039" height="664" alt="image" src="https://github.com/user-attachments/assets/c8f0105e-d172-4eab-a1e0-4d571c1a2e61" />
 
 ## Step 5: Authenticate Docker with ECR
 ```
@@ -207,7 +208,6 @@ This implementation successfully establishes a production-ready container image 
 
 
 
-<img width="1039" height="664" alt="image" src="https://github.com/user-attachments/assets/c8f0105e-d172-4eab-a1e0-4d571c1a2e61" />
 <img width="1038" height="785" alt="image" src="https://github.com/user-attachments/assets/bee87ed7-4175-4565-be90-fa4d3048211f" />
 <img width="1040" height="837" alt="image" src="https://github.com/user-attachments/assets/2cb46a28-ce5d-41f5-8d11-f12b907d0135" />
 <img width="1037" height="471" alt="image" src="https://github.com/user-attachments/assets/a750cd1d-723b-4e3a-8637-eb82fa0688d6" />
