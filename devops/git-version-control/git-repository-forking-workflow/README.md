@@ -23,7 +23,7 @@
 
 ---
 
-## ❗ Problem Statement
+## Problem Statement
 
 The **Nautilus project team** onboarded a new developer, **Jon**, who requires access to a shared Git repository in order to contribute to an ongoing project. Jon does not own the source repository and must work from a personal fork to maintain proper change isolation and pull request workflows.
 
@@ -33,7 +33,7 @@ The **Nautilus project team** onboarded a new developer, **Jon**, who requires a
 
 ---
 
-## 🌐 Environment
+## Environment
 
 | Component | Detail |
 |---|---|
@@ -47,7 +47,7 @@ The **Nautilus project team** onboarded a new developer, **Jon**, who requires a
 
 ---
 
-## ✅ Prerequisites
+## Prerequisites
 
 Before executing this workflow, confirm the following:
 
@@ -59,7 +59,7 @@ Before executing this workflow, confirm the following:
 
 ---
 
-## 🗺️ Solution Overview
+## Solution Overview
 
 ```
 [Gitea UI Access]
@@ -82,11 +82,11 @@ Before executing this workflow, confirm the following:
 
 ---
 
-## 🔧 Step-by-Step Resolution
+## Step-by-Step Resolution
 
 ---
 
-### Step 1 — Access the Gitea UI
+### Step 1: Access the Gitea UI
 
 Click the **`Gitea UI`** button in the top navigation bar of the lab environment to open the Gitea web interface in a new browser tab.
 
@@ -97,7 +97,7 @@ Click the **`Gitea UI`** button in the top navigation bar of the lab environment
 
 ---
 
-### Step 2 — Authenticate as Target User
+### Step 2: Authenticate as Target User
 
 On the Gitea login page, authenticate using Jon's credentials:
 
@@ -115,7 +115,7 @@ Click **Sign In** to proceed.
 
 ---
 
-### Step 3 — Locate the Source Repository
+### Step 3: Locate the Source Repository
 
 After successful login, the Gitea **Dashboard** is displayed. Confirm you are authenticated as `jon`. In the right-side **Repositories** panel, click on **`sarah/story-blog`** to navigate to the source repository.
 
@@ -126,7 +126,7 @@ After successful login, the Gitea **Dashboard** is displayed. Confirm you are au
 
 ---
 
-### Step 4 — Fork the Repository
+### Step 4: Fork the Repository
 
 Inside the `sarah/story-blog` repository page, locate the **`Fork`** button in the top-right action bar (alongside Watch and Star). Click **Fork**.
 
