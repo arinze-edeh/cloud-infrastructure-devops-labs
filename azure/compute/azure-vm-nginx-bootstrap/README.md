@@ -1,11 +1,11 @@
- ☁️ Azure VM Nginx Web Server Deployment
+# Azure VM Nginx Web Server Deployment
 
 > **Enterprise-Grade Infrastructure Provisioning on Microsoft Azure**
 > A production-ready Ubuntu web server deployed via Azure CLI with automated Nginx configuration, network security hardening, and live HTTP validation.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Overview](#-project-overview)
 - [Business Context](#-business-context)
@@ -21,7 +21,7 @@
 
 ---
 
-## 🔭 Project Overview
+## Project Overview
 
 This repository documents the **end-to-end provisioning and live validation** of an Azure Virtual Machine serving as a public-facing Nginx web server. The deployment was executed entirely through the **Azure CLI** using a service principal identity within a time-boxed lab environment.
 
@@ -39,7 +39,7 @@ This repository documents the **end-to-end provisioning and live validation** of
 
 ---
 
-## 🏢 Business Context
+## Business Context
 
 The **Nautilus DevOps Team** required a reliable, internet-accessible web server as the foundational compute layer for a critical application deployment. This VM represents the first provisioned resource in the Nautilus project's infrastructure rollout.
 
@@ -53,7 +53,7 @@ The **Nautilus DevOps Team** required a reliable, internet-accessible web server
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -91,7 +91,7 @@ The **Nautilus DevOps Team** required a reliable, internet-accessible web server
 
 ---
 
-## 🔧 Prerequisites
+## Prerequisites
 
 | Tool | Version | Purpose |
 |---|---|---|
@@ -108,7 +108,7 @@ az account show
 
 ---
 
-## ⚙️ Environment Configuration
+## Environment Configuration
 
 ### Step 1: Authenticate & Verify Subscription
 
@@ -303,7 +303,7 @@ The `HTTP/1.1 200 OK` response with `Server: nginx/1.18.0 (Ubuntu)` confirms:
 
 ---
 
-## 🔐 Security Posture
+## Security Posture
 
 | Control | Implementation |
 |---|---|
@@ -319,7 +319,7 @@ The `HTTP/1.1 200 OK` response with `Server: nginx/1.18.0 (Ubuntu)` confirms:
 
 ---
 
-## 🧠 Key Learnings
+## Key Learnings
 
 **1. Specify VM size explicitly, never rely on defaults.**
 Azure default SKUs are subject to regional capacity constraints. Targeting broadly available sizes like `Standard_B1s` ensures consistent, predictable deployments across regions and time windows.
