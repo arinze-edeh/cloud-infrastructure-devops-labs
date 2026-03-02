@@ -312,8 +312,10 @@ aws ec2 create-route \
 ```
 
 ***Screenshot: AWS Console → VPC → Route Tables → Default VPC main RTB showing entry `10.1.0.0/16 → pcx-0207198e601a5b32d`***
+<img width="1036" height="277" alt="image" src="https://github.com/user-attachments/assets/c1d1e11a-944e-4618-9559-1d7a5d03859d" />
 
 ***Screenshot: AWS Console → VPC → Route Tables → Private VPC main RTB showing entry `172.31.0.0/16 → pcx-0207198e601a5b32d`***
+
 
 ---
 
@@ -700,8 +702,7 @@ When running infrastructure CLI commands across sessions, these errors confirm t
 
 
 
-<img width="1037" height="492" alt="image" src="https://github.com/user-attachments/assets/8d8ab7b2-8df5-4f9e-9140-651f26fba9af" />
-<img width="1036" height="277" alt="image" src="https://github.com/user-attachments/assets/c1d1e11a-944e-4618-9559-1d7a5d03859d" />
+
 <img width="1031" height="348" alt="image" src="https://github.com/user-attachments/assets/71218b04-9cdc-40e4-ae7f-3ce4a69f1530" />
 <img width="1031" height="511" alt="image" src="https://github.com/user-attachments/assets/ad47f237-a861-4b53-bf28-ed0ddeab0d1a" />
 <img width="1029" height="358" alt="image" src="https://github.com/user-attachments/assets/839ad23b-a1e7-41df-88b9-2eec8422d536" />
