@@ -261,7 +261,7 @@ aws ec2 accept-vpc-peering-connection \
 }
 ```
 
-***Screenshot: AWS Console → VPC → Peering Connections showing `nautilus-vpc-peering` with Status = **Active***
+***Screenshots: AWS Console → VPC → Peering Connections showing `nautilus-vpc-peering` with Status = `Active`***
 
 <img width="1037" height="621" alt="image" src="https://github.com/user-attachments/assets/ecdc3e30-bdf1-415f-a3aa-5d7d1f2f666d" />
 <img width="1035" height="871" alt="image" src="https://github.com/user-attachments/assets/8bfdc5c3-f65c-4f25-abdd-6a14942c8600" />
