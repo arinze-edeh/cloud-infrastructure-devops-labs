@@ -1,4 +1,4 @@
-# 🔗 AWS VPC Peering — Cross-VPC Private Connectivity
+# AWS VPC Peering - Cross-VPC Private Connectivity
 
 > **Enterprise-grade private network connectivity between isolated AWS VPCs using VPC Peering, enabling secure inter-instance communication without traversing the public internet.**
 
@@ -18,7 +18,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Problem Statement](#problem-statement)
@@ -174,9 +174,9 @@ ls -la /root/.ssh/id_rsa.pub
 
 ## Implementation
 
-### Phase 1 — Initialize Variables
+### Phase 1: Initialize Variables
 
-**Objective:** Resolve all resource IDs upfront and store them in shell variables. Every subsequent command references these variables — no hardcoded IDs.
+**Objective:** Resolve all resource IDs upfront and store them in shell variables. Every subsequent command references these variables, no hardcoded IDs.
 
 ```bash
 DEFAULT_VPC_ID=$(aws ec2 describe-vpcs \
@@ -206,13 +206,13 @@ echo "Private VPC : $PRIVATE_VPC_ID  ($PRIVATE_CIDR)"
 
 ---
 
-### Phase 2 — Create & Accept VPC Peering Connection
+### Phase 2: Create & Accept VPC Peering Connection
 
 **Objective:** Establish the logical peering link between the two VPCs and transition its status to `active`.
 
 **Problem:** VPCs are network-isolated by default. Without a peering connection, no network path exists between them regardless of any routing configuration.
 
-#### Step 2.1 — Create the Peering Request
+#### Step 2.1: Create the Peering Request
 
 ```bash
 PEER_CONN_ID=$(aws ec2 create-vpc-peering-connection \
@@ -230,7 +230,7 @@ echo "Created Peering Connection: $PEER_CONN_ID"
 Created Peering Connection: pcx-0207198e601a5b32d
 ```
 
-#### Step 2.2 — Accept the Peering Connection
+#### Step 2.2: Accept the Peering Connection
 
 > ⚠️ **Critical:** A newly created peering connection enters `pending-acceptance` state. It must be explicitly accepted — even in the same account and region — before any traffic can flow.
 
@@ -267,13 +267,13 @@ aws ec2 accept-vpc-peering-connection \
 
 ---
 
-### Phase 3 — Configure Route Tables
+### Phase 3: Configure Route Tables
 
 **Objective:** Add explicit routes in both VPCs so traffic destined for the peer CIDR is forwarded through the peering connection rather than dropped.
 
 **Problem:** VPC Peering creates a logical link but does **not** automatically populate route tables. Without matching routes on both sides, packets are silently dropped — ping would fail even with an active peering connection.
 
-#### Step 3.1 — Route in Default VPC → `10.1.0.0/16`
+#### Step 3.1: Route in Default VPC → `10.1.0.0/16`
 
 ```bash
 DEFAULT_RT_ID=$(aws ec2 describe-route-tables \
@@ -292,7 +292,7 @@ aws ec2 create-route \
 { "Return": true }
 ```
 
-#### Step 3.2 — Route in Private VPC → `172.31.0.0/16`
+#### Step 3.2: Route in Private VPC → `172.31.0.0/16`
 
 ```bash
 PRIVATE_RT_ID=$(aws ec2 describe-route-tables \
@@ -319,7 +319,7 @@ aws ec2 create-route \
 
 ---
 
-### Phase 4 — Configure Security Groups
+### Phase 4: Configure Security Groups
 
 **Objective:** Open ICMP on the private EC2's security group to allow ping traffic sourced from the Default VPC CIDR.
 
@@ -361,7 +361,7 @@ aws ec2 authorize-security-group-ingress \
 
 ---
 
-### Phase 5 — Configure SSH Access via EC2 Instance Connect
+### Phase 5: Configure SSH Access via EC2 Instance Connect
 
 **Objective:** Establish key-based SSH trust between the `aws-client` management host and `nautilus-public-ec2` so commands can be executed remotely.
 
@@ -369,14 +369,14 @@ aws ec2 authorize-security-group-ingress \
 
 ---
 
-#### Blocker 1 — TCP Port 22 Not Open
+#### Blocker 1: TCP Port 22 Not Open
 
 **Symptom:**
 ```
 ssh: connect to host 100.55.64.9 port 22: Connection timed out
 ```
 
-**Root Cause:** The public EC2 security group (`sg-0104b845d741f1ff2`) had no inbound rule for TCP port 22. The SYN packet was dropped at the security group layer — the instance was unreachable.
+**Root Cause:** The public EC2 security group (`sg-0104b845d741f1ff2`) had no inbound rule for TCP port 22. The SYN packet was dropped at the security group layer, the instance was unreachable.
 
 **Resolution:**
 
@@ -413,7 +413,7 @@ aws ec2 authorize-security-group-ingress \
 
 ---
 
-#### Blocker 2 — No Trusted Public Key on Instance
+#### Blocker 2: No Trusted Public Key on Instance
 
 **Symptom:**
 ```
@@ -422,7 +422,7 @@ ec2-user@100.55.64.9: Permission denied (publickey,gssapi-keyex,gssapi-with-mic)
 
 **Root Cause:** Port 22 was now reachable, but the instance had no record of `aws-client`'s public key in `~/.ssh/authorized_keys`. EC2 Amazon Linux 2 instances disable password authentication by default — without a pre-trusted key, all authentication methods fail.
 
-**Resolution — EC2 Instance Connect bootstrap pattern:**
+**Resolution: EC2 Instance Connect bootstrap pattern:**
 
 EC2 Instance Connect injects the provided public key into the instance's metadata for a **60-second window**. That window is used to SSH in with the matching private key and permanently append the key to `authorized_keys`.
 
@@ -467,7 +467,7 @@ ssh -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no ec2-user@$PUBLIC_IP \
 
 ---
 
-#### Blocker 3 — SSH Command Hangs on `cat >> authorized_keys`
+#### Blocker 3: SSH Command Hangs on `cat >> authorized_keys`
 
 **Symptom:**
 ```bash
@@ -493,7 +493,7 @@ ssh -i /root/.ssh/id_rsa ec2-user@$IP \
 
 ---
 
-### Phase 6 — Validate End-to-End Connectivity
+### Phase 6: Validate End-to-End Connectivity
 
 **Objective:** Execute the definitive test — SSH from `aws-client` to `nautilus-public-ec2` and ping `nautilus-private-ec2` across the VPC peering link.
 
@@ -554,7 +554,7 @@ rtt min/avg/max/mdev = 0.886/1.529/2.481/0.610 ms
 
 ## Troubleshooting
 
-### Issue 1 — `Connection timed out` on Port 22
+### Issue 1: `Connection timed out` on Port 22
 
 **Symptom:**
 ```
@@ -574,7 +574,7 @@ aws ec2 authorize-security-group-ingress \
 
 ---
 
-### Issue 2 — `Permission denied (publickey,gssapi-keyex,gssapi-with-mic)`
+### Issue 2: `Permission denied (publickey,gssapi-keyex,gssapi-with-mic)`
 
 **Symptom:**
 ```
@@ -599,7 +599,7 @@ ssh -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no ec2-user@$PUBLIC_IP \
 
 ---
 
-### Issue 3 — SSH Command Hangs Indefinitely (`^C` required)
+### Issue 3: SSH Command Hangs Indefinitely (`^C` required)
 
 **Symptom:**
 ```bash
@@ -622,7 +622,7 @@ ssh -i /root/.ssh/id_rsa ec2-user@$IP \
 
 ---
 
-### Issue 4 — `RouteAlreadyExists` / `InvalidPermission.Duplicate`
+### Issue 4: `RouteAlreadyExists` / `InvalidPermission.Duplicate`
 
 **Symptom:**
 ```
@@ -657,9 +657,9 @@ aws ec2 describe-security-groups \
 Creating a VPC Peering connection alone does not enable traffic flow. All three layers below must be explicitly configured — failure at any single layer silently drops traffic:
 
 ```
-Layer 1 — VPC Peering Connection   →  logical link (must be accepted, not just created)
-Layer 2 — Route Tables             →  both VPCs need bidirectional routes via pcx-*
-Layer 3 — Security Groups          →  default-deny; ICMP/TCP must be explicitly allowed
+Layer 1 - VPC Peering Connection   →  logical link (must be accepted, not just created)
+Layer 2 - Route Tables             →  both VPCs need bidirectional routes via pcx-*
+Layer 3 - Security Groups          →  default-deny; ICMP/TCP must be explicitly allowed
 ```
 
 ### 2. EC2 Instance Connect as a Key Bootstrap Mechanism
@@ -674,7 +674,7 @@ When an EC2 instance has no trusted keys and password auth is disabled, **EC2 In
 
 When running infrastructure CLI commands across sessions, these errors confirm the desired state was achieved in a prior execution. Treat them as idempotency receipts and verify with a describe command rather than treating them as blockers.
 
-### 5. Route Table Scope — Main vs. Subnet-Specific
+### 5. Route Table Scope - Main vs. Subnet-Specific
 
 `RouteTables[0]` retrieves the first route table returned for a VPC filter, which is the main route table in most cases. However, if a subnet has a custom route table that overrides the main one, instances in that subnet follow the subnet-level routes. Always verify subnet-level route table associations when debugging unexpected routing behavior after peering is confirmed active.
 
@@ -690,20 +690,7 @@ When running infrastructure CLI commands across sessions, these errors confirm t
 
 ---
 
-## Author
-
-**Nautilus DevOps Team** · Infrastructure & Cloud Engineering · `us-east-1`
-
----
-
 > *All commands, IDs, IPs, and output blocks in this document reflect the exact values produced during the live implementation run. No values have been approximated or substituted.*
-
-
-
-
-
-
-
 
 
 
