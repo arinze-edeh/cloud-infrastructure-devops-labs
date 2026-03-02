@@ -202,6 +202,7 @@ echo "Private VPC : $PRIVATE_VPC_ID  ($PRIVATE_CIDR)"
 ```
 
 ***Screenshot: Terminal output confirming both VPC IDs and CIDRs resolved correctly***
+<img width="1035" height="521" alt="image" src="https://github.com/user-attachments/assets/a7be414a-06bd-4ede-84cb-7fd4ab887ca2" />
 
 ---
 
@@ -692,8 +693,8 @@ When running infrastructure CLI commands across sessions, these errors confirm t
 > *All commands, IDs, IPs, and output blocks in this document reflect the exact values produced during the live implementation run. No values have been approximated or substituted.*
 
 
-<img width="1040" height="472" alt="image" src="https://github.com/user-attachments/assets/84fb89e1-a9b2-4b51-b414-83b8031416da" />
-<img width="1035" height="521" alt="image" src="https://github.com/user-attachments/assets/a7be414a-06bd-4ede-84cb-7fd4ab887ca2" />
+
+
 <img width="1033" height="627" alt="image" src="https://github.com/user-attachments/assets/f9d41f77-167b-433d-a0e9-2e4ffce9f1b6" />
 <img width="1037" height="621" alt="image" src="https://github.com/user-attachments/assets/ecdc3e30-bdf1-415f-a3aa-5d7d1f2f666d" />
 <img width="1035" height="871" alt="image" src="https://github.com/user-attachments/assets/8bfdc5c3-f65c-4f25-abdd-6a14942c8600" />
