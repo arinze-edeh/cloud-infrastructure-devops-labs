@@ -139,7 +139,8 @@ ssh natasha@172.16.238.15
 
 ***Screenshot — Successful SSH Connection to ststor01***
 
-![SSH into ststor01](_screenshots/04-ssh-ststor01-success.png)
+<img width="1033" height="534" alt="image" src="https://github.com/user-attachments/assets/cc7902ae-b03e-4362-9a39-3fb380d36e6d" />
+
 > *Successful SSH from jump_host to ststor01; host fingerprint accepted and permanently added*
 
 ---
@@ -329,7 +330,7 @@ exit
 *Documented as part of the Nautilus DevOps Infrastructure Series — Stratos Datacenter Operations*
 
 
-<img width="1033" height="534" alt="image" src="https://github.com/user-attachments/assets/cc7902ae-b03e-4362-9a39-3fb380d36e6d" />
+
 <img width="1033" height="626" alt="image" src="https://github.com/user-attachments/assets/72b398e2-c27a-48a3-a28b-51d68cec435b" />
 <img width="1036" height="557" alt="image" src="https://github.com/user-attachments/assets/b7552b38-fa4f-4333-b644-53d5a0f035c6" />
 <img width="1032" height="658" alt="image" src="https://github.com/user-attachments/assets/c1f0b2e3-3813-45ae-af55-8dd1895995b5" />
