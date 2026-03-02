@@ -262,6 +262,7 @@ aws ec2 accept-vpc-peering-connection \
 ```
 
 ***Screenshot: AWS Console → VPC → Peering Connections showing `nautilus-vpc-peering` with Status = **Active***
+
 <img width="1037" height="621" alt="image" src="https://github.com/user-attachments/assets/ecdc3e30-bdf1-415f-a3aa-5d7d1f2f666d" />
 <img width="1035" height="871" alt="image" src="https://github.com/user-attachments/assets/8bfdc5c3-f65c-4f25-abdd-6a14942c8600" />
 
@@ -312,9 +313,11 @@ aws ec2 create-route \
 ```
 
 ***Screenshot: AWS Console → VPC → Route Tables → Default VPC main RTB showing entry `10.1.0.0/16 → pcx-0207198e601a5b32d`***
+
 <img width="1036" height="277" alt="image" src="https://github.com/user-attachments/assets/c1d1e11a-944e-4618-9559-1d7a5d03859d" />
 
 ***Screenshot: AWS Console → VPC → Route Tables → Private VPC main RTB showing entry `172.31.0.0/16 → pcx-0207198e601a5b32d`***
+
 <img width="1031" height="511" alt="image" src="https://github.com/user-attachments/assets/ad47f237-a861-4b53-bf28-ed0ddeab0d1a" />
 
 ---
@@ -357,6 +360,7 @@ aws ec2 authorize-security-group-ingress \
 ```
 
 ***Screenshot: AWS Console → EC2 → Security Groups → `sg-072bab54b2b54f706` → Inbound Rules tab showing `All ICMP - IPv4` from source `172.31.0.0/16`***
+
 <img width="1035" height="542" alt="image" src="https://github.com/user-attachments/assets/f7ef38ec-e82a-4323-85fb-52e454f0e6c2" />
 
 ---
@@ -664,7 +668,7 @@ Layer 3 - Security Groups          →  default-deny; ICMP/TCP must be explicitl
 
 ### 2. EC2 Instance Connect as a Key Bootstrap Mechanism
 
-When an EC2 instance has no trusted keys and password auth is disabled, **EC2 Instance Connect** (`send-ssh-public-key`) provides a 60-second injection window to bootstrap permanent SSH trust — without console access, a bastion host, or instance reboot. The pattern: inject → immediately SSH with matching private key → permanently append key to `authorized_keys`.
+When an EC2 instance has no trusted keys and password auth is disabled, **EC2 Instance Connect** (`send-ssh-public-key`) provides a 60-second injection window to bootstrap permanent SSH trust, without console access, a bastion host, or instance reboot. The pattern: inject → immediately SSH with matching private key → permanently append key to `authorized_keys`.
 
 ### 3. Shell Substitution vs. Piping for Remote File Writes
 
