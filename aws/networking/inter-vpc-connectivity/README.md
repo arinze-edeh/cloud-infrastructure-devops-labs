@@ -468,7 +468,7 @@ ssh -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no ec2-user@$PUBLIC_IP \
   "echo '$(cat /root/.ssh/id_rsa.pub)' >> ~/.ssh/authorized_keys && \
    chmod 600 ~/.ssh/authorized_keys"
 ```
-Screenshot:
+***Screenshot:***
 <img width="1039" height="303" alt="image" src="https://github.com/user-attachments/assets/62588c43-1f7e-4a72-af13-b5b9b3aaf8fd" />
 
 ---
