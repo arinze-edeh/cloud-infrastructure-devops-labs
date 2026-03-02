@@ -6,7 +6,7 @@
 
 ![AWS](https://img.shields.io/badge/AWS-VPC%20Peering-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Region](https://img.shields.io/badge/Region-us--east--1-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
 ![IaC](https://img.shields.io/badge/IaC-AWS%20CLI-0078D4?style=for-the-badge&logo=terminal&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
@@ -20,11 +20,11 @@
 - [Infrastructure Inventory](#infrastructure-inventory)
 - [Prerequisites](#prerequisites)
 - [Implementation](#implementation)
-  - [Phase 1 — Discover Existing Infrastructure](#phase-1--discover-existing-infrastructure)
-  - [Phase 2 — Create VPC Peering Connection](#phase-2--create-vpc-peering-connection)
+  - [Phase 1 — Initialize Variables](#phase-1--initialize-variables)
+  - [Phase 2 — Create & Accept VPC Peering Connection](#phase-2--create--accept-vpc-peering-connection)
   - [Phase 3 — Configure Route Tables](#phase-3--configure-route-tables)
   - [Phase 4 — Configure Security Groups](#phase-4--configure-security-groups)
-  - [Phase 5 — Configure SSH Access](#phase-5--configure-ssh-access)
+  - [Phase 5 — Configure SSH Access via EC2 Instance Connect](#phase-5--configure-ssh-access-via-ec2-instance-connect)
   - [Phase 6 — Validate End-to-End Connectivity](#phase-6--validate-end-to-end-connectivity)
 - [Resolution & Results](#resolution--results)
 - [Troubleshooting](#troubleshooting)
@@ -35,7 +35,7 @@
 
 ## Project Overview
 
-This project demonstrates the configuration of **AWS VPC Peering** to establish private, low-latency network connectivity between a **Default Public VPC** and a **Private VPC** (`nautilus-private-vpc`) within the same AWS account and region. Traffic flows entirely within the AWS backbone — no internet gateway, NAT, or VPN required.
+This project demonstrates the configuration of **AWS VPC Peering** to establish private, low-latency network connectivity between a **Default Public VPC** (`172.31.0.0/16`) and a **Private VPC** (`nautilus-private-vpc` — `10.1.0.0/16`) within the same AWS account and region (`us-east-1`). Traffic flows entirely within the AWS backbone — no internet gateway, NAT gateway, or VPN required.
 
 This pattern is foundational for multi-tier application architectures, microservices separation, and environment isolation (e.g., dev/staging/prod) where services must communicate privately and securely.
 
@@ -47,21 +47,21 @@ This pattern is foundational for multi-tier application architectures, microserv
 
 The Nautilus DevOps team required a solution to enable **private network communication** between two isolated VPC environments:
 
-- A **public-facing VPC** hosting internet-accessible compute (`nautilus-public-ec2`)
+- A **public-facing VPC** (Default VPC) hosting internet-accessible compute (`nautilus-public-ec2`)
 - A **private VPC** (`nautilus-private-vpc`) hosting internal compute (`nautilus-private-ec2`) with no direct internet exposure
 
 ### Technical Problem
 
-By default, **VPCs are completely isolated** from one another at the network layer. Without explicit peering and routing:
+By default, **VPCs are completely isolated** from one another at the network layer. Without explicit configuration across three independent layers, all cross-VPC traffic is dropped:
 
-| Problem | Impact |
-|---|---|
-| No network path between VPCs | Services cannot communicate across VPC boundaries |
-| No shared route table entries | Packets destined for the peer VPC are dropped |
-| Default-deny security group rules | Even with peering, ICMP/TCP traffic is blocked |
-| No SSH key trust between hosts | Cannot authenticate from the management host to EC2 |
+| Layer | Problem | Symptom |
+|---|---|---|
+| **VPC Peering** | No logical link between VPCs | No network path exists |
+| **Route Tables** | No routes pointing to peer VPC | Packets silently dropped |
+| **Security Groups** | Default-deny on all inbound traffic | ICMP/TCP blocked even with valid route |
+| **SSH Key Trust** | No public key on target EC2 | `Permission denied (publickey)` |
 
-The goal was to resolve all four blockers and **demonstrate end-to-end connectivity** by successfully pinging `nautilus-private-ec2` (10.1.1.197) from `nautilus-public-ec2` across the peering link.
+**Goal:** Resolve all four blockers and demonstrate end-to-end connectivity by successfully pinging `nautilus-private-ec2` (`10.1.1.197`) from `nautilus-public-ec2` across the peering link — with **0% packet loss**.
 
 ---
 
@@ -70,22 +70,22 @@ The goal was to resolve all four blockers and **demonstrate end-to-end connectiv
 ### Network Topology
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                        AWS us-east-1                            │
-│                                                                 │
-│  ┌──────────────────────────┐    VPC Peering     ┌──────────────────────────┐  │
-│  │   Default VPC            │  pcx-0207198e601a5b32d  │   nautilus-private-vpc   │  │
-│  │   172.31.0.0/16          │◄──────────────────►│   10.1.0.0/16            │  │
-│  │                          │                    │                          │  │
-│  │  ┌────────────────────┐  │                    │  ┌────────────────────┐  │  │
-│  │  │ nautilus-public-ec2│  │                    │  │nautilus-private-ec2│  │  │
-│  │  │ Public Subnet      │  │  ping 10.1.1.197   │  │nautilus-private-   │  │  │
-│  │  │ (internet-facing)  │──┼────────────────────┼─►│subnet 10.1.1.0/24  │  │  │
-│  │  └────────────────────┘  │                    │  └────────────────────┘  │  │
-│  └──────────────────────────┘                    └──────────────────────────┘  │
-│                                                                 │
-│  aws-client host ──SSH──► nautilus-public-ec2 ──ping──► nautilus-private-ec2   │
-└─────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────┐
+│                            AWS  us-east-1                                │
+│                                                                          │
+│   ┌─────────────────────────┐  pcx-0207198e601a5b32d  ┌──────────────────────────┐  │
+│   │     Default VPC          │◄────────────────────────►│  nautilus-private-vpc    │  │
+│   │     172.31.0.0/16        │    nautilus-vpc-peering  │  10.1.0.0/16             │  │
+│   │                          │                          │                          │  │
+│   │  ┌──────────────────┐   │                          │  ┌──────────────────┐   │  │
+│   │  │nautilus-public-ec2│  │   ping 10.1.1.197 ──────►│  │nautilus-private- │   │  │
+│   │  │100.55.64.9 (pub)  │──┼──────────────────────────┼─►│ec2  10.1.1.197   │   │  │
+│   │  │sg-0104b845d741f1  │  │                          │  │sg-072bab54b2b54f │   │  │
+│   │  └──────────────────┘  │                          │  └──────────────────┘   │  │
+│   └─────────────────────────┘                          └──────────────────────────┘  │
+│                                                                          │
+│   aws-client ──SSH(/root/.ssh/id_rsa)──► public-ec2 ──ICMP──► private-ec2           │
+└──────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Traffic Flow
@@ -93,26 +93,25 @@ The goal was to resolve all four blockers and **demonstrate end-to-end connectiv
 ```
 aws-client (management host)
     │
-    │ SSH (port 22) via /root/.ssh/id_rsa
+    │  SSH port 22  ·  key: /root/.ssh/id_rsa
     ▼
-nautilus-public-ec2 [172.31.x.x]
+nautilus-public-ec2  [172.31.x.x private / 100.55.64.9 public]
     │
-    │ ICMP via VPC Peering pcx-0207198e601a5b32d
-    │ Route: 10.1.0.0/16 → pcx-*
+    │  ICMP via VPC Peering  ·  pcx-0207198e601a5b32d
+    │  Route: 10.1.0.0/16 → pcx-0207198e601a5b32d
     ▼
-nautilus-private-ec2 [10.1.1.197]
+nautilus-private-ec2  [10.1.1.197]
     │
-    │ Return traffic
-    │ Route: 172.31.0.0/16 → pcx-*
+    │  Return ICMP  ·  Route: 172.31.0.0/16 → pcx-0207198e601a5b32d
     ▼
-nautilus-public-ec2 (reply received)
+nautilus-public-ec2  (reply received · 0% packet loss)
 ```
 
 ---
 
 ## Infrastructure Inventory
 
-| Resource | Name | Value |
+| Resource | Name / Tag | ID / Value |
 |---|---|---|
 | **Default VPC** | Default | `vpc-0880ec78a65acdceb` |
 | **Default VPC CIDR** | — | `172.31.0.0/16` |
@@ -122,242 +121,301 @@ nautilus-public-ec2 (reply received)
 | **Peering Connection** | `nautilus-vpc-peering` | `pcx-0207198e601a5b32d` |
 | **Public EC2** | `nautilus-public-ec2` | Public IP: `100.55.64.9` |
 | **Private EC2** | `nautilus-private-ec2` | Private IP: `10.1.1.197` |
-| **Public EC2 SG** | — | `sg-0104b845d741f1ff2` |
-| **Private EC2 SG** | — | `sg-072bab54b2b54f706` |
+| **Public EC2 Security Group** | — | `sg-0104b845d741f1ff2` |
+| **Private EC2 Security Group** | — | `sg-072bab54b2b54f706` |
+| **ICMP Inbound Rule** | — | `sgr-05dc8286a75a49a87` |
+| **SSH Inbound Rule** | — | `sgr-0f4a96f7339598caa` |
 | **Region** | — | `us-east-1` |
+| **Account ID** | — | `115244785922` |
 
 ---
 
 ## Prerequisites
 
-### Required Access
+### Required IAM Permissions
 
-- AWS Console or CLI access with the following IAM permissions:
-  - `ec2:CreateVpcPeeringConnection`
-  - `ec2:AcceptVpcPeeringConnection`
-  - `ec2:CreateRoute`
-  - `ec2:AuthorizeSecurityGroupIngress`
-  - `ec2-instance-connect:SendSSHPublicKey`
+```
+ec2:DescribeVpcs
+ec2:CreateVpcPeeringConnection
+ec2:AcceptVpcPeeringConnection
+ec2:DescribeRouteTables
+ec2:CreateRoute
+ec2:DescribeInstances
+ec2:DescribeSecurityGroups
+ec2:AuthorizeSecurityGroupIngress
+ec2-instance-connect:SendSSHPublicKey
+```
 
 ### Required Tools
 
 ```bash
-# Verify AWS CLI is configured
+# Verify AWS CLI is configured and credentials are active
 aws sts get-caller-identity
 
-# Verify EC2 Instance Connect availability
+# Verify EC2 Instance Connect is available
 aws ec2-instance-connect help
 ```
 
-### Environment Setup
+### SSH Key Pair
 
 ```bash
-# Set core variables — run these first in every session
-DEFAULT_VPC_ID=$(aws ec2 describe-vpcs \
-  --filters "Name=isDefault,Values=true" \
-  --query "Vpcs[0].VpcId" --output text)
-
-PRIVATE_VPC_ID=$(aws ec2 describe-vpcs \
-  --filters "Name=tag:Name,Values=nautilus-private-vpc" \
-  --query "Vpcs[0].VpcId" --output text)
-
-DEFAULT_VPC_CIDR=$(aws ec2 describe-vpcs \
-  --vpc-ids $DEFAULT_VPC_ID \
-  --query "Vpcs[0].CidrBlock" --output text)
-
-PRIVATE_CIDR="10.1.0.0/16"
-
-echo "Default VPC:  $DEFAULT_VPC_ID ($DEFAULT_VPC_CIDR)"
-echo "Private VPC:  $PRIVATE_VPC_ID ($PRIVATE_CIDR)"
+# Verify the key pair exists on the management host before starting
+ls -la /root/.ssh/id_rsa
+ls -la /root/.ssh/id_rsa.pub
 ```
 
 ---
 
 ## Implementation
 
-### Phase 1 — Discover Existing Infrastructure
+### Phase 1 — Initialize Variables
 
-**Objective:** Baseline all existing resources before making any changes.
+**Objective:** Resolve all resource IDs upfront and store them in shell variables. Every subsequent command references these variables — no hardcoded IDs.
 
 ```bash
-# Describe both VPCs side by side
-aws ec2 describe-vpcs \
-  --filters "Name=vpc-id,Values=$DEFAULT_VPC_ID,$PRIVATE_VPC_ID" \
-  --query "Vpcs[*].{VpcId:VpcId,CIDR:CidrBlock,Default:IsDefault,Name:Tags[?Key=='Name'].Value|[0]}" \
-  --output table
+DEFAULT_VPC_ID=$(aws ec2 describe-vpcs \
+    --filters "Name=isDefault,Values=true" \
+    --query "Vpcs[0].VpcId" --output text)
 
-# List all EC2 instances with network context
-aws ec2 describe-instances \
-  --filters "Name=tag:Name,Values=nautilus-public-ec2,nautilus-private-ec2" \
-  --query "Reservations[*].Instances[*].{Name:Tags[?Key=='Name'].Value|[0],InstanceId:InstanceId,PrivateIP:PrivateIpAddress,PublicIP:PublicIpAddress,VPC:VpcId,State:State.Name}" \
-  --output table
+PRIVATE_VPC_ID=$(aws ec2 describe-vpcs \
+    --filters "Name=tag:Name,Values=nautilus-private-vpc" \
+    --query "Vpcs[0].VpcId" --output text)
+
+DEFAULT_VPC_CIDR=$(aws ec2 describe-vpcs \
+    --vpc-ids $DEFAULT_VPC_ID \
+    --query "Vpcs[0].CidrBlock" --output text)
+
+PRIVATE_CIDR="10.1.0.0/16"
 ```
 
-***Screenshot: AWS Console → VPC Dashboard showing both VPCs with their CIDR ranges***
+**Verify resolution:**
+
+```bash
+echo "Default VPC : $DEFAULT_VPC_ID  ($DEFAULT_VPC_CIDR)"
+echo "Private VPC : $PRIVATE_VPC_ID  ($PRIVATE_CIDR)"
+```
+
+***Screenshot: Terminal output confirming both VPC IDs and CIDRs resolved correctly***
 
 ---
 
-### Phase 2 — Create VPC Peering Connection
+### Phase 2 — Create & Accept VPC Peering Connection
 
-**Objective:** Establish the logical peering link between the two VPCs.
+**Objective:** Establish the logical peering link between the two VPCs and transition its status to `active`.
 
-**Problem:** VPCs are network-isolated by default. No peering = no route = dropped packets.
+**Problem:** VPCs are network-isolated by default. Without a peering connection, no network path exists between them regardless of any routing configuration.
 
 #### Step 2.1 — Create the Peering Request
 
 ```bash
 PEER_CONN_ID=$(aws ec2 create-vpc-peering-connection \
-  --vpc-id $DEFAULT_VPC_ID \
-  --peer-vpc-id $PRIVATE_VPC_ID \
-  --tag-specifications 'ResourceType=vpc-peering-connection,Tags=[{Key=Name,Value=nautilus-vpc-peering}]' \
-  --query "VpcPeeringConnection.VpcPeeringConnectionId" \
-  --output text)
+    --vpc-id $DEFAULT_VPC_ID \
+    --peer-vpc-id $PRIVATE_VPC_ID \
+    --tag-specifications 'ResourceType=vpc-peering-connection,Tags=[{Key=Name,Value=nautilus-vpc-peering}]' \
+    --query "VpcPeeringConnection.VpcPeeringConnectionId" --output text)
 
 echo "Created Peering Connection: $PEER_CONN_ID"
 ```
 
-**Expected output:**
+**Actual output:**
+
 ```
 Created Peering Connection: pcx-0207198e601a5b32d
 ```
 
 #### Step 2.2 — Accept the Peering Connection
 
-> ⚠️ **Critical:** Peering connections default to `pending-acceptance`. They must be explicitly accepted — even within the same account.
+> ⚠️ **Critical:** A newly created peering connection enters `pending-acceptance` state. It must be explicitly accepted — even in the same account and region — before any traffic can flow.
 
 ```bash
 aws ec2 accept-vpc-peering-connection \
-  --vpc-peering-connection-id $PEER_CONN_ID
-
-# Confirm status is 'active'
-aws ec2 describe-vpc-peering-connections \
-  --vpc-peering-connection-ids $PEER_CONN_ID \
-  --query "VpcPeeringConnections[0].Status"
+    --vpc-peering-connection-id $PEER_CONN_ID
 ```
 
-**Expected output:**
+**Actual output (key fields):**
+
 ```json
 {
-    "Code": "active",
-    "Message": "Active"
+    "VpcPeeringConnection": {
+        "AccepterVpcInfo": {
+            "CidrBlock": "10.1.0.0/16",
+            "VpcId": "vpc-0bea0bc81c2fb1851"
+        },
+        "RequesterVpcInfo": {
+            "CidrBlock": "172.31.0.0/16",
+            "VpcId": "vpc-0880ec78a65acdceb"
+        },
+        "Status": {
+            "Code": "active",
+            "Message": "Active"
+        },
+        "VpcPeeringConnectionId": "pcx-0207198e601a5b32d"
+    }
 }
 ```
 
-***Screenshot: AWS Console → VPC → Peering Connections showing `nautilus-vpc-peering` with Status = Active***
+***Screenshot: AWS Console → VPC → Peering Connections showing `nautilus-vpc-peering` with Status = **Active***
 
 ---
 
 ### Phase 3 — Configure Route Tables
 
-**Objective:** Add explicit routes in both VPCs so traffic knows to traverse the peering link.
+**Objective:** Add explicit routes in both VPCs so traffic destined for the peer CIDR is forwarded through the peering connection rather than dropped.
 
-**Problem:** VPC Peering creates a logical connection, but does **not** automatically add routes. Packets with no matching route are silently dropped.
+**Problem:** VPC Peering creates a logical link but does **not** automatically populate route tables. Without matching routes on both sides, packets are silently dropped — ping would fail even with an active peering connection.
 
-#### Step 3.1 — Route in Default VPC (→ Private VPC)
+#### Step 3.1 — Route in Default VPC → `10.1.0.0/16`
 
 ```bash
 DEFAULT_RT_ID=$(aws ec2 describe-route-tables \
-  --filters "Name=vpc-id,Values=$DEFAULT_VPC_ID" \
-  --query "RouteTables[0].RouteTableId" --output text)
+    --filters "Name=vpc-id,Values=$DEFAULT_VPC_ID" \
+    --query "RouteTables[0].RouteTableId" --output text)
 
 aws ec2 create-route \
-  --route-table-id $DEFAULT_RT_ID \
-  --destination-cidr-block $PRIVATE_CIDR \
-  --vpc-peering-connection-id $PEER_CONN_ID
+    --route-table-id $DEFAULT_RT_ID \
+    --destination-cidr-block $PRIVATE_CIDR \
+    --vpc-peering-connection-id $PEER_CONN_ID
 ```
 
-**Expected output:**
+**Actual output:**
+
 ```json
 { "Return": true }
 ```
 
-#### Step 3.2 — Route in Private VPC (→ Default VPC)
+#### Step 3.2 — Route in Private VPC → `172.31.0.0/16`
 
 ```bash
 PRIVATE_RT_ID=$(aws ec2 describe-route-tables \
-  --filters "Name=vpc-id,Values=$PRIVATE_VPC_ID" \
-  --query "RouteTables[0].RouteTableId" --output text)
+    --filters "Name=vpc-id,Values=$PRIVATE_VPC_ID" \
+    --query "RouteTables[0].RouteTableId" --output text)
 
 aws ec2 create-route \
-  --route-table-id $PRIVATE_RT_ID \
-  --destination-cidr-block $DEFAULT_VPC_CIDR \
-  --vpc-peering-connection-id $PEER_CONN_ID
+    --route-table-id $PRIVATE_RT_ID \
+    --destination-cidr-block $DEFAULT_VPC_CIDR \
+    --vpc-peering-connection-id $PEER_CONN_ID
 ```
 
-**Expected output:**
+**Actual output:**
+
 ```json
 { "Return": true }
 ```
 
-***Screenshot: AWS Console → VPC → Route Tables → Default VPC route table showing the new 10.1.0.0/16 → pcx-* entry***
+***Screenshot: AWS Console → VPC → Route Tables → Default VPC main RTB showing entry `10.1.0.0/16 → pcx-0207198e601a5b32d`***
 
-***Screenshot: AWS Console → VPC → Route Tables → Private VPC route table showing the new 172.31.0.0/16 → pcx-* entry***
+***Screenshot: AWS Console → VPC → Route Tables → Private VPC main RTB showing entry `172.31.0.0/16 → pcx-0207198e601a5b32d`***
 
 ---
 
 ### Phase 4 — Configure Security Groups
 
-**Objective:** Open the minimum necessary ports to allow ICMP (ping) traffic from the public VPC to the private EC2.
+**Objective:** Open ICMP on the private EC2's security group to allow ping traffic sourced from the Default VPC CIDR.
 
-**Problem:** AWS security groups are default-deny. Even with valid routes, all traffic is blocked unless explicitly permitted at the security group layer.
+**Problem:** AWS security groups are **default-deny**. Even with a valid peering connection and correct routes, all inbound traffic to `nautilus-private-ec2` is blocked at the instance level until an explicit allow rule exists.
 
 ```bash
 PRIVATE_SG_ID=$(aws ec2 describe-instances \
-  --filters "Name=tag:Name,Values=nautilus-private-ec2" \
-  --query "Reservations[0].Instances[0].SecurityGroups[0].GroupId" \
-  --output text)
+    --filters "Name=tag:Name,Values=nautilus-private-ec2" \
+    --query "Reservations[0].Instances[0].SecurityGroups[0].GroupId" --output text)
 
-# Allow ALL ICMP from Default VPC CIDR
 aws ec2 authorize-security-group-ingress \
-  --group-id $PRIVATE_SG_ID \
-  --protocol icmp \
-  --port -1 \
-  --cidr $DEFAULT_VPC_CIDR
+    --group-id $PRIVATE_SG_ID \
+    --protocol icmp \
+    --port -1 \
+    --cidr $DEFAULT_VPC_CIDR
 ```
 
-**Expected output:**
+**Actual output:**
+
 ```json
 {
     "Return": true,
-    "SecurityGroupRules": [{
-        "IpProtocol": "icmp",
-        "FromPort": -1,
-        "ToPort": -1,
-        "CidrIpv4": "172.31.0.0/16"
-    }]
+    "SecurityGroupRules": [
+        {
+            "SecurityGroupRuleId": "sgr-05dc8286a75a49a87",
+            "GroupId": "sg-072bab54b2b54f706",
+            "IsEgress": false,
+            "IpProtocol": "icmp",
+            "FromPort": -1,
+            "ToPort": -1,
+            "CidrIpv4": "172.31.0.0/16"
+        }
+    ]
 }
 ```
 
-***Screenshot: AWS Console → EC2 → Security Groups → `sg-072bab54b2b54f706` Inbound Rules showing ICMP All from 172.31.0.0/16***
+***Screenshot: AWS Console → EC2 → Security Groups → `sg-072bab54b2b54f706` → Inbound Rules tab showing `All ICMP - IPv4` from source `172.31.0.0/16`***
 
 ---
 
-### Phase 5 — Configure SSH Access
+### Phase 5 — Configure SSH Access via EC2 Instance Connect
 
-**Objective:** Enable key-based SSH from the `aws-client` management host to `nautilus-public-ec2`.
+**Objective:** Establish key-based SSH trust between the `aws-client` management host and `nautilus-public-ec2` so commands can be executed remotely.
 
-**Problem:** The `ec2-user` account on `nautilus-public-ec2` had no trusted public keys. Direct `ssh-copy-id` failed because the instance rejected all authentication methods. Password auth is disabled on AWS EC2 by default (`Permission denied (publickey,gssapi-keyex,gssapi-with-mic)`).
+**Problem:** This phase encountered three sequential blockers before resolution.
 
-**Resolution:** Use **EC2 Instance Connect** to temporarily inject the public key (valid 60 seconds), then SSH in immediately using the corresponding private key to permanently append the key to `authorized_keys`.
+---
 
-#### Step 5.1 — Open SSH Port on Public EC2 Security Group
+#### Blocker 1 — TCP Port 22 Not Open
+
+**Symptom:**
+```
+ssh: connect to host 100.55.64.9 port 22: Connection timed out
+```
+
+**Root Cause:** The public EC2 security group (`sg-0104b845d741f1ff2`) had no inbound rule for TCP port 22. The SYN packet was dropped at the security group layer — the instance was unreachable.
+
+**Resolution:**
 
 ```bash
 PUBLIC_SG_ID=$(aws ec2 describe-instances \
-  --filters "Name=tag:Name,Values=nautilus-public-ec2" \
-  --query "Reservations[0].Instances[0].SecurityGroups[0].GroupId" \
-  --output text)
+    --filters "Name=tag:Name,Values=nautilus-public-ec2" \
+    --query "Reservations[0].Instances[0].SecurityGroups[0].GroupId" --output text)
 
 aws ec2 authorize-security-group-ingress \
-  --group-id $PUBLIC_SG_ID \
-  --protocol tcp \
-  --port 22 \
-  --cidr 0.0.0.0/0
+    --group-id $PUBLIC_SG_ID \
+    --protocol tcp \
+    --port 22 \
+    --cidr 0.0.0.0/0
 ```
 
-#### Step 5.2 — Inject Key via EC2 Instance Connect
+**Actual output:**
+
+```json
+{
+    "Return": true,
+    "SecurityGroupRules": [
+        {
+            "SecurityGroupRuleId": "sgr-0f4a96f7339598caa",
+            "GroupId": "sg-0104b845d741f1ff2",
+            "IsEgress": false,
+            "IpProtocol": "tcp",
+            "FromPort": 22,
+            "ToPort": 22,
+            "CidrIpv4": "0.0.0.0/0"
+        }
+    ]
+}
+```
+
+---
+
+#### Blocker 2 — No Trusted Public Key on Instance
+
+**Symptom:**
+```
+ec2-user@100.55.64.9: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+```
+
+**Root Cause:** Port 22 was now reachable, but the instance had no record of `aws-client`'s public key in `~/.ssh/authorized_keys`. EC2 Amazon Linux 2 instances disable password authentication by default — without a pre-trusted key, all authentication methods fail.
+
+**Resolution — EC2 Instance Connect bootstrap pattern:**
+
+EC2 Instance Connect injects the provided public key into the instance's metadata for a **60-second window**. That window is used to SSH in with the matching private key and permanently append the key to `authorized_keys`.
 
 ```bash
+# Resolve instance metadata
 INSTANCE_ID=$(aws ec2 describe-instances \
   --filters "Name=tag:Name,Values=nautilus-public-ec2" \
   --query "Reservations[0].Instances[0].InstanceId" --output text)
@@ -370,7 +428,7 @@ PUBLIC_IP=$(aws ec2 describe-instances \
   --filters "Name=tag:Name,Values=nautilus-public-ec2" \
   --query "Reservations[0].Instances[0].PublicIpAddress" --output text)
 
-# Inject key (60-second window)
+# Step 1 — Inject public key (60-second window opens)
 aws ec2-instance-connect send-ssh-public-key \
   --region us-east-1 \
   --instance-id $INSTANCE_ID \
@@ -379,7 +437,8 @@ aws ec2-instance-connect send-ssh-public-key \
   --ssh-public-key file:///root/.ssh/id_rsa.pub
 ```
 
-**Expected output:**
+**Actual output:**
+
 ```json
 {
     "RequestId": "b330fdd5-559b-4ed0-98e3-ec5f1877de7f",
@@ -387,34 +446,59 @@ aws ec2-instance-connect send-ssh-public-key \
 }
 ```
 
-#### Step 5.3 — Permanently Append Key (within 60 seconds)
-
 ```bash
-# Run IMMEDIATELY after send-ssh-public-key
+# Step 2 — SSH IMMEDIATELY and permanently append key (run within 60 seconds)
 ssh -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no ec2-user@$PUBLIC_IP \
   "echo '$(cat /root/.ssh/id_rsa.pub)' >> ~/.ssh/authorized_keys && \
    chmod 600 ~/.ssh/authorized_keys"
 ```
 
-> 💡 **Why `echo '$(cat ...)'` instead of piping?** The subshell `$(cat ...)` is evaluated **locally on the aws-client** before the SSH session opens. This means the key content is passed as a string argument — nothing is left reading from stdin, which was the root cause of the hanging command in the earlier attempt.
+---
 
-***Screenshot: Terminal output showing `aws ec2-instance-connect send-ssh-public-key` returning `"Success": true`***
+#### Blocker 3 — SSH Command Hangs on `cat >> authorized_keys`
+
+**Symptom:**
+```bash
+ssh -o StrictHostKeyChecking=no ec2-user@$PUBLIC_IP \
+  "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+^C   ← had to manually interrupt
+```
+
+**Root Cause:** The remote `cat >> ~/.ssh/authorized_keys` reads from **stdin**. With no pipe feeding it data, it blocks indefinitely waiting for EOF. The session never progresses.
+
+**Resolution:** Use shell substitution to expand the key content **locally** before the SSH session opens — passing it as a string argument rather than piping it:
+
+```bash
+# ❌ Wrong — remote cat blocks on stdin, hangs until ^C
+cat /root/.ssh/id_rsa.pub | ssh ec2-user@$IP "cat >> ~/.ssh/authorized_keys"
+
+# ✅ Correct — $(cat ...) expands locally; key passed as a literal string
+ssh -i /root/.ssh/id_rsa ec2-user@$IP \
+  "echo '$(cat /root/.ssh/id_rsa.pub)' >> ~/.ssh/authorized_keys"
+```
+
+***Screenshot: Terminal showing `send-ssh-public-key` returning `"Success": true`, followed by the silent successful SSH command with no error output***
 
 ---
 
 ### Phase 6 — Validate End-to-End Connectivity
 
-**Objective:** Prove the full chain works — SSH from `aws-client` → `nautilus-public-ec2` → ping `nautilus-private-ec2`.
+**Objective:** Execute the definitive test — SSH from `aws-client` to `nautilus-public-ec2` and ping `nautilus-private-ec2` across the VPC peering link.
 
 ```bash
 PRIVATE_EC2_IP=$(aws ec2 describe-instances \
   --filters "Name=tag:Name,Values=nautilus-private-ec2" \
-  --query "Reservations[0].Instances[0].PrivateIpAddress" \
-  --output text)
+  --query "Reservations[0].Instances[0].PrivateIpAddress" --output text)
 
-echo "Target: $PRIVATE_EC2_IP"
+echo "Private EC2 IP: $PRIVATE_EC2_IP"
+```
 
-# The definitive test
+**Output:**
+```
+Private EC2 IP: 10.1.1.197
+```
+
+```bash
 ssh -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no ec2-user@$PUBLIC_IP \
   "ping -c 4 $PRIVATE_EC2_IP"
 ```
@@ -437,129 +521,155 @@ PING 10.1.1.197 (10.1.1.197) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.886/1.529/2.481/0.610 ms
 ```
 
-***Screenshot: Terminal showing successful 0% packet loss ping from nautilus-public-ec2 to 10.1.1.197***
+***Screenshot: Terminal showing the complete ping output — 4/4 packets received, **0% packet loss**, avg RTT 1.529ms***
 
 ### ✅ Completion Checklist
 
 | Requirement | Resource | Status |
 |---|---|---|
-| VPC Peering Connection created | `nautilus-vpc-peering` (`pcx-0207198e601a5b32d`) | ✅ Active |
-| Route: Default VPC → `10.1.0.0/16` | Default VPC main route table | ✅ Configured |
-| Route: Private VPC → `172.31.0.0/16` | Private VPC main route table | ✅ Configured |
-| ICMP allowed from `172.31.0.0/16` | `sg-072bab54b2b54f706` | ✅ Rule added |
-| SSH port 22 open on public EC2 | `sg-0104b845d741f1ff2` | ✅ Rule added |
-| Public key in `authorized_keys` | `nautilus-public-ec2` / ec2-user | ✅ Appended |
-| SSH from `aws-client` → public EC2 | Key-based auth | ✅ Working |
-| Ping from public EC2 → private EC2 | ICMP across peering | ✅ **0% packet loss** |
+| VPC Peering Connection created with correct name tag | `nautilus-vpc-peering` · `pcx-0207198e601a5b32d` | ✅ |
+| Peering connection accepted — status: active | `pcx-0207198e601a5b32d` | ✅ |
+| Route: Default VPC → `10.1.0.0/16` via peering | Default VPC main route table | ✅ |
+| Route: Private VPC → `172.31.0.0/16` via peering | Private VPC main route table | ✅ |
+| ICMP allowed from `172.31.0.0/16` on private EC2 | `sg-072bab54b2b54f706` · `sgr-05dc8286a75a49a87` | ✅ |
+| TCP 22 open on public EC2 security group | `sg-0104b845d741f1ff2` · `sgr-0f4a96f7339598caa` | ✅ |
+| Public key appended to `authorized_keys` on public EC2 | `ec2-user@nautilus-public-ec2` | ✅ |
+| SSH from `aws-client` → `nautilus-public-ec2` | Key-based auth · `/root/.ssh/id_rsa` | ✅ |
+| **Ping `nautilus-private-ec2` from public EC2** | **ICMP across VPC peering · 10.1.1.197** | ✅ **0% packet loss** |
 
 ---
 
 ## Troubleshooting
 
-### Issue 1: `Permission denied (publickey,gssapi-keyex,gssapi-with-mic)`
+### Issue 1 — `Connection timed out` on Port 22
 
-**Root Cause:** The target EC2 instance has no record of the connecting host's public key. EC2 instances disable password authentication by default and reject any connection without a pre-trusted key.
+**Symptom:**
+```
+ssh: connect to host 100.55.64.9 port 22: Connection timed out
+```
+
+**Root Cause:** The public EC2 security group had no inbound TCP port 22 rule. The TCP SYN packet was dropped at the security group layer before reaching the OS.
 
 **Resolution:**
 ```bash
-# Use EC2 Instance Connect to temporarily inject the key
+aws ec2 authorize-security-group-ingress \
+    --group-id $PUBLIC_SG_ID \
+    --protocol tcp \
+    --port 22 \
+    --cidr 0.0.0.0/0
+```
+
+---
+
+### Issue 2 — `Permission denied (publickey,gssapi-keyex,gssapi-with-mic)`
+
+**Symptom:**
+```
+ec2-user@100.55.64.9: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+```
+
+**Root Cause:** TCP port 22 was reachable but the instance had no trusted key in `~/.ssh/authorized_keys`. EC2 Amazon Linux 2 disables password authentication by default.
+
+**Resolution:** Bootstrap key trust via EC2 Instance Connect:
+```bash
 aws ec2-instance-connect send-ssh-public-key \
+  --region us-east-1 \
   --instance-id $INSTANCE_ID \
   --availability-zone $AZ \
   --instance-os-user ec2-user \
   --ssh-public-key file:///root/.ssh/id_rsa.pub
 
-# Immediately SSH in using the matching private key
-ssh -i /root/.ssh/id_rsa ec2-user@$PUBLIC_IP "echo '$(cat /root/.ssh/id_rsa.pub)' >> ~/.ssh/authorized_keys"
+# Run within 60 seconds:
+ssh -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no ec2-user@$PUBLIC_IP \
+  "echo '$(cat /root/.ssh/id_rsa.pub)' >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 ```
 
 ---
 
-### Issue 2: SSH command hangs indefinitely (`cat >> ~/.ssh/authorized_keys`)
+### Issue 3 — SSH Command Hangs Indefinitely (`^C` required)
 
-**Root Cause:** The pipe `cat /root/.ssh/id_rsa.pub | ssh ... "cat >> ..."` causes the remote `cat` to block waiting for EOF on stdin. The SSH session never terminates because no EOF is sent.
-
-**Resolution:** Use shell substitution to embed the key as a string before the SSH session opens:
+**Symptom:**
 ```bash
-# ❌ Wrong — remote cat reads from stdin, hangs forever
+ssh ec2-user@$PUBLIC_IP "cat >> ~/.ssh/authorized_keys"
+# ← never returns, requires ^C to interrupt
+```
+
+**Root Cause:** The remote `cat` process reads from stdin. Without piped input and without an EOF signal, it blocks forever.
+
+**Resolution:** Expand file contents locally with `$(cat ...)` before the SSH session opens:
+
+```bash
+# ❌ Broken — remote cat blocks on stdin
 cat /root/.ssh/id_rsa.pub | ssh ec2-user@$IP "cat >> ~/.ssh/authorized_keys"
 
-# ✅ Correct — key is interpolated locally before SSH executes
+# ✅ Fixed — key content embedded as string argument before SSH executes
 ssh -i /root/.ssh/id_rsa ec2-user@$IP \
   "echo '$(cat /root/.ssh/id_rsa.pub)' >> ~/.ssh/authorized_keys"
 ```
 
 ---
 
-### Issue 3: `ssh: connect to host X port 22: Connection timed out`
+### Issue 4 — `RouteAlreadyExists` / `InvalidPermission.Duplicate`
 
-**Root Cause:** The public EC2's security group had no inbound rule allowing TCP port 22.
+**Symptom:**
+```
+An error occurred (RouteAlreadyExists) when calling the CreateRoute operation:
+The route identified by 10.1.0.0/16 already exists.
 
-**Resolution:**
-```bash
-aws ec2 authorize-security-group-ingress \
-  --group-id $PUBLIC_SG_ID \
-  --protocol tcp \
-  --port 22 \
-  --cidr 0.0.0.0/0
+An error occurred (InvalidPermission.Duplicate) when calling the
+AuthorizeSecurityGroupIngress operation: the specified rule already exists.
 ```
 
----
+**Root Cause:** Commands were re-executed after the desired state was already achieved on the first pass. These are idempotency signals, not failures.
 
-### Issue 4: `RouteAlreadyExists` on `create-route`
-
-**Root Cause:** Commands were re-run after the routes were already successfully created in the first pass. Not an error — infrastructure state is correct.
-
-**Resolution:** This is informational. Verify the route exists and proceed:
+**Resolution:** No action required. Confirm existing state:
 ```bash
+# Verify route exists
 aws ec2 describe-route-tables \
   --route-table-ids $DEFAULT_RT_ID \
   --query "RouteTables[0].Routes[?DestinationCidrBlock=='10.1.0.0/16']"
-```
 
----
-
-### Issue 5: Ping fails despite all configuration appearing correct
-
-**Root Cause candidates:** Route table is associated with the wrong subnet, or the EC2 instance is in a non-main route table.
-
-**Resolution:** Find all route tables in the private VPC and verify subnet association:
-```bash
-aws ec2 describe-route-tables \
-  --filters "Name=vpc-id,Values=$PRIVATE_VPC_ID" \
-  --query "RouteTables[*].{RTB:RouteTableId,Subnet:Associations[0].SubnetId,Main:Associations[0].Main}" \
-  --output table
+# Verify ICMP rule exists
+aws ec2 describe-security-groups \
+  --group-ids $PRIVATE_SG_ID \
+  --query "SecurityGroups[0].IpPermissions[?IpProtocol=='icmp']"
 ```
 
 ---
 
 ## Key Learnings
 
-### 1. VPC Peering Requires Three Independent Layers
-A common misconception is that creating a peering connection enables traffic flow. In reality, **all three layers must be configured independently**:
+### 1. VPC Peering Requires Three Independent Configuration Layers
+
+Creating a VPC Peering connection alone does not enable traffic flow. All three layers below must be explicitly configured — failure at any single layer silently drops traffic:
 
 ```
-Layer 1: VPC Peering Connection (logical link — must be accepted)
-Layer 2: Route Tables (both VPCs need routes pointing to pcx-*)  
-Layer 3: Security Groups (default-deny — ICMP/TCP must be explicitly allowed)
+Layer 1 — VPC Peering Connection   →  logical link (must be accepted, not just created)
+Layer 2 — Route Tables             →  both VPCs need bidirectional routes via pcx-*
+Layer 3 — Security Groups          →  default-deny; ICMP/TCP must be explicitly allowed
 ```
 
-Failure at any single layer silently drops traffic, making diagnosis non-obvious.
+### 2. EC2 Instance Connect as a Key Bootstrap Mechanism
 
-### 2. EC2 Instance Connect as a Bootstrap Mechanism
-When an EC2 instance has no trusted keys and password auth is disabled, EC2 Instance Connect provides a **60-second injection window** that can be used to bootstrap permanent key trust — without requiring console access or a bastion host.
+When an EC2 instance has no trusted keys and password auth is disabled, **EC2 Instance Connect** (`send-ssh-public-key`) provides a 60-second injection window to bootstrap permanent SSH trust — without console access, a bastion host, or instance reboot. The pattern: inject → immediately SSH with matching private key → permanently append key to `authorized_keys`.
 
-### 3. Shell Substitution vs. Piping for Remote Commands
-`echo '$(cat file)'` evaluates the subshell **on the local machine** and passes the result as a string argument to the remote shell. This is fundamentally different from piping, where the remote process reads from stdin and may block indefinitely waiting for EOF.
+### 3. Shell Substitution vs. Piping for Remote File Writes
 
-### 4. `RouteAlreadyExists` is a Success Indicator
-When re-running infrastructure scripts idempotently, `RouteAlreadyExists` and `InvalidPermission.Duplicate` errors confirm that the desired state was already achieved in a prior run — not that something went wrong.
+`echo '$(cat file)'` evaluates the subshell **on the local machine** before the SSH session is established, passing the result as a string literal. Piping (`cat file | ssh "cat >> file"`) leaves the remote process reading from stdin, which blocks indefinitely without an explicit EOF. One character of difference in the command produces completely opposite behavior.
+
+### 4. `RouteAlreadyExists` and `InvalidPermission.Duplicate` Are Success Signals
+
+When running infrastructure CLI commands across sessions, these errors confirm the desired state was achieved in a prior execution. Treat them as idempotency receipts and verify with a describe command rather than treating them as blockers.
+
+### 5. Route Table Scope — Main vs. Subnet-Specific
+
+`RouteTables[0]` retrieves the first route table returned for a VPC filter, which is the main route table in most cases. However, if a subnet has a custom route table that overrides the main one, instances in that subnet follow the subnet-level routes. Always verify subnet-level route table associations when debugging unexpected routing behavior after peering is confirmed active.
 
 ---
 
 ## References
 
-- [AWS VPC Peering Documentation](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html)
+- [AWS VPC Peering — Official Documentation](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html)
 - [EC2 Instance Connect — AWS Docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html)
 - [VPC Route Tables — AWS Docs](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html)
 - [Security Groups for EC2 — AWS Docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html)
@@ -569,12 +679,11 @@ When re-running infrastructure scripts idempotently, `RouteAlreadyExists` and `I
 
 ## Author
 
-**Nautilus DevOps Team**
-*Infrastructure & Cloud Engineering*
+**Nautilus DevOps Team** · Infrastructure & Cloud Engineering · `us-east-1`
 
 ---
 
-> *This implementation was executed entirely via AWS CLI following infrastructure-as-code principles. All commands are idempotent-safe and reproducible.*
+> *All commands, IDs, IPs, and output blocks in this document reflect the exact values produced during the live implementation run. No values have been approximated or substituted.*
 
 
 <img width="1040" height="472" alt="image" src="https://github.com/user-attachments/assets/84fb89e1-a9b2-4b51-b414-83b8031416da" />
