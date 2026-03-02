@@ -531,6 +531,7 @@ rtt min/avg/max/mdev = 0.886/1.529/2.481/0.610 ms
 ```
 
 ***Screenshot: Terminal showing the complete ping output — 4/4 packets received, **0% packet loss**, avg RTT 1.529ms***
+<img width="1029" height="674" alt="image" src="https://github.com/user-attachments/assets/5d74d6d7-b96b-4459-aca5-cd0794daaa6b" />
 
 ### ✅ Completion Checklist
 
@@ -715,7 +716,7 @@ When running infrastructure CLI commands across sessions, these errors confirm t
 <img width="1039" height="303" alt="image" src="https://github.com/user-attachments/assets/62588c43-1f7e-4a72-af13-b5b9b3aaf8fd" />
 <img width="1037" height="400" alt="image" src="https://github.com/user-attachments/assets/dd878ac7-ed0b-4ee8-8ab4-78ec849f64f2" />
 <img width="1034" height="439" alt="image" src="https://github.com/user-attachments/assets/951a5b9e-1cde-4753-b282-af595c8ca6ee" />
-<img width="1029" height="674" alt="image" src="https://github.com/user-attachments/assets/5d74d6d7-b96b-4459-aca5-cd0794daaa6b" />
+
 
 
 
