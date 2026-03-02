@@ -41,7 +41,7 @@
 
 ## Project Overview
 
-This project demonstrates the configuration of **AWS VPC Peering** to establish private, low-latency network connectivity between a **Default Public VPC** (`172.31.0.0/16`) and a **Private VPC** (`nautilus-private-vpc` — `10.1.0.0/16`) within the same AWS account and region (`us-east-1`). Traffic flows entirely within the AWS backbone — no internet gateway, NAT gateway, or VPN required.
+This project demonstrates the configuration of **AWS VPC Peering** to establish private, low-latency network connectivity between a **Default Public VPC** (`172.31.0.0/16`) and a **Private VPC** (`nautilus-private-vpc` - `10.1.0.0/16`) within the same AWS account and region (`us-east-1`). Traffic flows entirely within the AWS backbone - no internet gateway, NAT gateway, or VPN required.
 
 This pattern is foundational for multi-tier application architectures, microservices separation, and environment isolation (e.g., dev/staging/prod) where services must communicate privately and securely.
 
@@ -67,7 +67,7 @@ By default, **VPCs are completely isolated** from one another at the network lay
 | **Security Groups** | Default-deny on all inbound traffic | ICMP/TCP blocked even with valid route |
 | **SSH Key Trust** | No public key on target EC2 | `Permission denied (publickey)` |
 
-**Goal:** Resolve all four blockers and demonstrate end-to-end connectivity by successfully pinging `nautilus-private-ec2` (`10.1.1.197`) from `nautilus-public-ec2` across the peering link — with **0% packet loss**.
+**Goal:** Resolve all four blockers and demonstrate end-to-end connectivity by successfully pinging `nautilus-private-ec2` (`10.1.1.197`) from `nautilus-public-ec2` across the peering link - with **0% packet loss**.
 
 ---
 
