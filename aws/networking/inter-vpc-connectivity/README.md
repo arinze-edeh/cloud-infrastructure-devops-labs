@@ -26,7 +26,7 @@
 - [Infrastructure Inventory](#infrastructure-inventory)
 - [Prerequisites](#prerequisites)
 - [Implementation](#implementation)
-  - [Phase 1 - Initialize Variables](#phase-1--initialize-variables)
+  - [Phase 1; Initialize Variables](#phase-1--initialize-variables)
   - [Phase 2: Create & Accept VPC Peering Connection](#phase-2--create--accept-vpc-peering-connection)
   - [Phase 3: Configure Route Tables](#phase-3--configure-route-tables)
   - [Phase 4: Configure Security Groups](#phase-4--configure-security-groups)
