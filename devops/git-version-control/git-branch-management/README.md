@@ -93,7 +93,8 @@ fatal: cannot lock ref 'refs/heads/xfusioncorp_apps': Unable to create
 
 ***Screenshot — Permission Denied on Branch Creation***
 
-![Permission Denied Error](_screenshots/02-permission-denied-branch.png)
+<img width="1033" height="825" alt="image" src="https://github.com/user-attachments/assets/d492d10e-d7fc-4b7d-ac4e-942e8462ab70" />
+
 > *Branch creation fails because natasha lacks write access to the root-owned `.git` directory*
 
 **Root Cause:**
@@ -340,7 +341,7 @@ exit
 
 
 <img width="1031" height="738" alt="image" src="https://github.com/user-attachments/assets/4b514d98-58e0-46ac-87d9-028aa9b35faf" />
-<img width="1033" height="825" alt="image" src="https://github.com/user-attachments/assets/d492d10e-d7fc-4b7d-ac4e-942e8462ab70" />
+
 
 
 
