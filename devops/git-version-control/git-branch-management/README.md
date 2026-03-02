@@ -64,7 +64,8 @@ To add an exception for this directory, call:
 
 ***Screenshot — Dubious Ownership Error***
 
-![Dubious Ownership Error](_screenshots/01-dubious-ownership-error.png)
+<img width="1035" height="642" alt="image" src="https://github.com/user-attachments/assets/3c479b20-e809-4b9a-a596-6addeb8a9496" />
+
 > *`git branch` fails immediately due to Git's CVE-2022-24765 ownership security check*
 
 ---
@@ -336,7 +337,7 @@ exit
 
 
 
-<img width="1035" height="642" alt="image" src="https://github.com/user-attachments/assets/3c479b20-e809-4b9a-a596-6addeb8a9496" />
+
 
 <img width="1031" height="738" alt="image" src="https://github.com/user-attachments/assets/4b514d98-58e0-46ac-87d9-028aa9b35faf" />
 <img width="1033" height="825" alt="image" src="https://github.com/user-attachments/assets/d492d10e-d7fc-4b7d-ac4e-942e8462ab70" />
