@@ -468,7 +468,9 @@ ssh -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no ec2-user@$PUBLIC_IP \
   "echo '$(cat /root/.ssh/id_rsa.pub)' >> ~/.ssh/authorized_keys && \
    chmod 600 ~/.ssh/authorized_keys"
 ```
-***Screenshot:***
+***Screenshots:***
+<img width="1041" height="452" alt="image" src="https://github.com/user-attachments/assets/f132fcc8-9056-4879-bbb3-1fea6cd924fe" />
+<img width="1035" height="443" alt="image" src="https://github.com/user-attachments/assets/95689b8c-6cbb-4818-ac18-d5e343646b5e" />
 <img width="1039" height="303" alt="image" src="https://github.com/user-attachments/assets/62588c43-1f7e-4a72-af13-b5b9b3aaf8fd" />
 
 ---
@@ -707,8 +709,7 @@ When running infrastructure CLI commands across sessions, these errors confirm t
 <img width="1036" height="504" alt="image" src="https://github.com/user-attachments/assets/084c518c-19dc-44d7-a16d-1e0a4da230b2" />
 <img width="1035" height="545" alt="image" src="https://github.com/user-attachments/assets/553bf1e6-2eed-46da-9b47-ce005ce7f0d3" />
 <img width="1037" height="562" alt="image" src="https://github.com/user-attachments/assets/a4c191e8-2695-47ec-91c9-50b2e6e6a5b9" />
-<img width="1041" height="452" alt="image" src="https://github.com/user-attachments/assets/f132fcc8-9056-4879-bbb3-1fea6cd924fe" />
-<img width="1035" height="443" alt="image" src="https://github.com/user-attachments/assets/95689b8c-6cbb-4818-ac18-d5e343646b5e" />
+
 
 
 
