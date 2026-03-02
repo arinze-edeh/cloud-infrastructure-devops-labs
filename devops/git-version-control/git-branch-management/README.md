@@ -266,9 +266,6 @@ exit
 # Returns to natasha@ststor01
 ```
 
-***Screenshot — Complete Terminal Session Overview***
-
-![Full terminal session](_screenshots/10-full-session-overview.png)
 > *End-to-end terminal session: SSH → ownership diagnosis → escalation → branch creation → verification → exit*
 
 ---
