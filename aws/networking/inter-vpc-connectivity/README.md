@@ -357,6 +357,7 @@ aws ec2 authorize-security-group-ingress \
 ```
 
 ***Screenshot: AWS Console → EC2 → Security Groups → `sg-072bab54b2b54f706` → Inbound Rules tab showing `All ICMP - IPv4` from source `172.31.0.0/16`***
+<img width="1035" height="542" alt="image" src="https://github.com/user-attachments/assets/f7ef38ec-e82a-4323-85fb-52e454f0e6c2" />
 
 ---
 
@@ -705,8 +706,8 @@ When running infrastructure CLI commands across sessions, these errors confirm t
 
 
 
-<img width="1029" height="358" alt="image" src="https://github.com/user-attachments/assets/839ad23b-a1e7-41df-88b9-2eec8422d536" />
-<img width="1035" height="542" alt="image" src="https://github.com/user-attachments/assets/f7ef38ec-e82a-4323-85fb-52e454f0e6c2" />
+
+
 <img width="1020" height="858" alt="image" src="https://github.com/user-attachments/assets/781df65a-158d-44f6-b27a-4febe30118b1" />
 <img width="1035" height="632" alt="image" src="https://github.com/user-attachments/assets/9e6a2443-6124-4e2b-9070-af207846255d" />
 <img width="1036" height="504" alt="image" src="https://github.com/user-attachments/assets/084c518c-19dc-44d7-a16d-1e0a4da230b2" />
