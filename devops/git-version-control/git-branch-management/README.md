@@ -332,8 +332,6 @@ exit
 
 
 
-<img width="1033" height="626" alt="image" src="https://github.com/user-attachments/assets/72b398e2-c27a-48a3-a28b-51d68cec435b" />
-<img width="1036" height="557" alt="image" src="https://github.com/user-attachments/assets/b7552b38-fa4f-4333-b644-53d5a0f035c6" />
 
 <img width="1035" height="642" alt="image" src="https://github.com/user-attachments/assets/3c479b20-e809-4b9a-a596-6addeb8a9496" />
 <img width="1033" height="686" alt="image" src="https://github.com/user-attachments/assets/772cf1e0-3649-45d0-b6b4-af12df426fe2" />
