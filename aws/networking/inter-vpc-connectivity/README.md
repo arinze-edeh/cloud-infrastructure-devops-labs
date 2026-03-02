@@ -263,7 +263,7 @@ aws ec2 accept-vpc-peering-connection \
 
 ***Screenshot: AWS Console → VPC → Peering Connections showing `nautilus-vpc-peering` with Status = **Active***
 <img width="1037" height="621" alt="image" src="https://github.com/user-attachments/assets/ecdc3e30-bdf1-415f-a3aa-5d7d1f2f666d" />
-
+<img width="1035" height="871" alt="image" src="https://github.com/user-attachments/assets/8bfdc5c3-f65c-4f25-abdd-6a14942c8600" />
 
 ---
 
@@ -698,7 +698,7 @@ When running infrastructure CLI commands across sessions, these errors confirm t
 
 
 
-<img width="1035" height="871" alt="image" src="https://github.com/user-attachments/assets/8bfdc5c3-f65c-4f25-abdd-6a14942c8600" />
+
 <img width="1037" height="492" alt="image" src="https://github.com/user-attachments/assets/8d8ab7b2-8df5-4f9e-9140-651f26fba9af" />
 <img width="1036" height="277" alt="image" src="https://github.com/user-attachments/assets/c1d1e11a-944e-4618-9559-1d7a5d03859d" />
 <img width="1031" height="348" alt="image" src="https://github.com/user-attachments/assets/71218b04-9cdc-40e4-ae7f-3ce4a69f1530" />
