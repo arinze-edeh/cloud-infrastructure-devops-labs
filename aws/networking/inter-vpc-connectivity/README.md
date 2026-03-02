@@ -658,6 +658,10 @@ aws ec2 describe-security-groups \
   --group-ids $PRIVATE_SG_ID \
   --query "SecurityGroups[0].IpPermissions[?IpProtocol=='icmp']"
 ```
+***Screenshots of Issues***
+<img width="1036" height="504" alt="image" src="https://github.com/user-attachments/assets/084c518c-19dc-44d7-a16d-1e0a4da230b2" />
+
+<img width="1037" height="562" alt="image" src="https://github.com/user-attachments/assets/a4c191e8-2695-47ec-91c9-50b2e6e6a5b9" />
 
 ---
 
@@ -702,19 +706,3 @@ When running infrastructure CLI commands across sessions, these errors confirm t
 ---
 
 > *All commands, IDs, IPs, and output blocks in this document reflect the exact values produced during the live implementation run. No values have been approximated or substituted.*
-
-
-
-
-
-<img width="1036" height="504" alt="image" src="https://github.com/user-attachments/assets/084c518c-19dc-44d7-a16d-1e0a4da230b2" />
-
-<img width="1037" height="562" alt="image" src="https://github.com/user-attachments/assets/a4c191e8-2695-47ec-91c9-50b2e6e6a5b9" />
-
-
-
-
-
-
-
-
