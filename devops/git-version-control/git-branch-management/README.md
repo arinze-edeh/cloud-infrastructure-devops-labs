@@ -1,4 +1,4 @@
-# Git Branch Management — Feature Branch Creation from Master
+# Git Branch Management - Feature Branch Creation from Master
 
 > **Domain:** DevOps | Git Version Control
 > **Difficulty:** Intermediate
