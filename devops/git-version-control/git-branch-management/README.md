@@ -228,7 +228,8 @@ Switched to a new branch 'xfusioncorp_apps'
 
 ***Screenshot — Feature Branch Creation Success***
 
-![git checkout -b xfusioncorp_apps](_screenshots/08-branch-creation-success.png)
+<img width="1034" height="559" alt="image" src="https://github.com/user-attachments/assets/1ba8873d-c34d-44bb-860c-4e556e493daa" />
+
 > *`xfusioncorp_apps` created and checked out in a single command; no code changes made*
 
 ---
@@ -340,7 +341,7 @@ exit
 <img width="1033" height="825" alt="image" src="https://github.com/user-attachments/assets/d492d10e-d7fc-4b7d-ac4e-942e8462ab70" />
 <img width="1036" height="870" alt="image" src="https://github.com/user-attachments/assets/581e801d-0b76-48b6-ad3b-b1d30c9d58fc" />
 <img width="1037" height="867" alt="image" src="https://github.com/user-attachments/assets/20085c4a-903b-48a7-80c9-feeab2410809" />
-<img width="1034" height="559" alt="image" src="https://github.com/user-attachments/assets/1ba8873d-c34d-44bb-860c-4e556e493daa" />
+
 
 
 
