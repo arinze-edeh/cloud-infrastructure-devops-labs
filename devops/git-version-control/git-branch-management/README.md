@@ -210,7 +210,8 @@ Your branch is up to date with 'origin/master'.
 
 ***Screenshot — Checkout master Branch***
 
-![git checkout master](_screenshots/07-checkout-master.png)
+<img width="1037" height="867" alt="image" src="https://github.com/user-attachments/assets/20085c4a-903b-48a7-80c9-feeab2410809" />
+
 > *Explicitly checked out master before branching — ensures the new branch originates from the correct source*
 
 ---
@@ -340,7 +341,7 @@ exit
 <img width="1031" height="738" alt="image" src="https://github.com/user-attachments/assets/4b514d98-58e0-46ac-87d9-028aa9b35faf" />
 <img width="1033" height="825" alt="image" src="https://github.com/user-attachments/assets/d492d10e-d7fc-4b7d-ac4e-942e8462ab70" />
 <img width="1036" height="870" alt="image" src="https://github.com/user-attachments/assets/581e801d-0b76-48b6-ad3b-b1d30c9d58fc" />
-<img width="1037" height="867" alt="image" src="https://github.com/user-attachments/assets/20085c4a-903b-48a7-80c9-feeab2410809" />
+
 
 
 
