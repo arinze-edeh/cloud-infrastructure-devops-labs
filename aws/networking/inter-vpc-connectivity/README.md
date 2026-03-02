@@ -707,7 +707,6 @@ When running infrastructure CLI commands across sessions, these errors confirm t
 
 
 
-<img width="1035" height="632" alt="image" src="https://github.com/user-attachments/assets/9e6a2443-6124-4e2b-9070-af207846255d" />
 <img width="1036" height="504" alt="image" src="https://github.com/user-attachments/assets/084c518c-19dc-44d7-a16d-1e0a4da230b2" />
 
 <img width="1037" height="562" alt="image" src="https://github.com/user-attachments/assets/a4c191e8-2695-47ec-91c9-50b2e6e6a5b9" />
