@@ -190,6 +190,8 @@ sudo su -
 ```bash
 git config --global --add safe.directory /usr/src/kodekloudrepos/apps
 ```
+***Screenshot***
+<img width="1033" height="686" alt="image" src="https://github.com/user-attachments/assets/772cf1e0-3649-45d0-b6b4-af12df426fe2" />
 
 > **Critical:** Git's `~/.gitconfig` is per-user. Root's global config at `/root/.gitconfig` requires its own safe directory registration independent of natasha's.
 
@@ -337,7 +339,7 @@ exit
 
 
 <img width="1035" height="642" alt="image" src="https://github.com/user-attachments/assets/3c479b20-e809-4b9a-a596-6addeb8a9496" />
-<img width="1033" height="686" alt="image" src="https://github.com/user-attachments/assets/772cf1e0-3649-45d0-b6b4-af12df426fe2" />
+
 <img width="1031" height="738" alt="image" src="https://github.com/user-attachments/assets/4b514d98-58e0-46ac-87d9-028aa9b35faf" />
 <img width="1033" height="825" alt="image" src="https://github.com/user-attachments/assets/d492d10e-d7fc-4b7d-ac4e-942e8462ab70" />
 <img width="1036" height="870" alt="image" src="https://github.com/user-attachments/assets/581e801d-0b76-48b6-ad3b-b1d30c9d58fc" />
