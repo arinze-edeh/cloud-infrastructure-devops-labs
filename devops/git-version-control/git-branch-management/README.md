@@ -248,7 +248,8 @@ git branch
 
 ***Screenshot — Branch Verification***
 
-![git branch verification](_screenshots/09-branch-verification.png)
+<img width="1036" height="869" alt="image" src="https://github.com/user-attachments/assets/a4531482-ec4b-4650-860f-00c8e1a1f5b2" />
+
 > *Active branch (`*`) confirms `xfusioncorp_apps` was successfully created from master*
 
 ---
@@ -340,6 +341,6 @@ exit
 <img width="1036" height="870" alt="image" src="https://github.com/user-attachments/assets/581e801d-0b76-48b6-ad3b-b1d30c9d58fc" />
 <img width="1037" height="867" alt="image" src="https://github.com/user-attachments/assets/20085c4a-903b-48a7-80c9-feeab2410809" />
 <img width="1034" height="559" alt="image" src="https://github.com/user-attachments/assets/1ba8873d-c34d-44bb-860c-4e556e493daa" />
-<img width="1036" height="869" alt="image" src="https://github.com/user-attachments/assets/a4531482-ec4b-4650-860f-00c8e1a1f5b2" />
+
 
 
