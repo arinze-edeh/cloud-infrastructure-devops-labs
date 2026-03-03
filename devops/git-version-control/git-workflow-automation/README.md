@@ -143,7 +143,8 @@ sudo git checkout -b nautilus
 Switched to a new branch 'nautilus'
 ```
 
-***Screenshot Placeholder: sudo git checkout -b nautilus success output***
+***Screenshot: sudo git checkout -b nautilus success output***
+<img width="1037" height="541" alt="image" src="https://github.com/user-attachments/assets/ad95570d-c7de-4a3c-a2e5-32b406cad342" />
 
 ---
 
@@ -338,7 +339,7 @@ All operations were performed from inside the storage server after SSH-ing throu
 <img width="1034" height="711" alt="image" src="https://github.com/user-attachments/assets/16cf1c92-fec2-4e0b-8227-29b3214caa49" />
 <img width="1034" height="435" alt="image" src="https://github.com/user-attachments/assets/da172961-3521-4965-ad59-be724914cf11" />
 <img width="1038" height="423" alt="image" src="https://github.com/user-attachments/assets/3ceed183-b90e-4948-b788-c1fee7c9e5f3" />
-<img width="1037" height="541" alt="image" src="https://github.com/user-attachments/assets/ad95570d-c7de-4a3c-a2e5-32b406cad342" />
+
 <img width="1035" height="649" alt="image" src="https://github.com/user-attachments/assets/16d3fb9b-4fae-4273-8afa-d24eb2b95668" />
 <img width="1035" height="649" alt="image" src="https://github.com/user-attachments/assets/6907c18c-e9aa-48be-8918-63533c188f2b" />
 <img width="1044" height="428" alt="image" src="https://github.com/user-attachments/assets/f1584102-b598-46d7-bc44-f75a33d14e05" />
