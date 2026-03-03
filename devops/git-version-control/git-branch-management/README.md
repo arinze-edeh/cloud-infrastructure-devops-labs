@@ -160,7 +160,7 @@ ls -la
 
 <img width="1032" height="658" alt="image" src="https://github.com/user-attachments/assets/c1f0b2e3-3813-45ae-af55-8dd1895995b5" />
 
-> *Directory listing confirms `.git` and all files are owned by `root:root` — write blocked for natasha*
+> *Directory listing confirms `.git` and all files are owned by `root:root` - write blocked for natasha*
 
 ---
 
@@ -169,8 +169,11 @@ ls -la
 ```bash
 git config --global --add safe.directory /usr/src/kodekloudrepos/apps
 ```
+***Screenshot:***
 
-> Resolves Problem 1 for the `natasha` user context. Write permission remains blocked — escalation required.
+<img width="1031" height="738" alt="image" src="https://github.com/user-attachments/assets/4b514d98-58e0-46ac-87d9-028aa9b35faf" />
+
+> Resolves Problem 1 for the `natasha` user context. Write permission remains blocked - escalation required.
 
 ---
 
@@ -218,7 +221,7 @@ Your branch is up to date with 'origin/master'.
 
 <img width="1037" height="867" alt="image" src="https://github.com/user-attachments/assets/20085c4a-903b-48a7-80c9-feeab2410809" />
 
-> *Explicitly checked out master before branching — ensures the new branch originates from the correct source*
+> *Explicitly checked out master before branching - ensures the new branch originates from the correct source*
 
 ---
 
@@ -334,14 +337,14 @@ exit
 
 ---
 
-*Documented as part of the Nautilus DevOps Infrastructure Series — Stratos Datacenter Operations*
+*Documented as part of the Nautilus DevOps Infrastructure Series - Stratos Datacenter Operations*
 
 
 
 
 
 
-<img width="1031" height="738" alt="image" src="https://github.com/user-attachments/assets/4b514d98-58e0-46ac-87d9-028aa9b35faf" />
+
 
 
 
