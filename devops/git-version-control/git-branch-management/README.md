@@ -111,7 +111,7 @@ drwxr-xr-x  root root  .git/
 
 ***Screenshot — Ownership Confirmation via ls -la***
 
-![ls -la showing root ownership](_screenshots/03-ls-la-root-ownership.png)
+<img width="1033" height="825" alt="image" src="https://github.com/user-attachments/assets/d492d10e-d7fc-4b7d-ac4e-942e8462ab70" />
 > *`ls -la` confirms all repository files and `.git` directory are owned by `root:root`*
 
 ---
