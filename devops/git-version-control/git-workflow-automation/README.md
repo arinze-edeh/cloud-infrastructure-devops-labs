@@ -300,6 +300,8 @@ This confirms:
 
 ***Screenshot Placeholder: git log --oneline --all --graph showing all four refs aligned***
 
+<img width="1036" height="745" alt="image" src="https://github.com/user-attachments/assets/08083c1c-45c1-4d37-825c-0fbdf3078f1a" />
+
 ---
 
 ## Key Takeaways
@@ -344,5 +346,5 @@ All operations were performed from inside the storage server after SSH-ing throu
 <img width="1029" height="374" alt="image" src="https://github.com/user-attachments/assets/3ae59fc3-ffe6-4f08-b74f-636886f4ac89" />
 <img width="1038" height="580" alt="image" src="https://github.com/user-attachments/assets/b8aa7626-b989-435e-8784-3dfbf5a3e591" />
 <img width="1029" height="647" alt="image" src="https://github.com/user-attachments/assets/d81e2fd6-449c-4277-b6c1-b462448b821b" />
-<img width="1036" height="745" alt="image" src="https://github.com/user-attachments/assets/08083c1c-45c1-4d37-825c-0fbdf3078f1a" />
+
 
