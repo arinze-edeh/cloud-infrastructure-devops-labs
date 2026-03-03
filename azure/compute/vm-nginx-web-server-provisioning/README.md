@@ -142,6 +142,8 @@ az network nsg rule create \
 
 <img width="1038" height="874" alt="image" src="https://github.com/user-attachments/assets/70173bd9-0438-4959-bf52-adf455288a9d" />
 
+<img width="1038" height="644" alt="image" src="https://github.com/user-attachments/assets/3f99511b-1bfe-4df2-a6d1-61b055369fee" />
+
 ---
 
 ### Phase 2: VM Provisioning
@@ -342,7 +344,6 @@ az disk list \
 
 
 
-<img width="1038" height="644" alt="image" src="https://github.com/user-attachments/assets/3f99511b-1bfe-4df2-a6d1-61b055369fee" />
 
 <img width="1032" height="804" alt="image" src="https://github.com/user-attachments/assets/1d0c5cae-a05f-4d1c-a8da-6855d36f8cfb" />
 
