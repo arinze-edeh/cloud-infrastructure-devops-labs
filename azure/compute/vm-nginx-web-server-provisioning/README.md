@@ -278,7 +278,8 @@ Ensure the disk size is 128 GB or less and the SKU is not Premium.'
 Operation 'Update VM' is not allowed on VM 'datacenter-vm'
 since the VM is marked for deletion.
 ```
-
+***📸 Screenshot:***
+<img width="1042" height="418" alt="image" src="https://github.com/user-attachments/assets/8a21fccf-5c55-49f5-a743-85227406e94d" />
 
 **Root Cause:** A previous failed deployment left the VM in a terminal `Failed` provisioning state. Azure prevents new deployments with the same name until cleanup is complete.
 
@@ -372,7 +373,7 @@ az disk list \
 <img width="1036" height="250" alt="image" src="https://github.com/user-attachments/assets/1e4f3141-e544-4c1d-aafd-acba0cc5d8be" />
 
 
-<img width="1042" height="418" alt="image" src="https://github.com/user-attachments/assets/8a21fccf-5c55-49f5-a743-85227406e94d" />
+
 
 
 
