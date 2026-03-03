@@ -134,6 +134,14 @@ az network nsg rule create \
 
 ***📸 Screenshot Placeholder — NSG creation success JSON showing `"provisioningState": "Succeeded"` and Allow-HTTP rule***
 
+<img width="1028" height="856" alt="image" src="https://github.com/user-attachments/assets/d5129781-96a4-4531-bda3-237a78362414" />
+
+<img width="1037" height="856" alt="image" src="https://github.com/user-attachments/assets/5afccb76-6d63-40c3-a955-c6e47c678539" />
+
+<img width="1038" height="868" alt="image" src="https://github.com/user-attachments/assets/dd796fad-1993-4c08-8182-ca2dd4a20ce5" />
+
+<img width="1038" height="874" alt="image" src="https://github.com/user-attachments/assets/70173bd9-0438-4959-bf52-adf455288a9d" />
+
 ---
 
 ### Phase 2: VM Provisioning
@@ -333,13 +341,6 @@ az disk list \
 
 
 
-<img width="1028" height="856" alt="image" src="https://github.com/user-attachments/assets/d5129781-96a4-4531-bda3-237a78362414" />
-
-<img width="1037" height="856" alt="image" src="https://github.com/user-attachments/assets/5afccb76-6d63-40c3-a955-c6e47c678539" />
-
-<img width="1038" height="868" alt="image" src="https://github.com/user-attachments/assets/dd796fad-1993-4c08-8182-ca2dd4a20ce5" />
-
-<img width="1038" height="874" alt="image" src="https://github.com/user-attachments/assets/70173bd9-0438-4959-bf52-adf455288a9d" />
 
 <img width="1038" height="644" alt="image" src="https://github.com/user-attachments/assets/3f99511b-1bfe-4df2-a6d1-61b055369fee" />
 
