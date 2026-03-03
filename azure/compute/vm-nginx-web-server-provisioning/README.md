@@ -180,6 +180,8 @@ az vm create \
 
 ***📸 Screenshot Placeholder — Successful VM creation JSON output showing `"powerState": "VM running"` and assigned `publicIpAddress`***
 
+<img width="1032" height="804" alt="image" src="https://github.com/user-attachments/assets/1d0c5cae-a05f-4d1c-a8da-6855d36f8cfb" />
+
 ---
 
 ### Phase 3: Port Exposure
@@ -345,7 +347,6 @@ az disk list \
 
 
 
-<img width="1032" height="804" alt="image" src="https://github.com/user-attachments/assets/1d0c5cae-a05f-4d1c-a8da-6855d36f8cfb" />
 
 <img width="1037" height="526" alt="image" src="https://github.com/user-attachments/assets/15c982a6-5566-48ea-81e4-2ea4709a245f" />
 
