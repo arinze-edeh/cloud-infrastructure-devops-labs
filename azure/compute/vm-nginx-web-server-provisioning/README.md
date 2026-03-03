@@ -101,6 +101,7 @@ az group list --output table
 ```
 
 ***📸 Screenshot Placeholder — `az account show` output showing Enabled subscription and servicePrincipal user***
+<img width="1037" height="604" alt="image" src="https://github.com/user-attachments/assets/106dd335-c7ce-4808-9bd5-cf2a2e19435f" />
 
 > **Expected:** `"state": "Enabled"` with an existing resource group in `eastus`
 
@@ -318,9 +319,8 @@ az disk list \
 
 
 
-<img width="1032" height="553" alt="image" src="https://github.com/user-attachments/assets/50ea5600-6c8b-4fcd-9145-8b3e031dad3e" />
 
-<img width="1037" height="604" alt="image" src="https://github.com/user-attachments/assets/106dd335-c7ce-4808-9bd5-cf2a2e19435f" />
+
 
 <img width="1028" height="856" alt="image" src="https://github.com/user-attachments/assets/d5129781-96a4-4531-bda3-237a78362414" />
 
