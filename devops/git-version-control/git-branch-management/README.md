@@ -174,7 +174,7 @@ git config --global --add safe.directory /usr/src/kodekloudrepos/apps
 
 ---
 
-### Step 5 — Escalate Privileges to Root
+### Step 5: Escalate Privileges to Root
 
 ```bash
 sudo su -
@@ -297,7 +297,7 @@ In enterprise lab and shared server environments, repositories are frequently in
 Using `sudo su -` (full root shell) is more reliable than `sudo git` in this scenario. A bare `sudo git` command would use root's binary but still reference natasha's environment, which may lack the safe directory exception in `/root/.gitconfig`.
 
 ### 4. Always Checkout Source Branch Explicitly
-Before creating a feature branch, explicitly checkout the intended source (`git checkout master`). In this case, `kodekloud_apps` was the active branch — branching without switching would have created `xfusioncorp_apps` from the wrong base, violating the task requirement.
+Before creating a feature branch, explicitly checkout the intended source (`git checkout master`). In this case, `kodekloud_apps` was the active branch - branching without switching would have created `xfusioncorp_apps` from the wrong base, violating the task requirement.
 
 ---
 
@@ -327,9 +327,9 @@ exit
 
 ## References
 
-- [Git CVE-2022-24765 Security Advisory — GitHub Blog](https://github.blog/2022-04-12-git-security-vulnerability-announced/)
-- [Git Documentation — git-branch](https://git-scm.com/docs/git-branch)
-- [Git Documentation — git-checkout](https://git-scm.com/docs/git-checkout)
+- [Git CVE-2022-24765 Security Advisory - GitHub Blog](https://github.blog/2022-04-12-git-security-vulnerability-announced/)
+- [Git Documentation - git-branch](https://git-scm.com/docs/git-branch)
+- [Git Documentation - git-checkout](https://git-scm.com/docs/git-checkout)
 - [Linux File Permissions Reference](https://man7.org/linux/man-pages/man1/chmod.1.html)
 
 ---
