@@ -327,7 +327,7 @@ az disk list \
 
 ---
 
-## 🏁 Final Validation
+## Final Validation
 
 | Check | Command | Expected Result |
 |-------|---------|----------------|
