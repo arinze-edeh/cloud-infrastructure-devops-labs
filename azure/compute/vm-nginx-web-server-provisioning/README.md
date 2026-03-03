@@ -32,11 +32,11 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This repository documents the end-to-end provisioning of a production-grade **Azure Virtual Machine** configured as an **Nginx web server** for the **Nautilus DevOps infrastructure project**. The deployment is fully automated via **Azure CLI** and follows enterprise cloud security standards.
 
-### 🎯 Objectives
+### Objectives
 
 | Objective | Specification |
 |-----------|--------------|
@@ -49,7 +49,7 @@ This repository documents the end-to-end provisioning of a production-grade **Az
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -82,7 +82,7 @@ This repository documents the end-to-end provisioning of a production-grade **Az
 
 ---
 
-## ✅ Prerequisites
+## Prerequisites
 
 - Azure CLI installed (`az --version`)
 - Active Azure subscription with **Contributor** access
@@ -278,6 +278,8 @@ Ensure the disk size is 128 GB or less and the SKU is not Premium.'
 Operation 'Update VM' is not allowed on VM 'datacenter-vm'
 since the VM is marked for deletion.
 ```
+***📸 Screenshot:***
+<img width="1031" height="405" alt="image" src="https://github.com/user-attachments/assets/810a54e9-23c3-447d-b29a-5ac2542447d7" />
 
 **Root Cause:** A previous failed deployment left the VM in a terminal `Failed` provisioning state. Azure prevents new deployments with the same name until cleanup is complete.
 
@@ -305,7 +307,7 @@ az disk list \
   --name {} --yes
 ```
 
-***📸 Screenshot Placeholder — Terminal showing `ResourceNotFound` after successful force deletion confirming environment is clean***
+***📸 Screenshot: Terminal showing `ResourceNotFound` after successful force deletion confirming environment is clean***
 <img width="1032" height="464" alt="image" src="https://github.com/user-attachments/assets/fa2d3a5a-0ca3-423a-8e86-a0eb01cfc531" />
 
 ---
@@ -334,7 +336,7 @@ az disk list \
 
 ---
 
-## 📚 Lessons Learned
+## Lessons Learned
 
 | # | Lesson | Impact |
 |---|--------|--------|
@@ -357,7 +359,7 @@ az disk list \
 
 
 
-<img width="1031" height="405" alt="image" src="https://github.com/user-attachments/assets/810a54e9-23c3-447d-b29a-5ac2542447d7" />
+
 
 <img width="1039" height="455" alt="image" src="https://github.com/user-attachments/assets/38d12eab-dfee-47f2-a9fb-f35cc329529c" />
 
