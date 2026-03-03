@@ -122,7 +122,9 @@ ls -la /tmp/index.html
 # Expected: file owned by root, readable
 ```
 
-***Screenshot Placeholder: ls output confirming /tmp/index.html exists***
+***Screenshot: ls output confirming /tmp/index.html exists***
+
+<img width="1026" height="674" alt="image" src="https://github.com/user-attachments/assets/70538549-314b-4873-89ce-19909e64ddb1" />
 
 ---
 
@@ -329,9 +331,8 @@ All operations were performed from inside the storage server after SSH-ing throu
 
 
 
-<img width="1036" height="715" alt="image" src="https://github.com/user-attachments/assets/ecd487bd-fae6-4381-9086-9c67784517ca" />
 
-<img width="1026" height="674" alt="image" src="https://github.com/user-attachments/assets/70538549-314b-4873-89ce-19909e64ddb1" />
+
 <img width="1034" height="711" alt="image" src="https://github.com/user-attachments/assets/16cf1c92-fec2-4e0b-8227-29b3214caa49" />
 <img width="1034" height="435" alt="image" src="https://github.com/user-attachments/assets/da172961-3521-4965-ad59-be724914cf11" />
 <img width="1038" height="423" alt="image" src="https://github.com/user-attachments/assets/3ceed183-b90e-4948-b788-c1fee7c9e5f3" />
