@@ -278,8 +278,7 @@ Ensure the disk size is 128 GB or less and the SKU is not Premium.'
 Operation 'Update VM' is not allowed on VM 'datacenter-vm'
 since the VM is marked for deletion.
 ```
-***📸 Screenshot:***
-<img width="1031" height="405" alt="image" src="https://github.com/user-attachments/assets/810a54e9-23c3-447d-b29a-5ac2542447d7" />
+
 
 **Root Cause:** A previous failed deployment left the VM in a terminal `Failed` provisioning state. Azure prevents new deployments with the same name until cleanup is complete.
 
@@ -319,6 +318,10 @@ az disk list \
 **Root Cause:** A ghost disk from a prior failed deployment (`pps-vm-01_...`) was still registered in the subscription, causing a conflict when attempting to change the managed disk SKU.
 
 **Resolution:** The `--force-deletion` cleanup in Issue 3 cleared the orphaned disk, allowing the subsequent deploy with `--storage-sku Standard_LRS` to succeed.
+
+***📸 Screenshot:***
+
+<img width="1031" height="405" alt="image" src="https://github.com/user-attachments/assets/810a54e9-23c3-447d-b29a-5ac2542447d7" />
 
 ---
 
