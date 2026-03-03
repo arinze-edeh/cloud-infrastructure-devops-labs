@@ -1,4 +1,5 @@
 # Azure VM Provisioning with Nginx Web Server
+
 ### *Enterprise Infrastructure Deployment via Azure CLI - Nautilus DevOps Project*
 
 ---
@@ -15,7 +16,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Architecture](#architecture)
@@ -100,7 +101,7 @@ az account show
 az group list --output table
 ```
 
-***📸 Screenshot Placeholder — `az account show` output showing Enabled subscription and servicePrincipal user***
+***📸 Screenshot: `az account show` output showing Enabled subscription and servicePrincipal user***
 <img width="1037" height="604" alt="image" src="https://github.com/user-attachments/assets/106dd335-c7ce-4808-9bd5-cf2a2e19435f" />
 
 > **Expected:** `"state": "Enabled"` with an existing resource group in `eastus`
@@ -227,7 +228,7 @@ curl http://20.127.103.60
 
 ## ⚠️ Known Issues & Resolutions
 
-This section documents all blockers encountered during deployment and their exact resolutions — critical for team knowledge transfer and future re-deployments.
+This section documents all blockers encountered during deployment and their exact resolutions - critical for team knowledge transfer and future re-deployments.
 
 ---
 
@@ -270,7 +271,7 @@ Ensure the disk size is 128 GB or less and the SKU is not Premium.'
 
 ---
 
-### ❌ Issue 3: VM Stuck in `Failed` State — Cannot Recreate
+### ❌ Issue 3: VM Stuck in `Failed` State - Cannot Recreate
 
 **Error Code:** `OperationNotAllowed`
 
