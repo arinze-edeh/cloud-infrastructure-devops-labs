@@ -250,6 +250,7 @@ Ensure the disk size is 128 GB or less and the SKU is not Premium.'
 ```
 
 ***📸 Screenshot Placeholder — Terminal showing `RequestDisallowedByPolicy` error on first VM create attempt***
+<img width="1037" height="526" alt="image" src="https://github.com/user-attachments/assets/15c982a6-5566-48ea-81e4-2ea4709a245f" />
 
 ---
 
@@ -350,7 +351,7 @@ az disk list \
 
 
 
-<img width="1037" height="526" alt="image" src="https://github.com/user-attachments/assets/15c982a6-5566-48ea-81e4-2ea4709a245f" />
+
 
 <img width="1031" height="405" alt="image" src="https://github.com/user-attachments/assets/810a54e9-23c3-447d-b29a-5ac2542447d7" />
 
