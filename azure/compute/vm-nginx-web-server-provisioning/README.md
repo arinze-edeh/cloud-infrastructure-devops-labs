@@ -304,6 +304,7 @@ az disk list \
 ```
 
 ***📸 Screenshot Placeholder — Terminal showing `ResourceNotFound` after successful force deletion confirming environment is clean***
+<img width="1032" height="464" alt="image" src="https://github.com/user-attachments/assets/fa2d3a5a-0ca3-423a-8e86-a0eb01cfc531" />
 
 ---
 
@@ -366,7 +367,7 @@ az disk list \
 
 <img width="1042" height="418" alt="image" src="https://github.com/user-attachments/assets/8a21fccf-5c55-49f5-a743-85227406e94d" />
 
-<img width="1032" height="464" alt="image" src="https://github.com/user-attachments/assets/fa2d3a5a-0ca3-423a-8e86-a0eb01cfc531" />
+
 
 <img width="1035" height="531" alt="image" src="https://github.com/user-attachments/assets/e0875294-29ed-475b-8ab2-718ce029a7e4" />
 
