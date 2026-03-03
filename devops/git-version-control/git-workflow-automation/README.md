@@ -175,7 +175,8 @@ sudo git commit -m "Add index.html to nautilus branch"
  create mode 100644 index.html
 ```
 
-***Screenshot Placeholder: git commit success output on nautilus branch***
+***Screenshot: git commit success output on nautilus branch***
+<img width="1035" height="649" alt="image" src="https://github.com/user-attachments/assets/16d3fb9b-4fae-4273-8afa-d24eb2b95668" />
 
 **Switch to master and merge:**
 
@@ -340,7 +341,7 @@ All operations were performed from inside the storage server after SSH-ing throu
 <img width="1034" height="435" alt="image" src="https://github.com/user-attachments/assets/da172961-3521-4965-ad59-be724914cf11" />
 <img width="1038" height="423" alt="image" src="https://github.com/user-attachments/assets/3ceed183-b90e-4948-b788-c1fee7c9e5f3" />
 
-<img width="1035" height="649" alt="image" src="https://github.com/user-attachments/assets/16d3fb9b-4fae-4273-8afa-d24eb2b95668" />
+
 <img width="1035" height="649" alt="image" src="https://github.com/user-attachments/assets/6907c18c-e9aa-48be-8918-63533c188f2b" />
 <img width="1044" height="428" alt="image" src="https://github.com/user-attachments/assets/f1584102-b598-46d7-bc44-f75a33d14e05" />
 <img width="1036" height="321" alt="image" src="https://github.com/user-attachments/assets/cd794b51-7ff5-4acd-8ca4-03d1bf08d268" />
