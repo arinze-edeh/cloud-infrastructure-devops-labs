@@ -194,7 +194,8 @@ Fast-forward
  create mode 100644 index.html
 ```
 
-***Screenshot Placeholder: Fast-forward merge output from nautilus into master***
+***Screenshot: Fast-forward merge output from nautilus into master***
+<img width="1036" height="321" alt="image" src="https://github.com/user-attachments/assets/cd794b51-7ff5-4acd-8ca4-03d1bf08d268" />
 
 ---
 
@@ -344,7 +345,7 @@ All operations were performed from inside the storage server after SSH-ing throu
 
 <img width="1035" height="649" alt="image" src="https://github.com/user-attachments/assets/6907c18c-e9aa-48be-8918-63533c188f2b" />
 <img width="1044" height="428" alt="image" src="https://github.com/user-attachments/assets/f1584102-b598-46d7-bc44-f75a33d14e05" />
-<img width="1036" height="321" alt="image" src="https://github.com/user-attachments/assets/cd794b51-7ff5-4acd-8ca4-03d1bf08d268" />
+
 <img width="1029" height="374" alt="image" src="https://github.com/user-attachments/assets/3ae59fc3-ffe6-4f08-b74f-636886f4ac89" />
 <img width="1038" height="580" alt="image" src="https://github.com/user-attachments/assets/b8aa7626-b989-435e-8784-3dfbf5a3e591" />
 <img width="1029" height="647" alt="image" src="https://github.com/user-attachments/assets/d81e2fd6-449c-4277-b6c1-b462448b821b" />
