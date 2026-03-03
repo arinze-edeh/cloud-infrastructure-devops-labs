@@ -265,6 +265,8 @@ Ensure the disk size is 128 GB or less and the SKU is not Premium.'
 ```bash
 --storage-sku Standard_LRS   ✅
 ```
+***📸 Screenshot:***
+<img width="1029" height="286" alt="image" src="https://github.com/user-attachments/assets/27b8ec0b-3464-4cc0-9b30-f0b5bd6ccd56" />
 
 ---
 
@@ -360,7 +362,7 @@ az disk list \
 <img width="1039" height="455" alt="image" src="https://github.com/user-attachments/assets/38d12eab-dfee-47f2-a9fb-f35cc329529c" />
 
 
-<img width="1029" height="286" alt="image" src="https://github.com/user-attachments/assets/27b8ec0b-3464-4cc0-9b30-f0b5bd6ccd56" />
+
 
 <img width="1036" height="250" alt="image" src="https://github.com/user-attachments/assets/1e4f3141-e544-4c1d-aafd-acba0cc5d8be" />
 
