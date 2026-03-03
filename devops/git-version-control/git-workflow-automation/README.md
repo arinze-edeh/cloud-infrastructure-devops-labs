@@ -247,7 +247,8 @@ fatal: detected dubious ownership in repository at '/usr/src/kodekloudrepos/blog
 git config --global --add safe.directory /usr/src/kodekloudrepos/blog
 ```
 
-***Screenshot Placeholder: Terminal showing the dubious ownership error and the fix command***
+***Screenshot: Terminal showing the dubious ownership error and the fix command***
+<img width="1031" height="614" alt="image" src="https://github.com/user-attachments/assets/c0013740-a589-4754-bb2e-12352920c1c4" />
 
 ---
 
