@@ -1,5 +1,5 @@
-# 🚀 Azure VM Provisioning with Nginx Web Server
-### *Enterprise Infrastructure Deployment via Azure CLI — Nautilus DevOps Project*
+# Azure VM Provisioning with Nginx Web Server
+### *Enterprise Infrastructure Deployment via Azure CLI - Nautilus DevOps Project*
 
 ---
 
@@ -91,7 +91,7 @@ This repository documents the end-to-end provisioning of a production-grade **Az
 
 ---
 
-## 🔍 Environment Verification
+## Environment Verification
 
 Before deployment, confirm your Azure subscription and resource group are active.
 
@@ -107,7 +107,7 @@ az group list --output table
 
 ---
 
-## 🚀 Deployment Guide
+## Deployment Guide
 
 ### Phase 1: Network Security Group Setup
 
@@ -132,7 +132,7 @@ az network nsg rule create \
   --access Allow
 ```
 
-***📸 Screenshot Placeholder — NSG creation success JSON showing `"provisioningState": "Succeeded"` and Allow-HTTP rule***
+***📸 Screenshots: NSG creation success JSON showing `"provisioningState": "Succeeded"` and Allow-HTTP rule***
 
 <img width="1028" height="856" alt="image" src="https://github.com/user-attachments/assets/d5129781-96a4-4531-bda3-237a78362414" />
 
@@ -178,7 +178,7 @@ az vm create \
   --location eastus
 ```
 
-***📸 Screenshot Placeholder — Successful VM creation JSON output showing `"powerState": "VM running"` and assigned `publicIpAddress`***
+***📸 Screenshots: Successful VM creation JSON output showing `"powerState": "VM running"` and assigned `publicIpAddress`***
 
 <img width="1032" height="804" alt="image" src="https://github.com/user-attachments/assets/1d0c5cae-a05f-4d1c-a8da-6855d36f8cfb" />
 <img width="1031" height="734" alt="image" src="https://github.com/user-attachments/assets/af9c9de3-233c-47d7-8198-1d5f7b0cd38d" />
@@ -193,7 +193,7 @@ az vm open-port \
   --name datacenter-vm \
   --port 80
 ```
-***📸 Screenshot***
+***📸 Screenshots***
 
 <img width="1037" height="789" alt="image" src="https://github.com/user-attachments/assets/515d0061-997f-4c7c-a982-efd49b62ea00" />
 
@@ -220,7 +220,7 @@ az vm list-ip-addresses \
 curl http://20.127.103.60
 ```
 
-***📸 Screenshot  — `curl` response showing full Nginx HTML page with `<h1>Welcome to nginx!</h1>`***
+***📸 Screenshots: `curl` response showing full Nginx HTML page with `<h1>Welcome to nginx!</h1>`***
 <img width="1030" height="563" alt="image" src="https://github.com/user-attachments/assets/78422bad-e5e5-40ec-b76a-063564f42149" />
 
 ---
@@ -250,7 +250,7 @@ Ensure the disk size is 128 GB or less and the SKU is not Premium.'
 --storage-sku Standard_LRS
 ```
 
-***📸 Screenshot Placeholder — Terminal showing `RequestDisallowedByPolicy` error on first VM create attempt***
+***📸 Screenshot: Terminal showing `RequestDisallowedByPolicy` error on first VM create attempt***
 <img width="1037" height="526" alt="image" src="https://github.com/user-attachments/assets/15c982a6-5566-48ea-81e4-2ea4709a245f" />
 
 ---
@@ -279,7 +279,7 @@ since the VM is marked for deletion.
 
 **Root Cause:** A previous failed deployment left the VM in a terminal `Failed` provisioning state. Azure prevents new deployments with the same name until cleanup is complete.
 
-**Resolution — 3-step cleanup:**
+**Resolution: 3-step cleanup:**
 
 ```bash
 # Step 1: Force delete the failed VM
@@ -326,7 +326,7 @@ az disk list \
 | Port 80 Open | `az network nsg rule list ...` | Allow-HTTP rule present |
 | Nginx Live | `curl http://20.127.103.60` | `Welcome to nginx!` HTML |
 
-***📸 Screenshot Placeholder — Final `curl http://20.127.103.60` output showing complete Nginx HTML response in terminal***
+***📸 Screenshot: Final `curl http://20.127.103.60` output showing complete Nginx HTML response in terminal***
 
 <img width="1030" height="563" alt="image" src="https://github.com/user-attachments/assets/78422bad-e5e5-40ec-b76a-063564f42149" />
 
