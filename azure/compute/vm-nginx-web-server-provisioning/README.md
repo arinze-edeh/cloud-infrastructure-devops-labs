@@ -1,3 +1,316 @@
+# 🚀 Azure VM Provisioning with Nginx Web Server
+### *Enterprise Infrastructure Deployment via Azure CLI — Nautilus DevOps Project*
+
+---
+
+[![Azure](https://img.shields.io/badge/Azure-Cloud-0089D6?style=flat-square&logo=microsoft-azure)](https://azure.microsoft.com)
+[![Nginx](https://img.shields.io/badge/Nginx-Web_Server-009639?style=flat-square&logo=nginx)](https://nginx.org)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-E95420?style=flat-square&logo=ubuntu)](https://ubuntu.com)
+[![CLI](https://img.shields.io/badge/Azure_CLI-Automated-0078D4?style=flat-square)](https://docs.microsoft.com/cli/azure)
+[![Status](https://img.shields.io/badge/Status-Production_Ready-brightgreen?style=flat-square)]()
+
+---
+
+## 📋 Table of Contents
+
+- [Project Overview](#project-overview)
+- [Architecture](#architecture)
+- [Prerequisites](#prerequisites)
+- [Environment Verification](#environment-verification)
+- [Deployment Guide](#deployment-guide)
+  - [Phase 1: Network Security Group](#phase-1-network-security-group-setup)
+  - [Phase 2: VM Provisioning](#phase-2-vm-provisioning)
+  - [Phase 3: Port Exposure](#phase-3-port-exposure)
+  - [Phase 4: Verification](#phase-4-verification--validation)
+- [Known Issues & Resolutions](#-known-issues--resolutions)
+- [Final Validation](#-final-validation)
+- [Lessons Learned](#-lessons-learned)
+
+---
+
+## 📌 Project Overview
+
+This repository documents the end-to-end provisioning of a production-grade **Azure Virtual Machine** configured as an **Nginx web server** for the **Nautilus DevOps infrastructure project**. The deployment is fully automated via **Azure CLI** and follows enterprise cloud security standards.
+
+### 🎯 Objectives
+
+| Objective | Specification |
+|-----------|--------------|
+| **VM Name** | `datacenter-vm` |
+| **Base Image** | Ubuntu 22.04 LTS |
+| **Web Server** | Nginx (auto-installed via custom user data) |
+| **Traffic** | HTTP port `80` open from Internet |
+| **Region** | `East US` |
+| **Automation** | Azure CLI + shell bootstrap script |
+
+---
+
+## 🏗️ Architecture
+
+```
+┌─────────────────────────────────────────────────────┐
+│               Azure Resource Group                   │
+│         kml_rg_main-547bf0c136014089 (East US)       │
+│                                                      │
+│   ┌─────────────┐       ┌──────────────────────┐    │
+│   │  datacenter │       │   datacenter-nsg     │    │
+│   │     -nsg    │──────▶│  Allow-HTTP Rule     │    │
+│   └─────────────┘       │  Port 80 / Internet  │    │
+│                         └──────────┬───────────┘    │
+│                                    │                 │
+│                         ┌──────────▼───────────┐    │
+│                         │    datacenter-vm      │    │
+│                         │   Ubuntu 22.04 LTS    │    │
+│                         │   Standard_B1s        │    │
+│                         │   Standard_LRS 64GB   │    │
+│                         │   Public IP:          │    │
+│                         │   20.127.103.60       │    │
+│                         │   ┌───────────────┐   │    │
+│                         │   │  Nginx Server │   │    │
+│                         │   │  Port :80     │   │    │
+│                         │   └───────────────┘   │    │
+│                         └──────────────────────┘    │
+└─────────────────────────────────────────────────────┘
+              ▲
+              │  HTTP Request
+         [ Internet ]
+```
+
+---
+
+## ✅ Prerequisites
+
+- Azure CLI installed (`az --version`)
+- Active Azure subscription with **Contributor** access
+- Bash shell environment
+- Azure Free Labs or equivalent environment access
+
+---
+
+## 🔍 Environment Verification
+
+Before deployment, confirm your Azure subscription and resource group are active.
+
+```bash
+az account show
+az group list --output table
+```
+
+***📸 Screenshot Placeholder — `az account show` output showing Enabled subscription and servicePrincipal user***
+
+> **Expected:** `"state": "Enabled"` with an existing resource group in `eastus`
+
+---
+
+## 🚀 Deployment Guide
+
+### Phase 1: Network Security Group Setup
+
+Create the NSG and attach an inbound rule to allow HTTP traffic on port 80.
+
+```bash
+# Create NSG
+az network nsg create \
+  --resource-group kml_rg_main-547bf0c136014089 \
+  --name datacenter-nsg
+
+# Add HTTP inbound rule
+az network nsg rule create \
+  --resource-group kml_rg_main-547bf0c136014089 \
+  --nsg-name datacenter-nsg \
+  --name Allow-HTTP \
+  --protocol Tcp \
+  --direction Inbound \
+  --priority 100 \
+  --source-address-prefix Internet \
+  --destination-port-range 80 \
+  --access Allow
+```
+
+***📸 Screenshot Placeholder — NSG creation success JSON showing `"provisioningState": "Succeeded"` and Allow-HTTP rule***
+
+---
+
+### Phase 2: VM Provisioning
+
+Create the Nginx bootstrap script, then deploy the VM with compliant disk configuration.
+
+```bash
+# Step 1: Create user data script
+cat <<'EOF' > nginx-init.sh
+#!/bin/bash
+apt-get update -y
+apt-get install -y nginx
+systemctl start nginx
+systemctl enable nginx
+EOF
+```
+
+```bash
+# Step 2: Deploy VM
+az vm create \
+  --resource-group kml_rg_main-547bf0c136014089 \
+  --name datacenter-vm \
+  --image Ubuntu2204 \
+  --size Standard_B1s \
+  --admin-username azureuser \
+  --generate-ssh-keys \
+  --nsg datacenter-nsg \
+  --public-ip-sku Standard \
+  --custom-data nginx-init.sh \
+  --os-disk-size-gb 64 \
+  --storage-sku Standard_LRS \
+  --location eastus
+```
+
+***📸 Screenshot Placeholder — Successful VM creation JSON output showing `"powerState": "VM running"` and assigned `publicIpAddress`***
+
+---
+
+### Phase 3: Port Exposure
+
+```bash
+az vm open-port \
+  --resource-group kml_rg_main-547bf0c136014089 \
+  --name datacenter-vm \
+  --port 80
+```
+
+---
+
+### Phase 4: Verification & Validation
+
+```bash
+# Retrieve public IP
+az vm list-ip-addresses \
+  --resource-group kml_rg_main-547bf0c136014089 \
+  --name datacenter-vm \
+  --output table
+
+# Verify Nginx is responding (wait ~2 mins after VM creation)
+curl http://20.127.103.60
+```
+
+***📸 Screenshot Placeholder — `curl` response showing full Nginx HTML page with `<h1>Welcome to nginx!</h1>`***
+
+---
+
+## ⚠️ Known Issues & Resolutions
+
+This section documents all blockers encountered during deployment and their exact resolutions — critical for team knowledge transfer and future re-deployments.
+
+---
+
+### ❌ Issue 1: Policy Blocked Default Disk Configuration
+
+**Error Code:** `RequestDisallowedByPolicy`
+
+```
+Resource 'datacenter-vm_disk1_...' was disallowed by policy.
+Reasons: 'This storage configuration is not allowed.
+Ensure the disk size is 128 GB or less and the SKU is not Premium.'
+```
+
+**Root Cause:** Azure Free Labs enforces a policy that blocks `Premium_LRS` (default managed disk SKU) and disk sizes over 128 GB.
+
+**Resolution:** Explicitly declare a compliant disk configuration using:
+
+```bash
+--os-disk-size-gb 64 \
+--storage-sku Standard_LRS
+```
+
+***📸 Screenshot Placeholder — Terminal showing `RequestDisallowedByPolicy` error on first VM create attempt***
+
+---
+
+### ❌ Issue 2: Invalid CLI Flag `--os-disk-storage-account-type`
+
+**Error:** `unrecognized arguments: --os-disk-storage-account-type Standard_LRS`
+
+**Root Cause:** `--os-disk-storage-account-type` is not a valid `az vm create` parameter. The correct flag for controlling managed disk SKU during VM creation is `--storage-sku`.
+
+**Resolution:** Replace with:
+```bash
+--storage-sku Standard_LRS   ✅
+```
+
+---
+
+### ❌ Issue 3: VM Stuck in `Failed` State — Cannot Recreate
+
+**Error Code:** `OperationNotAllowed`
+
+```
+Operation 'Update VM' is not allowed on VM 'datacenter-vm'
+since the VM is marked for deletion.
+```
+
+**Root Cause:** A previous failed deployment left the VM in a terminal `Failed` provisioning state. Azure prevents new deployments with the same name until cleanup is complete.
+
+**Resolution — 3-step cleanup:**
+
+```bash
+# Step 1: Force delete the failed VM
+az vm delete \
+  --resource-group kml_rg_main-547bf0c136014089 \
+  --name datacenter-vm \
+  --force-deletion true \
+  --yes
+
+# Step 2: Confirm deletion (expect ResourceNotFound)
+az vm show \
+  --resource-group kml_rg_main-547bf0c136014089 \
+  --name datacenter-vm \
+  --query "provisioningState" 2>&1
+
+# Step 3: Remove orphaned disks
+az disk list \
+  --resource-group kml_rg_main-547bf0c136014089 \
+  --query "[].name" -o tsv | xargs -I {} az disk delete \
+  --resource-group kml_rg_main-547bf0c136014089 \
+  --name {} --yes
+```
+
+***📸 Screenshot Placeholder — Terminal showing `ResourceNotFound` after successful force deletion confirming environment is clean***
+
+---
+
+### ❌ Issue 4: Conflicting Orphaned Disk From Previous Failed Deployment
+
+**Error Code:** `OperationNotAllowed` on `osDisk.managedDisk.storageAccountType`
+
+**Root Cause:** A ghost disk from a prior failed deployment (`pps-vm-01_...`) was still registered in the subscription, causing a conflict when attempting to change the managed disk SKU.
+
+**Resolution:** The `--force-deletion` cleanup in Issue 3 cleared the orphaned disk, allowing the subsequent deploy with `--storage-sku Standard_LRS` to succeed.
+
+---
+
+## 🏁 Final Validation
+
+| Check | Command | Expected Result |
+|-------|---------|----------------|
+| VM Running | `az vm show ... --query powerState` | `"VM running"` |
+| Port 80 Open | `az network nsg rule list ...` | Allow-HTTP rule present |
+| Nginx Live | `curl http://20.127.103.60` | `Welcome to nginx!` HTML |
+
+***📸 Screenshot Placeholder — Final `curl http://20.127.103.60` output showing complete Nginx HTML response in terminal***
+
+---
+
+## 📚 Lessons Learned
+
+| # | Lesson | Impact |
+|---|--------|--------|
+| 1 | Always specify `--storage-sku Standard_LRS` and `--os-disk-size-gb` in lab/restricted environments | Prevents policy-block failures |
+| 2 | Use `--force-deletion true` when a VM is stuck in `Failed` state | Bypasses standard deletion lock |
+| 3 | Verify `ResourceNotFound` before re-deploying with same VM name | Prevents `OperationNotAllowed` timing errors |
+| 4 | Run `az disk list` and purge orphaned disks before retry | Eliminates ghost resource conflicts |
+| 5 | Wait ~2 minutes after VM creation before testing Nginx | `--custom-data` runs asynchronously post-boot |
+
+---
+
+
 
 <img width="1032" height="553" alt="image" src="https://github.com/user-attachments/assets/50ea5600-6c8b-4fcd-9145-8b3e031dad3e" />
 
