@@ -180,6 +180,17 @@ az vm open-port \
   --name datacenter-vm \
   --port 80
 ```
+***📸 Screenshot***
+
+<img width="1037" height="789" alt="image" src="https://github.com/user-attachments/assets/515d0061-997f-4c7c-a982-efd49b62ea00" />
+
+<img width="1035" height="857" alt="image" src="https://github.com/user-attachments/assets/efd3ceab-19f5-46b5-8d05-556ea3b5f426" />
+
+<img width="1034" height="868" alt="image" src="https://github.com/user-attachments/assets/8b63b4c3-0713-40b9-885e-1f7995018eb9" />
+
+<img width="1038" height="869" alt="image" src="https://github.com/user-attachments/assets/89b19caa-2ec4-45ea-b9fb-744dd50612a3" />
+
+<img width="1038" height="863" alt="image" src="https://github.com/user-attachments/assets/72a3c5d7-5259-46ce-92b6-1ee2a7d8ddcd" />
 
 ---
 
@@ -355,15 +366,7 @@ az disk list \
 
 <img width="1031" height="734" alt="image" src="https://github.com/user-attachments/assets/af9c9de3-233c-47d7-8198-1d5f7b0cd38d" />
 
-<img width="1037" height="789" alt="image" src="https://github.com/user-attachments/assets/515d0061-997f-4c7c-a982-efd49b62ea00" />
 
-<img width="1035" height="857" alt="image" src="https://github.com/user-attachments/assets/efd3ceab-19f5-46b5-8d05-556ea3b5f426" />
-
-<img width="1034" height="868" alt="image" src="https://github.com/user-attachments/assets/8b63b4c3-0713-40b9-885e-1f7995018eb9" />
-
-<img width="1038" height="869" alt="image" src="https://github.com/user-attachments/assets/89b19caa-2ec4-45ea-b9fb-744dd50612a3" />
-
-<img width="1038" height="863" alt="image" src="https://github.com/user-attachments/assets/72a3c5d7-5259-46ce-92b6-1ee2a7d8ddcd" />
 
 
 
