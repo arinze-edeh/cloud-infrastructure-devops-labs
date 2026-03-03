@@ -181,6 +181,7 @@ az vm create \
 ***📸 Screenshot Placeholder — Successful VM creation JSON output showing `"powerState": "VM running"` and assigned `publicIpAddress`***
 
 <img width="1032" height="804" alt="image" src="https://github.com/user-attachments/assets/1d0c5cae-a05f-4d1c-a8da-6855d36f8cfb" />
+<img width="1031" height="734" alt="image" src="https://github.com/user-attachments/assets/af9c9de3-233c-47d7-8198-1d5f7b0cd38d" />
 
 ---
 
@@ -348,6 +349,7 @@ az disk list \
 
 
 
+
 <img width="1037" height="526" alt="image" src="https://github.com/user-attachments/assets/15c982a6-5566-48ea-81e4-2ea4709a245f" />
 
 <img width="1031" height="405" alt="image" src="https://github.com/user-attachments/assets/810a54e9-23c3-447d-b29a-5ac2542447d7" />
@@ -367,7 +369,7 @@ az disk list \
 <img width="1035" height="531" alt="image" src="https://github.com/user-attachments/assets/e0875294-29ed-475b-8ab2-718ce029a7e4" />
 
 
-<img width="1031" height="734" alt="image" src="https://github.com/user-attachments/assets/af9c9de3-233c-47d7-8198-1d5f7b0cd38d" />
+
 
 
 
