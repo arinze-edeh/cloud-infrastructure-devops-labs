@@ -339,8 +339,6 @@ All operations were performed from inside the storage server after SSH-ing throu
 
 
 
-
-
 <img width="1034" height="711" alt="image" src="https://github.com/user-attachments/assets/16cf1c92-fec2-4e0b-8227-29b3214caa49" />
 <img width="1034" height="435" alt="image" src="https://github.com/user-attachments/assets/da172961-3521-4965-ad59-be724914cf11" />
 
