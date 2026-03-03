@@ -279,7 +279,9 @@ sudo git push origin master
 sudo git push origin nautilus
 ```
 
-***Screenshot Placeholder: Permission denied error followed by successful sudo git checkout***
+***Screenshots: Permission denied error followed by successful sudo git checkout***
+<img width="1038" height="423" alt="image" src="https://github.com/user-attachments/assets/3ceed183-b90e-4948-b788-c1fee7c9e5f3" />
+<img width="1035" height="649" alt="image" src="https://github.com/user-attachments/assets/6907c18c-e9aa-48be-8918-63533c188f2b" />
 
 ---
 
@@ -334,7 +336,6 @@ All operations were performed from inside the storage server after SSH-ing throu
 
 ---
 
-*Maintained by the Nautilus DevOps Team | Stratos Datacenter*
 
 
 
@@ -342,10 +343,7 @@ All operations were performed from inside the storage server after SSH-ing throu
 
 <img width="1034" height="711" alt="image" src="https://github.com/user-attachments/assets/16cf1c92-fec2-4e0b-8227-29b3214caa49" />
 <img width="1034" height="435" alt="image" src="https://github.com/user-attachments/assets/da172961-3521-4965-ad59-be724914cf11" />
-<img width="1038" height="423" alt="image" src="https://github.com/user-attachments/assets/3ceed183-b90e-4948-b788-c1fee7c9e5f3" />
 
-
-<img width="1035" height="649" alt="image" src="https://github.com/user-attachments/assets/6907c18c-e9aa-48be-8918-63533c188f2b" />
 <img width="1044" height="428" alt="image" src="https://github.com/user-attachments/assets/f1584102-b598-46d7-bc44-f75a33d14e05" />
 
 <img width="1029" height="374" alt="image" src="https://github.com/user-attachments/assets/3ae59fc3-ffe6-4f08-b74f-636886f4ac89" />
