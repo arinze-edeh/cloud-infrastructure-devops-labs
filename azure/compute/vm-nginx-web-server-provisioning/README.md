@@ -296,6 +296,8 @@ az disk list \
 
 ***📸 Screenshot Placeholder — Final `curl http://20.127.103.60` output showing complete Nginx HTML response in terminal***
 
+<img width="1030" height="563" alt="image" src="https://github.com/user-attachments/assets/78422bad-e5e5-40ec-b76a-063564f42149" />
+
 ---
 
 ## 📚 Lessons Learned
@@ -359,7 +361,6 @@ az disk list \
 
 <img width="1038" height="863" alt="image" src="https://github.com/user-attachments/assets/72a3c5d7-5259-46ce-92b6-1ee2a7d8ddcd" />
 
-<img width="1030" height="563" alt="image" src="https://github.com/user-attachments/assets/78422bad-e5e5-40ec-b76a-063564f42149" />
 
 
 
