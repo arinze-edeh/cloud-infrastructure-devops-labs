@@ -2,7 +2,7 @@
 
 > **Domain:** DevOps | Git Version Control
 > **Difficulty:** Intermediate
-> **Environment:** Stratos DC — Nautilus Infrastructure
+> **Environment:** Stratos DC - Nautilus Infrastructure
 > **Status:** ✅ Resolved
 
 ---
@@ -51,7 +51,7 @@ Upon connecting to the Storage Server and attempting to create the feature branc
 
 ---
 
-### Problem 1 — Git Dubious Ownership Error
+### Problem 1: Git Dubious Ownership Error
 
 **Trigger:** Running `git branch` as user `natasha`
 
@@ -62,7 +62,7 @@ To add an exception for this directory, call:
         git config --global --add safe.directory /usr/src/kodekloudrepos/apps
 ```
 
-***Screenshot — Dubious Ownership Error***
+***Screenshot: Dubious Ownership Error***
 
 <img width="1035" height="642" alt="image" src="https://github.com/user-attachments/assets/3c479b20-e809-4b9a-a596-6addeb8a9496" />
 
@@ -81,7 +81,7 @@ drwxr-xr-x 8 root root 4096 Mar  2 21:01 .git   ← owned by root
 
 ---
 
-### Problem 2 — Permission Denied on Branch Creation
+### Problem 2: Permission Denied on Branch Creation
 
 **Trigger:** After resolving the ownership exception, running `git checkout -b xfusioncorp_apps`
 
@@ -91,7 +91,7 @@ fatal: cannot lock ref 'refs/heads/xfusioncorp_apps': Unable to create
 '/usr/src/kodekloudrepos/apps/.git/refs/heads/xfusioncorp_apps.lock': Permission denied
 ```
 
-***Screenshot — Permission Denied on Branch Creation***
+***Screenshot: Permission Denied on Branch Creation***
 
 <img width="1033" height="825" alt="image" src="https://github.com/user-attachments/assets/d492d10e-d7fc-4b7d-ac4e-942e8462ab70" />
 
@@ -109,9 +109,10 @@ drwxr-xr-x  root root  .git/
                   Result: Permission Denied ✗
 ```
 
-***Screenshot — Ownership Confirmation via ls -la***
+***Screenshot: Ownership Confirmation via ls -la***
 
 <img width="1033" height="825" alt="image" src="https://github.com/user-attachments/assets/d492d10e-d7fc-4b7d-ac4e-942e8462ab70" />
+
 > *`ls -la` confirms all repository files and `.git` directory are owned by `root:root`*
 
 ---
@@ -122,7 +123,7 @@ Since the repository is root-owned and `natasha` holds sudo privileges, the reso
 
 ---
 
-### Step 1 — Connect to Jump Host
+### Step 1: Connect to Jump Host
 
 ```bash
 # Authenticated as thor on jump_host
@@ -131,7 +132,7 @@ thor@jumphost ~$
 
 ---
 
-### Step 2 — SSH into the Storage Server
+### Step 2: SSH into the Storage Server
 
 ```bash
 ssh natasha@172.16.238.15
@@ -139,7 +140,7 @@ ssh natasha@172.16.238.15
 # Enter password when prompted
 ```
 
-***Screenshot — Successful SSH Connection to ststor01***
+***Screenshot: Successful SSH Connection to ststor01***
 
 <img width="1033" height="534" alt="image" src="https://github.com/user-attachments/assets/cc7902ae-b03e-4362-9a39-3fb380d36e6d" />
 
@@ -147,7 +148,7 @@ ssh natasha@172.16.238.15
 
 ---
 
-### Step 3 — Navigate to Repository and Inspect Ownership
+### Step 3: Navigate to Repository and Inspect Ownership
 
 ```bash
 cd /usr/src/kodekloudrepos/apps
@@ -155,7 +156,7 @@ pwd
 ls -la
 ```
 
-***Screenshot — Repository Directory Listing***
+***Screenshot: Repository Directory Listing***
 
 <img width="1032" height="658" alt="image" src="https://github.com/user-attachments/assets/c1f0b2e3-3813-45ae-af55-8dd1895995b5" />
 
@@ -163,7 +164,7 @@ ls -la
 
 ---
 
-### Step 4 — Register Safe Directory Exception as natasha
+### Step 4: Register Safe Directory Exception as natasha
 
 ```bash
 git config --global --add safe.directory /usr/src/kodekloudrepos/apps
@@ -180,7 +181,7 @@ sudo su -
 # Enter natasha's sudo password when prompted
 ```
 
-***Screenshot — Privilege Escalation to Root***
+***Screenshot: Privilege Escalation to Root***
 
 <img width="1036" height="870" alt="image" src="https://github.com/user-attachments/assets/581e801d-0b76-48b6-ad3b-b1d30c9d58fc" />
 
@@ -188,7 +189,7 @@ sudo su -
 
 ---
 
-### Step 6 — Register Safe Directory Exception as Root
+### Step 6: Register Safe Directory Exception as Root
 
 ```bash
 git config --global --add safe.directory /usr/src/kodekloudrepos/apps
@@ -200,7 +201,7 @@ git config --global --add safe.directory /usr/src/kodekloudrepos/apps
 
 ---
 
-### Step 7 — Navigate to Repository and Checkout master
+### Step 7: Navigate to Repository and Checkout master
 
 ```bash
 cd /usr/src/kodekloudrepos/apps
@@ -213,7 +214,7 @@ Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 ```
 
-***Screenshot — Checkout master Branch***
+***Screenshot: Checkout master Branch***
 
 <img width="1037" height="867" alt="image" src="https://github.com/user-attachments/assets/20085c4a-903b-48a7-80c9-feeab2410809" />
 
@@ -221,7 +222,7 @@ Your branch is up to date with 'origin/master'.
 
 ---
 
-### Step 8 — Create the Feature Branch
+### Step 8: Create the Feature Branch
 
 ```bash
 git checkout -b xfusioncorp_apps
@@ -232,7 +233,7 @@ git checkout -b xfusioncorp_apps
 Switched to a new branch 'xfusioncorp_apps'
 ```
 
-***Screenshot — Feature Branch Creation Success***
+***Screenshot: Feature Branch Creation Success***
 
 <img width="1034" height="559" alt="image" src="https://github.com/user-attachments/assets/1ba8873d-c34d-44bb-860c-4e556e493daa" />
 
@@ -240,7 +241,7 @@ Switched to a new branch 'xfusioncorp_apps'
 
 ---
 
-### Step 9 — Verify Branch Exists
+### Step 9: Verify Branch Exists
 
 ```bash
 git branch
@@ -253,7 +254,7 @@ git branch
 * xfusioncorp_apps
 ```
 
-***Screenshot — Branch Verification***
+***Screenshot: Branch Verification***
 
 <img width="1036" height="869" alt="image" src="https://github.com/user-attachments/assets/a4531482-ec4b-4650-860f-00c8e1a1f5b2" />
 
@@ -261,7 +262,7 @@ git branch
 
 ---
 
-### Step 10 — Exit Root Shell
+### Step 10: Exit Root Shell
 
 ```bash
 exit
