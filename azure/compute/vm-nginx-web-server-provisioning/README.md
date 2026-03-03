@@ -220,7 +220,8 @@ az vm list-ip-addresses \
 curl http://20.127.103.60
 ```
 
-***📸 Screenshot Placeholder — `curl` response showing full Nginx HTML page with `<h1>Welcome to nginx!</h1>`***
+***📸 Screenshot  — `curl` response showing full Nginx HTML page with `<h1>Welcome to nginx!</h1>`***
+<img width="1030" height="563" alt="image" src="https://github.com/user-attachments/assets/78422bad-e5e5-40ec-b76a-063564f42149" />
 
 ---
 
