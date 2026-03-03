@@ -83,7 +83,7 @@ hostname
 # Expected: ststor01.stratos.xfusioncorp.com
 ```
 
-***Screenshot Placeholder: Successful SSH login to ststor01 showing hostname confirmation***
+***Screenshot: Successful SSH login to ststor01 showing hostname confirmation***
 <img width="1035" height="612" alt="image" src="https://github.com/user-attachments/assets/ca95d3d6-64c5-4858-be48-84c302fee568" />
 
 ---
@@ -112,7 +112,8 @@ nothing to commit, working tree clean
 * master
 ```
 
-***Screenshot Placeholder: Terminal output showing git status and branch on master***
+***Screenshot: Terminal output showing git status and branch on master***
+<img width="1031" height="614" alt="image" src="https://github.com/user-attachments/assets/c0013740-a589-4754-bb2e-12352920c1c4" />
 
 Verify the source file is present before proceeding:
 
@@ -328,12 +329,8 @@ All operations were performed from inside the storage server after SSH-ing throu
 
 
 
-<img width="1037" height="672" alt="image" src="https://github.com/user-attachments/assets/c2b3fd45-4efc-477b-a206-cae3226fcbf2" />
-<img width="1028" height="626" alt="image" src="https://github.com/user-attachments/assets/1fc2af89-6e62-4435-bc80-8a9f178caf76" />
-<img width="1027" height="500" alt="image" src="https://github.com/user-attachments/assets/3d249e3a-3b28-45d7-97e7-0b16dcbf24dd" />
-<img width="1034" height="566" alt="image" src="https://github.com/user-attachments/assets/cd59e8f9-17dd-4135-8359-4d0369883d80" />
 <img width="1036" height="715" alt="image" src="https://github.com/user-attachments/assets/ecd487bd-fae6-4381-9086-9c67784517ca" />
-<img width="1031" height="614" alt="image" src="https://github.com/user-attachments/assets/c0013740-a589-4754-bb2e-12352920c1c4" />
+
 <img width="1026" height="674" alt="image" src="https://github.com/user-attachments/assets/70538549-314b-4873-89ce-19909e64ddb1" />
 <img width="1034" height="711" alt="image" src="https://github.com/user-attachments/assets/16cf1c92-fec2-4e0b-8227-29b3214caa49" />
 <img width="1034" height="435" alt="image" src="https://github.com/user-attachments/assets/da172961-3521-4965-ad59-be724914cf11" />
