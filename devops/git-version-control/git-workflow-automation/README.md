@@ -84,6 +84,7 @@ hostname
 ```
 
 ***Screenshot Placeholder: Successful SSH login to ststor01 showing hostname confirmation***
+<img width="1035" height="612" alt="image" src="https://github.com/user-attachments/assets/ca95d3d6-64c5-4858-be48-84c302fee568" />
 
 ---
 
@@ -326,7 +327,7 @@ All operations were performed from inside the storage server after SSH-ing throu
 *Maintained by the Nautilus DevOps Team | Stratos Datacenter*
 
 
-<img width="1035" height="612" alt="image" src="https://github.com/user-attachments/assets/ca95d3d6-64c5-4858-be48-84c302fee568" />
+
 <img width="1037" height="672" alt="image" src="https://github.com/user-attachments/assets/c2b3fd45-4efc-477b-a206-cae3226fcbf2" />
 <img width="1028" height="626" alt="image" src="https://github.com/user-attachments/assets/1fc2af89-6e62-4435-bc80-8a9f178caf76" />
 <img width="1027" height="500" alt="image" src="https://github.com/user-attachments/assets/3d249e3a-3b28-45d7-97e7-0b16dcbf24dd" />
