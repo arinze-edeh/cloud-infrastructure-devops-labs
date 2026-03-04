@@ -278,7 +278,7 @@ To /opt/xfusioncorp_demo.git
 
 ***Screenshot: Successful push to dev_demo remote with master branch confirmed***
 
-> ![Push Successful](./screenshots/07-push-successful.png)
+<img width="1035" height="600" alt="image" src="https://github.com/user-attachments/assets/29a20588-f94e-41b4-a7a2-13ca3e90f7bb" />
 
 ---
 
@@ -336,6 +336,6 @@ sudo git remote -v
 <img width="1027" height="856" alt="image" src="https://github.com/user-attachments/assets/1b51fe4e-c524-48fa-b144-7fed5626dd9a" />
 
 
-<img width="1035" height="600" alt="image" src="https://github.com/user-attachments/assets/29a20588-f94e-41b4-a7a2-13ca3e90f7bb" />
+
 
 
