@@ -378,22 +378,3 @@ exit
 * **`StrictHostKeyChecking=no` used only for initial connection.** The host fingerprint is persisted to `~/.ssh/known_hosts` on first connect. For production workloads, pre-populate known hosts or use certificate-based verification.
 
 ---
-
-
-
-<img width="576" height="522" alt="image" src="https://github.com/user-attachments/assets/9891b20e-b314-40df-8bdc-520737e507df" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
