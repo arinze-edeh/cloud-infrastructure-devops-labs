@@ -301,8 +301,8 @@ aws rds describe-db-engine-versions \
 
 **Decision:** `8.4.8` selected -- latest patch, most stable, fully available.
 
-***Screenshot Placeholder: `screenshots/07-phase3-engine-versions.png`***
-> *Caption: Available MySQL 8.4.x engine versions; `8.4.8` selected as the target version.*
+***Screenshot: `Available MySQL 8.4.x engine versions; 8.4.8 selected as the target version.`***
+<img width="1035" height="666" alt="image" src="https://github.com/user-attachments/assets/581b40ba-63eb-46a3-9fd3-409f86dca23f" />
 
 ---
 
@@ -494,7 +494,7 @@ IAM User: `kk_labs_user_998726`
 
 <img width="1033" height="613" alt="image" src="https://github.com/user-attachments/assets/7e53fdfd-226b-4648-857c-8adb6b8b4f15" />
 
-<img width="1035" height="666" alt="image" src="https://github.com/user-attachments/assets/581b40ba-63eb-46a3-9fd3-409f86dca23f" />
+
 <img width="1038" height="607" alt="image" src="https://github.com/user-attachments/assets/47c94546-8bcc-4ec3-8e53-bf0c7b295b28" />
 <img width="1036" height="433" alt="image" src="https://github.com/user-attachments/assets/94083815-3d6a-4f29-bb78-db2485abc2ff" />
 <img width="1036" height="433" alt="image" src="https://github.com/user-attachments/assets/24f28393-ffbf-4c74-96d8-bbbecd23e29f" />
