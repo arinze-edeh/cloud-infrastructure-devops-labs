@@ -110,12 +110,6 @@ fatal: could not set 'remote.dev_demo.url' to '/opt/xfusioncorp_demo.git'
 SSH from the jump host into the storage server using natasha's credentials.
 
 ```bash
-# From local machine: access the jump host
-ssh thor@jump_host.stratos.xfusioncorp.com
-# Password: mjolnir123
-```
-
-```bash
 # From jump_host: access the storage server
 ssh natasha@172.16.238.15
 
