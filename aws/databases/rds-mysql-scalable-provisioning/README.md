@@ -411,14 +411,13 @@ aws rds describe-db-instances \
 +----------------+--------------+---------+----------+---------+-------------+-----------+
 ```
 
-***Screenshot Placeholder: `screenshots/10-phase6-final-verification.png`***
-> *Caption: Final verification table confirming all 7 required attributes are correct and the instance is `available`.*
+***Screenshot: Final verification table confirming all 7 required attributes are correct and the instance is `available`.***
+
+<img width="1036" height="388" alt="image" src="https://github.com/user-attachments/assets/b489bdc6-6070-4d6f-8526-96feab8acdbb" />
 
 ---
 
 ## Verification Checklist
-
-Use this checklist before submitting any task of this type:
 
 - [ ] `DBInstanceStatus` is `available`
 - [ ] `Engine` is `mysql`
@@ -503,7 +502,6 @@ IAM User: `kk_labs_user_998726`
 <img width="1036" height="433" alt="image" src="https://github.com/user-attachments/assets/24f28393-ffbf-4c74-96d8-bbbecd23e29f" />
 
 
-<img width="1036" height="388" alt="image" src="https://github.com/user-attachments/assets/b489bdc6-6070-4d6f-8526-96feab8acdbb" />
 
 
 
