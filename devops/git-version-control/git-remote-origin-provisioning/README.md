@@ -165,7 +165,7 @@ ls -lh /tmp/index.html
 
 ***Screenshot: Safe directory fix applied and pre-conditions verified***
 
-> ![Pre-condition Verification](./screenshots/02-preconditions-verified.png)
+<img width="1026" height="647" alt="image" src="https://github.com/user-attachments/assets/6c926983-78cd-4f5c-8e92-bb404571a92d" />
 
 ---
 
@@ -328,7 +328,7 @@ sudo git remote -v
 <img width="1026" height="496" alt="image" src="https://github.com/user-attachments/assets/ea39a1c2-bda5-45d5-a531-c7e0724f6df9" />
 <img width="1032" height="600" alt="image" src="https://github.com/user-attachments/assets/3ab4ea2d-af6d-4e42-b953-f8da8543d5d6" />
 <img width="1032" height="555" alt="image" src="https://github.com/user-attachments/assets/a16f276b-28a7-42e5-b0a3-bd5a7d9dd613" />
-<img width="1026" height="647" alt="image" src="https://github.com/user-attachments/assets/6c926983-78cd-4f5c-8e92-bb404571a92d" />
+
 <img width="1013" height="586" alt="image" src="https://github.com/user-attachments/assets/d373db81-f36a-47e9-8a08-103b70dad27e" />
 <img width="1030" height="750" alt="image" src="https://github.com/user-attachments/assets/0398c09b-ef0e-472c-88dc-c372b62fcc18" />
 <img width="1034" height="811" alt="image" src="https://github.com/user-attachments/assets/6cdb860b-cf6c-4949-8e2b-edd638d7383b" />
