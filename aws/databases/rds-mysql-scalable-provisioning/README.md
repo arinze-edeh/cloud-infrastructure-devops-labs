@@ -165,8 +165,8 @@ Replace `--publicly-accessible false` with the negation flag:
 --no-publicly-accessible
 ```
 
-***Screenshot Placeholder: `screenshots/02-error-unknown-option-false.png`***
-> *Caption: CLI v1 rejecting the `false` value passed to `--publicly-accessible`.*
+***Screenshot: CLI v1 rejecting the `false` value passed to `--publicly-accessible`.***
+<img width="1038" height="607" alt="image" src="https://github.com/user-attachments/assets/47c94546-8bcc-4ec3-8e53-bf0c7b295b28" />
 
 ---
 
@@ -481,28 +481,5 @@ aws rds describe-db-instances \
 - [RDS MySQL Password Constraints](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html)
 
 ---
-
-## Author
-
-**Nautilus DevOps Team**
-Provisioned: `Wed Mar 04 2026, us-east-1`
-Account: `672004293406`
-IAM User: `kk_labs_user_998726`
-
----
-
-*This runbook is part of the `aws/databases/rds-provisioning` documentation library.*
-
-
-
-<img width="1033" height="613" alt="image" src="https://github.com/user-attachments/assets/7e53fdfd-226b-4648-857c-8adb6b8b4f15" />
-
-
-<img width="1038" height="607" alt="image" src="https://github.com/user-attachments/assets/47c94546-8bcc-4ec3-8e53-bf0c7b295b28" />
-<img width="1036" height="433" alt="image" src="https://github.com/user-attachments/assets/94083815-3d6a-4f29-bb78-db2485abc2ff" />
-
-
-
-
 
 
