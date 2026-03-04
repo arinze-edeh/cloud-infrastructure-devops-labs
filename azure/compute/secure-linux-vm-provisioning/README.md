@@ -371,7 +371,7 @@ exit
 * **`StrictHostKeyChecking=no` used only for initial connection.** The host fingerprint is persisted to `~/.ssh/known_hosts` on first connect. For production workloads, pre-populate known hosts or use certificate-based verification.
 
 ---
-<img width="1018" height="785" alt="image" src="https://github.com/user-attachments/assets/0916fc94-dbd1-4043-bee6-2a841361b710" />
+
 
 
 <img width="576" height="522" alt="image" src="https://github.com/user-attachments/assets/9891b20e-b314-40df-8bdc-520737e507df" />
@@ -382,7 +382,7 @@ exit
 <img width="1028" height="309" alt="image" src="https://github.com/user-attachments/assets/1a0391fe-7ee7-4ecf-bf12-c2cad298f581" />
 <img width="1033" height="371" alt="image" src="https://github.com/user-attachments/assets/9e26dd43-46e3-4dc9-9464-c084c4e6f979" />
 <img width="1039" height="730" alt="image" src="https://github.com/user-attachments/assets/cb9b5a36-2ff6-4bf7-8bd7-41f50f352c5d" />
-<img width="1035" height="872" alt="image" src="https://github.com/user-attachments/assets/9d7a455e-bd43-41fa-bef7-ccd2ea2e19c4" />
+
 
 
 
