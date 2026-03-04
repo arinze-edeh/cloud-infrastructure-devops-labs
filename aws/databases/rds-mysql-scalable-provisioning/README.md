@@ -238,8 +238,8 @@ aws rds describe-db-subnet-groups \
 
 **Result:** Empty output -- no custom subnet groups existed. AWS will use the default VPC subnets automatically. No `--db-subnet-group-name` flag is required in the create command.
 
-***Screenshot Placeholder: `screenshots/05-phase2a-subnet-groups.png`***
-> *Caption: Empty subnet group list confirming reliance on the default VPC.*
+***Screenshot: `Empty subnet group list confirming reliance on the default VPC.`***
+<img width="1040" height="480" alt="image" src="https://github.com/user-attachments/assets/bf686852-2117-47c6-b153-496a01cf5c47" />
 
 #### Step 2b: Retrieve the default VPC ID
 
@@ -491,7 +491,7 @@ IAM User: `kk_labs_user_998726`
 *This runbook is part of the `aws/databases/rds-provisioning` documentation library.*
 
 
-<img width="1040" height="480" alt="image" src="https://github.com/user-attachments/assets/bf686852-2117-47c6-b153-496a01cf5c47" />
+
 <img width="1033" height="613" alt="image" src="https://github.com/user-attachments/assets/7e53fdfd-226b-4648-857c-8adb6b8b4f15" />
 <img width="1034" height="461" alt="image" src="https://github.com/user-attachments/assets/808bba61-6ed4-4b1e-a53d-383132992606" />
 <img width="1035" height="666" alt="image" src="https://github.com/user-attachments/assets/581b40ba-63eb-46a3-9fd3-409f86dca23f" />
