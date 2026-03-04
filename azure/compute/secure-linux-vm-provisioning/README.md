@@ -284,7 +284,17 @@ Confirm `securityRules` in the output contains:
 }
 ```
 
-***Screenshot Placeholder: Azure Portal NSG inbound rules view showing `open-port-22` rule at priority 900***
+***Screenshots: Azure Portal NSG inbound rules view showing `open-port-22` rule at priority 900***
+
+<img width="1036" height="855" alt="image" src="https://github.com/user-attachments/assets/c8b2f549-b486-4201-b163-74085d700a86" />
+
+<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/3f039a0c-5f86-4917-977f-6da037f19168" />
+
+<img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/9edbf25b-165f-4f54-b322-c7c5f5a02e09" />
+
+<img width="1039" height="868" alt="image" src="https://github.com/user-attachments/assets/f3b4ebfd-8efa-4341-81dc-aa718d16bb20" />
+
+<img width="1034" height="868" alt="image" src="https://github.com/user-attachments/assets/7b11a134-8f8f-420b-a407-9a0548af5e95" />
 
 ---
 
@@ -374,15 +384,6 @@ exit
 <img width="1039" height="730" alt="image" src="https://github.com/user-attachments/assets/cb9b5a36-2ff6-4bf7-8bd7-41f50f352c5d" />
 <img width="1035" height="872" alt="image" src="https://github.com/user-attachments/assets/9d7a455e-bd43-41fa-bef7-ccd2ea2e19c4" />
 
-<img width="1036" height="855" alt="image" src="https://github.com/user-attachments/assets/c8b2f549-b486-4201-b163-74085d700a86" />
-
-<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/3f039a0c-5f86-4917-977f-6da037f19168" />
-
-<img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/9edbf25b-165f-4f54-b322-c7c5f5a02e09" />
-
-<img width="1039" height="868" alt="image" src="https://github.com/user-attachments/assets/f3b4ebfd-8efa-4341-81dc-aa718d16bb20" />
-
-<img width="1034" height="868" alt="image" src="https://github.com/user-attachments/assets/7b11a134-8f8f-420b-a407-9a0548af5e95" />
 
 
 
