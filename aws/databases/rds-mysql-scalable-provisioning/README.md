@@ -110,8 +110,8 @@ aws sts get-caller-identity
 }
 ```
 
-***Screenshot Placeholder: `screenshots/01-caller-identity.png`***
-> *Caption: Verified IAM identity confirming correct account and user before provisioning.*
+***Screenshot Placeholder: `Verified IAM identity confirming correct account and user before provisioning.`***
+<img width="1030" height="401" alt="image" src="https://github.com/user-attachments/assets/9b8bcefb-8e0e-4cfc-9a7a-25e5ccb422fa" />
 
 ---
 
@@ -490,7 +490,7 @@ IAM User: `kk_labs_user_998726`
 
 *This runbook is part of the `aws/databases/rds-provisioning` documentation library.*
 
-<img width="1030" height="401" alt="image" src="https://github.com/user-attachments/assets/9b8bcefb-8e0e-4cfc-9a7a-25e5ccb422fa" />
+
 <img width="1040" height="480" alt="image" src="https://github.com/user-attachments/assets/bf686852-2117-47c6-b153-496a01cf5c47" />
 <img width="1033" height="613" alt="image" src="https://github.com/user-attachments/assets/7e53fdfd-226b-4648-857c-8adb6b8b4f15" />
 <img width="1034" height="461" alt="image" src="https://github.com/user-attachments/assets/808bba61-6ed4-4b1e-a53d-383132992606" />
