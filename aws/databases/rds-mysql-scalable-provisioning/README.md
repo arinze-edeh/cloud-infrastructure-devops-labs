@@ -205,8 +205,9 @@ Remove all prohibited characters. Replace `Nautilus@12345` with a compliant pass
 --master-user-password "Nautilus12345!"
 ```
 
-***Screenshot Placeholder: `screenshots/03-error-invalid-password.png`***
-> *Caption: RDS rejecting the `@` character in the master user password.*
+***Screenshot: RDS rejecting the `@` character in the master user password.***
+
+<img width="1036" height="433" alt="image" src="https://github.com/user-attachments/assets/24f28393-ffbf-4c74-96d8-bbbecd23e29f" />
 
 ---
 
@@ -499,7 +500,7 @@ IAM User: `kk_labs_user_998726`
 
 <img width="1038" height="607" alt="image" src="https://github.com/user-attachments/assets/47c94546-8bcc-4ec3-8e53-bf0c7b295b28" />
 <img width="1036" height="433" alt="image" src="https://github.com/user-attachments/assets/94083815-3d6a-4f29-bb78-db2485abc2ff" />
-<img width="1036" height="433" alt="image" src="https://github.com/user-attachments/assets/24f28393-ffbf-4c74-96d8-bbbecd23e29f" />
+
 
 
 
