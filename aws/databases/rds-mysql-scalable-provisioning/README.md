@@ -265,8 +265,8 @@ aws ec2 describe-security-groups \
 
 **Result:** `sg-08e6d60d4a9f62ee9`
 
-***Screenshot Placeholder: `screenshots/06-phase2bc-vpc-and-sg.png`***
-> *Caption: Default VPC ID and Security Group ID retrieved for use in instance creation.*
+***Screenshot: `Default VPC ID and Security Group ID retrieved for use in instance creation.`***
+<img width="1034" height="461" alt="image" src="https://github.com/user-attachments/assets/808bba61-6ed4-4b1e-a53d-383132992606" />
 
 ---
 
@@ -493,7 +493,7 @@ IAM User: `kk_labs_user_998726`
 
 
 <img width="1033" height="613" alt="image" src="https://github.com/user-attachments/assets/7e53fdfd-226b-4648-857c-8adb6b8b4f15" />
-<img width="1034" height="461" alt="image" src="https://github.com/user-attachments/assets/808bba61-6ed4-4b1e-a53d-383132992606" />
+
 <img width="1035" height="666" alt="image" src="https://github.com/user-attachments/assets/581b40ba-63eb-46a3-9fd3-409f86dca23f" />
 <img width="1038" height="607" alt="image" src="https://github.com/user-attachments/assets/47c94546-8bcc-4ec3-8e53-bf0c7b295b28" />
 <img width="1036" height="433" alt="image" src="https://github.com/user-attachments/assets/94083815-3d6a-4f29-bb78-db2485abc2ff" />
