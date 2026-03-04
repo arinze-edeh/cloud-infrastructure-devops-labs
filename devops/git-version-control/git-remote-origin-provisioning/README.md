@@ -89,6 +89,7 @@ fatal: could not set 'remote.dev_demo.url' to '/opt/xfusioncorp_demo.git'
 
 ***Screenshot:*** 
 
+<img width="1013" height="586" alt="image" src="https://github.com/user-attachments/assets/d373db81-f36a-47e9-8a08-103b70dad27e" />
 
 ---
 
@@ -336,7 +337,6 @@ sudo git remote -v
 <img width="1032" height="600" alt="image" src="https://github.com/user-attachments/assets/3ab4ea2d-af6d-4e42-b953-f8da8543d5d6" />
 <img width="1032" height="555" alt="image" src="https://github.com/user-attachments/assets/a16f276b-28a7-42e5-b0a3-bd5a7d9dd613" />
 
-<img width="1013" height="586" alt="image" src="https://github.com/user-attachments/assets/d373db81-f36a-47e9-8a08-103b70dad27e" />
 
 
 <img width="1023" height="817" alt="image" src="https://github.com/user-attachments/assets/e7c89aa0-747d-4292-a7a0-8bd1427da0f9" />
