@@ -124,6 +124,9 @@ az vm delete \
 
 ***Screenshot: Terminal showing `az resource list` output with only 4 networking resources remaining after cleanup***
 
+<img width="1028" height="309" alt="image" src="https://github.com/user-attachments/assets/1a0391fe-7ee7-4ecf-bf12-c2cad298f581" />
+<img width="1033" height="371" alt="image" src="https://github.com/user-attachments/assets/9e26dd43-46e3-4dc9-9464-c084c4e6f979" />
+
 ---
 
 ### Problem 3 - Policy Blocks Disk Deletion via Standard `az vm delete`
@@ -378,8 +381,7 @@ exit
 <img width="576" height="522" alt="image" src="https://github.com/user-attachments/assets/9891b20e-b314-40df-8bdc-520737e507df" />
 
 <img width="1043" height="398" alt="image" src="https://github.com/user-attachments/assets/40b7c17b-29d0-4987-8f5a-47a042b3e50a" />
-<img width="1028" height="309" alt="image" src="https://github.com/user-attachments/assets/1a0391fe-7ee7-4ecf-bf12-c2cad298f581" />
-<img width="1033" height="371" alt="image" src="https://github.com/user-attachments/assets/9e26dd43-46e3-4dc9-9464-c084c4e6f979" />
+
 
 
 
