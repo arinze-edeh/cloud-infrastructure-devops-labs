@@ -110,7 +110,7 @@ aws sts get-caller-identity
 }
 ```
 
-***Screenshot Placeholder: `Verified IAM identity confirming correct account and user before provisioning.`***
+***Screenshot: `Verified IAM identity confirming correct account and user before provisioning.`***
 <img width="1030" height="401" alt="image" src="https://github.com/user-attachments/assets/9b8bcefb-8e0e-4cfc-9a7a-25e5ccb422fa" />
 
 ---
@@ -220,8 +220,8 @@ Confirm the correct IAM identity is active before any resource creation:
 aws sts get-caller-identity
 ```
 
-***Screenshot Placeholder: `screenshots/04-phase1-identity.png`***
-> *Caption: Confirmed IAM user `kk_labs_user_998726` in account `672004293406`.*
+***Screenshot: Confirmed IAM user `kk_labs_user_998726` in account `672004293406`.***
+<img width="1030" height="401" alt="image" src="https://github.com/user-attachments/assets/9b8bcefb-8e0e-4cfc-9a7a-25e5ccb422fa" />
 
 ---
 
