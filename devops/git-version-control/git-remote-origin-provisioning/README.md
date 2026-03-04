@@ -308,7 +308,7 @@ sudo git remote -v
 
 ***Screenshot: Final verification showing commit log and remote configuration***
 
-> ![Final Verification](./screenshots/08-final-verification.png)
+<img width="1027" height="856" alt="image" src="https://github.com/user-attachments/assets/1b51fe4e-c524-48fa-b144-7fed5626dd9a" />
 
 ---
 
@@ -333,7 +333,7 @@ sudo git remote -v
 
 
 <img width="1023" height="817" alt="image" src="https://github.com/user-attachments/assets/e7c89aa0-747d-4292-a7a0-8bd1427da0f9" />
-<img width="1027" height="856" alt="image" src="https://github.com/user-attachments/assets/1b51fe4e-c524-48fa-b144-7fed5626dd9a" />
+
 
 
 
