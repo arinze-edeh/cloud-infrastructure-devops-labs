@@ -19,7 +19,6 @@
   - [Phase 4: Instance Provisioning](#phase-4-instance-provisioning)
   - [Phase 5: Availability Confirmation](#phase-5-availability-confirmation)
   - [Phase 6: Final Verification](#phase-6-final-verification)
-- [Folder Structure](#folder-structure)
 - [Verification Checklist](#verification-checklist)
 - [Lessons Learned](#lessons-learned)
 - [References](#references)
