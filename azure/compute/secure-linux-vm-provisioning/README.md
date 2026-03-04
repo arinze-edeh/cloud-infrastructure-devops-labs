@@ -49,10 +49,6 @@ The solution demonstrates resilient infrastructure provisioning under restrictiv
                                                +--------------------------+
 ```
 
-***Screenshot Placeholder: Architecture diagram in Azure Portal showing VM, NIC, NSG, and VNET topology***
-
----
-
 ## Prerequisites
 
 | Requirement | Version / Detail |
