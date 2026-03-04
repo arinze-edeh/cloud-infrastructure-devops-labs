@@ -311,10 +311,11 @@ exit
 ```
 
 ***Screenshot: Terminal showing successful SSH login banner (Ubuntu 22.04 welcome message) and `azureuser@devops-vm:~$` prompt with no password prompt***
-<img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/4d8bd659-a04f-4ccd-b0d8-ca799390b3e8" />
+<img width="1041" height="861" alt="image" src="https://github.com/user-attachments/assets/e091408d-b667-49cb-b577-74769146a66b" />
 
 ***Screenshot: Terminal showing `hostname` command returning `devops-vm` and `exit` / `logout` / connection closed sequence***
-<img width="1018" height="785" alt="image" src="https://github.com/user-attachments/assets/0916fc94-dbd1-4043-bee6-2a841361b710" />
+
+<img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/4d8bd659-a04f-4ccd-b0d8-ca799390b3e8" />
 
 ---
 
@@ -360,7 +361,7 @@ exit
 * **`StrictHostKeyChecking=no` used only for initial connection.** The host fingerprint is persisted to `~/.ssh/known_hosts` on first connect. For production workloads, pre-populate known hosts or use certificate-based verification.
 
 ---
-
+<img width="1018" height="785" alt="image" src="https://github.com/user-attachments/assets/0916fc94-dbd1-4043-bee6-2a841361b710" />
 
 
 <img width="576" height="522" alt="image" src="https://github.com/user-attachments/assets/9891b20e-b314-40df-8bdc-520737e507df" />
@@ -383,7 +384,7 @@ exit
 
 <img width="1034" height="868" alt="image" src="https://github.com/user-attachments/assets/7b11a134-8f8f-420b-a407-9a0548af5e95" />
 
-<img width="1041" height="861" alt="image" src="https://github.com/user-attachments/assets/e091408d-b667-49cb-b577-74769146a66b" />
+
 
 
 
