@@ -350,8 +350,11 @@ aws rds create-db-instance \
 
 **Expected initial status in response:** `"DBInstanceStatus": "creating"`
 
-***Screenshot Placeholder: `screenshots/08-phase4-create-success.png`***
-> *Caption: Successful `create-db-instance` response showing `"DBInstanceStatus": "creating"` and `"MaxAllocatedStorage": 50`.*
+***Screenshot: Successful `create-db-instance` response showing `"DBInstanceStatus": "creating"` and `"MaxAllocatedStorage": 50`.***
+<img width="1033" height="843" alt="image" src="https://github.com/user-attachments/assets/43730ca1-0737-4620-9897-98a82fde6de2" />
+<img width="1029" height="865" alt="image" src="https://github.com/user-attachments/assets/90ecf011-cdbc-4085-bc03-b2717bf9b556" />
+<img width="1031" height="859" alt="image" src="https://github.com/user-attachments/assets/9754ac43-d043-49d3-8820-051071cea06a" />
+<img width="1027" height="622" alt="image" src="https://github.com/user-attachments/assets/6c115965-9b51-42ca-96b2-f4c9c97059a8" />
 
 ---
 
@@ -498,10 +501,7 @@ IAM User: `kk_labs_user_998726`
 <img width="1038" height="607" alt="image" src="https://github.com/user-attachments/assets/47c94546-8bcc-4ec3-8e53-bf0c7b295b28" />
 <img width="1036" height="433" alt="image" src="https://github.com/user-attachments/assets/94083815-3d6a-4f29-bb78-db2485abc2ff" />
 <img width="1036" height="433" alt="image" src="https://github.com/user-attachments/assets/24f28393-ffbf-4c74-96d8-bbbecd23e29f" />
-<img width="1033" height="843" alt="image" src="https://github.com/user-attachments/assets/43730ca1-0737-4620-9897-98a82fde6de2" />
-<img width="1029" height="865" alt="image" src="https://github.com/user-attachments/assets/90ecf011-cdbc-4085-bc03-b2717bf9b556" />
-<img width="1031" height="859" alt="image" src="https://github.com/user-attachments/assets/9754ac43-d043-49d3-8820-051071cea06a" />
-<img width="1027" height="622" alt="image" src="https://github.com/user-attachments/assets/6c115965-9b51-42ca-96b2-f4c9c97059a8" />
+
 <img width="1032" height="694" alt="image" src="https://github.com/user-attachments/assets/50198282-f6fa-461e-8f12-cb781429d205" />
 <img width="1036" height="388" alt="image" src="https://github.com/user-attachments/assets/b489bdc6-6070-4d6f-8526-96feab8acdbb" />
 
