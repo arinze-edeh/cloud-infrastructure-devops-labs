@@ -36,9 +36,9 @@ The solution demonstrates resilient infrastructure provisioning under restrictiv
 ```
 +-------------------+          SSH (Port 22)         +----------------------+
 |   azure-client    | -----------------------------> |     devops-vm        |
-|  (Landing Host)   |    Key: ~/.ssh/id_rsa           |  Ubuntu 22.04 LTS    |
-|                   |    User: azureuser              |  westus              |
-|  RSA 4096 Key     |    IP:   104.45.223.126         |  Standard_B1s        |
+|  (Landing Host)   |    Key: ~/.ssh/id_rsa          |  Ubuntu 22.04 LTS    |
+|                   |    User: azureuser             |  westus              |
+|  RSA 4096 Key     |    IP:   104.45.223.126        |  Standard_B1s        |
 +-------------------+                                +----------------------+
                                                              |
                                                +------------+-------------+
