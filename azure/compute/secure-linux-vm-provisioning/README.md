@@ -254,7 +254,8 @@ az vm create \
 }
 ```
 
-***Screenshot Placeholder: Terminal showing full `az vm create` JSON success output with `"powerState": "VM running"`***
+***Screenshot: Terminal showing full `az vm create` JSON success output with `"powerState": "VM running"`***
+<img width="1039" height="730" alt="image" src="https://github.com/user-attachments/assets/cb9b5a36-2ff6-4bf7-8bd7-41f50f352c5d" />
 
 ---
 
@@ -381,7 +382,7 @@ exit
 <img width="1043" height="398" alt="image" src="https://github.com/user-attachments/assets/40b7c17b-29d0-4987-8f5a-47a042b3e50a" />
 <img width="1028" height="309" alt="image" src="https://github.com/user-attachments/assets/1a0391fe-7ee7-4ecf-bf12-c2cad298f581" />
 <img width="1033" height="371" alt="image" src="https://github.com/user-attachments/assets/9e26dd43-46e3-4dc9-9464-c084c4e6f979" />
-<img width="1039" height="730" alt="image" src="https://github.com/user-attachments/assets/cb9b5a36-2ff6-4bf7-8bd7-41f50f352c5d" />
+
 
 
 
