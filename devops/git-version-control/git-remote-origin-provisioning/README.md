@@ -298,9 +298,6 @@ To /opt/xfusioncorp_demo.git
 After completing all phases, the following confirms successful task completion:
 
 ```bash
-sudo git log --oneline -3
-# d0c7875 Add index.html from /tmp for xFusionCorp demo update
-
 sudo git remote -v
 # dev_demo        /opt/xfusioncorp_demo.git (fetch)
 # dev_demo        /opt/xfusioncorp_demo.git (push)
