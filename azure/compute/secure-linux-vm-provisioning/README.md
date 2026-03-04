@@ -122,7 +122,7 @@ az vm delete \
   --yes 2>/dev/null
 ```
 
-***Screenshot: Terminal showing `az resource list` output with only 4 networking resources remaining after cleanup***
+***Screenshots: Terminal showing `az resource list` output with only 4 networking resources remaining after cleanup***
 
 <img width="1028" height="309" alt="image" src="https://github.com/user-attachments/assets/1a0391fe-7ee7-4ecf-bf12-c2cad298f581" />
 <img width="1033" height="371" alt="image" src="https://github.com/user-attachments/assets/9e26dd43-46e3-4dc9-9464-c084c4e6f979" />
@@ -147,6 +147,7 @@ during vm delete operation.
 Use `--force-deletion none` which detaches and releases the VM without attempting to delete associated disk resources. The orphaned disk eventually garbage-collects or can be removed via Azure REST API.
 
 ***Screenshot: Terminal showing successful `az vm delete --force-deletion none` followed by clean `az resource list` output***
+<img width="1033" height="371" alt="image" src="https://github.com/user-attachments/assets/ebe1553f-01cb-4e9e-ab3e-f71c1b1042aa" />
 
 ---
 
