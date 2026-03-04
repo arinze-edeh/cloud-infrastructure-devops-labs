@@ -19,7 +19,6 @@
 - [Infrastructure Summary](#infrastructure-summary)
 - [Troubleshooting](#troubleshooting)
 - [Security Considerations](#security-considerations)
-- [Repository Structure](#repository-structure)
 
 ---
 
@@ -311,9 +310,11 @@ Expected output: `devops-vm`
 exit
 ```
 
-***Screenshot Placeholder: Terminal showing successful SSH login banner (Ubuntu 22.04 welcome message) and `azureuser@devops-vm:~$` prompt with no password prompt***
+***Screenshot: Terminal showing successful SSH login banner (Ubuntu 22.04 welcome message) and `azureuser@devops-vm:~$` prompt with no password prompt***
+<img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/4d8bd659-a04f-4ccd-b0d8-ca799390b3e8" />
 
-***Screenshot Placeholder: Terminal showing `hostname` command returning `devops-vm` and `exit` / `logout` / connection closed sequence***
+***Screenshot: Terminal showing `hostname` command returning `devops-vm` and `exit` / `logout` / connection closed sequence***
+<img width="1018" height="785" alt="image" src="https://github.com/user-attachments/assets/0916fc94-dbd1-4043-bee6-2a841361b710" />
 
 ---
 
@@ -384,9 +385,9 @@ exit
 
 <img width="1041" height="861" alt="image" src="https://github.com/user-attachments/assets/e091408d-b667-49cb-b577-74769146a66b" />
 
-<img width="1018" height="785" alt="image" src="https://github.com/user-attachments/assets/0916fc94-dbd1-4043-bee6-2a841361b710" />
 
-<img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/4d8bd659-a04f-4ccd-b0d8-ca799390b3e8" />
+
+
 
 
 
