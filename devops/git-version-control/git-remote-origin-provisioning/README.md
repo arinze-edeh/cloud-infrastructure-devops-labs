@@ -185,7 +185,7 @@ git remote add dev_demo /opt/xfusioncorp_demo.git
 
 ```bash
 sudo git remote add dev_demo /opt/xfusioncorp_demo.git
-# Password: Bl@kW
+
 ```
 
 **Verify both remotes are registered:**
@@ -200,7 +200,7 @@ sudo git remote -v
 
 ***Screenshot: Permission error on git remote add, then successful resolution with sudo***
 
-> ![Remote Add Permission Error and Fix](./screenshots/03-remote-add-permission-fix.png)
+<img width="1030" height="750" alt="image" src="https://github.com/user-attachments/assets/0398c09b-ef0e-472c-88dc-c372b62fcc18" />
 
 ***Screenshot: Both remotes confirmed with git remote -v***
 
@@ -330,7 +330,7 @@ sudo git remote -v
 <img width="1032" height="555" alt="image" src="https://github.com/user-attachments/assets/a16f276b-28a7-42e5-b0a3-bd5a7d9dd613" />
 
 <img width="1013" height="586" alt="image" src="https://github.com/user-attachments/assets/d373db81-f36a-47e9-8a08-103b70dad27e" />
-<img width="1030" height="750" alt="image" src="https://github.com/user-attachments/assets/0398c09b-ef0e-472c-88dc-c372b62fcc18" />
+
 <img width="1034" height="811" alt="image" src="https://github.com/user-attachments/assets/6cdb860b-cf6c-4949-8e2b-edd638d7383b" />
 <img width="1023" height="817" alt="image" src="https://github.com/user-attachments/assets/e7c89aa0-747d-4292-a7a0-8bd1427da0f9" />
 <img width="1027" height="856" alt="image" src="https://github.com/user-attachments/assets/1b51fe4e-c524-48fa-b144-7fed5626dd9a" />
