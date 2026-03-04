@@ -238,7 +238,7 @@ sudo git status
 
 ***Screenshot: index.html staged and confirmed as new file***
 
-> ![File Staged](./screenshots/05-file-staged.png)
+<img width="1033" height="756" alt="image" src="https://github.com/user-attachments/assets/e9cfeba5-c080-4995-be58-a2a2e3d9b36d" />
 
 **Commit to master:**
 
@@ -334,7 +334,7 @@ sudo git remote -v
 
 <img width="1023" height="817" alt="image" src="https://github.com/user-attachments/assets/e7c89aa0-747d-4292-a7a0-8bd1427da0f9" />
 <img width="1027" height="856" alt="image" src="https://github.com/user-attachments/assets/1b51fe4e-c524-48fa-b144-7fed5626dd9a" />
-<img width="1033" height="756" alt="image" src="https://github.com/user-attachments/assets/e9cfeba5-c080-4995-be58-a2a2e3d9b36d" />
+
 <img width="1030" height="685" alt="image" src="https://github.com/user-attachments/assets/3ffc9631-45b1-4a7c-a1cc-31d66505d05c" />
 <img width="1035" height="600" alt="image" src="https://github.com/user-attachments/assets/29a20588-f94e-41b4-a7a2-13ca3e90f7bb" />
 
