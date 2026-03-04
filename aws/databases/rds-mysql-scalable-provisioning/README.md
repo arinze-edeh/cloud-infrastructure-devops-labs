@@ -47,14 +47,14 @@ This runbook documents the end-to-end provisioning of a **private, storage-autos
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                   AWS Region: us-east-1                  │
-│                                                          │
+│                   AWS Region: us-east-1                 │
+│                                                         │
 │   ┌─────────────────────────────────────────────────┐   │
 │   │         VPC: vpc-0c0636743c8122ad0 (Default)    │   │
-│   │                                                  │   │
+│   │                                                 │   │
 │   │   ┌──────────────────────────────────────────┐  │   │
 │   │   │   Security Group: sg-08e6d60d4a9f62ee9   │  │   │
-│   │   │                                           │  │   │
+│   │   │                                          │  │   │
 │   │   │   ┌───────────────────────────────────┐  │  │   │
 │   │   │   │  RDS Instance: datacenter-rds     │  │  │   │
 │   │   │   │  Engine:  MySQL 8.4.8             │  │  │   │
@@ -63,7 +63,7 @@ This runbook documents the end-to-end provisioning of a **private, storage-autos
 │   │   │   │  Access:  Private only            │  │  │   │
 │   │   │   └───────────────────────────────────┘  │  │   │
 │   │   └──────────────────────────────────────────┘  │   │
-│   │                                                  │   │
+│   │                                                 │   │
 │   │   Subnets: us-east-1a/b/c/d/e/f (default)       │   │
 │   └─────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────┘
