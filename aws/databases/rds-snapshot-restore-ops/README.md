@@ -215,9 +215,12 @@ aws rds restore-db-instance-from-db-snapshot \
     --db-instance-class db.t3.micro
 ```
 
-***Screenshot: Restore command response with instance in creating state***
+***Screenshots: Restore command response with instance in creating state***
 
-![Phase 3a - Restore Initiated](screenshots/05-restore-initiated.png)
+<img width="1033" height="864" alt="image" src="https://github.com/user-attachments/assets/0f988e60-1fd9-47f8-ae4f-ff99dd70f04d" />
+<img width="1032" height="868" alt="image" src="https://github.com/user-attachments/assets/83e41f66-63a1-4554-a448-d3c6f98cec03" />
+<img width="1029" height="862" alt="image" src="https://github.com/user-attachments/assets/10a80b83-6746-466f-a3d4-7f0038ba44fa" />
+<img width="1031" height="619" alt="image" src="https://github.com/user-attachments/assets/1292c891-9006-4c29-9b5c-43e03550e723" />
 
 **Key fields from restore response:**
 
@@ -336,10 +339,7 @@ aws rds describe-db-instances \
 
 
 
-<img width="1033" height="864" alt="image" src="https://github.com/user-attachments/assets/0f988e60-1fd9-47f8-ae4f-ff99dd70f04d" />
-<img width="1032" height="868" alt="image" src="https://github.com/user-attachments/assets/83e41f66-63a1-4554-a448-d3c6f98cec03" />
-<img width="1029" height="862" alt="image" src="https://github.com/user-attachments/assets/10a80b83-6746-466f-a3d4-7f0038ba44fa" />
-<img width="1031" height="619" alt="image" src="https://github.com/user-attachments/assets/1292c891-9006-4c29-9b5c-43e03550e723" />
+
 <img width="1034" height="339" alt="image" src="https://github.com/user-attachments/assets/ca0347ce-ef3c-4e21-9e35-2ef16b0980d7" />
 <img width="1035" height="430" alt="image" src="https://github.com/user-attachments/assets/559c7fbe-0d6e-42ac-8079-99f0dd7c420c" />
 <img width="1034" height="613" alt="image" src="https://github.com/user-attachments/assets/33e8fa3c-25e5-450a-8e2c-72bd1f466422" />
