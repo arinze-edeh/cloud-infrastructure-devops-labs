@@ -279,9 +279,10 @@ az disk create \
 
 ### Screenshot: devops-disk Created
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1028" height="858" alt="image" src="https://github.com/user-attachments/assets/3b44575b-4baa-42b0-9ef0-9892886266e7" />
+<img width="1037" height="863" alt="image" src="https://github.com/user-attachments/assets/aa6835c0-c893-4bda-a7a7-5465c483fb65" />
+
 > *Caption: az disk create JSON response confirming devops-disk created as Standard_LRS, 64 GiB, Unattached*
-> *File: `screenshots/06-devops-disk-created.png`*
 
 ---
 
@@ -651,8 +652,7 @@ cat /etc/fstab
 <img width="1034" height="533" alt="image" src="https://github.com/user-attachments/assets/263c0944-2a49-4de6-9513-9a5f36527a9f" />
 <img width="1018" height="466" alt="image" src="https://github.com/user-attachments/assets/5d0a1ee7-c8b2-427d-889b-1b12a41f3efd" />
 
-<img width="1028" height="858" alt="image" src="https://github.com/user-attachments/assets/3b44575b-4baa-42b0-9ef0-9892886266e7" />
-<img width="1037" height="863" alt="image" src="https://github.com/user-attachments/assets/aa6835c0-c893-4bda-a7a7-5465c483fb65" />
+
 <img width="1035" height="345" alt="image" src="https://github.com/user-attachments/assets/c1450deb-874a-4cff-854e-7979d4d99e50" />
 <img width="1037" height="317" alt="image" src="https://github.com/user-attachments/assets/5e9d0ab8-55d5-4bc1-bb8c-97e706d75e93" />
 <img width="1036" height="405" alt="image" src="https://github.com/user-attachments/assets/912967c9-131b-4c10-aa88-14d209b7788b" />
