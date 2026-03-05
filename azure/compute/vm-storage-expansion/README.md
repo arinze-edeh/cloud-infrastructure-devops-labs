@@ -214,7 +214,7 @@ az disk update \
 "provisioningState": "Succeeded"
 ```
 
-### ScreenshotS: Disk Resize JSON Response
+### Screenshots: Disk Resize JSON Response
 
 <img width="1033" height="852" alt="image" src="https://github.com/user-attachments/assets/13b46dc1-4928-4e9f-86a9-89b57a7a6162" />
 <img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/9071f6e0-4784-43e0-95a6-618964c8dd67" />
@@ -277,7 +277,7 @@ az disk create \
 "provisioningState": "Succeeded"
 ```
 
-### ScreenshotS: devops-disk Created
+### Screenshots: devops-disk Created
 
 <img width="1028" height="858" alt="image" src="https://github.com/user-attachments/assets/3b44575b-4baa-42b0-9ef0-9892886266e7" />
 <img width="1037" height="863" alt="image" src="https://github.com/user-attachments/assets/aa6835c0-c893-4bda-a7a7-5465c483fb65" />
@@ -360,7 +360,7 @@ sdc       8:32   0   64G  0 disk              <-- devops-disk (NEW, unpartitione
 
 **Critical:** Never partition or format `sdb`. This is Azure's ephemeral resource disk and its data does not persist across reboots.
 
-### ScreenshotS: lsblk Output Identifying sdc
+### Screenshots: lsblk Output Identifying sdc
 
 <img width="1036" height="405" alt="image" src="https://github.com/user-attachments/assets/912967c9-131b-4c10-aa88-14d209b7788b" />
 <img width="1037" height="858" alt="image" src="https://github.com/user-attachments/assets/0e8d8048-d0b4-4980-ad1b-d82d471c22e2" />
@@ -449,6 +449,9 @@ echo $DISK_UUID
 ```
 bc96015c-5195-4175-81b1-71cb4c0c2b85
 ```
+** Screenshot:**
+
+<img width="1030" height="398" alt="image" src="https://github.com/user-attachments/assets/3146c1cb-1942-4078-9a52-872ca384a3d2" />
 
 > **Known Issue:** Without `| head -1`, the `blkid` grep pattern also captures the `PTUUID` value from the partition table, appending a second UUID-like token to the variable. Always pipe through `head -1` to isolate the filesystem UUID.
 
@@ -661,7 +664,7 @@ cat /etc/fstab
 
 <img width="1035" height="724" alt="image" src="https://github.com/user-attachments/assets/44dbad21-98a1-453e-8b9d-a761a65e052e" />
 
-<img width="1030" height="398" alt="image" src="https://github.com/user-attachments/assets/3146c1cb-1942-4078-9a52-872ca384a3d2" />
+
 <img width="1030" height="444" alt="image" src="https://github.com/user-attachments/assets/7289593c-c136-41e8-a127-285da5179245" />
 <img width="1034" height="334" alt="image" src="https://github.com/user-attachments/assets/daff3545-06a5-44db-a94a-d3eb5a69cf3c" />
 <img width="1033" height="314" alt="image" src="https://github.com/user-attachments/assets/77979df8-f3b9-41f6-bf71-1366ddc9164f" />
