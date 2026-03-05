@@ -333,17 +333,3 @@ aws rds describe-db-instances \
 | **Region** | `us-east-1` (N. Virginia) |
 
 ---
-
-<img width="1036" height="426" alt="image" src="https://github.com/user-attachments/assets/d6969664-31d2-4ff2-9d63-4af24df6f333" />
-
-
-
-
-
-<img width="1034" height="339" alt="image" src="https://github.com/user-attachments/assets/ca0347ce-ef3c-4e21-9e35-2ef16b0980d7" />
-<img width="1035" height="430" alt="image" src="https://github.com/user-attachments/assets/559c7fbe-0d6e-42ac-8079-99f0dd7c420c" />
-<img width="1034" height="613" alt="image" src="https://github.com/user-attachments/assets/33e8fa3c-25e5-450a-8e2c-72bd1f466422" />
-
-
-
-
