@@ -453,6 +453,8 @@ bc96015c-5195-4175-81b1-71cb4c0c2b85
 
 <img width="1030" height="398" alt="image" src="https://github.com/user-attachments/assets/3146c1cb-1942-4078-9a52-872ca384a3d2" />
 
+<img width="1030" height="444" alt="image" src="https://github.com/user-attachments/assets/7289593c-c136-41e8-a127-285da5179245" />
+
 > **Known Issue:** Without `| head -1`, the `blkid` grep pattern also captures the `PTUUID` value from the partition table, appending a second UUID-like token to the variable. Always pipe through `head -1` to isolate the filesystem UUID.
 
 ---
@@ -665,7 +667,7 @@ cat /etc/fstab
 <img width="1035" height="724" alt="image" src="https://github.com/user-attachments/assets/44dbad21-98a1-453e-8b9d-a761a65e052e" />
 
 
-<img width="1030" height="444" alt="image" src="https://github.com/user-attachments/assets/7289593c-c136-41e8-a127-285da5179245" />
+
 <img width="1034" height="334" alt="image" src="https://github.com/user-attachments/assets/daff3545-06a5-44db-a94a-d3eb5a69cf3c" />
 <img width="1033" height="314" alt="image" src="https://github.com/user-attachments/assets/77979df8-f3b9-41f6-bf71-1366ddc9164f" />
 <img width="1037" height="232" alt="image" src="https://github.com/user-attachments/assets/3b4dea06-6171-417a-b3eb-5eafb493e74f" />
