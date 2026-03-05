@@ -160,9 +160,9 @@ devops-vm_disk1_83afd3fcf6da47758c818d0019e38a39  Attached  Standard_LRS
 
 ### Screenshot: OS Disk Identified
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1029" height="652" alt="image" src="https://github.com/user-attachments/assets/50b193a3-0b2b-48be-93fa-a74715e9aa34" />
+
 > *Caption: az disk show table output confirming disk name, Attached state, and Standard_LRS SKU*
-> *File: `screenshots/02-os-disk-identified.png`*
 
 ---
 
@@ -640,7 +640,7 @@ cat /etc/fstab
 
 <img width="1035" height="435" alt="image" src="https://github.com/user-attachments/assets/dcd10261-b85e-43db-9f2f-096d61bc9093" />
 <img width="1036" height="497" alt="image" src="https://github.com/user-attachments/assets/690c051e-3350-4c91-aecb-a6a5dbaf3fe9" />
-<img width="1029" height="652" alt="image" src="https://github.com/user-attachments/assets/50b193a3-0b2b-48be-93fa-a74715e9aa34" />
+
 <img width="1026" height="413" alt="image" src="https://github.com/user-attachments/assets/113d5e77-8774-472a-a334-c8c7d5adb201" />
 <img width="1038" height="434" alt="image" src="https://github.com/user-attachments/assets/7a1e4c1b-1c8a-4189-b053-2b2210785e0b" />
 <img width="1033" height="852" alt="image" src="https://github.com/user-attachments/assets/13b46dc1-4928-4e9f-86a9-89b57a7a6162" />
