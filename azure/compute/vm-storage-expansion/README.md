@@ -563,9 +563,9 @@ Write test PASSED
 
 ### Screenshot: Full Validation Suite Passed
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1036" height="307" alt="image" src="https://github.com/user-attachments/assets/0d4e15bb-c8e2-4580-92a6-707a664b72ab" />
+
 > *Caption: All four validation checks passing in sequence: lsblk, mount, grep fstab, write test PASSED*
-> *File: `screenshots/13-validation-all-passed.png`*
 
 ---
 
@@ -671,4 +671,4 @@ cat /etc/fstab
 
 
 <img width="1037" height="232" alt="image" src="https://github.com/user-attachments/assets/3b4dea06-6171-417a-b3eb-5eafb493e74f" />
-<img width="1036" height="307" alt="image" src="https://github.com/user-attachments/assets/0d4e15bb-c8e2-4580-92a6-707a664b72ab" />
+
