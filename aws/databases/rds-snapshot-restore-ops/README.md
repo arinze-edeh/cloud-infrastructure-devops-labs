@@ -95,7 +95,7 @@ aws configure get region
 
 ***Screenshot: Identity and region verification output***
 
-![Identity Verification](screenshots/01-identity-verification.png)
+<img width="1028" height="472" alt="image" src="https://github.com/user-attachments/assets/752b4c79-04d2-4e09-bc65-51b41f700d85" />
 
 **Expected output:**
 
@@ -276,7 +276,7 @@ aws rds describe-db-instances \
 
 ***Screenshot: Final state showing available status and correct instance class***
 
-![Phase 4 - Final Verification](screenshots/07-final-verification.png)
+<img width="1037" height="243" alt="image" src="https://github.com/user-attachments/assets/efa38df6-1efa-4bb2-93f0-5a55f9db7231" />
 
 **Final result:**
 
@@ -332,7 +332,7 @@ aws rds describe-db-instances \
 ---
 
 <img width="1036" height="426" alt="image" src="https://github.com/user-attachments/assets/d6969664-31d2-4ff2-9d63-4af24df6f333" />
-<img width="1028" height="472" alt="image" src="https://github.com/user-attachments/assets/752b4c79-04d2-4e09-bc65-51b41f700d85" />
+
 <img width="1037" height="653" alt="image" src="https://github.com/user-attachments/assets/ca183227-9819-4741-af65-268e782cce01" />
 <img width="1035" height="867" alt="image" src="https://github.com/user-attachments/assets/e28bedae-b84c-4d2e-929a-478729c0b20d" />
 <img width="1034" height="860" alt="image" src="https://github.com/user-attachments/assets/b9f63122-b445-4cb6-99ac-32526c73c3b8" />
@@ -344,6 +344,6 @@ aws rds describe-db-instances \
 <img width="1035" height="430" alt="image" src="https://github.com/user-attachments/assets/559c7fbe-0d6e-42ac-8079-99f0dd7c420c" />
 <img width="1034" height="613" alt="image" src="https://github.com/user-attachments/assets/33e8fa3c-25e5-450a-8e2c-72bd1f466422" />
 <img width="1038" height="803" alt="image" src="https://github.com/user-attachments/assets/f9761fd9-d7c3-41e3-b6b6-e85706dec3b3" />
-<img width="1037" height="243" alt="image" src="https://github.com/user-attachments/assets/efa38df6-1efa-4bb2-93f0-5a55f9db7231" />
+
 
 
