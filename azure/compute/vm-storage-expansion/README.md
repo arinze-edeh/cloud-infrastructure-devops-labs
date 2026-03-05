@@ -246,9 +246,9 @@ VM running
 
 ### Screenshot: VM Running After Restart
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1033" height="271" alt="image" src="https://github.com/user-attachments/assets/01879f55-ef9d-4cc8-b475-3c966d68a734" />
+
 > *Caption: Terminal showing VM running status after disk resize and restart*
-> *File: `screenshots/05-vm-running.png`*
 
 ---
 
@@ -650,7 +650,7 @@ cat /etc/fstab
 
 <img width="1034" height="533" alt="image" src="https://github.com/user-attachments/assets/263c0944-2a49-4de6-9513-9a5f36527a9f" />
 <img width="1018" height="466" alt="image" src="https://github.com/user-attachments/assets/5d0a1ee7-c8b2-427d-889b-1b12a41f3efd" />
-<img width="1033" height="271" alt="image" src="https://github.com/user-attachments/assets/01879f55-ef9d-4cc8-b475-3c966d68a734" />
+
 <img width="1028" height="858" alt="image" src="https://github.com/user-attachments/assets/3b44575b-4baa-42b0-9ef0-9892886266e7" />
 <img width="1037" height="863" alt="image" src="https://github.com/user-attachments/assets/aa6835c0-c893-4bda-a7a7-5465c483fb65" />
 <img width="1035" height="345" alt="image" src="https://github.com/user-attachments/assets/c1450deb-874a-4cff-854e-7979d4d99e50" />
