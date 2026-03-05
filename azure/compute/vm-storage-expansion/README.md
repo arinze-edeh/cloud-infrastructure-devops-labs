@@ -449,9 +449,7 @@ echo $DISK_UUID
 ```
 bc96015c-5195-4175-81b1-71cb4c0c2b85
 ```
-** Screenshot:**
-
-<img width="1030" height="398" alt="image" src="https://github.com/user-attachments/assets/3146c1cb-1942-4078-9a52-872ca384a3d2" />
+**Screenshot:**
 
 <img width="1030" height="444" alt="image" src="https://github.com/user-attachments/assets/7289593c-c136-41e8-a127-285da5179245" />
 
@@ -600,6 +598,8 @@ az vm get-instance-view ... --query "instanceView.statuses[1].displayStatus"
 ```bash
 DISK_UUID=$(sudo blkid /dev/sdc1 | grep -oP 'UUID="\K[^"]+' | head -1)
 ```
+***Screenshot:***
+<img width="1030" height="398" alt="image" src="https://github.com/user-attachments/assets/3146c1cb-1942-4078-9a52-872ca384a3d2" />
 
 ---
 
