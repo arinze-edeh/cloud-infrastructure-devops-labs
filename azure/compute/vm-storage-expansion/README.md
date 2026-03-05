@@ -482,10 +482,6 @@ UUID=45D2-36F5  /boot/efi       vfat    umask=0077      0 1
 UUID=bc96015c-5195-4175-81b1-71cb4c0c2b85   /mnt/devops-disk   ext4   defaults,nofail   0   2
 ```
 
-**Screenshot:**
-
-<img width="1034" height="334" alt="image" src="https://github.com/user-attachments/assets/daff3545-06a5-44db-a94a-d3eb5a69cf3c" />
-
 **fstab Field Reference:**
 
 | Field | Value | Meaning |
@@ -499,9 +495,9 @@ UUID=bc96015c-5195-4175-81b1-71cb4c0c2b85   /mnt/devops-disk   ext4   defaults,n
 
 ### Screenshot: fstab Entry Verified
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1034" height="334" alt="image" src="https://github.com/user-attachments/assets/daff3545-06a5-44db-a94a-d3eb5a69cf3c" />
+
 > *Caption: tail -3 /etc/fstab showing the new devops-disk UUID entry appended correctly*
-> *File: `screenshots/11-fstab-entry-verified.png`*
 
 ---
 
