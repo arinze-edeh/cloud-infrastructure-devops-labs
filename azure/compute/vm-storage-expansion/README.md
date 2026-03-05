@@ -122,9 +122,8 @@ RG: KML_RG_MAIN-866F9CE5075C4378 | VM: devops-vm | Location: eastus
 
 ### Screenshot: Environment Variables Verified
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1032" height="647" alt="image" src="https://github.com/user-attachments/assets/ca1742ac-76ed-41cb-9261-8d4c2eafefc3" />
 > *Caption: Terminal output confirming RESOURCE_GROUP, VM_NAME, and LOCATION resolved correctly*
-> *File: `screenshots/01-env-variables-verified.png`*
 
 ---
 
@@ -637,7 +636,7 @@ cat /etc/fstab
 ---
 
 <img width="1031" height="510" alt="image" src="https://github.com/user-attachments/assets/5034d0e6-d8ce-463c-8d6d-53f545a4fbd8" />
-<img width="1032" height="647" alt="image" src="https://github.com/user-attachments/assets/ca1742ac-76ed-41cb-9261-8d4c2eafefc3" />
+
 <img width="1035" height="435" alt="image" src="https://github.com/user-attachments/assets/dcd10261-b85e-43db-9f2f-096d61bc9093" />
 <img width="1036" height="497" alt="image" src="https://github.com/user-attachments/assets/690c051e-3350-4c91-aecb-a6a5dbaf3fe9" />
 <img width="1029" height="652" alt="image" src="https://github.com/user-attachments/assets/50b193a3-0b2b-48be-93fa-a74715e9aa34" />
