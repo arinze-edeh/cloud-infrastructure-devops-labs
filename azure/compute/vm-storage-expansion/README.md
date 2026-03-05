@@ -311,9 +311,9 @@ devops-disk  0      64
 
 ### Screenshot: Disk Attached to VM
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1037" height="317" alt="image" src="https://github.com/user-attachments/assets/5e9d0ab8-55d5-4bc1-bb8c-97e706d75e93" />
+
 > *Caption: az vm show table output confirming devops-disk attached at LUN 0 with 64 GiB*
-> *File: `screenshots/07-disk-attached.png`*
 
 ---
 
@@ -654,7 +654,7 @@ cat /etc/fstab
 
 
 <img width="1035" height="345" alt="image" src="https://github.com/user-attachments/assets/c1450deb-874a-4cff-854e-7979d4d99e50" />
-<img width="1037" height="317" alt="image" src="https://github.com/user-attachments/assets/5e9d0ab8-55d5-4bc1-bb8c-97e706d75e93" />
+
 <img width="1036" height="405" alt="image" src="https://github.com/user-attachments/assets/912967c9-131b-4c10-aa88-14d209b7788b" />
 <img width="1037" height="858" alt="image" src="https://github.com/user-attachments/assets/0e8d8048-d0b4-4980-ad1b-d82d471c22e2" />
 <img width="1036" height="477" alt="image" src="https://github.com/user-attachments/assets/0fd11ad2-1b15-446f-a704-246a21bb4eaf" />
