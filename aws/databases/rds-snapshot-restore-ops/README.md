@@ -186,7 +186,7 @@ aws rds describe-db-snapshots \
 
 ***Screenshot: Snapshot available at 100% progress***
 
-![Phase 2b - Snapshot Available](screenshots/04-snapshot-available.png)
+<img width="1034" height="860" alt="image" src="https://github.com/user-attachments/assets/b9f63122-b445-4cb6-99ac-32526c73c3b8" />
 
 **Result:**
 
@@ -335,7 +335,7 @@ aws rds describe-db-instances \
 
 
 
-<img width="1034" height="860" alt="image" src="https://github.com/user-attachments/assets/b9f63122-b445-4cb6-99ac-32526c73c3b8" />
+
 <img width="1033" height="864" alt="image" src="https://github.com/user-attachments/assets/0f988e60-1fd9-47f8-ae4f-ff99dd70f04d" />
 <img width="1032" height="868" alt="image" src="https://github.com/user-attachments/assets/83e41f66-63a1-4554-a448-d3c6f98cec03" />
 <img width="1029" height="862" alt="image" src="https://github.com/user-attachments/assets/10a80b83-6746-466f-a3d4-7f0038ba44fa" />
