@@ -104,6 +104,9 @@ Expected output:
 /usr/src/kodekloudrepos/games
 ```
 
+***Screenshot:***
+<img width="1041" height="581" alt="image" src="https://github.com/user-attachments/assets/5d189d06-8d55-4efd-886b-e5f279a887de" />
+
 ---
 
 ### Phase 3: Resolve Dubious Ownership Error
@@ -290,13 +293,8 @@ sudo git log --oneline
 
 ---
 
-*Documented by: DevOps Engineering Team*
-*Environment: Stratos DC / KodeKloud Lab*
-*Resolution Date: March 2026*
 
 
-<img width="1040" height="432" alt="image" src="https://github.com/user-attachments/assets/fb31e368-ba29-4f3f-8341-28bcc5201ac2" />
-<img width="1041" height="581" alt="image" src="https://github.com/user-attachments/assets/5d189d06-8d55-4efd-886b-e5f279a887de" />
 <img width="1034" height="542" alt="image" src="https://github.com/user-attachments/assets/05d63cff-b0be-455e-a500-69d33cb4d49c" />
 <img width="1036" height="560" alt="image" src="https://github.com/user-attachments/assets/2bba76cb-80ae-449c-a917-d014a0d2a702" />
 <img width="1034" height="658" alt="image" src="https://github.com/user-attachments/assets/a3087417-136e-4b46-b525-3a357512fbe5" />
