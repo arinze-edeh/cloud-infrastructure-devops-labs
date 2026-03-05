@@ -396,9 +396,9 @@ Syncing disks.
 
 ### Screenshot: fdisk Partition Created
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1035" height="752" alt="image" src="https://github.com/user-attachments/assets/a55690d5-4804-4f2f-b914-21aeba943e8d" />
+
 > *Caption: fdisk interactive session confirming new 64 GiB Linux partition created on /dev/sdc*
-> *File: `screenshots/09-fdisk-partition-created.png`*
 
 ---
 
@@ -658,7 +658,7 @@ cat /etc/fstab
 <img width="1035" height="345" alt="image" src="https://github.com/user-attachments/assets/c1450deb-874a-4cff-854e-7979d4d99e50" />
 
 
-<img width="1035" height="752" alt="image" src="https://github.com/user-attachments/assets/a55690d5-4804-4f2f-b914-21aeba943e8d" />
+
 <img width="1035" height="724" alt="image" src="https://github.com/user-attachments/assets/44dbad21-98a1-453e-8b9d-a761a65e052e" />
 <img width="1032" height="321" alt="image" src="https://github.com/user-attachments/assets/e9faded3-e571-48f3-8d31-a350aeb51db4" />
 <img width="1030" height="398" alt="image" src="https://github.com/user-attachments/assets/3146c1cb-1942-4078-9a52-872ca384a3d2" />
