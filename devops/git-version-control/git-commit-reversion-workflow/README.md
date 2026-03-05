@@ -170,9 +170,9 @@ drwxr-xr-x 3 root root 4096 Mar  5 07:39 games
 
 ***Screenshot 4: ls -la confirming root ownership***
 
-> **[Insert screenshot: terminal showing `ls -la` output with `root root` ownership on the games directory]**
+<img width="1034" height="658" alt="image" src="https://github.com/user-attachments/assets/a3087417-136e-4b46-b525-3a357512fbe5" />
 
-All write operations must use `sudo`. The safe directory exception must also be registered in root's git config context separately.
+>All write operations must use `sudo`. The safe directory exception must also be registered in root's git config context separately.
 
 ---
 
@@ -297,7 +297,7 @@ sudo git log --oneline
 
 <img width="1034" height="542" alt="image" src="https://github.com/user-attachments/assets/05d63cff-b0be-455e-a500-69d33cb4d49c" />
 
-<img width="1034" height="658" alt="image" src="https://github.com/user-attachments/assets/a3087417-136e-4b46-b525-3a357512fbe5" />
+
 <img width="1033" height="790" alt="image" src="https://github.com/user-attachments/assets/04c2d457-4663-488a-80b6-2dd84a06786f" />
 <img width="1036" height="781" alt="image" src="https://github.com/user-attachments/assets/5a8362c1-d758-479f-815e-fb1ced0e9185" />
 <img width="1035" height="838" alt="image" src="https://github.com/user-attachments/assets/b62e6645-3462-4752-b215-b3d1982604fb" />
