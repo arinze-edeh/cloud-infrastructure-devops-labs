@@ -249,7 +249,7 @@ aws rds describe-db-instances \
 
 ***Screenshot: Instance transitioning through intermediate states***
 
-![Phase 3b - Restore Progress States](screenshots/06-restore-progress-states.png)
+<img width="1038" height="803" alt="image" src="https://github.com/user-attachments/assets/f9761fd9-d7c3-41e3-b6b6-e85706dec3b3" />
 
 **State progression observed:**
 
@@ -343,7 +343,7 @@ aws rds describe-db-instances \
 <img width="1034" height="339" alt="image" src="https://github.com/user-attachments/assets/ca0347ce-ef3c-4e21-9e35-2ef16b0980d7" />
 <img width="1035" height="430" alt="image" src="https://github.com/user-attachments/assets/559c7fbe-0d6e-42ac-8079-99f0dd7c420c" />
 <img width="1034" height="613" alt="image" src="https://github.com/user-attachments/assets/33e8fa3c-25e5-450a-8e2c-72bd1f466422" />
-<img width="1038" height="803" alt="image" src="https://github.com/user-attachments/assets/f9761fd9-d7c3-41e3-b6b6-e85706dec3b3" />
+
 
 
 
