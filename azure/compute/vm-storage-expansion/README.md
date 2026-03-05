@@ -123,6 +123,7 @@ RG: KML_RG_MAIN-866F9CE5075C4378 | VM: devops-vm | Location: eastus
 ### Screenshot: Environment Variables Verified
 
 <img width="1032" height="647" alt="image" src="https://github.com/user-attachments/assets/ca1742ac-76ed-41cb-9261-8d4c2eafefc3" />
+
 > *Caption: Terminal output confirming RESOURCE_GROUP, VM_NAME, and LOCATION resolved correctly*
 
 ---
