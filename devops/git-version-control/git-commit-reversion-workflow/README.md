@@ -138,7 +138,7 @@ Expected output:
 
 ***Screenshot 3: git log showing full commit history***
 
-> **[Insert screenshot: terminal showing the two-commit log output with HEAD at `5b11221`]**
+<img width="1036" height="560" alt="image" src="https://github.com/user-attachments/assets/2bba76cb-80ae-449c-a917-d014a0d2a702" />
 
 This confirms:
 
@@ -296,7 +296,7 @@ sudo git log --oneline
 
 
 <img width="1034" height="542" alt="image" src="https://github.com/user-attachments/assets/05d63cff-b0be-455e-a500-69d33cb4d49c" />
-<img width="1036" height="560" alt="image" src="https://github.com/user-attachments/assets/2bba76cb-80ae-449c-a917-d014a0d2a702" />
+
 <img width="1034" height="658" alt="image" src="https://github.com/user-attachments/assets/a3087417-136e-4b46-b525-3a357512fbe5" />
 <img width="1033" height="790" alt="image" src="https://github.com/user-attachments/assets/04c2d457-4663-488a-80b6-2dd84a06786f" />
 <img width="1036" height="781" alt="image" src="https://github.com/user-attachments/assets/5a8362c1-d758-479f-815e-fb1ced0e9185" />
