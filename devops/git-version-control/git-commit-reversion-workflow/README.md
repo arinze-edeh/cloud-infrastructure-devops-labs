@@ -292,13 +292,3 @@ sudo git log --oneline
 **Always verify ownership before git operations on shared infrastructure.** A quick `ls -la` on the parent directory prevents wasted time debugging permission errors that are actually ownership issues in disguise.
 
 ---
-
-
-
-<img width="1034" height="542" alt="image" src="https://github.com/user-attachments/assets/05d63cff-b0be-455e-a500-69d33cb4d49c" />
-
-
-<img width="1033" height="790" alt="image" src="https://github.com/user-attachments/assets/04c2d457-4663-488a-80b6-2dd84a06786f" />
-<img width="1036" height="781" alt="image" src="https://github.com/user-attachments/assets/5a8362c1-d758-479f-815e-fb1ced0e9185" />
-
-
