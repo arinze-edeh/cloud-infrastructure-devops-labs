@@ -198,7 +198,7 @@ aws rds describe-db-snapshots \
 +-------------------+-------------+------+
 ```
 
-**Gate:** Do not proceed to restore until `PercentProgress` is `100` and `Status` is `available`.
+>Do not proceed to restore until `PercentProgress` is `100` and `Status` is `available`.
 
 ---
 
