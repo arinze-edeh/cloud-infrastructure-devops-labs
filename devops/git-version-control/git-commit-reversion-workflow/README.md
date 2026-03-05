@@ -115,7 +115,8 @@ Attempting `git log` at this stage will fail with a fatal ownership warning.
 
 ***Screenshot 2: git log fatal ownership error***
 
-> **[Insert screenshot: terminal showing the `detected dubious ownership` fatal error message after running `git log --oneline`]**
+<img width="1139" height="325" alt="image" src="https://github.com/user-attachments/assets/91c8cde4-517e-4dae-a321-34a1f13fc11f" />
+
 
 Register the directory as a safe exception in `natasha`'s global git config to allow read operations:
 
