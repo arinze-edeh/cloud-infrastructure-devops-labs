@@ -1,7 +1,9 @@
 # Azure VM Disk Expansion and Data Disk Provisioning
 
 ![Azure](https://img.shields.io/badge/Azure-Cloud-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+
 ![Status](https://img.shields.io/badge/Status-Production_Ready-28a745?style=for-the-badge)
 
 ---
@@ -212,11 +214,13 @@ az disk update \
 "provisioningState": "Succeeded"
 ```
 
-### Screenshot: Disk Resize JSON Response
+### ScreenshotS: Disk Resize JSON Response
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1033" height="852" alt="image" src="https://github.com/user-attachments/assets/13b46dc1-4928-4e9f-86a9-89b57a7a6162" />
+<img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/9071f6e0-4784-43e0-95a6-618964c8dd67" />
+<img width="1036" height="864" alt="image" src="https://github.com/user-attachments/assets/1fb9d896-7aab-445c-96ae-c40389d9d25a" />
+
 > *Caption: Full az disk update JSON response showing diskSizeGb: 64 and provisioningState: Succeeded*
-> *File: `screenshots/04-disk-resize-response.png`*
 
 ---
 
@@ -643,9 +647,7 @@ cat /etc/fstab
 
 <img width="1026" height="413" alt="image" src="https://github.com/user-attachments/assets/113d5e77-8774-472a-a334-c8c7d5adb201" />
 
-<img width="1033" height="852" alt="image" src="https://github.com/user-attachments/assets/13b46dc1-4928-4e9f-86a9-89b57a7a6162" />
-<img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/9071f6e0-4784-43e0-95a6-618964c8dd67" />
-<img width="1036" height="864" alt="image" src="https://github.com/user-attachments/assets/1fb9d896-7aab-445c-96ae-c40389d9d25a" />
+
 <img width="1034" height="533" alt="image" src="https://github.com/user-attachments/assets/263c0944-2a49-4de6-9513-9a5f36527a9f" />
 <img width="1018" height="466" alt="image" src="https://github.com/user-attachments/assets/5d0a1ee7-c8b2-427d-889b-1b12a41f3efd" />
 <img width="1033" height="271" alt="image" src="https://github.com/user-attachments/assets/01879f55-ef9d-4cc8-b475-3c966d68a734" />
