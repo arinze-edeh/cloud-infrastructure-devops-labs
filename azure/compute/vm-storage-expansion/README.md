@@ -482,6 +482,10 @@ UUID=45D2-36F5  /boot/efi       vfat    umask=0077      0 1
 UUID=bc96015c-5195-4175-81b1-71cb4c0c2b85   /mnt/devops-disk   ext4   defaults,nofail   0   2
 ```
 
+**Screenshot:**
+
+<img width="1034" height="334" alt="image" src="https://github.com/user-attachments/assets/daff3545-06a5-44db-a94a-d3eb5a69cf3c" />
+
 **fstab Field Reference:**
 
 | Field | Value | Meaning |
@@ -668,7 +672,7 @@ cat /etc/fstab
 
 
 
-<img width="1034" height="334" alt="image" src="https://github.com/user-attachments/assets/daff3545-06a5-44db-a94a-d3eb5a69cf3c" />
+
 <img width="1033" height="314" alt="image" src="https://github.com/user-attachments/assets/77979df8-f3b9-41f6-bf71-1366ddc9164f" />
 <img width="1037" height="232" alt="image" src="https://github.com/user-attachments/assets/3b4dea06-6171-417a-b3eb-5eafb493e74f" />
 <img width="1036" height="307" alt="image" src="https://github.com/user-attachments/assets/0d4e15bb-c8e2-4580-92a6-707a664b72ab" />
