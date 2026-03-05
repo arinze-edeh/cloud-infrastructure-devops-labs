@@ -85,7 +85,7 @@ When prompted about host authenticity (first-time connection), type `yes` to acc
 
 ***Screenshot 1: Successful SSH login to ststor01***
 
-> **[Insert screenshot: terminal showing successful SSH connection and `natasha@ststor01` prompt]**
+<img width="1041" height="411" alt="image" src="https://github.com/user-attachments/assets/672ff97b-c168-4420-b805-29ea3464fb6a" />
 
 ---
 
@@ -294,7 +294,7 @@ sudo git log --oneline
 *Environment: Stratos DC / KodeKloud Lab*
 *Resolution Date: March 2026*
 
-<img width="1041" height="411" alt="image" src="https://github.com/user-attachments/assets/672ff97b-c168-4420-b805-29ea3464fb6a" />
+
 <img width="1040" height="432" alt="image" src="https://github.com/user-attachments/assets/fb31e368-ba29-4f3f-8341-28bcc5201ac2" />
 <img width="1041" height="581" alt="image" src="https://github.com/user-attachments/assets/5d189d06-8d55-4efd-886b-e5f279a887de" />
 <img width="1034" height="542" alt="image" src="https://github.com/user-attachments/assets/05d63cff-b0be-455e-a500-69d33cb4d49c" />
