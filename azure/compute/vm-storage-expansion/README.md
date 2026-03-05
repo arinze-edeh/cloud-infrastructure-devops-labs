@@ -190,9 +190,9 @@ VM deallocated
 
 ### Screenshot: VM Deallocated
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1038" height="434" alt="image" src="https://github.com/user-attachments/assets/7a1e4c1b-1c8a-4189-b053-2b2210785e0b" />
+
 > *Caption: Terminal confirming VM deallocated status via get-instance-view*
-> *File: `screenshots/03-vm-deallocated.png`*
 
 ---
 
@@ -642,7 +642,7 @@ cat /etc/fstab
 <img width="1036" height="497" alt="image" src="https://github.com/user-attachments/assets/690c051e-3350-4c91-aecb-a6a5dbaf3fe9" />
 
 <img width="1026" height="413" alt="image" src="https://github.com/user-attachments/assets/113d5e77-8774-472a-a334-c8c7d5adb201" />
-<img width="1038" height="434" alt="image" src="https://github.com/user-attachments/assets/7a1e4c1b-1c8a-4189-b053-2b2210785e0b" />
+
 <img width="1033" height="852" alt="image" src="https://github.com/user-attachments/assets/13b46dc1-4928-4e9f-86a9-89b57a7a6162" />
 <img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/9071f6e0-4784-43e0-95a6-618964c8dd67" />
 <img width="1036" height="864" alt="image" src="https://github.com/user-attachments/assets/1fb9d896-7aab-445c-96ae-c40389d9d25a" />
