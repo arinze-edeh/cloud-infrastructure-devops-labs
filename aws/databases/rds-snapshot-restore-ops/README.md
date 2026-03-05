@@ -158,7 +158,7 @@ aws rds create-db-snapshot \
 
 ***Screenshot: Snapshot creation API response***
 
-![Phase 2a - Snapshot Creating](screenshots/03-snapshot-creation-response.png)
+<img width="1035" height="867" alt="image" src="https://github.com/user-attachments/assets/e28bedae-b84c-4d2e-929a-478729c0b20d" />
 
 **Key fields from response:**
 
@@ -334,7 +334,7 @@ aws rds describe-db-instances \
 <img width="1036" height="426" alt="image" src="https://github.com/user-attachments/assets/d6969664-31d2-4ff2-9d63-4af24df6f333" />
 
 
-<img width="1035" height="867" alt="image" src="https://github.com/user-attachments/assets/e28bedae-b84c-4d2e-929a-478729c0b20d" />
+
 <img width="1034" height="860" alt="image" src="https://github.com/user-attachments/assets/b9f63122-b445-4cb6-99ac-32526c73c3b8" />
 <img width="1033" height="864" alt="image" src="https://github.com/user-attachments/assets/0f988e60-1fd9-47f8-ae4f-ff99dd70f04d" />
 <img width="1032" height="868" alt="image" src="https://github.com/user-attachments/assets/83e41f66-63a1-4554-a448-d3c6f98cec03" />
