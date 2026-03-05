@@ -210,7 +210,7 @@ Expected output:
 
 ***Screenshot 5: Successful git commit confirmation***
 
-> **[Insert screenshot: terminal showing commit confirmation output with hash `862cb51` and message `revert games`]**
+<img width="1035" height="838" alt="image" src="https://github.com/user-attachments/assets/b62e6645-3462-4752-b215-b3d1982604fb" />
 
 ---
 
@@ -300,5 +300,5 @@ sudo git log --oneline
 
 <img width="1033" height="790" alt="image" src="https://github.com/user-attachments/assets/04c2d457-4663-488a-80b6-2dd84a06786f" />
 <img width="1036" height="781" alt="image" src="https://github.com/user-attachments/assets/5a8362c1-d758-479f-815e-fb1ced0e9185" />
-<img width="1035" height="838" alt="image" src="https://github.com/user-attachments/assets/b62e6645-3462-4752-b215-b3d1982604fb" />
+
 <img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/2c4a87b1-3919-459a-9c2c-81cc20c2f8ee" />
