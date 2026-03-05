@@ -277,7 +277,7 @@ az disk create \
 "provisioningState": "Succeeded"
 ```
 
-### Screenshot: devops-disk Created
+### ScreenshotS: devops-disk Created
 
 <img width="1028" height="858" alt="image" src="https://github.com/user-attachments/assets/3b44575b-4baa-42b0-9ef0-9892886266e7" />
 <img width="1037" height="863" alt="image" src="https://github.com/user-attachments/assets/aa6835c0-c893-4bda-a7a7-5465c483fb65" />
@@ -360,11 +360,13 @@ sdc       8:32   0   64G  0 disk              <-- devops-disk (NEW, unpartitione
 
 **Critical:** Never partition or format `sdb`. This is Azure's ephemeral resource disk and its data does not persist across reboots.
 
-### Screenshot: lsblk Output Identifying sdc
+### ScreenshotS: lsblk Output Identifying sdc
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1036" height="405" alt="image" src="https://github.com/user-attachments/assets/912967c9-131b-4c10-aa88-14d209b7788b" />
+<img width="1037" height="858" alt="image" src="https://github.com/user-attachments/assets/0e8d8048-d0b4-4980-ad1b-d82d471c22e2" />
+<img width="1036" height="477" alt="image" src="https://github.com/user-attachments/assets/0fd11ad2-1b15-446f-a704-246a21bb4eaf" />
+
 > *Caption: lsblk output inside devops-vm showing sda (OS, 64G), sdb (temp, 4G), sdc (new data disk, 64G, unpartitioned)*
-> *File: `screenshots/08-lsblk-disk-layout.png`*
 
 ---
 
@@ -655,9 +657,7 @@ cat /etc/fstab
 
 <img width="1035" height="345" alt="image" src="https://github.com/user-attachments/assets/c1450deb-874a-4cff-854e-7979d4d99e50" />
 
-<img width="1036" height="405" alt="image" src="https://github.com/user-attachments/assets/912967c9-131b-4c10-aa88-14d209b7788b" />
-<img width="1037" height="858" alt="image" src="https://github.com/user-attachments/assets/0e8d8048-d0b4-4980-ad1b-d82d471c22e2" />
-<img width="1036" height="477" alt="image" src="https://github.com/user-attachments/assets/0fd11ad2-1b15-446f-a704-246a21bb4eaf" />
+
 <img width="1035" height="752" alt="image" src="https://github.com/user-attachments/assets/a55690d5-4804-4f2f-b914-21aeba943e8d" />
 <img width="1035" height="724" alt="image" src="https://github.com/user-attachments/assets/44dbad21-98a1-453e-8b9d-a761a65e052e" />
 <img width="1032" height="321" alt="image" src="https://github.com/user-attachments/assets/e9faded3-e571-48f3-8d31-a350aeb51db4" />
