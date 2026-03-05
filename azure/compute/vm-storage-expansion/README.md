@@ -419,9 +419,9 @@ Note the `Filesystem UUID` from this output. It is used in the next step.
 
 ### Screenshot: ext4 Filesystem Created
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1032" height="321" alt="image" src="https://github.com/user-attachments/assets/e9faded3-e571-48f3-8d31-a350aeb51db4" />
+
 > *Caption: mkfs.ext4 output showing filesystem UUID and all steps completing with done status*
-> *File: `screenshots/10-mkfs-ext4-complete.png`*
 
 ---
 
@@ -660,7 +660,7 @@ cat /etc/fstab
 
 
 <img width="1035" height="724" alt="image" src="https://github.com/user-attachments/assets/44dbad21-98a1-453e-8b9d-a761a65e052e" />
-<img width="1032" height="321" alt="image" src="https://github.com/user-attachments/assets/e9faded3-e571-48f3-8d31-a350aeb51db4" />
+
 <img width="1030" height="398" alt="image" src="https://github.com/user-attachments/assets/3146c1cb-1942-4078-9a52-872ca384a3d2" />
 <img width="1030" height="444" alt="image" src="https://github.com/user-attachments/assets/7289593c-c136-41e8-a127-285da5179245" />
 <img width="1034" height="334" alt="image" src="https://github.com/user-attachments/assets/daff3545-06a5-44db-a94a-d3eb5a69cf3c" />
