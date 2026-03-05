@@ -518,9 +518,9 @@ df -h | grep devops-disk
 
 ### Screenshot: Disk Mounted Successfully
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1033" height="314" alt="image" src="https://github.com/user-attachments/assets/77979df8-f3b9-41f6-bf71-1366ddc9164f" />
+
 > *Caption: df -h output showing /dev/sdc1 mounted at /mnt/devops-disk with 63G total and 60G available*
-> *File: `screenshots/12-disk-mounted.png`*
 
 ---
 
@@ -669,6 +669,6 @@ cat /etc/fstab
 
 
 
-<img width="1033" height="314" alt="image" src="https://github.com/user-attachments/assets/77979df8-f3b9-41f6-bf71-1366ddc9164f" />
+
 <img width="1037" height="232" alt="image" src="https://github.com/user-attachments/assets/3b4dea06-6171-417a-b3eb-5eafb493e74f" />
 <img width="1036" height="307" alt="image" src="https://github.com/user-attachments/assets/0d4e15bb-c8e2-4580-92a6-707a664b72ab" />
