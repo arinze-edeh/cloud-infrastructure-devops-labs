@@ -232,7 +232,7 @@ Expected output:
 
 ***Screenshot 6: Final git log confirming successful revert***
 
-> **[Insert screenshot: terminal showing the three-commit log with `revert games` at HEAD on master]**
+<img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/2c4a87b1-3919-459a-9c2c-81cc20c2f8ee" />
 
 **Verification checklist:**
 
@@ -301,4 +301,4 @@ sudo git log --oneline
 <img width="1033" height="790" alt="image" src="https://github.com/user-attachments/assets/04c2d457-4663-488a-80b6-2dd84a06786f" />
 <img width="1036" height="781" alt="image" src="https://github.com/user-attachments/assets/5a8362c1-d758-479f-815e-fb1ced0e9185" />
 
-<img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/2c4a87b1-3919-459a-9c2c-81cc20c2f8ee" />
+
