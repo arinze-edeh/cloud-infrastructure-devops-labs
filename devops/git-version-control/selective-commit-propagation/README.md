@@ -141,11 +141,10 @@ sudo git push origin master
 
 ### Screenshot: Permission Denied Error on Checkout Without sudo
 
-```
-### [SCREENSHOT PLACEHOLDER]
-### Caption: git checkout master failing with Permission Denied on .git/index.lock
-### Key detail: Contrast with the sudo version succeeding immediately after
-```
+<img width="1035" height="507" alt="image" src="https://github.com/user-attachments/assets/32730dd0-7be4-4334-8c3f-54a90b6d0159" />
+
+>#### Caption: git checkout master failing with Permission Denied on .git/index.lock
+>#### Key detail: Contrast with the sudo version succeeding immediately after
 
 ---
 
@@ -460,7 +459,7 @@ sudo git push origin master
 
 <img width="1034" height="763" alt="image" src="https://github.com/user-attachments/assets/85380687-9201-49b2-ba02-8a14a1c47244" />
 <img width="1035" height="781" alt="image" src="https://github.com/user-attachments/assets/751b0def-fabb-4a42-8f9b-18bab06ed0e1" />
-<img width="1035" height="507" alt="image" src="https://github.com/user-attachments/assets/32730dd0-7be4-4334-8c3f-54a90b6d0159" />
+
 <img width="1038" height="347" alt="image" src="https://github.com/user-attachments/assets/6a97427e-44e5-4e1a-885f-2edd5f68422e" />
 <img width="1038" height="399" alt="image" src="https://github.com/user-attachments/assets/23ed235d-0816-4950-baf6-12e44e3eab81" />
 
