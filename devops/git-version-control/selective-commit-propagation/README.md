@@ -51,12 +51,11 @@ The operation surfaced three compounding infrastructure problems that are common
 The task required cherry-picking the commit with message `Update info.txt` from the `feature` branch into `master` and pushing the result to the bare remote. Upon connecting to the storage server and navigating to the expected repository path, the operation could not proceed due to three sequential blocking issues.
 
 ### Screenshot: Initial SSH Connection and Hostname Verification
+<img width="1031" height="629" alt="image" src="https://github.com/user-attachments/assets/c5c47667-ded1-4990-827a-f796e9f8a2b3" />
 
-```
-# [SCREENSHOT PLACEHOLDER]
-# Caption: Successful SSH connection from thor@jumphost to natasha@ststor01
-# Command shown: ssh natasha@ststor01 && hostname
-# Expected output: ststor01.stratos.xfusioncorp.com
+>#### Caption: Successful SSH connection from thor@jumphost to natasha@ststor01
+>#### Command shown: ssh natasha@ststor01 && hostname
+>#### Expected output: ststor01.stratos.xfusioncorp.com
 ```
 
 ---
@@ -455,7 +454,7 @@ sudo git push origin master
 
 
 <img width="1034" height="441" alt="image" src="https://github.com/user-attachments/assets/af65ed23-82b7-43e4-a316-2d34cb0d29a9" />
-<img width="1031" height="629" alt="image" src="https://github.com/user-attachments/assets/c5c47667-ded1-4990-827a-f796e9f8a2b3" />
+
 <img width="1023" height="676" alt="image" src="https://github.com/user-attachments/assets/bd8b2587-38e2-48e1-a891-d989456cfd89" />
 <img width="1034" height="617" alt="image" src="https://github.com/user-attachments/assets/6057fdc1-596e-4bbb-99a1-367b9adf1e6c" />
 <img width="1037" height="538" alt="image" src="https://github.com/user-attachments/assets/ab0f421f-0c9c-46b8-9a3a-0aee816a5e2e" />
