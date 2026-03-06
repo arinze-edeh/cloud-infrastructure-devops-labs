@@ -1,5 +1,5 @@
 # AWS Lambda Serverless Function Deployment
-#### Deploying a Python-based Greeting Function Using AWS Console and IAM Role Configuration
+>#### Deploying a Python-based Greeting Function Using AWS Console and IAM Role Configuration
 
 ---
 
