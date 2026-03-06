@@ -323,11 +323,10 @@ This confirms `Update info.txt` is now the latest commit on the local `master` b
 
 ### Screenshot: Git Log Confirming Cherry-Pick on Master
 
-```
-### [SCREENSHOT PLACEHOLDER]
+<img width="1038" height="399" alt="image" src="https://github.com/user-attachments/assets/3e3f990f-2617-4bf9-b674-774bb2bbad9d" />
+
 ### Caption: sudo git log --oneline showing b8d9e80 at HEAD on master
 ### Key detail: origin/master still at 34cf452, confirming the push has not happened yet
-```
 
 ---
 
