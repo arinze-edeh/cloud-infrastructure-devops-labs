@@ -259,11 +259,10 @@ d1a149c Update info.txt
 
 ### Screenshot: Git Log Showing Branch State and Target Commit
 
-```
-## [SCREENSHOT PLACEHOLDER]
-## Caption: git log --oneline output showing all four commits
-## Key detail: d1a149c is the cherry-pick target; origin/master is two commits behind HEAD
-```
+<img width="1038" height="399" alt="image" src="https://github.com/user-attachments/assets/23ed235d-0816-4950-baf6-12e44e3eab81" />
+
+>#### Caption: git log --oneline output showing all four commits
+>#### Key detail: d1a149c is the cherry-pick target; origin/master is two commits behind HEAD
 
 ---
 
@@ -460,5 +459,5 @@ sudo git push origin master
 <img width="1035" height="781" alt="image" src="https://github.com/user-attachments/assets/751b0def-fabb-4a42-8f9b-18bab06ed0e1" />
 
 <img width="1038" height="347" alt="image" src="https://github.com/user-attachments/assets/6a97427e-44e5-4e1a-885f-2edd5f68422e" />
-<img width="1038" height="399" alt="image" src="https://github.com/user-attachments/assets/23ed235d-0816-4950-baf6-12e44e3eab81" />
+
 
