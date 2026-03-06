@@ -326,8 +326,8 @@ This confirms `Update info.txt` is now the latest commit on the local `master` b
 
 <img width="1038" height="399" alt="image" src="https://github.com/user-attachments/assets/3e3f990f-2617-4bf9-b674-774bb2bbad9d" />
 
-### Caption: sudo git log --oneline showing b8d9e80 at HEAD on master
-### Key detail: origin/master still at 34cf452, confirming the push has not happened yet
+>#### Caption: sudo git log --oneline showing b8d9e80 at HEAD on master
+>#### Key detail: origin/master still at 34cf452, confirming the push has not happened yet
 
 ---
 
@@ -377,15 +377,10 @@ b8d9e80 (HEAD -> master, origin/master) Update info.txt
 3d326be initial commit
 ```
 
-Both `HEAD -> master` and `origin/master` pointing to `b8d9e80` confirms the local and remote branches are fully synchronised with the cherry-picked commit applied.
+>Both `HEAD -> master` and `origin/master` pointing to `b8d9e80` confirms the local and remote branches are fully synchronised with the cherry-picked commit applied.
 
-### Screenshot: Final Verification of Remote Master State
-
-```
-### [SCREENSHOT PLACEHOLDER]
-### Caption: git log showing both master and origin/master pointing to b8d9e80
-### This is the terminal success state for the task
-```
+>#### Caption: git log showing both master and origin/master pointing to b8d9e80
+>#### This is the terminal success state for the task
 
 ---
 
