@@ -57,7 +57,7 @@ The task required cherry-picking the commit with message `Update info.txt` from 
 >#### Command shown: ssh natasha@ststor01 && hostname
 >#### Expected output: ststor01.stratos.xfusioncorp.com
 
-```
+
 
 ## Root Cause Analysis
 
