@@ -302,7 +302,8 @@ And the success message:
 "Successfully updated the function nautilus-lambda"
 ```
 
-***Screenshot Placeholder: Lambda VS Code editor showing the complete 7-line function code with `DEPLOY - Current` status confirmed in the left panel and green success banner visible at the top***
+***Screenshot: Lambda VS Code editor showing the complete 7-line function code with `DEPLOY - Current` status confirmed in the left panel and green success banner visible at the top***
+<img width="1817" height="949" alt="image" src="https://github.com/user-attachments/assets/8a701c51-ba0e-43a4-8a2b-9080bb280ea6" />
 
 ---
 
@@ -446,7 +447,7 @@ Wrapping the response body in `json.dumps()` ensures the Lambda response conform
 <img width="1817" height="948" alt="image" src="https://github.com/user-attachments/assets/6f3d8afe-bb24-446f-abc2-b7f616b8e1b8" />
 
 <img width="1825" height="945" alt="image" src="https://github.com/user-attachments/assets/3321b7ed-67b4-4e35-ab0d-89b5fdee2eed" />
-<img width="1817" height="949" alt="image" src="https://github.com/user-attachments/assets/8a701c51-ba0e-43a4-8a2b-9080bb280ea6" />
+
 <img width="1820" height="949" alt="image" src="https://github.com/user-attachments/assets/46ee17ba-84f9-41b5-ab72-7bb8ea84e86a" />
 <img width="1818" height="944" alt="image" src="https://github.com/user-attachments/assets/96e58a63-54c1-42d7-9b62-3996d75bef3a" />
 
