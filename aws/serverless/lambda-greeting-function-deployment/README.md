@@ -369,8 +369,6 @@ Response:
 
 ## Verification Checklist
 
-Run through all items before marking the lab complete:
-
 ```
  1.  Logged in as kk_labs_user_258590
  2.  Region locked to us-east-1 throughout all phases
@@ -385,8 +383,6 @@ Run through all items before marking the lab complete:
  11. statusCode is integer 200 (not string "200")
  12. body contains exact text: Welcome to KKE AWS Labs!
 ```
-
-**All 12 items must be confirmed before submission.**
 
 ---
 
