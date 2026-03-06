@@ -117,7 +117,7 @@ https://316890205783.signin.aws.amazon.com/console?region=us-east-1
 
 ```
 IAM user name : kk_labs_user_258590
-Password      : OJd^f^Si%7rq
+Password      : 
 ```
 
 **Step 1.3** Confirm the region in the top-right navigation bar reads:
@@ -128,7 +128,8 @@ United States (N. Virginia) -- us-east-1
 
 > **Critical:** IAM is a global service and displays "Global" in the region selector. Once you navigate to Lambda, the region selector must revert to `us-east-1`. Verify this before every resource creation action.
 
-***Screenshot Placeholder: AWS Console landing page showing `N. Virginia` region confirmed in top-right navigation bar***
+***Screenshot: AWS Console landing page showing `N. Virginia` region confirmed in top-right navigation bar***
+<img width="1819" height="942" alt="image" src="https://github.com/user-attachments/assets/7791a788-f67c-4c21-bc7c-ea4268e34c33" />
 
 ---
 
@@ -430,7 +431,7 @@ Wrapping the response body in `json.dumps()` ensures the Lambda response conform
 *AWS Region: us-east-1 | Runtime: Python 3.12*
 
 
-<img width="1819" height="942" alt="image" src="https://github.com/user-attachments/assets/7791a788-f67c-4c21-bc7c-ea4268e34c33" />
+
 <img width="1818" height="948" alt="image" src="https://github.com/user-attachments/assets/37fc5f9d-2e9e-4e94-b14c-cb7b8473e24c" />
 <img width="1817" height="947" alt="image" src="https://github.com/user-attachments/assets/235e574a-32d9-4ba8-a0f3-12e7cba6c8b3" />
 <img width="1840" height="941" alt="image" src="https://github.com/user-attachments/assets/50adeaee-ed24-4af2-8e79-ef59f75f7477" />
