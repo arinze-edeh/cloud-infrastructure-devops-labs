@@ -363,11 +363,10 @@ The ref update line `34cf452..b8d9e80 master -> master` confirms the remote `mas
 
 ### Screenshot: Push Output Confirming Remote Update
 
-```
-## [SCREENSHOT PLACEHOLDER]
-## Caption: sudo git push origin master output showing ref update 34cf452..b8d9e80
-## Key detail: 'To /opt/official.git' confirms push target is the correct bare remote
-```
+<img width="1032" height="432" alt="image" src="https://github.com/user-attachments/assets/01a3893e-7c51-40f9-a8a8-b7485022ea0e" />
+
+>#### Caption: sudo git push origin master output showing ref update 34cf452..b8d9e80
+>#### Key detail: 'To /opt/official.git' confirms push target is the correct bare remote
 
 ---
 
@@ -468,4 +467,4 @@ sudo git push origin master
 <img width="1035" height="507" alt="image" src="https://github.com/user-attachments/assets/32730dd0-7be4-4334-8c3f-54a90b6d0159" />
 <img width="1038" height="347" alt="image" src="https://github.com/user-attachments/assets/6a97427e-44e5-4e1a-885f-2edd5f68422e" />
 <img width="1038" height="399" alt="image" src="https://github.com/user-attachments/assets/23ed235d-0816-4950-baf6-12e44e3eab81" />
-<img width="1032" height="432" alt="image" src="https://github.com/user-attachments/assets/01a3893e-7c51-40f9-a8a8-b7485022ea0e" />
+
