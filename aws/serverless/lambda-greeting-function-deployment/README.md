@@ -1,5 +1,5 @@
 # AWS Lambda Serverless Function Deployment
-### Deploying a Python-based Greeting Function Using AWS Console and IAM Role Configuration
+>#### Deploying a Python-based Greeting Function Using AWS Console and IAM Role Configuration
 
 ---
 
@@ -129,6 +129,7 @@ United States (N. Virginia) -- us-east-1
 > **Critical:** IAM is a global service and displays "Global" in the region selector. Once you navigate to Lambda, the region selector must revert to `us-east-1`. Verify this before every resource creation action.
 
 ***Screenshot: AWS Console landing page showing `N. Virginia` region confirmed in top-right navigation bar***
+
 <img width="1819" height="942" alt="image" src="https://github.com/user-attachments/assets/7791a788-f67c-4c21-bc7c-ea4268e34c33" />
 
 ---
@@ -157,6 +158,7 @@ Use case            : Lambda  (select "Lambda" radio button)
 ```
 
 ***Screenshot: IAM "Select trusted entity" screen with `AWS service` selected and `Lambda` use case highlighted***
+
 <img width="1840" height="941" alt="image" src="https://github.com/user-attachments/assets/50adeaee-ed24-4af2-8e79-ef59f75f7477" />
 
 **Step 2.4** Attach the execution policy:
@@ -184,6 +186,7 @@ Role name : lambda_execution_role
 ```
 
 ***Screenshot: IAM role summary page showing green success banner, `lambda_execution_role` name, `AWSLambdaBasicExecutionRole` policy attached, and Type column confirming `AWS managed`***
+
 <img width="1823" height="947" alt="image" src="https://github.com/user-attachments/assets/d89b3ef7-25f3-4a85-9052-f3270dcc81de" />
 
 ---
@@ -230,6 +233,7 @@ Existing role   : lambda_execution_role
 ```
 
 ***Screenshots: Lambda "Create function" form showing function name `nautilus-lambda`, runtime `Python 3.12`, and `lambda_execution_role` selected in the execution role dropdown***
+
 <img width="1824" height="946" alt="image" src="https://github.com/user-attachments/assets/a37da81c-9b56-436e-b105-3cb5493ae6e0" />
 <img width="1821" height="948" alt="image" src="https://github.com/user-attachments/assets/2468a4bd-107f-4da2-a1f0-64f1050bc652" />
 
@@ -303,6 +307,7 @@ And the success message:
 ```
 
 ***Screenshot: Lambda VS Code editor showing the complete 7-line function code with `DEPLOY - Current` status confirmed in the left panel and green success banner visible at the top***
+
 <img width="1817" height="949" alt="image" src="https://github.com/user-attachments/assets/8a701c51-ba0e-43a4-8a2b-9080bb280ea6" />
 
 ---
@@ -364,6 +369,7 @@ Response:
 > **Note:** The escaped quotes `\"` surrounding the body string are expected behavior. `json.dumps()` serializes the Python string into a JSON-safe format. This is not an error.
 
 ***Screenshot: Lambda test OUTPUT panel showing `Status: Succeeded`, `statusCode: 200`, and `body: "\"Welcome to KKE AWS Labs!\""` with the `DEPLOY - Current` and `Lambda Deployed` status confirmations visible***
+
 <img width="1818" height="944" alt="image" src="https://github.com/user-attachments/assets/0c452a80-1d5a-4243-bb14-411c59155aee" />
 
 ---
