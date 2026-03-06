@@ -85,11 +85,10 @@ drwxr-xr-x 3 root root 4096 Mar  6 05:29 official
 
 ### Screenshot: Directory Listing Revealing Subdirectory
 
-```
-## [SCREENSHOT PLACEHOLDER]
-## Caption: ls -la output showing the 'official' subdirectory inside /usr/src/kodekloudrepos
-## Key detail: All entries owned by root:root
-```
+<img width="1037" height="538" alt="image" src="https://github.com/user-attachments/assets/ab0f421f-0c9c-46b8-9a3a-0aee816a5e2e" />
+
+>#### Caption: ls -la output showing the 'official' subdirectory inside /usr/src/kodekloudrepos
+>#### Key detail: All entries owned by root:root
 
 ---
 
@@ -456,7 +455,7 @@ sudo git push origin master
 
 <img width="1023" height="676" alt="image" src="https://github.com/user-attachments/assets/bd8b2587-38e2-48e1-a891-d989456cfd89" />
 <img width="1034" height="617" alt="image" src="https://github.com/user-attachments/assets/6057fdc1-596e-4bbb-99a1-367b9adf1e6c" />
-<img width="1037" height="538" alt="image" src="https://github.com/user-attachments/assets/ab0f421f-0c9c-46b8-9a3a-0aee816a5e2e" />
+
 <img width="999" height="350" alt="image" src="https://github.com/user-attachments/assets/4e29e0e1-7b48-4541-b15c-008c40eb5b15" />
 <img width="1032" height="646" alt="image" src="https://github.com/user-attachments/assets/725bd7d0-a0e8-4679-bbaa-ec80fc247849" />
 <img width="1032" height="655" alt="image" src="https://github.com/user-attachments/assets/e8282d7d-6e13-4420-9855-afbbd119ad59" />
