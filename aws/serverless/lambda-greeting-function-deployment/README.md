@@ -244,6 +244,7 @@ Existing role   : lambda_execution_role
 ```
 
 ***Screenshot: Lambda function overview page showing green success banner, function ARN `arn:aws:lambda:us-east-1:316890205783:function:nautilus-lambda`, and region confirming `us-east-1`***
+
 <img width="1818" height="949" alt="image" src="https://github.com/user-attachments/assets/71cf299b-3d7b-4958-9f99-45711dbb15b1" />
 
 ---
