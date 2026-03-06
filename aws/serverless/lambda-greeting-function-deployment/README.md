@@ -229,7 +229,9 @@ Execution role  : Use an existing role
 Existing role   : lambda_execution_role
 ```
 
-***Screenshot Placeholder: Lambda "Create function" form showing function name `nautilus-lambda`, runtime `Python 3.12`, and `lambda_execution_role` selected in the execution role dropdown***
+***Screenshots: Lambda "Create function" form showing function name `nautilus-lambda`, runtime `Python 3.12`, and `lambda_execution_role` selected in the execution role dropdown***
+<img width="1824" height="946" alt="image" src="https://github.com/user-attachments/assets/a37da81c-9b56-436e-b105-3cb5493ae6e0" />
+<img width="1821" height="948" alt="image" src="https://github.com/user-attachments/assets/2468a4bd-107f-4da2-a1f0-64f1050bc652" />
 
 **Step 3.7** Click **Create function** and confirm:
 
@@ -237,7 +239,8 @@ Existing role   : lambda_execution_role
 "Successfully created the function nautilus-lambda"
 ```
 
-***Screenshot Placeholder: Lambda function overview page showing green success banner, function ARN `arn:aws:lambda:us-east-1:316890205783:function:nautilus-lambda`, and region confirming `us-east-1`***
+***Screenshot: Lambda function overview page showing green success banner, function ARN `arn:aws:lambda:us-east-1:316890205783:function:nautilus-lambda`, and region confirming `us-east-1`***
+<img width="1818" height="949" alt="image" src="https://github.com/user-attachments/assets/71cf299b-3d7b-4958-9f99-45711dbb15b1" />
 
 ---
 
@@ -444,9 +447,7 @@ Wrapping the response body in `json.dumps()` ensures the Lambda response conform
 
 <img width="1820" height="949" alt="image" src="https://github.com/user-attachments/assets/a444870a-96f8-4a8b-aa88-160cf200ec59" />
 <img width="1817" height="948" alt="image" src="https://github.com/user-attachments/assets/6f3d8afe-bb24-446f-abc2-b7f616b8e1b8" />
-<img width="1824" height="946" alt="image" src="https://github.com/user-attachments/assets/a37da81c-9b56-436e-b105-3cb5493ae6e0" />
-<img width="1821" height="948" alt="image" src="https://github.com/user-attachments/assets/2468a4bd-107f-4da2-a1f0-64f1050bc652" />
-<img width="1818" height="949" alt="image" src="https://github.com/user-attachments/assets/71cf299b-3d7b-4958-9f99-45711dbb15b1" />
+
 <img width="1825" height="945" alt="image" src="https://github.com/user-attachments/assets/3321b7ed-67b4-4e35-ab0d-89b5fdee2eed" />
 <img width="1817" height="949" alt="image" src="https://github.com/user-attachments/assets/8a701c51-ba0e-43a4-8a2b-9080bb280ea6" />
 <img width="1820" height="949" alt="image" src="https://github.com/user-attachments/assets/46ee17ba-84f9-41b5-ab72-7bb8ea84e86a" />
