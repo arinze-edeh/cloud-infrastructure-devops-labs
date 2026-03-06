@@ -362,7 +362,8 @@ Response:
 
 > **Note:** The escaped quotes `\"` surrounding the body string are expected behavior. `json.dumps()` serializes the Python string into a JSON-safe format. This is not an error.
 
-***Screenshot Placeholder: Lambda test OUTPUT panel showing `Status: Succeeded`, `statusCode: 200`, and `body: "\"Welcome to KKE AWS Labs!\""` with the `DEPLOY - Current` and `Lambda Deployed` status confirmations visible***
+***Screenshot: Lambda test OUTPUT panel showing `Status: Succeeded`, `statusCode: 200`, and `body: "\"Welcome to KKE AWS Labs!\""` with the `DEPLOY - Current` and `Lambda Deployed` status confirmations visible***
+<img width="1818" height="944" alt="image" src="https://github.com/user-attachments/assets/0c452a80-1d5a-4243-bb14-411c59155aee" />
 
 ---
 
@@ -371,18 +372,18 @@ Response:
 Run through all items before marking the lab complete:
 
 ```
-[ ] 1.  Logged in as kk_labs_user_258590
-[ ] 2.  Region locked to us-east-1 throughout all phases
-[ ] 3.  IAM role lambda_execution_role created successfully
-[ ] 4.  AWSLambdaBasicExecutionRole policy attached (AWS managed)
-[ ] 5.  Lambda function named nautilus-lambda
-[ ] 6.  Runtime set to Python 3.12
-[ ] 7.  Function execution role set to lambda_execution_role
-[ ] 8.  Code deployed -- DEPLOY status shows "Current"
-[ ] 9.  Test event testEvent created and saved
-[ ] 10. Test invocation status shows "Succeeded"
-[ ] 11. statusCode is integer 200 (not string "200")
-[ ] 12. body contains exact text: Welcome to KKE AWS Labs!
+ 1.  Logged in as kk_labs_user_258590
+ 2.  Region locked to us-east-1 throughout all phases
+ 3.  IAM role lambda_execution_role created successfully
+ 4.  AWSLambdaBasicExecutionRole policy attached (AWS managed)
+ 5.  Lambda function named nautilus-lambda
+ 6.  Runtime set to Python 3.12
+ 7.  Function execution role set to lambda_execution_role
+ 8.  Code deployed -- DEPLOY status shows "Current"
+ 9.  Test event testEvent created and saved
+ 10. Test invocation status shows "Succeeded"
+ 11. statusCode is integer 200 (not string "200")
+ 12. body contains exact text: Welcome to KKE AWS Labs!
 ```
 
 **All 12 items must be confirmed before submission.**
@@ -452,4 +453,4 @@ Wrapping the response body in `json.dumps()` ensures the Lambda response conform
 <img width="1817" height="949" alt="image" src="https://github.com/user-attachments/assets/8a701c51-ba0e-43a4-8a2b-9080bb280ea6" />
 <img width="1820" height="949" alt="image" src="https://github.com/user-attachments/assets/46ee17ba-84f9-41b5-ab72-7bb8ea84e86a" />
 <img width="1818" height="944" alt="image" src="https://github.com/user-attachments/assets/96e58a63-54c1-42d7-9b62-3996d75bef3a" />
-<img width="1818" height="944" alt="image" src="https://github.com/user-attachments/assets/0c452a80-1d5a-4243-bb14-411c59155aee" />
+
