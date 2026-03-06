@@ -183,7 +183,8 @@ Role name : lambda_execution_role
 "Role lambda_execution_role created."
 ```
 
-***Screenshot Placeholder: IAM role summary page showing green success banner, `lambda_execution_role` name, `AWSLambdaBasicExecutionRole` policy attached, and Type column confirming `AWS managed`***
+***Screenshot: IAM role summary page showing green success banner, `lambda_execution_role` name, `AWSLambdaBasicExecutionRole` policy attached, and Type column confirming `AWS managed`***
+<img width="1823" height="947" alt="image" src="https://github.com/user-attachments/assets/d89b3ef7-25f3-4a85-9052-f3270dcc81de" />
 
 ---
 
@@ -440,7 +441,7 @@ Wrapping the response body in `json.dumps()` ensures the Lambda response conform
 <img width="1817" height="945" alt="image" src="https://github.com/user-attachments/assets/9090d0eb-46fc-4aa6-91df-6539c41a54b1" />
 <img width="1815" height="947" alt="image" src="https://github.com/user-attachments/assets/8b5ee865-4d6c-4644-8c35-c54bf9152ac4" />
 <img width="1818" height="947" alt="image" src="https://github.com/user-attachments/assets/65954ac0-208e-4b20-9804-ef1272ebf77b" />
-<img width="1823" height="947" alt="image" src="https://github.com/user-attachments/assets/d89b3ef7-25f3-4a85-9052-f3270dcc81de" />
+
 <img width="1820" height="949" alt="image" src="https://github.com/user-attachments/assets/a444870a-96f8-4a8b-aa88-160cf200ec59" />
 <img width="1817" height="948" alt="image" src="https://github.com/user-attachments/assets/6f3d8afe-bb24-446f-abc2-b7f616b8e1b8" />
 <img width="1824" height="946" alt="image" src="https://github.com/user-attachments/assets/a37da81c-9b56-436e-b105-3cb5493ae6e0" />
