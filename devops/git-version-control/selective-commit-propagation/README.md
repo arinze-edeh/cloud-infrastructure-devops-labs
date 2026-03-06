@@ -297,11 +297,10 @@ Note that a new commit hash (`b8d9e80`) is generated. This is expected behaviour
 
 ### Screenshot: Successful Cherry-Pick Output
 
-```
-## [SCREENSHOT PLACEHOLDER]
-## Caption: sudo git cherry-pick d1a149c succeeding with new commit hash b8d9e80
-## Key detail: '1 file changed, 1 insertion(+), 1 deletion(-)' confirms correct file was modified
-```
+<img width="1038" height="347" alt="image" src="https://github.com/user-attachments/assets/6a97427e-44e5-4e1a-885f-2edd5f68422e" />
+
+>#### Caption: sudo git cherry-pick d1a149c succeeding with new commit hash b8d9e80
+>#### Key detail: '1 file changed, 1 insertion(+), 1 deletion(-)' confirms correct file was modified
 
 ---
 
@@ -458,6 +457,6 @@ sudo git push origin master
 
 <img width="1035" height="781" alt="image" src="https://github.com/user-attachments/assets/751b0def-fabb-4a42-8f9b-18bab06ed0e1" />
 
-<img width="1038" height="347" alt="image" src="https://github.com/user-attachments/assets/6a97427e-44e5-4e1a-885f-2edd5f68422e" />
+
 
 
