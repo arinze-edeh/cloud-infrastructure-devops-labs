@@ -1,3 +1,413 @@
+# Azure Public VNet Infrastructure Deployment
+
+![Azure](https://img.shields.io/badge/Azure-Cloud-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Status](https://img.shields.io/badge/Deployment-Production_Ready-28a745?style=for-the-badge)
+![Region](https://img.shields.io/badge/Region-East_US-0078D4?style=for-the-badge)
+
+---
+
+## Table of Contents
+
+* [Project Overview](#project-overview)
+* [Architecture](#architecture)
+* [Problem Statement](#problem-statement)
+* [Prerequisites](#prerequisites)
+* [Infrastructure Components](#infrastructure-components)
+* [Deployment Guide](#deployment-guide)
+* [Known Issues and Resolutions](#known-issues-and-resolutions)
+* [Verification and Validation](#verification-and-validation)
+* [Security Considerations](#security-considerations)
+* [Contributing](#contributing)
+
+---
+
+## Project Overview
+
+This repository documents the end-to-end deployment of a **public-facing Azure Virtual Network (VNet)** infrastructure designed to host internet-accessible services. The setup provisions a dedicated VNet, a public subnet with automatic IP assignment, and a Linux virtual machine accessible over SSH, all within the Azure **East US** region.
+
+This implementation was executed as part of a DevOps networking task assigned to the **Nautilus DevOps Team** by the **Networking Team**, with the objective of enabling scalable, managed deployment of public-facing applications.
+
+---
+
+## Architecture
+
+```
+Azure Subscription (Azure Free Labs)
++
++-- Resource Group: kml_rg_main-562bad02c40d498b
+    |
+    +-- Virtual Network: devops-pub-vnet (10.0.0.0/16)
+    |   |
+    |   +-- Subnet: devops-pub-subnet (10.0.0.0/24)
+    |       |
+    |       +-- VM NIC: devops-pub-vm530
+    |       +-- Private IP: 10.0.0.5
+    |
+    +-- Virtual Machine: devops-pub-vm
+    |   +-- OS: Ubuntu 24.04 LTS (x64)
+    |   +-- Size: Standard_B1s (1 vCPU, 1 GiB RAM)
+    |   +-- OS Disk: Standard HDD (LRS)
+    |   +-- Security Type: Standard
+    |
+    +-- Public IP: 13.68.188.64
+    +-- NSG: devops-pub-vm-nsg
+        +-- Inbound Rule: TCP Port 22 (SSH) -- Allow
+```
+
+---
+
+## Problem Statement
+
+The Networking Team required a publicly accessible virtual network environment on Azure to support a set of internet-facing services. The key requirements were:
+
+* A named public VNet (`devops-pub-vnet`) in the **East US** region
+* A subnet (`devops-pub-subnet`) with automatic public IP assignment enabled for resources
+* A virtual machine (`devops-pub-vm`) hosted within the VNet
+* SSH access on **port 22** open and reachable from the internet
+* All resources provisioned under the existing resource group
+
+---
+
+## Prerequisites
+
+### Azure Access
+
+| Requirement | Detail |
+|---|---|
+| Azure Portal Access | https://portal.azure.com |
+| Subscription | Azure Free Labs |
+| Resource Group | `kml_rg_main-562bad02c40d498b` |
+| Required Role | Contributor or Owner on the subscription |
+
+### Technical Requirements
+
+* A modern web browser (Chrome, Edge, Firefox)
+* Active Azure account credentials
+* Basic familiarity with Azure Portal navigation
+
+---
+
+## Infrastructure Components
+
+### Virtual Network
+
+| Property | Value |
+|---|---|
+| Name | `devops-pub-vnet` |
+| Region | East US |
+| Address Space | `10.0.0.0/16` |
+| DNS Servers | Default (Azure-provided) |
+| Azure Bastion | Disabled |
+| Azure Firewall | Disabled |
+| DDoS Protection | Disabled |
+
+### Subnet
+
+| Property | Value |
+|---|---|
+| Name | `devops-pub-subnet` |
+| Address Range | `10.0.0.0/24` |
+| Available Addresses | 256 |
+| Private Subnet | Disabled (public outbound access enabled) |
+| NAT Gateway | None |
+
+### Virtual Machine
+
+| Property | Value |
+|---|---|
+| Name | `devops-pub-vm` |
+| Operating System | Ubuntu Server 24.04 LTS |
+| VM Generation | V2 |
+| Architecture | x64 |
+| Size | Standard_B1s (1 vCPU, 1 GiB RAM) |
+| OS Disk Type | Standard HDD (Locally Redundant Storage) |
+| Authentication | Password-based |
+| Admin Username | `azureuser` |
+| Public IP | `13.68.188.64` (Dynamic) |
+| Private IP | `10.0.0.5` |
+| Security Type | Standard |
+
+### Network Security Group (NSG)
+
+| Rule | Priority | Port | Protocol | Direction | Action |
+|---|---|---|---|---|---|
+| Allow SSH | 300 | 22 | TCP | Inbound | Allow |
+
+---
+
+## Deployment Guide
+
+### Phase 1 -- Create the Virtual Network
+
+**Step 1: Navigate to Virtual Networks**
+
+1. Log in to the Azure Portal at https://portal.azure.com
+2. In the top search bar, type **Virtual Networks** and select it
+3. Click **+ Create**
+
+**Step 2: Configure the Basics Tab**
+
+Fill in the following values:
+
+* **Subscription:** Azure Free Labs
+* **Resource Group:** `kml_rg_main-562bad02c40d498b`
+* **Name:** `devops-pub-vnet`
+* **Region:** (US) East US
+
+> ***Screenshot Placeholder -- VNet Basics Tab***
+> `![VNet Basics](screenshots/01-vnet-basics-tab.png)`
+
+**Step 3: Configure IP Addresses Tab**
+
+1. Retain the default address space `10.0.0.0/16`
+2. Click **+ Add a subnet** or edit the default subnet
+3. Set the subnet name to `devops-pub-subnet`
+4. Set starting address to `10.0.0.0` and size to `/24`
+5. Ensure **Enable private subnet** is **unchecked**
+6. Leave NAT gateway as **None**
+7. Click **Save**
+
+> ***Screenshot Placeholder -- Subnet Configuration Panel***
+> `![Subnet Config](screenshots/02-subnet-edit-panel.png)`
+
+**Step 4: Review and Create**
+
+1. Skip Security and Tags tabs (leave defaults)
+2. Click **Review + create**
+3. Verify validation passes
+4. Click **Create**
+
+> ***Screenshot Placeholder -- VNet Review Page (Validation Passed)***
+> `![VNet Review](screenshots/03-vnet-review-create.png)`
+
+> ***Screenshot Placeholder -- VNet Deployment Complete***
+> `![VNet Deployed](screenshots/04-vnet-deployment-complete.png)`
+
+---
+
+### Phase 2 -- Create the Virtual Machine
+
+**Step 1: Navigate to Virtual Machines**
+
+1. Search for **Virtual machines** in the top search bar
+2. Click **+ Create** then select **Azure virtual machine**
+
+**Step 2: Configure the Basics Tab**
+
+| Field | Value |
+|---|---|
+| Subscription | Azure Free Labs |
+| Resource Group | `kml_rg_main-562bad02c40d498b` |
+| Virtual machine name | `devops-pub-vm` |
+| Region | (US) East US |
+| Availability options | No infrastructure redundancy required |
+| Security type | **Standard** |
+| Image | Ubuntu Server 24.04 LTS x64 Gen2 |
+| Size | Standard_B1s |
+| Authentication type | Password |
+| Username | `azureuser` |
+| Public inbound ports | Allow selected ports |
+| Select inbound ports | SSH (22) |
+
+> ***Screenshot Placeholder -- VM Basics Tab (Upper Section)***
+> `![VM Basics Top](screenshots/05-vm-basics-upper.png)`
+
+> ***Screenshot Placeholder -- VM Administrator Account and Inbound Ports***
+> `![VM Basics Bottom](screenshots/06-vm-basics-lower.png)`
+
+**Step 3: Configure the Disks Tab**
+
+* **OS disk size:** Image default (30 GiB)
+* **OS disk type:** `Standard HDD (locally-redundant storage)`
+* **Delete with VM:** Checked
+
+> ***Screenshot Placeholder -- VM Disks Tab (Standard HDD Selected)***
+> `![VM Disks](screenshots/07-vm-disks-tab.png)`
+
+**Step 4: Configure the Networking Tab**
+
+| Field | Value |
+|---|---|
+| Virtual network | `devops-pub-vnet` |
+| Subnet | `devops-pub-subnet (10.0.0.0/24)` |
+| Public IP | (new) auto-assigned |
+| NIC network security group | Basic |
+| Public inbound ports | Allow selected ports |
+| Select inbound ports | SSH (22) |
+
+> ***Screenshot Placeholder -- VM Networking Tab (All Fields Populated)***
+> `![VM Networking](screenshots/08-vm-networking-tab.png)`
+
+**Step 5: Review and Create**
+
+1. Click **Review + create**
+2. Confirm validation passes
+3. Click **Create**
+4. Wait approximately 2 to 3 minutes for deployment to complete
+
+> ***Screenshot Placeholder -- VM Deployment Complete***
+> `![VM Deployed](screenshots/09-vm-deployment-complete.png)`
+
+---
+
+## Known Issues and Resolutions
+
+### Issue 1 -- VM Deployment Failed with `RequestDisallowedByPolicy`
+
+**Symptom**
+
+The VM deployment failed at the disk provisioning stage with the following error:
+
+```json
+{
+  "status": "Failed",
+  "error": {
+    "code": "RequestDisallowedByPolicy",
+    "message": "Resource 'devops-pub-vm-disk1_...' was disallowed by policy."
+  }
+}
+```
+
+The deployment details showed the VM itself in **Conflict** state while the NIC, NSG, and Public IP all succeeded.
+
+> ***Screenshot Placeholder -- Deployment Failed Error Screen***
+> `![Deploy Failed](screenshots/10-deployment-failed-error.png)`
+
+**Root Cause**
+
+The Azure Free Labs subscription enforces a policy (`global-limits-free_...`) that **disallows Premium SSD and Standard SSD** disk types. The default disk type selected during VM creation was incompatible with this policy constraint.
+
+**Resolution**
+
+1. Delete only the failed VM resource (retain NIC, NSG, and Public IP)
+2. Recreate the VM with **OS disk type set to Standard HDD (locally-redundant storage)**
+3. Reuse the existing networking resources to avoid naming conflicts
+
+> ***Screenshot Placeholder -- Delete VM Confirmation Dialog***
+> `![Delete VM](screenshots/11-delete-vm-confirmation.png)`
+
+> ***Screenshot Placeholder -- Disks Tab with Standard HDD Selected***
+> `![Standard HDD Fix](screenshots/12-disk-type-standard-hdd.png)`
+
+**Outcome**
+
+Deployment succeeded on the second attempt with Standard HDD selected.
+
+---
+
+### Issue 2 -- Azure Spot Discount Error
+
+**Symptom**
+
+After navigating back to the VM creation form, the **"Run with Azure Spot discount"** checkbox was accidentally enabled, causing the error:
+
+```
+This size does not support Azure Spot.
+```
+
+**Root Cause**
+
+Standard_B1s does not support Azure Spot pricing in this subscription tier.
+
+**Resolution**
+
+Scroll up on the Basics tab and uncheck **"Run with Azure Spot discount"**. The size field will return to normal and the error will clear.
+
+---
+
+### Issue 3 -- OS Disk Type Field Shows Loading State
+
+**Symptom**
+
+On the Disks tab, the **OS disk type** dropdown showed a blank loading state immediately after navigating from the Basics tab.
+
+**Root Cause**
+
+Azure Portal requires a brief moment to resolve available disk SKUs based on VM size and region policy constraints.
+
+**Resolution**
+
+Wait 3 to 5 seconds for the field to populate, then manually select **Standard HDD** before proceeding.
+
+---
+
+## Verification and Validation
+
+### VM Health Check
+
+After deployment, navigate to **Virtual Machines** and open `devops-pub-vm`. Verify the following:
+
+| Property | Expected Value | Verified |
+|---|---|---|
+| Status | Running | [x] |
+| Agent Status | Ready | [x] |
+| Public IP | Assigned (non-null) | [x] |
+| VNet / Subnet | `devops-pub-vnet / devops-pub-subnet` | [x] |
+| OS Disk | Present (named disk, not `-`) | [x] |
+| Security Type | Standard | [x] |
+
+> ***Screenshot Placeholder -- VM Overview Page (Running State)***
+> `![VM Overview](screenshots/13-vm-overview-running.png)`
+
+### NSG Inbound Rules Check
+
+Navigate to **Networking** on the VM blade and verify:
+
+| Priority | Port | Protocol | Action |
+|---|---|---|---|
+| 300 (or lower) | 22 | TCP | Allow |
+
+> ***Screenshot Placeholder -- NSG Inbound Rules (Port 22 Visible)***
+> `![NSG Rules](screenshots/14-nsg-inbound-rules-port22.png)`
+
+### SSH Connectivity Test (Optional)
+
+From Azure Cloud Shell (Bash):
+
+```bash
+ssh azureuser@13.68.188.64
+# Enter the password configured during VM creation
+# Expected: Ubuntu 24.04 LTS welcome banner
+```
+
+> ***Screenshot Placeholder -- Successful SSH Login via Cloud Shell***
+> `![SSH Login](screenshots/15-ssh-login-success.png)`
+
+---
+
+## Resource Summary
+
+| Resource | Name | Type | Region | Status |
+|---|---|---|---|---|
+| Virtual Network | `devops-pub-vnet` | Microsoft.Network/virtualNetworks | East US | Active |
+| Subnet | `devops-pub-subnet` | Subnet (10.0.0.0/24) | East US | Active |
+| Virtual Machine | `devops-pub-vm` | Microsoft.Compute/virtualMachines | East US | Running |
+| Public IP | `devops-pub-vm-ip` | Microsoft.Network/publicIpAddresses | East US | Associated |
+| Network Interface | `devops-pub-vm530` | Microsoft.Network/networkInterfaces | East US | Active |
+| NSG | `devops-pub-vm-nsg` | Microsoft.Network/networkSecurityGroups | East US | Active |
+
+> ***Screenshot Placeholder -- Resource Group Overview (All 6 Resources Listed)***
+> `![Resource Group](screenshots/16-resource-group-final-state.png)`
+
+---
+
+## Security Considerations
+
+* **SSH access is open to all IP addresses (0.0.0.0/0).** This configuration is acceptable for lab and testing environments. For production workloads, restrict the SSH inbound rule source to a specific IP range or use Azure Bastion.
+* **Password authentication is enabled.** For production environments, SSH key-based authentication is strongly recommended.
+* **Private subnet is disabled.** Resources in `devops-pub-subnet` have default outbound internet access. After March 31, 2026, Azure will default new subnets to private. Review your outbound connectivity requirements before that date.
+* **Standard HDD** was used due to subscription policy constraints. For production workloads requiring higher IOPS and SLA guarantees, evaluate Premium SSD availability in the target subscription.
+
+---
+
+## Contributing
+
+1. Fork this repository
+2. Create a feature branch: `git checkout -b feature/your-feature-name`
+3. Commit your changes: `git commit -m "Add: description of change"`
+4. Push the branch: `git push origin feature/your-feature-name`
+5. Open a Pull Request with a clear description of the change and its purpose
 
 
 <img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/d3feb2a8-92fd-48e1-8e92-993791efb602" />
