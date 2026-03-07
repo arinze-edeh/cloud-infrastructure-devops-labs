@@ -191,9 +191,14 @@ az network nsg create \
 
 **Why:** The NSG must be created before rules can be added and before it can be attached to the subnet or NIC.
 
-#### Screenshot: NSG Creation Output
+#### Screenshots: NSG Creation Output
 
-> **[SCREENSHOT PLACEHOLDER]**
+
+<img width="1036" height="836" alt="image" src="https://github.com/user-attachments/assets/0a22d1fa-e905-4351-b421-9d49c58c0dd0" />
+<img width="1031" height="867" alt="image" src="https://github.com/user-attachments/assets/77280310-b895-481d-9e44-68835332b959" />
+<img width="1035" height="866" alt="image" src="https://github.com/user-attachments/assets/05e55df1-e973-4b41-8715-7e1c68a1290d" />
+<img width="1031" height="862" alt="image" src="https://github.com/user-attachments/assets/1f99b03d-68a8-47dd-a201-52bc559cbac8" />
+
 > *Capture the terminal JSON output confirming NSG provisioning state is `Succeeded` and showing the six default security rules auto-populated by Azure.*
 
 ---
@@ -456,10 +461,6 @@ az vm get-instance-view --resource-group $RG --name $VM_NAME \
 
 
 
-<img width="1036" height="836" alt="image" src="https://github.com/user-attachments/assets/0a22d1fa-e905-4351-b421-9d49c58c0dd0" />
-<img width="1031" height="867" alt="image" src="https://github.com/user-attachments/assets/77280310-b895-481d-9e44-68835332b959" />
-<img width="1035" height="866" alt="image" src="https://github.com/user-attachments/assets/05e55df1-e973-4b41-8715-7e1c68a1290d" />
-<img width="1031" height="862" alt="image" src="https://github.com/user-attachments/assets/1f99b03d-68a8-47dd-a201-52bc559cbac8" />
 <img width="1035" height="864" alt="image" src="https://github.com/user-attachments/assets/955d910b-a9bb-42e9-8019-6270c5439ec6" />
 <img width="1034" height="855" alt="image" src="https://github.com/user-attachments/assets/0123b2e4-5e98-4f95-bdca-768657aeaf79" />
 <img width="1035" height="862" alt="image" src="https://github.com/user-attachments/assets/a71530bc-04b0-461b-9c1e-bbbce57c62ce" />
