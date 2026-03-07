@@ -344,12 +344,12 @@ After deployment, navigate to **Virtual Machines** and open `devops-pub-vm`. Ver
 
 | Property | Expected Value | Verified |
 |---|---|---|
-| Status | Running | [x] |
-| Agent Status | Ready | [x] |
-| Public IP | Assigned (non-null) | [x] |
-| VNet / Subnet | `devops-pub-vnet / devops-pub-subnet` | [x] |
-| OS Disk | Present (named disk, not `-`) | [x] |
-| Security Type | Standard | [x] |
+| Status | Running | ✅ |
+| Agent Status | Ready | ✅ |
+| Public IP | Assigned (non-null) | ✅ |
+| VNet / Subnet | `devops-pub-vnet / devops-pub-subnet` | ✅ |
+| OS Disk | Present (named disk, not `-`) | ✅ |
+| Security Type | Standard | ✅ |
 
 > ***Screenshot Placeholder -- VM Overview Page (Running State)***
 > `![VM Overview](screenshots/13-vm-overview-running.png)`
