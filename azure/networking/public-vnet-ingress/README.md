@@ -238,8 +238,10 @@ Fill in the following values:
 | Public inbound ports | Allow selected ports |
 | Select inbound ports | SSH (22) |
 
-> ***Screenshot Placeholder -- VM Networking Tab (All Fields Populated)***
-> `![VM Networking](screenshots/08-vm-networking-tab.png)`
+***Screenshot: VM Networking Tab (All Fields Populated)***
+
+<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/6273cafa-d2ee-42a0-ae3d-52cf278b3501" />
+<img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/920bb18c-ad40-4103-9be8-69dcb5f9af63" />
 
 **Step 5: Review and Create**
 
@@ -417,8 +419,6 @@ ssh azureuser@13.68.188.64
 
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/6ba4df7c-d5bd-4fca-8d3d-1a6d97a134a7" />
 
-<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/6273cafa-d2ee-42a0-ae3d-52cf278b3501" />
-<img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/920bb18c-ad40-4103-9be8-69dcb5f9af63" />
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/30cf003d-d89a-4dfd-b508-0d724536dd4f" />
 
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/1802dde2-e889-4763-9e87-7c53fa2c6019" />
