@@ -18,7 +18,6 @@
 * [Known Issues and Resolutions](#known-issues-and-resolutions)
 * [Verification and Validation](#verification-and-validation)
 * [Security Considerations](#security-considerations)
-* [Contributing](#contributing)
 
 ---
 
