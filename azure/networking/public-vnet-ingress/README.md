@@ -352,7 +352,7 @@ After deployment, navigate to **Virtual Machines** and open `devops-pub-vm`. Ver
 | Security Type | Standard | ✅ |
 
 > ***Screenshot Placeholder -- VM Overview Page (Running State)***
-> `![VM Overview](screenshots/13-vm-overview-running.png)`
+<img width="1919" height="948" alt="image" src="https://github.com/user-attachments/assets/3ef018bf-f1e6-4ee9-9f3d-2f59e9486483" />
 
 ### NSG Inbound Rules Check
 
@@ -441,7 +441,7 @@ ssh azureuser@13.68.188.64
 <img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/1134b819-e90c-45a7-9aff-2a048cc0d3ba" />
 <img width="1919" height="955" alt="image" src="https://github.com/user-attachments/assets/96c3e60c-3090-4642-9831-e6141454d18c" />
 
-<img width="1919" height="948" alt="image" src="https://github.com/user-attachments/assets/3ef018bf-f1e6-4ee9-9f3d-2f59e9486483" />
+
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/a7c94edb-d22e-456e-bead-c8a4f5e6f509" />
 <img width="1919" height="954" alt="image" src="https://github.com/user-attachments/assets/7185ffba-831c-4d46-8777-ee8f006bd0b8" />
 
