@@ -180,8 +180,8 @@ Fill in the following values:
 3. Verify validation passes
 4. Click **Create**
 
-> ***Screenshot Placeholder -- VNet Review Page (Validation Passed)***
-> `![VNet Review](screenshots/03-vnet-review-create.png)`
+***Screenshot: VNet Review Page (Validation Passed)***
+<img width="1919" height="948" alt="image" src="https://github.com/user-attachments/assets/682bf119-ebe9-4a1b-83a7-9dbc2d2bd652" />
 
 > ***Screenshot Placeholder -- VNet Deployment Complete***
 > `![VNet Deployed](screenshots/04-vnet-deployment-complete.png)`
@@ -420,7 +420,7 @@ ssh azureuser@13.68.188.64
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/6273cafa-d2ee-42a0-ae3d-52cf278b3501" />
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/920bb18c-ad40-4103-9be8-69dcb5f9af63" />
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/30cf003d-d89a-4dfd-b508-0d724536dd4f" />
-<img width="1919" height="948" alt="image" src="https://github.com/user-attachments/assets/682bf119-ebe9-4a1b-83a7-9dbc2d2bd652" />
+
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/1802dde2-e889-4763-9e87-7c53fa2c6019" />
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/87a4930c-0d0e-4815-a36a-edb3900cfe19" />
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/19790da7-62d3-40a9-8092-756c4d721caf" />
