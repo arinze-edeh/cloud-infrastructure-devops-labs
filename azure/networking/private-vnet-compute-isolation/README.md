@@ -223,7 +223,8 @@ az network nsg rule create \
 
 #### Screenshot: NSG Rule Created
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1035" height="864" alt="image" src="https://github.com/user-attachments/assets/955d910b-a9bb-42e9-8019-6270c5439ec6" />
+
 > *Capture the JSON response showing `"name": "AllowSSH"`, `"access": "Allow"`, `"priority": 100`, and the correct source/destination CIDR blocks.*
 
 ---
@@ -461,7 +462,6 @@ az vm get-instance-view --resource-group $RG --name $VM_NAME \
 
 
 
-<img width="1035" height="864" alt="image" src="https://github.com/user-attachments/assets/955d910b-a9bb-42e9-8019-6270c5439ec6" />
 <img width="1034" height="855" alt="image" src="https://github.com/user-attachments/assets/0123b2e4-5e98-4f95-bdca-768657aeaf79" />
 <img width="1035" height="862" alt="image" src="https://github.com/user-attachments/assets/a71530bc-04b0-461b-9c1e-bbbce57c62ce" />
 <img width="1034" height="636" alt="image" src="https://github.com/user-attachments/assets/39c10e61-bbe9-4135-a48f-e5110c2f67a7" />
