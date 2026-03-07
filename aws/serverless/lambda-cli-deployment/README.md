@@ -4,7 +4,6 @@
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![Region](https://img.shields.io/badge/Region-us--east--1-232F3E?style=flat-square&logo=amazonaws)](https://aws.amazon.com/)
 [![IaC](https://img.shields.io/badge/Deployment-AWS_CLI-232F3E?style=flat-square&logo=amazonaws)](https://aws.amazon.com/cli/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
 ---
 
