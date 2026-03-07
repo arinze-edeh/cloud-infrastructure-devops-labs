@@ -155,7 +155,7 @@ Fill in the following values:
 * **Name:** `devops-pub-vnet`
 * **Region:** (US) East US
 
-> ***Screenshot: VNet Basics Tab***
+***Screenshot: VNet Basics Tab***
 
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/3201f81c-9115-4dd7-9c0f-ee73e6387e31" />
 
