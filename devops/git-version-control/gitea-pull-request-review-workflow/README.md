@@ -189,7 +189,8 @@ git log --oneline --all --graph --decorate
 
 This confirms that commit `7039186` on `story/fox-and-grapes` is one commit ahead of `master`, containing the fox-and-grapes story content.
 
-***Screenshot Placeholder: Terminal output showing git branch -a and git log graph***
+***Screenshot: Terminal output showing git branch -a and git log graph***
+<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/3bf2c141-1339-4fee-980a-9f835ed10b0c" />
 
 ---
 
@@ -384,7 +385,7 @@ story/fox-...        B ── C (feature commit) ─┘
 <img width="1038" height="594" alt="image" src="https://github.com/user-attachments/assets/8874ce00-6f06-49ee-b153-aa4d028f2e0b" />
 <img width="1029" height="649" alt="image" src="https://github.com/user-attachments/assets/70c25c24-5358-4500-bdd7-e26c80c74e8f" />
 <img width="1031" height="724" alt="image" src="https://github.com/user-attachments/assets/766ac1b1-3037-49ab-87d2-cf49de0afdd8" />
-<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/3bf2c141-1339-4fee-980a-9f835ed10b0c" />
+
 <img width="1919" height="955" alt="image" src="https://github.com/user-attachments/assets/101ddc78-6eed-4ee5-afff-6b937b4663ed" />
 <img width="1913" height="951" alt="image" src="https://github.com/user-attachments/assets/e6b9acc1-c611-45c9-93aa-164ae7da71f7" />
 <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/edc868cb-7b35-422b-a4d0-c1892ad3ed18" />
