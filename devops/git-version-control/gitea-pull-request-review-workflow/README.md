@@ -240,7 +240,8 @@ Added fox-and-grapes story
 5. Verify `tom` appears under the Reviewers section
 6. Click **"Create Pull Request"** to submit
 
-***Screenshot Placeholder: PR creation form with tom listed as reviewer in the sidebar***
+***Screenshot: PR creation form with tom listed as reviewer in the sidebar***
+<img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/8f138be1-538e-424e-b576-bcb895b7652d" />
 
 ***Screenshot Placeholder: Newly created PR #1 showing Open status, correct branch info, and tom assigned as reviewer***
 
@@ -392,7 +393,7 @@ story/fox-...        B ── C (feature commit) ─┘
 
 <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/edc868cb-7b35-422b-a4d0-c1892ad3ed18" />
 
-<img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/8f138be1-538e-424e-b576-bcb895b7652d" />
+
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/15a0b08b-2399-45b4-82bc-4cdcb420aa14" />
 <img width="1919" height="946" alt="image" src="https://github.com/user-attachments/assets/a85dcd66-4e2b-46df-ac38-091de856454c" />
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/453042ce-1a12-499a-86b9-055efed846ab" />
