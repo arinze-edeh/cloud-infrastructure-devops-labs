@@ -83,7 +83,8 @@ az account show
 
 ### Screenshot: Azure CLI Auth Verification
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1033" height="513" alt="image" src="https://github.com/user-attachments/assets/14a47b46-6d05-4aad-9fae-60158b51a59b" />
+
 > *Run `az account show` and capture the terminal output confirming subscription ID, tenant ID, and user/service principal details.*
 
 ---
@@ -451,7 +452,7 @@ az vm get-instance-view --resource-group $RG --name $VM_NAME \
 
 *Region: Central US | Stack: Azure CLI + Bash*
 
-<img width="1033" height="513" alt="image" src="https://github.com/user-attachments/assets/14a47b46-6d05-4aad-9fae-60158b51a59b" />
+
 <img width="1029" height="594" alt="image" src="https://github.com/user-attachments/assets/76d062bf-2bd7-4238-b52a-8a588c9d1a09" />
 <img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/966f262c-5b63-4eeb-8d12-c6c606ea446b" />
 <img width="1036" height="836" alt="image" src="https://github.com/user-attachments/assets/0a22d1fa-e905-4351-b421-9d49c58c0dd0" />
