@@ -203,6 +203,7 @@ Archive:  function.zip
 > **Critical check:** The `Name` column must show `lambda_function.py` with no directory prefix. Any path prefix (e.g., `lambda-cli-deployment/lambda_function.py`) will cause a silent module import failure at invocation time.
 
 ***Screenshot: Terminal showing zip creation and unzip -l verification output***
+<img width="1032" height="843" alt="image" src="https://github.com/user-attachments/assets/806c9953-1ec4-4d8f-b27c-e1a75557cf33" />
 
 ---
 
@@ -405,7 +406,7 @@ Using `<< 'EOF'` (single-quoted) instead of `<< EOF` ensures the shell does not 
 <img width="1036" height="538" alt="image" src="https://github.com/user-attachments/assets/7ba3133c-cfec-4ca2-8312-b77cf51f6273" />
 
 <img width="1030" height="707" alt="image" src="https://github.com/user-attachments/assets/9b40a1c4-5f0c-4998-b5f2-1358495a8732" />
-<img width="1032" height="843" alt="image" src="https://github.com/user-attachments/assets/806c9953-1ec4-4d8f-b27c-e1a75557cf33" />
+
 <img width="1037" height="860" alt="image" src="https://github.com/user-attachments/assets/c44a733f-e0eb-47de-a6d5-4ce2786e1106" />
 <img width="1037" height="848" alt="image" src="https://github.com/user-attachments/assets/ffca049f-1574-4da3-9213-073f0570a117" />
 <img width="1034" height="858" alt="image" src="https://github.com/user-attachments/assets/796a9f5a-af3c-4e25-9c84-abcee72cca4a" />
