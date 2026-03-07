@@ -183,8 +183,8 @@ Fill in the following values:
 ***Screenshot: VNet Review Page (Validation Passed)***
 <img width="1919" height="948" alt="image" src="https://github.com/user-attachments/assets/682bf119-ebe9-4a1b-83a7-9dbc2d2bd652" />
 
-> ***Screenshot Placeholder -- VNet Deployment Complete***
-> `![VNet Deployed](screenshots/04-vnet-deployment-complete.png)`
+> ***Screenshot: VNet Deployment Complete***
+<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/87a4930c-0d0e-4815-a36a-edb3900cfe19" />
 
 ---
 
@@ -422,7 +422,7 @@ ssh azureuser@13.68.188.64
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/30cf003d-d89a-4dfd-b508-0d724536dd4f" />
 
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/1802dde2-e889-4763-9e87-7c53fa2c6019" />
-<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/87a4930c-0d0e-4815-a36a-edb3900cfe19" />
+
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/19790da7-62d3-40a9-8092-756c4d721caf" />
 <img width="1919" height="946" alt="image" src="https://github.com/user-attachments/assets/cb74f92c-5806-4469-83a9-092d1e9747f1" />
 <img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/9466a0e7-0a48-48c2-8663-e0e755aa81a8" />
