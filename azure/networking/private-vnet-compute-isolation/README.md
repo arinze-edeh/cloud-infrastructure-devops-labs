@@ -171,7 +171,7 @@ az network vnet create \
 
 **Why:** Creating the VNet and subnet in a single command is atomic and avoids an intermediate state where a VNet exists without a subnet. The `/16` space provides ample room for future subnet expansion.
 
-#### Screenshot: VNet Creation Success
+#### Screenshots: VNet Creation Success
 
 <img width="1029" height="594" alt="image" src="https://github.com/user-attachments/assets/76d062bf-2bd7-4238-b52a-8a588c9d1a09" />
 <img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/966f262c-5b63-4eeb-8d12-c6c606ea446b" />
