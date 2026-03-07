@@ -62,13 +62,6 @@ Azure Subscription: Azure Free Labs
             Public IP: NONE
             NIC NSG: datacenter-priv-nsg (applied at both NIC and Subnet)
 ```
-
-### Screenshot: Architecture Diagram
-
-> **[SCREENSHOT PLACEHOLDER]**
-> *Capture the Azure Portal resource group view showing all provisioned resources (VNet, NSG, VM) in a single topology view.*
-> *Path: Azure Portal > Resource Groups > kml_rg_main > Resources tab*
-
 ---
 
 ## Prerequisites
