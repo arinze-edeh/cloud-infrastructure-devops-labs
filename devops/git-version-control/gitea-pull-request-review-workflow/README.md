@@ -126,7 +126,8 @@ hostname
 # Expected: ststor01
 ```
 
-***Screenshot Placeholder: Terminal showing successful SSH login as max on ststor01***
+***Screenshot: Terminal showing successful SSH login as max on ststor01***
+<img width="1032" height="482" alt="image" src="https://github.com/user-attachments/assets/0615d136-7ad5-4ae0-84cc-ca9810291e70" />
 
 ---
 
@@ -377,7 +378,7 @@ story/fox-...        B ── C (feature commit) ─┘
 
 
 <img width="1028" height="482" alt="image" src="https://github.com/user-attachments/assets/754f42b6-171e-4420-b2c2-395bca45d1bc" />
-<img width="1032" height="482" alt="image" src="https://github.com/user-attachments/assets/0615d136-7ad5-4ae0-84cc-ca9810291e70" />
+
 <img width="1032" height="546" alt="image" src="https://github.com/user-attachments/assets/30cb2eb7-6fd3-47c8-96e7-d37154d8b246" />
 <img width="1030" height="559" alt="image" src="https://github.com/user-attachments/assets/1a289f2e-e606-45cd-9793-1261699efa9a" />
 <img width="1038" height="594" alt="image" src="https://github.com/user-attachments/assets/8874ce00-6f06-49ee-b153-aa4d028f2e0b" />
