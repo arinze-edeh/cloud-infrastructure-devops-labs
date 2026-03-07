@@ -356,18 +356,9 @@ NIC NSG: "/subscriptions/.../networkSecurityGroups/datacenter-priv-nsg"
 
 #### Screenshot: Full Verification Run
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1033" height="800" alt="image" src="https://github.com/user-attachments/assets/7b212b99-f6b3-4cf1-8ffd-e0b84e345ab2" />
+
 > *Capture the complete terminal output of the verification command block, showing all five sections with green or expected outputs. This is the definitive proof-of-completion screenshot.*
-
-#### Screenshot: Azure Portal Resource Group View
-
-> **[SCREENSHOT PLACEHOLDER]**
-> *Navigate to Azure Portal > Resource Groups > your resource group. Capture the full resource list showing the VNet, NSG, VM, NIC, and OS disk all with `Succeeded` status.*
-
-#### Screenshot: Azure Portal VNet Topology
-
-> **[SCREENSHOT PLACEHOLDER]**
-> *Navigate to the VNet resource > Diagram tab. Capture the visual topology showing the subnet, the NSG association, and the VM within the subnet boundary.*
 
 ---
 
@@ -461,13 +452,3 @@ az vm get-instance-view --resource-group $RG --name $VM_NAME \
 ---
 
 *Region: Central US | Stack: Azure CLI + Bash*
-
-
-
-
-
-<img width="1034" height="636" alt="image" src="https://github.com/user-attachments/assets/39c10e61-bbe9-4135-a48f-e5110c2f67a7" />
-<img width="1033" height="800" alt="image" src="https://github.com/user-attachments/assets/7b212b99-f6b3-4cf1-8ffd-e0b84e345ab2" />
-
-
-
