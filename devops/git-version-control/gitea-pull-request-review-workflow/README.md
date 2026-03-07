@@ -202,7 +202,7 @@ This confirms that commit `7039186` on `story/fox-and-grapes` is one commit ahea
    * **Password:** `Max_pass123`
 3. Navigate to the `sarah/story-blog` repository from the dashboard
 
-***Screenshot: Gitea login page and repository landing page as user max***
+***Screenshots: Gitea login page and repository landing page as user max***
 <img width="1919" height="955" alt="image" src="https://github.com/user-attachments/assets/101ddc78-6eed-4ee5-afff-6b937b4663ed" />
 <img width="1913" height="951" alt="image" src="https://github.com/user-attachments/assets/e6b9acc1-c611-45c9-93aa-164ae7da71f7" />
 
@@ -224,7 +224,8 @@ Upon navigating to the repository, Gitea displays a prompt banner:
 Added fox-and-grapes story
 ```
 
-***Screenshot Placeholder: New Pull Request form showing correct source and destination branches with title filled in***
+***Screenshot: New Pull Request form showing correct source and destination branches with title filled in***
+<img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/fb5d96a0-404d-4702-904c-ffe506b38b4f" />
 
 ---
 
@@ -390,7 +391,7 @@ story/fox-...        B ── C (feature commit) ─┘
 
 
 <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/edc868cb-7b35-422b-a4d0-c1892ad3ed18" />
-<img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/fb5d96a0-404d-4702-904c-ffe506b38b4f" />
+
 <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/8f138be1-538e-424e-b576-bcb895b7652d" />
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/15a0b08b-2399-45b4-82bc-4cdcb420aa14" />
 <img width="1919" height="946" alt="image" src="https://github.com/user-attachments/assets/a85dcd66-4e2b-46df-ac38-091de856454c" />
