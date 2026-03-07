@@ -212,11 +212,11 @@ Fill in the following values:
 | Public inbound ports | Allow selected ports |
 | Select inbound ports | SSH (22) |
 
-> ***Screenshot Placeholder -- VM Basics Tab (Upper Section)***
-> `![VM Basics Top](screenshots/05-vm-basics-upper.png)`
+***Screenshot: VM Basics Tab (Upper Section)***
+<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/7592064a-d7f0-4e71-98d8-7736de2b4783" />
 
-> ***Screenshot Placeholder -- VM Administrator Account and Inbound Ports***
-> `![VM Basics Bottom](screenshots/06-vm-basics-lower.png)`
+***Screenshot: VM Administrator Account and Inbound Ports***
+<img width="1919" height="902" alt="image" src="https://github.com/user-attachments/assets/8e1584b8-b8f8-4042-9130-74afcd280bd6" />
 
 **Step 3: Configure the Disks Tab**
 
@@ -224,8 +224,8 @@ Fill in the following values:
 * **OS disk type:** `Standard HDD (locally-redundant storage)`
 * **Delete with VM:** Checked
 
-> ***Screenshot Placeholder -- VM Disks Tab (Standard HDD Selected)***
-> `![VM Disks](screenshots/07-vm-disks-tab.png)`
+***Screenshot: VM Disks Tab (Standard HDD Selected)***
+<img width="1919" height="948" alt="image" src="https://github.com/user-attachments/assets/818611a0-a6ea-4a86-b3fe-93052f53e9d2" />
 
 **Step 4: Configure the Networking Tab**
 
@@ -434,9 +434,8 @@ ssh azureuser@13.68.188.64
 <img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/1996e2d2-4a6c-4505-975b-7fe9fefd7a2d" />
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/b883d42d-788e-4869-b66f-7465f0e6b3cf" />
 <img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/dd060c8b-1605-4a72-851f-d3ad9df455fe" />
-<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/7592064a-d7f0-4e71-98d8-7736de2b4783" />
-<img width="1919" height="902" alt="image" src="https://github.com/user-attachments/assets/8e1584b8-b8f8-4042-9130-74afcd280bd6" />
-<img width="1919" height="948" alt="image" src="https://github.com/user-attachments/assets/818611a0-a6ea-4a86-b3fe-93052f53e9d2" />
+
+
 <img width="1919" height="946" alt="image" src="https://github.com/user-attachments/assets/1ccaf041-a59a-4824-82c4-6ef61bd737e2" />
 <img width="1919" height="948" alt="image" src="https://github.com/user-attachments/assets/1f0305de-3824-433b-8a57-86dc2346f4d0" />
 <img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/1134b819-e90c-45a7-9aff-2a048cc0d3ba" />
