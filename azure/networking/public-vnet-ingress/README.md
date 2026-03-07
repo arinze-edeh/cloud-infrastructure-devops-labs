@@ -387,9 +387,6 @@ ssh azureuser@13.68.188.64
 | Network Interface | `devops-pub-vm530` | Microsoft.Network/networkInterfaces | East US | Active |
 | NSG | `devops-pub-vm-nsg` | Microsoft.Network/networkSecurityGroups | East US | Active |
 
-> ***Screenshot Placeholder -- Resource Group Overview (All 6 Resources Listed)***
-> `![Resource Group](screenshots/16-resource-group-final-state.png)`
-
 ---
 
 ## Security Considerations
