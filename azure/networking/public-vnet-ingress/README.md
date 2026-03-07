@@ -275,8 +275,8 @@ The VM deployment failed at the disk provisioning stage with the following error
 
 The deployment details showed the VM itself in **Conflict** state while the NIC, NSG, and Public IP all succeeded.
 
-> ***Screenshot Placeholder -- Deployment Failed Error Screen***
-> `![Deploy Failed](screenshots/10-deployment-failed-error.png)`
+***Screenshot: Deployment Failed Error Screen***
+<img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/1996e2d2-4a6c-4505-975b-7fe9fefd7a2d" />
 
 **Root Cause**
 
@@ -431,7 +431,7 @@ ssh azureuser@13.68.188.64
 <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/45554f67-c080-466c-9097-0d98506665e3" />
 <img width="1919" height="952" alt="image" src="https://github.com/user-attachments/assets/008de4de-7a81-4198-b965-de788d6ee9fb" />
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/dc344488-33a8-4af0-be05-1e5af9120a16" />
-<img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/1996e2d2-4a6c-4505-975b-7fe9fefd7a2d" />
+
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/b883d42d-788e-4869-b66f-7465f0e6b3cf" />
 <img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/dd060c8b-1605-4a72-851f-d3ad9df455fe" />
 
