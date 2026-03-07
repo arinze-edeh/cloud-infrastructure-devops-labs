@@ -351,7 +351,7 @@ After deployment, navigate to **Virtual Machines** and open `devops-pub-vm`. Ver
 | OS Disk | Present (named disk, not `-`) | ✅ |
 | Security Type | Standard | ✅ |
 
-> ***Screenshot Placeholder -- VM Overview Page (Running State)***
+> ***Screenshot: VM Overview Page (Running State)***
 <img width="1919" height="948" alt="image" src="https://github.com/user-attachments/assets/3ef018bf-f1e6-4ee9-9f3d-2f59e9486483" />
 
 ### NSG Inbound Rules Check
@@ -362,8 +362,8 @@ Navigate to **Networking** on the VM blade and verify:
 |---|---|---|---|
 | 300 (or lower) | 22 | TCP | Allow |
 
-> ***Screenshot Placeholder -- NSG Inbound Rules (Port 22 Visible)***
-> `![NSG Rules](screenshots/14-nsg-inbound-rules-port22.png)`
+> ***Screenshot: NSG Inbound Rules (Port 22 Visible)***
+<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/a7c94edb-d22e-456e-bead-c8a4f5e6f509" />
 
 ### SSH Connectivity Test (Optional)
 
@@ -374,10 +374,6 @@ ssh azureuser@13.68.188.64
 # Enter the password configured during VM creation
 # Expected: Ubuntu 24.04 LTS welcome banner
 ```
-
-> ***Screenshot Placeholder -- Successful SSH Login via Cloud Shell***
-> `![SSH Login](screenshots/15-ssh-login-success.png)`
-
 ---
 
 ## Resource Summary
@@ -404,15 +400,6 @@ ssh azureuser@13.68.188.64
 * **Standard HDD** was used due to subscription policy constraints. For production workloads requiring higher IOPS and SLA guarantees, evaluate Premium SSD availability in the target subscription.
 
 ---
-
-## Contributing
-
-1. Fork this repository
-2. Create a feature branch: `git checkout -b feature/your-feature-name`
-3. Commit your changes: `git commit -m "Add: description of change"`
-4. Push the branch: `git push origin feature/your-feature-name`
-5. Open a Pull Request with a clear description of the change and its purpose
-
 
 <img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/d3feb2a8-92fd-48e1-8e92-993791efb602" />
 <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/4da9c40e-acd9-4f5e-8bce-919d61160627" />
@@ -442,7 +429,7 @@ ssh azureuser@13.68.188.64
 <img width="1919" height="955" alt="image" src="https://github.com/user-attachments/assets/96c3e60c-3090-4642-9831-e6141454d18c" />
 
 
-<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/a7c94edb-d22e-456e-bead-c8a4f5e6f509" />
+
 <img width="1919" height="954" alt="image" src="https://github.com/user-attachments/assets/7185ffba-831c-4d46-8777-ee8f006bd0b8" />
 
 
