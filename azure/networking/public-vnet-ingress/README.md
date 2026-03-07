@@ -183,7 +183,7 @@ Fill in the following values:
 ***Screenshot: VNet Review Page (Validation Passed)***
 <img width="1919" height="948" alt="image" src="https://github.com/user-attachments/assets/682bf119-ebe9-4a1b-83a7-9dbc2d2bd652" />
 
-> ***Screenshot: VNet Deployment Complete***
+***Screenshot: VNet Deployment Complete***
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/87a4930c-0d0e-4815-a36a-edb3900cfe19" />
 
 ---
