@@ -173,7 +173,9 @@ az network vnet create \
 
 #### Screenshot: VNet Creation Success
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1029" height="594" alt="image" src="https://github.com/user-attachments/assets/76d062bf-2bd7-4238-b52a-8a588c9d1a09" />
+<img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/966f262c-5b63-4eeb-8d12-c6c606ea446b" />
+
 > *Capture the JSON output from the terminal showing `"provisioningState": "Succeeded"` for both the VNet and the embedded subnet object.*
 
 ---
@@ -453,8 +455,7 @@ az vm get-instance-view --resource-group $RG --name $VM_NAME \
 *Region: Central US | Stack: Azure CLI + Bash*
 
 
-<img width="1029" height="594" alt="image" src="https://github.com/user-attachments/assets/76d062bf-2bd7-4238-b52a-8a588c9d1a09" />
-<img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/966f262c-5b63-4eeb-8d12-c6c606ea446b" />
+
 <img width="1036" height="836" alt="image" src="https://github.com/user-attachments/assets/0a22d1fa-e905-4351-b421-9d49c58c0dd0" />
 <img width="1031" height="867" alt="image" src="https://github.com/user-attachments/assets/77280310-b895-481d-9e44-68835332b959" />
 <img width="1035" height="866" alt="image" src="https://github.com/user-attachments/assets/05e55df1-e973-4b41-8715-7e1c68a1290d" />
