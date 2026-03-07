@@ -98,19 +98,6 @@ Developer Workstation (aws-client host)
 
 ---
 
-## Repository Structure
-
-```
-aws/
-└── serverless/
-    └── lambda-cli-deployment/
-        ├── README.md                  <- This document
-        ├── lambda_function.py         <- Lambda handler source
-        └── function.zip               <- Deployment package (generated)
-```
-
----
-
 ## Implementation
 
 ### Phase 1: Environment Verification
@@ -141,6 +128,7 @@ us-east-1
 > **Validation gate:** If the region is not `us-east-1` or the account ID does not match the lab environment, stop and run `aws configure set region us-east-1` before proceeding.
 
 ***Screenshot: Terminal output showing caller identity and region confirmation***
+<img width="1032" height="573" alt="image" src="https://github.com/user-attachments/assets/ca20e457-992b-47a1-8bd4-390f898e741d" />
 
 ---
 
@@ -411,7 +399,7 @@ Using `<< 'EOF'` (single-quoted) instead of `<< EOF` ensures the shell does not 
 ---
 
 <img width="1035" height="573" alt="image" src="https://github.com/user-attachments/assets/ca8b38a6-54dc-4c7d-bbb6-ce1f6a41288c" />
-<img width="1032" height="573" alt="image" src="https://github.com/user-attachments/assets/ca20e457-992b-47a1-8bd4-390f898e741d" />
+
 <img width="1032" height="546" alt="image" src="https://github.com/user-attachments/assets/0307d279-6827-45a7-9f42-9b517fa433da" />
 <img width="1036" height="538" alt="image" src="https://github.com/user-attachments/assets/7ba3133c-cfec-4ca2-8312-b77cf51f6273" />
 <img width="1035" height="615" alt="image" src="https://github.com/user-attachments/assets/2f03d71a-860a-44ed-ae9c-ba3d3e535b0a" />
