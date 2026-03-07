@@ -243,7 +243,8 @@ az network vnet subnet update \
 
 #### Screenshot: Subnet NSG Association
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1034" height="855" alt="image" src="https://github.com/user-attachments/assets/0123b2e4-5e98-4f95-bdca-768657aeaf79" />
+
 > *Capture the subnet JSON response confirming `"networkSecurityGroup"` field is populated with the NSG resource ID, not null.*
 
 ---
@@ -462,7 +463,7 @@ az vm get-instance-view --resource-group $RG --name $VM_NAME \
 
 
 
-<img width="1034" height="855" alt="image" src="https://github.com/user-attachments/assets/0123b2e4-5e98-4f95-bdca-768657aeaf79" />
+
 <img width="1035" height="862" alt="image" src="https://github.com/user-attachments/assets/a71530bc-04b0-461b-9c1e-bbbce57c62ce" />
 <img width="1034" height="636" alt="image" src="https://github.com/user-attachments/assets/39c10e61-bbe9-4135-a48f-e5110c2f67a7" />
 <img width="1033" height="800" alt="image" src="https://github.com/user-attachments/assets/7b212b99-f6b3-4cf1-8ffd-e0b84e345ab2" />
