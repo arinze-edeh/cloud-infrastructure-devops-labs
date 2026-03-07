@@ -280,7 +280,9 @@ aws lambda create-function \
 
 > **State note:** `"State": "Pending"` is expected immediately after creation. AWS asynchronously initializes the execution environment. The function transitions to `Active` within seconds.
 
-***Screenshot: Full JSON response from aws lambda create-function***
+***Screenshots: Full JSON response from aws lambda create-function***
+<img width="1037" height="848" alt="image" src="https://github.com/user-attachments/assets/ffca049f-1574-4da3-9213-073f0570a117" />
+<img width="1034" height="858" alt="image" src="https://github.com/user-attachments/assets/796a9f5a-af3c-4e25-9c84-abcee72cca4a" />
 
 ---
 
@@ -409,8 +411,7 @@ Using `<< 'EOF'` (single-quoted) instead of `<< EOF` ensures the shell does not 
 <img width="1030" height="707" alt="image" src="https://github.com/user-attachments/assets/9b40a1c4-5f0c-4998-b5f2-1358495a8732" />
 
 
-<img width="1037" height="848" alt="image" src="https://github.com/user-attachments/assets/ffca049f-1574-4da3-9213-073f0570a117" />
-<img width="1034" height="858" alt="image" src="https://github.com/user-attachments/assets/796a9f5a-af3c-4e25-9c84-abcee72cca4a" />
+
 <img width="1033" height="522" alt="image" src="https://github.com/user-attachments/assets/b6b7e7b8-66dd-49f3-852a-c54c96216b20" />
 <img width="1035" height="355" alt="image" src="https://github.com/user-attachments/assets/deabb7b5-71a6-4347-a2d2-454d40cab6e0" />
 
