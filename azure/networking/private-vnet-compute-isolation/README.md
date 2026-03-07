@@ -272,7 +272,8 @@ az vm create \
 
 #### Screenshot: VM Provisioning Complete
 
-> **[SCREENSHOT PLACEHOLDER]**
+<img width="1035" height="862" alt="image" src="https://github.com/user-attachments/assets/a71530bc-04b0-461b-9c1e-bbbce57c62ce" />
+
 > *Capture the terminal output showing `"powerState": "VM running"`, `"privateIpAddress": "10.0.1.4"`, and `"publicIpAddress": ""` confirming no public exposure.*
 
 ---
@@ -464,7 +465,7 @@ az vm get-instance-view --resource-group $RG --name $VM_NAME \
 
 
 
-<img width="1035" height="862" alt="image" src="https://github.com/user-attachments/assets/a71530bc-04b0-461b-9c1e-bbbce57c62ce" />
+
 <img width="1034" height="636" alt="image" src="https://github.com/user-attachments/assets/39c10e61-bbe9-4135-a48f-e5110c2f67a7" />
 <img width="1033" height="800" alt="image" src="https://github.com/user-attachments/assets/7b212b99-f6b3-4cf1-8ffd-e0b84e345ab2" />
 
