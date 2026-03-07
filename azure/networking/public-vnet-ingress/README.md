@@ -155,8 +155,9 @@ Fill in the following values:
 * **Name:** `devops-pub-vnet`
 * **Region:** (US) East US
 
-> ***Screenshot Placeholder -- VNet Basics Tab***
-> `![VNet Basics](screenshots/01-vnet-basics-tab.png)`
+> ***Screenshot: VNet Basics Tab***
+
+<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/3201f81c-9115-4dd7-9c0f-ee73e6387e31" />
 
 **Step 3: Configure IP Addresses Tab**
 
@@ -412,7 +413,7 @@ ssh azureuser@13.68.188.64
 
 <img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/d3feb2a8-92fd-48e1-8e92-993791efb602" />
 <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/4da9c40e-acd9-4f5e-8bce-919d61160627" />
-<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/3201f81c-9115-4dd7-9c0f-ee73e6387e31" />
+
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/6ba4df7c-d5bd-4fca-8d3d-1a6d97a134a7" />
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/0ffe4f27-6e09-4b58-ab6c-5cf734164f7d" />
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/6273cafa-d2ee-42a0-ae3d-52cf278b3501" />
