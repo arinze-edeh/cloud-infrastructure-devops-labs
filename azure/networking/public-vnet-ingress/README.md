@@ -288,8 +288,8 @@ The Azure Free Labs subscription enforces a policy (`global-limits-free_...`) th
 2. Recreate the VM with **OS disk type set to Standard HDD (locally-redundant storage)**
 3. Reuse the existing networking resources to avoid naming conflicts
 
-> ***Screenshot Placeholder -- Delete VM Confirmation Dialog***
-> `![Delete VM](screenshots/11-delete-vm-confirmation.png)`
+> ***Screenshot: Delete VM Confirmation Dialog***
+<img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/b883d42d-788e-4869-b66f-7465f0e6b3cf" />
 
 > ***Screenshot Placeholder -- Disks Tab with Standard HDD Selected***
 > `![Standard HDD Fix](screenshots/12-disk-type-standard-hdd.png)`
@@ -432,7 +432,7 @@ ssh azureuser@13.68.188.64
 <img width="1919" height="952" alt="image" src="https://github.com/user-attachments/assets/008de4de-7a81-4198-b965-de788d6ee9fb" />
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/dc344488-33a8-4af0-be05-1e5af9120a16" />
 
-<img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/b883d42d-788e-4869-b66f-7465f0e6b3cf" />
+
 <img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/dd060c8b-1605-4a72-851f-d3ad9df455fe" />
 
 
