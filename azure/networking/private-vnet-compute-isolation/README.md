@@ -1,26 +1,475 @@
+# Azure Private Virtual Network Infrastructure Provisioning
 
+> **Enterprise Infrastructure Series** | Azure Networking | Security Hardened | IaC Documented
 
-<img width="1089" height="336" alt="image" src="https://github.com/user-attachments/assets/4914f238-3894-45ef-b8fb-bb637d4f6cfa" />
-<img width="1086" height="469" alt="image" src="https://github.com/user-attachments/assets/706389c3-d22d-4b53-879c-de7297fcd21a" />
-<img width="1087" height="602" alt="image" src="https://github.com/user-attachments/assets/590b113d-d5a5-4f91-9115-e7220a4af128" />
-<img width="1086" height="583" alt="image" src="https://github.com/user-attachments/assets/2b089aa3-9bc7-4be7-a2ce-bb0edba37f33" />
-<img width="1087" height="863" alt="image" src="https://github.com/user-attachments/assets/0f4c623f-a744-4dcf-98ba-ba5b7a0badfa" />
-<img width="1400" height="570" alt="image" src="https://github.com/user-attachments/assets/8a073020-cb63-460f-9e91-ad883ec208af" />
-<img width="1092" height="856" alt="image" src="https://github.com/user-attachments/assets/c6b54b0e-16e4-4503-a874-2b4536fca8b6" />
-<img width="1087" height="865" alt="image" src="https://github.com/user-attachments/assets/fc6eb59d-d261-4ec2-a183-b63c05c2c2ef" />
-<img width="1089" height="867" alt="image" src="https://github.com/user-attachments/assets/ce208fad-b1a5-401b-a0a7-5fd1ac44fef8" />
-<img width="1091" height="863" alt="image" src="https://github.com/user-attachments/assets/1459f99b-76b3-4d9f-b195-53abd4b54572" />
-<img width="1092" height="865" alt="image" src="https://github.com/user-attachments/assets/757c8f7b-e31b-40a0-8353-e72a5a41d693" />
-<img width="1095" height="867" alt="image" src="https://github.com/user-attachments/assets/6fe42444-62fb-4e91-b870-a9f78e722872" />
-<img width="1090" height="864" alt="image" src="https://github.com/user-attachments/assets/56a54fe5-e391-462b-b52c-e60dcd398381" />
-<img width="1400" height="861" alt="image" src="https://github.com/user-attachments/assets/e22507ab-d20d-493b-a229-f6e4f16806bd" />
-<img width="1129" height="656" alt="image" src="https://github.com/user-attachments/assets/f3ea09d1-d468-4f12-81bf-36f4f899f5cd" />
-<img width="1130" height="802" alt="image" src="https://github.com/user-attachments/assets/d4be5b25-3e67-438d-857e-1ca9080f75c0" />
-<img width="1128" height="376" alt="image" src="https://github.com/user-attachments/assets/c3da2851-d727-4880-b240-3c9a2888abc4" />
-<img width="1132" height="579" alt="image" src="https://github.com/user-attachments/assets/4c1422e7-4292-4dbe-ba0d-cba7312b639a" />
-<img width="1134" height="421" alt="image" src="https://github.com/user-attachments/assets/be61d08c-ec91-424d-928e-537b3b1a669c" />
-<img width="1133" height="521" alt="image" src="https://github.com/user-attachments/assets/99655729-4aa0-419c-91c8-2baca9159281" />
-<img width="1131" height="852" alt="image" src="https://github.com/user-attachments/assets/0e51a35a-4ee4-4fa4-8e3b-9266e41af22d" />
+---
+
+## Table of Contents
+
+* [Problem Statement](#problem-statement)
+* [Architecture Overview](#architecture-overview)
+* [Prerequisites](#prerequisites)
+* [Infrastructure Components](#infrastructure-components)
+* [Step-by-Step Resolution](#step-by-step-resolution)
+* [Security Design Decisions](#security-design-decisions)
+* [Validation and Verification](#validation-and-verification)
+* [Troubleshooting](#troubleshooting)
+* [Key Takeaways](#key-takeaways)
+* [References](#references)
+
+---
+
+## Problem Statement
+
+### Business Context
+
+The Nautilus DevOps team required a production-grade private Azure network environment to host workloads that must remain completely isolated from the public internet. The challenge was provisioning a fully private Virtual Machine accessible only via SSH from within the VNet CIDR block, with no public IP exposure.
+
+### Core Requirements
+
+| Requirement | Specification |
+|---|---|
+| VNet Name | `datacenter-priv-vnet` |
+| Subnet Name | `datacenter-priv-subnet` |
+| NSG Name | `datacenter-priv-nsg` |
+| VM Name | `datacenter-priv-vm` |
+| Region | `Central US` |
+| Address Space | `10.0.0.0/16` |
+| Subnet CIDR | `10.0.1.0/24` |
+| Public IP | None (fully private) |
+| SSH Access | Internal VNet CIDR only |
+
+### Pain Points Addressed
+
+* **Exposure Risk** -- Public-facing VMs are vulnerable to brute force, port scanning, and zero-day exploits. This setup eliminates that attack surface entirely.
+* **Network Segmentation** -- Without explicit subnet-level NSG binding, resources may inherit permissive default rules.
+* **Compliance Posture** -- Many regulatory frameworks (SOC 2, ISO 27001, PCI-DSS) require network isolation for sensitive workloads.
+
+---
+
+## Architecture Overview
+
+```
+Azure Subscription: Azure Free Labs
+  Resource Group: kml_rg_main-6be885172cdb4418
+    Region: Central US
+      VNet: datacenter-priv-vnet (10.0.0.0/16)
+        Subnet: datacenter-priv-subnet (10.0.1.0/24)
+          NSG: datacenter-priv-nsg
+            Rule: AllowSSH (TCP/22, source 10.0.0.0/16 only)
+          VM: datacenter-priv-vm
+            Private IP: 10.0.1.4
+            Public IP: NONE
+            NIC NSG: datacenter-priv-nsg (applied at both NIC and Subnet)
+```
+
+### Screenshot: Architecture Diagram
+
+> **[SCREENSHOT PLACEHOLDER]**
+> *Capture the Azure Portal resource group view showing all provisioned resources (VNet, NSG, VM) in a single topology view.*
+> *Path: Azure Portal > Resource Groups > kml_rg_main > Resources tab*
+
+---
+
+## Prerequisites
+
+### Tools Required
+
+* Azure CLI (`az`) version 2.50 or later
+* Active Azure subscription with Contributor or Owner role
+* Bash or compatible shell environment
+
+### Authentication Setup
+
+```bash
+# Verify active session and subscription context
+az account show
+```
+
+**Expected Output:** Confirm `isDefault: true` and the correct subscription name is active before proceeding.
+
+### Screenshot: Azure CLI Auth Verification
+
+> **[SCREENSHOT PLACEHOLDER]**
+> *Run `az account show` and capture the terminal output confirming subscription ID, tenant ID, and user/service principal details.*
+
+---
+
+## Infrastructure Components
+
+### 1. Virtual Network (VNet)
+
+The VNet is the foundational network boundary. It defines the private IP address space and contains all subnets, NSGs, and associated resources.
+
+* **CIDR Block:** `10.0.0.0/16` (65,536 addresses)
+* **DDoS Protection:** Default (Standard disabled to control cost)
+* **Peerings:** None (fully isolated)
+
+### 2. Subnet
+
+The subnet partitions the VNet into a smaller addressable range and is the unit to which the NSG is applied.
+
+* **CIDR Block:** `10.0.1.0/24` (256 addresses)
+* **Delegations:** None
+* **Private Endpoint Policies:** Disabled (standard configuration)
+
+### 3. Network Security Group (NSG)
+
+The NSG acts as a distributed stateful firewall. Rules are evaluated by priority (lower number = higher priority).
+
+**Custom Rules Applied:**
+
+| Rule Name | Priority | Direction | Protocol | Source | Destination | Port | Action |
+|---|---|---|---|---|---|---|---|
+| AllowSSH | 100 | Inbound | TCP | 10.0.0.0/16 | 10.0.0.0/16 | 22 | Allow |
+
+**Default Rules (Auto-generated by Azure):**
+
+| Rule Name | Priority | Direction | Action |
+|---|---|---|---|
+| AllowVnetInBound | 65000 | Inbound | Allow |
+| AllowAzureLoadBalancerInBound | 65001 | Inbound | Allow |
+| DenyAllInBound | 65500 | Inbound | Deny |
+| AllowVnetOutBound | 65000 | Outbound | Allow |
+| AllowInternetOutBound | 65001 | Outbound | Allow |
+| DenyAllOutBound | 65500 | Outbound | Deny |
+
+### 4. Virtual Machine
+
+* **OS Image:** Ubuntu 22.04 LTS
+* **Size:** `Standard_B1s` (1 vCPU, 1 GiB RAM)
+* **Storage SKU:** `Standard_LRS`
+* **OS Disk:** 30 GB
+* **Admin User:** `azureuser`
+* **Auth:** SSH key pair (auto-generated at `~/.ssh/id_rsa`)
+* **Public IP:** None
+
+---
+
+## Step-by-Step Resolution
+
+### Step 1 -- Initialize Environment Variables
+
+```bash
+RG=$(az group list --query "[0].name" -o tsv)
+LOC="centralus"
+VNET_NAME="datacenter-priv-vnet"
+SUBNET_NAME="datacenter-priv-subnet"
+NSG_NAME="datacenter-priv-nsg"
+VM_NAME="datacenter-priv-vm"
+```
+
+**Why:** Centralizing variables eliminates typos and makes the script reusable across environments by changing a single line.
+
+---
+
+### Step 2 -- Create the Virtual Network and Subnet
+
+```bash
+az network vnet create \
+  --resource-group $RG \
+  --name $VNET_NAME \
+  --location $LOC \
+  --address-prefixes 10.0.0.0/16 \
+  --subnet-name $SUBNET_NAME \
+  --subnet-prefixes 10.0.1.0/24
+```
+
+**Why:** Creating the VNet and subnet in a single command is atomic and avoids an intermediate state where a VNet exists without a subnet. The `/16` space provides ample room for future subnet expansion.
+
+#### Screenshot: VNet Creation Success
+
+> **[SCREENSHOT PLACEHOLDER]**
+> *Capture the JSON output from the terminal showing `"provisioningState": "Succeeded"` for both the VNet and the embedded subnet object.*
+
+---
+
+### Step 3 -- Create the Network Security Group
+
+```bash
+az network nsg create \
+  --resource-group $RG \
+  --name $NSG_NAME \
+  --location $LOC
+```
+
+**Why:** The NSG must be created before rules can be added and before it can be attached to the subnet or NIC.
+
+#### Screenshot: NSG Creation Output
+
+> **[SCREENSHOT PLACEHOLDER]**
+> *Capture the terminal JSON output confirming NSG provisioning state is `Succeeded` and showing the six default security rules auto-populated by Azure.*
+
+---
+
+### Step 4 -- Add the AllowSSH Inbound Rule
+
+```bash
+az network nsg rule create \
+  --resource-group $RG \
+  --nsg-name $NSG_NAME \
+  --name AllowSSH \
+  --priority 100 \
+  --source-address-prefixes 10.0.0.0/16 \
+  --destination-address-prefixes 10.0.0.0/16 \
+  --destination-port-ranges 22 \
+  --access Allow \
+  --protocol Tcp \
+  --direction Inbound
+```
+
+**Why:** Priority 100 ensures this rule is evaluated before any deny rules. Scoping both source and destination to the VNet CIDR (`10.0.0.0/16`) enforces that SSH is only possible from within the same network, not from the internet or peered networks.
+
+#### Screenshot: NSG Rule Created
+
+> **[SCREENSHOT PLACEHOLDER]**
+> *Capture the JSON response showing `"name": "AllowSSH"`, `"access": "Allow"`, `"priority": 100`, and the correct source/destination CIDR blocks.*
+
+---
+
+### Step 5 -- Associate the NSG with the Subnet
+
+```bash
+az network vnet subnet update \
+  --resource-group $RG \
+  --vnet-name $VNET_NAME \
+  --name $SUBNET_NAME \
+  --network-security-group $NSG_NAME
+```
+
+**Why:** An NSG must be explicitly associated with a subnet to enforce its rules on all resources within that subnet. Without this step, the NSG exists but has no effect on subnet-level traffic.
+
+#### Screenshot: Subnet NSG Association
+
+> **[SCREENSHOT PLACEHOLDER]**
+> *Capture the subnet JSON response confirming `"networkSecurityGroup"` field is populated with the NSG resource ID, not null.*
+
+---
+
+### Step 6 -- Provision the Private Virtual Machine
+
+```bash
+az vm create \
+  --resource-group $RG \
+  --name $VM_NAME \
+  --location $LOC \
+  --image Ubuntu2204 \
+  --vnet-name $VNET_NAME \
+  --subnet $SUBNET_NAME \
+  --nsg $NSG_NAME \
+  --public-ip-address "" \
+  --admin-username azureuser \
+  --generate-ssh-keys \
+  --size Standard_B1s \
+  --storage-sku Standard_LRS \
+  --os-disk-size-gb 30
+```
+
+**Why:** The `--public-ip-address ""` flag is the critical parameter that ensures no public IP is allocated. Without it, Azure assigns a public IP by default, exposing the VM to the internet. The `--nsg` flag attaches the NSG at the NIC level in addition to the subnet level, creating defense in depth.
+
+#### Screenshot: VM Provisioning Complete
+
+> **[SCREENSHOT PLACEHOLDER]**
+> *Capture the terminal output showing `"powerState": "VM running"`, `"privateIpAddress": "10.0.1.4"`, and `"publicIpAddress": ""` confirming no public exposure.*
+
+---
+
+## Security Design Decisions
+
+### Defense in Depth -- Dual NSG Binding
+
+The NSG `datacenter-priv-nsg` is applied at **two levels** simultaneously:
+
+1. **Subnet level** -- All traffic entering or leaving `datacenter-priv-subnet` is filtered
+2. **NIC level** -- Traffic is filtered again at the VM's network interface card
+
+This dual binding means that even if a misconfiguration occurs at one layer, the second layer provides a fallback barrier.
+
+### No Public IP Assignment
+
+Setting `--public-ip-address ""` ensures the VM has no internet-routable address. The only path to reach the VM is from within `10.0.0.0/16` over TCP port 22. This reduces the attack surface to zero from the public internet.
+
+### SSH Key Authentication
+
+Auto-generated RSA SSH keys replace password authentication entirely. This eliminates credential brute-force risk. The keys are stored at `~/.ssh/id_rsa` and should be backed up to a secure vault (Azure Key Vault recommended for production).
+
+### Principle of Least Privilege
+
+The AllowSSH rule explicitly names both source and destination as the VNet CIDR block. Wildcard sources (`*` or `0.0.0.0/0`) were intentionally avoided.
+
+---
+
+## Validation and Verification
+
+### Verify All Resources
+
+```bash
+# VNet summary
+echo "=== VNet ===" && \
+az network vnet show --resource-group $RG --name $VNET_NAME \
+  --query "{Name:name, CIDR:addressSpace.addressPrefixes}"
+
+# NSG rules table
+echo "=== NSG Rule ===" && \
+az network nsg rule list --resource-group $RG --nsg-name $NSG_NAME \
+  --query "[].{Name:name, Access:access, Source:sourceAddressPrefix, Dest:destinationAddressPrefix, Port:destinationPortRange}" -o table
+
+# Subnet NSG binding
+echo "=== Subnet NSG ===" && \
+az network vnet subnet show --resource-group $RG --vnet-name $VNET_NAME \
+  --name $SUBNET_NAME --query "networkSecurityGroup.id"
+
+# VM state
+echo "=== VM ===" && \
+az vm show --resource-group $RG --name $VM_NAME \
+  --query "{Name:name, State:provisioningState}"
+
+# NIC NSG binding
+az network nic show \
+  --resource-group $RG \
+  --name datacenter-priv-vmVMNic \
+  --query "{NSG:networkSecurityGroup.id}"
+```
+
+### Expected Verification Results
+
+```
+=== VNet ===
+{ "CIDR": ["10.0.0.0/16"], "Name": "datacenter-priv-vnet" }
+
+=== NSG Rule ===
+Name      Access  Source       Dest         Port
+AllowSSH  Allow   10.0.0.0/16  10.0.0.0/16  22
+
+=== Subnet NSG ===
+"/subscriptions/.../networkSecurityGroups/datacenter-priv-nsg"
+
+=== VM ===
+{ "Name": "datacenter-priv-vm", "State": "Succeeded" }
+
+NIC NSG: "/subscriptions/.../networkSecurityGroups/datacenter-priv-nsg"
+```
+
+#### Screenshot: Full Verification Run
+
+> **[SCREENSHOT PLACEHOLDER]**
+> *Capture the complete terminal output of the verification command block, showing all five sections with green or expected outputs. This is the definitive proof-of-completion screenshot.*
+
+#### Screenshot: Azure Portal Resource Group View
+
+> **[SCREENSHOT PLACEHOLDER]**
+> *Navigate to Azure Portal > Resource Groups > your resource group. Capture the full resource list showing the VNet, NSG, VM, NIC, and OS disk all with `Succeeded` status.*
+
+#### Screenshot: Azure Portal VNet Topology
+
+> **[SCREENSHOT PLACEHOLDER]**
+> *Navigate to the VNet resource > Diagram tab. Capture the visual topology showing the subnet, the NSG association, and the VM within the subnet boundary.*
+
+---
+
+## Troubleshooting
+
+### VM Has a Public IP After Creation
+
+**Cause:** The `--public-ip-address` flag was omitted or incorrectly set.
+
+**Resolution:**
+
+```bash
+# Identify the public IP resource attached to the NIC
+az network nic show --resource-group $RG --name datacenter-priv-vmVMNic \
+  --query "ipConfigurations[].publicIpAddress.id"
+
+# Dissociate the public IP from the NIC
+az network nic ip-config update \
+  --resource-group $RG \
+  --nic-name datacenter-priv-vmVMNic \
+  --name ipconfig1 \
+  --remove publicIpAddress
+
+# Delete the orphaned public IP resource
+az network public-ip delete --resource-group $RG --name <public-ip-name>
+```
+
+---
+
+### NSG Rule Not Blocking Expected Traffic
+
+**Cause:** NSG is not associated with the subnet, or NIC-level NSG is missing.
+
+**Resolution:**
+
+```bash
+# Confirm subnet NSG binding
+az network vnet subnet show --resource-group $RG \
+  --vnet-name $VNET_NAME --name $SUBNET_NAME \
+  --query "networkSecurityGroup"
+
+# Confirm NIC NSG binding
+az network nic show --resource-group $RG \
+  --name datacenter-priv-vmVMNic \
+  --query "networkSecurityGroup"
+```
+
+If either returns `null`, re-run the association commands from Steps 5 and 6.
+
+---
+
+### SSH Connection Refused from Within VNet
+
+**Cause:** Rule priority conflict, wrong CIDR, or SSH service not running on VM.
+
+**Resolution:**
+
+```bash
+# List all effective NSG rules on the NIC
+az network nic list-effective-nsg \
+  --resource-group $RG \
+  --name datacenter-priv-vmVMNic
+
+# Verify VM is running
+az vm get-instance-view --resource-group $RG --name $VM_NAME \
+  --query "instanceView.statuses[1].displayStatus"
+```
+
+---
+
+## Key Takeaways
+
+* **Always set `--public-ip-address ""`** when provisioning private VMs. Azure assigns a public IP by default, which is the single most common misconfiguration in private networking labs.
+* **Apply NSGs at both subnet and NIC levels** for defense in depth. Subnet-level NSGs protect all resources in the subnet. NIC-level NSGs provide per-VM granularity.
+* **Use VNet CIDR as source/destination** in SSH rules rather than `VirtualNetwork` service tag when you need precise CIDR control, especially in peered or hub-spoke topologies.
+* **Verify with `az network nic list-effective-nsg`** rather than inspecting rules manually. This command shows the merged, priority-ordered ruleset as Azure actually evaluates it.
+* **Back up SSH keys** generated by `--generate-ssh-keys` to Azure Key Vault immediately in production. The default `~/.ssh/id_rsa` location is ephemeral in cloud shell environments.
+
+---
+
+## References
+
+* [Azure Virtual Network Documentation](https://learn.microsoft.com/en-us/azure/virtual-network/)
+* [Network Security Groups Overview](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview)
+* [az network vnet CLI Reference](https://learn.microsoft.com/en-us/cli/azure/network/vnet)
+* [az network nsg CLI Reference](https://learn.microsoft.com/en-us/cli/azure/network/nsg)
+* [az vm create CLI Reference](https://learn.microsoft.com/en-us/cli/azure/vm#az-vm-create)
+* [Azure VM Networking Best Practices](https://learn.microsoft.com/en-us/azure/security/fundamentals/network-best-practices)
+* [NSG Rule Evaluation Order](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-group-how-it-works)
+
+---
+
+*Region: Central US | Stack: Azure CLI + Bash*
+
+<img width="1033" height="513" alt="image" src="https://github.com/user-attachments/assets/14a47b46-6d05-4aad-9fae-60158b51a59b" />
+<img width="1029" height="594" alt="image" src="https://github.com/user-attachments/assets/76d062bf-2bd7-4238-b52a-8a588c9d1a09" />
+<img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/966f262c-5b63-4eeb-8d12-c6c606ea446b" />
+<img width="1036" height="836" alt="image" src="https://github.com/user-attachments/assets/0a22d1fa-e905-4351-b421-9d49c58c0dd0" />
+<img width="1031" height="867" alt="image" src="https://github.com/user-attachments/assets/77280310-b895-481d-9e44-68835332b959" />
+<img width="1035" height="866" alt="image" src="https://github.com/user-attachments/assets/05e55df1-e973-4b41-8715-7e1c68a1290d" />
+<img width="1031" height="862" alt="image" src="https://github.com/user-attachments/assets/1f99b03d-68a8-47dd-a201-52bc559cbac8" />
+<img width="1035" height="864" alt="image" src="https://github.com/user-attachments/assets/955d910b-a9bb-42e9-8019-6270c5439ec6" />
+<img width="1034" height="855" alt="image" src="https://github.com/user-attachments/assets/0123b2e4-5e98-4f95-bdca-768657aeaf79" />
+<img width="1035" height="862" alt="image" src="https://github.com/user-attachments/assets/a71530bc-04b0-461b-9c1e-bbbce57c62ce" />
+<img width="1034" height="636" alt="image" src="https://github.com/user-attachments/assets/39c10e61-bbe9-4135-a48f-e5110c2f67a7" />
+<img width="1033" height="800" alt="image" src="https://github.com/user-attachments/assets/7b212b99-f6b3-4cf1-8ffd-e0b84e345ab2" />
 
 
 
