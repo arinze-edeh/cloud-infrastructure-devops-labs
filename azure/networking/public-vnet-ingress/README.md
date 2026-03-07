@@ -169,7 +169,7 @@ Fill in the following values:
 6. Leave NAT gateway as **None**
 7. Click **Save**
 
-***Screenshot Placeholder -- Subnet Configuration Panel***
+***Screenshot: Subnet Configuration Panel***
 
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/0ffe4f27-6e09-4b58-ab6c-5cf734164f7d" />
 
