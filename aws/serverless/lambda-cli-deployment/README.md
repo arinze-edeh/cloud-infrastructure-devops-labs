@@ -169,6 +169,7 @@ def lambda_handler(event, context):
 > **Key detail:** The single quotes around `'EOF'` in the heredoc prevent shell variable interpolation inside the block, ensuring the Python source is written verbatim.
 
 ***Screenshot: Terminal showing cat output confirming lambda_function.py contents***
+<img width="1035" height="615" alt="image" src="https://github.com/user-attachments/assets/2f03d71a-860a-44ed-ae9c-ba3d3e535b0a" />
 
 ---
 
@@ -402,7 +403,7 @@ Using `<< 'EOF'` (single-quoted) instead of `<< EOF` ensures the shell does not 
 
 <img width="1032" height="546" alt="image" src="https://github.com/user-attachments/assets/0307d279-6827-45a7-9f42-9b517fa433da" />
 <img width="1036" height="538" alt="image" src="https://github.com/user-attachments/assets/7ba3133c-cfec-4ca2-8312-b77cf51f6273" />
-<img width="1035" height="615" alt="image" src="https://github.com/user-attachments/assets/2f03d71a-860a-44ed-ae9c-ba3d3e535b0a" />
+
 <img width="1030" height="707" alt="image" src="https://github.com/user-attachments/assets/9b40a1c4-5f0c-4998-b5f2-1358495a8732" />
 <img width="1032" height="843" alt="image" src="https://github.com/user-attachments/assets/806c9953-1ec4-4d8f-b27c-e1a75557cf33" />
 <img width="1037" height="860" alt="image" src="https://github.com/user-attachments/assets/c44a733f-e0eb-47de-a6d5-4ce2786e1106" />
