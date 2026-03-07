@@ -330,6 +330,7 @@ aws lambda invoke \
 > **Output structure explained:** The first JSON block (`StatusCode: 200`) is the Lambda service invocation metadata. The second line is the actual function return value written to `response.json`. Both must be present for a successful validation.
 
 ***Screenshot: Terminal showing Active state confirmation and invoke response with correct body***
+<img width="1035" height="355" alt="image" src="https://github.com/user-attachments/assets/deabb7b5-71a6-4347-a2d2-454d40cab6e0" />
 
 ---
 
@@ -413,5 +414,5 @@ Using `<< 'EOF'` (single-quoted) instead of `<< EOF` ensures the shell does not 
 
 
 <img width="1033" height="522" alt="image" src="https://github.com/user-attachments/assets/b6b7e7b8-66dd-49f3-852a-c54c96216b20" />
-<img width="1035" height="355" alt="image" src="https://github.com/user-attachments/assets/deabb7b5-71a6-4347-a2d2-454d40cab6e0" />
+
 
