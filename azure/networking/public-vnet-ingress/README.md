@@ -169,8 +169,9 @@ Fill in the following values:
 6. Leave NAT gateway as **None**
 7. Click **Save**
 
-> ***Screenshot Placeholder -- Subnet Configuration Panel***
-> `![Subnet Config](screenshots/02-subnet-edit-panel.png)`
+***Screenshot Placeholder -- Subnet Configuration Panel***
+
+<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/0ffe4f27-6e09-4b58-ab6c-5cf734164f7d" />
 
 **Step 4: Review and Create**
 
@@ -415,7 +416,7 @@ ssh azureuser@13.68.188.64
 <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/4da9c40e-acd9-4f5e-8bce-919d61160627" />
 
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/6ba4df7c-d5bd-4fca-8d3d-1a6d97a134a7" />
-<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/0ffe4f27-6e09-4b58-ab6c-5cf734164f7d" />
+
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/6273cafa-d2ee-42a0-ae3d-52cf278b3501" />
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/920bb18c-ad40-4103-9be8-69dcb5f9af63" />
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/30cf003d-d89a-4dfd-b508-0d724536dd4f" />
