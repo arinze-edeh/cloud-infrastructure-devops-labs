@@ -238,7 +238,7 @@ Fill in the following values:
 | Public inbound ports | Allow selected ports |
 | Select inbound ports | SSH (22) |
 
-***Screenshot: VM Networking Tab (All Fields Populated)***
+***Screenshots: VM Networking Tab (All Fields Populated)***
 
 <img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/6273cafa-d2ee-42a0-ae3d-52cf278b3501" />
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/920bb18c-ad40-4103-9be8-69dcb5f9af63" />
