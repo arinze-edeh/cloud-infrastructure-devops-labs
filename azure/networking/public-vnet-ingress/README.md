@@ -291,8 +291,8 @@ The Azure Free Labs subscription enforces a policy (`global-limits-free_...`) th
 > ***Screenshot: Delete VM Confirmation Dialog***
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/b883d42d-788e-4869-b66f-7465f0e6b3cf" />
 
-> ***Screenshot Placeholder -- Disks Tab with Standard HDD Selected***
-> `![Standard HDD Fix](screenshots/12-disk-type-standard-hdd.png)`
+> ***Screenshot: Disks Tab with Standard HDD Selected***
+<img width="1919" height="946" alt="image" src="https://github.com/user-attachments/assets/1ccaf041-a59a-4824-82c4-6ef61bd737e2" />
 
 **Outcome**
 
@@ -436,7 +436,7 @@ ssh azureuser@13.68.188.64
 <img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/dd060c8b-1605-4a72-851f-d3ad9df455fe" />
 
 
-<img width="1919" height="946" alt="image" src="https://github.com/user-attachments/assets/1ccaf041-a59a-4824-82c4-6ef61bd737e2" />
+
 <img width="1919" height="948" alt="image" src="https://github.com/user-attachments/assets/1f0305de-3824-433b-8a57-86dc2346f4d0" />
 <img width="1919" height="951" alt="image" src="https://github.com/user-attachments/assets/1134b819-e90c-45a7-9aff-2a048cc0d3ba" />
 <img width="1919" height="955" alt="image" src="https://github.com/user-attachments/assets/96c3e60c-3090-4642-9831-e6141454d18c" />
