@@ -188,7 +188,11 @@ az network public-ip show \
   --output json
 ```
 
-> ***Screenshot Placeholder***
+> ***Screenshots***
+<img width="1188" height="735" alt="image" src="https://github.com/user-attachments/assets/ece3556b-2dd9-4bfc-a1cb-ad0933a89803" />
+<img width="1185" height="768" alt="image" src="https://github.com/user-attachments/assets/13695bff-9557-4549-9743-342d44ea8def" />
+<img width="1188" height="467" alt="image" src="https://github.com/user-attachments/assets/3eeb447e-3001-4d74-884e-92429715f55c" />
+
 > *Caption: CLI output showing `nautilus-rtb` route with `nextHopType: None` (blackhole), NSG listing only `default-allow-ssh` on port 22, and `nautilus-pip` with `AttachedTo: null`, confirming all three misconfigurations before any remediation.*
 
 ---
@@ -358,9 +362,7 @@ curl --connect-timeout 15 -o /dev/null -s -w "HTTP Status: %{http_code}\n" http:
 <img width="1035" height="522" alt="image" src="https://github.com/user-attachments/assets/b9363021-76eb-4869-a02f-84ca060fab9a" />
 <img width="1183" height="654" alt="image" src="https://github.com/user-attachments/assets/3d9a7ec4-f633-446a-b5d4-cfa12ae23eba" />
 <img width="1186" height="794" alt="image" src="https://github.com/user-attachments/assets/c236a4d2-37a9-4b4e-a3e7-9667bc49caae" />
-<img width="1188" height="735" alt="image" src="https://github.com/user-attachments/assets/ece3556b-2dd9-4bfc-a1cb-ad0933a89803" />
-<img width="1185" height="768" alt="image" src="https://github.com/user-attachments/assets/13695bff-9557-4549-9743-342d44ea8def" />
-<img width="1188" height="467" alt="image" src="https://github.com/user-attachments/assets/3eeb447e-3001-4d74-884e-92429715f55c" />
+
 <img width="1186" height="440" alt="image" src="https://github.com/user-attachments/assets/7f076aef-68b0-4724-bb27-246eb91fe62f" />
 <img width="1186" height="582" alt="image" src="https://github.com/user-attachments/assets/7bc66bab-002e-4465-a0f0-24b04789c7fe" />
 <img width="1183" height="865" alt="image" src="https://github.com/user-attachments/assets/58f43c13-0ee8-4177-b687-7d13492bf1a7" />
