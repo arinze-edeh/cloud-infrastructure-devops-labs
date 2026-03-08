@@ -347,19 +347,3 @@ Introduced in Git 2.35.2 as a security hardening measure. Git refuses to operate
 * [KodeKloud Engineer Labs](https://kodekloud.com/courses/kodekloud-engineer/)
 
 ---
-
-<img width="1038" height="493" alt="image" src="https://github.com/user-attachments/assets/1a8079d4-1840-468b-8e3c-30aee80f6651" />
-
-<img width="1033" height="448" alt="image" src="https://github.com/user-attachments/assets/2a992946-dd58-4556-b60b-6a8867886aea" />
-<img width="1030" height="474" alt="image" src="https://github.com/user-attachments/assets/95a6d1df-a825-4656-83f1-da7c1493551b" />
-
-<img width="1039" height="591" alt="image" src="https://github.com/user-attachments/assets/3552a6f8-0133-4ba5-96af-6ebe6e7fb53a" />
-
-
-<img width="1035" height="864" alt="image" src="https://github.com/user-attachments/assets/ef2e0af1-932b-46aa-b193-fa276d49524e" />
-
-
-
-
-
-
