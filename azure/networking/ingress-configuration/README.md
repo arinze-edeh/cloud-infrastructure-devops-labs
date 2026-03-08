@@ -245,7 +245,9 @@ az network nsg rule create \
   --access Allow
 ```
 
-> ***Screenshot Placeholder***
+> ***Screenshot***
+<img width="1183" height="865" alt="image" src="https://github.com/user-attachments/assets/58f43c13-0ee8-4177-b687-7d13492bf1a7" />
+
 > *Caption: CLI JSON response confirming `Allow-HTTP-80` NSG rule created with `priority: 100`, `direction: Inbound`, `protocol: Tcp`, `destinationPortRange: 80`, and `provisioningState: Succeeded` on `nautilus-vmNSG`.*
 
 ---
@@ -367,7 +369,7 @@ curl --connect-timeout 15 -o /dev/null -s -w "HTTP Status: %{http_code}\n" http:
 
 <img width="1186" height="440" alt="image" src="https://github.com/user-attachments/assets/7f076aef-68b0-4724-bb27-246eb91fe62f" />
 
-<img width="1183" height="865" alt="image" src="https://github.com/user-attachments/assets/58f43c13-0ee8-4177-b687-7d13492bf1a7" />
+
 <img width="1184" height="601" alt="image" src="https://github.com/user-attachments/assets/734e9263-8474-46e1-9562-fa201c92c4af" />
 <img width="1179" height="732" alt="image" src="https://github.com/user-attachments/assets/1cd12e0e-cbbc-411b-b22a-0825cec2ff1f" />
 <img width="1183" height="844" alt="image" src="https://github.com/user-attachments/assets/30808382-80de-4c2a-9fba-72451bcb5c3e" />
