@@ -264,7 +264,9 @@ az network nic ip-config update \
   --public-ip-address nautilus-pip
 ```
 
-> ***Screenshot Placeholder***
+> ***Screenshot***
+<img width="1184" height="601" alt="image" src="https://github.com/user-attachments/assets/734e9263-8474-46e1-9562-fa201c92c4af" />
+
 > *Caption: CLI JSON response showing `nautilus-pip` successfully linked to `ipconfignautilus-vm` on `nautilus-vmVMNic`, with private IP `10.0.0.4` and `provisioningState: Succeeded`.*
 
 ---
@@ -370,7 +372,7 @@ curl --connect-timeout 15 -o /dev/null -s -w "HTTP Status: %{http_code}\n" http:
 <img width="1186" height="440" alt="image" src="https://github.com/user-attachments/assets/7f076aef-68b0-4724-bb27-246eb91fe62f" />
 
 
-<img width="1184" height="601" alt="image" src="https://github.com/user-attachments/assets/734e9263-8474-46e1-9562-fa201c92c4af" />
+
 <img width="1179" height="732" alt="image" src="https://github.com/user-attachments/assets/1cd12e0e-cbbc-411b-b22a-0825cec2ff1f" />
 <img width="1183" height="844" alt="image" src="https://github.com/user-attachments/assets/30808382-80de-4c2a-9fba-72451bcb5c3e" />
 <img width="1184" height="860" alt="image" src="https://github.com/user-attachments/assets/8be3fc75-0dc0-4a1a-b378-9e891b0b8a9e" />
