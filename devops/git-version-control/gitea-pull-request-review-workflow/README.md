@@ -334,8 +334,6 @@ git log origin/master --oneline --graph --decorate
 
 The fox-and-grapes commit should now appear in the `master` branch history.
 
-***Screenshot Placeholder: Terminal showing git log confirming fox-and-grapes commit now present in origin/master***
-
 ---
 
 ## Key Concepts
@@ -386,23 +384,3 @@ story/fox-...        B ── C (feature commit) ─┘
 * **Tom's approval creates a permanent, immutable audit record** in Gitea's activity log. Even if the PR is later referenced in a compliance review, the complete timeline of who reviewed, who approved, and who merged is preserved.
 
 ---
-
-
-<img width="1028" height="482" alt="image" src="https://github.com/user-attachments/assets/754f42b6-171e-4420-b2c2-395bca45d1bc" />
-
-<img width="1032" height="546" alt="image" src="https://github.com/user-attachments/assets/30cb2eb7-6fd3-47c8-96e7-d37154d8b246" />
-<img width="1030" height="559" alt="image" src="https://github.com/user-attachments/assets/1a289f2e-e606-45cd-9793-1261699efa9a" />
-<img width="1038" height="594" alt="image" src="https://github.com/user-attachments/assets/8874ce00-6f06-49ee-b153-aa4d028f2e0b" />
-<img width="1029" height="649" alt="image" src="https://github.com/user-attachments/assets/70c25c24-5358-4500-bdd7-e26c80c74e8f" />
-<img width="1031" height="724" alt="image" src="https://github.com/user-attachments/assets/766ac1b1-3037-49ab-87d2-cf49de0afdd8" />
-
-
-<img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/edc868cb-7b35-422b-a4d0-c1892ad3ed18" />
-
-
-<img width="1919" height="946" alt="image" src="https://github.com/user-attachments/assets/a85dcd66-4e2b-46df-ac38-091de856454c" />
-<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/453042ce-1a12-499a-86b9-055efed846ab" />
-<img width="1919" height="949" alt="image" src="https://github.com/user-attachments/assets/1520f998-2764-479c-af3e-73adb5a04a78" />
-<img width="1050" height="912" alt="image" src="https://github.com/user-attachments/assets/24dc47a7-4a52-47a9-bfba-c5b11d791bbb" />
-
-<img width="1919" height="952" alt="image" src="https://github.com/user-attachments/assets/9db44b9f-88d3-415d-a5dd-e0ea996e1e09" />
