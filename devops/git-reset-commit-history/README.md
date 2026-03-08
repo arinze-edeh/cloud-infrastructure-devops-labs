@@ -97,6 +97,7 @@ ststor01
 
 > **Screenshot**
 <img width="1040" height="475" alt="image" src="https://github.com/user-attachments/assets/7548944f-aecc-40fb-b9f3-9089955662cf" />
+
 > *Caption: Successful SSH session established from jump_host to ststor01 as user natasha*
 
 ---
