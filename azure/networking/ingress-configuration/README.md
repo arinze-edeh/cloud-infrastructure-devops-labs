@@ -138,7 +138,9 @@ az vm show \
   --output tsv
 ```
 
-> ***Screenshot Placeholder***
+> ***Screenshot:***
+<img width="1035" height="522" alt="image" src="https://github.com/user-attachments/assets/e9b9ee12-1e75-4a4c-815c-2136d8fb7859" />
+
 > *Caption: Terminal output of `az group list` and `az vm list` confirming `nautilus-vm` exists in resource group `kml_rg_main-464891cf7c214ddc` in the `westus` region.*
 
 ---
@@ -350,7 +352,7 @@ curl --connect-timeout 15 -o /dev/null -s -w "HTTP Status: %{http_code}\n" http:
 
 <img width="1037" height="389" alt="image" src="https://github.com/user-attachments/assets/d3880703-da5e-4c55-b445-065a8cf5018d" />
 <img width="1028" height="413" alt="image" src="https://github.com/user-attachments/assets/8aae56e7-eb35-4a36-a21f-152648c4a64c" />
-<img width="1035" height="522" alt="image" src="https://github.com/user-attachments/assets/e9b9ee12-1e75-4a4c-815c-2136d8fb7859" />
+
 <img width="1035" height="522" alt="image" src="https://github.com/user-attachments/assets/b9363021-76eb-4869-a02f-84ca060fab9a" />
 <img width="1183" height="654" alt="image" src="https://github.com/user-attachments/assets/3d9a7ec4-f633-446a-b5d4-cfa12ae23eba" />
 <img width="1186" height="794" alt="image" src="https://github.com/user-attachments/assets/c236a4d2-37a9-4b4e-a3e7-9667bc49caae" />
