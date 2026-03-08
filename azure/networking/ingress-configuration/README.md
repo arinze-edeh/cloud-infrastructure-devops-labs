@@ -292,7 +292,14 @@ Confirm Nginx is responding locally:
 curl http://localhost
 ```
 
-> ***Screenshot Placeholder***
+> ***Screenshots***
+
+<img width="1179" height="732" alt="image" src="https://github.com/user-attachments/assets/1cd12e0e-cbbc-411b-b22a-0825cec2ff1f" />
+<img width="1183" height="844" alt="image" src="https://github.com/user-attachments/assets/30808382-80de-4c2a-9fba-72451bcb5c3e" />
+<img width="1184" height="860" alt="image" src="https://github.com/user-attachments/assets/8be3fc75-0dc0-4a1a-b378-9e891b0b8a9e" />
+<img width="1179" height="857" alt="image" src="https://github.com/user-attachments/assets/a7577aef-33b6-4ff2-8da4-30173f493f85" />
+<img width="1181" height="605" alt="image" src="https://github.com/user-attachments/assets/5671a45a-64c3-4516-b3a1-490c1b4ac6e7" />
+
 > *Caption: SSH session into `nautilus-vm` (azureuser@20.237.243.56) showing successful `apt-get install nginx`, `systemctl enable nginx`, and `curl http://localhost` returning the Nginx default HTML welcome page, confirming the service is running inside the VM.*
 
 ---
@@ -373,9 +380,4 @@ curl --connect-timeout 15 -o /dev/null -s -w "HTTP Status: %{http_code}\n" http:
 
 
 
-<img width="1179" height="732" alt="image" src="https://github.com/user-attachments/assets/1cd12e0e-cbbc-411b-b22a-0825cec2ff1f" />
-<img width="1183" height="844" alt="image" src="https://github.com/user-attachments/assets/30808382-80de-4c2a-9fba-72451bcb5c3e" />
-<img width="1184" height="860" alt="image" src="https://github.com/user-attachments/assets/8be3fc75-0dc0-4a1a-b378-9e891b0b8a9e" />
-<img width="1179" height="857" alt="image" src="https://github.com/user-attachments/assets/a7577aef-33b6-4ff2-8da4-30173f493f85" />
-<img width="1181" height="605" alt="image" src="https://github.com/user-attachments/assets/5671a45a-64c3-4516-b3a1-490c1b4ac6e7" />
 
