@@ -219,8 +219,9 @@ Navigate back to the repository and register the safe directory exception for th
 
 > **Note:** The `safe.directory` exception is stored per-user in `~/.gitconfig`. It must be registered separately for each Unix user that needs to interact with the repository. Since `natasha` and `root` have separate home directories, both require their own exception entry.
 
-> **Screenshot Placeholder**
-> ### Permission Denied Error and Root Escalation
+> **Screenshot**
+<img width="1025" height="861" alt="image" src="https://github.com/user-attachments/assets/f5ed1e14-c682-46f6-b027-b9b66011e920" />
+
 > *Caption: index.lock permission denied error as natasha, then sudo su - escalation to root*
 
 ---
