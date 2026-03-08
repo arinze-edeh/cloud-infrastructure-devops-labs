@@ -241,8 +241,9 @@ HEAD is now at a2300e8 add data.txt file
 
 > **What `--hard` does:** Resets the index and the working tree simultaneously. Any uncommitted changes and all commits after the target are permanently discarded. This operation cannot be undone via standard git commands once the reflog expires.
 
-> **Screenshot Placeholder**
-> ### Successful Hard Reset Output
+> **Screenshot**
+<img width="1025" height="861" alt="image" src="https://github.com/user-attachments/assets/55e88d3a-c231-4d92-973a-8d6321b2896f" />
+
 > *Caption: git reset --hard confirming HEAD is now at a2300e8 add data.txt file*
 
 ---
@@ -267,7 +268,7 @@ The `+` symbol and `(forced update)` label confirm the remote branch was success
 
 > **Warning:** Force pushing rewrites public history. This is intentional in this cleanup scenario but must be coordinated with all collaborators on shared branches in production environments, as their local copies will diverge.
 
-> **Screenshot Placeholder**
+> **Screenshot**
 <img width="1036" height="544" alt="image" src="https://github.com/user-attachments/assets/a5bf5eec-2326-49fc-8fdb-986d994096cb" />
 
 > *Caption: git push -f output confirming forced update from 75487f6 to a2300e8 on origin/master*
@@ -355,7 +356,7 @@ Introduced in Git 2.35.2 as a security hardening measure. Git refuses to operate
 
 
 <img width="1035" height="864" alt="image" src="https://github.com/user-attachments/assets/ef2e0af1-932b-46aa-b193-fa276d49524e" />
-<img width="1025" height="861" alt="image" src="https://github.com/user-attachments/assets/55e88d3a-c231-4d92-973a-8d6321b2896f" />
+
 
 
 
