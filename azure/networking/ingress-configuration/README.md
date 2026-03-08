@@ -219,7 +219,9 @@ az network route-table route update \
 }
 ```
 
-> ***Screenshot Placeholder***
+> ***Screenshot***
+<img width="1186" height="582" alt="image" src="https://github.com/user-attachments/assets/7bc66bab-002e-4465-a0f0-24b04789c7fe" />
+
 > *Caption: CLI output confirming `nautilus-rtb` route `Block-Internet` updated with `nextHopType: Internet` and `provisioningState: Succeeded`, restoring outbound internet routing for the subnet.*
 
 ---
@@ -364,7 +366,7 @@ curl --connect-timeout 15 -o /dev/null -s -w "HTTP Status: %{http_code}\n" http:
 <img width="1186" height="794" alt="image" src="https://github.com/user-attachments/assets/c236a4d2-37a9-4b4e-a3e7-9667bc49caae" />
 
 <img width="1186" height="440" alt="image" src="https://github.com/user-attachments/assets/7f076aef-68b0-4724-bb27-246eb91fe62f" />
-<img width="1186" height="582" alt="image" src="https://github.com/user-attachments/assets/7bc66bab-002e-4465-a0f0-24b04789c7fe" />
+
 <img width="1183" height="865" alt="image" src="https://github.com/user-attachments/assets/58f43c13-0ee8-4177-b687-7d13492bf1a7" />
 <img width="1184" height="601" alt="image" src="https://github.com/user-attachments/assets/734e9263-8474-46e1-9562-fa201c92c4af" />
 <img width="1179" height="732" alt="image" src="https://github.com/user-attachments/assets/1cd12e0e-cbbc-411b-b22a-0825cec2ff1f" />
