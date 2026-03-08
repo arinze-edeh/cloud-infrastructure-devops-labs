@@ -152,8 +152,9 @@ To add an exception for this directory, call:
 [natasha@ststor01 media]$ git config --global --add safe.directory /usr/src/kodekloudrepos/media
 ```
 
-> **Screenshot Placeholder**
-> ## Safe Directory Error and Fix
+> **Screenshot**
+<img width="1014" height="525" alt="image" src="https://github.com/user-attachments/assets/4e803f53-8078-4abe-aabf-58fcf83c23a3" />
+
 > *Caption: Git dubious ownership fatal error followed by the safe.directory config command resolving it*
 
 ---
@@ -349,7 +350,7 @@ Introduced in Git 2.35.2 as a security hardening measure. Git refuses to operate
 <img width="1030" height="474" alt="image" src="https://github.com/user-attachments/assets/95a6d1df-a825-4656-83f1-da7c1493551b" />
 
 <img width="1039" height="591" alt="image" src="https://github.com/user-attachments/assets/3552a6f8-0133-4ba5-96af-6ebe6e7fb53a" />
-<img width="1014" height="525" alt="image" src="https://github.com/user-attachments/assets/4e803f53-8078-4abe-aabf-58fcf83c23a3" />
+
 <img width="1039" height="832" alt="image" src="https://github.com/user-attachments/assets/46d7a52b-2431-4a70-a4d9-468d2c8b78c5" />
 <img width="1035" height="864" alt="image" src="https://github.com/user-attachments/assets/ef2e0af1-932b-46aa-b193-fa276d49524e" />
 <img width="1025" height="861" alt="image" src="https://github.com/user-attachments/assets/55e88d3a-c231-4d92-973a-8d6321b2896f" />
