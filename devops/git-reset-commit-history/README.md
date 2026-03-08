@@ -184,8 +184,9 @@ ce4570a initial commit
 
 **Target commit hash identified:** `a2300e8`
 
-> **Screenshot Placeholder**
-> ### Full Commit History Before Reset
+> **Screenshot**
+<img width="1031" height="604" alt="image" src="https://github.com/user-attachments/assets/0d1c2d55-ad16-4dcd-a878-520655cc2720" />
+
 > *Caption: git log --oneline showing 12 commits including the 10 test commits to be removed*
 
 ---
@@ -345,7 +346,7 @@ Introduced in Git 2.35.2 as a security hardening measure. Git refuses to operate
 
 <img width="1033" height="448" alt="image" src="https://github.com/user-attachments/assets/2a992946-dd58-4556-b60b-6a8867886aea" />
 <img width="1030" height="474" alt="image" src="https://github.com/user-attachments/assets/95a6d1df-a825-4656-83f1-da7c1493551b" />
-<img width="1031" height="604" alt="image" src="https://github.com/user-attachments/assets/0d1c2d55-ad16-4dcd-a878-520655cc2720" />
+
 <img width="1039" height="591" alt="image" src="https://github.com/user-attachments/assets/3552a6f8-0133-4ba5-96af-6ebe6e7fb53a" />
 <img width="1014" height="525" alt="image" src="https://github.com/user-attachments/assets/4e803f53-8078-4abe-aabf-58fcf83c23a3" />
 <img width="1039" height="832" alt="image" src="https://github.com/user-attachments/assets/46d7a52b-2431-4a70-a4d9-468d2c8b78c5" />
