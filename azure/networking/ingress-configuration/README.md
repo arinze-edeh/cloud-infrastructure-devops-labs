@@ -365,11 +365,6 @@ curl --connect-timeout 15 -o /dev/null -s -w "HTTP Status: %{http_code}\n" http:
 
 ---
 
-**Author:** DevOps Engineering Team
-**Last Updated:** March 2026
 **Region:** West US | **Resource Group:** `kml_rg_main-464891cf7c214ddc`
 
 
-
-<img width="1183" height="654" alt="image" src="https://github.com/user-attachments/assets/3d9a7ec4-f633-446a-b5d4-cfa12ae23eba" />
-<img width="1186" height="794" alt="image" src="https://github.com/user-attachments/assets/c236a4d2-37a9-4b4e-a3e7-9667bc49caae" />
