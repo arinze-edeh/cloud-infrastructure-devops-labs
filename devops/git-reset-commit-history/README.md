@@ -127,8 +127,9 @@ drwxr-xr-x 7 root root 4096 Mar  8 07:30 .git
 
 > **Note:** The `.git` directory and all repository files are owned by `root`. This ownership mismatch is the source of the errors encountered in subsequent steps.
 
-> **Screenshot Placeholder**
-> ## Repository Directory Listing
+> **Screenshot**
+<img width="1031" height="604" alt="image" src="https://github.com/user-attachments/assets/0d1c2d55-ad16-4dcd-a878-520655cc2720" />
+
 > *Caption: ls -la output confirming .git directory and files are owned by root*
 
 ---
@@ -185,7 +186,7 @@ ce4570a initial commit
 **Target commit hash identified:** `a2300e8`
 
 > **Screenshot**
-<img width="1031" height="604" alt="image" src="https://github.com/user-attachments/assets/0d1c2d55-ad16-4dcd-a878-520655cc2720" />
+
 
 > *Caption: git log --oneline showing 12 commits including the 10 test commits to be removed*
 
