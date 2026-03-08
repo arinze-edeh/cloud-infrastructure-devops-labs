@@ -303,7 +303,9 @@ curl --connect-timeout 15 -o /dev/null -s -w "HTTP Status: %{http_code}\n" http:
 # Expected output: HTTP Status: 200
 ```
 
-> ***Screenshot Placeholder***
+> ***Screenshot***
+<img width="1184" height="665" alt="image" src="https://github.com/user-attachments/assets/b485062f-5ab7-4303-8685-29441b093fed" />
+
 > *Caption: External curl command from outside the VM returning `HTTP Status: 200` against `http://20.237.243.56`, confirming full end-to-end public internet accessibility on port 80 after all three fixes were applied.*
 
 ---
@@ -368,4 +370,4 @@ curl --connect-timeout 15 -o /dev/null -s -w "HTTP Status: %{http_code}\n" http:
 <img width="1184" height="860" alt="image" src="https://github.com/user-attachments/assets/8be3fc75-0dc0-4a1a-b378-9e891b0b8a9e" />
 <img width="1179" height="857" alt="image" src="https://github.com/user-attachments/assets/a7577aef-33b6-4ff2-8da4-30173f493f85" />
 <img width="1181" height="605" alt="image" src="https://github.com/user-attachments/assets/5671a45a-64c3-4516-b3a1-490c1b4ac6e7" />
-<img width="1184" height="665" alt="image" src="https://github.com/user-attachments/assets/b485062f-5ab7-4303-8685-29441b093fed" />
+
