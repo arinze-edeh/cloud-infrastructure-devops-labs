@@ -282,7 +282,9 @@ tom approved these changes
 
 ***Screenshot Placeholder: Files Changed tab showing the fox-and-grapes story diff***
 
-***Screenshot Placeholder: PR Conversation tab showing "tom approved these changes" with green checkmark***
+***Screenshot: PR Conversation tab showing "tom approved these changes" with green checkmark***
+<img width="1203" height="941" alt="image" src="https://github.com/user-attachments/assets/8e2891bf-a302-4967-a58a-2a1ce90b7d2a" />
+
 
 ---
 
@@ -403,5 +405,3 @@ story/fox-...        B ── C (feature commit) ─┘
 <img width="1050" height="912" alt="image" src="https://github.com/user-attachments/assets/24dc47a7-4a52-47a9-bfba-c5b11d791bbb" />
 <img width="1919" height="947" alt="image" src="https://github.com/user-attachments/assets/147dda91-965d-48df-bb26-884af4159ae7" />
 <img width="1919" height="952" alt="image" src="https://github.com/user-attachments/assets/9db44b9f-88d3-415d-a5dd-e0ea996e1e09" />
-<img width="1203" height="941" alt="image" src="https://github.com/user-attachments/assets/8e2891bf-a302-4967-a58a-2a1ce90b7d2a" />
-
