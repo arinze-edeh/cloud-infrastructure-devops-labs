@@ -187,7 +187,7 @@ ce4570a initial commit
 **Target commit hash identified:** `a2300e8`
 
 > **Screenshot**
-
+<img width="1039" height="832" alt="image" src="https://github.com/user-attachments/assets/46d7a52b-2431-4a70-a4d9-468d2c8b78c5" />
 
 > *Caption: git log --oneline showing 12 commits including the 10 test commits to be removed*
 
@@ -351,7 +351,7 @@ Introduced in Git 2.35.2 as a security hardening measure. Git refuses to operate
 
 <img width="1039" height="591" alt="image" src="https://github.com/user-attachments/assets/3552a6f8-0133-4ba5-96af-6ebe6e7fb53a" />
 
-<img width="1039" height="832" alt="image" src="https://github.com/user-attachments/assets/46d7a52b-2431-4a70-a4d9-468d2c8b78c5" />
+
 <img width="1035" height="864" alt="image" src="https://github.com/user-attachments/assets/ef2e0af1-932b-46aa-b193-fa276d49524e" />
 <img width="1025" height="861" alt="image" src="https://github.com/user-attachments/assets/55e88d3a-c231-4d92-973a-8d6321b2896f" />
 <img width="1036" height="544" alt="image" src="https://github.com/user-attachments/assets/a5bf5eec-2326-49fc-8fdb-986d994096cb" />
