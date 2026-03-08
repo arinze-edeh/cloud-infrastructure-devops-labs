@@ -14,7 +14,6 @@
 - [Prerequisites](#prerequisites)
 - [Resolution Walkthrough](#resolution-walkthrough)
 - [Verification](#verification)
-- [Screenshots](#screenshots)
 - [Key Takeaways](#key-takeaways)
 - [References](#references)
 
@@ -139,6 +138,11 @@ az vm show \
   --output tsv
 ```
 
+> ***Screenshot Placeholder***
+> *Caption: Terminal output of `az group list` and `az vm list` confirming `nautilus-vm` exists in resource group `kml_rg_main-464891cf7c214ddc` in the `westus` region.*
+
+---
+
 ### Step 2: Audit Existing Network Configuration
 
 Inspect the route table and confirm the blocking route:
@@ -182,6 +186,11 @@ az network public-ip show \
   --output json
 ```
 
+> ***Screenshot Placeholder***
+> *Caption: CLI output showing `nautilus-rtb` route with `nextHopType: None` (blackhole), NSG listing only `default-allow-ssh` on port 22, and `nautilus-pip` with `AttachedTo: null`, confirming all three misconfigurations before any remediation.*
+
+---
+
 ### Step 3: Fix Route Table (Restore Internet Routing)
 
 Update the `Block-Internet` route to forward traffic to the internet instead of dropping it:
@@ -204,6 +213,11 @@ az network route-table route update \
 }
 ```
 
+> ***Screenshot Placeholder***
+> *Caption: CLI output confirming `nautilus-rtb` route `Block-Internet` updated with `nextHopType: Internet` and `provisioningState: Succeeded`, restoring outbound internet routing for the subnet.*
+
+---
+
 ### Step 4: Add NSG Inbound Rule for HTTP Port 80
 
 Create an explicit allow rule for inbound HTTP traffic:
@@ -223,6 +237,11 @@ az network nsg rule create \
   --access Allow
 ```
 
+> ***Screenshot Placeholder***
+> *Caption: CLI JSON response confirming `Allow-HTTP-80` NSG rule created with `priority: 100`, `direction: Inbound`, `protocol: Tcp`, `destinationPortRange: 80`, and `provisioningState: Succeeded` on `nautilus-vmNSG`.*
+
+---
+
 ### Step 5: Associate Public IP with NIC
 
 Attach `nautilus-pip` to the VM's IP configuration:
@@ -234,6 +253,11 @@ az network nic ip-config update \
   --name ipconfignautilus-vm \
   --public-ip-address nautilus-pip
 ```
+
+> ***Screenshot Placeholder***
+> *Caption: CLI JSON response showing `nautilus-pip` successfully linked to `ipconfignautilus-vm` on `nautilus-vmVMNic`, with private IP `10.0.0.4` and `provisioningState: Succeeded`.*
+
+---
 
 ### Step 6: Install and Enable Nginx on the VM
 
@@ -256,6 +280,9 @@ Confirm Nginx is responding locally:
 curl http://localhost
 ```
 
+> ***Screenshot Placeholder***
+> *Caption: SSH session into `nautilus-vm` (azureuser@20.237.243.56) showing successful `apt-get install nginx`, `systemctl enable nginx`, and `curl http://localhost` returning the Nginx default HTML welcome page, confirming the service is running inside the VM.*
+
 ---
 
 ## Verification
@@ -274,56 +301,8 @@ curl --connect-timeout 15 -o /dev/null -s -w "HTTP Status: %{http_code}\n" http:
 # Expected output: HTTP Status: 200
 ```
 
----
-
-## Screenshots
-
-### Network Topology and Resource Group Overview
-
 > ***Screenshot Placeholder***
-> *Caption: Azure Portal showing `kml_rg_main-464891cf7c214ddc` resource group with all network components: `nautilus-vm`, `nautilus-vnet`, `nautilus-vmNSG`, `nautilus-rtb`, and `nautilus-pip`.*
-
----
-
-### Route Table Before Fix (Block-Internet with nextHopType: None)
-
-> ***Screenshot Placeholder***
-> *Caption: Azure Portal route table view showing the `Block-Internet` route with `nextHopType` set to `None`, confirming the root cause that silently dropped all outbound traffic.*
-
----
-
-### Route Table After Fix (nextHopType: Internet)
-
-> ***Screenshot Placeholder***
-> *Caption: Updated route table showing `Block-Internet` route with `nextHopType` changed to `Internet`, restoring outbound connectivity for the subnet.*
-
----
-
-### NSG Rules Before Remediation (Port 80 Missing)
-
-> ***Screenshot Placeholder***
-> *Caption: NSG `nautilus-vmNSG` inbound rules showing only the default `default-allow-ssh` rule on port 22, with no HTTP rule present.*
-
----
-
-### NSG Rules After Remediation (Allow-HTTP-80 Added)
-
-> ***Screenshot Placeholder***
-> *Caption: NSG `nautilus-vmNSG` inbound rules after fix, showing the newly created `Allow-HTTP-80` rule at priority 100 permitting TCP traffic on port 80 from all sources.*
-
----
-
-### Public IP Association (nautilus-pip Attached to NIC)
-
-> ***Screenshot Placeholder***
-> *Caption: NIC IP configuration view showing `nautilus-pip` (20.237.243.56) successfully attached to `ipconfignautilus-vm` on `nautilus-vmVMNic`.*
-
----
-
-### Nginx Default Page Accessible from Internet
-
-> ***Screenshot Placeholder***
-> *Caption: Browser or curl output confirming the Nginx default welcome page is reachable at `http://20.237.243.56` with HTTP 200, validating full end-to-end resolution.*
+> *Caption: External curl command from outside the VM returning `HTTP Status: 200` against `http://20.237.243.56`, confirming full end-to-end public internet accessibility on port 80 after all three fixes were applied.*
 
 ---
 
