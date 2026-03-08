@@ -296,8 +296,9 @@ ce4570a initial commit
 - [x] `origin/master` is in sync with local `master`
 - [x] All 10 test commits have been permanently removed
 
-> **Screenshot Placeholder**
-> ### Final Git Log Verification
+> **Screenshot**
+<img width="1031" height="576" alt="image" src="https://github.com/user-attachments/assets/ed766cba-ea66-404f-b263-f20102f716aa" />
+
 > *Caption: git log --oneline showing only 2 commits with HEAD, master, and origin/master all aligned at a2300e8*
 
 ---
@@ -355,7 +356,7 @@ Introduced in Git 2.35.2 as a security hardening measure. Git refuses to operate
 <img width="1035" height="864" alt="image" src="https://github.com/user-attachments/assets/ef2e0af1-932b-46aa-b193-fa276d49524e" />
 <img width="1025" height="861" alt="image" src="https://github.com/user-attachments/assets/55e88d3a-c231-4d92-973a-8d6321b2896f" />
 <img width="1036" height="544" alt="image" src="https://github.com/user-attachments/assets/a5bf5eec-2326-49fc-8fdb-986d994096cb" />
-<img width="1031" height="576" alt="image" src="https://github.com/user-attachments/assets/ed766cba-ea66-404f-b263-f20102f716aa" />
+
 
 
 
