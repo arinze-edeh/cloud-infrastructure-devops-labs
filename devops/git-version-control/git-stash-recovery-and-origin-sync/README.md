@@ -167,7 +167,7 @@ stash@{1}: WIP on master: 40efb4b initial commit
 
 **Screenshot**
 
-> **## Screenshot 3: Successful git stash list showing stash@{0} and stash@{1} ##**
+<img width="1033" height="528" alt="image" src="https://github.com/user-attachments/assets/c40ab99f-6375-465a-8b27-dcd89de21bd1" />
 
 ---
 
@@ -190,7 +190,7 @@ Changes to be committed:
         new file:   welcome.txt
 ```
 
-**Screenshot Placeholder**
+**Screenshot**
 
 > **### Screenshot 4: sudo git stash apply stash@{1} output showing welcome.txt staged ###**
 
@@ -367,7 +367,7 @@ When submitting improvements to this document:
 <img width="1032" height="412" alt="image" src="https://github.com/user-attachments/assets/206a8a36-1672-4f3b-81d8-e4af865ee217" />
 <img width="1032" height="446" alt="image" src="https://github.com/user-attachments/assets/76db174f-4844-4fa6-84b8-960327d83ec3" />
 
-<img width="1033" height="528" alt="image" src="https://github.com/user-attachments/assets/c40ab99f-6375-465a-8b27-dcd89de21bd1" />
+
 <img width="1037" height="588" alt="image" src="https://github.com/user-attachments/assets/87f21c9d-db43-4825-a964-cb7d64115a2c" />
 <img width="1035" height="641" alt="image" src="https://github.com/user-attachments/assets/a068ca46-53cc-451f-8897-39dcaef12d98" />
 <img width="1037" height="414" alt="image" src="https://github.com/user-attachments/assets/b42dae69-d9fa-47a8-a891-cf6eb08edc11" />
