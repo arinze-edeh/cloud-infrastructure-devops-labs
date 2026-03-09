@@ -421,8 +421,6 @@ azure/
 - [ACR authentication options](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication)
 
 
-<img width="1031" height="498" alt="image" src="https://github.com/user-attachments/assets/67527c9f-3f73-4d6c-a726-df6c2bb2373d" />
-
 
 
 
