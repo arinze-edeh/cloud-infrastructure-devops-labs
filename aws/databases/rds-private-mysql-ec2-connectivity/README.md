@@ -418,10 +418,4 @@ grep dbname /root/index.php
 
 ---
 
-### Screenshot Placeholder
-
-> **[SCREENSHOT 6: AWS EC2 Console - Security Groups tab for nautilus-ec2 showing inbound rules for ports 22 and 80 from 0.0.0.0/0]**
-
----
-
 *Region: us-east-1.*
