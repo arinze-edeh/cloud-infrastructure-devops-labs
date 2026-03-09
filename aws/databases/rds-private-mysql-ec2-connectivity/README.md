@@ -424,16 +424,4 @@ grep dbname /root/index.php
 
 ---
 
-## Contributing
-
-1. Fork this repository.
-2. Create a feature branch: `git checkout -b feature/your-improvement`
-3. Commit your changes: `git commit -m "feat: describe your change"`
-4. Push to the branch: `git push origin feature/your-improvement`
-5. Open a pull request against `main`.
-
-All changes to infrastructure runbooks must include a corresponding update to the Troubleshooting section if new failure modes are introduced.
-
----
-
 *Region: us-east-1.*
