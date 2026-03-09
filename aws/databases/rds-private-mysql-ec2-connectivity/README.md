@@ -235,9 +235,12 @@ echo "RDS Endpoint: $RDS_ENDPOINT"
 RDS Endpoint: nautilus-rds.czigwwy0ygu9.us-east-1.rds.amazonaws.com
 ```
 
-### Screenshot Placeholder
+### Screenshots
 
-> **[SCREENSHOT 3: AWS RDS Console showing nautilus-rds instance with status "Available", engine MySQL 8.4.5, and "Not publicly accessible" badge visible]**
+<img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/63a12373-20c3-4c00-bca9-8dc6b94050eb" />
+<img width="1026" height="859" alt="image" src="https://github.com/user-attachments/assets/11fce700-c597-428f-b4b9-514eed0afaf9" />
+<img width="1030" height="859" alt="image" src="https://github.com/user-attachments/assets/15023acb-a407-4bb3-99c5-6ca457a287b9" />
+<img width="1036" height="860" alt="image" src="https://github.com/user-attachments/assets/01e2b08b-0274-412e-8096-960a6d43ea82" />
 
 ---
 
@@ -432,10 +435,7 @@ All changes to infrastructure runbooks must include a corresponding update to th
 *Region: us-east-1.*
 
 
-<img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/63a12373-20c3-4c00-bca9-8dc6b94050eb" />
-<img width="1026" height="859" alt="image" src="https://github.com/user-attachments/assets/11fce700-c597-428f-b4b9-514eed0afaf9" />
-<img width="1030" height="859" alt="image" src="https://github.com/user-attachments/assets/15023acb-a407-4bb3-99c5-6ca457a287b9" />
-<img width="1036" height="860" alt="image" src="https://github.com/user-attachments/assets/01e2b08b-0274-412e-8096-960a6d43ea82" />
+
 <img width="1033" height="418" alt="image" src="https://github.com/user-attachments/assets/ef65791d-14de-406f-9416-20f0510800aa" />
 <img width="1029" height="728" alt="image" src="https://github.com/user-attachments/assets/01d5d68b-2691-45c9-8f55-9f2589df263d" />
 <img width="1030" height="449" alt="image" src="https://github.com/user-attachments/assets/6c429d8d-0883-459c-9d53-12dcbd564287" />
