@@ -1,347 +1,256 @@
-# AWS Private RDS Instance Provisioning with EC2 Integration
+# Nautilus AWS Infrastructure: EC2 to RDS Private Connectivity
 
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-8.4.5-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Apache](https://img.shields.io/badge/Apache-2.4-D22128?style=for-the-badge&logo=apache&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-8.1-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge)
+![Project Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
+![AWS](https://img.shields.io/badge/Cloud-AWS-orange)
+![MySQL](https://img.shields.io/badge/Database-MySQL%208.4.5-blue)
+![Apache](https://img.shields.io/badge/Web%20Server-Apache2-red)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ---
 
 ## Table of Contents
 
 - [Overview](#overview)
+- [Problem Statement](#problem-statement)
 - [Architecture](#architecture)
 - [Prerequisites](#prerequisites)
-- [Known Issues and Resolutions](#known-issues-and-resolutions)
-- [Step-by-Step Implementation](#step-by-step-implementation)
-- [Verification](#verification)
+- [Infrastructure Components](#infrastructure-components)
+- [Implementation Guide](#implementation-guide)
+  - [Phase 1: Environment Bootstrap](#phase-1-environment-bootstrap)
+  - [Phase 2: Security Group Configuration](#phase-2-security-group-configuration)
+  - [Phase 3: RDS Instance Provisioning](#phase-3-rds-instance-provisioning)
+  - [Phase 4: Passwordless SSH Setup](#phase-4-passwordless-ssh-setup)
+  - [Phase 5: Application Deployment](#phase-5-application-deployment)
+  - [Phase 6: Validation](#phase-6-validation)
 - [Security Considerations](#security-considerations)
-- [Lessons Learned](#lessons-learned)
+- [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 
 ---
 
 ## Overview
 
-This runbook documents the end-to-end provisioning of a **private Amazon RDS (MySQL 8.4.5)** instance and its integration with an existing EC2 web server, including passwordless SSH access configuration and PHP application deployment. It is intended as a repeatable, production-grade reference for DevOps and Cloud Infrastructure teams.
+This project documents the end-to-end provisioning of a **private Amazon RDS MySQL instance** and its secure integration with an existing EC2-hosted PHP web application. The solution enforces least-privilege networking by scoping database access exclusively to the application tier, eliminating public database exposure while preserving full application connectivity.
 
-**Business Context:** The Nautilus DevOps team required a private, VPC-scoped MySQL database backend for their web application, with the EC2 instance serving as the only authorized entry point into the database tier.
+> **Outcome:** A browser request to the EC2 public IP returns `Connected successfully`, confirming an authenticated, end-to-end application-to-database connection over a private VPC network path.
+
+---
+
+## Problem Statement
+
+### Context
+
+The Nautilus DevOps team required a managed relational database backend for their web application running on an existing EC2 instance (`nautilus-ec2`). The key engineering constraints were:
+
+| Constraint | Requirement |
+|---|---|
+| Database Exposure | Private only, no public endpoint |
+| Network Access | EC2 security group as sole ingress source |
+| Authentication | Dedicated master credentials, not default |
+| Web Access | Port 80 open to the internet |
+| SSH Access | Key-based passwordless authentication |
+| Validation | Browser-level connectivity confirmation |
+
+### Root Cause of Gap
+
+The pre-existing EC2 instance had no database backend. The `index.php` application file contained placeholder values (`<dbhost>`, `<dbuser>`, `<dbpass>`, `<dbname>`) with no live database to connect to, rendering the application non-functional.
 
 ---
 
 ## Architecture
 
 ```
-                         +-----------------------+
-                         |      aws-client        |
-                         |  (Admin Bastion Host)  |
-                         +----------+------------+
-                                    |
-                              SSH (Port 22)
-                                    |
-                    +---------------v---------------+
-                    |         nautilus-ec2           |
-                    |   Ubuntu 22.04 + Apache2 +PHP  |
-                    |   Security Group: sg-045f...   |
-                    +---------------+---------------+
-                                    |
-                            MySQL (Port 3306)
-                       Source SG Authorization Only
-                                    |
-                    +---------------v---------------+
-                    |         nautilus-rds           |
-                    |   MySQL 8.4.5 / db.t3.micro    |
-                    |   Private / No Public Access   |
-                    |   Security Group: sg-0b88...   |
-                    +-------------------------------+
+                        Internet
+                            |
+                     [ Port 80 / 22 ]
+                            |
+                 +---------------------+
+                 |    nautilus-ec2     |
+                 |   (Apache + PHP)    |
+                 |  sg-045f295ffdb9b5  |
+                 +---------------------+
+                            |
+                     [ Port 3306 ]
+                   (Source SG only)
+                            |
+                 +---------------------+
+                 |    nautilus-rds     |
+                 |  MySQL 8.4.5        |
+                 |  db.t3.micro        |
+                 |  sg-0b883608cbdb5   |
+                 +---------------------+
+                            |
+                    [ VPC Private Subnets ]
+                    vpc-0b8bf1011ce50fff5
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-01: AWS Console -- VPC Architecture Diagram showing EC2 and RDS in the same VPC]`
+### Screenshot Placeholder
+
+> **[SCREENSHOT 1: AWS VPC Console showing EC2 and RDS within the same VPC, with subnet associations visible]**
 
 ---
 
 ## Prerequisites
 
-| Requirement | Details |
-|---|---|
-| AWS CLI | Configured with appropriate IAM permissions |
-| IAM Permissions | EC2, RDS, VPC, EC2 Instance Connect |
-| Existing Resource | EC2 instance tagged `Name=nautilus-ec2` |
-| OS on EC2 | Ubuntu 22.04 LTS with Apache2 and PHP installed |
-| Local File | `/root/index.php` on `aws-client` host |
-| Region | `us-east-1` |
+Before executing this runbook, confirm the following:
+
+- AWS CLI v2 configured with sufficient IAM permissions (`ec2:*`, `rds:*`)
+- An existing EC2 instance tagged `Name=nautilus-ec2` in `us-east-1`
+- `ssh-keygen`, `scp`, and `curl` available on the client host (`aws-client`)
+- EC2 instance reachable from the client host
+- `index.php` present at `/root/index.php` on `aws-client`
 
 ---
 
-## Known Issues and Resolutions
+## Infrastructure Components
 
-This section documents every failure encountered during implementation and the exact resolution applied. This is the core operational value of this runbook.
-
----
-
-### Issue 1: SSH Connection Timeout on Port 22
-
-**Symptom:**
-```
-ssh: connect to host <EC2_IP> port 22: Connection timed out
-```
-
-**Root Cause:**
-Port 22 was not open in the EC2 instance security group inbound rules at the time of the SSH attempt.
-
-**Resolution:**
-Open port 22 on the EC2 security group **before** any SSH or SCP operation.
-
-```bash
-aws ec2 authorize-security-group-ingress \
-  --group-id $EC2_SG_ID \
-  --protocol tcp \
-  --port 22 \
-  --cidr 0.0.0.0/0
-```
-
-> **Screenshot Placeholder**
-> `[SCREENSHOT-02: AWS Console -- EC2 Security Group Inbound Rules showing ports 22, 80, and 3306]`
+| Resource | Identifier | Description |
+|---|---|---|
+| VPC | `vpc-0b8bf1011ce50fff5` | Existing VPC hosting all resources |
+| EC2 Instance | `i-0eaf224b03992b6e9` | Application server running Apache2 + PHP |
+| EC2 Security Group | `sg-045f295ffdb9b5107` | Controls inbound traffic to EC2 |
+| RDS Security Group | `sg-0b883608cbdb55f93` | Controls inbound traffic to RDS (EC2 SG as source) |
+| RDS Instance | `nautilus-rds` | Private MySQL 8.4.5 on `db.t3.micro`, 5 GiB gp2 |
+| RDS Endpoint | `nautilus-rds.czigwwy0ygu9.us-east-1.rds.amazonaws.com` | Private DNS endpoint |
+| Database Name | `nautilus_db` | Application database |
+| Master Username | `nautilus_admin` | RDS master user |
 
 ---
 
-### Issue 2: SSH Public Key Permission Denied
+## Implementation Guide
 
-**Symptom:**
-```
-root@<EC2_IP>: Permission denied (publickey).
-```
+### Phase 1: Environment Bootstrap
 
-**Root Cause:**
-The EC2 instance did not have the `aws-client` public key in `/root/.ssh/authorized_keys`. The default instance only accepts the original launch keypair.
-
-**Resolution:**
-Use EC2 Instance Connect to inject the key temporarily, then immediately write it permanently to `authorized_keys` within the same chained command to avoid the 60-second expiry window.
-
-```bash
-aws ec2-instance-connect send-ssh-public-key \
-    --instance-id $EC2_INSTANCE_ID \
-    --instance-os-user root \
-    --ssh-public-key file:///root/.ssh/id_rsa.pub && \
-ssh -o "StrictHostKeyChecking=no" -o "IdentitiesOnly=yes" root@$EC2_IP \
-    "mkdir -p /root/.ssh && \
-     echo '$(cat /root/.ssh/id_rsa.pub)' >> /root/.ssh/authorized_keys && \
-     chmod 700 /root/.ssh && \
-     chmod 600 /root/.ssh/authorized_keys && \
-     echo 'SSH key permanently installed'"
-```
-
-**Verification:**
-```bash
-ssh -o "StrictHostKeyChecking=no" -o "IdentitiesOnly=yes" root@$EC2_IP \
-  "echo 'Passwordless SSH confirmed'"
-```
-
-> **Screenshot Placeholder**
-> `[SCREENSHOT-03: Terminal output showing "SSH key permanently installed" and "Passwordless SSH confirmed"]`
-
----
-
-### Issue 3: Grader Fails with "SSH key is not configured for passwordless access"
-
-**Symptom:**
-`curl http://$EC2_IP` returned `Connected successfully`, but the automated grader reported:
-```
-SSH key is not configured for passwordless access to the instance
-```
-
-**Root Cause:**
-EC2 Instance Connect injects the SSH public key **temporarily** (60-second TTL) into the instance metadata endpoint. The grader performs its own independent SSH check at evaluation time, by which point the key had expired from the session and was never persisted to `authorized_keys`.
-
-**Resolution:**
-The key must be written **permanently** to `/root/.ssh/authorized_keys` on the EC2 instance as described in Issue 2. Temporary EC2 Instance Connect sessions alone are insufficient for graded or audited environments.
-
----
-
-### Issue 4: Apache Serves Default Page Instead of PHP Application
-
-**Symptom:**
-```bash
-curl http://$EC2_IP
-# Returns: Apache2 Ubuntu Default Page
-```
-
-**Root Cause:**
-Apache's `DirectoryIndex` directive prioritizes `index.html` over `index.php` when both files exist in `/var/www/html/`. The default Ubuntu Apache installation ships with `index.html` in place.
-
-**Resolution:**
-Remove `index.html` before or immediately after deploying `index.php`.
-
-```bash
-ssh -o "IdentitiesOnly=yes" root@$EC2_IP \
-  "rm -f /var/www/html/index.html && systemctl restart apache2"
-```
-
-> **Screenshot Placeholder**
-> `[SCREENSHOT-04: Browser showing "Connected successfully" after index.html removal]`
-
----
-
-### Issue 5: sed Placeholder Mismatch -- No Substitution Performed
-
-**Symptom:**
-```
-PHP Warning: mysqli_connect(): php_network_getaddresses: getaddrinfo for <dbhost> failed
-```
-
-**Root Cause:**
-The `sed` commands were targeting incorrect placeholder names (`db_host`, `db_user`, etc.) while the actual placeholders in `index.php` used angle-bracket syntax (`<dbhost>`, `<dbuser>`, `<dbpass>`, `<dbname>`). The substitution silently succeeded with zero matches, leaving literal placeholder strings in the deployed file.
-
-**Resolution:**
-Always `cat` the file first to inspect exact placeholder syntax before writing any `sed` commands.
-
-```bash
-# Step 1: Inspect first
-cat /root/index.php
-
-# Step 2: Match EXACTLY what you see
-sed -i 's/<dbhost>/'"$RDS_ENDPOINT"'/' /root/index.php
-sed -i 's/<dbuser>/nautilus_admin/' /root/index.php
-sed -i 's/<dbpass>/YourPassword/' /root/index.php
-sed -i 's/<dbname>/nautilus_db/' /root/index.php
-
-# Step 3: Verify no angle brackets remain
-cat /root/index.php | grep '<db'
-# Expected output: (empty -- no matches)
-```
-
-> **Screenshot Placeholder**
-> `[SCREENSHOT-05: Terminal showing cat output with all placeholders correctly substituted]`
-
----
-
-### Issue 6: Bash History Expansion Error with Passwords Containing "!"
-
-**Symptom:**
-```
-bash: !/g: event not found
-```
-
-**Root Cause:**
-Bash interprets `!` inside double-quoted strings as a history expansion trigger. Passwords or `sed` replacement strings containing `!` fail when wrapped in double quotes.
-
-**Resolution:**
-Always use **single quotes** for passwords and `sed` replacement values containing special characters.
-
-```bash
-# Incorrect -- triggers history expansion
-sed -i "s/<dbpass>/Password123!/g" /root/index.php
-
-# Correct -- single quotes prevent expansion
-sed -i 's/<dbpass>/Password123!/' /root/index.php
-
-# Correct -- for RDS endpoint variable interpolation
-sed -i 's/<dbhost>/'"$RDS_ENDPOINT"'/' /root/index.php
-```
-
----
-
-## Step-by-Step Implementation
-
-This is the complete, validated, production-ready execution sequence.
-
-### Step 1: Export Environment Variables
+Export all required environment variables to avoid hardcoded values across subsequent commands.
 
 ```bash
 export VPC_ID=$(aws ec2 describe-instances \
-  --filters "Name=tag:Name,Values=nautilus-ec2" \
-  --query 'Reservations[0].Instances[0].VpcId' --output text)
+    --filters "Name=tag:Name,Values=nautilus-ec2" \
+    --query 'Reservations[0].Instances[0].VpcId' \
+    --output text)
 
 export EC2_SG_ID=$(aws ec2 describe-instances \
-  --filters "Name=tag:Name,Values=nautilus-ec2" \
-  --query 'Reservations[0].Instances[0].SecurityGroups[0].GroupId' --output text)
+    --filters "Name=tag:Name,Values=nautilus-ec2" \
+    --query 'Reservations[0].Instances[0].SecurityGroups[0].GroupId' \
+    --output text)
 
 export EC2_INSTANCE_ID=$(aws ec2 describe-instances \
-  --filters "Name=tag:Name,Values=nautilus-ec2" \
-  --query 'Reservations[0].Instances[0].InstanceId' --output text)
+    --filters "Name=tag:Name,Values=nautilus-ec2" \
+    --query 'Reservations[0].Instances[0].InstanceId' \
+    --output text)
 
 export EC2_IP=$(aws ec2 describe-instances \
-  --instance-ids $EC2_INSTANCE_ID \
-  --query 'Reservations[0].Instances[0].PublicIpAddress' --output text)
+    --instance-ids $EC2_INSTANCE_ID \
+    --query 'Reservations[0].Instances[0].PublicIpAddress' \
+    --output text)
 
 echo "VPC: $VPC_ID | SG: $EC2_SG_ID | Instance: $EC2_INSTANCE_ID | IP: $EC2_IP"
 ```
 
----
-
-### Step 2: Open Required Ports on EC2 Security Group
-
-```bash
-aws ec2 authorize-security-group-ingress \
-  --group-id $EC2_SG_ID --protocol tcp --port 22 --cidr 0.0.0.0/0
-
-aws ec2 authorize-security-group-ingress \
-  --group-id $EC2_SG_ID --protocol tcp --port 80 --cidr 0.0.0.0/0
+**Expected Output:**
+```
+VPC: vpc-0b8bf1011ce50fff5 | SG: sg-045f295ffdb9b5107 | Instance: i-0eaf224b03992b6e9 | IP: 44.204.190.242
 ```
 
 ---
 
-### Step 3: Create RDS Security Group and Authorize EC2 Access
+### Phase 2: Security Group Configuration
+
+#### 2a. Open EC2 Inbound Ports
+
+Allow SSH (port 22) for remote management and HTTP (port 80) for web traffic.
+
+```bash
+aws ec2 authorize-security-group-ingress \
+    --group-id $EC2_SG_ID \
+    --protocol tcp --port 22 --cidr 0.0.0.0/0
+
+aws ec2 authorize-security-group-ingress \
+    --group-id $EC2_SG_ID \
+    --protocol tcp --port 80 --cidr 0.0.0.0/0
+```
+
+#### 2b. Create and Configure the RDS Security Group
+
+Create a dedicated security group for the RDS instance. The ingress rule references the **EC2 security group ID** as the source, not a CIDR block. This ensures only traffic originating from the EC2 instance is permitted on port 3306.
 
 ```bash
 export RDS_SG_ID=$(aws ec2 create-security-group \
-  --group-name nautilus-rds-sg \
-  --description "RDS access for nautilus-ec2" \
-  --vpc-id $VPC_ID \
-  --query 'GroupId' --output text)
+    --group-name nautilus-rds-sg \
+    --description "RDS access for nautilus-ec2" \
+    --vpc-id $VPC_ID \
+    --query 'GroupId' --output text)
 
 aws ec2 authorize-security-group-ingress \
-  --group-id $RDS_SG_ID \
-  --protocol tcp --port 3306 \
-  --source-group $EC2_SG_ID
+    --group-id $RDS_SG_ID \
+    --protocol tcp --port 3306 \
+    --source-group $EC2_SG_ID
 
 echo "RDS SG: $RDS_SG_ID"
 ```
 
+> **Security Note:** Using a source security group instead of a CIDR range eliminates the risk of lateral movement from other resources in the VPC subnet range. Only instances attached to `EC2_SG_ID` can reach the RDS port.
+
+### Screenshot Placeholder
+
+> **[SCREENSHOT 2: AWS Console - Security Groups page showing nautilus-rds-sg with inbound rule referencing sg-045f295ffdb9b5107 as source on port 3306]**
+
 ---
 
-### Step 4: Provision the RDS Instance
+### Phase 3: RDS Instance Provisioning
+
+Create the MySQL RDS instance with `--no-publicly-accessible` enforced. The instance is attached to the RDS-specific security group created in Phase 2.
 
 ```bash
 aws rds create-db-instance \
-  --db-instance-identifier nautilus-rds \
-  --engine mysql \
-  --engine-version 8.4.5 \
-  --db-instance-class db.t3.micro \
-  --allocated-storage 5 \
-  --storage-type gp2 \
-  --db-name nautilus_db \
-  --master-username nautilus_admin \
-  --master-user-password 'YourSecurePassword!' \
-  --vpc-security-group-ids $RDS_SG_ID \
-  --no-publicly-accessible
+    --db-instance-identifier nautilus-rds \
+    --engine mysql \
+    --engine-version 8.4.5 \
+    --db-instance-class db.t3.micro \
+    --allocated-storage 5 \
+    --storage-type gp2 \
+    --db-name nautilus_db \
+    --master-username nautilus_admin \
+    --master-user-password 'Secure#Pass2026!' \
+    --vpc-security-group-ids $RDS_SG_ID \
+    --no-publicly-accessible
+```
 
-echo "Waiting for RDS to become available (~5 mins)..."
+Wait for the instance to reach `available` state and capture the endpoint:
+
+```bash
+echo "Waiting for RDS (~5 mins)..."
 aws rds wait db-instance-available --db-instance-identifier nautilus-rds
 
 export RDS_ENDPOINT=$(aws rds describe-db-instances \
-  --db-instance-identifier nautilus-rds \
-  --query 'DBInstances[0].Endpoint.Address' --output text)
+    --db-instance-identifier nautilus-rds \
+    --query 'DBInstances[0].Endpoint.Address' --output text)
 
 echo "RDS Endpoint: $RDS_ENDPOINT"
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-06: AWS Console -- RDS Instance showing "Available" status with endpoint visible]`
-
----
-
-### Step 5: Generate SSH Keypair (if not present)
-
-```bash
-[[ -f /root/.ssh/id_rsa ]] || ssh-keygen -t rsa -N "" -f /root/.ssh/id_rsa
+**Expected Output:**
+```
+RDS Endpoint: nautilus-rds.czigwwy0ygu9.us-east-1.rds.amazonaws.com
 ```
 
+### Screenshot Placeholder
+
+> **[SCREENSHOT 3: AWS RDS Console showing nautilus-rds instance with status "Available", engine MySQL 8.4.5, and "Not publicly accessible" badge visible]**
+
 ---
 
-### Step 6: Permanently Install SSH Key on EC2
+### Phase 4: Passwordless SSH Setup
+
+#### 4a. Generate RSA Key Pair (if not present)
+
+```bash
+[ -f /root/.ssh/id_rsa ] || ssh-keygen -t rsa -N "" -f /root/.ssh/id_rsa
+```
+
+#### 4b. Inject Public Key via EC2 Instance Connect
+
+Use EC2 Instance Connect for the initial key delivery, then permanently install the public key in the EC2 instance's `authorized_keys`.
 
 ```bash
 aws ec2-instance-connect send-ssh-public-key \
@@ -356,37 +265,54 @@ ssh -o "StrictHostKeyChecking=no" -o "IdentitiesOnly=yes" root@$EC2_IP \
      echo 'SSH key permanently installed'"
 ```
 
-**Verify passwordless access works independently:**
+#### 4c. Confirm Passwordless Access
 
 ```bash
 ssh -o "StrictHostKeyChecking=no" -o "IdentitiesOnly=yes" root@$EC2_IP \
-  "echo 'Passwordless SSH confirmed'"
+    "echo 'Passwordless SSH confirmed'"
+```
+
+**Expected Output:**
+```
+Passwordless SSH confirmed
 ```
 
 ---
 
-### Step 7: Inspect and Patch index.php
+### Phase 5: Application Deployment
+
+#### 5a. Populate Database Credentials in index.php
+
+Back up the original file, then use `sed` to inject the live RDS credentials in-place.
 
 ```bash
-# Always inspect before sed
-cat /root/index.php
-
-# Backup original
 cp /root/index.php /root/index.php.bak
 
-# Replace placeholders -- single quotes to avoid bash history expansion
 sed -i 's/<dbhost>/'"$RDS_ENDPOINT"'/' /root/index.php
 sed -i 's/<dbuser>/nautilus_admin/' /root/index.php
-sed -i 's/<dbpass>/YourSecurePassword!/' /root/index.php
+sed -i 's/<dbpass>/Secure#Pass2026!/' /root/index.php
 sed -i 's/<dbname>/nautilus_db/' /root/index.php
+```
 
-# Confirm no placeholders remain
+#### 5b. Verify Substitution
+
+```bash
 cat /root/index.php
 ```
 
----
+**Expected Output (credentials populated):**
+```php
+<?php
+$dbname = 'nautilus_db';
+$dbuser = 'nautilus_admin';
+$dbpass = 'Secure#Pass2026!';
+$dbhost = 'nautilus-rds.czigwwy0ygu9.us-east-1.rds.amazonaws.com';
+...
+```
 
-### Step 8: Deploy Application and Restart Apache
+#### 5c. Deploy to EC2 and Restart Apache
+
+Transfer the file to the EC2 web root, remove the default Apache placeholder, and restart the service.
 
 ```bash
 scp -o "StrictHostKeyChecking=no" -o "IdentitiesOnly=yes" \
@@ -397,54 +323,118 @@ ssh -o "StrictHostKeyChecking=no" -o "IdentitiesOnly=yes" root@$EC2_IP \
 
 ---
 
-## Verification
+### Phase 6: Validation
+
+Perform a final end-to-end HTTP connectivity test against the EC2 public IP.
 
 ```bash
 curl -s http://$EC2_IP
-# Expected output: Connected successfully
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-07: Browser at http://<EC2_PUBLIC_IP> showing "Connected successfully"]`
+**Expected Output:**
+```
+Connected successfully
+```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-08: Terminal showing curl output "Connected successfully<br />"]`
+### Screenshot Placeholder
+
+> **[SCREENSHOT 4: Browser window open to the EC2 public IP (http://44.204.190.242) displaying "Connected successfully"]**
+
+### Screenshot Placeholder
+
+> **[SCREENSHOT 5: Terminal output of the full curl command returning "Connected successfully" with the EC2_IP variable expanded]**
 
 ---
 
 ## Security Considerations
 
-| Area | Recommendation |
-|---|---|
-| Port 22 | Restrict to known IP ranges in production (`--cidr <YOUR_IP>/32`) |
-| Port 80 | Use HTTPS with ACM certificate and ALB in production |
-| RDS Password | Store in AWS Secrets Manager, not hardcoded in scripts |
-| RDS Access | Port 3306 is scoped to EC2 security group only, never `0.0.0.0/0` |
-| SSH Keys | Rotate regularly and remove temporary `0.0.0.0/0` SSH rules post-setup |
-| RDS Encryption | Enable `--storage-encrypted` for production workloads |
+### What Was Done Right
+
+- **Private RDS endpoint:** `--no-publicly-accessible` prevents any direct internet route to the database.
+- **Security group chaining:** The RDS ingress rule references the EC2 security group, not a CIDR, scoping access to the application tier only.
+- **Key-based SSH only:** Password authentication is bypassed entirely via RSA key injection.
+- **Credential injection at runtime:** Placeholder values in `index.php` are substituted at deploy time, not hardcoded in source.
+
+### Recommended Hardening for Production
+
+| Area | Current State | Recommended Improvement |
+|---|---|---|
+| SSH CIDR | `0.0.0.0/0` on port 22 | Restrict to known operator IP ranges or use AWS Systems Manager Session Manager |
+| Credential Storage | Inline in PHP file | Migrate to AWS Secrets Manager with IAM-based retrieval |
+| Storage Encryption | Disabled | Enable `--storage-encrypted` with a KMS CMK |
+| Backup Retention | 1 day | Increase to 7 or more days for production workloads |
+| Multi-AZ | Disabled | Enable `--multi-az` for high availability |
+| TLS in Transit | Not enforced | Configure `require_secure_transport=ON` in the RDS parameter group |
 
 ---
 
-## Lessons Learned
+## Troubleshooting
 
-| # | Lesson | Impact |
-|---|---|---|
-| 1 | Open port 22 before attempting any SSH operations | Prevents connection timeout failures |
-| 2 | Always `cat` config files before writing `sed` commands | Prevents silent no-op substitutions |
-| 3 | Use single quotes for passwords with special characters | Prevents bash history expansion errors |
-| 4 | Chain EC2 Instance Connect with SSH/SCP using `&&` | Prevents key expiry within the 60s window |
-| 5 | Permanently write to `authorized_keys`, do not rely on Instance Connect TTL | Required for graders, audits, and automation |
-| 6 | Remove `index.html` before or alongside deploying `index.php` | Prevents Apache default page from overriding the app |
+### curl returns "Unable to Connect to"
+
+**Cause:** The EC2 instance cannot reach the RDS endpoint on port 3306.
+
+**Resolution Steps:**
+1. Confirm `$RDS_SG_ID` inbound rule lists `EC2_SG_ID` as source on port 3306.
+2. Confirm the RDS instance status is `available` via `aws rds describe-db-instances`.
+3. Confirm both resources are in the same VPC (`$VPC_ID`).
+
+```bash
+aws rds describe-db-instances \
+    --db-instance-identifier nautilus-rds \
+    --query 'DBInstances[0].DBInstanceStatus'
+```
+
+---
+
+### curl returns "Could not open the db"
+
+**Cause:** The database name `nautilus_db` does not match the one provisioned, or the `sed` substitution did not apply correctly.
+
+**Resolution Steps:**
+
+```bash
+grep dbname /root/index.php
+# Must show: $dbname = 'nautilus_db';
+```
+
+---
+
+### SSH hangs or times out
+
+**Cause:** Port 22 is not open on the EC2 security group, or the EC2 Instance Connect key delivery window (60 seconds) expired before the SSH command executed.
+
+**Resolution Steps:**
+1. Verify port 22 is open: `aws ec2 describe-security-groups --group-ids $EC2_SG_ID`
+2. Re-run the `send-ssh-public-key` command immediately followed by the SSH command in the same shell session.
+
+---
+
+### Screenshot Placeholder
+
+> **[SCREENSHOT 6: AWS EC2 Console - Security Groups tab for nautilus-ec2 showing inbound rules for ports 22 and 80 from 0.0.0.0/0]**
 
 ---
 
 ## Contributing
 
-Pull requests are welcome. For significant changes, open an issue first to discuss what you would like to change. Ensure all runbook steps are tested end-to-end in a sandbox environment before submitting.
+1. Fork this repository.
+2. Create a feature branch: `git checkout -b feature/your-improvement`
+3. Commit your changes: `git commit -m "feat: describe your change"`
+4. Push to the branch: `git push origin feature/your-improvement`
+5. Open a pull request against `main`.
+
+All changes to infrastructure runbooks must include a corresponding update to the Troubleshooting section if new failure modes are introduced.
 
 ---
 
-**Region:** `us-east-1`
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+*Region: us-east-1.*
 
 <img width="1038" height="429" alt="image" src="https://github.com/user-attachments/assets/cf0031c0-8882-41dc-8543-7184550e39bf" />
 <img width="1031" height="730" alt="image" src="https://github.com/user-attachments/assets/ad5e76c5-fb1d-4e5a-b815-a378e3199a1c" />
