@@ -215,8 +215,13 @@ az acr show \
   --output table
 ```
 
-***Screenshot: az acr show table output confirming name, location, SKU, and login server***
-> *Insert screenshot showing xfusionacr29762, eastus, Basic, xfusionacr29762.azurecr.io*
+***Screenshots: az acr show table output confirming name, location, SKU, and login server***
+
+<img width="1028" height="380" alt="image" src="https://github.com/user-attachments/assets/13ad81f9-a689-4d39-a816-378d5147a166" />
+
+<img width="1035" height="862" alt="image" src="https://github.com/user-attachments/assets/207f692d-8ab0-4c87-b3f7-dc4d209f32a4" />
+<img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/6a2a80ba-7d8a-48b7-890c-c95dafa805b5" />
+<img width="1074" height="863" alt="image" src="https://github.com/user-attachments/assets/915fc9ea-94ca-4293-a9bd-f82ff70267b5" />
 
 **Expected verification output:**
 
@@ -419,10 +424,8 @@ azure/
 <img width="1031" height="498" alt="image" src="https://github.com/user-attachments/assets/67527c9f-3f73-4d6c-a726-df6c2bb2373d" />
 
 
-<img width="1028" height="380" alt="image" src="https://github.com/user-attachments/assets/13ad81f9-a689-4d39-a816-378d5147a166" />
-<img width="1035" height="862" alt="image" src="https://github.com/user-attachments/assets/207f692d-8ab0-4c87-b3f7-dc4d209f32a4" />
-<img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/6a2a80ba-7d8a-48b7-890c-c95dafa805b5" />
-<img width="1074" height="863" alt="image" src="https://github.com/user-attachments/assets/915fc9ea-94ca-4293-a9bd-f82ff70267b5" />
+
+
 <img width="1069" height="532" alt="image" src="https://github.com/user-attachments/assets/0edb9a90-27a2-449a-9904-bbb151fff3c2" />
 <img width="1075" height="764" alt="image" src="https://github.com/user-attachments/assets/813b69b5-b2a0-4b71-822a-bbeacfadaf73" />
 <img width="1073" height="851" alt="image" src="https://github.com/user-attachments/assets/510f9c6f-d3c9-45ac-b198-5deb9785aa59" />
