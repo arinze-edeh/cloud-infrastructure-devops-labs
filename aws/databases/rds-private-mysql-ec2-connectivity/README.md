@@ -82,11 +82,6 @@ The pre-existing EC2 instance had no database backend. The `index.php` applicati
                     [ VPC Private Subnets ]
                     vpc-0b8bf1011ce50fff5
 ```
-
-### Screenshot Placeholder
-
-> **[SCREENSHOT 1: AWS VPC Console showing EC2 and RDS within the same VPC, with subnet associations visible]**
-
 ---
 
 ## Prerequisites
