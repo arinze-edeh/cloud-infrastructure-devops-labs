@@ -14,7 +14,6 @@
 - [Infrastructure](#infrastructure)
 - [Root Cause Analysis](#root-cause-analysis)
 - [Resolution Steps](#resolution-steps)
-- [Screenshots](#screenshots)
 - [Commands Reference](#commands-reference)
 - [Lessons Learned](#lessons-learned)
 - [Prevention and Best Practices](#prevention-and-best-practices)
@@ -262,19 +261,6 @@ Connection to ststor01 closed.
 
 ---
 
-## Screenshots
-
-| # | Description | Location |
-|---|---|---|
-| 1 | SSH connection from jump_host to ststor01 | `<img width="1032" height="412" alt="image" src="https://github.com/user-attachments/assets/206a8a36-1672-4f3b-81d8-e4af865ee217" />` |
-| 2 | git stash list error and safe.directory resolution | `[Insert Screenshot]` |
-| 3 | git stash list output with stash@{0} and stash@{1} | `[Insert Screenshot]` |
-| 4 | sudo git stash apply stash@{1} showing welcome.txt staged | `[Insert Screenshot]` |
-| 5 | git commit confirming welcome.txt on master | `[Insert Screenshot]` |
-| 6 | git push origin master with ref update | `[Insert Screenshot]` |
-
----
-
 ## Commands Reference
 
 Complete ordered command sequence for reproducibility:
@@ -360,18 +346,3 @@ When submitting improvements to this document:
 4. Push and open a pull request
 
 ---
-
-*Maintained by the Nautilus Platform Engineering Team | Stratos DC*
-
-
-<img width="1032" height="412" alt="image" src="https://github.com/user-attachments/assets/206a8a36-1672-4f3b-81d8-e4af865ee217" />
-<img width="1032" height="446" alt="image" src="https://github.com/user-attachments/assets/76db174f-4844-4fa6-84b8-960327d83ec3" />
-
-
-<img width="1037" height="588" alt="image" src="https://github.com/user-attachments/assets/87f21c9d-db43-4825-a964-cb7d64115a2c" />
-
-<img width="1037" height="414" alt="image" src="https://github.com/user-attachments/assets/b42dae69-d9fa-47a8-a891-cf6eb08edc11" />
-
-
-
-
