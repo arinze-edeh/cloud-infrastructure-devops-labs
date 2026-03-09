@@ -281,6 +281,12 @@ ssh -o "StrictHostKeyChecking=no" -o "IdentitiesOnly=yes" root@$EC2_IP \
 Passwordless SSH confirmed
 ```
 
+### Screenshots
+
+<img width="1033" height="418" alt="image" src="https://github.com/user-attachments/assets/ef65791d-14de-406f-9416-20f0510800aa" />
+<img width="1029" height="728" alt="image" src="https://github.com/user-attachments/assets/01d5d68b-2691-45c9-8f55-9f2589df263d" />
+<img width="1030" height="449" alt="image" src="https://github.com/user-attachments/assets/6c429d8d-0883-459c-9d53-12dcbd564287" />
+
 ---
 
 ### Phase 5: Application Deployment
@@ -436,9 +442,6 @@ All changes to infrastructure runbooks must include a corresponding update to th
 
 
 
-<img width="1033" height="418" alt="image" src="https://github.com/user-attachments/assets/ef65791d-14de-406f-9416-20f0510800aa" />
-<img width="1029" height="728" alt="image" src="https://github.com/user-attachments/assets/01d5d68b-2691-45c9-8f55-9f2589df263d" />
-<img width="1030" height="449" alt="image" src="https://github.com/user-attachments/assets/6c429d8d-0883-459c-9d53-12dcbd564287" />
 <img width="1032" height="579" alt="image" src="https://github.com/user-attachments/assets/2fd9f59b-bb2c-4a0b-a9b2-7c0fcc996696" />
 <img width="1031" height="630" alt="image" src="https://github.com/user-attachments/assets/5c82eb1b-7d20-478a-89ee-b81610569b59" />
 <img width="1025" height="630" alt="image" src="https://github.com/user-attachments/assets/cfb94ff3-0aba-4b46-8c29-8e4612a7e41c" />
