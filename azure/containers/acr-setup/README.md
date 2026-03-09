@@ -20,7 +20,6 @@
   - [Phase 6: Image Push to ACR](#phase-6-image-push-to-acr)
   - [Phase 7: End-to-End Verification](#phase-7-end-to-end-verification)
 - [Resolution Summary](#resolution-summary)
-- [Repository Structure](#repository-structure)
 - [References](#references)
 
 ---
@@ -405,30 +404,9 @@ The image `xfusionacr29762.azurecr.io/xfusionacr29762:latest` is now stored in A
 
 ---
 
-## Repository Structure
-
-```
-azure/
-└── containers/
-    └── acr-setup.md       <- This document
-```
-
----
-
 ## References
 
 - [Azure Container Registry documentation](https://learn.microsoft.com/en-us/azure/container-registry/)
 - [az acr CLI reference](https://learn.microsoft.com/en-us/cli/azure/acr)
 - [Docker push reference](https://docs.docker.com/reference/cli/docker/image/push/)
 - [ACR authentication options](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication)
-
-
-
-
-
-
-
-
-<img width="1069" height="610" alt="image" src="https://github.com/user-attachments/assets/1e54354c-3206-4c32-9fef-28abcffa845e" />
-
-
