@@ -17,7 +17,6 @@
 - [Commands Reference](#commands-reference)
 - [Lessons Learned](#lessons-learned)
 - [Prevention and Best Practices](#prevention-and-best-practices)
-- [Contributing](#contributing)
 
 ---
 
@@ -333,17 +332,3 @@ git commit -m "Restore: welcome.txt from stash@{1} - WIP initial commit"
 ```
 
 ---
-
-## Contributing
-
-For issues related to this runbook or the Nautilus Storage infrastructure, raise a ticket via the internal engineering portal or contact the Stratos DC platform team.
-
-When submitting improvements to this document:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b docs/update-stash-runbook`
-3. Commit changes: `git commit -m "Docs: improve stash recovery runbook"`
-4. Push and open a pull request
-
----
-
