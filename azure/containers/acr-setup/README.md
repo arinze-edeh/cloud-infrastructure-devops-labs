@@ -286,10 +286,12 @@ docker images | grep "$ACR_NAME"
 ```
 
 ***Screenshot: docker build output showing all 9 steps completing as FINISHED***
-> *Insert screenshot showing the full build log including layer pulls, COPY, WORKDIR, pip install, and final naming step*
+
+<img width="1075" height="764" alt="image" src="https://github.com/user-attachments/assets/813b69b5-b2a0-4b71-822a-bbeacfadaf73" />
 
 ***Screenshot: docker images output confirming the tagged image is present locally***
-> *Insert screenshot showing xfusionacr29762.azurecr.io/xfusionacr29762:latest with image ID and size*
+
+<img width="1073" height="851" alt="image" src="https://github.com/user-attachments/assets/510f9c6f-d3c9-45ac-b198-5deb9785aa59" />
 
 **Build summary:**
 
@@ -425,8 +427,7 @@ azure/
 
 
 
-<img width="1075" height="764" alt="image" src="https://github.com/user-attachments/assets/813b69b5-b2a0-4b71-822a-bbeacfadaf73" />
-<img width="1073" height="851" alt="image" src="https://github.com/user-attachments/assets/510f9c6f-d3c9-45ac-b198-5deb9785aa59" />
+
 <img width="1073" height="863" alt="image" src="https://github.com/user-attachments/assets/b68b5c5f-5a64-47f4-8223-0e460f6d8300" />
 <img width="1069" height="610" alt="image" src="https://github.com/user-attachments/assets/1e54354c-3206-4c32-9fef-28abcffa845e" />
 <img width="1065" height="856" alt="image" src="https://github.com/user-attachments/assets/ad00498d-1b52-4e7e-8e73-4f02074f4913" />
