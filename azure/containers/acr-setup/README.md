@@ -314,7 +314,7 @@ docker push "${ACR_NAME}.azurecr.io/${ACR_NAME}:latest"
 ```
 
 ***Screenshot: docker push output showing all 7 layers Pushed and the final digest line***
-> *Insert screenshot showing each layer hash with Pushed status and the latest digest confirmation*
+<img width="1073" height="863" alt="image" src="https://github.com/user-attachments/assets/b68b5c5f-5a64-47f4-8223-0e460f6d8300" />
 
 **Expected output:**
 
@@ -364,7 +364,7 @@ az acr repository show \
 ```
 
 ***Screenshot: All three verification commands and their outputs in sequence***
-> *Insert screenshot showing repository list returning xfusionacr29762, show-tags returning latest, and show returning the full manifest JSON*
+<img width="1065" height="856" alt="image" src="https://github.com/user-attachments/assets/ad00498d-1b52-4e7e-8e73-4f02074f4913" />
 
 **Expected manifest output:**
 
@@ -428,7 +428,7 @@ azure/
 
 
 
-<img width="1073" height="863" alt="image" src="https://github.com/user-attachments/assets/b68b5c5f-5a64-47f4-8223-0e460f6d8300" />
+
 <img width="1069" height="610" alt="image" src="https://github.com/user-attachments/assets/1e54354c-3206-4c32-9fef-28abcffa845e" />
-<img width="1065" height="856" alt="image" src="https://github.com/user-attachments/assets/ad00498d-1b52-4e7e-8e73-4f02074f4913" />
+
 
