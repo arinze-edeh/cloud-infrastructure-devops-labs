@@ -244,7 +244,7 @@ az acr login --name "$ACR_NAME"
 ```
 
 ***Screenshot: az acr login output showing Login Succeeded***
-> *Insert screenshot showing the Login Succeeded confirmation message*
+<img width="1069" height="532" alt="image" src="https://github.com/user-attachments/assets/0edb9a90-27a2-449a-9904-bbb151fff3c2" />
 
 **Expected output:**
 
@@ -424,7 +424,7 @@ azure/
 
 
 
-<img width="1069" height="532" alt="image" src="https://github.com/user-attachments/assets/0edb9a90-27a2-449a-9904-bbb151fff3c2" />
+
 <img width="1075" height="764" alt="image" src="https://github.com/user-attachments/assets/813b69b5-b2a0-4b71-822a-bbeacfadaf73" />
 <img width="1073" height="851" alt="image" src="https://github.com/user-attachments/assets/510f9c6f-d3c9-45ac-b198-5deb9785aa59" />
 <img width="1073" height="863" alt="image" src="https://github.com/user-attachments/assets/b68b5c5f-5a64-47f4-8223-0e460f6d8300" />
