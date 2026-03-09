@@ -150,7 +150,7 @@ az account show --query "[name, state, id]" --output table
 ```
 
 ***Screenshot: az account show output confirming Azure Free Labs subscription in Enabled state***
-> *Insert screenshot showing subscription name, state: Enabled, and subscription ID*
+<img width="1033" height="485" alt="image" src="https://github.com/user-attachments/assets/e524a7f7-6174-409b-b5e6-15c43afb8a01" />
 
 **Expected output:**
 
@@ -173,7 +173,7 @@ az group list --output table
 ```
 
 ***Screenshot: az group list output showing kml_rg_main-ef0d358414644f07 in eastus***
-> *Insert screenshot showing resource group name, location, and Succeeded status*
+<img width="1034" height="583" alt="image" src="https://github.com/user-attachments/assets/15957a51-b7a6-4d12-83b2-7c47038fff69" />
 
 Set the variable for use in subsequent commands:
 
@@ -417,8 +417,8 @@ azure/
 
 
 <img width="1031" height="498" alt="image" src="https://github.com/user-attachments/assets/67527c9f-3f73-4d6c-a726-df6c2bb2373d" />
-<img width="1033" height="485" alt="image" src="https://github.com/user-attachments/assets/e524a7f7-6174-409b-b5e6-15c43afb8a01" />
-<img width="1034" height="583" alt="image" src="https://github.com/user-attachments/assets/15957a51-b7a6-4d12-83b2-7c47038fff69" />
+
+
 <img width="1028" height="380" alt="image" src="https://github.com/user-attachments/assets/13ad81f9-a689-4d39-a816-378d5147a166" />
 <img width="1035" height="862" alt="image" src="https://github.com/user-attachments/assets/207f692d-8ab0-4c87-b3f7-dc4d209f32a4" />
 <img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/6a2a80ba-7d8a-48b7-890c-c95dafa805b5" />
