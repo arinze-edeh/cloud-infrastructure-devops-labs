@@ -190,9 +190,11 @@ echo "RDS SG: $RDS_SG_ID"
 
 > **Security Note:** Using a source security group instead of a CIDR range eliminates the risk of lateral movement from other resources in the VPC subnet range. Only instances attached to `EC2_SG_ID` can reach the RDS port.
 
-### Screenshot Placeholder
+### Screenshots
 
-> **[SCREENSHOT 2: AWS Console - Security Groups page showing nautilus-rds-sg with inbound rule referencing sg-045f295ffdb9b5107 as source on port 3306]**
+<img width="1038" height="429" alt="image" src="https://github.com/user-attachments/assets/cf0031c0-8882-41dc-8543-7184550e39bf" />
+<img width="1031" height="730" alt="image" src="https://github.com/user-attachments/assets/ad5e76c5-fb1d-4e5a-b815-a378e3199a1c" />
+<img width="1031" height="679" alt="image" src="https://github.com/user-attachments/assets/7d4737e9-4bcf-4ac4-9a49-8cd087516b7d" />
 
 ---
 
@@ -429,9 +431,7 @@ All changes to infrastructure runbooks must include a corresponding update to th
 
 *Region: us-east-1.*
 
-<img width="1038" height="429" alt="image" src="https://github.com/user-attachments/assets/cf0031c0-8882-41dc-8543-7184550e39bf" />
-<img width="1031" height="730" alt="image" src="https://github.com/user-attachments/assets/ad5e76c5-fb1d-4e5a-b815-a378e3199a1c" />
-<img width="1031" height="679" alt="image" src="https://github.com/user-attachments/assets/7d4737e9-4bcf-4ac4-9a49-8cd087516b7d" />
+
 <img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/63a12373-20c3-4c00-bca9-8dc6b94050eb" />
 <img width="1026" height="859" alt="image" src="https://github.com/user-attachments/assets/11fce700-c597-428f-b4b9-514eed0afaf9" />
 <img width="1030" height="859" alt="image" src="https://github.com/user-attachments/assets/15023acb-a407-4bb3-99c5-6ca457a287b9" />
