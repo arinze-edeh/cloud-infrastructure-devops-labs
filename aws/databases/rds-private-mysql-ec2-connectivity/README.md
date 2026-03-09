@@ -4,7 +4,6 @@
 ![AWS](https://img.shields.io/badge/Cloud-AWS-orange)
 ![MySQL](https://img.shields.io/badge/Database-MySQL%208.4.5-blue)
 ![Apache](https://img.shields.io/badge/Web%20Server-Apache2-red)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 ---
 
@@ -425,12 +424,6 @@ grep dbname /root/index.php
 5. Open a pull request against `main`.
 
 All changes to infrastructure runbooks must include a corresponding update to the Troubleshooting section if new failure modes are introduced.
-
----
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
