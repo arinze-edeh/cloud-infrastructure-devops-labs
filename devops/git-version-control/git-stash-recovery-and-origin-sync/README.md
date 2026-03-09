@@ -192,7 +192,7 @@ Changes to be committed:
 
 **Screenshot**
 
-> **### Screenshot 4: sudo git stash apply stash@{1} output showing welcome.txt staged ###**
+<img width="1035" height="641" alt="image" src="https://github.com/user-attachments/assets/a068ca46-53cc-451f-8897-39dcaef12d98" />
 
 ---
 
@@ -369,7 +369,7 @@ When submitting improvements to this document:
 
 
 <img width="1037" height="588" alt="image" src="https://github.com/user-attachments/assets/87f21c9d-db43-4825-a964-cb7d64115a2c" />
-<img width="1035" height="641" alt="image" src="https://github.com/user-attachments/assets/a068ca46-53cc-451f-8897-39dcaef12d98" />
+
 <img width="1037" height="414" alt="image" src="https://github.com/user-attachments/assets/b42dae69-d9fa-47a8-a891-cf6eb08edc11" />
 <img width="1038" height="477" alt="image" src="https://github.com/user-attachments/assets/a2700f81-d14c-46f9-8a14-187aace1e975" />
 <img width="1026" height="499" alt="image" src="https://github.com/user-attachments/assets/2cdf26f2-a72f-460b-8510-991dc5593162" />
