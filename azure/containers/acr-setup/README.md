@@ -113,8 +113,11 @@ ls -la /root/pyapp/
 cat /root/pyapp/Dockerfile
 ```
 
-***Screenshot: Pre-flight environment verification output***
-> *Insert screenshot showing hostname, az --version, docker --version, docker info, and ls -la /root/pyapp/ output*
+***Screenshots: Pre-flight environment verification output***
+<img width="1034" height="848" alt="image" src="https://github.com/user-attachments/assets/15d7a72f-7bde-4672-b3ea-9521c7e388f1" />
+<img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/87205edb-135d-400f-845a-17f80a7438c5" />
+<img width="1025" height="858" alt="image" src="https://github.com/user-attachments/assets/acd63f64-8aa5-4a34-ad76-d37c84d44afb" />
+<img width="1030" height="370" alt="image" src="https://github.com/user-attachments/assets/8c4121dc-069e-4b08-a9ca-b66cc40f1258" />
 
 **Expected Dockerfile contents:**
 
@@ -412,10 +415,7 @@ azure/
 - [Docker push reference](https://docs.docker.com/reference/cli/docker/image/push/)
 - [ACR authentication options](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication)
 
-<img width="1034" height="848" alt="image" src="https://github.com/user-attachments/assets/15d7a72f-7bde-4672-b3ea-9521c7e388f1" />
-<img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/87205edb-135d-400f-845a-17f80a7438c5" />
-<img width="1025" height="858" alt="image" src="https://github.com/user-attachments/assets/acd63f64-8aa5-4a34-ad76-d37c84d44afb" />
-<img width="1030" height="370" alt="image" src="https://github.com/user-attachments/assets/8c4121dc-069e-4b08-a9ca-b66cc40f1258" />
+
 <img width="1031" height="498" alt="image" src="https://github.com/user-attachments/assets/67527c9f-3f73-4d6c-a726-df6c2bb2373d" />
 <img width="1033" height="485" alt="image" src="https://github.com/user-attachments/assets/e524a7f7-6174-409b-b5e6-15c43afb8a01" />
 <img width="1034" height="583" alt="image" src="https://github.com/user-attachments/assets/15957a51-b7a6-4d12-83b2-7c47038fff69" />
