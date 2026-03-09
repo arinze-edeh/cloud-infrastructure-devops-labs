@@ -218,9 +218,9 @@ Expected output:
  create mode 100644 welcome.txt
 ```
 
-**Screenshot Placeholder**
+**Screenshot**
 
-> ***** Screenshot 5: git commit output confirming welcome.txt committed on master *****
+<img width="1038" height="477" alt="image" src="https://github.com/user-attachments/assets/a2700f81-d14c-46f9-8a14-187aace1e975" />
 
 ---
 
@@ -243,9 +243,9 @@ To /opt/demo.git
    40efb4b..fd170ad  master -> master
 ```
 
-**Screenshot Placeholder**
+**Screenshot**
 
-> ****** Screenshot 6: Successful git push origin master with commit hash 40efb4b to fd170ad ******
+<img width="1026" height="499" alt="image" src="https://github.com/user-attachments/assets/2cdf26f2-a72f-460b-8510-991dc5593162" />
 
 ---
 
@@ -266,7 +266,7 @@ Connection to ststor01 closed.
 
 | # | Description | Location |
 |---|---|---|
-| 1 | SSH connection from jump_host to ststor01 | `[Insert Screenshot]` |
+| 1 | SSH connection from jump_host to ststor01 | `<img width="1032" height="412" alt="image" src="https://github.com/user-attachments/assets/206a8a36-1672-4f3b-81d8-e4af865ee217" />` |
 | 2 | git stash list error and safe.directory resolution | `[Insert Screenshot]` |
 | 3 | git stash list output with stash@{0} and stash@{1} | `[Insert Screenshot]` |
 | 4 | sudo git stash apply stash@{1} showing welcome.txt staged | `[Insert Screenshot]` |
@@ -371,8 +371,7 @@ When submitting improvements to this document:
 <img width="1037" height="588" alt="image" src="https://github.com/user-attachments/assets/87f21c9d-db43-4825-a964-cb7d64115a2c" />
 
 <img width="1037" height="414" alt="image" src="https://github.com/user-attachments/assets/b42dae69-d9fa-47a8-a891-cf6eb08edc11" />
-<img width="1038" height="477" alt="image" src="https://github.com/user-attachments/assets/a2700f81-d14c-46f9-8a14-187aace1e975" />
-<img width="1026" height="499" alt="image" src="https://github.com/user-attachments/assets/2cdf26f2-a72f-460b-8510-991dc5593162" />
+
 
 
 
