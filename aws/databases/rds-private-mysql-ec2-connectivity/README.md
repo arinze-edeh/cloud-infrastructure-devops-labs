@@ -331,6 +331,13 @@ ssh -o "StrictHostKeyChecking=no" -o "IdentitiesOnly=yes" root@$EC2_IP \
     "rm -f /var/www/html/index.html && systemctl restart apache2"
 ```
 
+### Screenshots
+
+<img width="1032" height="579" alt="image" src="https://github.com/user-attachments/assets/2fd9f59b-bb2c-4a0b-a9b2-7c0fcc996696" />
+<img width="1031" height="630" alt="image" src="https://github.com/user-attachments/assets/5c82eb1b-7d20-478a-89ee-b81610569b59" />
+<img width="1025" height="630" alt="image" src="https://github.com/user-attachments/assets/cfb94ff3-0aba-4b46-8c29-8e4612a7e41c" />
+<img width="1032" height="618" alt="image" src="https://github.com/user-attachments/assets/df87903d-db06-43d9-8d03-43df43c56093" />
+
 ---
 
 ### Phase 6: Validation
@@ -346,13 +353,9 @@ curl -s http://$EC2_IP
 Connected successfully
 ```
 
-### Screenshot Placeholder
+### Screenshot 
 
-> **[SCREENSHOT 4: Browser window open to the EC2 public IP (http://44.204.190.242) displaying "Connected successfully"]**
-
-### Screenshot Placeholder
-
-> **[SCREENSHOT 5: Terminal output of the full curl command returning "Connected successfully" with the EC2_IP variable expanded]**
+<img width="1035" height="209" alt="image" src="https://github.com/user-attachments/assets/81e9ef3c-820a-4f81-871e-7717d0fa1f7c" />
 
 ---
 
@@ -439,14 +442,3 @@ All changes to infrastructure runbooks must include a corresponding update to th
 ---
 
 *Region: us-east-1.*
-
-
-
-<img width="1032" height="579" alt="image" src="https://github.com/user-attachments/assets/2fd9f59b-bb2c-4a0b-a9b2-7c0fcc996696" />
-<img width="1031" height="630" alt="image" src="https://github.com/user-attachments/assets/5c82eb1b-7d20-478a-89ee-b81610569b59" />
-<img width="1025" height="630" alt="image" src="https://github.com/user-attachments/assets/cfb94ff3-0aba-4b46-8c29-8e4612a7e41c" />
-<img width="1032" height="618" alt="image" src="https://github.com/user-attachments/assets/df87903d-db06-43d9-8d03-43df43c56093" />
-<img width="1035" height="209" alt="image" src="https://github.com/user-attachments/assets/81e9ef3c-820a-4f81-871e-7717d0fa1f7c" />
-
-
-
