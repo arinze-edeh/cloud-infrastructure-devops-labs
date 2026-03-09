@@ -119,9 +119,9 @@ ED25519 key fingerprint is SHA256:yEyN8qvzhNxfcKVE+H05zwQPmQMKCXj4JyGWuOP1HIg.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 ```
 
-**Screenshot Placeholder**
+**Screenshot**
 
-> **# Screenshot 1: Successful SSH connection from jump_host to ststor01 #**
+<img width="1036" height="482" alt="image" src="https://github.com/user-attachments/assets/98726301-adcc-4fa1-911f-c029f7b3ccc3" />
 
 ---
 
@@ -363,7 +363,7 @@ When submitting improvements to this document:
 
 *Maintained by the Nautilus Platform Engineering Team | Stratos DC*
 
-<img width="1036" height="482" alt="image" src="https://github.com/user-attachments/assets/98726301-adcc-4fa1-911f-c029f7b3ccc3" />
+
 <img width="1032" height="412" alt="image" src="https://github.com/user-attachments/assets/206a8a36-1672-4f3b-81d8-e4af865ee217" />
 <img width="1032" height="446" alt="image" src="https://github.com/user-attachments/assets/76db174f-4844-4fa6-84b8-960327d83ec3" />
 <img width="1031" height="470" alt="image" src="https://github.com/user-attachments/assets/b57c7447-dd95-4db1-b33e-612502dd4225" />
