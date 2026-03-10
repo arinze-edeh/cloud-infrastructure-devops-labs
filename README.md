@@ -215,7 +215,7 @@ Serverless and Events           AWS Lambda, S3 triggers, SQS, SNS, Azure Event H
 
 | Role | Primary Skills Demonstrated |
 |---|---|
-| **Senior DevOps Engineer** | Linux, Git, Docker, Kubernetes, Jenkins, Ansible, Terraform, full SDLC automation |
+| **DevOps Engineer** | Linux, Git, Docker, Kubernetes, Jenkins, Ansible, Terraform, full SDLC automation |
 | **Cloud Infrastructure Engineer** | AWS and Azure architecture, VPC/VNet design, IAM, compute, storage, networking |
 | **Site Reliability Engineer** | Kubernetes operations, rolling updates, rollbacks, incident response, observability |
 | **Platform Engineer** | Kubernetes cluster admin, CI/CD pipeline design, IaC, internal tooling |
