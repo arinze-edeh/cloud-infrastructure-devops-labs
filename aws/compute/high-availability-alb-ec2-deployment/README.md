@@ -333,6 +333,7 @@ aws ec2 describe-instances \
 Expected: State `running`, AZ `us-east-1e`, Subnet `subnet-0c1ddf8bfdedde947`.
 
 > ***Screenshot: EC2 describe-instances table showing running state, us-east-1e AZ, and correct subnet***
+<img width="1037" height="820" alt="image" src="https://github.com/user-attachments/assets/30f40bf2-e37e-45a1-b0ea-3a6e2e0d49da" />
 <img width="1032" height="637" alt="image" src="https://github.com/user-attachments/assets/14a24eab-96ba-4ab9-9df5-f6fb6822f1aa" />
 
 ---
@@ -761,6 +762,6 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 
 <img width="1030" height="391" alt="image" src="https://github.com/user-attachments/assets/3a31409b-d95c-47c9-a321-c00cf860da22" />
 <img width="1036" height="241" alt="image" src="https://github.com/user-attachments/assets/4a6ff733-6e04-4971-bcb1-e35c60b24aad" />
-<img width="1037" height="820" alt="image" src="https://github.com/user-attachments/assets/30f40bf2-e37e-45a1-b0ea-3a6e2e0d49da" />
+
 
 
