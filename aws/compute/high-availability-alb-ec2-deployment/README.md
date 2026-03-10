@@ -654,7 +654,10 @@ aws elbv2 register-targets \
   --region us-east-1
 ```
 
-> ***Screenshot Placeholder: Terminate, wait, and relaunch commands with new instance ID i-0ea7cfa8ef2a7756d returned***
+> ***Screenshots: Terminate, wait, and relaunch commands with new instance ID i-0ea7cfa8ef2a7756d returned***
+<img width="1037" height="299" alt="image" src="https://github.com/user-attachments/assets/15d241ab-4d2d-452d-a6d3-1a9b9d232cda" />
+<img width="1045" height="251" alt="image" src="https://github.com/user-attachments/assets/6927ce22-6910-4eba-8ecb-10f561fe5b39" />
+<img width="1034" height="377" alt="image" src="https://github.com/user-attachments/assets/03624216-9eb7-44de-bce8-667456fde013" />
 
 > ***Screenshot Placeholder: deregister-targets and register-targets commands followed by healthy target health output***
 
@@ -751,9 +754,7 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 <img width="1037" height="490" alt="image" src="https://github.com/user-attachments/assets/0d971bd5-acd4-469f-b15e-a276fdc50b19" />
 <img width="1038" height="476" alt="image" src="https://github.com/user-attachments/assets/148c88eb-dd94-43aa-9bc0-e2e292811697" />
 <img width="1035" height="250" alt="image" src="https://github.com/user-attachments/assets/55f07338-d5ba-4239-bf87-8daaf139142d" />
-<img width="1037" height="299" alt="image" src="https://github.com/user-attachments/assets/15d241ab-4d2d-452d-a6d3-1a9b9d232cda" />
-<img width="1045" height="251" alt="image" src="https://github.com/user-attachments/assets/6927ce22-6910-4eba-8ecb-10f561fe5b39" />
-<img width="1034" height="377" alt="image" src="https://github.com/user-attachments/assets/03624216-9eb7-44de-bce8-667456fde013" />
+
 <img width="1030" height="391" alt="image" src="https://github.com/user-attachments/assets/3a31409b-d95c-47c9-a321-c00cf860da22" />
 <img width="1036" height="241" alt="image" src="https://github.com/user-attachments/assets/4a6ff733-6e04-4971-bcb1-e35c60b24aad" />
 <img width="1037" height="820" alt="image" src="https://github.com/user-attachments/assets/30f40bf2-e37e-45a1-b0ea-3a6e2e0d49da" />
