@@ -332,7 +332,8 @@ aws ec2 describe-instances \
 
 Expected: State `running`, AZ `us-east-1e`, Subnet `subnet-0c1ddf8bfdedde947`.
 
-> ***Screenshot Placeholder: EC2 describe-instances table showing running state, us-east-1e AZ, and correct subnet***
+> ***Screenshot: EC2 describe-instances table showing running state, us-east-1e AZ, and correct subnet***
+<img width="1032" height="637" alt="image" src="https://github.com/user-attachments/assets/14a24eab-96ba-4ab9-9df5-f6fb6822f1aa" />
 
 ---
 
@@ -732,7 +733,7 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 
 
 <img width="1036" height="277" alt="image" src="https://github.com/user-attachments/assets/e85b974c-f012-44af-965a-171303bc62f4" />
-<img width="1032" height="637" alt="image" src="https://github.com/user-attachments/assets/14a24eab-96ba-4ab9-9df5-f6fb6822f1aa" />
+
 <img width="1033" height="676" alt="image" src="https://github.com/user-attachments/assets/bd33d492-be97-4aff-88ea-9a643bdf6eb6" />
 <img width="1035" height="732" alt="image" src="https://github.com/user-attachments/assets/e9d9a049-7e20-4e8f-b616-fbb14ca4aa3c" />
 <img width="1037" height="656" alt="image" src="https://github.com/user-attachments/assets/c766b0f2-7f7d-41d5-b71a-9b4f6fa59a14" />
