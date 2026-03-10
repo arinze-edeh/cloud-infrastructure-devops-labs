@@ -247,7 +247,7 @@ aws ec2 authorize-security-group-ingress \
 
 Expected response includes `"Return": true` and `"FromPort": 80` with `ReferencedGroupInfo` pointing to `sg-03539665823fc6953`. This restricts inbound access to traffic originating from the ALB only. No direct internet access to EC2 is permitted.
 
-> ***Screenshot: Security group creation and ingress rule output showing Return true and ReferencedGroupInfo***
+> ***Screenshots: Security group creation and ingress rule output showing Return true and ReferencedGroupInfo***
 <img width="1035" height="599" alt="image" src="https://github.com/user-attachments/assets/29da420d-b411-4812-b350-963e0b2d0776" />
 <img width="1033" height="794" alt="image" src="https://github.com/user-attachments/assets/2b4808ae-4977-4659-a2a0-4bdd10b3e6eb" />
 
@@ -281,7 +281,10 @@ cat -A /tmp/xfusion-userdata.sh
 
 Every line must end with `$` only. The presence of `^M$` indicates Windows CRLF line endings which will cause the user data script to fail silently at runtime.
 
-> ***Screenshot Placeholder: cat -A output confirming clean Unix line endings with $ termination on each line***
+> ***Screenshots: cat -A output confirming clean Unix line endings with $ termination on each line***
+<img width="1040" height="293" alt="image" src="https://github.com/user-attachments/assets/42363477-1f1c-473c-91b4-eb1af925db69" />
+<img width="1034" height="390" alt="image" src="https://github.com/user-attachments/assets/bd5c5f52-94f9-4a09-bf7f-b356c7d70a5b" />
+<img width="1035" height="372" alt="image" src="https://github.com/user-attachments/assets/08f9ec6e-4f69-4f8e-91ba-d421aecd02c4" />
 
 ---
 
@@ -727,9 +730,7 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 
 
 
-<img width="1040" height="293" alt="image" src="https://github.com/user-attachments/assets/42363477-1f1c-473c-91b4-eb1af925db69" />
-<img width="1034" height="390" alt="image" src="https://github.com/user-attachments/assets/bd5c5f52-94f9-4a09-bf7f-b356c7d70a5b" />
-<img width="1035" height="372" alt="image" src="https://github.com/user-attachments/assets/08f9ec6e-4f69-4f8e-91ba-d421aecd02c4" />
+
 <img width="1036" height="277" alt="image" src="https://github.com/user-attachments/assets/e85b974c-f012-44af-965a-171303bc62f4" />
 <img width="1032" height="637" alt="image" src="https://github.com/user-attachments/assets/14a24eab-96ba-4ab9-9df5-f6fb6822f1aa" />
 <img width="1033" height="676" alt="image" src="https://github.com/user-attachments/assets/bd33d492-be97-4aff-88ea-9a643bdf6eb6" />
