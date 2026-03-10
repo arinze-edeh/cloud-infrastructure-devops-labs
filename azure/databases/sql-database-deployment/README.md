@@ -320,6 +320,7 @@ datacenter-sqldb  Online    Basic      2147483648      Local               centr
 | Database Status | Online | `Online` | PASS |
 
 > ***[SCREENSHOT: Terminal output of the final `az sql db show` table command showing all fields correctly populated]***
+<img width="1036" height="460" alt="image" src="https://github.com/user-attachments/assets/9df63aa4-ec86-4605-97a7-3196b82bd475" />
 
 ---
 
@@ -390,4 +391,4 @@ database:
 <img width="1043" height="857" alt="image" src="https://github.com/user-attachments/assets/9dbd4cda-0d83-43aa-a9f8-ca70eae13f5b" />
 <img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/ba732fb3-5aee-4773-b64d-66e63f5a9703" />
 <img width="1040" height="864" alt="image" src="https://github.com/user-attachments/assets/fe281919-6b34-4cc0-bba6-9361daebe1a9" />
-<img width="1036" height="460" alt="image" src="https://github.com/user-attachments/assets/9df63aa4-ec86-4605-97a7-3196b82bd475" />
+
