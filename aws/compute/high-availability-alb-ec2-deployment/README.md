@@ -146,7 +146,8 @@ aws ec2 describe-vpcs \
 
 Result: `vpc-09a4156f3d5e1c2e8`
 
-> ***Screenshot Placeholder: VPC ID output***
+> ***Screenshot: VPC ID output***
+<img width="1030" height="576" alt="image" src="https://github.com/user-attachments/assets/7c57e56d-f09c-4823-ba3c-0d03cd775ef3" />
 
 **Step 1.5: List all subnets in the default VPC**
 
@@ -720,7 +721,7 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 
 <img width="1034" height="517" alt="image" src="https://github.com/user-attachments/assets/3a5c9488-bba8-46b0-8088-d5ea24164632" />
 
-<img width="1030" height="576" alt="image" src="https://github.com/user-attachments/assets/7c57e56d-f09c-4823-ba3c-0d03cd775ef3" />
+
 <img width="1030" height="800" alt="image" src="https://github.com/user-attachments/assets/7f2dad58-6350-4bc0-a3ce-b3316ed1596d" />
 <img width="1035" height="647" alt="image" src="https://github.com/user-attachments/assets/d5ccc560-7745-4e01-9e7c-196d7063c4ab" />
 <img width="1035" height="732" alt="image" src="https://github.com/user-attachments/assets/f9329412-2d21-425f-aa59-ef7687daab35" />
