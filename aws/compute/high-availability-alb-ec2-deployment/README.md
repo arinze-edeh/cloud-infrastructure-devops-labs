@@ -203,7 +203,8 @@ aws ec2 describe-images \
 
 Result: `ami-04680790a315cd58d`
 
-> ***Screenshot Placeholder: Default SG ID and AMI ID outputs***
+> ***Screenshot: Default SG ID and AMI ID outputs***
+<img width="1035" height="732" alt="image" src="https://github.com/user-attachments/assets/f9329412-2d21-425f-aa59-ef7687daab35" />
 
 ---
 
@@ -723,9 +724,6 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 
 
 
-
-<img width="1035" height="647" alt="image" src="https://github.com/user-attachments/assets/d5ccc560-7745-4e01-9e7c-196d7063c4ab" />
-<img width="1035" height="732" alt="image" src="https://github.com/user-attachments/assets/f9329412-2d21-425f-aa59-ef7687daab35" />
 <img width="1035" height="599" alt="image" src="https://github.com/user-attachments/assets/29da420d-b411-4812-b350-963e0b2d0776" />
 <img width="1033" height="794" alt="image" src="https://github.com/user-attachments/assets/2b4808ae-4977-4659-a2a0-4bdd10b3e6eb" />
 <img width="1040" height="293" alt="image" src="https://github.com/user-attachments/assets/42363477-1f1c-473c-91b4-eb1af925db69" />
