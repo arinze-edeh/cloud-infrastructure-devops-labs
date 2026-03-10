@@ -42,7 +42,7 @@ This repository contains **200+ production-grade engineering implementations** o
 
 The portfolio spans the complete engineering lifecycle: from Linux system hardening and Git workflow design, through container platform operations and Kubernetes cluster administration, to multi-stage CI/CD pipeline architecture, infrastructure-as-code provisioning, and cloud-native service integration across AWS and Azure.
 
-**Target Roles:** Senior DevOps Engineer, Cloud Infrastructure Engineer, Site Reliability Engineer, Platform Engineer, Kubernetes Engineer, CI/CD Engineer, Automation Engineer, Cloud Security Engineer, Build and Release Engineer, Infrastructure Engineer.
+**Target Roles:** DevOps Engineer, Cloud Infrastructure Engineer, Site Reliability Engineer, Platform Engineer, Kubernetes Engineer, CI/CD Engineer, Automation Engineer, Cloud Security Engineer, Build and Release Engineer, Infrastructure Engineer.
 
 ---
 
@@ -112,7 +112,7 @@ Authored and managed Terraform infrastructure-as-code configurations for AWS env
 
 ## Troubleshooting and Incident Response
 
-This section highlights diagnostic and resolution work across infrastructure layers, demonstrating the systematic fault-isolation and remediation capability expected of Senior DevOps, SRE, and Platform Engineering roles.
+This section highlights diagnostic and resolution work across infrastructure layers, demonstrating the systematic fault-isolation and remediation capability expected of DevOps, SRE, and Platform Engineering roles.
 
 ### Kubernetes Incident Resolution
 
@@ -230,7 +230,7 @@ Serverless and Events           AWS Lambda, S3 triggers, SQS, SNS, Azure Event H
 
 ## Connect
 
-**Actively seeking Senior DevOps, Cloud Infrastructure, SRE, and Platform Engineering roles.**
+**Actively seeking DevOps, Cloud Infrastructure, SRE, and Platform Engineering roles.**
 Available for full-time positions, contract engagements, and technical interviews.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/arinze-edeh)
