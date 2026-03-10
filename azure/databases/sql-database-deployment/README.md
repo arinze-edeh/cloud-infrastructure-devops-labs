@@ -280,7 +280,10 @@ az sql db create \
 }
 ```
 
-> ***[SCREENSHOT: Full JSON output from the `az sql db create` command showing "status": "Online"]***
+> ***[SCREENSHOTS: Full JSON output from the `az sql db create` command showing "status": "Online"]***
+<img width="1043" height="857" alt="image" src="https://github.com/user-attachments/assets/9dbd4cda-0d83-43aa-a9f8-ca70eae13f5b" />
+<img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/ba732fb3-5aee-4773-b64d-66e63f5a9703" />
+<img width="1040" height="864" alt="image" src="https://github.com/user-attachments/assets/fe281919-6b34-4cc0-bba6-9361daebe1a9" />
 
 ---
 
@@ -388,7 +391,5 @@ database:
 <img width="1041" height="412" alt="image" src="https://github.com/user-attachments/assets/83b83d0f-f5ea-445c-b772-46021a6ee85a" />
 <img width="1035" height="691" alt="image" src="https://github.com/user-attachments/assets/01dabebd-1f15-4e02-95ea-4d0e912024d6" />
 <img width="1038" height="686" alt="image" src="https://github.com/user-attachments/assets/1135afb5-de29-4fad-b114-857fbb49ffda" />
-<img width="1043" height="857" alt="image" src="https://github.com/user-attachments/assets/9dbd4cda-0d83-43aa-a9f8-ca70eae13f5b" />
-<img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/ba732fb3-5aee-4773-b64d-66e63f5a9703" />
-<img width="1040" height="864" alt="image" src="https://github.com/user-attachments/assets/fe281919-6b34-4cc0-bba6-9361daebe1a9" />
+
 
