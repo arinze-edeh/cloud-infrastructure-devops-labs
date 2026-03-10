@@ -437,7 +437,7 @@ aws elbv2 describe-target-health \
 
 > **Expected at this stage:** State `unused` with description `Target group is not configured to receive traffic from the load balancer`. This is correct behavior before the listener is created and does not indicate a problem.
 
-> ***Screenshot: Target group creation output and describe-target-groups table showing HTTP port 80 instance type***
+> ***Screenshots: Target group creation output and describe-target-groups table showing HTTP port 80 instance type***
 <img width="1037" height="676" alt="image" src="https://github.com/user-attachments/assets/8fd74b91-568f-4f46-9b7e-8f2b00de257c" />
 <img width="1036" height="632" alt="image" src="https://github.com/user-attachments/assets/412d3c3b-863c-41e6-8fcb-db08aa93910b" />
 
@@ -462,8 +462,8 @@ Result: `arn:aws:elasticloadbalancing:us-east-1:683588789756:listener/app/xfusio
 
 This step completes the forwarding chain: Internet > ALB > Listener > Target Group > EC2.
 
-> ***Screenshot Placeholder: create-listener output table showing listener ARN, HTTP, and port 80***
-
+> ***Screenshot: create-listener output table showing listener ARN, HTTP, and port 80***
+<img width="1034" height="666" alt="image" src="https://github.com/user-attachments/assets/d0e76a2f-ff51-4d68-95a4-a88a2dab6c84" />
 ---
 
 ### Phase 8: Security Group Adjustments
@@ -741,7 +741,7 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 
 <img width="1037" height="656" alt="image" src="https://github.com/user-attachments/assets/c766b0f2-7f7d-41d5-b71a-9b4f6fa59a14" />
 
-<img width="1034" height="666" alt="image" src="https://github.com/user-attachments/assets/d0e76a2f-ff51-4d68-95a4-a88a2dab6c84" />
+
 <img width="1032" height="469" alt="image" src="https://github.com/user-attachments/assets/ff74a792-caab-4b5b-a298-2eb2a711f250" />
 <img width="1023" height="689" alt="image" src="https://github.com/user-attachments/assets/eada55f7-82de-4db0-96d8-52405340a62a" />
 <img width="1041" height="719" alt="image" src="https://github.com/user-attachments/assets/9a1224a0-a3e8-4b51-82ed-55d1069bda55" />
