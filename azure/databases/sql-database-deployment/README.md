@@ -169,6 +169,7 @@ az configure --defaults location=centralus
 ```
 
 > ***[SCREENSHOT: Terminal output of `az account show` confirming the correct subscription is active]***
+<img width="1032" height="564" alt="image" src="https://github.com/user-attachments/assets/559e9ad1-d3a4-485d-a287-aa1ec45349e0" />
 
 ---
 
@@ -381,8 +382,8 @@ database:
 ---
 
 
-<img width="1032" height="466" alt="image" src="https://github.com/user-attachments/assets/14bc4c73-5630-4234-bdcb-466625238c7a" />
-<img width="1032" height="564" alt="image" src="https://github.com/user-attachments/assets/559e9ad1-d3a4-485d-a287-aa1ec45349e0" />
+
+
 <img width="1041" height="412" alt="image" src="https://github.com/user-attachments/assets/83b83d0f-f5ea-445c-b772-46021a6ee85a" />
 <img width="1035" height="691" alt="image" src="https://github.com/user-attachments/assets/01dabebd-1f15-4e02-95ea-4d0e912024d6" />
 <img width="1038" height="686" alt="image" src="https://github.com/user-attachments/assets/1135afb5-de29-4fad-b114-857fbb49ffda" />
