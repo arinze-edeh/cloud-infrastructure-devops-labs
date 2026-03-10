@@ -567,7 +567,7 @@ aws elbv2 describe-target-groups \
 ```
 
 > ***Screenshot: Full resource audit output showing all three sections with correct values***
-<img width="1035" height="250" alt="image" src="https://github.com/user-attachments/assets/55f07338-d5ba-4239-bf87-8daaf139142d" />
+
 
 ---
 
@@ -612,6 +612,7 @@ User is not authorized to perform: elasticloadbalancing:SetSubnets
 ```
 
 > ***Screenshot: AccessDenied error output from set-subnets attempt***
+<img width="1035" height="250" alt="image" src="https://github.com/user-attachments/assets/55f07338-d5ba-4239-bf87-8daaf139142d" />
 
 **Actual Resolution Applied:**
 
