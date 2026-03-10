@@ -16,7 +16,7 @@
 
 ## Overview
 
-This directory contains **50 production-grade Azure implementations** organised by service domain. Each implementation addresses a specific infrastructure, security, networking, or architecture challenge modelled on real-world Azure environments. The work spans foundational cloud administration through advanced multi-service architectures covering virtual machines, identity and access control, networking, storage, containers, databases, event-driven integration, and infrastructure automation.
+This directory contains **50+ production-grade Azure implementations** organised by service domain. Each implementation addresses a specific infrastructure, security, networking, or architecture challenge modelled on real-world Azure environments. The work spans foundational cloud administration through advanced multi-service architectures covering virtual machines, identity and access control, networking, storage, containers, databases, event-driven integration, and infrastructure automation.
 
 Every implementation is fully documented with configuration details, architectural decisions, and validation outcomes.
 
@@ -134,8 +134,8 @@ Automation           ARM Templates, Azure CLI Scripting, User Data Automation,
 | Repository | Description |
 |---|---|
 | [Cloud and DevOps Engineering](../README.md) | Full portfolio README covering DevOps, AWS, and Azure |
-| [AWS Cloud Engineering](../aws/README.md) | 50 AWS implementations across compute, networking, storage, containers, and more |
-| [DevOps Engineering](../devops/README.md) | 100 implementations across Linux, Docker, Kubernetes, Jenkins, Ansible, and Terraform |
+| [AWS Cloud Engineering](../aws/README.md) | 50+ AWS implementations across compute, networking, storage, containers, and more |
+| [DevOps Engineering](../devops/README.md) | 100+ implementations across Linux, Docker, Kubernetes, Jenkins, Ansible, and Terraform |
 
 ---
 
@@ -145,7 +145,7 @@ Automation           ARM Templates, Azure CLI Scripting, User Data Automation,
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/arinze-edeh)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:edeharinze389@gmail.com)
 
-<sub>50 production-grade Azure implementations across 8 service domains.</sub>
+<sub>50+ production-grade Azure implementations across 8 service domains.</sub>
 
 </div>
 
