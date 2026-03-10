@@ -503,7 +503,9 @@ aws ec2 describe-security-groups \
 
 Expected: Row showing `tcp | 80 | 80 | 0.0.0.0/0` alongside the existing self-reference rule.
 
-> ***Screenshot Placeholder: Before and after inbound rules on default SG, showing the addition of tcp 80 0.0.0.0/0***
+> ***Screenshots: Before and after inbound rules on default SG, showing the addition of tcp 80 0.0.0.0/0***
+<img width="1023" height="689" alt="image" src="https://github.com/user-attachments/assets/eada55f7-82de-4db0-96d8-52405340a62a" />
+<img width="1041" height="719" alt="image" src="https://github.com/user-attachments/assets/9a1224a0-a3e8-4b51-82ed-55d1069bda55" />
 
 ---
 
@@ -743,8 +745,7 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 
 
 <img width="1032" height="469" alt="image" src="https://github.com/user-attachments/assets/ff74a792-caab-4b5b-a298-2eb2a711f250" />
-<img width="1023" height="689" alt="image" src="https://github.com/user-attachments/assets/eada55f7-82de-4db0-96d8-52405340a62a" />
-<img width="1041" height="719" alt="image" src="https://github.com/user-attachments/assets/9a1224a0-a3e8-4b51-82ed-55d1069bda55" />
+
 <img width="1037" height="490" alt="image" src="https://github.com/user-attachments/assets/0d971bd5-acd4-469f-b15e-a276fdc50b19" />
 <img width="1038" height="476" alt="image" src="https://github.com/user-attachments/assets/148c88eb-dd94-43aa-9bc0-e2e292811697" />
 <img width="1035" height="250" alt="image" src="https://github.com/user-attachments/assets/55f07338-d5ba-4239-bf87-8daaf139142d" />
