@@ -598,7 +598,8 @@ i-0341e7dc257e2428c | unused | Target is in an Availability Zone that is not ena
 
 **Cause:** The EC2 instance launched into `us-east-1a` via AWS auto-placement. The ALB was created with subnets only in `us-east-1e` and `us-east-1d`. AWS ALB cannot route to targets in AZs not represented by its subnet configuration.
 
-> ***Screenshot Placeholder: describe-target-health output showing unused state with AZ not enabled error message***
+> ***Screenshot: describe-target-health output showing unused state with AZ not enabled error message***
+<img width="1037" height="490" alt="image" src="https://github.com/user-attachments/assets/0d971bd5-acd4-469f-b15e-a276fdc50b19" />
 
 **Attempted Resolution (Failed):**
 
@@ -609,7 +610,7 @@ An error occurred (AccessDenied) when calling the SetSubnets operation:
 User is not authorized to perform: elasticloadbalancing:SetSubnets
 ```
 
-> ***Screenshot Placeholder: AccessDenied error output from set-subnets attempt***
+> ***Screenshot: AccessDenied error output from set-subnets attempt***
 
 **Actual Resolution Applied:**
 
@@ -752,7 +753,7 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 
 <img width="1032" height="469" alt="image" src="https://github.com/user-attachments/assets/ff74a792-caab-4b5b-a298-2eb2a711f250" />
 
-<img width="1037" height="490" alt="image" src="https://github.com/user-attachments/assets/0d971bd5-acd4-469f-b15e-a276fdc50b19" />
+
 <img width="1038" height="476" alt="image" src="https://github.com/user-attachments/assets/148c88eb-dd94-43aa-9bc0-e2e292811697" />
 <img width="1035" height="250" alt="image" src="https://github.com/user-attachments/assets/55f07338-d5ba-4239-bf87-8daaf139142d" />
 
