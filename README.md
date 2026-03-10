@@ -50,9 +50,9 @@ The portfolio spans the complete engineering lifecycle: from Linux system harden
 
 ```
 .
-├── aws/          # AWS cloud architecture and service implementations
-├── azure/        # Azure cloud architecture and service implementations
-├── devops/       # DevOps engineering implementations
+├── aws/          # 50+ AWS cloud architecture and service implementations
+├── azure/        # 50+ Azure cloud architecture and service implementations
+├── devops/       # 100+ DevOps engineering implementations
 └── README.md
 ```
 
