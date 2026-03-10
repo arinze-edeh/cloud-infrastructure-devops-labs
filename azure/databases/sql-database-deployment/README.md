@@ -128,6 +128,8 @@ az sql server create \
 
 > ***[SCREENSHOT: Terminal output showing the red PasswordNotComplex error message after the first server creation attempt]***
 
+<img width="1041" height="412" alt="image" src="https://github.com/user-attachments/assets/83b83d0f-f5ea-445c-b772-46021a6ee85a" />
+
 **Screenshot -- Successful Server Creation:**
 
 > ***[SCREENSHOT: Terminal output showing the full JSON response with "state": "Ready" and "publicNetworkAccess": "Enabled" after the corrected command]***
@@ -390,7 +392,6 @@ database:
 
 
 
-<img width="1041" height="412" alt="image" src="https://github.com/user-attachments/assets/83b83d0f-f5ea-445c-b772-46021a6ee85a" />
 
 
 
