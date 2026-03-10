@@ -376,7 +376,8 @@ aws elbv2 describe-load-balancers \
 
 Expected: `State.Code = active`, security group = `sg-03539665823fc6953`.
 
-> ***Screenshot Placeholder: ALB creation output showing provisioning state, then describe-load-balancers output showing active state with DNS name***
+> ***Screenshot: ALB creation output showing provisioning state, then describe-load-balancers output showing active state with DNS name***
+<img width="1035" height="732" alt="image" src="https://github.com/user-attachments/assets/e9d9a049-7e20-4e8f-b616-fbb14ca4aa3c" />
 
 ---
 
@@ -735,7 +736,7 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 <img width="1036" height="277" alt="image" src="https://github.com/user-attachments/assets/e85b974c-f012-44af-965a-171303bc62f4" />
 
 <img width="1033" height="676" alt="image" src="https://github.com/user-attachments/assets/bd33d492-be97-4aff-88ea-9a643bdf6eb6" />
-<img width="1035" height="732" alt="image" src="https://github.com/user-attachments/assets/e9d9a049-7e20-4e8f-b616-fbb14ca4aa3c" />
+
 <img width="1037" height="656" alt="image" src="https://github.com/user-attachments/assets/c766b0f2-7f7d-41d5-b71a-9b4f6fa59a14" />
 <img width="1037" height="676" alt="image" src="https://github.com/user-attachments/assets/8fd74b91-568f-4f46-9b7e-8f2b00de257c" />
 <img width="1036" height="632" alt="image" src="https://github.com/user-attachments/assets/412d3c3b-863c-41e6-8fcb-db08aa93910b" />
