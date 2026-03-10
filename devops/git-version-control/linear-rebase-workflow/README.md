@@ -165,9 +165,9 @@ nothing to commit, working tree clean
 
 The `feature` branch had diverged from `master` after `5d54451` was committed to `master`. A standard `git merge` would add an unwanted merge commit at the tip of `feature`.
 
-> **Screenshot Placeholder**
+> **Screenshot**
 > ### Pre-Rebase Git Graph
-> *(Insert screenshot of `git log --oneline --all --graph` showing the diverged branch topology)*
+<img width="1032" height="690" alt="image" src="https://github.com/user-attachments/assets/8c97b774-d02e-420d-8a60-4cf47c086324" />
 
 ---
 
@@ -307,7 +307,7 @@ Environment: Stratos DC, Nautilus Storage Server | Scope: Git Branch Management*
 
 <img width="1035" height="612" alt="image" src="https://github.com/user-attachments/assets/2d496932-22bb-4533-b960-1491716a777f" />
 <img width="1031" height="575" alt="image" src="https://github.com/user-attachments/assets/d78db3f6-3d63-4919-bcd5-1596871b327e" />
-<img width="1032" height="690" alt="image" src="https://github.com/user-attachments/assets/8c97b774-d02e-420d-8a60-4cf47c086324" />
+
 <img width="1032" height="728" alt="image" src="https://github.com/user-attachments/assets/bca0a5b5-0fad-45a3-8e2b-dcb6399190c4" />
 <img width="1033" height="826" alt="image" src="https://github.com/user-attachments/assets/7382bd91-b49e-4d9a-8d78-f4c898cff25b" />
 <img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/5b7e40c1-e9c7-4dd9-aa55-1b36fa200d4f" />
