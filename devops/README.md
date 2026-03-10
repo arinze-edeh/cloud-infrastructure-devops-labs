@@ -19,7 +19,7 @@
 
 ## Overview
 
-This directory contains **100 production-grade DevOps engineering implementations** organised across nine core domains. Each implementation addresses a specific infrastructure, automation, security, or operational challenge modelled on real-world production environments. The work spans the complete DevOps engineering lifecycle: from Linux system hardening and network security through container platform operations, Kubernetes cluster administration, multi-stage CI/CD pipeline architecture, Ansible configuration management, Terraform infrastructure provisioning, and Bash scripting automation.
+This directory contains **100+ production-grade DevOps engineering implementations** organised across nine core domains. Each implementation addresses a specific infrastructure, automation, security, or operational challenge modelled on real-world production environments. The work spans the complete DevOps engineering lifecycle: from Linux system hardening and network security through container platform operations, Kubernetes cluster administration, multi-stage CI/CD pipeline architecture, Ansible configuration management, Terraform infrastructure provisioning, and Bash scripting automation.
 
 Every implementation is fully documented with configuration details, architectural decisions, and validation outcomes.
 
@@ -158,8 +158,8 @@ Scripting and Automation   Bash scripting, parameterised inputs, error handling,
 | Repository | Description |
 |---|---|
 | [Cloud and DevOps Engineering](../README.md) | Full portfolio README covering DevOps, AWS, and Azure |
-| [AWS Cloud Engineering](../aws/README.md) | AWS implementations across compute, networking, storage, containers, and more |
-| [Azure Cloud Engineering](../azure/README.md) | Azure implementations across VMs, networking, storage, containers, and databases |
+| [AWS Cloud Engineering](../aws/README.md) | 50+ AWS implementations across compute, networking, storage, containers, and more |
+| [Azure Cloud Engineering](../azure/README.md) | 50+ Azure implementations across VMs, networking, storage, containers, and databases |
 
 ---
 
@@ -169,6 +169,6 @@ Scripting and Automation   Bash scripting, parameterised inputs, error handling,
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/arinze-edeh)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:edeharinze389@gmail.com)
 
-<sub>100 production-grade DevOps implementations across 9 engineering domains.</sub>
+<sub>100+ production-grade DevOps implementations across 9 engineering domains.</sub>
 
 </div>
