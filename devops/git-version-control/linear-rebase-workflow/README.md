@@ -203,9 +203,9 @@ fa7cbd6 -> 5d54451 (master) -> 1dd1d90 (feature HEAD)
 
 The local `feature` branch now sits cleanly on top of `master`. The old remote `feature` tip (`7d71c67`) still exists on the remote and will be overwritten in the next step.
 
-> **Screenshot Placeholder**
+> **Screenshot**
 > ### Post-Rebase Git Graph
-> *(Insert screenshot of `git log --oneline --all --graph` confirming linear history after rebase)*
+<img width="1033" height="826" alt="image" src="https://github.com/user-attachments/assets/7382bd91-b49e-4d9a-8d78-f4c898cff25b" />
 
 ---
 
@@ -227,9 +227,9 @@ To /opt/news.git
 
 The `+` prefix in the push output confirms a forced update was applied. The remote `feature` branch now points to the rebased commit `1dd1d90`.
 
-> **Screenshot Placeholder**
+> **Screenshot**
 > ### Successful Force Push Output
-> *(Insert screenshot of the `git push --force-with-lease` terminal output)*
+<img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/5b7e40c1-e9c7-4dd9-aa55-1b36fa200d4f" />
 
 ---
 
@@ -309,5 +309,5 @@ Environment: Stratos DC, Nautilus Storage Server | Scope: Git Branch Management*
 <img width="1031" height="575" alt="image" src="https://github.com/user-attachments/assets/d78db3f6-3d63-4919-bcd5-1596871b327e" />
 
 <img width="1032" height="728" alt="image" src="https://github.com/user-attachments/assets/bca0a5b5-0fad-45a3-8e2b-dcb6399190c4" />
-<img width="1033" height="826" alt="image" src="https://github.com/user-attachments/assets/7382bd91-b49e-4d9a-8d78-f4c898cff25b" />
-<img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/5b7e40c1-e9c7-4dd9-aa55-1b36fa200d4f" />
+
+
