@@ -211,6 +211,7 @@ az sql server show \
 ```
 
 > ***[SCREENSHOT: Full JSON output of the successful server creation showing state "Ready"]***
+<img width="1035" height="691" alt="image" src="https://github.com/user-attachments/assets/01dabebd-1f15-4e02-95ea-4d0e912024d6" />
 
 ---
 
@@ -239,6 +240,7 @@ az sql server firewall-rule create \
 ```
 
 > ***[SCREENSHOT: Terminal output confirming the firewall rule was created with the correct IP range]***
+<img width="1038" height="686" alt="image" src="https://github.com/user-attachments/assets/1135afb5-de29-4fad-b114-857fbb49ffda" />
 
 ---
 
@@ -389,7 +391,7 @@ database:
 
 
 <img width="1041" height="412" alt="image" src="https://github.com/user-attachments/assets/83b83d0f-f5ea-445c-b772-46021a6ee85a" />
-<img width="1035" height="691" alt="image" src="https://github.com/user-attachments/assets/01dabebd-1f15-4e02-95ea-4d0e912024d6" />
-<img width="1038" height="686" alt="image" src="https://github.com/user-attachments/assets/1135afb5-de29-4fad-b114-857fbb49ffda" />
+
+
 
 
