@@ -133,6 +133,7 @@ az sql server create \
 **Screenshot -- Successful Server Creation:**
 
 > ***[SCREENSHOT: Terminal output showing the full JSON response with "state": "Ready" and "publicNetworkAccess": "Enabled" after the corrected command]***
+<img width="1035" height="691" alt="image" src="https://github.com/user-attachments/assets/7fcb600e-e885-45d7-87af-3dbd5fb25f47" />
 
 ---
 
