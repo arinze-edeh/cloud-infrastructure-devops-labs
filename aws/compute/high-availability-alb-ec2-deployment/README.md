@@ -523,7 +523,8 @@ aws elbv2 describe-target-health \
 
 Expected: `healthy | None`. If `initial` is returned, Nginx is still starting. Wait 60 seconds and re-run.
 
-> ***Screenshot Placeholder: describe-target-health output showing i-0ea7cfa8ef2a7756d as healthy***
+> ***Screenshot: describe-target-health output showing i-0ea7cfa8ef2a7756d as healthy***
+<img width="1034" height="486" alt="image" src="https://github.com/user-attachments/assets/79c165d3-b3c7-4bd5-9d9a-a063ee31b091" />
 
 **Step 9.2: Test Nginx via ALB DNS**
 
@@ -539,7 +540,8 @@ Content-Type: text/html
 Server: nginx/1.18.0 (Ubuntu)
 ```
 
-> ***Screenshot Placeholder: curl -I output showing HTTP 200 OK with Server nginx/1.18.0 Ubuntu header***
+> ***Screenshot: curl -I output showing HTTP 200 OK with Server nginx/1.18.0 Ubuntu header***
+<img width="1034" height="486" alt="image" src="https://github.com/user-attachments/assets/79c165d3-b3c7-4bd5-9d9a-a063ee31b091" />
 
 **Step 9.3: Full resource audit**
 
@@ -757,4 +759,4 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 <img width="1037" height="820" alt="image" src="https://github.com/user-attachments/assets/30f40bf2-e37e-45a1-b0ea-3a6e2e0d49da" />
 <img width="1028" height="442" alt="image" src="https://github.com/user-attachments/assets/2a40807f-d0f2-4911-a772-852069d058c2" />
 <img width="1034" height="486" alt="image" src="https://github.com/user-attachments/assets/90043ab0-9b2c-493c-9bce-bac45f5fdd85" />
-<img width="1034" height="486" alt="image" src="https://github.com/user-attachments/assets/79c165d3-b3c7-4bd5-9d9a-a063ee31b091" />
+
