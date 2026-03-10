@@ -170,7 +170,8 @@ Six subnets returned across six AZs:
 | subnet-0f72d1d4b29fd2ebb | us-east-1a | 172.31.16.0/20 |
 | subnet-0287ca0a3d2eea673 | us-east-1f | 172.31.64.0/20 |
 
-> ***Screenshot Placeholder: Subnet table output showing all six subnets with AZ and CIDR***
+> ***Screenshot: Subnet table output showing all six subnets with AZ and CIDR***
+<img width="1030" height="800" alt="image" src="https://github.com/user-attachments/assets/7f2dad58-6350-4bc0-a3ce-b3316ed1596d" />
 
 **Step 1.6: Get Default Security Group ID**
 
@@ -719,10 +720,10 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 
 ---
 
-<img width="1034" height="517" alt="image" src="https://github.com/user-attachments/assets/3a5c9488-bba8-46b0-8088-d5ea24164632" />
 
 
-<img width="1030" height="800" alt="image" src="https://github.com/user-attachments/assets/7f2dad58-6350-4bc0-a3ce-b3316ed1596d" />
+
+
 <img width="1035" height="647" alt="image" src="https://github.com/user-attachments/assets/d5ccc560-7745-4e01-9e7c-196d7063c4ab" />
 <img width="1035" height="732" alt="image" src="https://github.com/user-attachments/assets/f9329412-2d21-425f-aa59-ef7687daab35" />
 <img width="1035" height="599" alt="image" src="https://github.com/user-attachments/assets/29da420d-b411-4812-b350-963e0b2d0776" />
