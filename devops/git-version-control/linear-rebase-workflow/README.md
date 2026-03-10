@@ -233,10 +233,11 @@ The `+` prefix in the push output confirms a forced update was applied. The remo
 
 ---
 
-## Screenshots
+## Screenshot
 
 > ### Full Terminal Session Overview
-> *(Insert full-session screenshot showing all commands executed from SSH login through push)*
+<img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/722acdf9-a2ca-4d03-a4b9-cd6416ff6335" />
+
 
 ---
 
@@ -302,12 +303,4 @@ The `feature` branch was successfully rebased onto `master` and pushed to the re
 ---
 
 Environment: Stratos DC, Nautilus Storage Server | Scope: Git Branch Management*
-
-<img width="1034" height="407" alt="image" src="https://github.com/user-attachments/assets/1d3dfb68-982e-4224-9291-56d92ff45ddf" />
-
-<img width="1035" height="612" alt="image" src="https://github.com/user-attachments/assets/2d496932-22bb-4533-b960-1491716a777f" />
-<img width="1031" height="575" alt="image" src="https://github.com/user-attachments/assets/d78db3f6-3d63-4919-bcd5-1596871b327e" />
-
-<img width="1032" height="728" alt="image" src="https://github.com/user-attachments/assets/bca0a5b5-0fad-45a3-8e2b-dcb6399190c4" />
-
 
