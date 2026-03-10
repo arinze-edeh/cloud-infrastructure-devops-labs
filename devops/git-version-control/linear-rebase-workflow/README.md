@@ -99,9 +99,10 @@ natasha
 ststor01
 ```
 
-> **Screenshot Placeholder**
+> **Screenshot**
 > ### SSH Login and Identity Verification
-> *(Insert screenshot of successful SSH login and `whoami && hostname` output)*
+
+<img width="1027" height="518" alt="image" src="https://github.com/user-attachments/assets/ca81d002-d5f9-40e0-939d-49faa02f36d8" />
 
 ---
 
@@ -303,7 +304,7 @@ The `feature` branch was successfully rebased onto `master` and pushed to the re
 Environment: Stratos DC, Nautilus Storage Server | Scope: Git Branch Management*
 
 <img width="1034" height="407" alt="image" src="https://github.com/user-attachments/assets/1d3dfb68-982e-4224-9291-56d92ff45ddf" />
-<img width="1027" height="518" alt="image" src="https://github.com/user-attachments/assets/ca81d002-d5f9-40e0-939d-49faa02f36d8" />
+
 <img width="1035" height="612" alt="image" src="https://github.com/user-attachments/assets/2d496932-22bb-4533-b960-1491716a777f" />
 <img width="1031" height="575" alt="image" src="https://github.com/user-attachments/assets/d78db3f6-3d63-4919-bcd5-1596871b327e" />
 <img width="1032" height="690" alt="image" src="https://github.com/user-attachments/assets/8c97b774-d02e-420d-8a60-4cf47c086324" />
