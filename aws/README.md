@@ -16,7 +16,7 @@
 
 ## Overview
 
-This directory contains **50 production-grade AWS implementations** organised by service domain. Each implementation addresses a specific infrastructure, security, networking, or architecture challenge modelled on real-world AWS environments. The work spans foundational cloud engineering through advanced multi-service architectures covering compute, identity, networking, storage, containers, serverless, databases, monitoring, and infrastructure automation.
+This directory contains **50+ production-grade AWS implementations** organised by service domain. Each implementation addresses a specific infrastructure, security, networking, or architecture challenge modelled on real-world AWS environments. The work spans foundational cloud engineering through advanced multi-service architectures covering compute, identity, networking, storage, containers, serverless, databases, monitoring, and infrastructure automation.
 
 Every implementation is fully documented with configuration details, architectural decisions, and validation outcomes.
 
