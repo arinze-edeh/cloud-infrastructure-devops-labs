@@ -144,16 +144,8 @@ kml_rg_main-076cef2f5c5143c5  eastus      Succeeded
 * No pre-flight errors will block downstream resource creation
 
 > ### Screenshot -- Step 1: Resource Group Verification
-> **[SCREENSHOT PLACEHOLDER -- Step 1 of 4]**
->
-> **What to capture:** Full terminal window showing the output of `az group list --output table`
->
-> **Key fields visible in screenshot:**
-> * `Name` column: `kml_rg_main-076cef2f5c5143c5`
-> * `Location` column: `eastus`
-> * `Status` column: `Succeeded`
->
-> *Replace this block with your actual screenshot. Add it as: `![Step 1 - Resource Group Verified](./screenshots/step1-resource-group.png)`*
+
+<img width="1031" height="331" alt="image" src="https://github.com/user-attachments/assets/36db9c4c-7a52-475c-b690-ec615f481568" />
 
 ---
 
@@ -527,7 +519,6 @@ az webapp stop \
 
 
 
-<img width="1031" height="331" alt="image" src="https://github.com/user-attachments/assets/36db9c4c-7a52-475c-b690-ec615f481568" />
 <img width="1034" height="843" alt="image" src="https://github.com/user-attachments/assets/25de35b1-0b18-44a9-b574-79480c3dd274" />
 <img width="1035" height="865" alt="image" src="https://github.com/user-attachments/assets/085a84c2-36cc-4055-a7c4-c77a5ae90b35" />
 <img width="1033" height="844" alt="image" src="https://github.com/user-attachments/assets/f9d23c61-4bd0-4922-8d7e-add9af2909b2" />
