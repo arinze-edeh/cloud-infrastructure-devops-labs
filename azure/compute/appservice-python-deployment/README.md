@@ -20,7 +20,6 @@
   - [Step 3: Create the Web App](#step-3-create-the-web-app)
   - [Step 4: Verify Deployment](#step-4-verify-deployment)
 - [Configuration Reference](#configuration-reference)
-- [Screenshots](#screenshots)
 - [Validation and Testing](#validation-and-testing)
 - [Troubleshooting](#troubleshooting)
 - [Security Considerations](#security-considerations)
@@ -309,20 +308,6 @@ az webapp show \
 
 ---
 
-## Screenshots
-
-All screenshots should be stored in the `./screenshots/` directory at the root of this repository. The table below maps each screenshot file to its corresponding deployment step.
-
-| # | File | Step | Key Evidence |
-|---|---|---|---|
-| 1 | `step1-resource-group.png` | Verify Resource Group | `Status: Succeeded` |
-| 2 | `step2-appservice-plan.png` | Create App Service Plan | `provisioningState: Succeeded`, `kind: linux` |
-| 3 | `step3-webapp-create.png` | Create Web App | `state: Running`, tags applied |
-| 4 | `step4-webapp-verify.png` | Verify Deployment | All 7 spec fields confirmed |
-| 5 | `portal-webapp-overview.png` | Portal Confirmation | Visual running state |
-
-> **To add screenshots:** Create a `screenshots/` folder in the repository root, place each PNG file inside it, then replace the placeholder blocks in each step above with the corresponding `![alt text](./screenshots/filename.png)` markdown image tag.
-
 ### Web App Summary
 
 | Property | Value |
@@ -489,9 +474,4 @@ az webapp stop \
 
 ---
 
-
-
-
-<img width="1033" height="844" alt="image" src="https://github.com/user-attachments/assets/f9d23c61-4bd0-4922-8d7e-add9af2909b2" />
-<img width="1037" height="858" alt="image" src="https://github.com/user-attachments/assets/05a154f3-4509-4af6-92db-488cc8947fcc" />
 
