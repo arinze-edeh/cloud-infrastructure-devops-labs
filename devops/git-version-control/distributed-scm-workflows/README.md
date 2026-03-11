@@ -206,7 +206,8 @@ error: could not apply f173ef4... Added the fox and grapes story
 
 **Cause:** Both the remote commit and Max's local commit had independently modified `story-index.txt`, resulting in an `add/add` conflict that Git could not resolve automatically.
 
-***Screenshot Placeholder -- 05: Terminal showing the rebase conflict error output***
+***Screenshot: Terminal showing the rebase conflict error output***
+<img width="1043" height="364" alt="image" src="https://github.com/user-attachments/assets/7cdb6132-7907-4065-895d-0cf8aef739e8" />
 
 ---
 
@@ -423,7 +424,7 @@ git push origin master
 <img width="1030" height="742" alt="image" src="https://github.com/user-attachments/assets/b42148d7-ffb5-499e-be00-188334f1e793" />
 <img width="1034" height="763" alt="image" src="https://github.com/user-attachments/assets/18629bdc-cb11-44d7-ad5d-f4ed940a5afa" />
 
-<img width="1043" height="364" alt="image" src="https://github.com/user-attachments/assets/7cdb6132-7907-4065-895d-0cf8aef739e8" />
+
 <img width="1033" height="276" alt="image" src="https://github.com/user-attachments/assets/ff5ed140-9058-4d16-b134-acc45a2269ab" />
 <img width="1028" height="461" alt="image" src="https://github.com/user-attachments/assets/cebe26f8-97fa-4069-a70e-b6f874478bcd" />
 <img width="1033" height="818" alt="image" src="https://github.com/user-attachments/assets/6948ed0b-f2ec-41ec-9641-ef02c57703e5" />
