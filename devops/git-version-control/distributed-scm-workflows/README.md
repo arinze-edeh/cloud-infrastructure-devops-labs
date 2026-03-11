@@ -154,6 +154,7 @@ cat story-index.txt
 ```
 
 ***Screenshot: Terminal output confirming the corrected story-index.txt with all 4 titles***
+<img width="1034" height="685" alt="image" src="https://github.com/user-attachments/assets/65dda5ea-c09d-45df-8253-e7597e9f7532" />
 
 ---
 
@@ -417,7 +418,7 @@ git push origin master
 
 <img width="1031" height="591" alt="image" src="https://github.com/user-attachments/assets/e5e412fa-34ea-4497-bd39-13125fad293e" />
 
-<img width="1034" height="685" alt="image" src="https://github.com/user-attachments/assets/65dda5ea-c09d-45df-8253-e7597e9f7532" />
+
 <img width="1030" height="742" alt="image" src="https://github.com/user-attachments/assets/b42148d7-ffb5-499e-be00-188334f1e793" />
 <img width="1034" height="763" alt="image" src="https://github.com/user-attachments/assets/18629bdc-cb11-44d7-ad5d-f4ed940a5afa" />
 <img width="1033" height="859" alt="image" src="https://github.com/user-attachments/assets/673546da-45b5-4d87-aed8-4a72345ea93b" />
