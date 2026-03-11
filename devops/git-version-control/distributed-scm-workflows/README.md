@@ -95,7 +95,8 @@ whoami
 # Output: max
 ```
 
-***Screenshot Placeholder -- 01: Terminal showing successful SSH login as natasha and sudo escalation to max***
+***Screenshot: Terminal showing successful SSH login as natasha and sudo escalation to max***
+<img width="1034" height="467" alt="image" src="https://github.com/user-attachments/assets/e739e699-874d-454a-aafc-fc594f5203ad" />
 
 ---
 
@@ -412,7 +413,7 @@ git push origin master
 
 <img width="1031" height="438" alt="image" src="https://github.com/user-attachments/assets/3f61d3eb-3e35-4b9b-ad09-75339f2ee2de" />
 <img width="1034" height="359" alt="image" src="https://github.com/user-attachments/assets/033ad467-9a08-4d7c-b340-f3fb7cf1ec3d" />
-<img width="1034" height="467" alt="image" src="https://github.com/user-attachments/assets/e739e699-874d-454a-aafc-fc594f5203ad" />
+
 <img width="1031" height="591" alt="image" src="https://github.com/user-attachments/assets/e5e412fa-34ea-4497-bd39-13125fad293e" />
 <img width="1029" height="672" alt="image" src="https://github.com/user-attachments/assets/05b0d412-6713-4751-9a51-3042088c1abf" />
 <img width="1034" height="685" alt="image" src="https://github.com/user-attachments/assets/65dda5ea-c09d-45df-8253-e7597e9f7532" />
