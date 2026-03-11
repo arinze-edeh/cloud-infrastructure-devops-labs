@@ -19,7 +19,6 @@
   - [Step 2: Create App Service Plan](#step-2-create-app-service-plan)
   - [Step 3: Create the Web App](#step-3-create-the-web-app)
   - [Step 4: Verify Deployment](#step-4-verify-deployment)
-- [Configuration Reference](#configuration-reference)
 - [Validation and Testing](#validation-and-testing)
 - [Troubleshooting](#troubleshooting)
 - [Security Considerations](#security-considerations)
