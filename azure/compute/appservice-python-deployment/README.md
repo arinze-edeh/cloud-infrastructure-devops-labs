@@ -188,20 +188,9 @@ az appservice plan create \
 
 > `"reserved": true` confirms this is a Linux-based plan. This is critical since Python runtimes on Azure App Service require Linux workers.
 
-> ### Screenshot -- Step 2: App Service Plan Creation
-> **[SCREENSHOT PLACEHOLDER -- Step 2 of 4]**
->
-> **What to capture:** Terminal window showing the full JSON response from `az appservice plan create`
->
-> **Key fields visible in screenshot:**
-> * `"provisioningState": "Succeeded"`
-> * `"kind": "linux"`
-> * `"reserved": true`
-> * `"sku.name": "B1"` and `"sku.tier": "Basic"`
-> * `"location": "westus"`
-> * `"name": "nautilus-learn-python"`
->
-> *Replace this block with your actual screenshot. Add it as: `![Step 2 - App Service Plan Created](./screenshots/step2-appservice-plan.png)`*
+> ### Screenshots -- Step 2: App Service Plan Creation
+<img width="1034" height="843" alt="image" src="https://github.com/user-attachments/assets/25de35b1-0b18-44a9-b574-79480c3dd274" />
+<img width="1035" height="865" alt="image" src="https://github.com/user-attachments/assets/085a84c2-36cc-4055-a7c4-c77a5ae90b35" />
 
 ---
 
@@ -519,8 +508,7 @@ az webapp stop \
 
 
 
-<img width="1034" height="843" alt="image" src="https://github.com/user-attachments/assets/25de35b1-0b18-44a9-b574-79480c3dd274" />
-<img width="1035" height="865" alt="image" src="https://github.com/user-attachments/assets/085a84c2-36cc-4055-a7c4-c77a5ae90b35" />
+
 <img width="1033" height="844" alt="image" src="https://github.com/user-attachments/assets/f9d23c61-4bd0-4922-8d7e-add9af2909b2" />
 <img width="1037" height="858" alt="image" src="https://github.com/user-attachments/assets/05a154f3-4509-4af6-92db-488cc8947fcc" />
 <img width="1026" height="855" alt="image" src="https://github.com/user-attachments/assets/76672fae-dac6-4a39-83c7-f0ada7cf946b" />
