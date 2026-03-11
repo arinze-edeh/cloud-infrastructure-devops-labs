@@ -183,7 +183,8 @@ hint: Updates were rejected because the remote contains work that you do not hav
 
 **Cause:** The remote `sarah/story-blog` had received at least one new commit after Max's last fetch. The local branch tip was behind the remote, making a direct push impossible.
 
-***Screenshot Placeholder -- 04: Terminal showing the rejected push error with fetch first hint***
+***Screenshot: Terminal showing the rejected push error with fetch first hint***
+<img width="1033" height="859" alt="image" src="https://github.com/user-attachments/assets/673546da-45b5-4d87-aed8-4a72345ea93b" />
 
 ---
 
@@ -421,7 +422,7 @@ git push origin master
 
 <img width="1030" height="742" alt="image" src="https://github.com/user-attachments/assets/b42148d7-ffb5-499e-be00-188334f1e793" />
 <img width="1034" height="763" alt="image" src="https://github.com/user-attachments/assets/18629bdc-cb11-44d7-ad5d-f4ed940a5afa" />
-<img width="1033" height="859" alt="image" src="https://github.com/user-attachments/assets/673546da-45b5-4d87-aed8-4a72345ea93b" />
+
 <img width="1043" height="364" alt="image" src="https://github.com/user-attachments/assets/7cdb6132-7907-4065-895d-0cf8aef739e8" />
 <img width="1033" height="276" alt="image" src="https://github.com/user-attachments/assets/ff5ed140-9058-4d16-b134-acc45a2269ab" />
 <img width="1028" height="461" alt="image" src="https://github.com/user-attachments/assets/cebe26f8-97fa-4069-a70e-b6f874478bcd" />
