@@ -286,24 +286,7 @@ az webapp show \
 - [x] Plan name matches `nautilus-learn-python`
 
 > ### Screenshot -- Step 4: Deployment Verification
-> **[SCREENSHOT PLACEHOLDER -- Step 4 of 4]**
->
-> **What to capture:** Terminal window showing the filtered `az webapp show` JSON output
->
-> **Key fields visible in screenshot:**
-> * `"WebAppName": "nautilus-webapp"`
-> * `"State": "Running"`
-> * `"Region": "West US"`
-> * `"OS": "app,linux"`
-> * `"Runtime": "PYTHON|3.11"`
-> * `"Tags": { "Environment": "Dev", "Name": "WebAppLearning" }`
-> * `"Plan"` ARM path ending in `nautilus-learn-python`
->
-> *Replace this block with your actual screenshot. Add it as: `![Step 4 - Deployment Verified](./screenshots/step4-webapp-verify.png)`*
->
-> **Reference screenshot (captured during this deployment):**
->
-> ![Step 4 Verification -- Actual Output](./screenshots/step4-actual-output.png)
+<img width="1026" height="855" alt="image" src="https://github.com/user-attachments/assets/76672fae-dac6-4a39-83c7-f0ada7cf946b" />
 
 ---
 
@@ -511,4 +494,4 @@ az webapp stop \
 
 <img width="1033" height="844" alt="image" src="https://github.com/user-attachments/assets/f9d23c61-4bd0-4922-8d7e-add9af2909b2" />
 <img width="1037" height="858" alt="image" src="https://github.com/user-attachments/assets/05a154f3-4509-4af6-92db-488cc8947fcc" />
-<img width="1026" height="855" alt="image" src="https://github.com/user-attachments/assets/76672fae-dac6-4a39-83c7-f0ada7cf946b" />
+
