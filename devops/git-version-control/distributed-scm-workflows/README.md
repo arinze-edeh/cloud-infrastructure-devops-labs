@@ -339,8 +339,7 @@ Password: Sarah_pass123
 | 06 | Resolved story-index.txt via heredoc |
 | 07 | git rebase continue and success message |
 | 08 | Successful git push output |
-| 09 | Gitea UI repository file tree |
-| 10 | Gitea UI story-index.txt final verified state |
+| 09 | Gitea UI story-index.txt final verified state |
 
 ---
 
@@ -415,22 +414,3 @@ git push origin master
 ```
 
 ---
-
-
-<img width="1031" height="438" alt="image" src="https://github.com/user-attachments/assets/3f61d3eb-3e35-4b9b-ad09-75339f2ee2de" />
-<img width="1034" height="359" alt="image" src="https://github.com/user-attachments/assets/033ad467-9a08-4d7c-b340-f3fb7cf1ec3d" />
-
-<img width="1031" height="591" alt="image" src="https://github.com/user-attachments/assets/e5e412fa-34ea-4497-bd39-13125fad293e" />
-
-
-<img width="1030" height="742" alt="image" src="https://github.com/user-attachments/assets/b42148d7-ffb5-499e-be00-188334f1e793" />
-<img width="1034" height="763" alt="image" src="https://github.com/user-attachments/assets/18629bdc-cb11-44d7-ad5d-f4ed940a5afa" />
-
-
-<img width="1033" height="276" alt="image" src="https://github.com/user-attachments/assets/ff5ed140-9058-4d16-b134-acc45a2269ab" />
-
-
-
-
-
-
