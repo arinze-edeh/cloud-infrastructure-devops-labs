@@ -258,7 +258,8 @@ Verify the resolved file:
 cat story-index.txt
 ```
 
-***Screenshot Placeholder -- 06: Terminal showing the clean resolved story-index.txt with 4 correct titles***
+***Screenshot: Terminal showing the clean resolved story-index.txt with 4 correct titles***
+<img width="1028" height="461" alt="image" src="https://github.com/user-attachments/assets/cebe26f8-97fa-4069-a70e-b6f874478bcd" />
 
 Mark the conflict as resolved and continue the rebase:
 
@@ -426,7 +427,7 @@ git push origin master
 
 
 <img width="1033" height="276" alt="image" src="https://github.com/user-attachments/assets/ff5ed140-9058-4d16-b134-acc45a2269ab" />
-<img width="1028" height="461" alt="image" src="https://github.com/user-attachments/assets/cebe26f8-97fa-4069-a70e-b6f874478bcd" />
+
 <img width="1033" height="818" alt="image" src="https://github.com/user-attachments/assets/6948ed0b-f2ec-41ec-9641-ef02c57703e5" />
 <img width="1033" height="818" alt="image" src="https://github.com/user-attachments/assets/1f830026-7f71-4f57-8ee8-5c808323d55e" />
 <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/296074e2-74a0-4e4c-a6a4-6ed1e4850950" />
