@@ -229,21 +229,6 @@ az webapp create \
   }
 }
 ```
-
-> ### Screenshot -- Step 3: Web App Creation
-> **[SCREENSHOT PLACEHOLDER -- Step 3 of 4]**
->
-> **What to capture:** Terminal window showing the JSON response from `az webapp create`
->
-> **Key fields visible in screenshot:**
-> * `"state": "Running"`
-> * `"defaultHostName": "nautilus-webapp.azurewebsites.net"`
-> * `"kind": "app,linux"`
-> * `"tags": { "Environment": "Dev", "Name": "WebAppLearning" }`
-> * `"location": "West US"`
->
-> *Replace this block with your actual screenshot. Add it as: `![Step 3 - Web App Created](./screenshots/step3-webapp-create.png)`*
-
 ---
 
 ### Step 4: Verify Deployment
@@ -286,25 +271,6 @@ az webapp show \
 
 > ### Screenshot -- Step 4: Deployment Verification
 <img width="1026" height="855" alt="image" src="https://github.com/user-attachments/assets/76672fae-dac6-4a39-83c7-f0ada7cf946b" />
-
----
-
-> ### Screenshot -- Portal Confirmation (Optional)
-> **[SCREENSHOT PLACEHOLDER -- Portal View]**
->
-> **What to capture:** Azure Portal overview blade for `nautilus-webapp`
->
-> **Key elements visible in screenshot:**
-> * App status badge showing `Running`
-> * URL: `nautilus-webapp.azurewebsites.net`
-> * Location: `West US`
-> * App Service Plan: `nautilus-learn-python (B1)`
-> * Runtime stack: `Python 3.11`
-> * Tags panel: `Environment: Dev`, `Name: WebAppLearning`
->
-> *Navigate to: portal.azure.com > Resource Groups > kml_rg_main-076cef2f5c5143c5 > nautilus-webapp*
->
-> *Replace this block with your actual screenshot. Add it as: `![Portal - Web App Overview](./screenshots/portal-webapp-overview.png)`*
 
 ---
 
