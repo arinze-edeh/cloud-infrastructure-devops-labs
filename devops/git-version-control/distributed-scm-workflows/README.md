@@ -268,7 +268,8 @@ git add story-index.txt
 git rebase --continue
 ```
 
-***Screenshot Placeholder -- 07: Terminal showing git rebase continue output and "Successfully rebased and updated refs/heads/master"***
+***Screenshot: Terminal showing git rebase continue output and "Successfully rebased and updated refs/heads/master"***
+<img width="1033" height="818" alt="image" src="https://github.com/user-attachments/assets/6948ed0b-f2ec-41ec-9641-ef02c57703e5" />
 
 ---
 
@@ -296,7 +297,8 @@ dropping 7ec370b...Fix typo in story-index.txt: Mooose to Mouse -- patch content
 
 This is expected and correct behavior.
 
-***Screenshot Placeholder -- 08: Terminal showing the successful git push output with master to master confirmation***
+***Screenshot: Terminal showing the successful git push output with master to master confirmation***
+<img width="1033" height="818" alt="image" src="https://github.com/user-attachments/assets/1f830026-7f71-4f57-8ee8-5c808323d55e" />
 
 ---
 
@@ -427,8 +429,8 @@ git push origin master
 
 <img width="1033" height="276" alt="image" src="https://github.com/user-attachments/assets/ff5ed140-9058-4d16-b134-acc45a2269ab" />
 
-<img width="1033" height="818" alt="image" src="https://github.com/user-attachments/assets/6948ed0b-f2ec-41ec-9641-ef02c57703e5" />
-<img width="1033" height="818" alt="image" src="https://github.com/user-attachments/assets/1f830026-7f71-4f57-8ee8-5c808323d55e" />
-<img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/296074e2-74a0-4e4c-a6a4-6ed1e4850950" />
+
+
+
 
 
