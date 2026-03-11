@@ -320,9 +320,8 @@ Password: Sarah_pass123
 4. Confirm line 1 reads `The Lion and the Mouse`
 5. Confirm the latest commit hash matches `9f6819e480`
 
-***Screenshot Placeholder -- 09: Gitea UI showing sarah/story-blog repository file tree***
-
-***Screenshot Placeholder -- 10: Gitea UI showing story-index.txt with all 4 correct titles and commit 9f6819e480 by Max***
+***Screenshot: Gitea UI showing story-index.txt with all 4 correct titles and commit 9f6819e480 by Max***
+<img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/6992ba84-8540-4a5a-bbe3-0f046512c9d7" />
 
 ---
 
@@ -431,5 +430,5 @@ git push origin master
 <img width="1033" height="818" alt="image" src="https://github.com/user-attachments/assets/6948ed0b-f2ec-41ec-9641-ef02c57703e5" />
 <img width="1033" height="818" alt="image" src="https://github.com/user-attachments/assets/1f830026-7f71-4f57-8ee8-5c808323d55e" />
 <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/296074e2-74a0-4e4c-a6a4-6ed1e4850950" />
-<img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/6992ba84-8540-4a5a-bbe3-0f046512c9d7" />
+
 
