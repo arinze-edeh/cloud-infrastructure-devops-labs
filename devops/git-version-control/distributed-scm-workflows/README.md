@@ -125,7 +125,8 @@ nothing to commit, working tree clean
 cat story-index.txt
 ```
 
-***Screenshot Placeholder -- 02: Terminal output of git status and cat story-index.txt showing the Mooose typo***
+***Screenshot: Terminal output of git status and cat story-index.txt showing the Mooose typo***
+<img width="1029" height="672" alt="image" src="https://github.com/user-attachments/assets/05b0d412-6713-4751-9a51-3042088c1abf" />
 
 ---
 
@@ -152,7 +153,7 @@ cat story-index.txt
 4. The Donkey and the Dog
 ```
 
-***Screenshot Placeholder -- 03: Terminal output confirming the corrected story-index.txt with all 4 titles***
+***Screenshot: Terminal output confirming the corrected story-index.txt with all 4 titles***
 
 ---
 
@@ -415,7 +416,7 @@ git push origin master
 <img width="1034" height="359" alt="image" src="https://github.com/user-attachments/assets/033ad467-9a08-4d7c-b340-f3fb7cf1ec3d" />
 
 <img width="1031" height="591" alt="image" src="https://github.com/user-attachments/assets/e5e412fa-34ea-4497-bd39-13125fad293e" />
-<img width="1029" height="672" alt="image" src="https://github.com/user-attachments/assets/05b0d412-6713-4751-9a51-3042088c1abf" />
+
 <img width="1034" height="685" alt="image" src="https://github.com/user-attachments/assets/65dda5ea-c09d-45df-8253-e7597e9f7532" />
 <img width="1030" height="742" alt="image" src="https://github.com/user-attachments/assets/b42148d7-ffb5-499e-be00-188334f1e793" />
 <img width="1034" height="763" alt="image" src="https://github.com/user-attachments/assets/18629bdc-cb11-44d7-ad5d-f4ed940a5afa" />
