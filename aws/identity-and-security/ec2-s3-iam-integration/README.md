@@ -142,7 +142,7 @@ Your public key has been saved in /root/.ssh/id_rsa.pub
 
 > ***Screenshot: ssh-keygen output confirming both private and public key files written to /root/.ssh/ with the SHA256 fingerprint and randomart image***
 
-![Step 1.2 - RSA Key Pair Generation](screenshots/step-1.2-ssh-keygen-output.png)
+<img width="1028" height="760" alt="image" src="https://github.com/user-attachments/assets/8ac83f81-ef40-4b0c-af47-2a925a164d47" />
 
 ---
 
@@ -651,7 +651,7 @@ If `State` is still `associating`, wait and retry. If IMDS is unreachable, verif
 *Maintained by the Nautilus DevOps Team | Infrastructure and Platform Engineering*
 
 
-<img width="1028" height="760" alt="image" src="https://github.com/user-attachments/assets/8ac83f81-ef40-4b0c-af47-2a925a164d47" />
+
 <img width="1032" height="841" alt="image" src="https://github.com/user-attachments/assets/2d56ad1b-8b99-4ee8-bead-128e1483bb97" />
 <img width="1031" height="528" alt="image" src="https://github.com/user-attachments/assets/fcde31ef-f4ea-44d5-a30a-294cbdfdad68" />
 <img width="1035" height="799" alt="image" src="https://github.com/user-attachments/assets/6fcfc934-7058-4d5c-a99b-b8d68f2b52ce" />
