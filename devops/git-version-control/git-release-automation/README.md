@@ -127,7 +127,8 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 
 **Screenshot: SSH Connection to Storage Server**
 
-> ![Phase 1 Screenshot](screenshots/phase1-ssh-access.png)
+<img width="1029" height="394" alt="image" src="https://github.com/user-attachments/assets/05573b00-ba6d-43b2-95a2-de195e482ae7" />
+
 > *Successful SSH login as `natasha` into `ststor01.stratos.xfusioncorp.com`*
 
 ---
@@ -450,7 +451,7 @@ git push origin master
 
 ---
 
-<img width="1029" height="394" alt="image" src="https://github.com/user-attachments/assets/05573b00-ba6d-43b2-95a2-de195e482ae7" />
+
 <img width="1028" height="483" alt="image" src="https://github.com/user-attachments/assets/94106344-7b20-45e6-889b-bc22e8927cc7" />
 <img width="1031" height="510" alt="image" src="https://github.com/user-attachments/assets/b2700b79-e4f4-45a9-9a6b-f0266a4c76db" />
 <img width="1036" height="572" alt="image" src="https://github.com/user-attachments/assets/65eb6dca-3577-4268-a373-2c6cc818ff84" />
