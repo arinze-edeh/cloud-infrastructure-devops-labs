@@ -117,7 +117,8 @@ az account show
 
 **Expected output:** A JSON object confirming the active subscription, tenant, and authenticated user or service principal.
 
-***Screenshot Placeholder: Step 2 - az account show confirming Azure Free Labs subscription as active and enabled***
+***Screenshot: az account show confirming Azure Free Labs subscription as active and enabled***
+<img width="1031" height="750" alt="image" src="https://github.com/user-attachments/assets/f7836c1c-3af5-4d86-ae87-03fd3ffb1707" />
 
 > If `"state"` is not `"Enabled"` or `"isDefault"` is `false`, run `az account set --subscription "<your-subscription-id>"` before continuing.
 
@@ -590,7 +591,7 @@ Azure Infrastructure Engineering
 *Executed: 2026-03-12 | Azure CLI 2.67.0 | Storage API Version 2022-11-02*
 
 
-<img width="1031" height="750" alt="image" src="https://github.com/user-attachments/assets/f7836c1c-3af5-4d86-ae87-03fd3ffb1707" />
+
 <img width="1037" height="504" alt="image" src="https://github.com/user-attachments/assets/356f979b-fcc1-4143-9f69-01d3542d50d0" />
 <img width="1030" height="612" alt="image" src="https://github.com/user-attachments/assets/ef80a67f-ab2a-4a05-8846-13f504863309" />
 <img width="1031" height="331" alt="image" src="https://github.com/user-attachments/assets/0f58347c-eff1-4ea6-a1ad-a389edea491e" />
