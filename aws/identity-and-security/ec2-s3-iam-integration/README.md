@@ -122,7 +122,7 @@ Instance: i-0627c6806098d29f1 | IP: 54.146.248.93 | AZ: us-east-1a
 
 > ***Screenshot: Instance ID, Public IP, and AZ resolved successfully from the describe-instances query***
 
-![Step 1.1 - EC2 Instance Metadata Resolution](screenshots/step-1.1-ec2-instance-metadata.png)
+<img width="1033" height="606" alt="image" src="https://github.com/user-attachments/assets/732d4d03-1afb-4796-b9bc-46e7f477224f" />
 
 ---
 
@@ -650,7 +650,7 @@ If `State` is still `associating`, wait and retry. If IMDS is unreachable, verif
 
 *Maintained by the Nautilus DevOps Team | Infrastructure and Platform Engineering*
 
-<img width="1033" height="606" alt="image" src="https://github.com/user-attachments/assets/732d4d03-1afb-4796-b9bc-46e7f477224f" />
+
 <img width="1028" height="760" alt="image" src="https://github.com/user-attachments/assets/8ac83f81-ef40-4b0c-af47-2a925a164d47" />
 <img width="1032" height="841" alt="image" src="https://github.com/user-attachments/assets/2d56ad1b-8b99-4ee8-bead-128e1483bb97" />
 <img width="1031" height="528" alt="image" src="https://github.com/user-attachments/assets/fcde31ef-f4ea-44d5-a30a-294cbdfdad68" />
