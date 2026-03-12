@@ -260,7 +260,8 @@ ls -la post-update
 
 **Screenshot: Hook Creation and Permissions**
 
-> ![Phase 4 Screenshot](screenshots/phase4-hook-creation.png)
+<img width="1035" height="840" alt="image" src="https://github.com/user-attachments/assets/2ba14881-2d15-49ff-a99c-57593a297e62" />
+
 > *`post-update` hook written, verified, and marked executable with `-rwxr-xr-x`*
 
 ---
@@ -462,7 +463,7 @@ git push origin master
 <img width="1021" height="599" alt="image" src="https://github.com/user-attachments/assets/eb99f7c2-b6a8-4ea9-bd72-0da0fefe49bb" />
 
 <img width="1033" height="849" alt="image" src="https://github.com/user-attachments/assets/b8844b4b-3ef9-46a7-96db-e106bf47f0d5" />
-<img width="1035" height="840" alt="image" src="https://github.com/user-attachments/assets/2ba14881-2d15-49ff-a99c-57593a297e62" />
+
 <img width="1036" height="819" alt="image" src="https://github.com/user-attachments/assets/f7bd5a82-3aa1-4e18-aa9d-68de76364f77" />
 <img width="1037" height="547" alt="image" src="https://github.com/user-attachments/assets/181449d1-3a0a-4bf6-92a2-625858d4a283" />
 <img width="1034" height="422" alt="image" src="https://github.com/user-attachments/assets/632afc0c-8214-4f98-a968-038c480454b7" />
