@@ -168,7 +168,7 @@ aws ec2-instance-connect send-ssh-public-key \
 
 > ***Screenshot: EC2 Instance Connect API response confirming Success: true and the associated RequestId***
 
-![Step 1.3 - EC2 Instance Connect Public Key Push](screenshots/step-1.3-ec2-instance-connect.png)
+<img width="1032" height="841" alt="image" src="https://github.com/user-attachments/assets/2d56ad1b-8b99-4ee8-bead-128e1483bb97" />
 
 ---
 
@@ -652,7 +652,7 @@ If `State` is still `associating`, wait and retry. If IMDS is unreachable, verif
 
 
 
-<img width="1032" height="841" alt="image" src="https://github.com/user-attachments/assets/2d56ad1b-8b99-4ee8-bead-128e1483bb97" />
+
 <img width="1031" height="528" alt="image" src="https://github.com/user-attachments/assets/fcde31ef-f4ea-44d5-a30a-294cbdfdad68" />
 <img width="1035" height="799" alt="image" src="https://github.com/user-attachments/assets/6fcfc934-7058-4d5c-a99b-b8d68f2b52ce" />
 <img width="1033" height="860" alt="image" src="https://github.com/user-attachments/assets/a3313f11-e173-4ccc-85f4-165f1be17d7a" />
