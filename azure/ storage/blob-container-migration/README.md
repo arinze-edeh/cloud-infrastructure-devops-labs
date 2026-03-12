@@ -264,7 +264,8 @@ az storage container show \
 
 **Expected output:** Only the `Name` column is populated. The absence of a `publicAccess` value confirms the container has no public access configured.
 
-***Screenshot Placeholder: Step 9 - container show table displaying only Name column for nautilus-dest-30683 confirming private access***
+***Screenshot: container show table displaying only Name column for nautilus-dest-30683 confirming private access***
+<img width="1029" height="802" alt="image" src="https://github.com/user-attachments/assets/8fa42ab8-8465-472b-947c-5908734141dc" />
 
 ---
 
