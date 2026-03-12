@@ -384,7 +384,7 @@ aws iam create-role \
 
 > ***Screenshot: IAM create-role JSON response showing RoleName, RoleId, Arn, and CreateDate confirming nautilus-role was created with the EC2 trust relationship***
 
-![Step 3.5 - IAM Role Created](screenshots/step-3.5-iam-role-created.png)
+<img width="1030" height="836" alt="image" src="https://github.com/user-attachments/assets/65a1df8e-97c3-4196-89b0-b2746aefd231" />
 
 ---
 
@@ -649,7 +649,7 @@ If `State` is still `associating`, wait and retry. If IMDS is unreachable, verif
 
 
 
-<img width="1030" height="836" alt="image" src="https://github.com/user-attachments/assets/65a1df8e-97c3-4196-89b0-b2746aefd231" />
+
 <img width="1036" height="842" alt="image" src="https://github.com/user-attachments/assets/770715d2-e0df-4c37-b6ac-5653e260b457" />
 <img width="1023" height="767" alt="image" src="https://github.com/user-attachments/assets/f6caff0c-0c37-4ca6-985c-92ce7c6889be" />
 <img width="1030" height="658" alt="image" src="https://github.com/user-attachments/assets/75852bb6-2694-4648-bf4f-1d8ecfabd884" />
