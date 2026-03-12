@@ -437,7 +437,8 @@ Name          Blob Type    Blob Tier    Length    Content Type    Last Modified
 nautilus.txt  BlockBlob    Hot          33        text/plain      2026-03-12T00:09:26+00:00
 ```
 
-***Screenshot Placeholder: Step 16 - blob list table for nautilus-source-4584 showing nautilus.txt as BlockBlob with length 33***
+***Screenshot: blob list table for nautilus-source-4584 showing nautilus.txt as BlockBlob with length 33***
+<img width="1035" height="427" alt="image" src="https://github.com/user-attachments/assets/afa0b908-6073-4aad-a84b-21c917fa680b" />
 
 ---
 
@@ -459,7 +460,8 @@ Name          Blob Type    Blob Tier    Length    Content Type    Last Modified
 nautilus.txt  BlockBlob    Hot          33        text/plain      2026-03-12T00:24:41+00:00
 ```
 
-***Screenshot Placeholder: Step 17 - blob list table for nautilus-dest-30683 confirming nautilus.txt present with length 33 and copy timestamp***
+***Screenshot: blob list table for nautilus-dest-30683 confirming nautilus.txt present with length 33 and copy timestamp***
+<img width="1035" height="427" alt="image" src="https://github.com/user-attachments/assets/afa0b908-6073-4aad-a84b-21c917fa680b" />
 
 ---
 
@@ -598,5 +600,5 @@ Azure Infrastructure Engineering
 <img width="1031" height="867" alt="image" src="https://github.com/user-attachments/assets/8c407f2b-7355-465b-91b5-eb3d9b52aef2" />
 <img width="1035" height="866" alt="image" src="https://github.com/user-attachments/assets/ecf4d739-1464-4d8a-ae24-fa7320006906" />
 <img width="1030" height="533" alt="image" src="https://github.com/user-attachments/assets/81afda70-4bc2-4b41-a38d-19d991a12ff0" />
-<img width="1035" height="427" alt="image" src="https://github.com/user-attachments/assets/afa0b908-6073-4aad-a84b-21c917fa680b" />
+
 
