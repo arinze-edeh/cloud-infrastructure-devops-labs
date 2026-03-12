@@ -507,16 +507,12 @@ aws ec2 describe-instances \
 
 > ***Screenshot: describe-instances table output confirming both the instance ID and the nautilus-role instance profile ARN are present and fully associated***
 
-![Step 4.4 - Instance Profile Association Confirmed](screenshots/step-4.4-instance-profile-confirmed.png)
+<img width="1030" height="658" alt="image" src="https://github.com/user-attachments/assets/75852bb6-2694-4648-bf4f-1d8ecfabd884" />
 
 ---
 
 > ### Phase 4 Complete
 > **Instance profile nautilus-role created, role bound to profile, and profile successfully associated with the nautilus-ec2 instance. The instance now retrieves temporary credentials from IMDS automatically on every AWS API call.**
-
-> ***Screenshot: Full Phase 4 terminal session showing instance profile creation, role binding, association initiation, and describe-instances table confirmation***
-
-![Phase 4 Complete - Instance Profile Associated](screenshots/phase-4-complete-overview.png)
 
 ---
 
@@ -648,6 +644,6 @@ If `State` is still `associating`, wait and retry. If IMDS is unreachable, verif
 
 
 
-<img width="1030" height="658" alt="image" src="https://github.com/user-attachments/assets/75852bb6-2694-4648-bf4f-1d8ecfabd884" />
+
 <img width="1023" height="783" alt="image" src="https://github.com/user-attachments/assets/71f6127d-6742-4905-af3e-816b003aac74" />
 <img width="1026" height="859" alt="image" src="https://github.com/user-attachments/assets/9e4ae383-00c9-4c47-976e-1e82d0afa1ef" />
