@@ -455,19 +455,3 @@ git push origin master
 - SSH host key fingerprint is verified and permanently added to known hosts on first connection.
 
 ---
-
-
-<img width="1028" height="483" alt="image" src="https://github.com/user-attachments/assets/94106344-7b20-45e6-889b-bc22e8927cc7" />
-<img width="1031" height="510" alt="image" src="https://github.com/user-attachments/assets/b2700b79-e4f4-45a9-9a6b-f0266a4c76db" />
-<img width="1036" height="572" alt="image" src="https://github.com/user-attachments/assets/65eb6dca-3577-4268-a373-2c6cc818ff84" />
-
-<img width="1029" height="579" alt="image" src="https://github.com/user-attachments/assets/d9e38a0d-7f07-4dc0-b786-52af742ff419" />
-<img width="1021" height="599" alt="image" src="https://github.com/user-attachments/assets/eb99f7c2-b6a8-4ea9-bd72-0da0fefe49bb" />
-
-<img width="1033" height="849" alt="image" src="https://github.com/user-attachments/assets/b8844b4b-3ef9-46a7-96db-e106bf47f0d5" />
-
-
-<img width="1037" height="547" alt="image" src="https://github.com/user-attachments/assets/181449d1-3a0a-4bf6-92a2-625858d4a283" />
-<img width="1034" height="422" alt="image" src="https://github.com/user-attachments/assets/632afc0c-8214-4f98-a968-038c480454b7" />
-
-
