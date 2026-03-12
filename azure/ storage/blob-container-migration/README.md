@@ -153,7 +153,8 @@ Name            ResourceGroup                 Location
 nautilusst2986  kml_rg_main-153b09c2ec2c4df8  eastus
 ```
 
-***Screenshot Placeholder: Step 4 - Storage account show confirming nautilusst2986 in resource group kml_rg_main-153b09c2ec2c4df8 located in eastus***
+***Screenshot: Storage account show confirming nautilusst2986 in resource group kml_rg_main-153b09c2ec2c4df8 located in eastus***
+<img width="1037" height="504" alt="image" src="https://github.com/user-attachments/assets/356f979b-fcc1-4143-9f69-01d3542d50d0" />
 
 ---
 
@@ -592,7 +593,7 @@ Azure Infrastructure Engineering
 
 
 
-<img width="1037" height="504" alt="image" src="https://github.com/user-attachments/assets/356f979b-fcc1-4143-9f69-01d3542d50d0" />
+
 <img width="1030" height="612" alt="image" src="https://github.com/user-attachments/assets/ef80a67f-ab2a-4a05-8846-13f504863309" />
 <img width="1031" height="331" alt="image" src="https://github.com/user-attachments/assets/0f58347c-eff1-4ea6-a1ad-a389edea491e" />
 <img width="1033" height="386" alt="image" src="https://github.com/user-attachments/assets/ad1e52c0-ea15-439a-a555-1fe8dd5fbac0" />
