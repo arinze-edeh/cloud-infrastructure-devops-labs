@@ -208,10 +208,6 @@ ssh -i ~/.ssh/id_rsa root@$EC2_PUBLIC_IP "whoami"
 > ### Phase 1 Complete
 > **EC2 instance discovered, SSH key pair generated, public key injected via EC2 Instance Connect, and root SSH access confirmed.**
 
-> ***Screenshot: Full Phase 1 terminal session showing all steps from instance discovery through root SSH access verification in sequence***
-
-![Phase 1 Complete - EC2 Discovery and SSH Setup](screenshots/phase-1-complete-overview.png)
-
 ---
 
 ### Phase 2: Private S3 Bucket Provisioning
@@ -254,16 +250,12 @@ aws s3api put-public-access-block \
 
 > ***Screenshot: put-public-access-block command completing with zero error output, confirming all four block flags applied to nautilus-s3-30029***
 
-![Step 2.2 - S3 Public Access Blocked](screenshots/step-2.2-s3-public-access-block.png)
+<img width="1035" height="799" alt="image" src="https://github.com/user-attachments/assets/6fcfc934-7058-4d5c-a99b-b8d68f2b52ce" />
 
 ---
 
 > ### Phase 2 Complete
 > **Private S3 bucket nautilus-s3-30029 provisioned with all public access blocked across ACLs and bucket policies.**
-
-> ***Screenshot: Full Phase 2 terminal session showing bucket creation and public access block commands executed without errors***
-
-![Phase 2 Complete - S3 Bucket Provisioned](screenshots/phase-2-complete-overview.png)
 
 ---
 
