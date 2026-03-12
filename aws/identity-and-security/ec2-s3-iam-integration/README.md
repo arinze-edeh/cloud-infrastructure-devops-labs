@@ -450,7 +450,7 @@ aws iam add-role-to-instance-profile \
 
 > ***Screenshot: add-role-to-instance-profile completing silently, confirming nautilus-role is bound inside the nautilus-role instance profile***
 
-![Step 4.2 - Role Added to Instance Profile](screenshots/step-4.2-role-added-to-profile.png)
+<img width="1023" height="767" alt="image" src="https://github.com/user-attachments/assets/f6caff0c-0c37-4ca6-985c-92ce7c6889be" />
 
 ---
 
@@ -482,7 +482,7 @@ aws ec2 associate-iam-instance-profile \
 
 > ***Screenshot: associate-iam-instance-profile JSON response showing AssociationId, InstanceId, and initial State: associating***
 
-![Step 4.3 - Instance Profile Association Initiated](screenshots/step-4.3-instance-profile-associating.png)
+<img width="1023" height="767" alt="image" src="https://github.com/user-attachments/assets/f6caff0c-0c37-4ca6-985c-92ce7c6889be" />
 
 ---
 
@@ -647,7 +647,7 @@ If `State` is still `associating`, wait and retry. If IMDS is unreachable, verif
 
 
 
-<img width="1023" height="767" alt="image" src="https://github.com/user-attachments/assets/f6caff0c-0c37-4ca6-985c-92ce7c6889be" />
+
 <img width="1030" height="658" alt="image" src="https://github.com/user-attachments/assets/75852bb6-2694-4648-bf4f-1d8ecfabd884" />
 <img width="1023" height="783" alt="image" src="https://github.com/user-attachments/assets/71f6127d-6742-4905-af3e-816b003aac74" />
 <img width="1026" height="859" alt="image" src="https://github.com/user-attachments/assets/9e4ae383-00c9-4c47-976e-1e82d0afa1ef" />
