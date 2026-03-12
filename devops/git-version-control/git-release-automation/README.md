@@ -337,6 +337,7 @@ git tag
 **Screenshot: Final Push and Verification**
 
 <img width="1034" height="422" alt="image" src="https://github.com/user-attachments/assets/124c32e2-a3cb-41f3-a497-e8b296170a91" />
+
 > *`master` and `release-2026-03-12` tag successfully pushed to `/opt/ecommerce.git`*
 
 ---
