@@ -450,15 +450,6 @@ git push origin master
 
 ---
 
-## Author
-
-**Nautilus DevOps Team** | Stratos DC Infrastructure
-Documented as part of the Git Automation and Release Pipeline initiative.
-
----
-
-*For issues or improvements, open a pull request against the `feature` branch and follow the standard merge pipeline documented above.*
-
 <img width="1029" height="394" alt="image" src="https://github.com/user-attachments/assets/05573b00-ba6d-43b2-95a2-de195e482ae7" />
 <img width="1028" height="483" alt="image" src="https://github.com/user-attachments/assets/94106344-7b20-45e6-889b-bc22e8927cc7" />
 <img width="1031" height="510" alt="image" src="https://github.com/user-attachments/assets/b2700b79-e4f4-45a9-9a6b-f0266a4c76db" />
