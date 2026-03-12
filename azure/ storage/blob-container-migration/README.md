@@ -413,7 +413,11 @@ diff nautilus_source.txt nautilus_dest.txt
 
 **Expected output from `diff`:** No output. Silence confirms the files are byte-for-byte identical.
 
-***Screenshot: diff command returning empty output confirming nautilus_source.txt and nautilus_dest.txt are byte-for-byte identical***
+***Screenshots: diff command returning empty output confirming nautilus_source.txt and nautilus_dest.txt are byte-for-byte identical***
+<img width="1028" height="856" alt="image" src="https://github.com/user-attachments/assets/5a56e483-1105-487e-99f3-aacbf0d50e1d" />
+<img width="1028" height="859" alt="image" src="https://github.com/user-attachments/assets/880094cc-9f97-42b5-ad3f-d7556125dab3" />
+<img width="1031" height="867" alt="image" src="https://github.com/user-attachments/assets/8c407f2b-7355-465b-91b5-eb3d9b52aef2" />
+<img width="1035" height="866" alt="image" src="https://github.com/user-attachments/assets/ecf4d739-1464-4d8a-ae24-fa7320006906" />
 <img width="1030" height="533" alt="image" src="https://github.com/user-attachments/assets/81afda70-4bc2-4b41-a38d-19d991a12ff0" />
 
 ---
@@ -596,9 +600,6 @@ Azure Infrastructure Engineering
 <img width="1033" height="827" alt="image" src="https://github.com/user-attachments/assets/7ff48c94-23b0-4923-aa52-1f90da13a29f" />
 <img width="1028" height="598" alt="image" src="https://github.com/user-attachments/assets/fa46a938-b276-4e49-a96b-e022034ba730" />
 <img width="1026" height="733" alt="image" src="https://github.com/user-attachments/assets/bc8374aa-b87b-4570-9acd-a6c51e71e996" />
-<img width="1028" height="856" alt="image" src="https://github.com/user-attachments/assets/5a56e483-1105-487e-99f3-aacbf0d50e1d" />
-<img width="1028" height="859" alt="image" src="https://github.com/user-attachments/assets/880094cc-9f97-42b5-ad3f-d7556125dab3" />
-<img width="1031" height="867" alt="image" src="https://github.com/user-attachments/assets/8c407f2b-7355-465b-91b5-eb3d9b52aef2" />
-<img width="1035" height="866" alt="image" src="https://github.com/user-attachments/assets/ecf4d739-1464-4d8a-ae24-fa7320006906" />
+
 
 
