@@ -333,7 +333,7 @@ POLICY_ARN=$(aws iam list-policies \
 
 > ***Screenshot: list-policies query returning the full ARN of nautilus-s3-policy and storing it into the POLICY_ARN shell variable***
 
-![Step 3.3 - Policy ARN Resolved](screenshots/step-3.3-policy-arn-resolved.png)
+<img width="1031" height="712" alt="image" src="https://github.com/user-attachments/assets/5495f695-e68c-4642-98d0-a6cb5ffd91ed" />
 
 ---
 
@@ -358,7 +358,7 @@ EOF
 
 > ***Screenshot: cat heredoc writing nautilus-trust.json to /tmp with the ec2.amazonaws.com principal and sts:AssumeRole action visible***
 
-![Step 3.4 - EC2 Trust Policy Document Authored](screenshots/step-3.4-trust-policy-document.png)
+<img width="1031" height="712" alt="image" src="https://github.com/user-attachments/assets/5495f695-e68c-4642-98d0-a6cb5ffd91ed" />
 
 ---
 
@@ -648,7 +648,7 @@ If `State` is still `associating`, wait and retry. If IMDS is unreachable, verif
 
 
 
-<img width="1031" height="712" alt="image" src="https://github.com/user-attachments/assets/5495f695-e68c-4642-98d0-a6cb5ffd91ed" />
+
 <img width="1030" height="836" alt="image" src="https://github.com/user-attachments/assets/65a1df8e-97c3-4196-89b0-b2746aefd231" />
 <img width="1036" height="842" alt="image" src="https://github.com/user-attachments/assets/770715d2-e0df-4c37-b6ac-5653e260b457" />
 <img width="1023" height="767" alt="image" src="https://github.com/user-attachments/assets/f6caff0c-0c37-4ca6-985c-92ce7c6889be" />
