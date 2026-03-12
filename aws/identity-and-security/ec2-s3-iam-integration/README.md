@@ -201,7 +201,7 @@ ssh -i ~/.ssh/id_rsa root@$EC2_PUBLIC_IP "whoami"
 
 > ***Screenshot: whoami returning root, confirming successful root-level SSH access via the newly provisioned key pair***
 
-![Step 1.4a - Root SSH Access Verified](screenshots/step-1.4a-root-ssh-whoami.png)
+<img width="1035" height="799" alt="image" src="https://github.com/user-attachments/assets/6fcfc934-7058-4d5c-a99b-b8d68f2b52ce" />
 
 ---
 
@@ -235,7 +235,7 @@ aws s3api create-bucket \
 
 > ***Screenshot: s3api create-bucket response showing the Location field confirming bucket nautilus-s3-30029 was created in us-east-1***
 
-![Step 2.1 - S3 Bucket Created](screenshots/step-2.1-s3-bucket-creation.png)
+<img width="1035" height="799" alt="image" src="https://github.com/user-attachments/assets/6fcfc934-7058-4d5c-a99b-b8d68f2b52ce" />
 
 ---
 
@@ -654,7 +654,7 @@ If `State` is still `associating`, wait and retry. If IMDS is unreachable, verif
 
 
 
-<img width="1035" height="799" alt="image" src="https://github.com/user-attachments/assets/6fcfc934-7058-4d5c-a99b-b8d68f2b52ce" />
+
 <img width="1033" height="860" alt="image" src="https://github.com/user-attachments/assets/a3313f11-e173-4ccc-85f4-165f1be17d7a" />
 <img width="1031" height="712" alt="image" src="https://github.com/user-attachments/assets/5495f695-e68c-4642-98d0-a6cb5ffd91ed" />
 <img width="1030" height="836" alt="image" src="https://github.com/user-attachments/assets/65a1df8e-97c3-4196-89b0-b2746aefd231" />
