@@ -314,7 +314,8 @@ CopyStatus    CopyProgress
 success       33/33
 ```
 
-***Screenshot Placeholder: Step 11 - blob show table confirming CopyStatus success and CopyProgress 33/33 on destination blob***
+***Screenshot: blob show table confirming CopyStatus success and CopyProgress 33/33 on destination blob***
+<img width="1028" height="598" alt="image" src="https://github.com/user-attachments/assets/fa46a938-b276-4e49-a96b-e022034ba730" />
 
 > Do not proceed to Phase 5 until `CopyStatus` is `success`. Re-run this command if still showing `pending`.
 
@@ -336,7 +337,8 @@ az storage blob show \
 
 **Result:** `Lu7zilatbGguzSz2Ecn5IQ==`
 
-***Screenshot Placeholder: Step 12 - tsv output of source blob MD5 checksum Lu7zilatbGguzSz2Ecn5IQ==***
+***Screenshot: tsv output of source blob MD5 checksum Lu7zilatbGguzSz2Ecn5IQ==***
+<img width="1028" height="598" alt="image" src="https://github.com/user-attachments/assets/fa46a938-b276-4e49-a96b-e022034ba730" />
 
 ---
 
@@ -354,7 +356,8 @@ az storage blob show \
 
 **Result:** `Lu7zilatbGguzSz2Ecn5IQ==`
 
-***Screenshot Placeholder: Step 13 - tsv output of destination blob MD5 checksum matching source at Lu7zilatbGguzSz2Ecn5IQ==***
+***Screenshot: tsv output of destination blob MD5 checksum matching source at Lu7zilatbGguzSz2Ecn5IQ==***
+<img width="1028" height="598" alt="image" src="https://github.com/user-attachments/assets/fa46a938-b276-4e49-a96b-e022034ba730" />
 
 > **Both values must be identical.** A mismatch indicates data corruption during transfer. If checksums differ, abort and re-execute Phase 4.
 
@@ -599,7 +602,7 @@ Azure Infrastructure Engineering
 <img width="1029" height="802" alt="image" src="https://github.com/user-attachments/assets/8fa42ab8-8465-472b-947c-5908734141dc" />
 <img width="1030" height="849" alt="image" src="https://github.com/user-attachments/assets/4f452bb9-28ad-4de8-9598-a3215308a719" />
 <img width="1033" height="827" alt="image" src="https://github.com/user-attachments/assets/7ff48c94-23b0-4923-aa52-1f90da13a29f" />
-<img width="1028" height="598" alt="image" src="https://github.com/user-attachments/assets/fa46a938-b276-4e49-a96b-e022034ba730" />
+
 
 
 
