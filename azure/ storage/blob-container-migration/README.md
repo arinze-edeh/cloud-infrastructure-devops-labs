@@ -21,7 +21,6 @@
 - [Verification Results](#verification-results)
 - [Known Issues and Resolutions](#known-issues-and-resolutions)
 - [Security Considerations](#security-considerations)
-- [Repository Structure](#repository-structure)
 
 ---
 
@@ -573,17 +572,6 @@ You have 2 update(s) available. Consider updating your CLI installation with 'az
 * **Local downloads from Step 15** contain live blob content and must be deleted immediately after the diff check. Step 18 handles this.
 * **Container access is private by default.** The `--public-access off` flag was explicitly set during provisioning and verified via `az storage container show` before migration began.
 * **Rotate the storage account key** after this runbook if it was exposed in terminal history or logs.
-
----
-
-## Repository Structure
-
-```
-azure/
-└── storage/
-    └── blob-migration-pipelines/
-        └── README.md          # This document
-```
 
 ---
 
