@@ -291,7 +291,7 @@ EOF
 
 > ***Screenshot: cat heredoc writing nautilus-s3-policy.json to /tmp with the scoped Actions and dual Resource ARNs visible in the terminal***
 
-![Step 3.1 - IAM Policy Document Authored](screenshots/step-3.1-iam-policy-document.png)
+<img width="1033" height="860" alt="image" src="https://github.com/user-attachments/assets/a3313f11-e173-4ccc-85f4-165f1be17d7a" />
 
 ---
 
@@ -319,7 +319,7 @@ aws iam create-policy \
 
 > ***Screenshot: IAM create-policy JSON response showing PolicyName, PolicyId, Arn, and AttachmentCount: 0 confirming the policy was created and is ready for attachment***
 
-![Step 3.2 - IAM Policy Created](screenshots/step-3.2-iam-policy-created.png)
+<img width="1033" height="860" alt="image" src="https://github.com/user-attachments/assets/a3313f11-e173-4ccc-85f4-165f1be17d7a" />
 
 ---
 
@@ -647,7 +647,7 @@ If `State` is still `associating`, wait and retry. If IMDS is unreachable, verif
 
 
 
-<img width="1033" height="860" alt="image" src="https://github.com/user-attachments/assets/a3313f11-e173-4ccc-85f4-165f1be17d7a" />
+
 <img width="1031" height="712" alt="image" src="https://github.com/user-attachments/assets/5495f695-e68c-4642-98d0-a6cb5ffd91ed" />
 <img width="1030" height="836" alt="image" src="https://github.com/user-attachments/assets/65a1df8e-97c3-4196-89b0-b2746aefd231" />
 <img width="1036" height="842" alt="image" src="https://github.com/user-attachments/assets/770715d2-e0df-4c37-b6ac-5653e260b457" />
