@@ -598,6 +598,7 @@ i-0341e7dc257e2428c | unused | Target is in an Availability Zone that is not ena
 
 > ***Screenshot: describe-target-health output showing unused state with AZ not enabled error message***
 <img width="1037" height="490" alt="image" src="https://github.com/user-attachments/assets/0d971bd5-acd4-469f-b15e-a276fdc50b19" />
+<img width="1038" height="476" alt="image" src="https://github.com/user-attachments/assets/148c88eb-dd94-43aa-9bc0-e2e292811697" />
 
 **Attempted Resolution (Failed):**
 
@@ -744,6 +745,6 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 <img width="1032" height="469" alt="image" src="https://github.com/user-attachments/assets/ff74a792-caab-4b5b-a298-2eb2a711f250" />
 
 
-<img width="1038" height="476" alt="image" src="https://github.com/user-attachments/assets/148c88eb-dd94-43aa-9bc0-e2e292811697" />
+
 
 
