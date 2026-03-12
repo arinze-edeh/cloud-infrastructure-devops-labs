@@ -400,16 +400,12 @@ aws iam attach-role-policy \
 
 > ***Screenshot: attach-role-policy completing with zero error output, confirming nautilus-s3-policy is now bound to nautilus-role***
 
-![Step 3.6 - Policy Attached to Role](screenshots/step-3.6-policy-attached-to-role.png)
+<img width="1036" height="842" alt="image" src="https://github.com/user-attachments/assets/770715d2-e0df-4c37-b6ac-5653e260b457" />
 
 ---
 
 > ### Phase 3 Complete
 > **IAM policy nautilus-s3-policy created with least-privilege S3 permissions. IAM role nautilus-role created with EC2 trust relationship. Policy successfully attached to the role.**
-
-> ***Screenshot: Full Phase 3 terminal session showing policy document creation, IAM policy creation, role creation, and policy-role attachment in sequence***
-
-![Phase 3 Complete - IAM Policy and Role Configured](screenshots/phase-3-complete-overview.png)
 
 ---
 
@@ -440,7 +436,7 @@ aws iam create-instance-profile \
 
 > ***Screenshot: create-instance-profile JSON response showing the InstanceProfileName, Arn, and empty Roles array before the role is bound***
 
-![Step 4.1 - Instance Profile Created](screenshots/step-4.1-instance-profile-created.png)
+<img width="1036" height="842" alt="image" src="https://github.com/user-attachments/assets/770715d2-e0df-4c37-b6ac-5653e260b457" />
 
 ---
 
@@ -650,7 +646,7 @@ If `State` is still `associating`, wait and retry. If IMDS is unreachable, verif
 
 
 
-<img width="1036" height="842" alt="image" src="https://github.com/user-attachments/assets/770715d2-e0df-4c37-b6ac-5653e260b457" />
+
 <img width="1023" height="767" alt="image" src="https://github.com/user-attachments/assets/f6caff0c-0c37-4ca6-985c-92ce7c6889be" />
 <img width="1030" height="658" alt="image" src="https://github.com/user-attachments/assets/75852bb6-2694-4648-bf4f-1d8ecfabd884" />
 <img width="1023" height="783" alt="image" src="https://github.com/user-attachments/assets/71f6127d-6742-4905-af3e-816b003aac74" />
