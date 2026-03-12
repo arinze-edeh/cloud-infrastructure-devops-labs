@@ -288,7 +288,8 @@ az storage blob copy start \
 }
 ```
 
-***Screenshot Placeholder: Step 10 - blob copy start returning JSON with copy_status success and copy_id 162f6127-1b2b-4dc3-bb7e-5311994b562a***
+***Screenshot: blob copy start returning JSON with copy_status success and copy_id 162f6127-1b2b-4dc3-bb7e-5311994b562a***
+<img width="1033" height="827" alt="image" src="https://github.com/user-attachments/assets/7ff48c94-23b0-4923-aa52-1f90da13a29f" />
 
 > For larger files, `copy_status` may initially return `"pending"`. In that case, proceed to Step 11 and poll until `"success"` is confirmed before continuing.
 
@@ -601,7 +602,7 @@ Azure Infrastructure Engineering
 <img width="1029" height="615" alt="image" src="https://github.com/user-attachments/assets/7be535e3-923f-4485-99f6-1690b2191444" />
 <img width="1029" height="802" alt="image" src="https://github.com/user-attachments/assets/8fa42ab8-8465-472b-947c-5908734141dc" />
 <img width="1030" height="849" alt="image" src="https://github.com/user-attachments/assets/4f452bb9-28ad-4de8-9598-a3215308a719" />
-<img width="1033" height="827" alt="image" src="https://github.com/user-attachments/assets/7ff48c94-23b0-4923-aa52-1f90da13a29f" />
+
 
 
 
