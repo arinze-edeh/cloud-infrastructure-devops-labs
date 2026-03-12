@@ -756,7 +756,3 @@ curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 <img width="1038" height="476" alt="image" src="https://github.com/user-attachments/assets/148c88eb-dd94-43aa-9bc0-e2e292811697" />
 
 
-<img width="1030" height="391" alt="image" src="https://github.com/user-attachments/assets/3a31409b-d95c-47c9-a321-c00cf860da22" />
-
-
-
