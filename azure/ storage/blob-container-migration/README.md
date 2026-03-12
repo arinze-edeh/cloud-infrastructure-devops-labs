@@ -217,7 +217,8 @@ Name          Size    LastModified
 nautilus.txt  33      2026-03-12T00:09:26+00:00
 ```
 
-***Screenshot; blob show table confirming nautilus.txt exists in source container with size 33 bytes***
+***Screenshot: blob show table confirming nautilus.txt exists in source container with size 33 bytes***
+<img width="1035" height="419" alt="image" src="https://github.com/user-attachments/assets/b50d213e-8ea0-43b7-aa30-f2f1a8e6ca06" />
 
 > Record the `Size` value. You will validate this same number appears in the destination after migration.
 
