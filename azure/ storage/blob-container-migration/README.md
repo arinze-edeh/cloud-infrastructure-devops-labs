@@ -218,7 +218,7 @@ Name          Size    LastModified
 nautilus.txt  33      2026-03-12T00:09:26+00:00
 ```
 
-***Screenshot Placeholder: Step 7 - blob show table confirming nautilus.txt exists in source container with size 33 bytes***
+***Screenshot; blob show table confirming nautilus.txt exists in source container with size 33 bytes***
 
 > Record the `Size` value. You will validate this same number appears in the destination after migration.
 
@@ -244,7 +244,8 @@ az storage container create \
 }
 ```
 
-***Screenshot Placeholder: Step 8 - az storage container create returning created: true confirming successful provisioning of nautilus-dest-30683***
+***Screenshot: az storage container create returning created: true confirming successful provisioning of nautilus-dest-30683***
+<img width="1029" height="802" alt="image" src="https://github.com/user-attachments/assets/8fa42ab8-8465-472b-947c-5908734141dc" />
 
 > Any output other than `"created": true` indicates a failure. Do not proceed until this is confirmed.
 
@@ -606,7 +607,7 @@ Azure Infrastructure Engineering
 <img width="1033" height="847" alt="image" src="https://github.com/user-attachments/assets/d10c3027-850d-41bb-905a-be1c067c597f" />
 <img width="1035" height="419" alt="image" src="https://github.com/user-attachments/assets/3d7a96c8-bb37-4e6c-8a4d-fed96519a84d" />
 <img width="1029" height="615" alt="image" src="https://github.com/user-attachments/assets/7be535e3-923f-4485-99f6-1690b2191444" />
-<img width="1029" height="802" alt="image" src="https://github.com/user-attachments/assets/8fa42ab8-8465-472b-947c-5908734141dc" />
+
 <img width="1030" height="849" alt="image" src="https://github.com/user-attachments/assets/4f452bb9-28ad-4de8-9598-a3215308a719" />
 
 
