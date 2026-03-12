@@ -210,7 +210,8 @@ git log --oneline -5
 
 **Screenshot: Branch Merge**
 
-> ![Phase 3 Screenshot](screenshots/phase3-branch-merge.png)
+<img width="1027" height="760" alt="image" src="https://github.com/user-attachments/assets/90c9f4e9-2849-4888-b92a-0e36071650ac" />
+
 > *Fast-forward merge of `feature` into `master` confirmed via `git log`*
 
 ---
@@ -459,7 +460,7 @@ git push origin master
 
 <img width="1029" height="579" alt="image" src="https://github.com/user-attachments/assets/d9e38a0d-7f07-4dc0-b786-52af742ff419" />
 <img width="1021" height="599" alt="image" src="https://github.com/user-attachments/assets/eb99f7c2-b6a8-4ea9-bd72-0da0fefe49bb" />
-<img width="1027" height="760" alt="image" src="https://github.com/user-attachments/assets/90c9f4e9-2849-4888-b92a-0e36071650ac" />
+
 <img width="1033" height="849" alt="image" src="https://github.com/user-attachments/assets/b8844b4b-3ef9-46a7-96db-e106bf47f0d5" />
 <img width="1035" height="840" alt="image" src="https://github.com/user-attachments/assets/2ba14881-2d15-49ff-a99c-57593a297e62" />
 <img width="1036" height="819" alt="image" src="https://github.com/user-attachments/assets/f7bd5a82-3aa1-4e18-aa9d-68de76364f77" />
