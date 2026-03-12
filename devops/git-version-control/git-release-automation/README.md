@@ -168,7 +168,8 @@ nothing to commit, working tree clean
 
 **Screenshot: Repository Verification**
 
-> ![Phase 2 Screenshot](screenshots/phase2-repo-verification.png)
+<img width="1029" height="579" alt="image" src="https://github.com/user-attachments/assets/f1f2b3af-ca13-4319-ab71-8fbf12c67257" />
+
 > *Confirming `ecommerce` repo exists with both `feature` and `master` branches*
 
 ---
@@ -455,7 +456,7 @@ git push origin master
 <img width="1028" height="483" alt="image" src="https://github.com/user-attachments/assets/94106344-7b20-45e6-889b-bc22e8927cc7" />
 <img width="1031" height="510" alt="image" src="https://github.com/user-attachments/assets/b2700b79-e4f4-45a9-9a6b-f0266a4c76db" />
 <img width="1036" height="572" alt="image" src="https://github.com/user-attachments/assets/65eb6dca-3577-4268-a373-2c6cc818ff84" />
-<img width="1029" height="579" alt="image" src="https://github.com/user-attachments/assets/f1f2b3af-ca13-4319-ab71-8fbf12c67257" />
+
 <img width="1029" height="579" alt="image" src="https://github.com/user-attachments/assets/d9e38a0d-7f07-4dc0-b786-52af742ff419" />
 <img width="1021" height="599" alt="image" src="https://github.com/user-attachments/assets/eb99f7c2-b6a8-4ea9-bd72-0da0fefe49bb" />
 <img width="1027" height="760" alt="image" src="https://github.com/user-attachments/assets/90c9f4e9-2849-4888-b92a-0e36071650ac" />
