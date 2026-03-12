@@ -471,7 +471,8 @@ rm nautilus_source.txt nautilus_dest.txt
 
 > These files were downloaded solely for the purpose of the `diff` check. They must be removed after verification to avoid leaving sensitive blob content on the local filesystem.
 
-***Screenshot Placeholder: Step 18 - rm command executing cleanly with no output and clean shell prompt returned***
+***Screenshot: rm command executing cleanly with no output and clean shell prompt returned***
+<img width="1039" height="467" alt="image" src="https://github.com/user-attachments/assets/7d7bc4f4-2f2b-49b5-91df-5fde76e98832" />
 
 ---
 
@@ -598,4 +599,4 @@ Azure Infrastructure Engineering
 <img width="1035" height="866" alt="image" src="https://github.com/user-attachments/assets/ecf4d739-1464-4d8a-ae24-fa7320006906" />
 <img width="1030" height="533" alt="image" src="https://github.com/user-attachments/assets/81afda70-4bc2-4b41-a38d-19d991a12ff0" />
 <img width="1035" height="427" alt="image" src="https://github.com/user-attachments/assets/afa0b908-6073-4aad-a84b-21c917fa680b" />
-<img width="1039" height="467" alt="image" src="https://github.com/user-attachments/assets/7d7bc4f4-2f2b-49b5-91df-5fde76e98832" />
+
