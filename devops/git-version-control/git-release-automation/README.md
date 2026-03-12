@@ -295,7 +295,8 @@ release-2026-03-12
 
 **Screenshot: Hook Test and Tag Verification**
 
-> ![Phase 5 Screenshot](screenshots/phase5-hook-test.png)
+<img width="1036" height="819" alt="image" src="https://github.com/user-attachments/assets/f7bd5a82-3aa1-4e18-aa9d-68de76364f77" />
+
 > *Hook fires successfully and `release-2026-03-12` tag confirmed via `git tag`*
 
 ---
@@ -464,7 +465,7 @@ git push origin master
 
 <img width="1033" height="849" alt="image" src="https://github.com/user-attachments/assets/b8844b4b-3ef9-46a7-96db-e106bf47f0d5" />
 
-<img width="1036" height="819" alt="image" src="https://github.com/user-attachments/assets/f7bd5a82-3aa1-4e18-aa9d-68de76364f77" />
+
 <img width="1037" height="547" alt="image" src="https://github.com/user-attachments/assets/181449d1-3a0a-4bf6-92a2-625858d4a283" />
 <img width="1034" height="422" alt="image" src="https://github.com/user-attachments/assets/632afc0c-8214-4f98-a968-038c480454b7" />
 <img width="1034" height="422" alt="image" src="https://github.com/user-attachments/assets/124c32e2-a3cb-41f3-a497-e8b296170a91" />
