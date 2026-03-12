@@ -193,7 +193,8 @@ az storage container show \
 **Expected output:** A JSON object with `"name": "nautilus-source-4584"` and `"publicAccess": null`.
 
 ***Screenshot: az storage container show returning JSON confirming nautilus-source-4584 exists with lease state available and status unlocked***
-<img width="1035" height="736" alt="image" src="https://github.com/user-attachments/assets/661ecc82-9df3-44b9-a8f2-5d7e061d9de9" />
+<img width="1131" height="630" alt="image" src="https://github.com/user-attachments/assets/62b53fac-ddd2-4afc-896b-9f033c921c56" />
+
 
 ---
 
