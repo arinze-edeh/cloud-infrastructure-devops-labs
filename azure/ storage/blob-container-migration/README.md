@@ -548,6 +548,7 @@ ACCOUNT_KEY=$(az storage account keys list \
 Then reference it in all subsequent commands as `"$ACCOUNT_KEY"` with double quotes.
 
 ***Screenshot: terminal showing authentication failure on direct key paste followed by successful authentication using $ACCOUNT_KEY variable***
+<img width="1033" height="386" alt="image" src="https://github.com/user-attachments/assets/ad1e52c0-ea15-439a-a555-1fe8dd5fbac0" />
 
 ---
 
@@ -590,7 +591,7 @@ Azure Infrastructure Engineering
 
 <img width="1030" height="612" alt="image" src="https://github.com/user-attachments/assets/ef80a67f-ab2a-4a05-8846-13f504863309" />
 <img width="1031" height="331" alt="image" src="https://github.com/user-attachments/assets/0f58347c-eff1-4ea6-a1ad-a389edea491e" />
-<img width="1033" height="386" alt="image" src="https://github.com/user-attachments/assets/ad1e52c0-ea15-439a-a555-1fe8dd5fbac0" />
+
 
 <img width="1035" height="736" alt="image" src="https://github.com/user-attachments/assets/6dbd34a9-03a3-4ecb-88e1-2f4d24754779" />
 <img width="1033" height="847" alt="image" src="https://github.com/user-attachments/assets/d10c3027-850d-41bb-905a-be1c067c597f" />
