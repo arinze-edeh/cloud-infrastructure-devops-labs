@@ -384,7 +384,8 @@ az storage blob show \
 
 **Expected output from both commands:** `33`
 
-***Screenshot Placeholder: Step 14 - both contentLength queries returning 33 confirming identical file sizes in source and destination***
+***Screenshot: both contentLength queries returning 33 confirming identical file sizes in source and destination***
+<img width="1026" height="733" alt="image" src="https://github.com/user-attachments/assets/bc8374aa-b87b-4570-9acd-a6c51e71e996" />
 
 ---
 
@@ -599,7 +600,7 @@ Azure Infrastructure Engineering
 <img width="1030" height="849" alt="image" src="https://github.com/user-attachments/assets/4f452bb9-28ad-4de8-9598-a3215308a719" />
 <img width="1033" height="827" alt="image" src="https://github.com/user-attachments/assets/7ff48c94-23b0-4923-aa52-1f90da13a29f" />
 <img width="1028" height="598" alt="image" src="https://github.com/user-attachments/assets/fa46a938-b276-4e49-a96b-e022034ba730" />
-<img width="1026" height="733" alt="image" src="https://github.com/user-attachments/assets/bc8374aa-b87b-4570-9acd-a6c51e71e996" />
+
 
 
 
