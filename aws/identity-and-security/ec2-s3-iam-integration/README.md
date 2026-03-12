@@ -528,7 +528,7 @@ ssh -i ~/.ssh/id_rsa root@$EC2_PUBLIC_IP
 
 > ***Screenshot: Successful SSH login to the EC2 instance as root showing the Ubuntu 22.04 LTS welcome banner, system uptime, memory usage, and IP address***
 
-![Step 5.1 - SSH Into EC2 Instance](screenshots/step-5.1-ssh-into-ec2.png)
+<img width="1023" height="783" alt="image" src="https://github.com/user-attachments/assets/71f6127d-6742-4905-af3e-816b003aac74" />
 
 ---
 
@@ -548,7 +548,7 @@ upload: ./testfile.txt to s3://nautilus-s3-30029/testfile.txt
 
 > ***Screenshot: Inside the EC2 instance showing the echo command creating testfile.txt and the aws s3 cp command confirming a successful credential-free upload to nautilus-s3-30029***
 
-![Step 5.2 - Test File Uploaded to S3](screenshots/step-5.2-s3-upload.png)
+<img width="1026" height="859" alt="image" src="https://github.com/user-attachments/assets/9e4ae383-00c9-4c47-976e-1e82d0afa1ef" />
 
 ---
 
@@ -567,16 +567,12 @@ A successful listing confirms the EC2 instance is authenticating to S3 via the I
 
 > ***Screenshot: aws s3 ls output inside the EC2 instance showing testfile.txt with its upload timestamp and size, confirming end-to-end read access via the instance profile***
 
-![Step 5.3 - S3 Bucket Contents Listed](screenshots/step-5.3-s3-ls-output.png)
+<img width="1026" height="859" alt="image" src="https://github.com/user-attachments/assets/9e4ae383-00c9-4c47-976e-1e82d0afa1ef" />
 
 ---
 
 > ### Phase 5 Complete
 > **End-to-end access verified. The EC2 instance successfully uploaded and listed objects in nautilus-s3-30029 using IAM role credentials retrieved automatically from the instance metadata service. No static credentials were used at any point in this workflow.**
-
-> ***Screenshot: Full Phase 5 terminal session showing SSH login, testfile.txt creation, s3 cp upload, and s3 ls listing inside the EC2 instance confirming complete success***
-
-![Phase 5 Complete - S3 Access Verified](screenshots/phase-5-complete-overview.png)
 
 ---
 
@@ -631,19 +627,3 @@ If `State` is still `associating`, wait and retry. If IMDS is unreachable, verif
 - [AWS CLI S3 Commands](https://docs.aws.amazon.com/cli/latest/reference/s3/)
 
 ---
-
-*Maintained by the Nautilus DevOps Team | Infrastructure and Platform Engineering*
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1023" height="783" alt="image" src="https://github.com/user-attachments/assets/71f6127d-6742-4905-af3e-816b003aac74" />
-<img width="1026" height="859" alt="image" src="https://github.com/user-attachments/assets/9e4ae383-00c9-4c47-976e-1e82d0afa1ef" />
