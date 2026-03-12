@@ -566,10 +566,6 @@ aws elbv2 describe-target-groups \
   --query "TargetGroups[0].[TargetGroupName,Port,VpcId]" \
   --output table
 ```
-
-> ***Screenshot: Full resource audit output showing all three sections with correct values***
-
-
 ---
 
 ## Known Issues and Resolutions
