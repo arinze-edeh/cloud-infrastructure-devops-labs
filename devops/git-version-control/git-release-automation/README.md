@@ -336,7 +336,7 @@ git tag
 
 **Screenshot: Final Push and Verification**
 
-> ![Phase 6 Screenshot](screenshots/phase6-final-push.png)
+<img width="1034" height="422" alt="image" src="https://github.com/user-attachments/assets/124c32e2-a3cb-41f3-a497-e8b296170a91" />
 > *`master` and `release-2026-03-12` tag successfully pushed to `/opt/ecommerce.git`*
 
 ---
@@ -468,5 +468,5 @@ git push origin master
 
 <img width="1037" height="547" alt="image" src="https://github.com/user-attachments/assets/181449d1-3a0a-4bf6-92a2-625858d4a283" />
 <img width="1034" height="422" alt="image" src="https://github.com/user-attachments/assets/632afc0c-8214-4f98-a968-038c480454b7" />
-<img width="1034" height="422" alt="image" src="https://github.com/user-attachments/assets/124c32e2-a3cb-41f3-a497-e8b296170a91" />
+
 
