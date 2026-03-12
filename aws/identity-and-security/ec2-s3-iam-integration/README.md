@@ -188,7 +188,7 @@ ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@$EC2_PUBLIC_IP \
 
 > ***Screenshot: SSH session as ubuntu bootstrapping root authorized_keys, showing the public key written to /root/.ssh/authorized_keys via sudo tee***
 
-![Step 1.4 - Root authorized_keys Bootstrap](screenshots/step-1.4-root-authorized-keys-bootstrap.png)
+<img width="1031" height="528" alt="image" src="https://github.com/user-attachments/assets/fcde31ef-f4ea-44d5-a30a-294cbdfdad68" />
 
 ---
 
@@ -653,7 +653,7 @@ If `State` is still `associating`, wait and retry. If IMDS is unreachable, verif
 
 
 
-<img width="1031" height="528" alt="image" src="https://github.com/user-attachments/assets/fcde31ef-f4ea-44d5-a30a-294cbdfdad68" />
+
 <img width="1035" height="799" alt="image" src="https://github.com/user-attachments/assets/6fcfc934-7058-4d5c-a99b-b8d68f2b52ce" />
 <img width="1033" height="860" alt="image" src="https://github.com/user-attachments/assets/a3313f11-e173-4ccc-85f4-165f1be17d7a" />
 <img width="1031" height="712" alt="image" src="https://github.com/user-attachments/assets/5495f695-e68c-4642-98d0-a6cb5ffd91ed" />
