@@ -576,16 +576,6 @@ You have 2 update(s) available. Consider updating your CLI installation with 'az
 
 ---
 
-## Authors
-
-**Nautilus DevOps Team**
-Azure Infrastructure Engineering
-`nautilusst2986` | East US | Azure Free Labs
-
----
-
-*Executed: 2026-03-12 | Azure CLI 2.67.0 | Storage API Version 2022-11-02*
-
 
 
 
