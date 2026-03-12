@@ -505,6 +505,7 @@ aws ec2 describe-security-groups \
 Expected: Row showing `tcp | 80 | 80 | 0.0.0.0/0` alongside the existing self-reference rule.
 
 > ***Screenshots: Before and after inbound rules on default SG, showing the addition of tcp 80 0.0.0.0/0***
+<img width="1032" height="469" alt="image" src="https://github.com/user-attachments/assets/ff74a792-caab-4b5b-a298-2eb2a711f250" />
 <img width="1023" height="689" alt="image" src="https://github.com/user-attachments/assets/eada55f7-82de-4db0-96d8-52405340a62a" />
 <img width="1041" height="719" alt="image" src="https://github.com/user-attachments/assets/9a1224a0-a3e8-4b51-82ed-55d1069bda55" />
 
@@ -736,13 +737,4 @@ aws elbv2 describe-target-health \
 # Nginx via ALB
 curl -I http://xfusion-alb-1906114081.us-east-1.elb.amazonaws.com
 ```
-
 ---
-
-
-<img width="1032" height="469" alt="image" src="https://github.com/user-attachments/assets/ff74a792-caab-4b5b-a298-2eb2a711f250" />
-
-
-
-
-
