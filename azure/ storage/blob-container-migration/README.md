@@ -547,7 +547,7 @@ ACCOUNT_KEY=$(az storage account keys list \
 
 Then reference it in all subsequent commands as `"$ACCOUNT_KEY"` with double quotes.
 
-***Screenshot Placeholder: Known Issue 1 - terminal showing authentication failure on direct key paste followed by successful authentication using $ACCOUNT_KEY variable***
+***Screenshot: terminal showing authentication failure on direct key paste followed by successful authentication using $ACCOUNT_KEY variable***
 
 ---
 
