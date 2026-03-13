@@ -142,8 +142,9 @@ az account list --output table
 
 **Expected:** One row showing `Azure Free Labs` with `IsDefault: True` and `State: Enabled`.
 
-> **Screenshot Placeholder**
-> `phase1-step2-account-list.png`
+> **Screenshot**
+<img width="1032" height="824" alt="image" src="https://github.com/user-attachments/assets/168b0aa0-530c-437f-b67f-5b31f49ecfda" />
+
 > *Caption: Subscription list confirming Azure Free Labs is the active default subscription.*
 
 ---
@@ -159,8 +160,10 @@ az vm list --output table --show-details
 * Resource group `kml_rg_main-d92445381fae45bd` with `Location: eastus` and `Status: Succeeded`
 * VM `xfusion-vm` with `PowerState: VM running` and `Location: eastus`
 
-> **Screenshot Placeholder**
-> `phase1-step3-rg-and-vm-list.png`
+> **Screenshot**
+
+<img width="1032" height="631" alt="image" src="https://github.com/user-attachments/assets/ae18cdb7-b7c0-42bd-a57a-3eb86b1f7512" />
+
 > *Caption: Resource group list and VM list confirming xfusion-vm is running in eastus under the correct resource group.*
 
 ---
@@ -579,8 +582,7 @@ Re-run Step 14 to re-register the NIC IP config to the pool. This can occur if t
 
 
 
-<img width="1032" height="824" alt="image" src="https://github.com/user-attachments/assets/168b0aa0-530c-437f-b67f-5b31f49ecfda" />
-<img width="1032" height="631" alt="image" src="https://github.com/user-attachments/assets/ae18cdb7-b7c0-42bd-a57a-3eb86b1f7512" />
+
 <img width="1035" height="712" alt="image" src="https://github.com/user-attachments/assets/b6e79d67-4be0-4344-91d1-5c4ad50784d0" />
 <img width="1034" height="562" alt="image" src="https://github.com/user-attachments/assets/ae0e273d-c79f-4399-b711-e3d91161a60a" />
 <img width="1322" height="696" alt="image" src="https://github.com/user-attachments/assets/65b32b40-dd9a-46f0-a092-3eb9d10ed6de" />
