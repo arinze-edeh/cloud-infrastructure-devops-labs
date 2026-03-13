@@ -501,9 +501,9 @@ Content-Length: 255
 ```
 
 #### Screenshot - Step 9: HTTP 200 OK - Application Publicly Accessible
-> ***Screenshot placeholder:** Terminal showing the public IP `107.23.131.108` resolved from the ENI, followed by `curl -I http://107.23.131.108` returning `HTTP/1.1 200 OK` with `Server: nginx/1.29.6`, confirming the containerized application is live and reachable.*
+> *Terminal showing the public IP `107.23.131.108` resolved from the ENI, followed by `curl -I http://107.23.131.108` returning `HTTP/1.1 200 OK` with `Server: nginx/1.29.6`, confirming the containerized application is live and reachable.*
 
-![Step 9 - HTTP Verification](screenshots/step9-http-200-verification.png)
+<img width="1032" height="787" alt="image" src="https://github.com/user-attachments/assets/d16739d8-0cc1-4199-8d28-d5094cf94dee" />
 
 ---
 
@@ -681,5 +681,5 @@ aws ec2 revoke-security-group-ingress \
 
 
 <img width="1036" height="760" alt="image" src="https://github.com/user-attachments/assets/2fd3ce31-b29d-4f3c-98c2-e75f4e053b38" />
-<img width="1032" height="787" alt="image" src="https://github.com/user-attachments/assets/d16739d8-0cc1-4199-8d28-d5094cf94dee" />
+
 
