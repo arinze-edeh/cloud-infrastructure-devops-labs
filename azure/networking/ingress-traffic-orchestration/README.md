@@ -517,6 +517,8 @@ curl -v http://52.188.1.76
 * The NSG inbound rule is permitting traffic to reach the VM NIC
 
 > **Screenshots**
+
+<img width="1130" height="223" alt="image" src="https://github.com/user-attachments/assets/fc907e91-ea17-439d-9b25-a9090e5cf85a" />
 <img width="1393" height="849" alt="image" src="https://github.com/user-attachments/assets/a1a166cf-7d71-4bc8-8b1a-c7cdcfdf5071" />
 <img width="1399" height="853" alt="image" src="https://github.com/user-attachments/assets/dcf84acc-98db-4461-8339-645dda3b0a12" />
 
