@@ -407,9 +407,9 @@ aws ec2 authorize-security-group-ingress \
 ```
 
 #### Screenshot - Step 7: Security Group Inbound Rule Added
-> ***Screenshot placeholder:** Terminal output from `authorize-security-group-ingress` showing `Return: true` and the new rule `sgr-079ec3805c6174468` with `IpProtocol: tcp`, `FromPort: 80`, `ToPort: 80`, and `CidrIpv4: 0.0.0.0/0`.*
+> *Terminal output from `authorize-security-group-ingress` showing `Return: true` and the new rule `sgr-079ec3805c6174468` with `IpProtocol: tcp`, `FromPort: 80`, `ToPort: 80`, and `CidrIpv4: 0.0.0.0/0`.*
 
-![Step 7 - Network Configuration](screenshots/step7-network-configuration.png)
+<img width="1029" height="750" alt="image" src="https://github.com/user-attachments/assets/8cc6eebb-0702-41b3-8b7b-130e4a4e2fe6" />
 
 ---
 
@@ -676,7 +676,7 @@ aws ec2 revoke-security-group-ingress \
 
 
 <img width="1027" height="629" alt="image" src="https://github.com/user-attachments/assets/37b9c098-cc4e-4c44-8bbb-43257477f1a2" />
-<img width="1029" height="750" alt="image" src="https://github.com/user-attachments/assets/8cc6eebb-0702-41b3-8b7b-130e4a4e2fe6" />
+
 <img width="1029" height="859" alt="image" src="https://github.com/user-attachments/assets/39a8465e-64f0-40fe-a755-6b26edb283f3" />
 <img width="1027" height="861" alt="image" src="https://github.com/user-attachments/assets/af0f7b69-6854-4b21-b98b-c9b3411a9e51" />
 <img width="1030" height="450" alt="image" src="https://github.com/user-attachments/assets/4f297978-b94c-4809-89df-cfb93ddb1655" />
