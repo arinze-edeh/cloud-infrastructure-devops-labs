@@ -365,7 +365,7 @@ aws ecs register-task-definition \
 Task Definition ARN: arn:aws:ecs:us-east-1:692699826578:task-definition/xfusion-taskdefinition:1
 ```
 
-#### Screenshot - Step 6: Task Definition Registered
+#### Screenshots - Step 6: Task Definition Registered
 > *Terminal output showing the full `register-task-definition` response with `taskDefinitionArn` ending in `xfusion-taskdefinition:1`, container definition fields including `image`, `portMappings`, `logConfiguration`, and `status: ACTIVE`.*
 
 <img width="1030" height="732" alt="image" src="https://github.com/user-attachments/assets/c13e5485-d6f0-41d1-8a83-04b50b44958a" />
@@ -448,10 +448,12 @@ aws ecs describe-services \
 }
 ```
 
-#### Screenshot - Step 8: ECS Service Deployed and at Steady State
-> ***Screenshot placeholder:** CLI output from `describe-services` confirming `xfusion-service` with `Status: ACTIVE`, `Running: 1`, and `Desired: 1`, indicating the service has reached its desired task count successfully.*
+#### Screenshots - Step 8: ECS Service Deployed and at Steady State
+> *CLI output from `describe-services` confirming `xfusion-service` with `Status: ACTIVE`, `Running: 1`, and `Desired: 1`, indicating the service has reached its desired task count successfully.*
 
-![Step 8 - ECS Service Deployment](screenshots/step8-ecs-service-deployment.png)
+<img width="1029" height="859" alt="image" src="https://github.com/user-attachments/assets/39a8465e-64f0-40fe-a755-6b26edb283f3" />
+<img width="1027" height="861" alt="image" src="https://github.com/user-attachments/assets/af0f7b69-6854-4b21-b98b-c9b3411a9e51" />
+<img width="1030" height="450" alt="image" src="https://github.com/user-attachments/assets/4f297978-b94c-4809-89df-cfb93ddb1655" />
 
 ---
 
@@ -677,9 +679,7 @@ aws ec2 revoke-security-group-ingress \
 
 <img width="1027" height="629" alt="image" src="https://github.com/user-attachments/assets/37b9c098-cc4e-4c44-8bbb-43257477f1a2" />
 
-<img width="1029" height="859" alt="image" src="https://github.com/user-attachments/assets/39a8465e-64f0-40fe-a755-6b26edb283f3" />
-<img width="1027" height="861" alt="image" src="https://github.com/user-attachments/assets/af0f7b69-6854-4b21-b98b-c9b3411a9e51" />
-<img width="1030" height="450" alt="image" src="https://github.com/user-attachments/assets/4f297978-b94c-4809-89df-cfb93ddb1655" />
+
 <img width="1036" height="760" alt="image" src="https://github.com/user-attachments/assets/2fd3ce31-b29d-4f3c-98c2-e75f4e053b38" />
 <img width="1032" height="787" alt="image" src="https://github.com/user-attachments/assets/d16739d8-0cc1-4199-8d28-d5094cf94dee" />
 
