@@ -102,7 +102,7 @@ ssh banner@stapp03
 
 When prompted, type `yes` to accept the host fingerprint, then enter the password.
 
-**Password:** `BigGr33n`
+**Password:** 
 
 **Expected Output:**
 
@@ -112,8 +112,8 @@ banner@stapp03's password:
 [banner@stapp03 ~]$
 ```
 
-> **Screenshot Placeholder**
-> `screenshots/phase1-ssh-connection-success.png`
+> **Screenshot**
+<img width="1030" height="385" alt="image" src="https://github.com/user-attachments/assets/365fa231-86c1-44ce-89c0-18395e2e817a" />
 > *Caption: Successful SSH session established to stapp03 via short hostname from the jump host.*
 
 ---
@@ -424,7 +424,7 @@ devops/
 
 ---
 
-<img width="1030" height="385" alt="image" src="https://github.com/user-attachments/assets/365fa231-86c1-44ce-89c0-18395e2e817a" />
+
 <img width="1033" height="607" alt="image" src="https://github.com/user-attachments/assets/61af7d2b-e8ca-4300-8461-7d839a302805" />
 <img width="1033" height="861" alt="image" src="https://github.com/user-attachments/assets/9aeaecea-a40e-45de-bdc6-26460c33339b" />
 <img width="1029" height="870" alt="image" src="https://github.com/user-attachments/assets/f82546b9-81d8-4d03-8b17-31651adc7fac" />
