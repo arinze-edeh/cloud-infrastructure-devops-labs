@@ -233,7 +233,7 @@ sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 Complete!
 ```
 
-> **Screenshot**
+> **Screenshots**
 <img width="1036" height="857" alt="image" src="https://github.com/user-attachments/assets/6d5a9a81-ac0b-4412-a540-1647ef720adc" />
 <img width="1040" height="859" alt="image" src="https://github.com/user-attachments/assets/6c893816-d29d-4894-a295-7c773d594756" />
 <img width="1030" height="870" alt="image" src="https://github.com/user-attachments/assets/e62d1862-f343-41ab-b287-25da9677068a" />
@@ -272,8 +272,9 @@ Created symlink /etc/systemd/system/multi-user.target.wants/docker.service \
   -> /usr/lib/systemd/system/docker.service.
 ```
 
-> **Screenshot Placeholder**
-> `screenshots/phase4-docker-enable-symlink.png`
+> **Screenshot**
+<img width="1035" height="559" alt="image" src="https://github.com/user-attachments/assets/9a0a38be-8d30-42c8-9127-305e8e671322" />
+
 > *Caption: systemd symlink created confirming Docker is enabled for automatic startup at boot.*
 
 ---
@@ -295,8 +296,9 @@ docker.service - Docker Application Container Engine
 
 Press `q` to exit the status pager and return to the prompt.
 
-> **Screenshot Placeholder**
-> `screenshots/phase4-systemctl-status-active.png`
+> **Screenshot**
+<img width="1032" height="632" alt="image" src="https://github.com/user-attachments/assets/10d8500c-3398-4c93-8301-bbbe5ecccba5" />
+
 > *Caption: Docker service showing "active (running)" status with enabled boot persistence confirmed.*
 
 > **Service Log Warnings (Non-Critical):**
@@ -323,8 +325,9 @@ Docker version 29.3.0, build 5927d80
 Docker Compose version v5.1.0
 ```
 
-> **Screenshot Placeholder**
-> `screenshots/phase4-version-verification.png`
+> **Screenshot**
+<img width="1032" height="632" alt="image" src="https://github.com/user-attachments/assets/10d8500c-3398-4c93-8301-bbbe5ecccba5" />
+
 > *Caption: Final version verification confirming docker-ce 29.3.0 and Docker Compose v5.1.0 are operational.*
 
 ---
@@ -398,25 +401,6 @@ sudo systemctl enable docker
 
 ---
 
-## Repository Structure
-
-```
-devops/
-  docker/
-    container-runtime-provisioning/
-      README.md                         # This document
-      screenshots/
-        phase1-ssh-connection-success.png
-        phase2-yum-update-complete.png
-        phase3-docker-repo-added.png
-        phase3-docker-install-complete.png
-        phase4-docker-enable-symlink.png
-        phase4-systemctl-status-active.png
-        phase4-version-verification.png
-```
-
----
-
 ## Environment Reference
 
 | Item | Value |
@@ -439,5 +423,4 @@ devops/
 
 
 <img width="1035" height="559" alt="image" src="https://github.com/user-attachments/assets/2fe46f04-6003-42d2-a322-f34fca611852" />
-<img width="1035" height="559" alt="image" src="https://github.com/user-attachments/assets/9a0a38be-8d30-42c8-9127-305e8e671322" />
-<img width="1032" height="632" alt="image" src="https://github.com/user-attachments/assets/10d8500c-3398-4c93-8301-bbbe5ecccba5" />
+
