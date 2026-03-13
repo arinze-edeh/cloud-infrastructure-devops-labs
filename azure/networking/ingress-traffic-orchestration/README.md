@@ -284,8 +284,9 @@ az network lb probe show \
 
 **Expected:** `Name: xfusion-health-probe`, `Port: 80`, `Protocol: Http`, `RequestPath: /`, `IntervalInSeconds: 15`, `ProvisioningState: Succeeded`
 
-> **Screenshot Placeholder**
-> `phase4-step9-health-probe-verify.png`
+> **Screenshot**
+<img width="1322" height="696" alt="image" src="https://github.com/user-attachments/assets/65b32b40-dd9a-46f0-a092-3eb9d10ed6de" />
+
 > *Caption: Health probe xfusion-health-probe confirmed with HTTP protocol on port 80, 15-second interval, and ProvisioningState Succeeded.*
 
 ---
@@ -587,7 +588,7 @@ Re-run Step 14 to re-register the NIC IP config to the pool. This can occur if t
 
 
 
-<img width="1322" height="696" alt="image" src="https://github.com/user-attachments/assets/65b32b40-dd9a-46f0-a092-3eb9d10ed6de" />
+
 <img width="1402" height="799" alt="image" src="https://github.com/user-attachments/assets/db08d8fd-5c57-424c-bfb6-cd500c1c2d9b" />
 <img width="1403" height="419" alt="image" src="https://github.com/user-attachments/assets/ad3ee20e-ef6a-421b-ad1b-90e6dbb54ae3" />
 <img width="1396" height="555" alt="image" src="https://github.com/user-attachments/assets/bce13dad-f75a-4879-a3a3-7ad5ee04b769" />
