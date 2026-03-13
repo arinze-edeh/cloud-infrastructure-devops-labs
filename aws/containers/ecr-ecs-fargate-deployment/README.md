@@ -369,6 +369,8 @@ Task Definition ARN: arn:aws:ecs:us-east-1:692699826578:task-definition/xfusion-
 > *Terminal output showing the full `register-task-definition` response with `taskDefinitionArn` ending in `xfusion-taskdefinition:1`, container definition fields including `image`, `portMappings`, `logConfiguration`, and `status: ACTIVE`.*
 
 <img width="1030" height="732" alt="image" src="https://github.com/user-attachments/assets/c13e5485-d6f0-41d1-8a83-04b50b44958a" />
+<img width="1019" height="850" alt="image" src="https://github.com/user-attachments/assets/de4103eb-1c8e-4f6d-ac48-01a1c49c9b6d" />
+<img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/bccaa09e-7ca0-48c6-8538-77071dd40d52" />
 
 ---
 
@@ -672,8 +674,7 @@ aws ec2 revoke-security-group-ingress \
 
 
 
-<img width="1019" height="850" alt="image" src="https://github.com/user-attachments/assets/de4103eb-1c8e-4f6d-ac48-01a1c49c9b6d" />
-<img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/bccaa09e-7ca0-48c6-8538-77071dd40d52" />
+
 <img width="1027" height="629" alt="image" src="https://github.com/user-attachments/assets/37b9c098-cc4e-4c44-8bbb-43257477f1a2" />
 <img width="1029" height="750" alt="image" src="https://github.com/user-attachments/assets/8cc6eebb-0702-41b3-8b7b-130e4a4e2fe6" />
 <img width="1029" height="859" alt="image" src="https://github.com/user-attachments/assets/39a8465e-64f0-40fe-a755-6b26edb283f3" />
