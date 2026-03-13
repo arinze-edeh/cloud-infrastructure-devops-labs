@@ -203,8 +203,9 @@ sudo yum-config-manager --add-repo \
 Adding repo from: https://download.docker.com/linux/centos/docker-ce.repo
 ```
 
-> **Screenshot Placeholder**
-> `screenshots/phase3-docker-repo-added.png`
+> **Screenshot**
+<img width="1035" height="258" alt="image" src="https://github.com/user-attachments/assets/6ec77742-42bd-470b-b714-be6e322a2613" />
+
 > *Caption: Docker CE repository successfully registered via yum-config-manager.*
 
 ---
@@ -432,7 +433,7 @@ devops/
 <img width="1033" height="607" alt="image" src="https://github.com/user-attachments/assets/61af7d2b-e8ca-4300-8461-7d839a302805" />
 
 <img width="1037" height="863" alt="image" src="https://github.com/user-attachments/assets/093a6fd7-0646-45ea-b9f1-87315c7df7a6" />
-<img width="1035" height="258" alt="image" src="https://github.com/user-attachments/assets/6ec77742-42bd-470b-b714-be6e322a2613" />
+
 <img width="1036" height="857" alt="image" src="https://github.com/user-attachments/assets/6d5a9a81-ac0b-4412-a540-1647ef720adc" />
 <img width="1040" height="859" alt="image" src="https://github.com/user-attachments/assets/6c893816-d29d-4894-a295-7c773d594756" />
 <img width="1030" height="870" alt="image" src="https://github.com/user-attachments/assets/e62d1862-f343-41ab-b287-25da9677068a" />
