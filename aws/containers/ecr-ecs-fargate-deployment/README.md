@@ -168,7 +168,10 @@ aws iam list-attached-role-policies \
 ```
 
 #### Screenshot - Step 1: IAM Role Creation and Policy Attachment
-> ***Screenshot placeholder:** Terminal output showing `ecsTaskExecutionRole` successfully created and `AmazonECSTaskExecutionRolePolicy` attached. The `list-attached-role-policies` response confirms the policy ARN is bound to the role.*
+> ***Screenshot:** Terminal output showing `ecsTaskExecutionRole` successfully created and `AmazonECSTaskExecutionRolePolicy` attached. The `list-attached-role-policies` response confirms the policy ARN is bound to the role.*
+<img width="1032" height="840" alt="image" src="https://github.com/user-attachments/assets/d93b83a0-7bc9-4ffb-8e8e-96fdad9f51dc" />
+<img width="1024" height="591" alt="image" src="https://github.com/user-attachments/assets/550299c8-f8b0-43d6-abf3-2f9b8f3bdee2" />
+<img width="1035" height="806" alt="image" src="https://github.com/user-attachments/assets/39b0cb0c-34cb-4adf-bb0c-8e1707bc5515" />
 
 ![Step 1 - IAM Role Setup](screenshots/step1-iam-role-setup.png)
 
@@ -658,9 +661,7 @@ aws ec2 revoke-security-group-ingress \
 ---
 
 
-<img width="1032" height="840" alt="image" src="https://github.com/user-attachments/assets/d93b83a0-7bc9-4ffb-8e8e-96fdad9f51dc" />
-<img width="1024" height="591" alt="image" src="https://github.com/user-attachments/assets/550299c8-f8b0-43d6-abf3-2f9b8f3bdee2" />
-<img width="1035" height="806" alt="image" src="https://github.com/user-attachments/assets/39b0cb0c-34cb-4adf-bb0c-8e1707bc5515" />
+
 <img width="1034" height="466" alt="image" src="https://github.com/user-attachments/assets/7656cf8e-8a0a-4bb8-b66e-ad00e24e6fe5" />
 <img width="1028" height="808" alt="image" src="https://github.com/user-attachments/assets/40bda7d0-5641-4dd7-afbf-d9232500e538" />
 <img width="1028" height="724" alt="image" src="https://github.com/user-attachments/assets/9f0cbbb9-8930-4333-832e-c363b7e3ed94" />
