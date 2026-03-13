@@ -291,9 +291,9 @@ aws ecs create-cluster \
 ```
 
 #### Screenshot - Step 4: ECS Cluster Active with Fargate Capacity Provider
-> ***Screenshot placeholder:** AWS CLI response confirming `xfusion-cluster` in `ACTIVE` status, `capacityProviders: ["FARGATE"]`, and `defaultCapacityProviderStrategy` showing weight 1.*
+> *AWS CLI response confirming `xfusion-cluster` in `ACTIVE` status, `capacityProviders: ["FARGATE"]`, and `defaultCapacityProviderStrategy` showing weight 1.*
 
-![Step 4 - ECS Cluster Provisioning](screenshots/step4-ecs-cluster-provisioning.png)
+<img width="1036" height="731" alt="image" src="https://github.com/user-attachments/assets/8c027838-23f0-4d5f-b44a-226b930abf25" />
 
 ---
 
@@ -670,7 +670,7 @@ aws ec2 revoke-security-group-ingress \
 <img width="1025" height="734" alt="image" src="https://github.com/user-attachments/assets/fb5b3c64-acc5-4b02-b9c9-97f1d82af5ca" />
 <img width="1029" height="500" alt="image" src="https://github.com/user-attachments/assets/31147b54-c49e-41c9-a321-0b670ed5460c" />
 
-<img width="1036" height="731" alt="image" src="https://github.com/user-attachments/assets/8c027838-23f0-4d5f-b44a-226b930abf25" />
+
 <img width="1030" height="732" alt="image" src="https://github.com/user-attachments/assets/c13e5485-d6f0-41d1-8a83-04b50b44958a" />
 <img width="1019" height="850" alt="image" src="https://github.com/user-attachments/assets/de4103eb-1c8e-4f6d-ac48-01a1c49c9b6d" />
 <img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/bccaa09e-7ca0-48c6-8538-77071dd40d52" />
