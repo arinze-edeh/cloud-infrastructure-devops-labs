@@ -600,6 +600,4 @@ Re-run Step 14 to re-register the NIC IP config to the pool. This can occur if t
 <img width="1393" height="849" alt="image" src="https://github.com/user-attachments/assets/b24ab5e6-6b5b-4753-bd94-35af63698316" />
 <img width="1393" height="849" alt="image" src="https://github.com/user-attachments/assets/a1a166cf-7d71-4bc8-8b1a-c7cdcfdf5071" />
 <img width="1399" height="853" alt="image" src="https://github.com/user-attachments/assets/dcf84acc-98db-4461-8339-645dda3b0a12" />
-<img width="1399" height="853" alt="image" src="https://github.com/user-attachments/assets/78a2d74a-ce3a-44f4-a320-7544d8d192f9" />
-<img width="1399" height="853" alt="image" src="https://github.com/user-attachments/assets/eaf25fe9-77af-409d-a64c-d55d415908f6" />
 
