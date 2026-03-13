@@ -368,8 +368,9 @@ az network nic ip-config list \
 
 **Expected:** `Name: ipconfigxfusion-vm`, `Primary: True`, `PrivateIPAddress: 10.0.0.4`, `ProvisioningState: Succeeded`
 
-> **Screenshot Placeholder**
-> `phase6-step13-nic-ipconfig-list.png`
+> **Screenshot**
+<img width="1081" height="565" alt="image" src="https://github.com/user-attachments/assets/7e875323-8006-4c60-a91b-fcbbc5617f43" />
+
 > *Caption: NIC IP config list for xfusion-vmVMNic showing ipconfigxfusion-vm as the primary config with private IP 10.0.0.4.*
 
 ---
@@ -593,7 +594,7 @@ Re-run Step 14 to re-register the NIC IP config to the pool. This can occur if t
 
 <img width="1403" height="419" alt="image" src="https://github.com/user-attachments/assets/ad3ee20e-ef6a-421b-ad1b-90e6dbb54ae3" />
 <img width="1396" height="555" alt="image" src="https://github.com/user-attachments/assets/bce13dad-f75a-4879-a3a3-7ad5ee04b769" />
-<img width="1081" height="565" alt="image" src="https://github.com/user-attachments/assets/7e875323-8006-4c60-a91b-fcbbc5617f43" />
+
 <img width="1082" height="849" alt="image" src="https://github.com/user-attachments/assets/f099cba7-58e2-4489-9f53-07c550f17f9b" />
 <img width="1085" height="372" alt="image" src="https://github.com/user-attachments/assets/526fc72e-856f-44ec-a76e-f44900afee2b" />
 <img width="1401" height="719" alt="image" src="https://github.com/user-attachments/assets/dee4984d-241b-4e8d-a21c-5efd2d936b58" />
