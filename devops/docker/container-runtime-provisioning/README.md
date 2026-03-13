@@ -114,6 +114,7 @@ banner@stapp03's password:
 
 > **Screenshot**
 <img width="1030" height="385" alt="image" src="https://github.com/user-attachments/assets/365fa231-86c1-44ce-89c0-18395e2e817a" />
+
 > *Caption: Successful SSH session established to stapp03 via short hostname from the jump host.*
 
 ---
