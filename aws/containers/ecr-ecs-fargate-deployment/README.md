@@ -255,9 +255,12 @@ aws ecr list-images \
 ```
 
 #### Screenshot - Step 3: Docker Build, Tag, and Push to ECR
-> ***Screenshot placeholder:** Terminal showing `Login Succeeded`, all Docker build steps completing with `Successfully built 92fa306c3077` and `Successfully tagged xfusion-ecr:latest`, followed by all image layers pushed and the `latest` digest confirmed in `ecr list-images`.*
+> *Terminal showing `Login Succeeded`, all Docker build steps completing with `Successfully built 92fa306c3077` and `Successfully tagged xfusion-ecr:latest`, followed by all image layers pushed and the `latest` digest confirmed in `ecr list-images`.*
 
-![Step 3 - Docker Build and Push](screenshots/step3-docker-build-push.png)
+<img width="1024" height="772" alt="image" src="https://github.com/user-attachments/assets/f515dadb-0c13-4835-83bd-d6cc98880ee5" />
+<img width="1028" height="592" alt="image" src="https://github.com/user-attachments/assets/6866612a-43a1-4570-8cbf-3ba358019dd6" />
+<img width="1033" height="370" alt="image" src="https://github.com/user-attachments/assets/b9344e12-aba8-4bc9-ad32-73deef00fa98" />
+<img width="1028" height="557" alt="image" src="https://github.com/user-attachments/assets/cbb4444d-ccb1-44c4-9569-132c5d183bc3" />
 
 ---
 
@@ -666,10 +669,7 @@ aws ec2 revoke-security-group-ingress \
 
 <img width="1025" height="734" alt="image" src="https://github.com/user-attachments/assets/fb5b3c64-acc5-4b02-b9c9-97f1d82af5ca" />
 <img width="1029" height="500" alt="image" src="https://github.com/user-attachments/assets/31147b54-c49e-41c9-a321-0b670ed5460c" />
-<img width="1024" height="772" alt="image" src="https://github.com/user-attachments/assets/f515dadb-0c13-4835-83bd-d6cc98880ee5" />
-<img width="1028" height="592" alt="image" src="https://github.com/user-attachments/assets/6866612a-43a1-4570-8cbf-3ba358019dd6" />
-<img width="1033" height="370" alt="image" src="https://github.com/user-attachments/assets/b9344e12-aba8-4bc9-ad32-73deef00fa98" />
-<img width="1028" height="557" alt="image" src="https://github.com/user-attachments/assets/cbb4444d-ccb1-44c4-9569-132c5d183bc3" />
+
 <img width="1036" height="731" alt="image" src="https://github.com/user-attachments/assets/8c027838-23f0-4d5f-b44a-226b930abf25" />
 <img width="1030" height="732" alt="image" src="https://github.com/user-attachments/assets/c13e5485-d6f0-41d1-8a83-04b50b44958a" />
 <img width="1019" height="850" alt="image" src="https://github.com/user-attachments/assets/de4103eb-1c8e-4f6d-ac48-01a1c49c9b6d" />
