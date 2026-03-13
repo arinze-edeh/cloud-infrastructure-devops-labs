@@ -326,8 +326,9 @@ az network lb rule show \
 
 **Expected:** `Name: xfusion-lb-rule`, `FrontendPort: 80`, `BackendPort: 80`, `Protocol: Tcp`, `LoadDistribution: Default`, `ProvisioningState: Succeeded`
 
-> **Screenshot Placeholder**
-> `phase5-step11-lb-rule-verify.png`
+> **Screenshot**
+<img width="1402" height="799" alt="image" src="https://github.com/user-attachments/assets/db08d8fd-5c57-424c-bfb6-cd500c1c2d9b" />
+
 > *Caption: LB rule xfusion-lb-rule confirmed routing TCP port 80 to backend port 80 with Default load distribution and ProvisioningState Succeeded.*
 
 ---
@@ -589,7 +590,7 @@ Re-run Step 14 to re-register the NIC IP config to the pool. This can occur if t
 
 
 
-<img width="1402" height="799" alt="image" src="https://github.com/user-attachments/assets/db08d8fd-5c57-424c-bfb6-cd500c1c2d9b" />
+
 <img width="1403" height="419" alt="image" src="https://github.com/user-attachments/assets/ad3ee20e-ef6a-421b-ad1b-90e6dbb54ae3" />
 <img width="1396" height="555" alt="image" src="https://github.com/user-attachments/assets/bce13dad-f75a-4879-a3a3-7ad5ee04b769" />
 <img width="1081" height="565" alt="image" src="https://github.com/user-attachments/assets/7e875323-8006-4c60-a91b-fcbbc5617f43" />
