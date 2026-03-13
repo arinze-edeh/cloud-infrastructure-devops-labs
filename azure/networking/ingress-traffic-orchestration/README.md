@@ -127,8 +127,9 @@ az account show
 
 **Expected:** CLI version `2.67.0` or later. Account state must be `Enabled`.
 
-> **Screenshot Placeholder**
-> `phase1-step1-az-version-account-show.png`
+> **Screenshot**
+<img width="1030" height="783" alt="image" src="https://github.com/user-attachments/assets/0b41e077-6b95-42fe-b7a3-39349b590976" />
+
 > *Caption: Azure CLI version output and active account confirmation showing subscription "Azure Free Labs" in Enabled state.*
 
 ---
@@ -577,7 +578,7 @@ Re-run Step 14 to re-register the NIC IP config to the pool. This can occur if t
 *Region: East US | SKU: Standard | CLI: 2.67.0*
 
 
-<img width="1030" height="783" alt="image" src="https://github.com/user-attachments/assets/0b41e077-6b95-42fe-b7a3-39349b590976" />
+
 <img width="1032" height="824" alt="image" src="https://github.com/user-attachments/assets/168b0aa0-530c-437f-b67f-5b31f49ecfda" />
 <img width="1032" height="631" alt="image" src="https://github.com/user-attachments/assets/ae18cdb7-b7c0-42bd-a57a-3eb86b1f7512" />
 <img width="1035" height="712" alt="image" src="https://github.com/user-attachments/assets/b6e79d67-4be0-4344-91d1-5c4ad50784d0" />
