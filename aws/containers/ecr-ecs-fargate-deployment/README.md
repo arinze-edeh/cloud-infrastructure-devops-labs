@@ -310,9 +310,9 @@ aws logs create-log-group \
 ```
 
 #### Screenshot - Step 5: CloudWatch Log Group Created
-> ***Screenshot placeholder:** Terminal showing the `aws logs create-log-group` command completing with no error (silent success), confirming `/ecs/xfusion-taskdefinition` log group is provisioned and ready to receive container logs.*
+> *Terminal showing the `aws logs create-log-group` command completing with no error (silent success), confirming `/ecs/xfusion-taskdefinition` log group is provisioned and ready to receive container logs.*
 
-![Step 5 - CloudWatch Log Group](screenshots/step5-cloudwatch-log-group.png)
+<img width="1030" height="732" alt="image" src="https://github.com/user-attachments/assets/c13e5485-d6f0-41d1-8a83-04b50b44958a" />
 
 ---
 
@@ -366,9 +366,9 @@ Task Definition ARN: arn:aws:ecs:us-east-1:692699826578:task-definition/xfusion-
 ```
 
 #### Screenshot - Step 6: Task Definition Registered
-> ***Screenshot placeholder:** Terminal output showing the full `register-task-definition` response with `taskDefinitionArn` ending in `xfusion-taskdefinition:1`, container definition fields including `image`, `portMappings`, `logConfiguration`, and `status: ACTIVE`.*
+> *Terminal output showing the full `register-task-definition` response with `taskDefinitionArn` ending in `xfusion-taskdefinition:1`, container definition fields including `image`, `portMappings`, `logConfiguration`, and `status: ACTIVE`.*
 
-![Step 6 - Task Definition Registration](screenshots/step6-task-definition-registration.png)
+<img width="1030" height="732" alt="image" src="https://github.com/user-attachments/assets/c13e5485-d6f0-41d1-8a83-04b50b44958a" />
 
 ---
 
@@ -671,7 +671,7 @@ aws ec2 revoke-security-group-ingress \
 <img width="1029" height="500" alt="image" src="https://github.com/user-attachments/assets/31147b54-c49e-41c9-a321-0b670ed5460c" />
 
 
-<img width="1030" height="732" alt="image" src="https://github.com/user-attachments/assets/c13e5485-d6f0-41d1-8a83-04b50b44958a" />
+
 <img width="1019" height="850" alt="image" src="https://github.com/user-attachments/assets/de4103eb-1c8e-4f6d-ac48-01a1c49c9b6d" />
 <img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/bccaa09e-7ca0-48c6-8538-77071dd40d52" />
 <img width="1027" height="629" alt="image" src="https://github.com/user-attachments/assets/37b9c098-cc4e-4c44-8bbb-43257477f1a2" />
