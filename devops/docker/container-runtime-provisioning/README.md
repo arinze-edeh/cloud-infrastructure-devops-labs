@@ -233,8 +233,11 @@ sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 Complete!
 ```
 
-> **Screenshot Placeholder**
-> `screenshots/phase3-docker-install-complete.png`
+> **Screenshot**
+<img width="1036" height="857" alt="image" src="https://github.com/user-attachments/assets/6d5a9a81-ac0b-4412-a540-1647ef720adc" />
+<img width="1040" height="859" alt="image" src="https://github.com/user-attachments/assets/6c893816-d29d-4894-a295-7c773d594756" />
+<img width="1030" height="870" alt="image" src="https://github.com/user-attachments/assets/e62d1862-f343-41ab-b287-25da9677068a" />
+
 > *Caption: All 22 packages including docker-ce 29.3.0 and docker-compose-plugin 5.1.0 installed successfully.*
 
 > **Why `docker-compose-plugin` instead of standalone `docker-compose`?**
@@ -434,9 +437,7 @@ devops/
 
 <img width="1037" height="863" alt="image" src="https://github.com/user-attachments/assets/093a6fd7-0646-45ea-b9f1-87315c7df7a6" />
 
-<img width="1036" height="857" alt="image" src="https://github.com/user-attachments/assets/6d5a9a81-ac0b-4412-a540-1647ef720adc" />
-<img width="1040" height="859" alt="image" src="https://github.com/user-attachments/assets/6c893816-d29d-4894-a295-7c773d594756" />
-<img width="1030" height="870" alt="image" src="https://github.com/user-attachments/assets/e62d1862-f343-41ab-b287-25da9677068a" />
+
 <img width="1035" height="559" alt="image" src="https://github.com/user-attachments/assets/2fe46f04-6003-42d2-a322-f34fca611852" />
 <img width="1035" height="559" alt="image" src="https://github.com/user-attachments/assets/9a0a38be-8d30-42c8-9127-305e8e671322" />
 <img width="1032" height="632" alt="image" src="https://github.com/user-attachments/assets/10d8500c-3398-4c93-8301-bbbe5ecccba5" />
