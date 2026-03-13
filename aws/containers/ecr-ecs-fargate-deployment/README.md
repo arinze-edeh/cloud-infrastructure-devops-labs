@@ -168,9 +168,9 @@ aws iam list-attached-role-policies \
 ```
 
 #### Screenshot - Step 1: IAM Role Creation and Policy Attachment
-> ***Screenshot:** Terminal output showing `ecsTaskExecutionRole` successfully created and `AmazonECSTaskExecutionRolePolicy` attached. The `list-attached-role-policies` response confirms the policy ARN is bound to the role.*
+> *Terminal output showing `ecsTaskExecutionRole` successfully created and `AmazonECSTaskExecutionRolePolicy` attached. The `list-attached-role-policies` response confirms the policy ARN is bound to the role.*
 <img width="1032" height="840" alt="image" src="https://github.com/user-attachments/assets/d93b83a0-7bc9-4ffb-8e8e-96fdad9f51dc" />
-<img width="1024" height="591" alt="image" src="https://github.com/user-attachments/assets/550299c8-f8b0-43d6-abf3-2f9b8f3bdee2" />
+
 <img width="1035" height="806" alt="image" src="https://github.com/user-attachments/assets/39b0cb0c-34cb-4adf-bb0c-8e1707bc5515" />
 
 ![Step 1 - IAM Role Setup](screenshots/step1-iam-role-setup.png)
