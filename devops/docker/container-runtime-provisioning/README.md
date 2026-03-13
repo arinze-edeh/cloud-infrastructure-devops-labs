@@ -20,7 +20,6 @@
   - [Phase 4: Service Initiation and Validation](#phase-4-service-initiation-and-validation)
 - [Known Issues and Resolutions](#known-issues-and-resolutions)
 - [Validation Summary](#validation-summary)
-- [Repository Structure](#repository-structure)
 
 ---
 
@@ -415,12 +414,3 @@ sudo systemctl enable docker
 | Task Completed | Fri 2026-03-13 03:12:07 UTC |
 
 ---
-
-
-<img width="1033" height="607" alt="image" src="https://github.com/user-attachments/assets/61af7d2b-e8ca-4300-8461-7d839a302805" />
-
-<img width="1037" height="863" alt="image" src="https://github.com/user-attachments/assets/093a6fd7-0646-45ea-b9f1-87315c7df7a6" />
-
-
-<img width="1035" height="559" alt="image" src="https://github.com/user-attachments/assets/2fe46f04-6003-42d2-a322-f34fca611852" />
-
