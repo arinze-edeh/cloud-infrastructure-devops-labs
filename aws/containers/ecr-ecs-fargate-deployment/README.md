@@ -254,7 +254,7 @@ aws ecr list-images \
 }
 ```
 
-#### Screenshot - Step 3: Docker Build, Tag, and Push to ECR
+#### Screenshots - Step 3: Docker Build, Tag, and Push to ECR
 > *Terminal showing `Login Succeeded`, all Docker build steps completing with `Successfully built 92fa306c3077` and `Successfully tagged xfusion-ecr:latest`, followed by all image layers pushed and the `latest` digest confirmed in `ecr list-images`.*
 
 <img width="1024" height="772" alt="image" src="https://github.com/user-attachments/assets/f515dadb-0c13-4835-83bd-d6cc98880ee5" />
