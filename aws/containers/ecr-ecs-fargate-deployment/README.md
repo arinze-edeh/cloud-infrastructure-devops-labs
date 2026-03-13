@@ -201,9 +201,9 @@ aws ecr describe-repositories \
 ```
 
 #### Screenshot - Step 2: ECR Private Repository Created
-> ***Screenshot placeholder:** AWS CLI output showing the `xfusion-ecr` repository creation response, including `repositoryUri`, `scanOnPush: true`, `imageTagMutability: MUTABLE`, and `encryptionType: AES256`.*
+> *AWS CLI output showing the `xfusion-ecr` repository creation response, including `repositoryUri`, `scanOnPush: true`, `imageTagMutability: MUTABLE`, and `encryptionType: AES256`.*
 
-![Step 2 - ECR Repository Creation](screenshots/step2-ecr-repository-creation.png)
+<img width="1028" height="724" alt="image" src="https://github.com/user-attachments/assets/9f0cbbb9-8930-4333-832e-c363b7e3ed94" />
 
 ---
 
@@ -663,7 +663,7 @@ aws ec2 revoke-security-group-ingress \
 
 <img width="1034" height="466" alt="image" src="https://github.com/user-attachments/assets/7656cf8e-8a0a-4bb8-b66e-ad00e24e6fe5" />
 <img width="1028" height="808" alt="image" src="https://github.com/user-attachments/assets/40bda7d0-5641-4dd7-afbf-d9232500e538" />
-<img width="1028" height="724" alt="image" src="https://github.com/user-attachments/assets/9f0cbbb9-8930-4333-832e-c363b7e3ed94" />
+
 <img width="1025" height="734" alt="image" src="https://github.com/user-attachments/assets/fb5b3c64-acc5-4b02-b9c9-97f1d82af5ca" />
 <img width="1029" height="500" alt="image" src="https://github.com/user-attachments/assets/31147b54-c49e-41c9-a321-0b670ed5460c" />
 <img width="1024" height="772" alt="image" src="https://github.com/user-attachments/assets/f515dadb-0c13-4835-83bd-d6cc98880ee5" />
