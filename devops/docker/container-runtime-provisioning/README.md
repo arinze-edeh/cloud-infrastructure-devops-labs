@@ -159,8 +159,11 @@ Total download size: 144 M
 Complete!
 ```
 
-> **Screenshot Placeholder**
-> `screenshots/phase2-yum-update-complete.png`
+> **Screenshots**
+<img width="1033" height="861" alt="image" src="https://github.com/user-attachments/assets/9aeaecea-a40e-45de-bdc6-26460c33339b" />
+<img width="1029" height="870" alt="image" src="https://github.com/user-attachments/assets/f82546b9-81d8-4d03-8b17-31651adc7fac" />
+<img width="1030" height="855" alt="image" src="https://github.com/user-attachments/assets/ca2d4379-aa0d-4c53-b9ff-6d638c3a67f9" />
+
 > *Caption: yum update completing successfully, showing 72 packages upgraded on CentOS Stream 9.*
 
 ---
@@ -427,9 +430,7 @@ devops/
 
 
 <img width="1033" height="607" alt="image" src="https://github.com/user-attachments/assets/61af7d2b-e8ca-4300-8461-7d839a302805" />
-<img width="1033" height="861" alt="image" src="https://github.com/user-attachments/assets/9aeaecea-a40e-45de-bdc6-26460c33339b" />
-<img width="1029" height="870" alt="image" src="https://github.com/user-attachments/assets/f82546b9-81d8-4d03-8b17-31651adc7fac" />
-<img width="1030" height="855" alt="image" src="https://github.com/user-attachments/assets/ca2d4379-aa0d-4c53-b9ff-6d638c3a67f9" />
+
 <img width="1037" height="863" alt="image" src="https://github.com/user-attachments/assets/093a6fd7-0646-45ea-b9f1-87315c7df7a6" />
 <img width="1035" height="258" alt="image" src="https://github.com/user-attachments/assets/6ec77742-42bd-470b-b714-be6e322a2613" />
 <img width="1036" height="857" alt="image" src="https://github.com/user-attachments/assets/6d5a9a81-ac0b-4412-a540-1647ef720adc" />
