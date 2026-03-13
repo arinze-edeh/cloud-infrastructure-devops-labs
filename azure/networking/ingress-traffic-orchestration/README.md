@@ -242,8 +242,9 @@ az network lb show \
 
 **Expected:** `Name: xfusion-lb`, `Location: eastus`, `ProvisioningState: Succeeded`
 
-> **Screenshot Placeholder**
-> `phase3-step7-lb-verify.png`
+> **Screenshot**
+<img width="1034" height="562" alt="image" src="https://github.com/user-attachments/assets/ae0e273d-c79f-4399-b711-e3d91161a60a" />
+
 > *Caption: Load balancer xfusion-lb showing ProvisioningState Succeeded in eastus with its assigned ResourceGuid.*
 
 ---
@@ -585,7 +586,7 @@ Re-run Step 14 to re-register the NIC IP config to the pool. This can occur if t
 
 
 
-<img width="1034" height="562" alt="image" src="https://github.com/user-attachments/assets/ae0e273d-c79f-4399-b711-e3d91161a60a" />
+
 <img width="1322" height="696" alt="image" src="https://github.com/user-attachments/assets/65b32b40-dd9a-46f0-a092-3eb9d10ed6de" />
 <img width="1402" height="799" alt="image" src="https://github.com/user-attachments/assets/db08d8fd-5c57-424c-bfb6-cd500c1c2d9b" />
 <img width="1403" height="419" alt="image" src="https://github.com/user-attachments/assets/ad3ee20e-ef6a-421b-ad1b-90e6dbb54ae3" />
