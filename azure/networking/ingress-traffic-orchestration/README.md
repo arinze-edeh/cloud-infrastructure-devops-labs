@@ -403,8 +403,10 @@ az network lb address-pool show \
 
 **Expected:** `Name: xfusion-backend-pool`, `ProvisioningState: Succeeded`
 
-> **Screenshot Placeholder**
-> `phase6-step15-backend-pool-verify.png`
+> **Screenshot**
+
+<img width="1082" height="849" alt="image" src="https://github.com/user-attachments/assets/f099cba7-58e2-4489-9f53-07c550f17f9b" />
+
 > *Caption: Backend pool xfusion-backend-pool showing ProvisioningState Succeeded, confirming xfusion-vm is a registered target.*
 
 ---
@@ -592,10 +594,8 @@ Re-run Step 14 to re-register the NIC IP config to the pool. This can occur if t
 
 
 
-<img width="1403" height="419" alt="image" src="https://github.com/user-attachments/assets/ad3ee20e-ef6a-421b-ad1b-90e6dbb54ae3" />
-<img width="1396" height="555" alt="image" src="https://github.com/user-attachments/assets/bce13dad-f75a-4879-a3a3-7ad5ee04b769" />
 
-<img width="1082" height="849" alt="image" src="https://github.com/user-attachments/assets/f099cba7-58e2-4489-9f53-07c550f17f9b" />
+
 <img width="1085" height="372" alt="image" src="https://github.com/user-attachments/assets/526fc72e-856f-44ec-a76e-f44900afee2b" />
 <img width="1401" height="719" alt="image" src="https://github.com/user-attachments/assets/dee4984d-241b-4e8d-a21c-5efd2d936b58" />
 <img width="1401" height="719" alt="image" src="https://github.com/user-attachments/assets/10fa87e4-a7ff-4cd7-87ed-10ae4c4aad89" />
