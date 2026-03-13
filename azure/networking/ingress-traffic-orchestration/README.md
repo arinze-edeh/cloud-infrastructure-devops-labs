@@ -467,8 +467,9 @@ az network nsg rule show \
 
 **Expected:** `Name: Allow-HTTP-80`, `Priority: 100`, `Direction: Inbound`, `Access: Allow`, `Protocol: Tcp`, `DestinationPortRanges: 80`, `ProvisioningState: Succeeded`
 
-> **Screenshot Placeholder**
-> `phase7-step18-nsg-rule-verify.png`
+> **Screenshot**
+<img width="1401" height="785" alt="image" src="https://github.com/user-attachments/assets/9c3808a2-4d02-472e-b201-458d1314e3fa" />
+
 > *Caption: NSG rule Allow-HTTP-80 confirmed on xfusion-vmNSG allowing inbound TCP port 80 from any source at priority 100.*
 
 ---
@@ -599,7 +600,7 @@ Re-run Step 14 to re-register the NIC IP config to the pool. This can occur if t
 <img width="1085" height="372" alt="image" src="https://github.com/user-attachments/assets/526fc72e-856f-44ec-a76e-f44900afee2b" />
 <img width="1401" height="719" alt="image" src="https://github.com/user-attachments/assets/dee4984d-241b-4e8d-a21c-5efd2d936b58" />
 <img width="1401" height="719" alt="image" src="https://github.com/user-attachments/assets/10fa87e4-a7ff-4cd7-87ed-10ae4c4aad89" />
-<img width="1401" height="785" alt="image" src="https://github.com/user-attachments/assets/9c3808a2-4d02-472e-b201-458d1314e3fa" />
+
 <img width="1401" height="785" alt="image" src="https://github.com/user-attachments/assets/2814a3ab-ab32-42f0-b6d3-6c6301efb4e2" />
 <img width="1393" height="849" alt="image" src="https://github.com/user-attachments/assets/b24ab5e6-6b5b-4753-bd94-35af63698316" />
 <img width="1393" height="849" alt="image" src="https://github.com/user-attachments/assets/a1a166cf-7d71-4bc8-8b1a-c7cdcfdf5071" />
