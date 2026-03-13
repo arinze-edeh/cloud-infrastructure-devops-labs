@@ -199,8 +199,9 @@ az network public-ip show \
 
 **Expected:** `ProvisioningState: Succeeded`, `Location: eastus`, `Address: 52.188.1.76`
 
-> **Screenshot Placeholder**
-> `phase2-step5-public-ip-verify.png`
+> **Screenshot**
+<img width="1035" height="712" alt="image" src="https://github.com/user-attachments/assets/b6e79d67-4be0-4344-91d1-5c4ad50784d0" />
+
 > *Caption: Public IP xfusion-lb-ip showing ProvisioningState Succeeded with assigned address 52.188.1.76 in eastus.*
 
 ---
@@ -583,7 +584,7 @@ Re-run Step 14 to re-register the NIC IP config to the pool. This can occur if t
 
 
 
-<img width="1035" height="712" alt="image" src="https://github.com/user-attachments/assets/b6e79d67-4be0-4344-91d1-5c4ad50784d0" />
+
 <img width="1034" height="562" alt="image" src="https://github.com/user-attachments/assets/ae0e273d-c79f-4399-b711-e3d91161a60a" />
 <img width="1322" height="696" alt="image" src="https://github.com/user-attachments/assets/65b32b40-dd9a-46f0-a092-3eb9d10ed6de" />
 <img width="1402" height="799" alt="image" src="https://github.com/user-attachments/assets/db08d8fd-5c57-424c-bfb6-cd500c1c2d9b" />
