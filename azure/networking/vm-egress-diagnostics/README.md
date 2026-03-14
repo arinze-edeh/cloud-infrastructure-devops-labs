@@ -386,7 +386,7 @@ Protocols: dict file ftp ftps gopher gophers http https imap imaps ldap ldaps mq
 Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM NTLM_WB PSL SPNEGO SSL TLS-SRP UnixSockets zstd
 ```
 
-> ***Screenshot:***
+> ***Screenshots:***
 
 
 <img width="1029" height="856" alt="image" src="https://github.com/user-attachments/assets/6931d647-5f26-4311-be53-2c7d323bdacb" />
