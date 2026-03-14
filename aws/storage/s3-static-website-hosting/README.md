@@ -518,8 +518,11 @@ Welcome to KKE labs!
 
 ---
 
-**[SCREENSHOT PLACEHOLDER]**
-> *Insert screenshot showing `curl -I` returning `HTTP/1.1 200 OK` and `curl` returning the rendered HTML content `Welcome to KKE labs!`.*
+**SCREENSHOT**
+
+<img width="1031" height="316" alt="image" src="https://github.com/user-attachments/assets/22616771-06af-4c10-b0eb-4d600bf7432f" />
+
+> *screenshot showing `curl -I` returning `HTTP/1.1 200 OK` and `curl` returning the rendered HTML content `Welcome to KKE labs!`.*
 
 ---
 
@@ -586,4 +589,4 @@ This configuration grants **unrestricted public read access** (`Principal: *`) t
 
 
 <img width="1035" height="812" alt="image" src="https://github.com/user-attachments/assets/20800c9b-f9eb-4ca4-971a-7d291e3df0b0" />
-<img width="1031" height="316" alt="image" src="https://github.com/user-attachments/assets/22616771-06af-4c10-b0eb-4d600bf7432f" />
+
