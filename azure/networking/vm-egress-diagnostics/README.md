@@ -275,15 +275,18 @@ Ign:4 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease
 Ign:1 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
 ```
 
-> ***Screenshot Placeholder:*** `07-pre-fix-broken-state.png` -- Terminal output from inside `nautilus-vm` showing `100% packet loss` on ICMP and all apt sources returning `Ign` (ignored), confirming complete outbound failure
-
 Exit the SSH session to return to the `azure-client` shell:
 
 ```bash
 exit
 ```
 
-> ***Screenshot Placeholder:*** `08-exit-session.png` -- Terminal showing `logout`, `Connection to 20.121.33.102 closed.`, and prompt returning to `~ ->`
+> ***Screenshot:*** 
+
+<img width="1030" height="671" alt="image" src="https://github.com/user-attachments/assets/2d60dab8-45e7-4b6d-8dca-b2862f409e3b" />
+
+>Terminal output from inside `nautilus-vm` showing `100% packet loss` on ICMP and all apt sources returning `Ign` (ignored), confirming complete outbound failure
+>Terminal showing `logout`, `Connection to 20.121.33.102 closed.`, and prompt returning to `~ ->`
 
 ---
 
@@ -422,8 +425,6 @@ Passing all verification commands as a single SSH argument eliminates interactiv
 
 
 
-<img width="1028" height="862" alt="image" src="https://github.com/user-attachments/assets/cf0d47bb-2644-417b-93ba-77ac1f2c4b5a" />
-<img width="1030" height="671" alt="image" src="https://github.com/user-attachments/assets/2d60dab8-45e7-4b6d-8dca-b2862f409e3b" />
 <img width="1029" height="856" alt="image" src="https://github.com/user-attachments/assets/6931d647-5f26-4311-be53-2c7d323bdacb" />
 <img width="1032" height="857" alt="image" src="https://github.com/user-attachments/assets/ea3b7a5b-46fe-454b-946f-b0e9273e5e5d" />
 <img width="1031" height="869" alt="image" src="https://github.com/user-attachments/assets/c69d18bf-ad23-4847-889e-d3adbb41a431" />
