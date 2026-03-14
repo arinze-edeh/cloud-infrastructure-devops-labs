@@ -14,11 +14,14 @@
 * [Root Cause](#root-cause)
 * [Prerequisites](#prerequisites)
 * [Resolution Workflow](#resolution-workflow)
-  * [Phase 0: Authentication and Context](#phase-0-authentication-and-context)
-  * [Phase 1: Inventory and Variable Capture](#phase-1-inventory-and-variable-capture)
-  * [Phase 2: NSG Diagnosis and SSH Validation](#phase-2-nsg-diagnosis-and-ssh-validation)
-  * [Phase 3: Remediation](#phase-3-remediation)
-  * [Phase 4: Post-Fix Verification](#phase-4-post-fix-verification)
+  * [Phase 0: Subscription Context and Region Configuration](#phase-0-subscription-context-and-region-configuration)
+  * [Phase 1: Resource Group Resolution](#phase-1-resource-group-resolution)
+  * [Phase 2: Public IP Discovery](#phase-2-public-ip-discovery)
+  * [Phase 3: NIC and NSG Resolution](#phase-3-nic-and-nsg-resolution)
+  * [Phase 4: NSG Rule Enumeration and SSH Validation](#phase-4-nsg-rule-enumeration-and-ssh-validation)
+  * [Phase 5: Pre-Fix Connectivity Confirmation](#phase-5-pre-fix-connectivity-confirmation)
+  * [Phase 6: Remediation](#phase-6-remediation)
+  * [Phase 7: Post-Fix Verification](#phase-7-post-fix-verification)
 * [Verification Results](#verification-results)
 * [Key Lessons](#key-lessons)
 * [Repository Structure](#repository-structure)
@@ -27,18 +30,14 @@
 
 ## Problem Statement
 
-The DevOps team reported that an Azure Virtual Machine was **unable to install or update any packages**. All `apt-get` operations were silently failing, and outbound internet connectivity was completely broken. The VM appeared online from the portal but was operationally isolated from the internet.
-
-**Symptoms observed:**
-
-* `apt-get update` returning `Ign` (ignored) for all package sources
-* `ping 8.8.8.8` resulting in `100% packet loss`
-* SSH response packets blocked, causing connection timeouts on private IP
+The Nautilus DevOps team encountered an issue with an Azure VM named `nautilus-vm`. The team was unable to install any packages on the VM due to connectivity issues. The team needed to identify the root cause of the problem and resolve it to restore normal operations.
 
 **Objectives:**
 
-1. Investigate the connectivity issue preventing package installation on the Azure VM
-2. Implement a solution to restore full outbound connectivity and package installation capabilities
+1. Investigate the connectivity issue preventing package installation on the Azure VM `nautilus-vm`
+2. Implement a solution to resolve the connectivity issue and restore package installation capabilities on the VM
+
+> **Note:** The SSH key required to access the Azure VM is already created and added to the VM's authorized keys. The key is located at `/root/.ssh/id_rsa` on the `azure-client` host.
 
 ---
 
@@ -48,98 +47,130 @@ The DevOps team reported that an Azure Virtual Machine was **unable to install o
 |---|---|
 | **Cloud Provider** | Microsoft Azure |
 | **Region** | East US (`eastus`) |
+| **Subscription Name** | Azure Free Labs |
+| **Subscription ID** | `f0c3bcdd-5ce2-4fa0-8cf3-41559747512b` |
+| **Tenant ID** | `54c1a2d3-d100-453c-9636-3a109eb45552` |
 | **Resource Group** | `KML_RG_MAIN-ABFB64E535324D83` |
 | **Target VM** | `nautilus-vm` |
-| **VM OS** | Ubuntu 22.04.5 LTS |
+| **VM OS** | Ubuntu 22.04.5 LTS (GNU/Linux 6.8.0-1044-azure x86_64) |
 | **NIC** | `nautilus-vmVMNic` |
 | **NSG** | `nautilus-nsg` |
-| **VM Private IP** | `10.0.0.4` |
+| **VM Private IP** | `10.0.0.4` (eth0) |
 | **VM Public IP** | `20.121.33.102` |
-| **Access Method** | SSH via `/root/.ssh/id_rsa` |
-
-> **Architecture note:** The lab shell environment serves as the `azure-client` jump host. There is no separate `azure-client` VM in the subscription. SSH access to `nautilus-vm` is performed directly from this shell using the pre-provisioned RSA key.
+| **SSH Key Path** | `/root/.ssh/id_rsa` |
+| **SSH User** | `azureuser` |
 
 ---
 
 ## Root Cause
 
-A deliberately injected Network Security Group (NSG) outbound rule named **`Block-All-Outbound`** was configured at **priority 200** on `nautilus-nsg`, denying all outbound traffic (`*`) before any allow rule could be evaluated.
+A Network Security Group outbound rule named **`Block-All-Outbound`** was configured at **priority 200** on `nautilus-nsg`, explicitly denying all outbound traffic (`*`) before any allow rule could be evaluated.
 
-**NSG rule evaluation is strictly priority-ordered (lowest number wins).** The malicious rule at priority 200 fired before the default `AllowInternetOutBound` rule at priority 65001, effectively blackholing all egress traffic from the VM.
+Azure NSG rules are processed in strict ascending priority order. The lowest priority number always wins. At priority 200, `Block-All-Outbound` intercepted and dropped every outbound packet from `nautilus-vm` before the default `AllowInternetOutBound` rule at priority 65001 could permit it.
 
 ```
-Priority    Name                   Access    Effect
---------    ----                   ------    ------
-200         Block-All-Outbound     DENY  *   <-- Root cause: fires first, blocks everything
-65000       AllowVnetOutBound      Allow *   <-- Never reached
-65001       AllowInternetOutBound  Allow *   <-- Never reached
-65500       DenyAllOutBound        Deny  *   <-- Default deny
+Priority    Name                   Access    DestPort    Outcome
+--------    ----                   ------    --------    -------
+200         Block-All-Outbound     Deny      *           FIRES -- drops all outbound traffic
+65000       AllowVnetOutBound      Allow     *           Never evaluated
+65001       AllowInternetOutBound  Allow     *           Never evaluated
+65500       DenyAllOutBound        Deny      *           Never evaluated
 ```
 
-**Secondary impact:** Blocked outbound traffic also prevented SSH TCP response packets from returning to the client, causing `Connection timed out` errors even though inbound port 22 was explicitly allowed at priority 100.
+**Effect:** All outbound connections from `nautilus-vm` were silently dropped. Package manager requests to `azure.archive.ubuntu.com` never left the VM. ICMP requests to `8.8.8.8` resulted in `100% packet loss`.
 
 ---
 
 ## Prerequisites
 
-* Azure CLI (`az`) installed and accessible in your shell
-* SSH private key present at `/root/.ssh/id_rsa` with permissions `600`
-* Sufficient Azure RBAC permissions: `Network Contributor` or higher on the resource group
+* Azure CLI (`az`) authenticated and accessible in the current shell session
+* SSH private key present at `/root/.ssh/id_rsa`
+* Azure RBAC role with `Network Contributor` permissions or higher on the target resource group
 
 ---
 
 ## Resolution Workflow
 
-### Phase 0: Authentication and Context
+### Phase 0: Subscription Context and Region Configuration
 
-Authenticate to Azure and set the default region to East US.
-
-```bash
-az login \
-  --username "<LAB_USERNAME>" \
-  --password "<LAB_PASSWORD>"
-```
+Set the active subscription to the correct Azure Free Labs subscription and configure the default region to East US.
 
 ```bash
 az account set --subscription $(az account list --query "[0].id" --output tsv)
 az configure --defaults location=eastus
 ```
 
-**Verify active subscription:**
-
-```bash
-az account show --output table
-```
-
-> ***Screenshot Placeholder:*** `01-az-account-show.png` -- Terminal output confirming `AzureCloud` subscription is active with `IsDefault: True` and `State: Enabled`
+> ***Screenshot Placeholder:*** `01-account-set-configure.png` -- Terminal showing both commands executing cleanly with the prompt returning to `~ ->`
 
 ---
 
-### Phase 1: Inventory and Variable Capture
+### Phase 1: Resource Group Resolution
 
-Capture all required resource identifiers in a single block to avoid variable loss between commands.
+Identify the resource group that contains `nautilus-vm` by querying the VM list and extracting the `resourceGroup` property of the first result.
 
 ```bash
-# Capture resource group
 RG=$(az vm list --query "[0].resourceGroup" --output tsv)
 echo "Resource Group: $RG"
+```
 
-# Capture VM public IP directly (skip private IP -- unreachable from outside VNet)
-VM_PIP=$(az network public-ip list \
+**Output:**
+
+```
+Resource Group: KML_RG_MAIN-ABFB64E535324D83
+```
+
+> ***Screenshot Placeholder:*** `02-resource-group.png` -- Terminal output showing `Resource Group: KML_RG_MAIN-ABFB64E535324D83`
+
+---
+
+### Phase 2: Public IP Discovery
+
+Retrieve the public IP address assigned to `nautilus-vm`. The VM's private IP (`10.0.0.4`) is only routable within its VNet and cannot be targeted from the `azure-client` shell. The public IP is required for all subsequent SSH operations.
+
+```bash
+NAUTILUS_PIP=$(az network public-ip list \
   --resource-group $RG \
   --query "[0].ipAddress" \
   --output tsv)
-echo "VM Public IP: $VM_PIP"
+echo "nautilus-vm Public IP: $NAUTILUS_PIP"
+```
 
-# Capture NIC name
+**Output:**
+
+```
+nautilus-vm Public IP: 20.121.33.102
+```
+
+> ***Screenshot Placeholder:*** `03-public-ip.png` -- Terminal output showing `nautilus-vm Public IP: 20.121.33.102`
+
+---
+
+### Phase 3: NIC and NSG Resolution
+
+Resolve the Network Interface Card (NIC) attached to `nautilus-vm`, then identify the Network Security Group (NSG) bound to that NIC. Both identifiers are required to inspect and modify the firewall rules governing the VM's traffic.
+
+**Capture the NIC name:**
+
+```bash
 NIC_NAME=$(az vm show \
   --name nautilus-vm \
   --resource-group $RG \
   --query "networkProfile.networkInterfaces[0].id" \
   --output tsv | xargs basename)
 echo "NIC: $NIC_NAME"
+```
 
-# Capture NSG name
+**Output:**
+
+```
+NIC: nautilus-vmVMNic
+```
+
+> ***Screenshot Placeholder:*** `04-nic-name.png` -- Terminal output showing `NIC: nautilus-vmVMNic`
+
+**Capture the NSG name:**
+
+```bash
 NSG_NAME=$(az network nic show \
   --name $NIC_NAME \
   --resource-group $RG \
@@ -148,22 +179,19 @@ NSG_NAME=$(az network nic show \
 echo "NSG: $NSG_NAME"
 ```
 
-**Expected output:**
+**Output:**
 
 ```
-Resource Group: KML_RG_MAIN-ABFB64E535324D83
-VM Public IP:   20.121.33.102
-NIC:            nautilus-vmVMNic
-NSG:            nautilus-nsg
+NSG: nautilus-nsg
 ```
 
-> ***Screenshot Placeholder:*** `02-variable-capture.png` -- Terminal output showing all four variables successfully resolved with correct values
+> ***Screenshot Placeholder:*** `05-nsg-name.png` -- Terminal output showing `NSG: nautilus-nsg`
 
 ---
 
-### Phase 2: NSG Diagnosis and SSH Validation
+### Phase 4: NSG Rule Enumeration and SSH Validation
 
-Enumerate all NSG rules (outbound and inbound) and validate SSH access simultaneously.
+List all outbound and inbound NSG rules on `nautilus-nsg` to identify any rule blocking traffic. Simultaneously open an SSH session into `nautilus-vm` via its public IP to confirm remote access is available.
 
 ```bash
 echo "=== OUTBOUND RULES ===" && \
@@ -184,23 +212,25 @@ echo "=== TESTING SSH ===" && \
 ssh -i /root/.ssh/id_rsa \
     -o StrictHostKeyChecking=no \
     -o ConnectTimeout=15 \
-    azureuser@$VM_PIP
+    azureuser@$NAUTILUS_PIP
 ```
 
-**NSG outbound rules observed (pre-fix):**
+**Outbound rules (culprit identified):**
 
 ```
+=== OUTBOUND RULES ===
 Priority    Name                   Access    DestPort
 ----------  ---------------------  --------  ----------
-200         Block-All-Outbound     Deny      *          <-- CULPRIT
+200         Block-All-Outbound     Deny      *
 65000       AllowVnetOutBound      Allow     *
 65001       AllowInternetOutBound  Allow     *
 65500       DenyAllOutBound        Deny      *
 ```
 
-**NSG inbound rules observed:**
+**Inbound rules (SSH access confirmed open):**
 
 ```
+=== INBOUND RULES ===
 Priority    Name                           Access    DestPort
 ----------  -----------------------------  --------  ----------
 100         Allow-SSH                      Allow     22
@@ -210,38 +240,60 @@ Priority    Name                           Access    DestPort
 65500       DenyAllInBound                 Deny      *
 ```
 
-> ***Screenshot Placeholder:*** `03-nsg-rules-pre-fix.png` -- Terminal output showing both outbound and inbound rule tables with `Block-All-Outbound` at priority 200 highlighted
+**SSH connection established:**
 
-**Connectivity validation inside `nautilus-vm` (pre-fix, confirms breakage):**
+```
+=== TESTING SSH ===
+Warning: Permanently added '20.121.33.102' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 6.8.0-1044-azure x86_64)
+...
+azureuser@nautilus-vm:~$
+```
+
+**Finding:** `Block-All-Outbound` at priority 200 is the offending rule. Inbound SSH on port 22 is permitted at priority 100, allowing the session to open via the public IP despite the outbound block.
+
+> ***Screenshot Placeholder:*** `06-nsg-rules-ssh.png` -- Terminal output showing both NSG rule tables followed by the Ubuntu 22.04 welcome banner and `azureuser@nautilus-vm:~$` prompt
+
+---
+
+### Phase 5: Pre-Fix Connectivity Confirmation
+
+From inside the active SSH session on `nautilus-vm`, confirm that outbound internet connectivity and package installation are broken. This establishes the documented baseline state before any remediation is applied.
 
 ```bash
-# Run from inside the SSH session
-ping -c 2 8.8.8.8
-sudo apt-get update 2>&1 | head -5
+ping -c 2 8.8.8.8 ; sudo apt-get update 2>&1 | head -5
 ```
 
-**Pre-fix output confirming the problem:**
+**Output confirming the broken state:**
 
 ```
-2 packets transmitted, 0 received, 100% packet loss
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+
+--- 8.8.8.8 ping statistics ---
+2 packets transmitted, 0 received, 100% packet loss, time 1046ms
 
 Ign:1 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
 Ign:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Ign:3 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Ign:4 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease
+Ign:1 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
 ```
 
-> ***Screenshot Placeholder:*** `04-pre-fix-connectivity-failure.png` -- Terminal output inside `nautilus-vm` showing `100% packet loss` on ping and `Ign` responses from `apt-get update`
+> ***Screenshot Placeholder:*** `07-pre-fix-broken-state.png` -- Terminal output from inside `nautilus-vm` showing `100% packet loss` on ICMP and all apt sources returning `Ign` (ignored), confirming complete outbound failure
 
-Exit the SSH session before applying the fix:
+Exit the SSH session to return to the `azure-client` shell:
 
 ```bash
 exit
 ```
 
+> ***Screenshot Placeholder:*** `08-exit-session.png` -- Terminal showing `logout`, `Connection to 20.121.33.102 closed.`, and prompt returning to `~ ->`
+
 ---
 
-### Phase 3: Remediation
+### Phase 6: Remediation
 
-Delete the offending NSG rule and immediately verify it has been removed.
+Delete the `Block-All-Outbound` rule from `nautilus-nsg`. Chain the deletion with an immediate re-listing of outbound rules to confirm the rule is gone before proceeding.
 
 ```bash
 az network nsg rule delete \
@@ -257,9 +309,10 @@ az network nsg rule list \
   --query "[?direction=='Outbound'].{Priority:priority, Name:name, Access:access, DestPort:destinationPortRange}"
 ```
 
-**Expected post-deletion outbound rule state:**
+**Output confirming successful deletion:**
 
 ```
+=== RULE DELETED -- VERIFYING ===
 Priority    Name                   Access    DestPort
 ----------  ---------------------  --------  ----------
 65000       AllowVnetOutBound      Allow     *
@@ -267,30 +320,75 @@ Priority    Name                   Access    DestPort
 65500       DenyAllOutBound        Deny      *
 ```
 
-> ***Screenshot Placeholder:*** `05-nsg-rule-deleted.png` -- Terminal output confirming `Block-All-Outbound` is absent from the outbound rule list, with only the three default rules remaining
+`Block-All-Outbound` is absent. Outbound traffic from `nautilus-vm` now reaches `AllowInternetOutBound` at priority 65001 and is permitted to all internet destinations.
 
-**What changed:** Traffic destined for the internet now falls through to `AllowInternetOutBound` at priority 65001, which permits all outbound connections. The blackhole is eliminated.
+> ***Screenshot Placeholder:*** `09-rule-deleted-verified.png` -- Terminal output showing `RULE DELETED -- VERIFYING` followed by the three-rule outbound table with `Block-All-Outbound` completely absent
 
 ---
 
-### Phase 4: Post-Fix Verification
+### Phase 7: Post-Fix Verification
 
-Run the complete verification suite in a single non-interactive SSH command. This tests internet reachability, DNS resolution, package list refresh, package installation, and binary execution in one operation.
+Re-enter `nautilus-vm` via a single non-interactive SSH command that chains all verification steps: ICMP reachability, package list refresh, package installation, and binary execution confirmation.
 
 ```bash
 ssh -i /root/.ssh/id_rsa \
     -o StrictHostKeyChecking=no \
-    azureuser@$VM_PIP \
+    azureuser@$NAUTILUS_PIP \
     "ping -c 4 8.8.8.8 && sudo apt-get update && sudo apt-get install -y curl && curl --version"
 ```
 
-> ***Screenshot Placeholder:*** `06-post-fix-ping-success.png` -- Terminal output showing `4 packets transmitted, 4 received, 0% packet loss` with sub-2ms round-trip times
+**ICMP reachability restored:**
 
-> ***Screenshot Placeholder:*** `07-apt-get-update-success.png` -- Terminal output showing all 42 package sources resolving with `Hit` and `Get` responses, fetching `44.0 MB` successfully
+```
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=114 time=1.74 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=114 time=2.25 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=114 time=1.78 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=114 time=1.65 ms
 
-> ***Screenshot Placeholder:*** `08-curl-install-success.png` -- Terminal output showing `curl` and `libcurl4` downloaded and installed at `7.81.0-1ubuntu1.23`
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.647/1.855/2.251/0.233 ms
+```
 
-> ***Screenshot Placeholder:*** `09-curl-version-confirmed.png` -- Terminal output showing `curl 7.81.0 (x86_64-pc-linux-gnu)` with full protocol and feature list confirming successful binary execution
+> ***Screenshot Placeholder:*** `10-post-fix-ping.png` -- Terminal output showing `4 packets transmitted, 4 received, 0% packet loss` with consistent sub-2ms round-trip times
+
+**Package list refresh restored:**
+
+```
+Hit:1 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+...
+Fetched 44.0 MB in 9s (4890 kB/s)
+Reading package lists... Done
+```
+
+> ***Screenshot Placeholder:*** `11-apt-get-update.png` -- Terminal output showing all 42 package sources returning `Hit` or `Get`, with `44.0 MB` fetched at `4890 kB/s` and `Reading package lists... Done`
+
+**Package installation restored:**
+
+```
+The following NEW packages will be installed:
+  curl
+The following packages will be upgraded:
+  libcurl4
+1 upgraded, 1 newly installed, 0 to remove and 31 not upgraded.
+Fetched 484 kB in 0s (18.0 MB/s)
+Setting up libcurl4:amd64 (7.81.0-1ubuntu1.23) ...
+Setting up curl (7.81.0-1ubuntu1.23) ...
+```
+
+> ***Screenshot Placeholder:*** `12-curl-installed.png` -- Terminal output showing `curl` and `libcurl4` fetched at `18.0 MB/s` and installed at version `7.81.0-1ubuntu1.23`
+
+**Binary execution confirmed:**
+
+```
+curl 7.81.0 (x86_64-pc-linux-gnu) libcurl/7.81.0 OpenSSL/3.0.2 zlib/1.2.11 brotli/1.0.9 zstd/1.4.8
+Release-Date: 2022-01-05
+Protocols: dict file ftp ftps gopher gophers http https imap imaps ldap ldaps mqtt pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp
+Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM NTLM_WB PSL SPNEGO SSL TLS-SRP UnixSockets zstd
+```
+
+> ***Screenshot Placeholder:*** `13-curl-version.png` -- Terminal output showing `curl 7.81.0 (x86_64-pc-linux-gnu)` version string with full protocol and feature list confirming successful binary execution
 
 ---
 
@@ -299,30 +397,28 @@ ssh -i /root/.ssh/id_rsa \
 | Test | Pre-Fix | Post-Fix |
 |---|---|---|
 | `ping 8.8.8.8` (4 packets) | `100% packet loss` | `0% packet loss`, avg `1.85ms` |
-| `apt-get update` | All sources `Ign` (ignored) | `44.0 MB` fetched in `9s` |
-| `apt-get install curl` | Failed (no connectivity) | `1 upgraded, 1 newly installed` |
-| `curl --version` | Command not found | `curl 7.81.0` confirmed |
-| SSH via private IP `10.0.0.4` | `Connection timed out` | N/A (public IP used) |
-| SSH via public IP `20.121.33.102` | Connected (inbound allowed) | Connected |
+| `apt-get update` | All sources `Ign` (ignored) | `44.0 MB` fetched in `9s` at `4890 kB/s` |
+| `apt-get install -y curl` | No outbound path | `1 upgraded, 1 newly installed` |
+| `curl --version` | Not installed | `curl 7.81.0` confirmed |
 
 ---
 
 ## Key Lessons
 
-**1. Capture all variables upfront in a single block.**
-Variable loss between separate terminal commands causes cascading failures. Setting `RG`, `NIC_NAME`, `NSG_NAME`, and `VM_PIP` in one atomic block eliminates this risk entirely.
+**1. NSG rule priority is absolute and linear.**
+Azure evaluates NSG rules in strict ascending priority order. A `Deny *` rule at priority 200 overrides every `Allow` rule at priority 65000 or higher without exception. When diagnosing connectivity failures, always list and sort NSG rules by priority before drawing any conclusions.
 
-**2. Always SSH via public IP, not private IP.**
-Private IP (`10.0.0.4`) is only reachable from within the same VNet. When the jump host is outside that VNet or is the lab shell itself, the private IP will always time out. Resolve the public IP first and use it exclusively.
+**2. Always target the public IP for SSH from outside the VNet.**
+The VM's private IP (`10.0.0.4`) is only routable within its own VNet. SSH sessions from the `azure-client` shell must use the public IP. Retrieving it via `az network public-ip list` before attempting any connection is a mandatory first step.
 
-**3. NSG rule priority is absolute and linear.**
-Lower priority number always wins. A `Deny *` rule at priority 200 overrides every `Allow` rule at 65000+, regardless of how permissive those rules are. Always sort and inspect rules by priority when diagnosing connectivity.
+**3. Confirm the broken state before applying any fix.**
+Running `ping` and `apt-get update` inside the VM before remediation produces concrete, timestamped evidence of the failure. This documents the incident accurately and verifies the fix is targeting the correct symptom.
 
-**4. Blocked outbound traffic also breaks SSH response paths.**
-Even when inbound port 22 is explicitly allowed, a blanket outbound deny prevents TCP response packets from leaving the VM, making SSH appear broken from the inbound side when the real problem is egress.
+**4. Chain delete and verify atomically with `&&`.**
+Joining `az network nsg rule delete` with a follow-up `az network nsg rule list` in a single `&&` chain ensures the deletion is confirmed immediately. There is no risk of acting on stale state or missing a failed deletion.
 
-**5. Non-interactive SSH for verification is faster and cleaner.**
-Chaining verification commands as a single SSH argument (`ssh user@host "cmd1 && cmd2 && cmd3"`) eliminates interactive session overhead and produces a single, clean output block suitable for documentation.
+**5. Use non-interactive SSH for post-fix verification.**
+Passing all verification commands as a single SSH argument eliminates interactive session overhead and produces one clean, unbroken output block that fully documents the restored state.
 
 ---
 
@@ -331,14 +427,13 @@ Chaining verification commands as a single SSH argument (`ssh user@host "cmd1 &&
 ```
 networking/
   vm-egress-diagnostics/
-    README.md                  # This document
-    datacenter-vm/             # Lab 1: datacenter-vm connectivity remediation
-    nautilus-vm/               # Lab 2: nautilus-vm connectivity remediation (this lab)
+    nautilus-vm/
+      README.md    # This document
 ```
 
 ---
 
-*Maintained by the Nautilus DevOps Team | Region: East US | Classification: Runbook*
+*Nautilus DevOps Team | Region: East US | Classification: Incident Runbook*
 
 
 
