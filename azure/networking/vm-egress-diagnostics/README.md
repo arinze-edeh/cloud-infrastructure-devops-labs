@@ -99,8 +99,6 @@ az account set --subscription $(az account list --query "[0].id" --output tsv)
 az configure --defaults location=eastus
 ```
 
-> ***Screenshot Placeholder:*** `01-account-set-configure.png` -- Terminal showing both commands executing cleanly with the prompt returning to `~ ->`
-
 ---
 
 ### Phase 1: Resource Group Resolution
@@ -117,8 +115,6 @@ echo "Resource Group: $RG"
 ```
 Resource Group: KML_RG_MAIN-ABFB64E535324D83
 ```
-
-> ***Screenshot Placeholder:*** `02-resource-group.png` -- Terminal output showing `Resource Group: KML_RG_MAIN-ABFB64E535324D83`
 
 ---
 
@@ -139,8 +135,6 @@ echo "nautilus-vm Public IP: $NAUTILUS_PIP"
 ```
 nautilus-vm Public IP: 20.121.33.102
 ```
-
-> ***Screenshot Placeholder:*** `03-public-ip.png` -- Terminal output showing `nautilus-vm Public IP: 20.121.33.102`
 
 ---
 
@@ -165,8 +159,6 @@ echo "NIC: $NIC_NAME"
 NIC: nautilus-vmVMNic
 ```
 
-> ***Screenshot Placeholder:*** `04-nic-name.png` -- Terminal output showing `NIC: nautilus-vmVMNic`
-
 **Capture the NSG name:**
 
 ```bash
@@ -184,7 +176,9 @@ echo "NSG: $NSG_NAME"
 NSG: nautilus-nsg
 ```
 
-> ***Screenshot Placeholder:*** `05-nsg-name.png` -- Terminal output showing `NSG: nautilus-nsg`
+> ***Screenshot:***
+
+<img width="1031" height="711" alt="image" src="https://github.com/user-attachments/assets/9b83a617-b655-4551-addc-3302f89144f4" />
 
 ---
 
@@ -423,7 +417,7 @@ Passing all verification commands as a single SSH argument eliminates interactiv
 
 
 
-<img width="1031" height="711" alt="image" src="https://github.com/user-attachments/assets/9b83a617-b655-4551-addc-3302f89144f4" />
+
 <img width="1035" height="756" alt="image" src="https://github.com/user-attachments/assets/d80b5406-79e3-4314-9636-2784f42bbb11" />
 <img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/b74b9fe2-bb83-4c61-b34e-c4bc328c5923" />
 <img width="1028" height="862" alt="image" src="https://github.com/user-attachments/assets/cf0d47bb-2644-417b-93ba-77ac1f2c4b5a" />
