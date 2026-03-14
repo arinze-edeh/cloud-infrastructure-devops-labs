@@ -319,8 +319,11 @@ aws s3api get-bucket-website --bucket xfusion-web-27751
 
 ---
 
-**[SCREENSHOT PLACEHOLDER]**
-> *Insert screenshot of `get-bucket-website` returning the `IndexDocument` and `ErrorDocument` configuration.*
+**SCREENSHOT**
+
+<img width="1038" height="792" alt="image" src="https://github.com/user-attachments/assets/2339fefb-dcea-4858-9af2-b493a5a639f9" />
+
+> *Screenshot of `get-bucket-website` returning the `IndexDocument` and `ErrorDocument` configuration.*
 
 ---
 
@@ -571,7 +574,7 @@ This configuration grants **unrestricted public read access** (`Principal: *`) t
 
 
 
-<img width="1038" height="792" alt="image" src="https://github.com/user-attachments/assets/2339fefb-dcea-4858-9af2-b493a5a639f9" />
+
 <img width="1031" height="739" alt="image" src="https://github.com/user-attachments/assets/4e7812b7-4610-4c1a-a070-486b7219e0ea" />
 <img width="1036" height="598" alt="image" src="https://github.com/user-attachments/assets/7a73bb77-98eb-4bf3-a7b5-d856d880cbd7" />
 <img width="1033" height="783" alt="image" src="https://github.com/user-attachments/assets/cf365cd0-1ae8-46e9-83aa-2a8bf6b857ab" />
