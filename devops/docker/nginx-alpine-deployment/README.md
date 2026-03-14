@@ -81,7 +81,7 @@ tony@stapp01's password:
 [tony@stapp01 ~]$
 ```
 
-> **Screenshot: Terminal showing successful SSH login with prompt [tony@stapp01 ~]$**
+> **Screenshot: Successful SSH login to stapp01**
 
 
 ---
@@ -117,7 +117,7 @@ Status: Downloaded newer image for nginx:alpine
 docker.io/library/nginx:alpine
 ```
 
-> **Screenshot: Terminal showing all image layers pulled with Status: Downloaded newer image for nginx:alpine**
+> **Screenshot: nginx:alpine image pull complete**
 
 
 ---
@@ -147,7 +147,7 @@ b2712254a7e63d80f11ea33ad2aa45a364894ec75078d9b028e2f3b30efebf0e
 
 The returned string is the full container ID confirming the container was created and started successfully.
 
-> **Screenshot: Terminal showing the docker run command with the returned container ID**
+> **Screenshot: Container nginx_1 created and started**
 
 
 ---
@@ -167,7 +167,7 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS  
 b2712254a7e6   nginx:alpine   "/docker-entrypoint..."   47 seconds ago   Up 46 seconds   80/tcp    nginx_1
 ```
 
-> **Screenshot: Terminal showing docker ps output with nginx_1 listed as Up and running**
+> **Screenshot: docker ps confirming nginx_1 running state**
 
 
 ---
