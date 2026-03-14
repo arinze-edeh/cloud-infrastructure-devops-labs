@@ -172,7 +172,7 @@ b2712254a7e6   nginx:alpine   "/docker-entrypoint..."   47 seconds ago   Up 46 s
 
 > **Screenshot: docker ps confirming nginx_1 running state**
 
-
+<img width="1031" height="795" alt="Image" src="https://github.com/user-attachments/assets/1720baaf-b987-476f-a063-88e04a8312a2" />
 
 ---
 
