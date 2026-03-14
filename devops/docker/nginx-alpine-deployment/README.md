@@ -1,4 +1,4 @@
-# Containerized Nginx Deployment on Alpine Linux
+# Containerized Nginx Deployment with Alpine-Based Image
 
 > **Category:** Docker / Container Lifecycle Management
 > **Difficulty:** Foundational
@@ -189,7 +189,7 @@ All of the following must be true before the task is marked complete:
 ## Key Concepts
 
 **Why `-d` (detached mode)?**
-Running without `-d` ties the container process to your terminal session. If the session ends, the container stops. Detached mode ensures the container continues running independently, satisfying the `running` state requirement.
+`-d` runs the container in the background and immediately returns control of the terminal, which is the standard way to keep the shell free while the container continues running. It is the correct approach for any deployment where the container is expected to persist beyond the current terminal interaction.
 
 **Why `nginx:alpine`?**
 The `alpine` tag refers to an image built on Alpine Linux, a minimal base image. It results in a significantly smaller container footprint compared to the default `nginx:latest` image, making it preferred for lightweight deployments and testing environments.
@@ -198,5 +198,3 @@ The `alpine` tag refers to an image built on Alpine Linux, a minimal base image.
 The Jump Host acts as a hardened bastion node providing the only authorized entry point into the Stork DC network. Application servers are not directly internet-accessible, enforcing network segmentation and access control.
 
 ---
-
-
