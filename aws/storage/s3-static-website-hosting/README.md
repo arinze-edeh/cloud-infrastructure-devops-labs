@@ -26,7 +26,6 @@
 - [Outcome](#outcome)
 - [Troubleshooting Reference](#troubleshooting-reference)
 - [Security Considerations](#security-considerations)
-- [Repository Placement](#repository-placement)
 
 ---
 
