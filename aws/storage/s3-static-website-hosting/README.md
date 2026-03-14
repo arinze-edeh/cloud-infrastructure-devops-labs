@@ -579,14 +579,3 @@ This configuration grants **unrestricted public read access** (`Principal: *`) t
 - **Review public access settings regularly** using AWS Config or AWS Security Hub to detect unintended configuration drift.
 
 ---
-
-
-
-
-
-<img width="1031" height="739" alt="image" src="https://github.com/user-attachments/assets/4e7812b7-4610-4c1a-a070-486b7219e0ea" />
-<img width="1036" height="598" alt="image" src="https://github.com/user-attachments/assets/7a73bb77-98eb-4bf3-a7b5-d856d880cbd7" />
-
-
-<img width="1035" height="812" alt="image" src="https://github.com/user-attachments/assets/20800c9b-f9eb-4ca4-971a-7d291e3df0b0" />
-
