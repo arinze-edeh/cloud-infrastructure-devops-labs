@@ -120,6 +120,7 @@ docker.io/library/nginx:alpine
 
 > **Screenshot: nginx:alpine image pull complete**
 
+<img width="1031" height="705" alt="Image" src="https://github.com/user-attachments/assets/d24b45fa-1141-48fa-adcf-4d5290da8905" />
 
 ---
 
