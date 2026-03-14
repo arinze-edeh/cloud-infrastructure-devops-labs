@@ -83,6 +83,7 @@ tony@stapp01's password:
 
 > **Screenshot: Successful SSH login to stapp01**
 
+<img width="1033" height="467" alt="Image" src="https://github.com/user-attachments/assets/ee53632d-2bca-438e-af65-b6ed1ac1173a" />
 
 ---
 
