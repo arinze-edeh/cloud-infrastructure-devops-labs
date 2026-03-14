@@ -24,7 +24,6 @@
   * [Phase 7: Post-Fix Verification](#phase-7-post-fix-verification)
 * [Verification Results](#verification-results)
 * [Key Lessons](#key-lessons)
-* [Repository Structure](#repository-structure)
 
 ---
 
@@ -421,19 +420,6 @@ Joining `az network nsg rule delete` with a follow-up `az network nsg rule list`
 Passing all verification commands as a single SSH argument eliminates interactive session overhead and produces one clean, unbroken output block that fully documents the restored state.
 
 ---
-
-## Repository Structure
-
-```
-networking/
-  vm-egress-diagnostics/
-    nautilus-vm/
-      README.md    # This document
-```
-
----
-
-*Nautilus DevOps Team | Region: East US | Classification: Incident Runbook*
 
 
 
