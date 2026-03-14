@@ -157,8 +157,10 @@ ls -la /root/index.html
 
 ---
 
-**[SCREENSHOT PLACEHOLDER]**
-> *Insert screenshot of terminal showing all four pre-flight commands executing successfully with expected outputs.*
+**SCREENSHOT**
+<img width="1028" height="529" alt="image" src="https://github.com/user-attachments/assets/8eebf5dc-f596-48b2-95c3-2653ab6e3abb" />
+
+> *Screenshot of terminal showing all four pre-flight commands executing successfully with expected outputs.*
 
 ---
 
@@ -562,7 +564,7 @@ This configuration grants **unrestricted public read access** (`Principal: *`) t
 ---
 
 
-<img width="1028" height="529" alt="image" src="https://github.com/user-attachments/assets/8eebf5dc-f596-48b2-95c3-2653ab6e3abb" />
+
 <img width="1027" height="694" alt="image" src="https://github.com/user-attachments/assets/7be07ffa-332f-4339-9364-4b98f1ef5421" />
 <img width="1030" height="755" alt="image" src="https://github.com/user-attachments/assets/c2f0d0f1-af8d-45b9-abb6-b924df96afc0" />
 <img width="1038" height="792" alt="image" src="https://github.com/user-attachments/assets/2339fefb-dcea-4858-9af2-b493a5a639f9" />
