@@ -151,6 +151,7 @@ The returned string is the full container ID confirming the container was create
 
 > **Screenshot: Container nginx_1 created and started**
 
+<img width="1028" height="760" alt="Image" src="https://github.com/user-attachments/assets/0446d7a4-c914-4405-808e-cdf5baadbd2d" />
 
 ---
 
@@ -170,6 +171,7 @@ b2712254a7e6   nginx:alpine   "/docker-entrypoint..."   47 seconds ago   Up 46 s
 ```
 
 > **Screenshot: docker ps confirming nginx_1 running state**
+
 
 
 ---
