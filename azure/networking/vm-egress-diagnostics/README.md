@@ -286,6 +286,7 @@ exit
 <img width="1030" height="671" alt="image" src="https://github.com/user-attachments/assets/2d60dab8-45e7-4b6d-8dca-b2862f409e3b" />
 
 >Terminal output from inside `nautilus-vm` showing `100% packet loss` on ICMP and all apt sources returning `Ign` (ignored), confirming complete outbound failure
+
 >Terminal showing `logout`, `Connection to 20.121.33.102 closed.`, and prompt returning to `~ ->`
 
 ---
