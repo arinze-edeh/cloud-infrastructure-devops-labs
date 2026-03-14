@@ -354,8 +354,6 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 rtt min/avg/max/mdev = 1.647/1.855/2.251/0.233 ms
 ```
 
-> ***Screenshot Placeholder:*** `10-post-fix-ping.png` -- Terminal output showing `4 packets transmitted, 4 received, 0% packet loss` with consistent sub-2ms round-trip times
-
 **Package list refresh restored:**
 
 ```
@@ -365,8 +363,6 @@ Get:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
 Fetched 44.0 MB in 9s (4890 kB/s)
 Reading package lists... Done
 ```
-
-> ***Screenshot Placeholder:*** `11-apt-get-update.png` -- Terminal output showing all 42 package sources returning `Hit` or `Get`, with `44.0 MB` fetched at `4890 kB/s` and `Reading package lists... Done`
 
 **Package installation restored:**
 
@@ -381,8 +377,6 @@ Setting up libcurl4:amd64 (7.81.0-1ubuntu1.23) ...
 Setting up curl (7.81.0-1ubuntu1.23) ...
 ```
 
-> ***Screenshot Placeholder:*** `12-curl-installed.png` -- Terminal output showing `curl` and `libcurl4` fetched at `18.0 MB/s` and installed at version `7.81.0-1ubuntu1.23`
-
 **Binary execution confirmed:**
 
 ```
@@ -392,7 +386,16 @@ Protocols: dict file ftp ftps gopher gophers http https imap imaps ldap ldaps mq
 Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM NTLM_WB PSL SPNEGO SSL TLS-SRP UnixSockets zstd
 ```
 
-> ***Screenshot Placeholder:*** `13-curl-version.png` -- Terminal output showing `curl 7.81.0 (x86_64-pc-linux-gnu)` version string with full protocol and feature list confirming successful binary execution
+> ***Screenshot:***
+
+
+>Terminal output showing `4 packets transmitted, 4 received, 0% packet loss` with consistent sub-2ms round-trip times
+
+>Terminal output showing all 42 package sources returning `Hit` or `Get`, with `44.0 MB` fetched at `4890 kB/s` and `Reading package lists... Done`
+
+>Terminal output showing `curl` and `libcurl4` fetched at `18.0 MB/s` and installed at version `7.81.0-1ubuntu1.23`
+
+>Terminal output showing `curl 7.81.0 (x86_64-pc-linux-gnu)` version string with full protocol and feature list confirming successful binary execution
 
 ---
 
