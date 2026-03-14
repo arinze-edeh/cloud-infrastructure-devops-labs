@@ -265,8 +265,11 @@ aws s3api get-public-access-block --bucket xfusion-web-27751
 
 ---
 
-**[SCREENSHOT PLACEHOLDER]**
-> *Insert screenshot showing `get-public-access-block` output with all four configuration values set to `false`.*
+**SCREENSHOT**
+
+<img width="1030" height="755" alt="image" src="https://github.com/user-attachments/assets/c2f0d0f1-af8d-45b9-abb6-b924df96afc0" />
+
+> *Screenshot showing `get-public-access-block` output with all four configuration values set to `false`.*
 
 ---
 
@@ -568,7 +571,6 @@ This configuration grants **unrestricted public read access** (`Principal: *`) t
 
 
 
-<img width="1030" height="755" alt="image" src="https://github.com/user-attachments/assets/c2f0d0f1-af8d-45b9-abb6-b924df96afc0" />
 <img width="1038" height="792" alt="image" src="https://github.com/user-attachments/assets/2339fefb-dcea-4858-9af2-b493a5a639f9" />
 <img width="1031" height="739" alt="image" src="https://github.com/user-attachments/assets/4e7812b7-4610-4c1a-a070-486b7219e0ea" />
 <img width="1036" height="598" alt="image" src="https://github.com/user-attachments/assets/7a73bb77-98eb-4bf3-a7b5-d856d880cbd7" />
