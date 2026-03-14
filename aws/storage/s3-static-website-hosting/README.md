@@ -405,8 +405,11 @@ aws s3api get-bucket-policy --bucket xfusion-web-27751
 
 ---
 
-**[SCREENSHOT PLACEHOLDER]**
-> *Insert screenshot showing `get-bucket-policy` returning the full policy JSON confirming `Effect: Allow`, `Principal: *`, and the correct `Resource` ARN.*
+**SCREENSHOT**
+
+<img width="1033" height="783" alt="image" src="https://github.com/user-attachments/assets/cf365cd0-1ae8-46e9-83aa-2a8bf6b857ab" />
+
+> *Screenshot showing `get-bucket-policy` returning the full policy JSON confirming `Effect: Allow`, `Principal: *`, and the correct `Resource` ARN.*
 
 ---
 
@@ -577,7 +580,7 @@ This configuration grants **unrestricted public read access** (`Principal: *`) t
 
 <img width="1031" height="739" alt="image" src="https://github.com/user-attachments/assets/4e7812b7-4610-4c1a-a070-486b7219e0ea" />
 <img width="1036" height="598" alt="image" src="https://github.com/user-attachments/assets/7a73bb77-98eb-4bf3-a7b5-d856d880cbd7" />
-<img width="1033" height="783" alt="image" src="https://github.com/user-attachments/assets/cf365cd0-1ae8-46e9-83aa-2a8bf6b857ab" />
+
 <img width="1036" height="613" alt="image" src="https://github.com/user-attachments/assets/0d8be373-fed5-4a85-a0dc-a39fc2f75fa1" />
 <img width="1035" height="812" alt="image" src="https://github.com/user-attachments/assets/20800c9b-f9eb-4ca4-971a-7d291e3df0b0" />
 <img width="1031" height="316" alt="image" src="https://github.com/user-attachments/assets/22616771-06af-4c10-b0eb-4d600bf7432f" />
