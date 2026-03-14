@@ -219,8 +219,10 @@ Any non-zero exit code indicates a failure. Do not proceed until this returns `0
 
 ---
 
-**[SCREENSHOT PLACEHOLDER]**
-> *Insert screenshot showing `create-bucket` returning the Location field and `head-bucket` confirming `BucketRegion: us-east-1` with exit code `0`.*
+**SCREENSHOT**
+<img width="1027" height="694" alt="image" src="https://github.com/user-attachments/assets/7be07ffa-332f-4339-9364-4b98f1ef5421" />
+
+> *Screenshot showing `create-bucket` returning the Location field and `head-bucket` confirming `BucketRegion: us-east-1` with exit code `0`.*
 
 ---
 
@@ -565,7 +567,7 @@ This configuration grants **unrestricted public read access** (`Principal: *`) t
 
 
 
-<img width="1027" height="694" alt="image" src="https://github.com/user-attachments/assets/7be07ffa-332f-4339-9364-4b98f1ef5421" />
+
 <img width="1030" height="755" alt="image" src="https://github.com/user-attachments/assets/c2f0d0f1-af8d-45b9-abb6-b924df96afc0" />
 <img width="1038" height="792" alt="image" src="https://github.com/user-attachments/assets/2339fefb-dcea-4858-9af2-b493a5a639f9" />
 <img width="1031" height="739" alt="image" src="https://github.com/user-attachments/assets/4e7812b7-4610-4c1a-a070-486b7219e0ea" />
