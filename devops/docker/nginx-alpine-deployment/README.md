@@ -190,17 +190,47 @@ All of the following must be true before the task is marked complete:
 
 ---
 
+## Lessons Learned
+ 
+**Always verify your active shell prompt before executing commands.**
+Running Docker commands on the wrong host (e.g., the Jump Host instead of the target application server) produces a `command not found` error that can be misdiagnosed as a Docker installation issue. The prompt `[tony@stapp01 ~]$` must be confirmed before every phase.
+ 
+**The Jump Host is a gateway, not a working node.**
+The Jump Host exists solely to broker SSH access into the datacenter. It does not run application workloads and does not have Docker installed. Any task requiring container operations must be performed on the designated application server after establishing an SSH session through the Jump Host.
+ 
+**Detached mode is non-negotiable for state validation tasks.**
+Any lab or production task that requires a container to be in a `running` state at time of verification must use the `-d` flag. Foreground execution ties the process to the terminal and will not satisfy a running state check performed by an external validator.
+ 
+---
+ 
+## Best Practices
+ 
+**Confirm the target host immediately after SSH.**
+Before running any command, verify the shell prompt explicitly shows the correct hostname and user. This single habit prevents the most common class of errors in multi-server environments.
+ 
+**Always use explicit image tags.**
+Avoid using `latest` in any deployment, even in lab environments. Specifying `nginx:alpine` pins the image to a known, reproducible base and makes the deployment auditable. `latest` is a moving target that introduces unpredictable behavior across environments.
+ 
+**Verify before submitting.**
+Run `sudo docker ps` and visually confirm all four fields -- Container ID, Image, Status, and Name -- before marking any task complete. A container that was created but immediately exited will not appear in `docker ps` output and will fail validation silently.
+ 
+**Use `sudo docker inspect` for deep state verification.**
+`docker ps` shows surface-level running state. For production-grade confirmation, `sudo docker inspect nginx_1` exposes the full container state including `"Running": true`, restart policy, network configuration, and mount points. Build this habit early.
+ 
+**Name containers deliberately and consistently.**
+Container names should be descriptive and match the naming convention specified in the task or team standard. Avoid relying on Docker-generated random names in any environment where containers need to be referenced, restarted, or audited by name.
+ 
+---
+ 
 ## Key Concepts
-
+ 
 **Why `-d` (detached mode)?**
 `-d` runs the container in the background and immediately returns control of the terminal, which is the standard way to keep the shell free while the container continues running. It is the correct approach for any deployment where the container is expected to persist beyond the current terminal interaction.
-
+ 
 **Why `nginx:alpine`?**
 The `alpine` tag refers to an image built on Alpine Linux, a minimal base image. It results in a significantly smaller container footprint compared to the default `nginx:latest` image, making it preferred for lightweight deployments and testing environments.
-
+ 
 **Why SSH through the Jump Host?**
 The Jump Host acts as a hardened bastion node providing the only authorized entry point into the Stork DC network. Application servers are not directly internet-accessible, enforcing network segmentation and access control.
-
+ 
 ---
-
-
