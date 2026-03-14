@@ -389,6 +389,10 @@ Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerbe
 > ***Screenshot:***
 
 
+<img width="1029" height="856" alt="image" src="https://github.com/user-attachments/assets/6931d647-5f26-4311-be53-2c7d323bdacb" />
+<img width="1032" height="857" alt="image" src="https://github.com/user-attachments/assets/ea3b7a5b-46fe-454b-946f-b0e9273e5e5d" />
+<img width="1031" height="869" alt="image" src="https://github.com/user-attachments/assets/c69d18bf-ad23-4847-889e-d3adbb41a431" />
+
 >Terminal output showing `4 packets transmitted, 4 received, 0% packet loss` with consistent sub-2ms round-trip times
 
 >Terminal output showing all 42 package sources returning `Hit` or `Get`, with `44.0 MB` fetched at `4890 kB/s` and `Reading package lists... Done`
@@ -433,6 +437,3 @@ Passing all verification commands as a single SSH argument eliminates interactiv
 
 
 
-<img width="1029" height="856" alt="image" src="https://github.com/user-attachments/assets/6931d647-5f26-4311-be53-2c7d323bdacb" />
-<img width="1032" height="857" alt="image" src="https://github.com/user-attachments/assets/ea3b7a5b-46fe-454b-946f-b0e9273e5e5d" />
-<img width="1031" height="869" alt="image" src="https://github.com/user-attachments/assets/c69d18bf-ad23-4847-889e-d3adbb41a431" />
