@@ -18,6 +18,8 @@
   - [Phase 3: Run the Container](#phase-3-run-the-container)
   - [Phase 4: Verify Container State](#phase-4-verify-container-state)
 - [Validation Criteria](#validation-criteria)
+- [Lessons Learned](#lessons-learned)
+- [Best Practices](#best-practices)
 - [Key Concepts](#key-concepts)
 
 ---
