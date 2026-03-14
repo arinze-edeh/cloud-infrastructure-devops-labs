@@ -198,3 +198,5 @@ The `alpine` tag refers to an image built on Alpine Linux, a minimal base image.
 The Jump Host acts as a hardened bastion node providing the only authorized entry point into the Stork DC network. Application servers are not directly internet-accessible, enforcing network segmentation and access control.
 
 ---
+
+
