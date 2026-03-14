@@ -322,7 +322,11 @@ Priority    Name                   Access    DestPort
 
 `Block-All-Outbound` is absent. Outbound traffic from `nautilus-vm` now reaches `AllowInternetOutBound` at priority 65001 and is permitted to all internet destinations.
 
-> ***Screenshot Placeholder:*** `09-rule-deleted-verified.png` -- Terminal output showing `RULE DELETED -- VERIFYING` followed by the three-rule outbound table with `Block-All-Outbound` completely absent
+> ***Screenshot:*** 
+
+<img width="1030" height="671" alt="image" src="https://github.com/user-attachments/assets/2d60dab8-45e7-4b6d-8dca-b2862f409e3b" />
+
+>Terminal output showing `RULE DELETED -- VERIFYING` followed by the three-rule outbound table with `Block-All-Outbound` completely absent
 
 ---
 
