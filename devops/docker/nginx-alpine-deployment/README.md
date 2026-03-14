@@ -81,8 +81,8 @@ tony@stapp01's password:
 [tony@stapp01 ~]$
 ```
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal showing successful SSH login with prompt [tony@stapp01 ~]$ ]`
+> **Screenshot: Terminal showing successful SSH login with prompt [tony@stapp01 ~]$**
+
 
 ---
 
