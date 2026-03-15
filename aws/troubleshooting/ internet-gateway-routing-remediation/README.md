@@ -473,8 +473,10 @@ aws ec2 describe-subnets \
 
 **Issue found.** `MapPublicIpOnLaunch` is `False`. New instances launched in this subnet will not automatically receive a public IP address, which misclassifies it as a private subnet.
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase4-step4.1-subnet-public-ip-false.png`
+> **SCREENSHOT**
+
+<img width="1033" height="691" alt="Image" src="https://github.com/user-attachments/assets/44c88a70-b027-4005-a52c-05262bc211d1" />
+
 > *Shows: Subnet describe table with `MapPublicIpOnLaunch` column showing `False`*
 
 ---
@@ -930,11 +932,8 @@ All resource IDs were collected and verified before any change was made. This pr
 
 
 
-<img width="1027" height="528" alt="Image" src="https://github.com/user-attachments/assets/aea25ee7-c39a-431f-9759-b103f7e18515" />
 
-<img width="1027" height="829" alt="Image" src="https://github.com/user-attachments/assets/2f0e8e29-0f39-42d8-a1a7-1bce2c7bf9d8" />
 
-<img width="1033" height="691" alt="Image" src="https://github.com/user-attachments/assets/44c88a70-b027-4005-a52c-05262bc211d1" />
 <img width="1035" height="617" alt="Image" src="https://github.com/user-attachments/assets/7b7cb12f-ec05-4fc4-b1dc-1c8de6d5a588" />
 <img width="1030" height="847" alt="Image" src="https://github.com/user-attachments/assets/171b6bf6-e3ab-4728-99a8-26e14b1f2bb3" />
 <img width="1035" height="825" alt="Image" src="https://github.com/user-attachments/assets/0b0e813d-effb-4186-9bda-8296cf066165" />
