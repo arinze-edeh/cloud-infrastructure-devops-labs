@@ -98,7 +98,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 
 **Enter the password when prompted:**
 ```
-steve@stapp02's password: Am3ric@
+steve@stapp02's password: 
 ```
 
 **Expected Output:**
@@ -335,7 +335,7 @@ The ED25519 fingerprint warning is a standard SSH security prompt, not an indica
 ```bash
 # Phase 1: Connect to App Server 2 from jump host
 ssh steve@stapp02
-# Password: Am3ric@
+# Password: 
 
 # Phase 2: Verify source file on Docker host
 ls -lh /tmp/nautilus.txt.gpg
