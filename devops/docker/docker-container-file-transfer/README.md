@@ -162,7 +162,7 @@ sudo docker ps
 
 **Enter sudo password when prompted:**
 ```
-[sudo] password for steve: Am3ric@
+[sudo] password for steve: 
 ```
 
 **Expected Output:**
@@ -183,8 +183,9 @@ b197803ab7e2   ubuntu   "/bin/bash"   11 minutes ago   Up 11 minutes            
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> *Screenshot 3: Terminal output of `sudo docker ps` showing container `ubuntu_latest` with status `Up 11 minutes` and container ID `b197803ab7e2`.*
+>**SCREENSHOT: Terminal output of `sudo docker ps` showing container `ubuntu_latest` with status `Up 11 minutes` and container ID `b197803ab7e2`.**
+
+<img width="1029" height="584" alt="Image" src="https://github.com/user-attachments/assets/760ebf8c-a461-4cc2-8676-24db7e38003b" />
 
 ---
 
@@ -214,8 +215,9 @@ Successfully copied 2.05kB to ubuntu_latest:/tmp/
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> *Screenshot 4: Terminal showing the `docker cp` command and the `Successfully copied 2.05kB to ubuntu_latest:/tmp/` confirmation message.*
+>**SCREENSHOT: Terminal showing the `docker cp` command and the `Successfully copied 2.05kB to ubuntu_latest:/tmp/` confirmation message.**
+
+<img width="1032" height="655" alt="Image" src="https://github.com/user-attachments/assets/d64771fd-a6ab-49f0-beac-764fb918fc97" />
 
 ---
 
@@ -352,14 +354,3 @@ sudo docker exec ubuntu_latest md5sum /tmp/nautilus.txt.gpg
 ```
 
 ---
-
-
-
-
-
-<img width="1029" height="584" alt="Image" src="https://github.com/user-attachments/assets/760ebf8c-a461-4cc2-8676-24db7e38003b" />
-
-<img width="1032" height="655" alt="Image" src="https://github.com/user-attachments/assets/d64771fd-a6ab-49f0-beac-764fb918fc97" />
-
-
-
