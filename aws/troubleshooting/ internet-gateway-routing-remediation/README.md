@@ -438,8 +438,10 @@ aws ec2 describe-route-tables \
 
 The `0.0.0.0/0` route pointing to `igw-00848032487db327d` was auto-populated when the IGW was attached. No manual route creation was required.
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase3-step3.2-route-table-verified.png`
+> **SCREENSHOT**
+
+<img width="1019" height="841" alt="Image" src="https://github.com/user-attachments/assets/7a93064d-fc69-4b26-aa9e-41ff0b919152" />
+
 > *Shows: Route table query output with both routes active -- `10.0.0.0/16` to local and `0.0.0.0/0` to `igw-00848032487db327d`*
 
 ---
@@ -931,7 +933,7 @@ All resource IDs were collected and verified before any change was made. This pr
 <img width="1027" height="528" alt="Image" src="https://github.com/user-attachments/assets/aea25ee7-c39a-431f-9759-b103f7e18515" />
 
 <img width="1027" height="829" alt="Image" src="https://github.com/user-attachments/assets/2f0e8e29-0f39-42d8-a1a7-1bce2c7bf9d8" />
-<img width="1019" height="841" alt="Image" src="https://github.com/user-attachments/assets/7a93064d-fc69-4b26-aa9e-41ff0b919152" />
+
 <img width="1033" height="691" alt="Image" src="https://github.com/user-attachments/assets/44c88a70-b027-4005-a52c-05262bc211d1" />
 <img width="1035" height="617" alt="Image" src="https://github.com/user-attachments/assets/7b7cb12f-ec05-4fc4-b1dc-1c8de6d5a588" />
 <img width="1030" height="847" alt="Image" src="https://github.com/user-attachments/assets/171b6bf6-e3ab-4728-99a8-26e14b1f2bb3" />
