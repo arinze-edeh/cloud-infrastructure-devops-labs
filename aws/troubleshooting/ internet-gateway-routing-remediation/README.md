@@ -387,8 +387,10 @@ aws ec2 describe-internet-gateways \
 +------------+-------------------------+
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase2-step2.3-igw-attached-verified.png`
+> **SCREENSHOT**
+
+<img width="1033" height="773" alt="Image" src="https://github.com/user-attachments/assets/a672048b-41af-4c0f-9219-238f3deb49eb" />
+
 > *Shows: IGW variable set, `attach-internet-gateway` command with no error output, and verification table showing state `available` with `vpc-09eed66dedff99616`*
 
 ---
@@ -927,7 +929,7 @@ All resource IDs were collected and verified before any change was made. This pr
 
 
 <img width="1027" height="528" alt="Image" src="https://github.com/user-attachments/assets/aea25ee7-c39a-431f-9759-b103f7e18515" />
-<img width="1033" height="773" alt="Image" src="https://github.com/user-attachments/assets/a672048b-41af-4c0f-9219-238f3deb49eb" />
+
 <img width="1027" height="829" alt="Image" src="https://github.com/user-attachments/assets/2f0e8e29-0f39-42d8-a1a7-1bce2c7bf9d8" />
 <img width="1019" height="841" alt="Image" src="https://github.com/user-attachments/assets/7a93064d-fc69-4b26-aa9e-41ff0b919152" />
 <img width="1033" height="691" alt="Image" src="https://github.com/user-attachments/assets/44c88a70-b027-4005-a52c-05262bc211d1" />
