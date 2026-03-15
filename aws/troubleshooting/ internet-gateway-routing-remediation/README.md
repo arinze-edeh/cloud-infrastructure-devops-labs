@@ -1,4 +1,4 @@
-# Internet Gateway Routing Remediation
+# VPC Internet Egress Restoration via Internet Gateway Attachment and Subnet Reachability Remediation
 
 ### Restoring Public Internet Access to an EC2-Hosted Nginx Application via VPC Internet Gateway Attachment
 
