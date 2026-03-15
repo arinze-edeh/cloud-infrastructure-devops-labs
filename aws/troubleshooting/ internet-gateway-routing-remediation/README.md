@@ -259,8 +259,9 @@ Subnet ID   : subnet-07d943b6368f60dd6
 Public IP   : 44.211.138.65
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase1-step1.2-ec2-details.png`
+> **SCREENSHOT**
+<img width="1031" height="866" alt="Image" src="https://github.com/user-attachments/assets/825b2644-a8f1-4054-ab89-e09d03268ff4" />
+
 > *Shows: Instance describe table with all fields populated including `running` state and `44.211.138.65` public IP, followed by variable echo confirmation*
 
 ---
@@ -856,8 +857,10 @@ Security GRP : sg-0376eb30fc74b9181
 =====================================
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase8-final-state-snapshot.png`
+> **SCREENSHOT**
+
+<img width="1035" height="553" alt="Image" src="https://github.com/user-attachments/assets/5e6455db-74e3-4064-a64e-77a7bebc0124" />
+
 > *Shows: All eight echo commands producing the complete final state snapshot with all confirmed resource IDs*
 
 ---
@@ -913,9 +916,7 @@ All resource IDs were collected and verified before any change was made. This pr
 
 
 
-<img width="1029" height="610" alt="Image" src="https://github.com/user-attachments/assets/8e176c35-3b54-4e49-b66e-3a5bb2f58337" />
 
-<img width="1031" height="866" alt="Image" src="https://github.com/user-attachments/assets/825b2644-a8f1-4054-ab89-e09d03268ff4" />
 <img width="1034" height="864" alt="Image" src="https://github.com/user-attachments/assets/7dc36308-5447-46f1-aca9-8de604677ea3" />
 <img width="1032" height="714" alt="Image" src="https://github.com/user-attachments/assets/c9b0fa65-1539-4909-8a6b-ad43e927e02b" />
 <img width="1027" height="528" alt="Image" src="https://github.com/user-attachments/assets/aea25ee7-c39a-431f-9759-b103f7e18515" />
@@ -939,4 +940,4 @@ All resource IDs were collected and verified before any change was made. This pr
 <img width="1033" height="852" alt="Image" src="https://github.com/user-attachments/assets/1737c570-b8a3-47a6-ae61-1a96b9de889a" />
 <img width="1036" height="540" alt="Image" src="https://github.com/user-attachments/assets/883e3f05-e0a4-469f-9b2d-c52c8b66ec9a" />
 <img width="1028" height="667" alt="Image" src="https://github.com/user-attachments/assets/7a7d0d77-151a-42bd-98c5-db5912fc16e0" />
-<img width="1035" height="553" alt="Image" src="https://github.com/user-attachments/assets/5e6455db-74e3-4064-a64e-77a7bebc0124" />
+
