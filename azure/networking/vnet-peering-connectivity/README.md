@@ -384,8 +384,10 @@ Name                        State      Provisioning
 devops-pub-to-priv-peering  Connected  Succeeded
 ```
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: az network vnet peering show for devops-pub-to-priv-peering showing State: Connected, Provisioning: Succeeded ]`
+> **Screenshot: `az network vnet peering show for devops-pub-to-priv-peering showing State: Connected, Provisioning: Succeeded`**
+
+
+<img width="1074" height="865" alt="Image" src="https://github.com/user-attachments/assets/45f894be-4e47-48b5-871b-4246135da61b" />
 
 ---
 
@@ -408,10 +410,11 @@ Name                        State      Provisioning
 devops-priv-to-pub-peering  Connected  Succeeded
 ```
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: az network vnet peering show for devops-priv-to-pub-peering showing State: Connected, Provisioning: Succeeded ]`
+> **Screenshot: `az network vnet peering show for devops-priv-to-pub-peering showing State: Connected, Provisioning: Succeeded`
 
-> Both peerings show `Connected` and `Succeeded`. Phase 2 is complete.
+<img width="1074" height="865" alt="Image" src="https://github.com/user-attachments/assets/45f894be-4e47-48b5-871b-4246135da61b" />
+
+> Both peerings show `Connected` and `Succeeded`.
 
 ---
 
@@ -567,6 +570,5 @@ The ping succeeded without additional NSG changes in this lab because the existi
 
 
 
-<img width="1074" height="865" alt="Image" src="https://github.com/user-attachments/assets/45f894be-4e47-48b5-871b-4246135da61b" />
 <img width="1074" height="863" alt="Image" src="https://github.com/user-attachments/assets/e053c363-2a45-42c7-ab3d-48179568d3fc" />
 <img width="1074" height="524" alt="Image" src="https://github.com/user-attachments/assets/82920699-61a1-4b5e-a59c-d2b8bd2bc714" />
