@@ -151,8 +151,10 @@ aws configure get region
 us-east-1
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `preflight-cli-identity-and-region.png`
+> **SCREENSHOT**
+
+<img width="1028" height="495" alt="Image" src="https://github.com/user-attachments/assets/e09ec41b-c629-4e24-99ff-6644cd82fd54" />
+
 > *Shows: `aws sts get-caller-identity` output confirming account and ARN, and `aws configure get region` returning `us-east-1`*
 
 ---
@@ -907,8 +909,8 @@ All resource IDs were collected and verified before any change was made. This pr
 *Resolution Time: Under 60 minutes*
 *Final Validation: HTTP 200 OK at `44.211.138.65`*
 
-<img width="1032" height="384" alt="Image" src="https://github.com/user-attachments/assets/42b112b4-4734-4983-8936-4a553d138dc5" />
-<img width="1028" height="495" alt="Image" src="https://github.com/user-attachments/assets/e09ec41b-c629-4e24-99ff-6644cd82fd54" />
+
+
 <img width="1029" height="610" alt="Image" src="https://github.com/user-attachments/assets/8e176c35-3b54-4e49-b66e-3a5bb2f58337" />
 <img width="1032" height="854" alt="Image" src="https://github.com/user-attachments/assets/1ce698be-2bfc-4c39-aca7-8db4ac6e7fb3" />
 <img width="1031" height="866" alt="Image" src="https://github.com/user-attachments/assets/825b2644-a8f1-4054-ab89-e09d03268ff4" />
