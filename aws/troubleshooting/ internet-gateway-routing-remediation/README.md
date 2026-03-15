@@ -719,8 +719,12 @@ aws ec2 describe-security-groups \
 +-----------+------------+------------+---------+
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase6-step6.5-port22-added-verified.png`
+> **SCREENSHOT**
+
+<img width="1034" height="663" alt="Image" src="https://github.com/user-attachments/assets/8a871168-2837-4c81-9a41-5f7ae3820f30" />
+<img width="1037" height="290" alt="Image" src="https://github.com/user-attachments/assets/d43fd185-26ba-4e68-bb9c-d687d0965750" />
+<img width="1036" height="698" alt="Image" src="https://github.com/user-attachments/assets/070ff343-e82c-4315-a5b7-3d0d94eacacb" />
+
 > *Shows: `authorize-security-group-ingress` success JSON response and updated security group table with both port 22 and port 80 rules*
 
 ---
@@ -943,22 +947,3 @@ All resource IDs were collected and verified before any change was made. This pr
 *Region: us-east-1*
 *Resolution Time: Under 60 minutes*
 *Final Validation: HTTP 200 OK at `44.211.138.65`*
-
-
-
-
-
-
-
-
-
-
-<img width="1031" height="420" alt="Image" src="https://github.com/user-attachments/assets/8921aabb-fea5-4818-920a-cc874309cf1e" />
-<img width="1034" height="663" alt="Image" src="https://github.com/user-attachments/assets/8a871168-2837-4c81-9a41-5f7ae3820f30" />
-<img width="1037" height="290" alt="Image" src="https://github.com/user-attachments/assets/d43fd185-26ba-4e68-bb9c-d687d0965750" />
-<img width="1036" height="698" alt="Image" src="https://github.com/user-attachments/assets/070ff343-e82c-4315-a5b7-3d0d94eacacb" />
-
-
-
-
-
