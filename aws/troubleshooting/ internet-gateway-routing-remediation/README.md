@@ -578,8 +578,10 @@ aws ec2 describe-instances \
 
 `xfusion-sg` is correctly attached to `xfusion-ec2`. No change required.
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase5-step5.2-sg-attached-to-instance.png`
+> **SCREENSHOT**
+
+<img width="1035" height="825" alt="Image" src="https://github.com/user-attachments/assets/0b0e813d-effb-4186-9bda-8296cf066165" />
+
 > *Shows: Instance security group query returning `sg-0376eb30fc74b9181` and `xfusion-sg`*
 
 ---
@@ -940,7 +942,7 @@ All resource IDs were collected and verified before any change was made. This pr
 
 
 
-<img width="1035" height="825" alt="Image" src="https://github.com/user-attachments/assets/0b0e813d-effb-4186-9bda-8296cf066165" />
+
 <img width="1032" height="748" alt="Image" src="https://github.com/user-attachments/assets/6628adeb-22a8-434e-bdcd-1ea982c5c8e4" />
 <img width="1032" height="378" alt="Image" src="https://github.com/user-attachments/assets/905e3849-b3af-4e3d-ba97-f15ba5bdf4e8" />
 <img width="1033" height="256" alt="Image" src="https://github.com/user-attachments/assets/408d85ff-2271-4814-9849-ada7dd260f16" />
