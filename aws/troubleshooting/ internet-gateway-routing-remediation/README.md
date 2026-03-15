@@ -639,8 +639,10 @@ ls ~/.ssh/
 
 No RSA key pair exists. A new key pair must be generated.
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase6-step6.3-az-and-ssh-check.png`
+> **SCREENSHOT**
+
+<img width="1033" height="256" alt="Image" src="https://github.com/user-attachments/assets/408d85ff-2271-4814-9849-ada7dd260f16" />
+
 > *Shows: AZ variable echo confirming `us-east-1a` and `ls ~/.ssh/` output showing no `id_rsa` keypair present*
 
 ---
@@ -945,11 +947,6 @@ All resource IDs were collected and verified before any change was made. This pr
 
 
 
-
-
-<img width="1032" height="748" alt="Image" src="https://github.com/user-attachments/assets/6628adeb-22a8-434e-bdcd-1ea982c5c8e4" />
-
-<img width="1033" height="256" alt="Image" src="https://github.com/user-attachments/assets/408d85ff-2271-4814-9849-ada7dd260f16" />
 <img width="1031" height="420" alt="Image" src="https://github.com/user-attachments/assets/8921aabb-fea5-4818-920a-cc874309cf1e" />
 <img width="1034" height="663" alt="Image" src="https://github.com/user-attachments/assets/8a871168-2837-4c81-9a41-5f7ae3820f30" />
 <img width="1037" height="290" alt="Image" src="https://github.com/user-attachments/assets/d43fd185-26ba-4e68-bb9c-d687d0965750" />
