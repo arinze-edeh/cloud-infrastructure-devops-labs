@@ -302,8 +302,10 @@ aws ec2 describe-internet-gateways \
 
 **Result:** *Empty output -- no IGW attached to `xfusion-vpc`.*
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase2-step2.1-igw-attached-empty.png`
+> **SCREENSHOT**
+
+<img width="1032" height="714" alt="Image" src="https://github.com/user-attachments/assets/c9b0fa65-1539-4909-8a6b-ad43e927e02b" />
+
 > *Shows: `describe-internet-gateways` filtered by VPC ID returning empty output -- confirming no IGW is currently attached*
 
 **Root cause identified.** No Internet Gateway is attached to `xfusion-vpc`. All inbound internet traffic has no entry point into the VPC regardless of security group rules.
@@ -920,7 +922,7 @@ All resource IDs were collected and verified before any change was made. This pr
 
 
 
-<img width="1032" height="714" alt="Image" src="https://github.com/user-attachments/assets/c9b0fa65-1539-4909-8a6b-ad43e927e02b" />
+
 <img width="1027" height="528" alt="Image" src="https://github.com/user-attachments/assets/aea25ee7-c39a-431f-9759-b103f7e18515" />
 <img width="1027" height="528" alt="Image" src="https://github.com/user-attachments/assets/aea25ee7-c39a-431f-9759-b103f7e18515" />
 <img width="1033" height="773" alt="Image" src="https://github.com/user-attachments/assets/a672048b-41af-4c0f-9219-238f3deb49eb" />
