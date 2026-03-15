@@ -199,8 +199,10 @@ echo "VPC ID: $VPC_ID"
 
 **Output:** `VPC ID: vpc-09eed66dedff99616`
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase1-step1.1-vpc-id.png`
+> **SCREENSHOT**
+
+<img width="1032" height="854" alt="Image" src="https://github.com/user-attachments/assets/1ce698be-2bfc-4c39-aca7-8db4ac6e7fb3" />
+
 > *Shows: VPC describe table output with `vpc-09eed66dedff99616`, state `available`, CIDR `10.0.0.0/16` and variable echo confirmation*
 
 ---
@@ -912,7 +914,7 @@ All resource IDs were collected and verified before any change was made. This pr
 
 
 <img width="1029" height="610" alt="Image" src="https://github.com/user-attachments/assets/8e176c35-3b54-4e49-b66e-3a5bb2f58337" />
-<img width="1032" height="854" alt="Image" src="https://github.com/user-attachments/assets/1ce698be-2bfc-4c39-aca7-8db4ac6e7fb3" />
+
 <img width="1031" height="866" alt="Image" src="https://github.com/user-attachments/assets/825b2644-a8f1-4054-ab89-e09d03268ff4" />
 <img width="1034" height="864" alt="Image" src="https://github.com/user-attachments/assets/7dc36308-5447-46f1-aca9-8de604677ea3" />
 <img width="1032" height="714" alt="Image" src="https://github.com/user-attachments/assets/c9b0fa65-1539-4909-8a6b-ad43e927e02b" />
