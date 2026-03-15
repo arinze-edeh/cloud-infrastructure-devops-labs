@@ -512,8 +512,10 @@ aws ec2 describe-subnets \
 +------------------+--------------+-----------------------+----------------------------+
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase4-step4.2-subnet-public-ip-enabled.png`
+> **SCREENSHOT**
+
+<img width="1035" height="617" alt="Image" src="https://github.com/user-attachments/assets/7b7cb12f-ec05-4fc4-b1dc-1c8de6d5a588" />
+
 > *Shows: Before and after subnet describe table -- `False` becoming `True` for `MapPublicIpOnLaunch`*
 
 ---
@@ -934,7 +936,7 @@ All resource IDs were collected and verified before any change was made. This pr
 
 
 
-<img width="1035" height="617" alt="Image" src="https://github.com/user-attachments/assets/7b7cb12f-ec05-4fc4-b1dc-1c8de6d5a588" />
+
 <img width="1030" height="847" alt="Image" src="https://github.com/user-attachments/assets/171b6bf6-e3ab-4728-99a8-26e14b1f2bb3" />
 <img width="1035" height="825" alt="Image" src="https://github.com/user-attachments/assets/0b0e813d-effb-4186-9bda-8296cf066165" />
 <img width="1032" height="748" alt="Image" src="https://github.com/user-attachments/assets/6628adeb-22a8-434e-bdcd-1ea982c5c8e4" />
