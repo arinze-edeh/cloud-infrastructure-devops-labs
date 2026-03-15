@@ -547,8 +547,10 @@ aws ec2 describe-security-groups \
 
 Port 80 is correctly open to `0.0.0.0/0`. No change required.
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase5-step5.1-sg-port80-verified.png`
+> **SCREENSHOT**
+
+<img width="1030" height="847" alt="Image" src="https://github.com/user-attachments/assets/171b6bf6-e3ab-4728-99a8-26e14b1f2bb3" />
+
 > *Shows: Security group inbound rules table with port 80 TCP open to `0.0.0.0/0`*
 
 ---
@@ -937,7 +939,7 @@ All resource IDs were collected and verified before any change was made. This pr
 
 
 
-<img width="1030" height="847" alt="Image" src="https://github.com/user-attachments/assets/171b6bf6-e3ab-4728-99a8-26e14b1f2bb3" />
+
 <img width="1035" height="825" alt="Image" src="https://github.com/user-attachments/assets/0b0e813d-effb-4186-9bda-8296cf066165" />
 <img width="1032" height="748" alt="Image" src="https://github.com/user-attachments/assets/6628adeb-22a8-434e-bdcd-1ea982c5c8e4" />
 <img width="1032" height="378" alt="Image" src="https://github.com/user-attachments/assets/905e3849-b3af-4e3d-ba97-f15ba5bdf4e8" />
