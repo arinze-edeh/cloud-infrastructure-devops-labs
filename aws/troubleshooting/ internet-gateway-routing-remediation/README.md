@@ -606,8 +606,10 @@ i-054d7d24c49753341 is not connected.
 
 SSM agent is not running on this instance. Switching to EC2 Instance Connect via SSH.
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase6-step6.1-ssm-not-connected.png`
+> **SCREENSHOT**
+
+<img width="1032" height="378" alt="Image" src="https://github.com/user-attachments/assets/905e3849-b3af-4e3d-ba97-f15ba5bdf4e8" />
+
 > *Shows: `start-session` command returning `TargetNotConnected` error for instance `i-054d7d24c49753341`*
 
 ---
@@ -944,7 +946,7 @@ All resource IDs were collected and verified before any change was made. This pr
 
 
 <img width="1032" height="748" alt="Image" src="https://github.com/user-attachments/assets/6628adeb-22a8-434e-bdcd-1ea982c5c8e4" />
-<img width="1032" height="378" alt="Image" src="https://github.com/user-attachments/assets/905e3849-b3af-4e3d-ba97-f15ba5bdf4e8" />
+
 <img width="1033" height="256" alt="Image" src="https://github.com/user-attachments/assets/408d85ff-2271-4814-9849-ada7dd260f16" />
 <img width="1031" height="420" alt="Image" src="https://github.com/user-attachments/assets/8921aabb-fea5-4818-920a-cc874309cf1e" />
 <img width="1034" height="663" alt="Image" src="https://github.com/user-attachments/assets/8a871168-2837-4c81-9a41-5f7ae3820f30" />
