@@ -410,7 +410,7 @@ Name                        State      Provisioning
 devops-priv-to-pub-peering  Connected  Succeeded
 ```
 
-> **Screenshot: `az network vnet peering show for devops-priv-to-pub-peering showing State: Connected, Provisioning: Succeeded`
+> **Screenshot: `az network vnet peering show for devops-priv-to-pub-peering showing State: Connected, Provisioning: Succeeded`**
 
 <img width="1074" height="865" alt="Image" src="https://github.com/user-attachments/assets/45f894be-4e47-48b5-871b-4246135da61b" />
 
@@ -443,8 +443,9 @@ IPv4 address for eth0: 10.2.1.4
 
 > The SSH host key warning on first connection is expected behavior. Typing `yes` adds the host to `~/.ssh/known_hosts`.
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: SSH connection to 20.51.148.146 showing Ubuntu 22.04 welcome banner and eth0 IP 10.2.1.4 ]`
+> **Screenshot: `SSH connection to 20.51.148.146 showing Ubuntu 22.04 welcome banner and eth0 IP 10.2.1.4`**
+
+<img width="1074" height="863" alt="Image" src="https://github.com/user-attachments/assets/e053c363-2a45-42c7-ab3d-48179568d3fc" />
 
 ---
 
@@ -468,8 +469,9 @@ PING 10.1.1.4 (10.1.1.4) 56(84) bytes of data.
 rtt min/avg/max/mdev = 1.071/1.417/2.211/0.465 ms
 ```
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: ping -c 4 10.1.1.4 showing 4/4 packets received, 0% packet loss, avg latency 1.417ms ]`
+> **Screenshot: `ping -c 4 10.1.1.4 showing 4/4 packets received, 0% packet loss, avg latency 1.417ms`**
+
+<img width="1074" height="524" alt="Image" src="https://github.com/user-attachments/assets/82920699-61a1-4b5e-a59c-d2b8bd2bc714" />
 
 ---
 
@@ -561,14 +563,3 @@ The ping succeeded without additional NSG changes in this lab because the existi
 * [Azure VNet Address Space Planning](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq)
 
 ---
-
-
-
-
-
-
-
-
-
-<img width="1074" height="863" alt="Image" src="https://github.com/user-attachments/assets/e053c363-2a45-42c7-ab3d-48179568d3fc" />
-<img width="1074" height="524" alt="Image" src="https://github.com/user-attachments/assets/82920699-61a1-4b5e-a59c-d2b8bd2bc714" />
