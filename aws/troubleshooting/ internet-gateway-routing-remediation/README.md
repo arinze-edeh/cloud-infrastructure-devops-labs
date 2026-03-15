@@ -843,8 +843,10 @@ Time total: 0.197838s
 
 **HTTP 200 confirmed.** The Nginx application is publicly accessible from the internet.
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase7-end-to-end-http200.png`
+> **SCREENSHOT**
+
+<img width="1028" height="667" alt="Image" src="https://github.com/user-attachments/assets/7a7d0d77-151a-42bd-98c5-db5912fc16e0" />
+
 > *Shows: `curl` command with full flags targeting `$PUBLIC_IP` returning `HTTP Code: 200`, `Time to connect: 0.099760s`, `Time total: 0.197838s`*
 
 ---
@@ -956,5 +958,5 @@ All resource IDs were collected and verified before any change was made. This pr
 <img width="1028" height="800" alt="Image" src="https://github.com/user-attachments/assets/3278697f-02d0-47f9-8cea-3de11eadfafc" />
 <img width="1033" height="852" alt="Image" src="https://github.com/user-attachments/assets/1737c570-b8a3-47a6-ae61-1a96b9de889a" />
 <img width="1036" height="540" alt="Image" src="https://github.com/user-attachments/assets/883e3f05-e0a4-469f-9b2d-c52c8b66ec9a" />
-<img width="1028" height="667" alt="Image" src="https://github.com/user-attachments/assets/7a7d0d77-151a-42bd-98c5-db5912fc16e0" />
+
 
