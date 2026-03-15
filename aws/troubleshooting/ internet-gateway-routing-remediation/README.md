@@ -279,8 +279,10 @@ echo "Security Group ID: $SG_ID"
 
 **Output:** `Security Group ID: sg-0376eb30fc74b9181`
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase1-step1.3-sg-id.png`
+> **SCREENSHOT**
+
+<img width="1034" height="864" alt="Image" src="https://github.com/user-attachments/assets/7dc36308-5447-46f1-aca9-8de604677ea3" />
+
 > *Shows: Variable echo confirming `sg-0376eb30fc74b9181`*
 
 ---
@@ -917,7 +919,7 @@ All resource IDs were collected and verified before any change was made. This pr
 
 
 
-<img width="1034" height="864" alt="Image" src="https://github.com/user-attachments/assets/7dc36308-5447-46f1-aca9-8de604677ea3" />
+
 <img width="1032" height="714" alt="Image" src="https://github.com/user-attachments/assets/c9b0fa65-1539-4909-8a6b-ad43e927e02b" />
 <img width="1027" height="528" alt="Image" src="https://github.com/user-attachments/assets/aea25ee7-c39a-431f-9759-b103f7e18515" />
 <img width="1027" height="528" alt="Image" src="https://github.com/user-attachments/assets/aea25ee7-c39a-431f-9759-b103f7e18515" />
