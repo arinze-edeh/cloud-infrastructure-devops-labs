@@ -819,8 +819,10 @@ Nginx is listening on all IPv4 and IPv6 interfaces on port 80. Exit the instance
 exit
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase6-step6.8-nginx-listening-port80.png`
+> **SCREENSHOT**
+
+<img width="1036" height="540" alt="Image" src="https://github.com/user-attachments/assets/883e3f05-e0a4-469f-9b2d-c52c8b66ec9a" />
+
 > *Shows: `ss -tlnp` output with two LISTEN entries on `0.0.0.0:80` and `[::]:80` both bound to nginx PIDs 4309 and 4311, followed by `exit` and connection closed message*
 
 ---
@@ -954,6 +956,6 @@ All resource IDs were collected and verified before any change was made. This pr
 <img width="1037" height="678" alt="Image" src="https://github.com/user-attachments/assets/dd3b7cfd-570b-4c4d-8513-9d6cff585863" />
 <img width="1028" height="800" alt="Image" src="https://github.com/user-attachments/assets/3278697f-02d0-47f9-8cea-3de11eadfafc" />
 <img width="1033" height="852" alt="Image" src="https://github.com/user-attachments/assets/1737c570-b8a3-47a6-ae61-1a96b9de889a" />
-<img width="1036" height="540" alt="Image" src="https://github.com/user-attachments/assets/883e3f05-e0a4-469f-9b2d-c52c8b66ec9a" />
+
 
 
