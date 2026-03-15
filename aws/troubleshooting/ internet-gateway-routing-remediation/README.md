@@ -794,8 +794,10 @@ Mar 15 00:51:18 ... systemd[1]: Started nginx.service - The nginx HTTP and rever
 
 Nginx is `active (running)`. Config syntax valid. No changes required.
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase6-step6.7-nginx-status-running.png`
+> **SCREENSHOT**
+
+<img width="1033" height="852" alt="Image" src="https://github.com/user-attachments/assets/1737c570-b8a3-47a6-ae61-1a96b9de889a" />
+
 > *Shows: `systemctl status nginx` output with green `active (running)` status, `enabled` load state, both master and worker processes, and config test success logs*
 
 ---
@@ -955,7 +957,7 @@ All resource IDs were collected and verified before any change was made. This pr
 <img width="1036" height="698" alt="Image" src="https://github.com/user-attachments/assets/070ff343-e82c-4315-a5b7-3d0d94eacacb" />
 <img width="1037" height="678" alt="Image" src="https://github.com/user-attachments/assets/dd3b7cfd-570b-4c4d-8513-9d6cff585863" />
 <img width="1028" height="800" alt="Image" src="https://github.com/user-attachments/assets/3278697f-02d0-47f9-8cea-3de11eadfafc" />
-<img width="1033" height="852" alt="Image" src="https://github.com/user-attachments/assets/1737c570-b8a3-47a6-ae61-1a96b9de889a" />
+
 
 
 
