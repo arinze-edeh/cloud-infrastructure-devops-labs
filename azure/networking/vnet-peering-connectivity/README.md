@@ -208,8 +208,9 @@ Name           ResourceGroup                 Location
 devops-pub-vm  kml_rg_main-3054985a9dfb4f09  eastus
 ```
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: az vm show confirming devops-pub-vm exists in eastus ]`
+> **Screenshot: `az vm show confirming devops-pub-vm exists in eastus`**
+
+<img width="1032" height="754" alt="Image" src="https://github.com/user-attachments/assets/9270fc90-4a77-49c6-ae44-72761e8acfac" />
 
 ---
 
@@ -230,8 +231,9 @@ VirtualMachine    PublicIPAddresses    PrivateIPAddresses
 devops-pub-vm     20.51.148.146        10.2.1.4
 ```
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: az vm list-ip-addresses for devops-pub-vm showing 20.51.148.146 public and 10.2.1.4 private ]`
+> **Screenshot: `az vm list-ip-addresses for devops-pub-vm showing 20.51.148.146 public and 10.2.1.4 private`**
+
+<img width="1032" height="754" alt="Image" src="https://github.com/user-attachments/assets/9270fc90-4a77-49c6-ae44-72761e8acfac" />
 
 ---
 
@@ -254,8 +256,9 @@ devops-priv-vm    10.1.1.4
 
 > Note: The absence of a `PublicIPAddresses` column confirms this VM is fully private.
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: az vm list-ip-addresses for devops-priv-vm showing only private IP 10.1.1.4 and no public IP ]`
+> **Screenshot: `az vm list-ip-addresses for devops-priv-vm showing only private IP 10.1.1.4 and no public IP`**
+
+<img width="1032" height="754" alt="Image" src="https://github.com/user-attachments/assets/9270fc90-4a77-49c6-ae44-72761e8acfac" />
 
 ---
 
@@ -558,7 +561,7 @@ The ping succeeded without additional NSG changes in this lab because the existi
 
 
 
-<img width="1032" height="754" alt="Image" src="https://github.com/user-attachments/assets/9270fc90-4a77-49c6-ae44-72761e8acfac" />
+
 <img width="1071" height="822" alt="Image" src="https://github.com/user-attachments/assets/a8e8fc90-ff4e-438f-8f3b-5447c32ecd5a" />
 <img width="1071" height="868" alt="Image" src="https://github.com/user-attachments/assets/c2e69fa6-9eb9-47a2-9f02-fb88f60d7b5a" />
 <img width="1069" height="862" alt="Image" src="https://github.com/user-attachments/assets/49c52bfb-dd6c-465f-aa58-45169fcd9073" />
