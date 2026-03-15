@@ -111,7 +111,7 @@ Warning: Permanently added 'stapp02' (ED25519) to the list of known hosts.
 
 ---
 
-**SCREENSHOT: Terminal showing successful SSH login from `thor@jump-host` to `steve@stapp02`, including the host authenticity prompt and password entry.**
+>**SCREENSHOT: Terminal showing successful SSH login from `thor@jump-host` to `steve@stapp02`, including the host authenticity prompt and password entry.**
 
 <img width="1032" height="362" alt="Image" src="https://github.com/user-attachments/assets/7b968d3d-9bdb-4ec1-999d-d2029a3e1b54" />
 
@@ -145,8 +145,9 @@ fb841ddf1d76475f2849828daf7708fb  /tmp/nautilus.txt.gpg
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> *Screenshot 2: Terminal output showing `ls -lh` confirming file size of 105 bytes and `md5sum` output displaying hash `fb841ddf1d76475f2849828daf7708fb`.*
+>**SCREENSHOT: Terminal output showing `ls -lh` confirming file size of 105 bytes and `md5sum` output displaying hash `fb841ddf1d76475f2849828daf7708fb`.**
+
+<img width="1032" height="398" alt="Image" src="https://github.com/user-attachments/assets/c216b362-0efa-452d-a69b-e75d804f5a6d" />
 
 ---
 
@@ -246,8 +247,9 @@ fb841ddf1d76475f2849828daf7708fb  /tmp/nautilus.txt.gpg
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> *Screenshot 5: Terminal output showing both `docker exec` commands confirming file size of 105 bytes, timestamp `Mar 15 03:55`, and matching MD5 hash `fb841ddf1d76475f2849828daf7708fb` inside the `ubuntu_latest` container.*
+>**SCREENSHOT: Terminal output showing both `docker exec` commands confirming file size of 105 bytes, timestamp `Mar 15 03:55`, and matching MD5 hash `fb841ddf1d76475f2849828daf7708fb` inside the `ubuntu_latest` container.**
+
+<img width="1029" height="708" alt="Image" src="https://github.com/user-attachments/assets/8458c65a-c519-4a5a-adea-289dc6ccd98f" />
 
 ---
 
@@ -353,11 +355,11 @@ sudo docker exec ubuntu_latest md5sum /tmp/nautilus.txt.gpg
 
 
 
-<img width="1032" height="398" alt="Image" src="https://github.com/user-attachments/assets/c216b362-0efa-452d-a69b-e75d804f5a6d" />
+
 
 <img width="1029" height="584" alt="Image" src="https://github.com/user-attachments/assets/760ebf8c-a461-4cc2-8676-24db7e38003b" />
 
 <img width="1032" height="655" alt="Image" src="https://github.com/user-attachments/assets/d64771fd-a6ab-49f0-beac-764fb918fc97" />
 
-<img width="1029" height="708" alt="Image" src="https://github.com/user-attachments/assets/8458c65a-c519-4a5a-adea-289dc6ccd98f" />
+
 
