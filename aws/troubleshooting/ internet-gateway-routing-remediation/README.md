@@ -340,8 +340,10 @@ aws ec2 describe-internet-gateways \
 | `igw-00848032487db327d` | Detached (`None`) | **Attach to `xfusion-vpc`** |
 | `igw-0c7be0b8b0d458cb5` | Attached to another VPC | Do not touch |
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase2-step2.2-igw-unattached-found.png`
+> **SCREENSHOT**
+
+<img width="1027" height="528" alt="Image" src="https://github.com/user-attachments/assets/aea25ee7-c39a-431f-9759-b103f7e18515" />
+
 > *Shows: Full IGW listing with `igw-00848032487db327d` showing `None` attachment state and `igw-0c7be0b8b0d458cb5` showing `available` on a different VPC*
 
 ---
@@ -923,7 +925,7 @@ All resource IDs were collected and verified before any change was made. This pr
 
 
 
-<img width="1027" height="528" alt="Image" src="https://github.com/user-attachments/assets/aea25ee7-c39a-431f-9759-b103f7e18515" />
+
 <img width="1027" height="528" alt="Image" src="https://github.com/user-attachments/assets/aea25ee7-c39a-431f-9759-b103f7e18515" />
 <img width="1033" height="773" alt="Image" src="https://github.com/user-attachments/assets/a672048b-41af-4c0f-9219-238f3deb49eb" />
 <img width="1027" height="829" alt="Image" src="https://github.com/user-attachments/assets/2f0e8e29-0f39-42d8-a1a7-1bce2c7bf9d8" />
