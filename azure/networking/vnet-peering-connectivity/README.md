@@ -128,8 +128,9 @@ az account show
 }
 ```
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: az account show output confirming Azure Free Labs subscription ]`
+> **Screenshot: `az account show output confirming Azure Free Labs subscription`**
+
+<img width="1028" height="579" alt="Image" src="https://github.com/user-attachments/assets/47ceb51d-c1a4-4258-af5f-6411883d2b5e" />
 
 ---
 
@@ -147,8 +148,9 @@ Name             CloudName    SubscriptionId                        TenantId    
 Azure Free Labs  AzureCloud   f0c3bcdd-5ce2-4fa0-8cf3-41559747512b  54c1a2d3-d100-453c-9636-3a109eb45552  Enabled  True
 ```
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: az account list --output table showing Azure Free Labs as IsDefault = True ]`
+> **Screenshot: `az account list --output table showing Azure Free Labs as IsDefault = True`**
+
+<img width="1028" height="579" alt="Image" src="https://github.com/user-attachments/assets/47ceb51d-c1a4-4258-af5f-6411883d2b5e" />
 
 ---
 
@@ -553,7 +555,7 @@ The ping succeeded without additional NSG changes in this lab because the existi
 
 
 
-<img width="1028" height="579" alt="Image" src="https://github.com/user-attachments/assets/47ceb51d-c1a4-4258-af5f-6411883d2b5e" />
+
 <img width="1028" height="579" alt="Image" src="https://github.com/user-attachments/assets/47ceb51d-c1a4-4258-af5f-6411883d2b5e" />
 <img width="1029" height="671" alt="Image" src="https://github.com/user-attachments/assets/db25aaba-1f73-4f08-95b1-5a10ea759f35" />
 <img width="1032" height="754" alt="Image" src="https://github.com/user-attachments/assets/9270fc90-4a77-49c6-ae44-72761e8acfac" />
