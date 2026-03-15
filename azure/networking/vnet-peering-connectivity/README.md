@@ -184,8 +184,9 @@ Name                          Location    Status
 kml_rg_main-3054985a9dfb4f09  eastus      Succeeded
 ```
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: az group list showing kml_rg_main-3054985a9dfb4f09 in eastus with Succeeded status ]`
+> **Screenshot: `az group list showing kml_rg_main-3054985a9dfb4f09 in eastus with Succeeded status`**
+
+<img width="1029" height="671" alt="Image" src="https://github.com/user-attachments/assets/db25aaba-1f73-4f08-95b1-5a10ea759f35" />
 
 ---
 
@@ -556,8 +557,7 @@ The ping succeeded without additional NSG changes in this lab because the existi
 
 
 
-<img width="1028" height="579" alt="Image" src="https://github.com/user-attachments/assets/47ceb51d-c1a4-4258-af5f-6411883d2b5e" />
-<img width="1029" height="671" alt="Image" src="https://github.com/user-attachments/assets/db25aaba-1f73-4f08-95b1-5a10ea759f35" />
+
 <img width="1032" height="754" alt="Image" src="https://github.com/user-attachments/assets/9270fc90-4a77-49c6-ae44-72761e8acfac" />
 <img width="1071" height="822" alt="Image" src="https://github.com/user-attachments/assets/a8e8fc90-ff4e-438f-8f3b-5447c32ecd5a" />
 <img width="1071" height="868" alt="Image" src="https://github.com/user-attachments/assets/c2e69fa6-9eb9-47a2-9f02-fb88f60d7b5a" />
