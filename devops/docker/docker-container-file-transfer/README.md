@@ -111,8 +111,9 @@ Warning: Permanently added 'stapp02' (ED25519) to the list of known hosts.
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> *Screenshot 1: Terminal showing successful SSH login from `thor@jump-host` to `steve@stapp02`, including the host authenticity prompt and password entry.*
+**SCREENSHOT: Terminal showing successful SSH login from `thor@jump-host` to `steve@stapp02`, including the host authenticity prompt and password entry.**
+
+<img width="1032" height="362" alt="Image" src="https://github.com/user-attachments/assets/7b968d3d-9bdb-4ec1-999d-d2029a3e1b54" />
 
 ---
 
@@ -350,7 +351,7 @@ sudo docker exec ubuntu_latest md5sum /tmp/nautilus.txt.gpg
 
 ---
 
-<img width="1032" height="362" alt="Image" src="https://github.com/user-attachments/assets/7b968d3d-9bdb-4ec1-999d-d2029a3e1b54" />
+
 
 <img width="1032" height="398" alt="Image" src="https://github.com/user-attachments/assets/c216b362-0efa-452d-a69b-e75d804f5a6d" />
 
