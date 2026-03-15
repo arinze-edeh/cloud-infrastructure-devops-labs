@@ -758,8 +758,10 @@ Warning: Permanently added '44.211.138.65' (ECDSA) to the list of known hosts.
 [ec2-user@ip-10-0-1-108 ~]$
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `phase6-step6.6-ssh-connected.png`
+> **SCREENSHOT**
+
+<img width="1028" height="800" alt="Image" src="https://github.com/user-attachments/assets/3278697f-02d0-47f9-8cea-3de11eadfafc" />
+
 > *Shows: `send-ssh-public-key` returning `Success: true`, followed by successful SSH connection to `ip-10-0-1-108` with Amazon Linux 2023 banner and `ec2-user` prompt*
 
 ---
@@ -956,7 +958,7 @@ All resource IDs were collected and verified before any change was made. This pr
 <img width="1037" height="290" alt="Image" src="https://github.com/user-attachments/assets/d43fd185-26ba-4e68-bb9c-d687d0965750" />
 <img width="1036" height="698" alt="Image" src="https://github.com/user-attachments/assets/070ff343-e82c-4315-a5b7-3d0d94eacacb" />
 <img width="1037" height="678" alt="Image" src="https://github.com/user-attachments/assets/dd3b7cfd-570b-4c4d-8513-9d6cff585863" />
-<img width="1028" height="800" alt="Image" src="https://github.com/user-attachments/assets/3278697f-02d0-47f9-8cea-3de11eadfafc" />
+
 
 
 
