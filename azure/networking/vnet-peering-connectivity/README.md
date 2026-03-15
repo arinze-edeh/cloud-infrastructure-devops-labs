@@ -281,7 +281,7 @@ devops-pub-vnet   kml_rg_main-3054985a9dfb4f09  eastus      1             10.2.0
 
 > **Address Space Validation:** `10.1.0.0/16` and `10.2.0.0/16` do not overlap. VNet Peering will succeed.
 
-> **Screenshot: `az network vnet list showing both devops-priv-vnet (10.1.0.0/16) and devops-pub-vnet (10.2.0.0/16) ]`**
+> **Screenshot: `az network vnet list showing both devops-priv-vnet (10.1.0.0/16) and devops-pub-vnet (10.2.0.0/16)`**
 
 <img width="1071" height="822" alt="Image" src="https://github.com/user-attachments/assets/a8e8fc90-ff4e-438f-8f3b-5447c32ecd5a" />
 
@@ -322,8 +322,9 @@ az network vnet peering create \
 
 > `peeringState: Initiated` is expected at this stage. The state transitions to `Connected` once the return peering is created in the next step.
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: az network vnet peering create output for devops-pub-to-priv-peering showing peeringState: Initiated and provisioningState: Succeeded ]`
+> **Screenshot: `az network vnet peering create output for devops-pub-to-priv-peering showing peeringState: Initiated and provisioningState: Succeeded`**
+
+<img width="1071" height="868" alt="Image" src="https://github.com/user-attachments/assets/c2e69fa6-9eb9-47a2-9f02-fb88f60d7b5a" />
 
 ---
 
@@ -358,8 +359,9 @@ az network vnet peering create \
 
 > `peeringState: Connected` and `peeringSyncLevel: FullyInSync` confirm the bidirectional peering is fully established.
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: az network vnet peering create output for devops-priv-to-pub-peering showing peeringState: Connected and peeringSyncLevel: FullyInSync ]`
+> **Screenshot: `az network vnet peering create output for devops-priv-to-pub-peering showing peeringState: Connected and peeringSyncLevel: FullyInSync`**
+
+<img width="1069" height="862" alt="Image" src="https://github.com/user-attachments/assets/49c52bfb-dd6c-465f-aa58-45169fcd9073" />
 
 ---
 
@@ -564,8 +566,7 @@ The ping succeeded without additional NSG changes in this lab because the existi
 
 
 
-<img width="1071" height="868" alt="Image" src="https://github.com/user-attachments/assets/c2e69fa6-9eb9-47a2-9f02-fb88f60d7b5a" />
-<img width="1069" height="862" alt="Image" src="https://github.com/user-attachments/assets/49c52bfb-dd6c-465f-aa58-45169fcd9073" />
+
 <img width="1074" height="865" alt="Image" src="https://github.com/user-attachments/assets/45f894be-4e47-48b5-871b-4246135da61b" />
 <img width="1074" height="863" alt="Image" src="https://github.com/user-attachments/assets/e053c363-2a45-42c7-ab3d-48179568d3fc" />
 <img width="1074" height="524" alt="Image" src="https://github.com/user-attachments/assets/82920699-61a1-4b5e-a59c-d2b8bd2bc714" />
