@@ -157,7 +157,10 @@ Verify the following before proceeding:
 * `Main PID` is populated with a valid process ID
 * The final log entry confirms `Started Docker Application Container Engine`
 
-> **[SCREENSHOT-03]**
+> **SCREENSHOT**
+
+<img width="1026" height="860" alt="Image" src="https://github.com/user-attachments/assets/334ab182-7fb1-47d2-9e34-e59cc1a49886" />
+
 > *Full `systemctl status` output for `docker.service` showing `active (running)` state, PID `1381`, and systemd startup log lines confirming daemon initialization.*
 
 If Docker is not running, start it with:
@@ -356,6 +359,5 @@ sudo docker inspect busybox:musl
 
 
 
-<img width="1026" height="860" alt="Image" src="https://github.com/user-attachments/assets/334ab182-7fb1-47d2-9e34-e59cc1a49886" />
 
 <img width="1036" height="426" alt="Image" src="https://github.com/user-attachments/assets/828a5ccf-84a2-44c7-a595-e686b49d1f6c" />
