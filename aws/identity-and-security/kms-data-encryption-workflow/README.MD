@@ -277,8 +277,9 @@ xxd /root/EncryptedData.bin | head -3
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> ***[Screenshot: Terminal showing `ls -lh` (177 bytes) and `xxd` hex dump output confirming raw binary content of `EncryptedData.bin`]***
+>**SCREENSHOT: Terminal showing `ls -lh` (177 bytes) and `xxd` hex dump output confirming raw binary content of `EncryptedData.bin`**
+
+<img width="1030" height="612" alt="Image" src="https://github.com/user-attachments/assets/66264f52-3be3-4441-9676-491924c538a4" />
 
 ---
 
