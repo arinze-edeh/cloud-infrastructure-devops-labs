@@ -336,8 +336,9 @@ fb78248c0fdf1e8cc7d9b81af2423b16  /root/DecryptedOutput.txt
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> ***[Screenshot: Terminal showing `cat /root/DecryptedOutput.txt` with matching content, empty `diff` output, and identical MD5 hashes for both files]***
+**SCREENSHOT: Terminal showing `cat /root/DecryptedOutput.txt` with matching content, empty `diff` output, and identical MD5 hashes for both files**
+
+<img width="1029" height="841" alt="Image" src="https://github.com/user-attachments/assets/afd332c5-6e1b-440b-ba61-068de435f5c6" />
 
 ---
 
@@ -350,11 +351,6 @@ fb78248c0fdf1e8cc7d9b81af2423b16  /root/DecryptedOutput.txt
 | `EncryptedData.bin` in `/root/` as base64 ciphertext | 177-byte raw binary file | PASS |
 | Decrypted output matches original | `diff` empty, MD5 identical | PASS |
 | Automated validator decryption | `fileb://` on raw binary succeeded | PASS |
-
----
-
-**SCREENSHOT PLACEHOLDER**
-> ***[Screenshot: Automated validator UI showing green success checkmark and "Task Completed Successfully" confirmation]***
 
 ---
 
@@ -499,4 +495,4 @@ aws kms describe-key \
 
 
 
-<img width="1029" height="841" alt="Image" src="https://github.com/user-attachments/assets/afd332c5-6e1b-440b-ba61-068de435f5c6" />
+
