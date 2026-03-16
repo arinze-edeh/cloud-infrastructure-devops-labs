@@ -3,7 +3,6 @@
 [![AWS](https://img.shields.io/badge/AWS-KMS-FF9900?style=flat-square&logo=amazon-aws)](https://aws.amazon.com/kms/)
 [![Security](https://img.shields.io/badge/Security-Encryption-green?style=flat-square)](https://aws.amazon.com/security/)
 [![Region](https://img.shields.io/badge/Region-us--east--1-blue?style=flat-square)](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
-[![Status](https://img.shields.io/badge/Lab-Completed-brightgreen?style=flat-square)]()
 
 ---
 
