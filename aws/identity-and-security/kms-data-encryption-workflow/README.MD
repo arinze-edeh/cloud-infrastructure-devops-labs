@@ -207,7 +207,7 @@ aws kms list-aliases --region us-east-1 | grep datacenter-KMS-Key
 
 >**SCREENSHOT: Terminal showing `aws kms list-aliases` grep output confirming `alias/datacenter-KMS-Key` and its ARN**
 
-<img width="1030" height="612" alt="Image" src="https://github.com/user-attachments/assets/66264f52-3be3-4441-9676-491924c538a4" />
+<img width="1031" height="770" alt="Image" src="https://github.com/user-attachments/assets/ede277e2-e580-4a44-8084-673f32cb1d66" />
 
 ---
 
@@ -230,8 +230,9 @@ This is a sensitive file.
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> ***[Screenshot: Terminal output showing `ls -la` file metadata and `cat` plaintext content of `SensitiveData.txt`]***
+>**SCREENSHOT: Terminal output showing `ls -la` file metadata and `cat` plaintext content of `SensitiveData.txt`**
+
+<img width="1030" height="612" alt="Image" src="https://github.com/user-attachments/assets/66264f52-3be3-4441-9676-491924c538a4" />
 
 ---
 
@@ -493,7 +494,7 @@ aws kms describe-key \
 
 
 
-<img width="1031" height="770" alt="Image" src="https://github.com/user-attachments/assets/ede277e2-e580-4a44-8084-673f32cb1d66" />
+
 
 
 
