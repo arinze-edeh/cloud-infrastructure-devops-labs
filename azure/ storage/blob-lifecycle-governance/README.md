@@ -271,8 +271,10 @@ Container                LastModified
 nautilus-container28249  2026-03-16T20:34:52+00:00
 ```
 
-> **Screenshot Placeholder**
-> ![Container Created](./screenshots/04-container-created.png)
+> **Screenshot**
+
+<img width="1095" height="750" alt="Image" src="https://github.com/user-attachments/assets/8c2e40c4-fa12-4a1c-bd31-32ce49f836db" />
+
 > *Caption: Container `nautilus-container28249` created with public access disabled.*
 
 ---
@@ -642,10 +644,6 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 
 
 
-
-
-
-<img width="1095" height="750" alt="Image" src="https://github.com/user-attachments/assets/8c2e40c4-fa12-4a1c-bd31-32ce49f836db" />
 
 <img width="1091" height="715" alt="Image" src="https://github.com/user-attachments/assets/89ff56e9-f413-42f6-809a-d26e2943f312" />
 
