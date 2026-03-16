@@ -171,8 +171,9 @@ aws kms create-key \
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> ***[Screenshot: Terminal showing full `aws kms create-key` JSON response with `KeyState: "Enabled"` and `KeyId` visible]***
+>**SCREENSHOT: Terminal showing full `aws kms create-key` JSON response with `KeyState: "Enabled"` and `KeyId` visible**
+
+<img width="1035" height="833" alt="Image" src="https://github.com/user-attachments/assets/7f31382e-0055-4ca8-ac57-008390dea81b" />
 
 ---
 
