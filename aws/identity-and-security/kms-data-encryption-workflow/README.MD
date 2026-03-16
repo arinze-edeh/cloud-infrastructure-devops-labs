@@ -477,22 +477,6 @@ aws kms describe-key \
 
 ---
 
-## Author
-
-**Lab Environment:** KodeKloud AWS Labs
-**Region:** us-east-1
-**Account:** 573434484730
-**Completed:** March 16, 2026
-
----
-
-> *This documentation follows enterprise runbook standards. All commands are production-tested. Screenshot placeholders must be replaced with actual terminal captures before publishing to internal wikis or compliance repositories.*
-
-
-
-
-
-
 
 
 
