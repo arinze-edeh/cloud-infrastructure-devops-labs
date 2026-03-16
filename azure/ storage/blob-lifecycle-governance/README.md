@@ -417,7 +417,7 @@ az storage account management-policy create \
 }
 ```
 
-> **Screenshot**
+> **Screenshots**
 
 <img width="1094" height="659" alt="Image" src="https://github.com/user-attachments/assets/2b98438b-edeb-4c58-8060-f4f94f83c188" />
 
