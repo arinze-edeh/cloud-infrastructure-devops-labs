@@ -205,8 +205,7 @@ aws kms list-aliases --region us-east-1 | grep datacenter-KMS-Key
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> ***[Screenshot: Terminal showing `aws kms list-aliases` grep output confirming `alias/datacenter-KMS-Key` and its ARN]***
+**SCREENSHOT: Terminal showing `aws kms list-aliases` grep output confirming `alias/datacenter-KMS-Key` and its ARN**
 
 ---
 
@@ -494,7 +493,7 @@ aws kms describe-key \
 
 <img width="1031" height="770" alt="Image" src="https://github.com/user-attachments/assets/ede277e2-e580-4a44-8084-673f32cb1d66" />
 
-<img width="1030" height="455" alt="Image" src="https://github.com/user-attachments/assets/c6d9b7b1-f8d6-499d-a8be-1a95aad036ec" />
+
 
 <img width="1030" height="612" alt="Image" src="https://github.com/user-attachments/assets/66264f52-3be3-4441-9676-491924c538a4" />
 
