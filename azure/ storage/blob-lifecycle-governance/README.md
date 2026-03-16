@@ -87,8 +87,10 @@ azure-cli   2.67.0
 core        2.67.0
 ```
 
-> **Screenshot Placeholder**
-> ![Azure CLI Version Check](./screenshots/01-az-version.png)
+> **Screenshot**
+
+<img width="1033" height="494" alt="Image" src="https://github.com/user-attachments/assets/0b005131-51db-452a-943a-d8bc2345f146" />
+
 > *Caption: Azure CLI 2.67.0 confirmed on the client host with Python 3.10 runtime.*
 
 ---
@@ -635,7 +637,7 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 *Maintained by the Nautilus DevOps Team | Last updated: March 2026*
 
 
-<img width="1033" height="494" alt="Image" src="https://github.com/user-attachments/assets/0b005131-51db-452a-943a-d8bc2345f146" />
+
 
 <img width="1091" height="669" alt="Image" src="https://github.com/user-attachments/assets/f498473b-fc58-466a-8234-0bca58d92c63" />
 
