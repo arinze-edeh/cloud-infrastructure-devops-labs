@@ -477,8 +477,10 @@ az storage account management-policy show \
 | Deletion threshold | `7.0` days after modification | Confirmed |
 | Policy type | `Lifecycle` | Confirmed |
 
-> **Screenshot Placeholder**
-> ![Policy Validation](./screenshots/07-policy-validated.png)
+> **Screenshot**
+
+<img width="1091" height="830" alt="Image" src="https://github.com/user-attachments/assets/a38a7076-a8db-40df-a3e8-60e01f9d5731" />
+
 > *Caption: Rule `nautilus-del-rule` confirmed with all required attributes via `management-policy show`.*
 
 ---
@@ -655,4 +657,4 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 
 <img width="1098" height="613" alt="Image" src="https://github.com/user-attachments/assets/cc198d6e-c8c0-4434-ab60-9fa4963db521" />
 
-<img width="1091" height="830" alt="Image" src="https://github.com/user-attachments/assets/a38a7076-a8db-40df-a3e8-60e01f9d5731" />
+
