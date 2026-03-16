@@ -151,8 +151,10 @@ AzureCloud         54c1a2d3-d100-453c-9636-3a109eb45552  True         Azure Free
 az account set --subscription "f0c3bcdd-5ce2-4fa0-8cf3-41559747512b"
 ```
 
-> **Screenshot Placeholder**
-> ![Subscription Verification](./screenshots/02-account-list-show.png)
+> **Screenshot**
+
+<img width="1088" height="328" alt="Image" src="https://github.com/user-attachments/assets/937ed68f-6bfd-4ec7-b87c-f97b9f2f920c" />
+
 > *Caption: Subscription confirmed as "Azure Free Labs" and set as the active context.*
 
 ---
@@ -636,12 +638,6 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 
 *Maintained by the Nautilus DevOps Team | Last updated: March 2026*
 
-
-
-
-<img width="1091" height="669" alt="Image" src="https://github.com/user-attachments/assets/f498473b-fc58-466a-8234-0bca58d92c63" />
-
-<img width="1088" height="328" alt="Image" src="https://github.com/user-attachments/assets/937ed68f-6bfd-4ec7-b87c-f97b9f2f920c" />
 
 <img width="1094" height="358" alt="Image" src="https://github.com/user-attachments/assets/76ad36cf-75fe-41bb-80df-12c1a83130e6" />
 
