@@ -22,7 +22,6 @@
 - [Best Practices](#best-practices)
 - [Lessons Learned](#lessons-learned)
 - [Cost Impact](#cost-impact)
-- [Contributing](#contributing)
 
 ---
 
@@ -331,8 +330,10 @@ Name          Size    LastModified
 tempfile.txt  25      2026-03-16T20:36:20+00:00
 ```
 
-> **Screenshot Placeholder**
-> ![File Uploaded](./screenshots/05-blob-upload-verified.png)
+> **Screenshot**
+
+<img width="1091" height="715" alt="Image" src="https://github.com/user-attachments/assets/89ff56e9-f413-42f6-809a-d26e2943f312" />
+
 > *Caption: `tempfile.txt` (25 bytes) uploaded and visible in `nautilus-container28249`.*
 
 ---
@@ -623,32 +624,3 @@ The `--query "policy.rules[?name=='nautilus-del-rule']"` pattern is far more rel
 > Actual savings vary based on blob ingestion rate, average blob size, and access patterns. Use the Azure Pricing Calculator with the `Standard_LRS` tier in `East US` for precise estimates.
 
 ---
-
-## Contributing
-
-1. Fork this repository
-2. Create a feature branch: `git checkout -b feature/lifecycle-enhancement`
-3. Commit your changes: `git commit -m "feat: add archive tier rule before deletion"`
-4. Push to the branch: `git push origin feature/lifecycle-enhancement`
-5. Open a Pull Request with a description of the change and its business justification
-
----
-
-## License
-
-This project is licensed under the MIT License. See `LICENSE` for details.
-
----
-
-*Maintained by the Nautilus DevOps Team | Last updated: March 2026*
-
-
-
-
-<img width="1091" height="715" alt="Image" src="https://github.com/user-attachments/assets/89ff56e9-f413-42f6-809a-d26e2943f312" />
-
-<img width="1091" height="715" alt="Image" src="https://github.com/user-attachments/assets/0c263d32-b3de-46d2-871c-4c9125534936" />
-
-
-
-
