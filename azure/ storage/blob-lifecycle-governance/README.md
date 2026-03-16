@@ -112,14 +112,7 @@ core        2.67.0
 
 ### Phase 1: Authentication and Subscription Verification
 
-#### Step 1.1 - Log in to Azure
-
-```bash
-az login -u "kk_lab_user_main-cacd4dc2b7844376@azurefreekmlprod.onmicrosoft.com" \
-         -p "J$4C7#T9"
-```
-
-#### Step 1.2 - List and verify available subscriptions
+#### Step 1.1 - List and verify available subscriptions
 
 ```bash
 az account list --output table
@@ -132,7 +125,7 @@ Name             CloudName    SubscriptionId                        TenantId    
 Azure Free Labs  AzureCloud   f0c3bcdd-5ce2-4fa0-8cf3-41559747512b  54c1a2d3-d100-453c-9636-3a109eb45552  Enabled  True
 ```
 
-#### Step 1.3 - Confirm the active account context
+#### Step 1.2 - Confirm the active account context
 
 ```bash
 az account show --output table
@@ -145,7 +138,7 @@ EnvironmentName    HomeTenantId                          IsDefault    Name      
 AzureCloud         54c1a2d3-d100-453c-9636-3a109eb45552  True         Azure Free Labs  Enabled  54c1a2d3-d100-453c-9636-3a109eb45552
 ```
 
-#### Step 1.4 - Explicitly set the target subscription
+#### Step 1.3 - Explicitly set the target subscription
 
 ```bash
 az account set --subscription "f0c3bcdd-5ce2-4fa0-8cf3-41559747512b"
