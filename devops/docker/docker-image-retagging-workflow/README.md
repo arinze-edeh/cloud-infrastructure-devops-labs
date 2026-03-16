@@ -93,7 +93,10 @@ Warning: Permanently added 'stapp03' (ED25519) to the list of known hosts.
 
 Enter the password for user `banner` when prompted.
 
-> **[SCREENSHOT-01]**
+> **SCREENSHOT**
+
+<img width="1032" height="499" alt="Image" src="https://github.com/user-attachments/assets/deb54cf1-db63-440a-8989-55b9bc3c3aad" />
+
 > *Jump Host terminal showing successful SSH connection to `stapp03`, host key acceptance prompt, and password prompt.*
 
 Confirm you are on the correct host and logged in as the correct user:
@@ -116,8 +119,13 @@ whoami
 banner
 ```
 
-> **[SCREENSHOT-02]**
+> **SCREENSHOT**
+
+<img width="1034" height="443" alt="Image" src="https://github.com/user-attachments/assets/39ab8510-8f2b-4ea2-82cd-8f2b2c04a5d3" />
+
 > *Terminal output confirming hostname as `stapp03` and current user as `banner`.*
+
+
 
 ---
 
@@ -344,9 +352,9 @@ sudo docker inspect busybox:musl
 
 ---
 
-<img width="1032" height="499" alt="Image" src="https://github.com/user-attachments/assets/deb54cf1-db63-440a-8989-55b9bc3c3aad" />
 
-<img width="1034" height="443" alt="Image" src="https://github.com/user-attachments/assets/39ab8510-8f2b-4ea2-82cd-8f2b2c04a5d3" />
+
+
 
 <img width="1026" height="860" alt="Image" src="https://github.com/user-attachments/assets/334ab182-7fb1-47d2-9e34-e59cc1a49886" />
 
