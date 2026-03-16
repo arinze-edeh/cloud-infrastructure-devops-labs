@@ -417,8 +417,16 @@ az storage account management-policy create \
 }
 ```
 
-> **Screenshot Placeholder**
-> ![Lifecycle Policy Applied](./screenshots/06-lifecycle-policy-applied.png)
+> **Screenshot**
+
+<img width="1094" height="659" alt="Image" src="https://github.com/user-attachments/assets/2b98438b-edeb-4c58-8060-f4f94f83c188" />
+
+<img width="1092" height="866" alt="Image" src="https://github.com/user-attachments/assets/c223fb54-ea18-4ba4-bc45-49dbcfda8695" />
+
+<img width="1088" height="843" alt="Image" src="https://github.com/user-attachments/assets/1e5f2ae9-e482-4ca2-9651-377173cd4933" />
+
+<img width="1098" height="613" alt="Image" src="https://github.com/user-attachments/assets/cc198d6e-c8c0-4434-ab60-9fa4963db521" />
+
 > *Caption: Management policy `nautilus-del-rule` successfully applied to storage account.*
 
 ---
@@ -649,12 +657,6 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 
 <img width="1091" height="715" alt="Image" src="https://github.com/user-attachments/assets/0c263d32-b3de-46d2-871c-4c9125534936" />
 
-<img width="1094" height="659" alt="Image" src="https://github.com/user-attachments/assets/2b98438b-edeb-4c58-8060-f4f94f83c188" />
 
-<img width="1092" height="866" alt="Image" src="https://github.com/user-attachments/assets/c223fb54-ea18-4ba4-bc45-49dbcfda8695" />
-
-<img width="1088" height="843" alt="Image" src="https://github.com/user-attachments/assets/1e5f2ae9-e482-4ca2-9651-377173cd4933" />
-
-<img width="1098" height="613" alt="Image" src="https://github.com/user-attachments/assets/cc198d6e-c8c0-4434-ab60-9fa4963db521" />
 
 
