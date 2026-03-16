@@ -197,7 +197,11 @@ Key indicators of a successful pull:
 * `Status: Downloaded newer image for busybox:musl` is confirmed
 * The fully qualified image reference `docker.io/library/busybox:musl` is displayed
 
-> **[SCREENSHOT-04]**
+> **SCREENSHOT**
+
+
+<img width="1036" height="426" alt="Image" src="https://github.com/user-attachments/assets/828a5ccf-84a2-44c7-a595-e686b49d1f6c" />
+
 > *Terminal output of `sudo docker pull busybox:musl` showing layer download, SHA256 digest `sha256:19b6466...`, and `Status: Downloaded newer image` confirmation.*
 
 ---
@@ -212,7 +216,10 @@ sudo docker tag busybox:musl busybox:blog
 
 A successful tag operation produces no terminal output. The absence of an error message confirms the tag was created successfully.
 
-> **[SCREENSHOT-05]**
+> **SCREENSHOT**
+
+<img width="1036" height="426" alt="Image" src="https://github.com/user-attachments/assets/828a5ccf-84a2-44c7-a595-e686b49d1f6c" />
+
 > *Terminal showing the `docker tag` command executed with no error output, confirming silent success behavior.*
 
 ---
@@ -239,7 +246,10 @@ busybox      musl      0188a8de47ca   17 months ago   1.51MB
 * [ ] Both tags display the **same IMAGE ID** (`0188a8de47ca`)
 * [ ] Both tags reflect the **same SIZE** (`1.51MB`)
 
-> **[SCREENSHOT-06]**
+> **SCREENSHOT**
+
+<img width="1036" height="426" alt="Image" src="https://github.com/user-attachments/assets/828a5ccf-84a2-44c7-a595-e686b49d1f6c" />
+
 > *Terminal output of `sudo docker images busybox` showing both `busybox:blog` and `busybox:musl` entries with identical IMAGE ID `0188a8de47ca` and SIZE `1.51MB`, confirming a successful re-tag.*
 
 ---
@@ -354,10 +364,3 @@ sudo docker inspect busybox:musl
 ```
 
 ---
-
-
-
-
-
-
-<img width="1036" height="426" alt="Image" src="https://github.com/user-attachments/assets/828a5ccf-84a2-44c7-a595-e686b49d1f6c" />
