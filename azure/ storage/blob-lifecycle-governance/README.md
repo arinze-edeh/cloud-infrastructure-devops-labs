@@ -205,8 +205,17 @@ Name               Location    SKU           State
 nautilusstor28249  eastus      Standard_LRS  Succeeded
 ```
 
-> **Screenshot Placeholder**
-> ![Storage Account Created](./screenshots/03-storage-account-created.png)
+> **Screenshots**
+
+<img width="1088" height="328" alt="Image" src="https://github.com/user-attachments/assets/937ed68f-6bfd-4ec7-b87c-f97b9f2f920c" />
+<img width="1093" height="841" alt="Image" src="https://github.com/user-attachments/assets/a8938fa5-77ad-4112-a701-3a6164c8e2a1" />
+
+<img width="1092" height="865" alt="Image" src="https://github.com/user-attachments/assets/58671e57-9eca-4d00-9c8c-4cc2a8434e06" />
+
+<img width="1099" height="630" alt="Image" src="https://github.com/user-attachments/assets/d56c39d3-6ce7-4c59-a630-e6b3e88d494c" />
+
+<img width="1090" height="614" alt="Image" src="https://github.com/user-attachments/assets/8f2cbb85-5269-4a1e-b559-9f070f243932" />
+
 > *Caption: Storage account `nautilusstor28249` provisioned in East US with Standard_LRS SKU.*
 
 ---
@@ -634,13 +643,7 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 
 <img width="1094" height="358" alt="Image" src="https://github.com/user-attachments/assets/76ad36cf-75fe-41bb-80df-12c1a83130e6" />
 
-<img width="1093" height="841" alt="Image" src="https://github.com/user-attachments/assets/a8938fa5-77ad-4112-a701-3a6164c8e2a1" />
 
-<img width="1092" height="865" alt="Image" src="https://github.com/user-attachments/assets/58671e57-9eca-4d00-9c8c-4cc2a8434e06" />
-
-<img width="1099" height="630" alt="Image" src="https://github.com/user-attachments/assets/d56c39d3-6ce7-4c59-a630-e6b3e88d494c" />
-
-<img width="1090" height="614" alt="Image" src="https://github.com/user-attachments/assets/8f2cbb85-5269-4a1e-b559-9f070f243932" />
 
 <img width="1095" height="750" alt="Image" src="https://github.com/user-attachments/assets/8c2e40c4-fa12-4a1c-bd31-32ce49f836db" />
 
