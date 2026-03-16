@@ -130,8 +130,9 @@ aws sts get-caller-identity
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> ***[Screenshot: Terminal showing `aws sts get-caller-identity` returning Account ID `573434484730` and correct ARN]***
+>**SCREENSHOT: Terminal showing `aws sts get-caller-identity` returning Account ID `573434484730` and correct ARN**
+
+<img width="1035" height="833" alt="Image" src="https://github.com/user-attachments/assets/7f31382e-0055-4ca8-ac57-008390dea81b" />
 
 ---
 
@@ -488,7 +489,7 @@ aws kms describe-key \
 > *This documentation follows enterprise runbook standards. All commands are production-tested. Screenshot placeholders must be replaced with actual terminal captures before publishing to internal wikis or compliance repositories.*
 
 
-<img width="1035" height="833" alt="Image" src="https://github.com/user-attachments/assets/7f31382e-0055-4ca8-ac57-008390dea81b" />
+
 
 <img width="1031" height="770" alt="Image" src="https://github.com/user-attachments/assets/ede277e2-e580-4a44-8084-673f32cb1d66" />
 
