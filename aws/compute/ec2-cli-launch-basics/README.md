@@ -160,7 +160,7 @@ EXPECTED:
 - Instance ID returned
 - Instance state = pending → running
 
-📸 Screenshot Placeholder:
+📸 Screenshot:
 <img width="1030" height="859" alt="image" src="https://github.com/user-attachments/assets/e3083489-1a78-45f6-be54-0ae227667f25" />
 
 ---
