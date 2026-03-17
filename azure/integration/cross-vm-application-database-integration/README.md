@@ -352,10 +352,13 @@ Expected output:
 2 rows in set (0.00 sec)
 ```
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Terminal showing SHOW DATABASES and SHOW GRANTS output confirming devops_db and devops_user ]
-```
+**Screenshot:**
+
+<img width="1028" height="747" alt="Image" src="https://github.com/user-attachments/assets/3053a2b3-463f-4abf-bf21-aa6eec18e83f" />
+
+<img width="1033" height="666" alt="Image" src="https://github.com/user-attachments/assets/5f3cca2f-82c0-4ed9-ac49-fb559d7a4ada" />
+
+>Terminal showing SHOW DATABASES and SHOW GRANTS output confirming devops_db and devops_user
 
 ### 2.8 Exit the MySQL Shell
 
@@ -681,10 +684,6 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 
 
 
-
-<img width="1028" height="747" alt="Image" src="https://github.com/user-attachments/assets/3053a2b3-463f-4abf-bf21-aa6eec18e83f" />
-
-<img width="1033" height="666" alt="Image" src="https://github.com/user-attachments/assets/5f3cca2f-82c0-4ed9-ac49-fb559d7a4ada" />
 
 <img width="1032" height="590" alt="Image" src="https://github.com/user-attachments/assets/6dab2141-8b9b-4892-925c-753651ad3b95" />
 
