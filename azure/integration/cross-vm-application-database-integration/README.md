@@ -207,10 +207,11 @@ After the rule is saved, the Inbound port rules table should show:
 | 300 | SSH | 22 | TCP | Any | Any | Allow |
 | 310 | MySQL_3306 | 3306 | TCP | Any | Any | Allow |
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Network settings showing MySQL_3306 rule successfully added at priority 310 ]
-```
+**Screenshot:**
+
+<img width="1919" height="950" alt="Image" src="https://github.com/user-attachments/assets/72b4f4af-1ef3-4efd-b97e-b5160e903ead" />
+
+>Network settings showing MySQL_3306 rule successfully added at priority 310
 
 ---
 
@@ -698,7 +699,7 @@ Date: March 17, 2026
 <img width="1919" height="948" alt="Image" src="https://github.com/user-attachments/assets/cd04811e-643b-4341-abb7-1e4e935db3a5" />
 
 
-<img width="1919" height="950" alt="Image" src="https://github.com/user-attachments/assets/72b4f4af-1ef3-4efd-b97e-b5160e903ead" />
+
 
 <img width="1033" height="825" alt="Image" src="https://github.com/user-attachments/assets/52f24e4e-0b56-4bef-ab1b-87d06883df66" />
 
