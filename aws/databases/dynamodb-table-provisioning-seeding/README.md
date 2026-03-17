@@ -597,34 +597,6 @@ Running `aws --version`, `aws configure list`, and `aws dynamodb list-tables` be
 
 ---
 
-## Repository Structure
-
-```
-.
-|-- README.md
-|-- screenshots/
-|   |-- 01-aws-version.png
-|   |-- 02-aws-configure-list.png
-|   |-- 03-list-tables-empty.png
-|   |-- 04-create-table-creating.png
-|   |-- 05-wait-table-exists.png
-|   |-- 06-describe-table-active.png
-|   |-- 07-put-item-task1.png
-|   |-- 08-put-item-task2.png
-|   |-- 09-get-item-task1-verified.png
-|   `-- 10-get-item-task2-verified.png
-```
-
----
-
-## Author
-
-**Nautilus DevOps Team**
-Region: `us-east-1`
-Environment: AWS Cloud (Linux)
-
----
-
 *Built and verified on Amazon Web Services. All commands executed and validated against live AWS infrastructure.*
 
 
