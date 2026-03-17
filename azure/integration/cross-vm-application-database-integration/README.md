@@ -352,7 +352,7 @@ Expected output:
 2 rows in set (0.00 sec)
 ```
 
-**Screenshot:**
+**Screenshots:**
 
 <img width="1028" height="747" alt="Image" src="https://github.com/user-attachments/assets/3053a2b3-463f-4abf-bf21-aa6eec18e83f" />
 
@@ -380,10 +380,11 @@ LISTEN   0   80   :::3306   :::*   users:(("mysqld",pid=2051,fd=20))
 
 This confirms MySQL is actively listening for remote connections on all interfaces.
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Terminal showing LISTEN on :::3306 confirming MySQL network binding ]
-```
+**Screenshot:**
+
+<img width="1028" height="582" alt="Image" src="https://github.com/user-attachments/assets/d6ecef60-0bd2-47b0-bc8f-1b90961e2d9c" />
+
+>Terminal showing LISTEN on :::3306 confirming MySQL network binding
 
 ### 2.10 Exit the MySQL VM
 
@@ -687,7 +688,7 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 
 <img width="1032" height="590" alt="Image" src="https://github.com/user-attachments/assets/6dab2141-8b9b-4892-925c-753651ad3b95" />
 
-<img width="1028" height="582" alt="Image" src="https://github.com/user-attachments/assets/d6ecef60-0bd2-47b0-bc8f-1b90961e2d9c" />
+
 
 <img width="1029" height="649" alt="Image" src="https://github.com/user-attachments/assets/39d87478-a37d-4c9a-8665-e64b0389ba67" />
 
