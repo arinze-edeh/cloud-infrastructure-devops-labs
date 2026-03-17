@@ -298,9 +298,11 @@ aws dynamodb describe-table \
 
 **Result:** Table status confirmed as `ACTIVE`. Safe to proceed with data insertion.
 
-> **Screenshot Placeholder**
-> ![DynamoDB Table ACTIVE](./screenshots/06-describe-table-active.png)
-> *Caption: Single-field query output showing "ACTIVE" confirming the table is fully ready for read and write operations*
+> **Screenshot**
+
+<img width="1032" height="238" alt="Image" src="https://github.com/user-attachments/assets/0f266a69-5775-426f-9e76-db805a0a04ae" />
+
+> *Single-field query output showing "ACTIVE" confirming the table is fully ready for read and write operations*
 
 ---
 
@@ -615,7 +617,7 @@ Running `aws --version`, `aws configure list`, and `aws dynamodb list-tables` be
 
 
 
-<img width="1032" height="238" alt="Image" src="https://github.com/user-attachments/assets/0f266a69-5775-426f-9e76-db805a0a04ae" />
+
 
 <img width="1027" height="428" alt="Image" src="https://github.com/user-attachments/assets/93dced58-126c-471a-b3d1-5ae8d18d4837" />
 
