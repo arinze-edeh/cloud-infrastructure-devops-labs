@@ -173,9 +173,11 @@ aws dynamodb list-tables --region us-east-1
 
 **Result:** DynamoDB endpoint reachable. No existing tables present. Environment is clean for provisioning.
 
-> **Screenshot Placeholder**
-> ![DynamoDB List Tables Empty](./screenshots/03-list-tables-empty.png)
-> *Caption: Empty TableNames array confirms a clean DynamoDB environment with no pre-existing tables*
+> **Screenshot**
+
+<img width="1030" height="330" alt="Image" src="https://github.com/user-attachments/assets/2b710b78-38af-4812-a10a-343bc14e0871" />
+
+> *Empty TableNames array confirms a clean DynamoDB environment with no pre-existing tables*
 
 ---
 
@@ -603,7 +605,7 @@ Running `aws --version`, `aws configure list`, and `aws dynamodb list-tables` be
 
 
 
-<img width="1030" height="330" alt="Image" src="https://github.com/user-attachments/assets/2b710b78-38af-4812-a10a-343bc14e0871" />
+
 
 <img width="1030" height="790" alt="Image" src="https://github.com/user-attachments/assets/79dddf71-f38e-4dd1-b9fb-1e66cb6279b9" />
 
