@@ -1,7 +1,5 @@
 # Git Repository Fork - Gitea (Nautilus Project)
 
-> **Enterprise Git Workflow Documentation** | Nautilus Project Team | Gitea SCM Platform
-
 ---
 
 ## Table of Contents
@@ -141,7 +139,7 @@ On the **New Repository Fork** dialog:
 
 Click **Fork Repository** to confirm.
 
-> 📌 **Screenshot Placeholder**
+> 📌 **Screenshot**
 >
 > <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/c431944a-7c15-45f6-8386-c394c90b836e" />
 > *Figure 4a: `sarah/story-blog` repository page. Fork count is 0. The Fork button is visible in the top-right action bar.*
@@ -165,7 +163,7 @@ Verify the following indicators:
 - [ ] `New Pull Request` button is visible (confirms PR workflow is enabled)
 - [ ] Repository contains expected files: `frogs-and-ox.txt`, `lion-and-mouse.txt`
 
-> 📌 **Screenshot Placeholder**
+> 📌 **Screenshot**
 >
 > <img width="1919" height="950" alt="image" src="https://github.com/user-attachments/assets/4efb9d53-03fa-4eaf-b4b5-39f7e1154146" />
 > *Figure 5: Successfully forked repository `jon/story-blog`. The fork origin `sarah/story-blog` is confirmed in the subtitle. All source commits and files are present.*
@@ -237,16 +235,7 @@ Verify the following indicators:
 | KodeKloud Nautilus Project Labs | https://kodekloud.com |
 
 ---
-
-> **Document Owner:** Nautilus Infrastructure Team
-> **Last Updated:** 2026-03-01
 > **Gitea Version Tested:** v1.14.7
 > **Status:** ✅ Resolved
-
-
-
-
-
-
 
 
