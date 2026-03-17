@@ -509,10 +509,13 @@ Save and exit:
 * Press `CTRL+O` then `Enter` to write the file
 * Press `CTRL+X` to exit nano
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: nano editor showing the updated db_test.php with correct IP, database, and credentials ]
-```
+**Screenshots:**
+
+<img width="1062" height="872" alt="Image" src="https://github.com/user-attachments/assets/8d83372d-1962-476b-b3a4-8b9aca1d477c" />
+
+<img width="1035" height="416" alt="Image" src="https://github.com/user-attachments/assets/d8105c3e-6698-470f-81ed-8072b2dc92c5" />
+
+>nano editor showing the updated db_test.php with correct IP, database, and credentials
 
 ### 3.5 Verify the Saved File
 
@@ -701,8 +704,6 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 
 
 
-<img width="1062" height="872" alt="Image" src="https://github.com/user-attachments/assets/8d83372d-1962-476b-b3a4-8b9aca1d477c" />
 
-<img width="1035" height="416" alt="Image" src="https://github.com/user-attachments/assets/d8105c3e-6698-470f-81ed-8072b2dc92c5" />
 
 <img width="1024" height="808" alt="Image" src="https://github.com/user-attachments/assets/cc029bc8-e6b7-4195-8365-f9c08a9f0ab2" />
