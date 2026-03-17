@@ -581,10 +581,11 @@ http://172.173.241.148/db_test.php
 Connected successfully
 ```
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Browser showing "Connected successfully" at http://172.173.241.148/db_test.php ]
-```
+**Screenshot:**
+
+<img width="1919" height="1023" alt="Image" src="https://github.com/user-attachments/assets/5b1bfabb-c04e-4de3-b3e5-bbe5abbee353" />
+
+>Browser showing "Connected successfully" at http://172.173.241.148/db_test.php
 
 ### 4.2 Command Line Test (Alternative)
 
@@ -683,10 +684,6 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 ---
 
 
-
-
-
-
 <img width="1032" height="330" alt="Image" src="https://github.com/user-attachments/assets/6c13cd55-263d-45d5-a69b-b103b72c5fcf" />
 
 <img width="1919" height="949" alt="Image" src="https://github.com/user-attachments/assets/115a94e6-95a1-49ec-90b6-afeb7115c7ff" />
@@ -706,5 +703,3 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 <img width="1035" height="416" alt="Image" src="https://github.com/user-attachments/assets/d8105c3e-6698-470f-81ed-8072b2dc92c5" />
 
 <img width="1024" height="808" alt="Image" src="https://github.com/user-attachments/assets/cc029bc8-e6b7-4195-8365-f9c08a9f0ab2" />
-
-<img width="1919" height="1023" alt="Image" src="https://github.com/user-attachments/assets/5b1bfabb-c04e-4de3-b3e5-bbe5abbee353" />
