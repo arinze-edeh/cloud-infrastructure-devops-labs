@@ -52,11 +52,11 @@ A Nautilus developer made iterative changes inside a running container and neede
 
 Before executing this task, confirm the following:
 
-- [ ] You have SSH access to `jump-host` as user `thor`
-- [ ] Docker is installed and the daemon is running on `stapp02`
-- [ ] The container `ubuntu_latest` is in a **running** state on `stapp02`
-- [ ] Your user (`steve`) has `sudo` privileges on `stapp02`
-- [ ] No naming conflict exists for the image `beta:xfusion` on `stapp02`
+- ✅ You have SSH access to `jump-host` as user `thor`
+- ✅ Docker is installed and the daemon is running on `stapp02`
+- ✅ The container `ubuntu_latest` is in a **running** state on `stapp02`
+- ✅ Your user (`steve`) has `sudo` privileges on `stapp02`
+- ✅ No naming conflict exists for the image `beta:xfusion` on `stapp02`
 
 ---
 
