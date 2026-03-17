@@ -149,6 +149,7 @@ secret_key     ****************eaLu shared-credentials-file
 <img width="1036" height="412" alt="Image" src="https://github.com/user-attachments/assets/f7466037-5d60-4cf1-b05d-6d1c8db0ec5b" />
 
 > *Terminal output confirming aws-cli/1.40.19 on Python/3.10.17 running on Linux/6.8.0-90-generic*
+
 > *Credentials validated from shared-credentials-file with region set to us-east-1*
 
 
