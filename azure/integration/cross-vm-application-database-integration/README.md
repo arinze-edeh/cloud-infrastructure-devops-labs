@@ -569,10 +569,11 @@ apache2.service - The Apache HTTP Server
    Active: active (running) since Tue 2026-03-17 01:46:49 UTC; 43min ago
 ```
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Terminal showing apache2 service status as active (running) ]
-```
+**Screenshot:**
+
+<img width="1024" height="808" alt="Image" src="https://github.com/user-attachments/assets/cc029bc8-e6b7-4195-8365-f9c08a9f0ab2" />
+
+>Terminal showing apache2 service status as active (running)
 
 ---
 
@@ -693,16 +694,3 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 | Size not available in zone error | VM size not supported in selected zone | Change Availability Zone (e.g., Zone 1 to Zone 2) |
 
 ---
-
-
-
-
-
-
-<img width="1029" height="669" alt="Image" src="https://github.com/user-attachments/assets/fd9f5430-829e-4c5d-a04c-f8f4902473dc" />
-
-
-
-
-
-<img width="1024" height="808" alt="Image" src="https://github.com/user-attachments/assets/cc029bc8-e6b7-4195-8365-f9c08a9f0ab2" />
