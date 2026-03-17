@@ -416,10 +416,17 @@ ssh devops_admin@172.173.241.148
 
 > **Note:** If you encounter `Permission denied (publickey)`, the VM was provisioned with SSH key authentication. Use the Azure Portal **Connect** page and click **"Reset password or keys"** to set a password for `devops_admin`, then retry the SSH connection.
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Azure Portal Connect page showing Reset password or keys option ]
-```
+**Screenshot :**
+
+<img width="1032" height="330" alt="Image" src="https://github.com/user-attachments/assets/6c13cd55-263d-45d5-a69b-b103b72c5fcf" />
+
+<img width="1919" height="949" alt="Image" src="https://github.com/user-attachments/assets/115a94e6-95a1-49ec-90b6-afeb7115c7ff" />
+
+<img width="1919" height="950" alt="Image" src="https://github.com/user-attachments/assets/632e2ba4-6899-4537-bbb2-0b0efee10348" />
+
+<img width="1918" height="949" alt="Image" src="https://github.com/user-attachments/assets/b9984872-ffd7-4fb3-9f7e-1d352e4c8964" />
+
+>Azure Portal Connect page showing Reset password or keys option
 
 After the password reset, retry:
 
@@ -684,13 +691,7 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 ---
 
 
-<img width="1032" height="330" alt="Image" src="https://github.com/user-attachments/assets/6c13cd55-263d-45d5-a69b-b103b72c5fcf" />
 
-<img width="1919" height="949" alt="Image" src="https://github.com/user-attachments/assets/115a94e6-95a1-49ec-90b6-afeb7115c7ff" />
-
-<img width="1919" height="950" alt="Image" src="https://github.com/user-attachments/assets/632e2ba4-6899-4537-bbb2-0b0efee10348" />
-
-<img width="1918" height="949" alt="Image" src="https://github.com/user-attachments/assets/b9984872-ffd7-4fb3-9f7e-1d352e4c8964" />
 
 <img width="1035" height="800" alt="Image" src="https://github.com/user-attachments/assets/6e348919-2a97-4070-89cf-038b3ac59f9e" />
 
