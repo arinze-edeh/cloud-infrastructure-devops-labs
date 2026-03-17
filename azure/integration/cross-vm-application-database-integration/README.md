@@ -473,9 +473,10 @@ The pre-existing file contains placeholder values that must be replaced:
 ```
 
 **Screenshot:**
-```
-[ SCREENSHOT: Terminal showing original db_test.php with placeholder values ]
-```
+
+<img width="1029" height="510" alt="Image" src="https://github.com/user-attachments/assets/b04c2d79-f366-44fe-9d3a-49867d1ad228" />
+
+>Terminal showing original db_test.php with placeholder values
 
 ### 3.4 Edit db_test.php with Correct Credentials
 
@@ -698,7 +699,7 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 
 <img width="1029" height="669" alt="Image" src="https://github.com/user-attachments/assets/fd9f5430-829e-4c5d-a04c-f8f4902473dc" />
 
-<img width="1029" height="510" alt="Image" src="https://github.com/user-attachments/assets/b04c2d79-f366-44fe-9d3a-49867d1ad228" />
+
 
 <img width="1062" height="872" alt="Image" src="https://github.com/user-attachments/assets/8d83372d-1962-476b-b3a4-8b9aca1d477c" />
 
