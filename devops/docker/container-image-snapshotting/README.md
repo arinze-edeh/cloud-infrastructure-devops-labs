@@ -194,12 +194,11 @@ sha256:cc043da0e517bcaf66af1d42e80bfcb40d7797013aab72af354f1cbcba3f191f
 
 > **If no output is returned or an error appears**, do not proceed to Phase 4. Revisit Phase 2 to confirm the container state.
 
-**Screenshot Placeholder:**
+**Screenshot:**
 
-```
-[ SCREENSHOT 3: Terminal showing the docker commit command and the returned
-  SHA256 digest ]
-```
+<img width="1027" height="659" alt="image" src="https://github.com/user-attachments/assets/12cde6e9-4eec-4a59-b57c-273479e72b3f" />
+
+>Terminal showing the docker commit command and the returned SHA256 digest
 
 ---
 
@@ -228,12 +227,11 @@ beta         xfusion   cc043da0e517   15 seconds ago   138MB
 
 > **If the output returns only headers with no rows**, the commit in Phase 3 did not succeed. Re-run Phase 3.
 
-**Screenshot Placeholder:**
+**Screenshot:**
 
-```
-[ SCREENSHOT 4: Terminal showing sudo docker images beta:xfusion output
-  with REPOSITORY "beta", TAG "xfusion", size 138MB ]
-```
+<img width="1027" height="659" alt="image" src="https://github.com/user-attachments/assets/12cde6e9-4eec-4a59-b57c-273479e72b3f" />
+
+>Terminal showing sudo docker images beta:xfusion output with REPOSITORY "beta", TAG "xfusion", size 138MB
 
 ---
 
@@ -274,12 +272,11 @@ Expected:
 jump-host
 ```
 
-**Screenshot Placeholder:**
+**Screenshot:**
 
-```
-[ SCREENSHOT 5: Terminal showing exit logout message, connection closed,
-  then whoami "thor" and hostname "jump-host" ]
-```
+<img width="1030" height="815" alt="image" src="https://github.com/user-attachments/assets/23eda709-20b9-49fd-a32e-65e276c159c4" />
+
+>Terminal showing exit logout message, connection closed, then whoami "thor" and hostname "jump-host"
 
 ---
 
@@ -402,9 +399,3 @@ hostname
 ```
 
 ---
-
-
-
-
-<img width="1027" height="659" alt="image" src="https://github.com/user-attachments/assets/12cde6e9-4eec-4a59-b57c-273479e72b3f" />
-<img width="1030" height="815" alt="image" src="https://github.com/user-attachments/assets/23eda709-20b9-49fd-a32e-65e276c159c4" />
