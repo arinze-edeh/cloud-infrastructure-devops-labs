@@ -108,10 +108,6 @@ The **Nautilus DevOps team** required integration of a PHP application hosted on
 
 <img width="1919" height="949" alt="Image" src="https://github.com/user-attachments/assets/fb67e00a-0c8a-4e9a-9531-32b90c3ddf19" />
 
-<img width="1919" height="951" alt="Image" src="https://github.com/user-attachments/assets/53733321-d3ed-4c3c-a888-ace6ae8fa7af" />
-
-<img width="1919" height="948" alt="Image" src="https://github.com/user-attachments/assets/784fc05b-dbaa-4bcb-a5a0-cb2555c2edd0" />
-
 >Azure portal VM creation Basics tab with all fields populated 
 
 ### 1.2 Configure the Disks Tab
@@ -127,10 +123,11 @@ No changes are required on the Disks tab. Accept all defaults:
 
 Click **"Next: Networking >"**
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Disks tab with default settings ]
-```
+**Screenshot:**
+
+<img width="1919" height="951" alt="Image" src="https://github.com/user-attachments/assets/53733321-d3ed-4c3c-a888-ace6ae8fa7af" />
+
+>Disks tab with default settings
 
 ### 1.3 Configure the Networking Tab
 
@@ -147,10 +144,11 @@ Click **"Next: Networking >"**
 
 Click **"Review + create"** then **"Create"** to begin deployment.
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Networking tab with SSH (22) selected as the only inbound port ]
-```
+**Screenshot:**
+
+<img width="1919" height="948" alt="Image" src="https://github.com/user-attachments/assets/784fc05b-dbaa-4bcb-a5a0-cb2555c2edd0" />
+
+>Networking tab with SSH (22) selected as the only inbound port
 
 ### 1.4 Confirm Deployment Completion
 
@@ -158,10 +156,12 @@ Wait for the deployment to complete. You will see the confirmation screen:
 
 > **"Your deployment is complete"**
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Deployment complete screen showing devops-mysql-vm ]
-```
+**Screenshot:**
+
+
+
+>Deployment complete screen showing devops-mysql-vm
+
 
 Click **"Go to resource"** to open the VM overview page.
 
