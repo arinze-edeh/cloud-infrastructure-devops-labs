@@ -1,5 +1,4 @@
 # Git Branch Management on Remote Storage Server
-> **Enterprise DevOps Runbook** | Stratos DC | Nautilus Project
 
 ---
 
@@ -305,7 +304,7 @@ This confirms:
 - All four refs point to the same commit `cd0e1cc`
 - The merge was a clean fast-forward with no divergence
 
-***Screenshot Placeholder: git log --oneline --all --graph showing all four refs aligned***
+***Screenshot: git log --oneline --all --graph showing all four refs aligned***
 
 <img width="1036" height="745" alt="image" src="https://github.com/user-attachments/assets/08083c1c-45c1-4d37-825c-0fbdf3078f1a" />
 
