@@ -682,14 +682,6 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 ---
 
 
-
-
-
-
-<img width="1032" height="590" alt="Image" src="https://github.com/user-attachments/assets/6dab2141-8b9b-4892-925c-753651ad3b95" />
-
-
-
 <img width="1029" height="649" alt="Image" src="https://github.com/user-attachments/assets/39d87478-a37d-4c9a-8665-e64b0389ba67" />
 
 <img width="1919" height="946" alt="Image" src="https://github.com/user-attachments/assets/025962bc-5cfb-43aa-b026-5ba42f9c48a9" />
