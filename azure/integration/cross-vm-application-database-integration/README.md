@@ -20,7 +20,6 @@
 * [Best Practices](#best-practices)
 * [Lessons Learned](#lessons-learned)
 * [Troubleshooting Reference](#troubleshooting-reference)
-* [Authors](#authors)
 
 ---
 
