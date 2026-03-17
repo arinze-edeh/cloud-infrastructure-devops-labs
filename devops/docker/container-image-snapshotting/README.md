@@ -128,12 +128,11 @@ stapp02
 
 > **Why this matters:** Confirming identity before executing any Docker commands prevents accidental operations on the wrong server, a critical discipline in multi-server environments.
 
-**Screenshot Placeholder:**
+**Screenshot:**
 
-```
-[ SCREENSHOT 1: Terminal showing successful SSH login, whoami output "steve",
-  hostname output "stapp02" ]
-```
+<img width="1032" height="503" alt="image" src="https://github.com/user-attachments/assets/557c68d0-442f-4bdc-ac59-22e7e7157869" />
+
+>Terminal showing successful SSH login, whoami output "steve", hostname output "stapp02"
 
 ---
 
@@ -406,7 +405,7 @@ hostname
 ---
 
 
-<img width="1032" height="503" alt="image" src="https://github.com/user-attachments/assets/557c68d0-442f-4bdc-ac59-22e7e7157869" />
+
 <img width="1028" height="598" alt="image" src="https://github.com/user-attachments/assets/ca20e638-b666-46da-800a-77f2e1e8e36f" />
 <img width="1027" height="659" alt="image" src="https://github.com/user-attachments/assets/12cde6e9-4eec-4a59-b57c-273479e72b3f" />
 <img width="1030" height="815" alt="image" src="https://github.com/user-attachments/assets/23eda709-20b9-49fd-a32e-65e276c159c4" />
