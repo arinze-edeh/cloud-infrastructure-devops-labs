@@ -239,10 +239,11 @@ Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.11.0-1016-azure x86_64)
 devops_admin@devops-mysql-vm:~$
 ```
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Successful SSH login to devops-mysql-vm showing Ubuntu welcome banner ]
-```
+**Screenshot:**
+
+<img width="1033" height="825" alt="Image" src="https://github.com/user-attachments/assets/52f24e4e-0b56-4bef-ab1b-87d06883df66" />
+
+>Successful SSH login to devops-mysql-vm showing Ubuntu welcome banner
 
 ### 2.2 Access the MySQL Shell
 
@@ -676,32 +677,10 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 
 ---
 
-## Authors
-
-**Nautilus DevOps Team**
-Azure Infrastructure Integration Lab
-Date: March 17, 2026
-
----
-
-*This document covers an Azure cross-VM integration lab for educational and DevOps onboarding purposes. All credentials shown are lab-specific and must never be used in production environments.*
 
 
 
 
-
-<img width="1919" height="950" alt="Image" src="https://github.com/user-attachments/assets/08c95c05-390d-4247-9850-f3ebeb2af3d2" />
-
-<img width="1919" height="909" alt="Image" src="https://github.com/user-attachments/assets/70f715df-9334-4ad2-b094-062836b4610e" />
-
-
-
-<img width="1919" height="948" alt="Image" src="https://github.com/user-attachments/assets/cd04811e-643b-4341-abb7-1e4e935db3a5" />
-
-
-
-
-<img width="1033" height="825" alt="Image" src="https://github.com/user-attachments/assets/52f24e4e-0b56-4bef-ab1b-87d06883df66" />
 
 <img width="1034" height="864" alt="Image" src="https://github.com/user-attachments/assets/e1bcca8e-5efb-4a04-b2f9-44bdb79530cb" />
 
