@@ -245,9 +245,11 @@ aws dynamodb create-table \
 
 **Result:** Table creation initiated. `TableStatus: CREATING`. `TableArn` assigned. `BillingMode: PAY_PER_REQUEST` confirmed. `ReadCapacityUnits` and `WriteCapacityUnits` are `0` as expected for on-demand mode.
 
-> **Screenshot Placeholder**
-> ![DynamoDB Table Creating](./screenshots/04-create-table-creating.png)
-> *Caption: Full JSON response showing TableStatus CREATING with the assigned TableArn and PAY_PER_REQUEST billing*
+> **Screenshot**
+
+<img width="1030" height="790" alt="Image" src="https://github.com/user-attachments/assets/79dddf71-f38e-4dd1-b9fb-1e66cb6279b9" />
+
+> *Full JSON response showing TableStatus CREATING with the assigned TableArn and PAY_PER_REQUEST billing*
 
 ---
 
@@ -607,7 +609,7 @@ Running `aws --version`, `aws configure list`, and `aws dynamodb list-tables` be
 
 
 
-<img width="1030" height="790" alt="Image" src="https://github.com/user-attachments/assets/79dddf71-f38e-4dd1-b9fb-1e66cb6279b9" />
+
 
 <img width="1031" height="859" alt="Image" src="https://github.com/user-attachments/assets/4db339e5-ac7b-45f9-baf8-02174e4c6336" />
 
