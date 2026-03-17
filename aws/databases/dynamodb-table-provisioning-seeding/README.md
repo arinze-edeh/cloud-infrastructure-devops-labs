@@ -335,9 +335,13 @@ aws dynamodb put-item \
 
 **Result:** No output is the expected success response for `put-item`. AWS CLI returns nothing on a successful write. A non-zero exit code or an error message would indicate failure.
 
-> **Screenshot Placeholder**
-> ![Put Item Task 1](./screenshots/07-put-item-task1.png)
-> *Caption: Silent successful insertion of Task 1 with taskId "1" and status "completed"*
+> **Screenshot**
+
+
+<img width="1027" height="428" alt="Image" src="https://github.com/user-attachments/assets/93dced58-126c-471a-b3d1-5ae8d18d4837" />
+
+
+> *Silent successful insertion of Task 1 with taskId "1" and status "completed"*
 
 ---
 
@@ -368,9 +372,13 @@ aws dynamodb put-item \
 
 **Result:** Silent success. Task 2 persisted to DynamoDB.
 
-> **Screenshot Placeholder**
-> ![Put Item Task 2](./screenshots/08-put-item-task2.png)
-> *Caption: Silent successful insertion of Task 2 with taskId "2" and status "in-progress"*
+> **Screenshot**
+
+
+<img width="1027" height="428" alt="Image" src="https://github.com/user-attachments/assets/93dced58-126c-471a-b3d1-5ae8d18d4837" />
+
+
+> *Silent successful insertion of Task 2 with taskId "2" and status "in-progress"*
 
 ---
 
@@ -616,9 +624,5 @@ Running `aws --version`, `aws configure list`, and `aws dynamodb list-tables` be
 
 
 
-
-
-
-<img width="1027" height="428" alt="Image" src="https://github.com/user-attachments/assets/93dced58-126c-471a-b3d1-5ae8d18d4837" />
 
 <img width="1039" height="831" alt="Image" src="https://github.com/user-attachments/assets/1de9b9a1-4b48-4cd2-bc35-8dbb99a5db61" />
