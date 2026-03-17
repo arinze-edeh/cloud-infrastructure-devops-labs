@@ -192,10 +192,11 @@ Save this value. It will be referenced in all subsequent phases.
 
 4. Click **"Add"**
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Add inbound security rule panel with port 3306 configured ]
-```
+**Screenshot:**
+
+<img width="1919" height="955" alt="Image" src="https://github.com/user-attachments/assets/44d1ffdf-dee4-4adc-8631-7e37229931d9" />
+
+>Add inbound security rule panel with port 3306 configured
 
 ### 1.7 Verify NSG Rule Was Applied
 
@@ -696,7 +697,6 @@ Date: March 17, 2026
 
 <img width="1919" height="948" alt="Image" src="https://github.com/user-attachments/assets/cd04811e-643b-4341-abb7-1e4e935db3a5" />
 
-<img width="1919" height="955" alt="Image" src="https://github.com/user-attachments/assets/44d1ffdf-dee4-4adc-8631-7e37229931d9" />
 
 <img width="1919" height="950" alt="Image" src="https://github.com/user-attachments/assets/72b4f4af-1ef3-4efd-b97e-b5160e903ead" />
 
