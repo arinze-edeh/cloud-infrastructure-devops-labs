@@ -121,12 +121,6 @@ aws-cli/1.40.19 Python/3.10.17 Linux/6.8.0-90-generic botocore/1.38.20
 
 **Result:** AWS CLI v1.40.19 confirmed. Python 3.10.17 runtime confirmed. Botocore 1.38.20 confirmed.
 
-> **Screenshot**
-
-<img width="1036" height="412" alt="Image" src="https://github.com/user-attachments/assets/f7466037-5d60-4cf1-b05d-6d1c8db0ec5b" />
-
-> *Caption: Terminal output confirming aws-cli/1.40.19 on Python/3.10.17 running on Linux/6.8.0-90-generic*
-
 ---
 
 ### Step 1.2: Validate Credentials and Active Region
@@ -150,9 +144,13 @@ secret_key     ****************eaLu shared-credentials-file
 
 **Result:** Credentials sourced from `~/.aws/credentials`. Region `us-east-1` confirmed via `~/.aws/config`. No profile override active.
 
-> **Screenshot Placeholder**
-> ![AWS Configure List](./screenshots/02-aws-configure-list.png)
-> *Caption: Credentials validated from shared-credentials-file with region set to us-east-1*
+> **Screenshot**
+
+<img width="1036" height="412" alt="Image" src="https://github.com/user-attachments/assets/f7466037-5d60-4cf1-b05d-6d1c8db0ec5b" />
+
+> *Terminal output confirming aws-cli/1.40.19 on Python/3.10.17 running on Linux/6.8.0-90-generic*
+> *Credentials validated from shared-credentials-file with region set to us-east-1*
+
 
 ---
 
