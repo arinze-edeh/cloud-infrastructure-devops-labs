@@ -418,9 +418,11 @@ aws dynamodb get-item \
 - `description`: `"Learn DynamoDB"` confirmed
 - `status`: `"completed"` confirmed
 
-> **Screenshot Placeholder**
-> ![Get Item Task 1 Verified](./screenshots/09-get-item-task1-verified.png)
-> *Caption: Full item returned for taskId "1" with status "completed" confirmed*
+> **Screenshot**
+
+<img width="1039" height="831" alt="Image" src="https://github.com/user-attachments/assets/1de9b9a1-4b48-4cd2-bc35-8dbb99a5db61" />
+
+> *Full item returned for taskId "1" with status "completed" confirmed*
 
 ---
 
@@ -458,9 +460,11 @@ aws dynamodb get-item \
 - `description`: `"Build To-Do App"` confirmed
 - `status`: `"in-progress"` confirmed
 
-> **Screenshot Placeholder**
-> ![Get Item Task 2 Verified](./screenshots/10-get-item-task2-verified.png)
-> *Caption: Full item returned for taskId "2" with status "in-progress" confirmed*
+> **Screenshot**
+
+<img width="1039" height="831" alt="Image" src="https://github.com/user-attachments/assets/1de9b9a1-4b48-4cd2-bc35-8dbb99a5db61" />
+
+> *Full item returned for taskId "2" with status "in-progress" confirmed*
 
 ---
 
@@ -614,15 +618,4 @@ Running `aws --version`, `aws configure list`, and `aws dynamodb list-tables` be
 
 ---
 
-*Built and verified on Amazon Web Services. All commands executed and validated against live AWS infrastructure.*
 
-
-
-
-
-
-
-
-
-
-<img width="1039" height="831" alt="Image" src="https://github.com/user-attachments/assets/1de9b9a1-4b48-4cd2-bc35-8dbb99a5db61" />
