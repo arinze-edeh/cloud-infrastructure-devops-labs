@@ -402,10 +402,11 @@ From **Azure Portal**, navigate to **Virtual Machines** and click **devops-php-v
 
 > **devops-php-vm Public IP: `172.173.241.148`**
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: devops-php-vm Overview page showing Public IP 172.173.241.148 ]
-```
+**Screenshot:**
+
+<img width="1919" height="946" alt="Image" src="https://github.com/user-attachments/assets/025962bc-5cfb-43aa-b026-5ba42f9c48a9" />
+
+>devops-php-vm Overview page showing Public IP 172.173.241.148
 
 ### 3.2 SSH into devops-php-vm
 
@@ -684,7 +685,7 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 
 
 
-<img width="1919" height="946" alt="Image" src="https://github.com/user-attachments/assets/025962bc-5cfb-43aa-b026-5ba42f9c48a9" />
+
 
 <img width="1032" height="330" alt="Image" src="https://github.com/user-attachments/assets/6c13cd55-263d-45d5-a69b-b103b72c5fcf" />
 
