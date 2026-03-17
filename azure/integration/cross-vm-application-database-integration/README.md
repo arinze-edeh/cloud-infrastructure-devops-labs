@@ -102,10 +102,17 @@ The **Nautilus DevOps team** required integration of a PHP application hosted on
 
 > **IMPORTANT:** If you receive the error *"This size is not available in zone 1. Zones 2 are supported"*, change the Availability zone from `Zone 1` to **`Zone 2`** before proceeding.
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Azure portal VM creation Basics tab with all fields populated ]
-```
+**Screenshots:**
+
+<img width="1919" height="947" alt="Image" src="https://github.com/user-attachments/assets/c4445cb0-5147-4474-8fd3-0811c89414a7" />
+
+<img width="1919" height="949" alt="Image" src="https://github.com/user-attachments/assets/fb67e00a-0c8a-4e9a-9531-32b90c3ddf19" />
+
+<img width="1919" height="951" alt="Image" src="https://github.com/user-attachments/assets/53733321-d3ed-4c3c-a888-ace6ae8fa7af" />
+
+<img width="1919" height="948" alt="Image" src="https://github.com/user-attachments/assets/784fc05b-dbaa-4bcb-a5a0-cb2555c2edd0" />
+
+>Azure portal VM creation Basics tab with all fields populated 
 
 ### 1.2 Configure the Disks Tab
 
@@ -679,15 +686,7 @@ Date: March 17, 2026
 
 
 
-<img width="1919" height="955" alt="Image" src="https://github.com/user-attachments/assets/b0b61dfb-d1ed-4767-9e79-f80150350dff" />
 
-<img width="1919" height="947" alt="Image" src="https://github.com/user-attachments/assets/c4445cb0-5147-4474-8fd3-0811c89414a7" />
-
-<img width="1919" height="949" alt="Image" src="https://github.com/user-attachments/assets/fb67e00a-0c8a-4e9a-9531-32b90c3ddf19" />
-
-<img width="1919" height="951" alt="Image" src="https://github.com/user-attachments/assets/53733321-d3ed-4c3c-a888-ace6ae8fa7af" />
-
-<img width="1919" height="948" alt="Image" src="https://github.com/user-attachments/assets/784fc05b-dbaa-4bcb-a5a0-cb2555c2edd0" />
 
 <img width="1919" height="950" alt="Image" src="https://github.com/user-attachments/assets/08c95c05-390d-4247-9850-f3ebeb2af3d2" />
 
