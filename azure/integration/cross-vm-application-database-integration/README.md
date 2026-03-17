@@ -158,7 +158,7 @@ Wait for the deployment to complete. You will see the confirmation screen:
 
 **Screenshot:**
 
-
+<img width="1919" height="947" alt="Image" src="https://github.com/user-attachments/assets/d4421fd6-ab33-4dd4-a0a1-6eabfc2fa5b3" />
 
 >Deployment complete screen showing devops-mysql-vm
 
@@ -692,7 +692,7 @@ Date: March 17, 2026
 
 <img width="1919" height="909" alt="Image" src="https://github.com/user-attachments/assets/70f715df-9334-4ad2-b094-062836b4610e" />
 
-<img width="1919" height="947" alt="Image" src="https://github.com/user-attachments/assets/d4421fd6-ab33-4dd4-a0a1-6eabfc2fa5b3" />
+
 
 <img width="1919" height="948" alt="Image" src="https://github.com/user-attachments/assets/cd04811e-643b-4341-abb7-1e4e935db3a5" />
 
