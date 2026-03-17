@@ -416,7 +416,7 @@ ssh devops_admin@172.173.241.148
 
 > **Note:** If you encounter `Permission denied (publickey)`, the VM was provisioned with SSH key authentication. Use the Azure Portal **Connect** page and click **"Reset password or keys"** to set a password for `devops_admin`, then retry the SSH connection.
 
-**Screenshot :**
+**Screenshots:**
 
 <img width="1032" height="330" alt="Image" src="https://github.com/user-attachments/assets/6c13cd55-263d-45d5-a69b-b103b72c5fcf" />
 
@@ -442,10 +442,11 @@ Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 6.8.0-1044-azure x86_64)
 devops_admin@devops-php-vm:~$
 ```
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Successful SSH login to devops-php-vm showing Ubuntu 22.04 welcome banner ]
-```
+**Screenshot:**
+
+<img width="1035" height="800" alt="Image" src="https://github.com/user-attachments/assets/6e348919-2a97-4070-89cf-038b3ac59f9e" />
+
+>Successful SSH login to devops-php-vm showing Ubuntu 22.04 welcome banner
 
 ### 3.3 Inspect the Existing db_test.php File
 
@@ -471,7 +472,7 @@ The pre-existing file contains placeholder values that must be replaced:
 ?>
 ```
 
-**Screenshot Placeholder:**
+**Screenshot:**
 ```
 [ SCREENSHOT: Terminal showing original db_test.php with placeholder values ]
 ```
@@ -693,7 +694,7 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 
 
 
-<img width="1035" height="800" alt="Image" src="https://github.com/user-attachments/assets/6e348919-2a97-4070-89cf-038b3ac59f9e" />
+
 
 <img width="1029" height="669" alt="Image" src="https://github.com/user-attachments/assets/fd9f5430-829e-4c5d-a04c-f8f4902473dc" />
 
