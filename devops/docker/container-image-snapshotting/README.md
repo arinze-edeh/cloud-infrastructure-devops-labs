@@ -168,12 +168,11 @@ CONTAINER ID   IMAGE    COMMAND       CREATED          STATUS           PORTS   
 > **If the container shows `Exited` status**, run `sudo docker start ubuntu_latest` before proceeding.
 > **If the container does not appear at all**, run `sudo docker ps -a` to check all containers including stopped ones.
 
-**Screenshot Placeholder:**
+**Screenshot:**
 
-```
-[ SCREENSHOT 2: Terminal showing sudo docker ps output with ubuntu_latest
-  container in "Up" status ]
-```
+<img width="1028" height="598" alt="image" src="https://github.com/user-attachments/assets/ca20e638-b666-46da-800a-77f2e1e8e36f" />
+
+>Terminal showing sudo docker ps output with ubuntu_latest container in "Up" status
 
 ---
 
@@ -406,6 +405,6 @@ hostname
 
 
 
-<img width="1028" height="598" alt="image" src="https://github.com/user-attachments/assets/ca20e638-b666-46da-800a-77f2e1e8e36f" />
+
 <img width="1027" height="659" alt="image" src="https://github.com/user-attachments/assets/12cde6e9-4eec-4a59-b57c-273479e72b3f" />
 <img width="1030" height="815" alt="image" src="https://github.com/user-attachments/assets/23eda709-20b9-49fd-a32e-65e276c159c4" />
