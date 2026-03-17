@@ -509,11 +509,9 @@ Save and exit:
 * Press `CTRL+O` then `Enter` to write the file
 * Press `CTRL+X` to exit nano
 
-**Screenshots:**
+**Screenshot:**
 
 <img width="1062" height="872" alt="Image" src="https://github.com/user-attachments/assets/8d83372d-1962-476b-b3a4-8b9aca1d477c" />
-
-<img width="1035" height="416" alt="Image" src="https://github.com/user-attachments/assets/d8105c3e-6698-470f-81ed-8072b2dc92c5" />
 
 >nano editor showing the updated db_test.php with correct IP, database, and credentials
 
@@ -532,10 +530,11 @@ Confirm all values match:
 | `$username` | `'devops_user'` |
 | `$password` | `'password123'` |
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: Terminal showing cat output of the updated db_test.php confirming all correct values ]
-```
+**Screenshot:**
+
+<img width="1035" height="416" alt="Image" src="https://github.com/user-attachments/assets/d8105c3e-6698-470f-81ed-8072b2dc92c5" />
+
+>Terminal showing cat output of the updated db_test.php confirming all correct values
 
 ### 3.6 Verify the mysqli PHP Extension
 
