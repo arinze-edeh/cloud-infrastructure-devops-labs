@@ -382,7 +382,7 @@ This confirms MySQL is actively listening for remote connections on all interfac
 
 **Screenshot:**
 
-<img width="1028" height="582" alt="Image" src="https://github.com/user-attachments/assets/d6ecef60-0bd2-47b0-bc8f-1b90961e2d9c" />
+<img width="1029" height="649" alt="Image" src="https://github.com/user-attachments/assets/39d87478-a37d-4c9a-8665-e64b0389ba67" />
 
 >Terminal showing LISTEN on :::3306 confirming MySQL network binding
 
@@ -682,7 +682,7 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 ---
 
 
-<img width="1029" height="649" alt="Image" src="https://github.com/user-attachments/assets/39d87478-a37d-4c9a-8665-e64b0389ba67" />
+
 
 <img width="1919" height="946" alt="Image" src="https://github.com/user-attachments/assets/025962bc-5cfb-43aa-b026-5ba42f9c48a9" />
 
