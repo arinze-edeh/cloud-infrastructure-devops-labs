@@ -271,9 +271,11 @@ aws dynamodb wait table-exists \
 
 **Result:** The command returned silently with no output, which is the expected success behavior. The prompt returned immediately after the table became `ACTIVE`. AWS CLI `wait` commands return exit code `0` on success and exit code `255` on timeout.
 
-> **Screenshot Placeholder**
-> ![DynamoDB Wait Table Exists](./screenshots/05-wait-table-exists.png)
-> *Caption: Silent return of the wait command confirming table reached ACTIVE state*
+> **Screenshot**
+
+<img width="1031" height="859" alt="Image" src="https://github.com/user-attachments/assets/4db339e5-ac7b-45f9-baf8-02174e4c6336" />
+
+> *Silent return of the wait command confirming table reached ACTIVE state*
 
 ---
 
@@ -611,7 +613,7 @@ Running `aws --version`, `aws configure list`, and `aws dynamodb list-tables` be
 
 
 
-<img width="1031" height="859" alt="Image" src="https://github.com/user-attachments/assets/4db339e5-ac7b-45f9-baf8-02174e4c6336" />
+
 
 <img width="1032" height="238" alt="Image" src="https://github.com/user-attachments/assets/0f266a69-5775-426f-9e76-db805a0a04ae" />
 
