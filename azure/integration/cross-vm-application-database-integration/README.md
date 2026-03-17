@@ -259,10 +259,11 @@ Server version: 5.7.18 MySQL Community Server (GPL)
 mysql>
 ```
 
-**Screenshot Placeholder:**
-```
-[ SCREENSHOT: MySQL shell prompt after running sudo /jet/enter mysql ]
-```
+**Screenshot:**
+
+<img width="1034" height="864" alt="Image" src="https://github.com/user-attachments/assets/e1bcca8e-5efb-4a04-b2f9-44bdb79530cb" />
+
+>MySQL shell prompt after running sudo /jet/enter mysql
 
 ### 2.3 Create the Application Database
 
@@ -680,8 +681,6 @@ Both VMs in this lab were attached to `devops-php-vmVNET`, which means private I
 
 
 
-
-<img width="1034" height="864" alt="Image" src="https://github.com/user-attachments/assets/e1bcca8e-5efb-4a04-b2f9-44bdb79530cb" />
 
 <img width="1028" height="747" alt="Image" src="https://github.com/user-attachments/assets/3053a2b3-463f-4abf-bf21-aa6eec18e83f" />
 
