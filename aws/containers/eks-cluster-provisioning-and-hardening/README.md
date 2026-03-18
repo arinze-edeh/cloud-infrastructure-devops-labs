@@ -428,7 +428,9 @@ arn:aws:iam::914784730395:role/eksClusterRole
 ```
 
 > **SCREENSHOT**
-> ![Phase 5 - Active status and role ARN](screenshots/09-active-role-verified.png)
+
+<img width="1026" height="517" alt="image" src="https://github.com/user-attachments/assets/7959cb15-95b2-4d71-a36d-34dcb6e47d38" />
+
 > *Caption: Cluster status confirmed ACTIVE on Kubernetes 1.35 and IAM role ARN verified as eksClusterRole*
 
 **Step 5.3 - Verify endpoint access configuration**
@@ -496,7 +498,9 @@ aws eks describe-cluster \
 ```
 
 > **SCREENSHOT**
-> ![Phase 5 - Full verification suite](screenshots/10-full-verification.png)
+
+<img width="1031" height="861" alt="image" src="https://github.com/user-attachments/assets/c5187a3b-3959-48c2-a24a-ee2a77d23879" />
+
 > *Caption: Full verification suite completed — private endpoint confirmed (PrivateAccess: True, PublicAccess: False), correct subnets listed, and EKS Auto Mode fully disabled across compute and storage*
 
 ---
@@ -630,15 +634,3 @@ EKS control plane provisioning consistently takes 10-15 minutes. Polling the sta
 ---
 
 *Infrastructure provisioned on Amazon EKS us-east-1 | Kubernetes v1.35*
-
-
-
-
-
-
-
-
-
-
-<img width="1026" height="517" alt="image" src="https://github.com/user-attachments/assets/7959cb15-95b2-4d71-a36d-34dcb6e47d38" />
-<img width="1031" height="861" alt="image" src="https://github.com/user-attachments/assets/c5187a3b-3959-48c2-a24a-ee2a77d23879" />
