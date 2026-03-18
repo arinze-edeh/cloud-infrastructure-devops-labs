@@ -363,8 +363,10 @@ Finished[#############################################################]  100.000
 }
 ```
 
-> **Screenshot Placeholder**
-> `![Step 7 - Blob Upload from VM](./screenshots/step7-blob-upload.png)`
+> **Screenshot**
+
+<img width="1032" height="505" alt="image" src="https://github.com/user-attachments/assets/2e11f746-16bf-40d6-af07-958d1b1b1112" />
+
 > *Caption: testfile.txt successfully uploaded to devops-container16287 with 100% progress and server-side encryption confirmed*
 
 ---
@@ -389,8 +391,10 @@ Name          Blob Type    Blob Tier    Length    Content Type    Last Modified 
 testfile.txt  BlockBlob    Hot          20        text/plain      2026-03-18T04:11:27+00:00
 ```
 
-> **Screenshot Placeholder**
-> `![Step 8 - Blob List Verification](./screenshots/step8-blob-list-verify.png)`
+> **Screenshot**
+
+<img width="1030" height="653" alt="image" src="https://github.com/user-attachments/assets/3fcf6eff-8a11-4106-95e1-505c75c001f0" />
+
 > *Caption: testfile.txt confirmed present in devops-container16287 as a BlockBlob with correct content type and size*
 
 ---
@@ -582,16 +586,3 @@ az storage blob set-tier \
 * [Azure Key Vault + Storage Account Keys](https://learn.microsoft.com/en-us/azure/key-vault/secrets/overview-storage-keys)
 
 ---
-
-Environment: Azure Free Labs | East US Region
-
----
-
-
-
-
-
-
-
-<img width="1032" height="505" alt="image" src="https://github.com/user-attachments/assets/2e11f746-16bf-40d6-af07-958d1b1b1112" />
-<img width="1030" height="653" alt="image" src="https://github.com/user-attachments/assets/3fcf6eff-8a11-4106-95e1-505c75c001f0" />
