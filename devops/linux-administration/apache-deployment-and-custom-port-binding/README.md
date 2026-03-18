@@ -250,7 +250,10 @@ sed -i 's/Listen 80/Listen 8083/' /etc/apache2/ports.conf
 - The substitution replaces the literal string `Listen 80` with `Listen 8083`
 - This directive instructs Apache to accept connections on port 8083 on **all network interfaces**, satisfying the no-IP-binding requirement
 
-> **SCREENSHOT PLACEHOLDER**
+> **SCREENSHOT**
+
+<img width="1040" height="613" alt="image" src="https://github.com/user-attachments/assets/1fbdd482-5b06-4882-b1d9-3a2c68c6bcb0" />
+
 > *Caption: Terminal showing the sed command execution modifying /etc/apache2/ports.conf, with no error output confirming the silent, successful in-place substitution.*
 
 ---
@@ -267,7 +270,10 @@ sed -i 's/<VirtualHost \*:80>/<VirtualHost *:8083>/' /etc/apache2/sites-enabled/
 
 Apache2 will fail to start (or throw a configuration mismatch warning) if `ports.conf` declares a port that no virtual host is configured to serve. Both files must be in sync.
 
-> **SCREENSHOT PLACEHOLDER**
+> **SCREENSHOT**
+
+<img width="1040" height="613" alt="image" src="https://github.com/user-attachments/assets/1fbdd482-5b06-4882-b1d9-3a2c68c6bcb0" />
+
 > *Caption: sed command updating the VirtualHost directive in 000-default.conf from port 80 to port 8083 to ensure consistency with ports.conf.*
 
 ---
@@ -308,7 +314,10 @@ Both outputs confirm that:
 - SSL listeners on port 443 remain untouched (correct)
 - The default virtual host now correctly maps to port 8083
 
-> **SCREENSHOT PLACEHOLDER**
+> **SCREENSHOT**
+
+
+
 > *Caption: grep outputs for both ports.conf and 000-default.conf confirming Listen 8083 and VirtualHost *:8083 are correctly set, with the 443 SSL entries remaining intact.*
 
 ---
@@ -517,7 +526,7 @@ This entire task was necessitated by an incomplete handover. A structured handov
 
 
 
-<img width="1040" height="613" alt="image" src="https://github.com/user-attachments/assets/1fbdd482-5b06-4882-b1d9-3a2c68c6bcb0" />
+
 <img width="1037" height="312" alt="image" src="https://github.com/user-attachments/assets/75ccba17-05fa-4af2-970c-6d73df17e4d5" />
 <img width="1036" height="331" alt="image" src="https://github.com/user-attachments/assets/ee70f85a-10e2-4ec8-a914-d8804487d31a" />
 <img width="1037" height="368" alt="image" src="https://github.com/user-attachments/assets/c27c6f0a-a087-4337-8319-ffb423b1f765" />
