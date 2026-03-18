@@ -214,7 +214,9 @@ aws iam list-attached-role-policies \
 ```
 
 > **SCREENSHOT**
-> ![Phase 2 - Policy attached](screenshots/04-policy-attached.png)
+
+<img width="1031" height="500" alt="image" src="https://github.com/user-attachments/assets/5c94059f-8463-49c3-90a4-571a883117bb" />
+
 > *Caption: AmazonEKSClusterPolicy successfully attached to eksClusterRole and confirmed via list output*
 
 ---
@@ -265,7 +267,9 @@ aws ec2 describe-subnets \
 > **Subnets selected for the cluster:** `us-east-1a`, `us-east-1b`, `us-east-1c` only, as specified by the task requirements.
 
 > **SCREENSHOT**
-> ![Phase 3 - VPC and subnets](screenshots/05-vpc-subnets.png)
+
+<img width="1027" height="798" alt="image" src="https://github.com/user-attachments/assets/41ce8e8d-369a-4987-a8e5-822f89adecb5" />
+
 > *Caption: Default VPC vpc-057870f174cae731a retrieved and all 6 subnets listed. Subnets for AZs a, b, and c identified for cluster use*
 
 ---
@@ -625,8 +629,8 @@ EKS control plane provisioning consistently takes 10-15 minutes. Polling the sta
 
 
 
-<img width="1031" height="500" alt="image" src="https://github.com/user-attachments/assets/5c94059f-8463-49c3-90a4-571a883117bb" />
-<img width="1027" height="798" alt="image" src="https://github.com/user-attachments/assets/41ce8e8d-369a-4987-a8e5-822f89adecb5" />
+
+
 <img width="1031" height="848" alt="image" src="https://github.com/user-attachments/assets/584697d6-2358-419b-bfa3-e239bfae99b8" />
 <img width="1026" height="856" alt="image" src="https://github.com/user-attachments/assets/2352f9a7-601a-4109-8a0d-06aae981cd88" />
 <img width="1037" height="870" alt="image" src="https://github.com/user-attachments/assets/b7f978f4-4340-43b5-9c29-e890a418d084" />
