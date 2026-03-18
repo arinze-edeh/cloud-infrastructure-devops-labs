@@ -177,7 +177,9 @@ arn:aws:iam::914784730395:role/eksClusterRole
 ```
 
 > **SCREENSHOT**
-> ![Phase 2 - Role created](screenshots/03-role-created.png)
+
+<img width="1035" height="547" alt="image" src="https://github.com/user-attachments/assets/8dd2bee0-ca4c-4bdf-8b76-726a4d2328df" />
+
 > *Caption: Trust policy document written and eksClusterRole created with ARN confirmed*
 
 **Step 2.4 - Attach the required managed policy**
@@ -622,7 +624,7 @@ EKS control plane provisioning consistently takes 10-15 minutes. Polling the sta
 
 
 
-<img width="1035" height="547" alt="image" src="https://github.com/user-attachments/assets/8dd2bee0-ca4c-4bdf-8b76-726a4d2328df" />
+
 <img width="1031" height="500" alt="image" src="https://github.com/user-attachments/assets/5c94059f-8463-49c3-90a4-571a883117bb" />
 <img width="1027" height="798" alt="image" src="https://github.com/user-attachments/assets/41ce8e8d-369a-4987-a8e5-822f89adecb5" />
 <img width="1031" height="848" alt="image" src="https://github.com/user-attachments/assets/584697d6-2358-419b-bfa3-e239bfae99b8" />
