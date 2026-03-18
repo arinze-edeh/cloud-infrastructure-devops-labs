@@ -406,7 +406,9 @@ The presence of the `Apache2 Ubuntu Default Page` with the `It works!` section h
 
 > **SCREENSHOT**
 
-
+<img width="1030" height="871" alt="image" src="https://github.com/user-attachments/assets/2860c874-d394-488c-a739-fef6ef947feb" />
+<img width="1030" height="865" alt="image" src="https://github.com/user-attachments/assets/fcad79dd-cdbb-4708-8447-4fffbdc40b7d" />
+<img width="1033" height="859" alt="image" src="https://github.com/user-attachments/assets/b38f5120-9480-4fe5-bce2-06782b589db7" />
 
 > *Caption: curl http://127.0.0.1:8083 output showing the full Apache2 Ubuntu Default Page HTML response with "It works!" confirming Apache2 is correctly serving on port 8083.*
 
@@ -437,7 +439,7 @@ The `STATUS` column showing `Up 22 minutes` confirms the container remained runn
 
 > **SCREENSHOT**
 
-
+<img width="1029" height="349" alt="image" src="https://github.com/user-attachments/assets/a508c092-e2aa-47d6-977d-39aef147da22" />
 
 > *Caption: sudo docker ps output from stapp03 after exiting the container, showing kkloud still in "Up" status with the elapsed uptime, confirming the container was not stopped or restarted.*
 
@@ -531,17 +533,3 @@ This entire task was necessitated by an incomplete handover. A structured handov
 | `AH00558` persists after ServerName fix | Config file not reloaded | Run `service apache2 reload` after editing `apache2.conf` |
 
 ---
-
-
-
-
-
-
-
-
-
-
-<img width="1030" height="871" alt="image" src="https://github.com/user-attachments/assets/2860c874-d394-488c-a739-fef6ef947feb" />
-<img width="1030" height="865" alt="image" src="https://github.com/user-attachments/assets/fcad79dd-cdbb-4708-8447-4fffbdc40b7d" />
-<img width="1033" height="859" alt="image" src="https://github.com/user-attachments/assets/b38f5120-9480-4fe5-bce2-06782b589db7" />
-<img width="1029" height="349" alt="image" src="https://github.com/user-attachments/assets/a508c092-e2aa-47d6-977d-39aef147da22" />
