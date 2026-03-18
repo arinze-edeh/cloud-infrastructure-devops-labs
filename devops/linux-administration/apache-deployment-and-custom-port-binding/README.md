@@ -120,7 +120,10 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 Warning: Permanently added 'stapp03' (ED25519) to the list of known hosts.
 ```
 
-> **SCREENSHOT PLACEHOLDER**
+> **SCREENSHOT**
+
+<img width="1030" height="421" alt="image" src="https://github.com/user-attachments/assets/4c45703f-d00a-4be2-a9d0-626e57306ea1" />
+
 > *Caption: Successful SSH connection from jump host to stapp03 showing the ED25519 key fingerprint acceptance prompt and the banner@stapp03 shell prompt.*
 
 ---
@@ -146,7 +149,10 @@ Confirm the following before proceeding:
 - `NAMES` column shows `kkloud`
 - `IMAGE` is `ubuntu:18.04`
 
-> **SCREENSHOT PLACEHOLDER**
+> **SCREENSHOT**
+
+
+
 > *Caption: Output of `sudo docker ps` on stapp03 confirming the kkloud container is actively running with ubuntu:18.04 as the base image.*
 
 ---
@@ -495,7 +501,7 @@ This entire task was necessitated by an incomplete handover. A structured handov
 ---
 
 
-<img width="1030" height="421" alt="image" src="https://github.com/user-attachments/assets/4c45703f-d00a-4be2-a9d0-626e57306ea1" />
+
 <img width="1027" height="583" alt="image" src="https://github.com/user-attachments/assets/af183c28-43df-4351-bff9-356c9f8de191" />
 <img width="1030" height="580" alt="image" src="https://github.com/user-attachments/assets/d427cdb1-df0d-421a-86b1-45cc5f9805ed" />
 <img width="1030" height="654" alt="image" src="https://github.com/user-attachments/assets/8587326b-4c26-4fbb-a30b-b5e3f35e879b" />
