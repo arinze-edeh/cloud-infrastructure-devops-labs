@@ -365,7 +365,7 @@ service apache2 status
 
 > **SCREENSHOT**
 
-
+<img width="1033" height="368" alt="image" src="https://github.com/user-attachments/assets/803f3a4b-d197-401b-a92a-d952e4fd8373" />
 
 > *Caption: service apache2 status output showing "apache2 is running" confirming the web server process is active inside the kkloud container.*
 
@@ -541,7 +541,6 @@ This entire task was necessitated by an incomplete handover. A structured handov
 
 
 
-<img width="1033" height="368" alt="image" src="https://github.com/user-attachments/assets/803f3a4b-d197-401b-a92a-d952e4fd8373" />
 <img width="1030" height="871" alt="image" src="https://github.com/user-attachments/assets/2860c874-d394-488c-a739-fef6ef947feb" />
 <img width="1030" height="865" alt="image" src="https://github.com/user-attachments/assets/fcad79dd-cdbb-4708-8447-4fffbdc40b7d" />
 <img width="1033" height="859" alt="image" src="https://github.com/user-attachments/assets/b38f5120-9480-4fe5-bce2-06782b589db7" />
