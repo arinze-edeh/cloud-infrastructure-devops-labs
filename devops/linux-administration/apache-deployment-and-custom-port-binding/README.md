@@ -318,7 +318,7 @@ Both outputs confirm that:
 
 <img width="1036" height="331" alt="image" src="https://github.com/user-attachments/assets/ee70f85a-10e2-4ec8-a914-d8804487d31a" />
 
-> *Caption: grep outputs for both ports.conf and 000-default.conf confirming Listen 8083 and VirtualHost *:8083 are correctly set, with the 443 SSL entries remaining intact.*
+>*Caption: grep outputs for both ports.conf and 000-default.conf confirming Listen 8083 and VirtualHost *:8083 are correctly set, with the 443 SSL entries remaining intact.*
 
 ---
 
@@ -404,7 +404,7 @@ The presence of the `Apache2 Ubuntu Default Page` with the `It works!` section h
 
 > **Note:** The `ss` command (`ss -tlnp | grep 8083`) is not available in the minimal `ubuntu:18.04` image. The `curl` test serves as the definitive connectivity validation.
 
-> **SCREENSHOT**
+> **SCREENSHOTS**
 
 <img width="1030" height="871" alt="image" src="https://github.com/user-attachments/assets/2860c874-d394-488c-a739-fef6ef947feb" />
 <img width="1030" height="865" alt="image" src="https://github.com/user-attachments/assets/fcad79dd-cdbb-4708-8447-4fffbdc40b7d" />
