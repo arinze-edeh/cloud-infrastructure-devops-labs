@@ -169,7 +169,7 @@ Your prompt will change from `[banner@stapp03 ~]$` to `root@<container-id>:/#`, 
 
 > **SCREENSHOT**
 
-
+<img width="1030" height="580" alt="image" src="https://github.com/user-attachments/assets/d427cdb1-df0d-421a-86b1-45cc5f9805ed" />
 
 > *Caption: Terminal prompt transitioning from banner@stapp03 to root@38927837a6a7 after executing docker exec, confirming successful container entry.*
 
@@ -195,7 +195,10 @@ Reading package lists... Done
 
 All four repository hits (`bionic`, `bionic-updates`, `bionic-backports`, `bionic-security`) must succeed. A `Done` status confirms the package index is ready.
 
-> **SCREENSHOT PLACEHOLDER**
+> **SCREENSHOT**
+
+<img width="1030" height="654" alt="image" src="https://github.com/user-attachments/assets/8587326b-4c26-4fbb-a30b-b5e3f35e879b" />
+
 > *Caption: apt-get update output inside the kkloud container showing all four Ubuntu 18.04 (Bionic) repository hits resolving successfully.*
 
 ---
@@ -506,8 +509,8 @@ This entire task was necessitated by an incomplete handover. A structured handov
 
 
 
-<img width="1030" height="580" alt="image" src="https://github.com/user-attachments/assets/d427cdb1-df0d-421a-86b1-45cc5f9805ed" />
-<img width="1030" height="654" alt="image" src="https://github.com/user-attachments/assets/8587326b-4c26-4fbb-a30b-b5e3f35e879b" />
+
+
 <img width="1028" height="865" alt="image" src="https://github.com/user-attachments/assets/55557316-d79e-4756-88c7-a15fabc763ce" />
 <img width="1035" height="858" alt="image" src="https://github.com/user-attachments/assets/75637c82-fd21-4ef3-a321-d1fd9e57738a" />
 <img width="1033" height="861" alt="image" src="https://github.com/user-attachments/assets/e797dc05-9941-43ef-a7e0-541ea0c4d3f7" />
