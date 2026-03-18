@@ -111,7 +111,10 @@ aws sts get-caller-identity
 }
 ```
 
-> **[SCREENSHOT PLACEHOLDER]**
+> **SCREENSHOT**
+
+<img width="1030" height="478" alt="image" src="https://github.com/user-attachments/assets/a7441750-426b-4748-93d9-c4f793d2855d" />
+
 > *Caption: AWS CLI version confirmed and caller identity verified showing account 914784730395 in us-east-1*
 
 **Step 1.2 - Confirm active region**
@@ -630,7 +633,7 @@ EKS control plane provisioning consistently takes 10-15 minutes. Implementing a 
 *Infrastructure provisioned on Amazon EKS us-east-1 | Kubernetes v1.35*
 
 
-<img width="1030" height="478" alt="image" src="https://github.com/user-attachments/assets/a7441750-426b-4748-93d9-c4f793d2855d" />
+
 <img width="1035" height="422" alt="image" src="https://github.com/user-attachments/assets/ff4f8237-e27f-47bb-aa36-76c995c28197" />
 <img width="1035" height="547" alt="image" src="https://github.com/user-attachments/assets/8dd2bee0-ca4c-4bdf-8b76-726a4d2328df" />
 <img width="1031" height="500" alt="image" src="https://github.com/user-attachments/assets/5c94059f-8463-49c3-90a4-571a883117bb" />
