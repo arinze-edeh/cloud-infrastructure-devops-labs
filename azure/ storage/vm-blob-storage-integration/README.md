@@ -303,8 +303,11 @@ Usage of /:   8.6% of 28.89GB   Users logged in:       0
 Memory usage: 37%               IPv4 address for eth0: 10.0.0.4
 ```
 
-> **Screenshot**
-> `![Step 5 - SSH Connection to VM](./screenshots/step5-ssh-vm-connect.png)`
+> **Screenshots**
+
+<img width="1032" height="517" alt="image" src="https://github.com/user-attachments/assets/9d11e3e5-15e1-47f8-9e15-694957ba493a" />
+<img width="1028" height="872" alt="image" src="https://github.com/user-attachments/assets/1334694b-d2cd-490f-ae05-f66a1c41477f" />
+
 > *Caption: Successful SSH connection to devops-vm at 20.115.8.222 running Ubuntu 22.04 LTS*
 
 ---
@@ -587,8 +590,6 @@ Environment: Azure Free Labs | East US Region
 
 
 
-<img width="1032" height="517" alt="image" src="https://github.com/user-attachments/assets/9d11e3e5-15e1-47f8-9e15-694957ba493a" />
-<img width="1028" height="872" alt="image" src="https://github.com/user-attachments/assets/1334694b-d2cd-490f-ae05-f66a1c41477f" />
 <img width="1034" height="840" alt="image" src="https://github.com/user-attachments/assets/9c99460a-d144-4433-bc3d-1d4ba96e9f91" />
 <img width="1032" height="505" alt="image" src="https://github.com/user-attachments/assets/2e11f746-16bf-40d6-af07-958d1b1b1112" />
 <img width="1030" height="653" alt="image" src="https://github.com/user-attachments/assets/3fcf6eff-8a11-4106-95e1-505c75c001f0" />
