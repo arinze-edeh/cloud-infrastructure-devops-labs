@@ -227,7 +227,12 @@ This command resolves and installs 24 packages totaling approximately 88.7 MB of
 
 Upon completion, Apache2 automatically enables default modules and the `000-default` site. The service start attempt is blocked by `policy-rc.d` inside the container (expected behavior in containerized environments).
 
-> **SCREENSHOT PLACEHOLDER**
+> **SCREENSHOTS**
+
+<img width="1028" height="865" alt="image" src="https://github.com/user-attachments/assets/55557316-d79e-4756-88c7-a15fabc763ce" />
+<img width="1035" height="858" alt="image" src="https://github.com/user-attachments/assets/75637c82-fd21-4ef3-a321-d1fd9e57738a" />
+<img width="1033" height="861" alt="image" src="https://github.com/user-attachments/assets/e797dc05-9941-43ef-a7e0-541ea0c4d3f7" />
+
 > *Caption: Complete apt-get install apache2 output inside kkloud container showing all 24 packages fetched, unpacked, and configured, ending with Apache module enablement messages.*
 
 ---
@@ -511,9 +516,7 @@ This entire task was necessitated by an incomplete handover. A structured handov
 
 
 
-<img width="1028" height="865" alt="image" src="https://github.com/user-attachments/assets/55557316-d79e-4756-88c7-a15fabc763ce" />
-<img width="1035" height="858" alt="image" src="https://github.com/user-attachments/assets/75637c82-fd21-4ef3-a321-d1fd9e57738a" />
-<img width="1033" height="861" alt="image" src="https://github.com/user-attachments/assets/e797dc05-9941-43ef-a7e0-541ea0c4d3f7" />
+
 <img width="1040" height="613" alt="image" src="https://github.com/user-attachments/assets/1fbdd482-5b06-4882-b1d9-3a2c68c6bcb0" />
 <img width="1037" height="312" alt="image" src="https://github.com/user-attachments/assets/75ccba17-05fa-4af2-970c-6d73df17e4d5" />
 <img width="1036" height="331" alt="image" src="https://github.com/user-attachments/assets/ee70f85a-10e2-4ec8-a914-d8804487d31a" />
