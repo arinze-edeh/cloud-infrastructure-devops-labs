@@ -197,8 +197,12 @@ az storage account create \
 }
 ```
 
-> **Screenshot Placeholder**
-> `![Step 2 - Storage Account Creation](./screenshots/step2-storage-account-create.png)`
+> **Screenshot**
+
+<img width="1032" height="861" alt="image" src="https://github.com/user-attachments/assets/df35eb4f-ef61-4fb7-8ac5-a383cf83b911" />
+<img width="1029" height="855" alt="image" src="https://github.com/user-attachments/assets/a6645a04-add2-4b2e-8301-e8c686299996" />
+<img width="1030" height="858" alt="image" src="https://github.com/user-attachments/assets/f7cb021e-bf60-4de0-b1ca-95d28c212a37" />
+
 > *Caption: Azure CLI confirming successful creation of devopsstor16287 with provisioningState: Succeeded*
 
 ---
@@ -577,9 +581,7 @@ Environment: Azure Free Labs | East US Region
 
 
 
-<img width="1032" height="861" alt="image" src="https://github.com/user-attachments/assets/df35eb4f-ef61-4fb7-8ac5-a383cf83b911" />
-<img width="1029" height="855" alt="image" src="https://github.com/user-attachments/assets/a6645a04-add2-4b2e-8301-e8c686299996" />
-<img width="1030" height="858" alt="image" src="https://github.com/user-attachments/assets/f7cb021e-bf60-4de0-b1ca-95d28c212a37" />
+
 <img width="1032" height="347" alt="image" src="https://github.com/user-attachments/assets/16fbdbd7-c6ac-4f97-b3e0-58e78efb3d18" />
 <img width="1035" height="378" alt="image" src="https://github.com/user-attachments/assets/477f91de-af0d-4b8f-ab17-747cdc634517" />
 <img width="1032" height="517" alt="image" src="https://github.com/user-attachments/assets/9d11e3e5-15e1-47f8-9e15-694957ba493a" />
