@@ -151,7 +151,7 @@ Confirm the following before proceeding:
 
 > **SCREENSHOT**
 
-
+<img width="1027" height="583" alt="image" src="https://github.com/user-attachments/assets/af183c28-43df-4351-bff9-356c9f8de191" />
 
 > *Caption: Output of `sudo docker ps` on stapp03 confirming the kkloud container is actively running with ubuntu:18.04 as the base image.*
 
@@ -167,7 +167,10 @@ sudo docker exec -it kkloud bash
 
 Your prompt will change from `[banner@stapp03 ~]$` to `root@<container-id>:/#`, confirming you are now operating inside the container as root.
 
-> **SCREENSHOT PLACEHOLDER**
+> **SCREENSHOT**
+
+
+
 > *Caption: Terminal prompt transitioning from banner@stapp03 to root@38927837a6a7 after executing docker exec, confirming successful container entry.*
 
 ---
@@ -502,7 +505,7 @@ This entire task was necessitated by an incomplete handover. A structured handov
 
 
 
-<img width="1027" height="583" alt="image" src="https://github.com/user-attachments/assets/af183c28-43df-4351-bff9-356c9f8de191" />
+
 <img width="1030" height="580" alt="image" src="https://github.com/user-attachments/assets/d427cdb1-df0d-421a-86b1-45cc5f9805ed" />
 <img width="1030" height="654" alt="image" src="https://github.com/user-attachments/assets/8587326b-4c26-4fbb-a30b-b5e3f35e879b" />
 <img width="1028" height="865" alt="image" src="https://github.com/user-attachments/assets/55557316-d79e-4756-88c7-a15fabc763ce" />
