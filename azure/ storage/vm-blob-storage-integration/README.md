@@ -155,8 +155,10 @@ Name       ResourceGroup                 Location    Zones
 devops-vm  KML_RG_MAIN-4E41678F62174ED3  eastus
 ```
 
-> **Screenshot Placeholder**
-> `![Step 1 - Account Verification and VM List](./screenshots/step1-account-vm-verify.png)`
+> **Screenshot**
+
+<img width="1053" height="459" alt="image" src="https://github.com/user-attachments/assets/0feaec15-a1b5-42e5-8f61-c704a1fb273f" />
+
 > *Caption: Azure CLI output confirming active subscription and devops-vm existence in East US*
 
 ---
@@ -574,7 +576,7 @@ Environment: Azure Free Labs | East US Region
 
 
 
-<img width="1053" height="459" alt="image" src="https://github.com/user-attachments/assets/0feaec15-a1b5-42e5-8f61-c704a1fb273f" />
+
 <img width="1032" height="861" alt="image" src="https://github.com/user-attachments/assets/df35eb4f-ef61-4fb7-8ac5-a383cf83b911" />
 <img width="1029" height="855" alt="image" src="https://github.com/user-attachments/assets/a6645a04-add2-4b2e-8301-e8c686299996" />
 <img width="1030" height="858" alt="image" src="https://github.com/user-attachments/assets/f7cb021e-bf60-4de0-b1ca-95d28c212a37" />
