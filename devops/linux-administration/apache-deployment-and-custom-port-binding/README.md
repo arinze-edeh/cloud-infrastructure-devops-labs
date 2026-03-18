@@ -316,7 +316,7 @@ Both outputs confirm that:
 
 > **SCREENSHOT**
 
-
+<img width="1036" height="331" alt="image" src="https://github.com/user-attachments/assets/ee70f85a-10e2-4ec8-a914-d8804487d31a" />
 
 > *Caption: grep outputs for both ports.conf and 000-default.conf confirming Listen 8083 and VirtualHost *:8083 are correctly set, with the 443 SSL entries remaining intact.*
 
@@ -528,7 +528,7 @@ This entire task was necessitated by an incomplete handover. A structured handov
 
 
 <img width="1037" height="312" alt="image" src="https://github.com/user-attachments/assets/75ccba17-05fa-4af2-970c-6d73df17e4d5" />
-<img width="1036" height="331" alt="image" src="https://github.com/user-attachments/assets/ee70f85a-10e2-4ec8-a914-d8804487d31a" />
+
 <img width="1037" height="368" alt="image" src="https://github.com/user-attachments/assets/c27c6f0a-a087-4337-8319-ffb423b1f765" />
 <img width="1033" height="368" alt="image" src="https://github.com/user-attachments/assets/803f3a4b-d197-401b-a92a-d952e4fd8373" />
 <img width="1030" height="871" alt="image" src="https://github.com/user-attachments/assets/2860c874-d394-488c-a739-fef6ef947feb" />
