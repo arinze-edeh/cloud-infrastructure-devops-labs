@@ -341,7 +341,10 @@ service apache2 start
 
 > **Note on AH00558:** This is a non-critical warning. Apache cannot resolve a fully qualified domain name for the container because no `ServerName` directive is set globally. The service starts and operates correctly. This warning can be suppressed by adding `ServerName localhost` to `/etc/apache2/apache2.conf`, but it does not impact functionality.
 
-> **SCREENSHOT PLACEHOLDER**
+> **SCREENSHOT**
+
+<img width="1037" height="368" alt="image" src="https://github.com/user-attachments/assets/c27c6f0a-a087-4337-8319-ffb423b1f765" />
+
 > *Caption: service apache2 start output inside kkloud showing the AH00558 ServerName warning (non-critical) and the successful start confirmation with no errors.*
 
 ---
@@ -360,7 +363,10 @@ service apache2 status
  * apache2 is running
 ```
 
-> **SCREENSHOT PLACEHOLDER**
+> **SCREENSHOT**
+
+
+
 > *Caption: service apache2 status output showing "apache2 is running" confirming the web server process is active inside the kkloud container.*
 
 ---
@@ -398,7 +404,10 @@ The presence of the `Apache2 Ubuntu Default Page` with the `It works!` section h
 
 > **Note:** The `ss` command (`ss -tlnp | grep 8083`) is not available in the minimal `ubuntu:18.04` image. The `curl` test serves as the definitive connectivity validation.
 
-> **SCREENSHOT PLACEHOLDER**
+> **SCREENSHOT**
+
+
+
 > *Caption: curl http://127.0.0.1:8083 output showing the full Apache2 Ubuntu Default Page HTML response with "It works!" confirming Apache2 is correctly serving on port 8083.*
 
 ---
@@ -426,7 +435,10 @@ CONTAINER ID   IMAGE          COMMAND       CREATED          STATUS          POR
 
 The `STATUS` column showing `Up 22 minutes` confirms the container remained running throughout the entire configuration process and Apache2 startup.
 
-> **SCREENSHOT PLACEHOLDER**
+> **SCREENSHOT**
+
+
+
 > *Caption: sudo docker ps output from stapp03 after exiting the container, showing kkloud still in "Up" status with the elapsed uptime, confirming the container was not stopped or restarted.*
 
 ---
@@ -527,9 +539,8 @@ This entire task was necessitated by an incomplete handover. A structured handov
 
 
 
-<img width="1037" height="312" alt="image" src="https://github.com/user-attachments/assets/75ccba17-05fa-4af2-970c-6d73df17e4d5" />
 
-<img width="1037" height="368" alt="image" src="https://github.com/user-attachments/assets/c27c6f0a-a087-4337-8319-ffb423b1f765" />
+
 <img width="1033" height="368" alt="image" src="https://github.com/user-attachments/assets/803f3a4b-d197-401b-a92a-d952e4fd8373" />
 <img width="1030" height="871" alt="image" src="https://github.com/user-attachments/assets/2860c874-d394-488c-a739-fef6ef947feb" />
 <img width="1030" height="865" alt="image" src="https://github.com/user-attachments/assets/fcad79dd-cdbb-4708-8447-4fffbdc40b7d" />
