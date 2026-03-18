@@ -327,8 +327,10 @@ cat /home/azureuser/testfile.txt
 this is a test file
 ```
 
-> **Screenshot Placeholder**
-> `![Step 6 - Test File Creation on VM](./screenshots/step6-test-file-create.png)`
+> **Screenshot**
+
+<img width="1034" height="840" alt="image" src="https://github.com/user-attachments/assets/9c99460a-d144-4433-bc3d-1d4ba96e9f91" />
+
 > *Caption: testfile.txt created in /home/azureuser with expected content verified via cat*
 
 ---
@@ -590,6 +592,6 @@ Environment: Azure Free Labs | East US Region
 
 
 
-<img width="1034" height="840" alt="image" src="https://github.com/user-attachments/assets/9c99460a-d144-4433-bc3d-1d4ba96e9f91" />
+
 <img width="1032" height="505" alt="image" src="https://github.com/user-attachments/assets/2e11f746-16bf-40d6-af07-958d1b1b1112" />
 <img width="1030" height="653" alt="image" src="https://github.com/user-attachments/assets/3fcf6eff-8a11-4106-95e1-505c75c001f0" />
