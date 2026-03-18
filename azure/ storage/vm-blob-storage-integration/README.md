@@ -258,7 +258,9 @@ az storage container create \
 ```
 
 > **Screenshot**
-> `![Step 4 - Blob Container Creation](./screenshots/step4-blob-container-create.png)`
+
+<img width="1035" height="378" alt="image" src="https://github.com/user-attachments/assets/477f91de-af0d-4b8f-ab17-747cdc634517" />
+
 > *Caption: Blob container devops-container16287 created successfully with public access disabled*
 
 ---
@@ -301,7 +303,7 @@ Usage of /:   8.6% of 28.89GB   Users logged in:       0
 Memory usage: 37%               IPv4 address for eth0: 10.0.0.4
 ```
 
-> **Screenshot Placeholder**
+> **Screenshot**
 > `![Step 5 - SSH Connection to VM](./screenshots/step5-ssh-vm-connect.png)`
 > *Caption: Successful SSH connection to devops-vm at 20.115.8.222 running Ubuntu 22.04 LTS*
 
@@ -585,7 +587,6 @@ Environment: Azure Free Labs | East US Region
 
 
 
-<img width="1035" height="378" alt="image" src="https://github.com/user-attachments/assets/477f91de-af0d-4b8f-ab17-747cdc634517" />
 <img width="1032" height="517" alt="image" src="https://github.com/user-attachments/assets/9d11e3e5-15e1-47f8-9e15-694957ba493a" />
 <img width="1028" height="872" alt="image" src="https://github.com/user-attachments/assets/1334694b-d2cd-490f-ae05-f66a1c41477f" />
 <img width="1034" height="840" alt="image" src="https://github.com/user-attachments/assets/9c99460a-d144-4433-bc3d-1d4ba96e9f91" />
