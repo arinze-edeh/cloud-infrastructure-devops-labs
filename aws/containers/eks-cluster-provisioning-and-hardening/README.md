@@ -12,11 +12,10 @@
 - [Environment Details](#environment-details)
 - [Implementation](#implementation)
   - [Phase 1: Environment Verification](#phase-1-environment-verification)
-  - [Phase 2: Tool Installation](#phase-2-tool-installation)
+  - [Phase 2: IAM Role Provisioning](#phase-2-iam-role-provisioning)
   - [Phase 3: Network Resource Discovery](#phase-3-network-resource-discovery)
-  - [Phase 4: IAM Role Provisioning](#phase-4-iam-role-provisioning)
-  - [Phase 5: Cluster Creation](#phase-5-cluster-creation)
-  - [Phase 6: Verification](#phase-6-verification)
+  - [Phase 4: Cluster Creation](#phase-4-cluster-creation)
+  - [Phase 5: Verification](#phase-5-verification)
 - [Problems Encountered and Resolutions](#problems-encountered-and-resolutions)
 - [Best Practices](#best-practices)
 - [Lessons Learned](#lessons-learned)
@@ -64,7 +63,6 @@ AWS Region: us-east-1
 | Requirement | Version | Purpose |
 |-------------|---------|---------|
 | AWS CLI | >= 1.40.x | Primary provisioning tool |
-| kubectl | >= 1.35.x | Kubernetes cluster interaction |
 | AWS IAM permissions | CreateRole, AttachRolePolicy, eks:CreateCluster, ec2:DescribeVpcs, ec2:DescribeSubnets | Minimum required permissions |
 | AWS Region | us-east-1 | Target deployment region |
 
@@ -95,142 +93,56 @@ AWS Region: us-east-1
 
 Confirm AWS CLI is functional and the correct identity and region are active before proceeding with any provisioning.
 
-**Step 1.1 - Verify AWS CLI version and caller identity**
+**Step 1.1 - Verify caller identity and active region**
 
 ```bash
-aws --version
-aws sts get-caller-identity
+aws sts get-caller-identity && aws configure get region
 ```
 
-**Expected Output:**
+**Output:**
 ```json
 {
     "UserId": "AIDA5J7LLHUN3JJPYO2OT",
     "Account": "914784730395",
     "Arn": "arn:aws:iam::914784730395:user/kk_labs_user_868512"
 }
+us-east-1
 ```
 
 > **SCREENSHOT**
 
 <img width="1030" height="478" alt="image" src="https://github.com/user-attachments/assets/a7441750-426b-4748-93d9-c4f793d2855d" />
 
-> *Caption: AWS CLI version confirmed and caller identity verified showing account 914784730395 in us-east-1*
-
-**Step 1.2 - Confirm active region**
-
-```bash
-aws configure get region
-```
-
-**Expected Output:**
-```
-us-east-1
-```
-
-> If region is not set correctly, run:
-> ```bash
-> aws configure set region us-east-1
-> ```
+> *Caption: AWS CLI caller identity verified showing account 914784730395 and active region us-east-1 confirmed*
 
 ---
 
-### Phase 2: Tool Installation
+### Phase 2: IAM Role Provisioning
 
-#### 2.1 Install kubectl
+The EKS control plane requires an IAM role with the `AmazonEKSClusterPolicy` managed policy. A pre-flight check confirmed the role did not exist in this lab environment, so it was created from scratch.
 
-`eksctl` and `kubectl` are not pre-installed in this environment. Since `eksctl` is not needed (AWS CLI handles all provisioning), only `kubectl` is required for post-creation cluster interaction.
-
-**Step 2.1 - Download kubectl binary**
+**Step 2.1 - Pre-flight check: confirm eksClusterRole does not exist**
 
 ```bash
-curl -LO "https://dl.k8s.io/release/$(curl -Ls https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+aws iam get-role \
+  --role-name eksClusterRole \
+  --query "Role.Arn" \
+  --output text
 ```
 
-**Step 2.2 - Set execute permissions**
-
-```bash
-chmod +x kubectl
+**Output:**
+```
+An error occurred (NoSuchEntity) when calling the GetRole operation:
+The role with name eksClusterRole cannot be found.
 ```
 
-**Step 2.3 - Move to system PATH**
+> **SCREENSHOT**
 
-```bash
-sudo mv kubectl /usr/local/bin/
-```
+<img width="1035" height="422" alt="image" src="https://github.com/user-attachments/assets/ff4f8237-e27f-47bb-aa36-76c995c28197" />
 
-**Step 2.4 - Verify installation**
+> *Caption: Pre-flight IAM check confirms eksClusterRole does not exist — role creation required*
 
-```bash
-kubectl version --client
-```
-
-**Expected Output:**
-```
-Client Version: v1.35.2
-Kustomize Version: v5.7.1
-```
-
-> **[SCREENSHOT PLACEHOLDER]**
-> *Caption: kubectl v1.35.2 successfully installed and verified*
-
----
-
-### Phase 3: Network Resource Discovery
-
-Identify the default VPC and retrieve subnet IDs for availability zones a, b, and c before cluster creation. Storing the VPC ID as a shell variable reduces manual error risk.
-
-**Step 3.1 - Retrieve default VPC ID**
-
-```bash
-VPC_ID=$(aws ec2 describe-vpcs \
-  --filters "Name=isDefault,Values=true" \
-  --query "Vpcs[0].VpcId" \
-  --output text) && echo $VPC_ID
-```
-
-**Expected Output:**
-```
-vpc-057870f174cae731a
-```
-
-**Step 3.2 - List all subnets in the default VPC**
-
-```bash
-aws ec2 describe-subnets \
-  --filters "Name=vpc-id,Values=$VPC_ID" \
-  --query "Subnets[*].{AZ:AvailabilityZone,SubnetId:SubnetId}" \
-  --output table
-```
-
-**Expected Output:**
-```
---------------------------------------------
-|              DescribeSubnets             |
-+-------------+----------------------------+
-|     AZ      |         SubnetId           |
-+-------------+----------------------------+
-|  us-east-1a |  subnet-055fe6bb0490b771f  |
-|  us-east-1b |  subnet-0eba79c5af9ad1fa4  |
-|  us-east-1c |  subnet-0531e56a775ebf5fc  |
-|  us-east-1d |  subnet-0fa660b4f32b68b9c  |
-|  us-east-1e |  subnet-00197a84a99208a35  |
-|  us-east-1f |  subnet-00d19661e6f64e225  |
-+-------------+----------------------------+
-```
-
-> **Subnets selected for the cluster:** `us-east-1a`, `us-east-1b`, `us-east-1c` only, as specified by the task requirements.
-
-> **[SCREENSHOT PLACEHOLDER]**
-> *Caption: Default VPC and all 6 subnets listed. Subnets for AZs a, b, and c identified for cluster use*
-
----
-
-### Phase 4: IAM Role Provisioning
-
-The EKS control plane requires an IAM role with the `AmazonEKSClusterPolicy` managed policy. This role does not exist by default and must be created with the correct trust relationship allowing `eks.amazonaws.com` to assume it.
-
-**Step 4.1 - Create the IAM trust policy document**
+**Step 2.2 - Create the IAM trust policy document**
 
 ```bash
 cat > eks-trust-policy.json << 'EOF'
@@ -249,7 +161,7 @@ cat > eks-trust-policy.json << 'EOF'
 EOF
 ```
 
-**Step 4.2 - Create the eksClusterRole IAM role**
+**Step 2.3 - Create the eksClusterRole IAM role**
 
 ```bash
 aws iam create-role \
@@ -259,12 +171,16 @@ aws iam create-role \
   --output text
 ```
 
-**Expected Output:**
+**Output:**
 ```
 arn:aws:iam::914784730395:role/eksClusterRole
 ```
 
-**Step 4.3 - Attach the required managed policy**
+> **SCREENSHOT**
+> ![Phase 2 - Role created](screenshots/03-role-created.png)
+> *Caption: Trust policy document written and eksClusterRole created with ARN confirmed*
+
+**Step 2.4 - Attach the required managed policy**
 
 ```bash
 aws iam attach-role-policy \
@@ -272,9 +188,9 @@ aws iam attach-role-policy \
   --policy-arn arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
 ```
 
-> This command returns no output on success. No output means success.
+> This command returns no output on success.
 
-**Step 4.4 - Verify policy attachment**
+**Step 2.5 - Verify policy attachment**
 
 ```bash
 aws iam list-attached-role-policies \
@@ -282,7 +198,7 @@ aws iam list-attached-role-policies \
   --output table
 ```
 
-**Expected Output:**
+**Output:**
 ```
 --------------------------------------------------------------------------------
 |                           ListAttachedRolePolicies                           |
@@ -295,29 +211,68 @@ aws iam list-attached-role-policies \
 |+-------------------------------------------------+--------------------------+|
 ```
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Caption: eksClusterRole created with ARN confirmed and AmazonEKSClusterPolicy successfully attached*
+> **SCREENSHOT**
+> ![Phase 2 - Policy attached](screenshots/04-policy-attached.png)
+> *Caption: AmazonEKSClusterPolicy successfully attached to eksClusterRole and confirmed via list output*
 
 ---
 
-### Phase 5: Cluster Creation
+### Phase 3: Network Resource Discovery
+
+Identify the default VPC and retrieve subnet IDs for availability zones a, b, and c before cluster creation. Storing the VPC ID as a shell variable reduces manual error risk.
+
+**Step 3.1 - Retrieve default VPC ID**
+
+```bash
+VPC_ID=$(aws ec2 describe-vpcs \
+  --filters "Name=isDefault,Values=true" \
+  --query "Vpcs[0].VpcId" \
+  --output text) && echo $VPC_ID
+```
+
+**Output:**
+```
+vpc-057870f174cae731a
+```
+
+**Step 3.2 - List all subnets in the default VPC**
+
+```bash
+aws ec2 describe-subnets \
+  --filters "Name=vpc-id,Values=$VPC_ID" \
+  --query "Subnets[*].{AZ:AvailabilityZone,SubnetId:SubnetId}" \
+  --output table
+```
+
+**Output:**
+```
+--------------------------------------------
+|              DescribeSubnets             |
++-------------+----------------------------+
+|     AZ      |         SubnetId           |
++-------------+----------------------------+
+|  us-east-1a |  subnet-055fe6bb0490b771f  |
+|  us-east-1e |  subnet-00197a84a99208a35  |
+|  us-east-1c |  subnet-0531e56a775ebf5fc  |
+|  us-east-1d |  subnet-0fa660b4f32b68b9c  |
+|  us-east-1f |  subnet-00d19661e6f64e225  |
+|  us-east-1b |  subnet-0eba79c5af9ad1fa4  |
++--------------------------------------------+
+```
+
+> **Subnets selected for the cluster:** `us-east-1a`, `us-east-1b`, `us-east-1c` only, as specified by the task requirements.
+
+> **SCREENSHOT**
+> ![Phase 3 - VPC and subnets](screenshots/05-vpc-subnets.png)
+> *Caption: Default VPC vpc-057870f174cae731a retrieved and all 6 subnets listed. Subnets for AZs a, b, and c identified for cluster use*
+
+---
+
+### Phase 4: Cluster Creation
 
 With all pre-requisites confirmed, create the EKS cluster. The critical lesson from earlier attempts in this session is that AWS requires `computeConfig`, `kubernetesNetworkConfig` (elasticLoadBalancing), and `storageConfig` (blockStorage) to ALL be explicitly disabled together when opting out of EKS Auto Mode. Disabling only `computeConfig` results in an `InvalidParameterException`.
 
-**Step 5.1 - Verify latest stable Kubernetes version available on EKS**
-
-```bash
-aws eks describe-cluster-versions \
-  --query "sort_by(clusterVersions, &clusterVersion)[-1].clusterVersion" \
-  --output text
-```
-
-**Expected Output:**
-```
-1.35
-```
-
-**Step 5.2 - Create the private EKS cluster**
+**Step 4.1 - Create the private EKS cluster**
 
 ```bash
 aws eks create-cluster \
@@ -331,29 +286,72 @@ aws eks create-cluster \
   --storage-config '{"blockStorage":{"enabled":false}}'
 ```
 
-**Expected Output (truncated):**
+**Output (truncated):**
 ```json
 {
     "cluster": {
         "name": "devops-eks",
         "arn": "arn:aws:eks:us-east-1:914784730395:cluster/devops-eks",
+        "createdAt": 1773803480.171,
         "version": "1.35",
         "roleArn": "arn:aws:iam::914784730395:role/eksClusterRole",
         "resourcesVpcConfig": {
+            "subnetIds": [
+                "subnet-055fe6bb0490b771f",
+                "subnet-0eba79c5af9ad1fa4",
+                "subnet-0531e56a775ebf5fc"
+            ],
+            "securityGroupIds": [],
+            "vpcId": "vpc-057870f174cae731a",
             "endpointPublicAccess": false,
-            "endpointPrivateAccess": true
+            "endpointPrivateAccess": true,
+            "publicAccessCidrs": []
+        },
+        "kubernetesNetworkConfig": {
+            "serviceIpv4Cidr": "10.100.0.0/16",
+            "ipFamily": "ipv4",
+            "elasticLoadBalancing": {
+                "enabled": false
+            }
+        },
+        "logging": {
+            "clusterLogging": [
+                {
+                    "types": ["api", "audit", "authenticator", "controllerManager", "scheduler"],
+                    "enabled": false
+                }
+            ]
         },
         "status": "CREATING",
-        "computeConfig": { "enabled": false },
-        "storageConfig": { "blockStorage": { "enabled": false } }
+        "platformVersion": "eks.8",
+        "accessConfig": {
+            "bootstrapClusterCreatorAdminPermissions": true,
+            "authenticationMode": "CONFIG_MAP"
+        },
+        "upgradePolicy": {
+            "supportType": "EXTENDED"
+        },
+        "computeConfig": {
+            "enabled": false
+        },
+        "storageConfig": {
+            "blockStorage": {
+                "enabled": false
+            }
+        }
     }
 }
 ```
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Caption: Cluster creation initiated with status CREATING and all configuration parameters confirmed in the JSON response*
+> **SCREENSHOT**
+> ![Phase 4 - Cluster creation initiated](screenshots/06-cluster-creating-1.png)
+> *Caption: Cluster creation initiated — full JSON response showing status CREATING with all configuration parameters confirmed*
 
-**Step 5.3 - Poll cluster status until ACTIVE**
+> **SCREENSHOT**
+> ![Phase 4 - Cluster creation JSON continued](screenshots/07-cluster-creating-2.png)
+> *Caption: JSON response continued showing computeConfig disabled, storageConfig blockStorage disabled, and status CREATING*
+
+**Step 4.2 - Poll cluster status until ACTIVE**
 
 ```bash
 aws eks describe-cluster \
@@ -363,24 +361,27 @@ aws eks describe-cluster \
   --output text
 ```
 
-> Re-run this command every 2-3 minutes. Cluster provisioning typically takes 10-15 minutes.
+> Re-run this command every few minutes. Cluster provisioning typically takes 10-15 minutes.
 
-**Expected progression:**
+**Output progression:**
 ```
-CREATING  (run 1-4)
-ACTIVE    (run 5+)
+CREATING
+CREATING
+CREATING
+ACTIVE
 ```
 
-> **[SCREENSHOT PLACEHOLDER]**
+> **SCREENSHOT**
+> ![Phase 4 - Status polling](screenshots/08-status-polling.png)
 > *Caption: Multiple status polls showing CREATING transitioning to ACTIVE after approximately 10 minutes*
 
 ---
 
-### Phase 6: Verification
+### Phase 5: Verification
 
 Run all verification checks sequentially after the cluster reaches `ACTIVE` status to confirm every requirement is met.
 
-**Step 6.1 - Verify cluster name, status, and Kubernetes version**
+**Step 5.1 - Verify cluster name, status, and Kubernetes version**
 
 ```bash
 aws eks describe-cluster \
@@ -389,7 +390,7 @@ aws eks describe-cluster \
   --output table
 ```
 
-**Expected Output:**
+**Output:**
 ```
 -------------------------------------
 |          DescribeCluster          |
@@ -400,7 +401,7 @@ aws eks describe-cluster \
 +------------+----------+-----------+
 ```
 
-**Step 6.2 - Verify IAM role**
+**Step 5.2 - Verify IAM role**
 
 ```bash
 aws eks describe-cluster \
@@ -409,12 +410,16 @@ aws eks describe-cluster \
   --output text
 ```
 
-**Expected Output:**
+**Output:**
 ```
 arn:aws:iam::914784730395:role/eksClusterRole
 ```
 
-**Step 6.3 - Verify endpoint access configuration**
+> **SCREENSHOT**
+> ![Phase 5 - Active status and role ARN](screenshots/09-active-role-verified.png)
+> *Caption: Cluster status confirmed ACTIVE on Kubernetes 1.35 and IAM role ARN verified as eksClusterRole*
+
+**Step 5.3 - Verify endpoint access configuration**
 
 ```bash
 aws eks describe-cluster \
@@ -423,7 +428,7 @@ aws eks describe-cluster \
   --output table
 ```
 
-**Expected Output:**
+**Output:**
 ```
 -----------------------------------
 |         DescribeCluster         |
@@ -434,7 +439,7 @@ aws eks describe-cluster \
 +----------------+----------------+
 ```
 
-**Step 6.4 - Verify subnets across all three AZs**
+**Step 5.4 - Verify subnets across all three AZs**
 
 ```bash
 aws eks describe-cluster \
@@ -443,7 +448,7 @@ aws eks describe-cluster \
   --output table
 ```
 
-**Expected Output:**
+**Output:**
 ```
 ------------------------------
 |       DescribeCluster      |
@@ -454,7 +459,7 @@ aws eks describe-cluster \
 +----------------------------+
 ```
 
-**Step 6.5 - Verify EKS Auto Mode is fully disabled**
+**Step 5.5 - Verify EKS Auto Mode is fully disabled**
 
 ```bash
 aws eks describe-cluster \
@@ -463,7 +468,7 @@ aws eks describe-cluster \
   --output json
 ```
 
-**Expected Output:**
+**Output:**
 ```json
 {
     "ComputeConfig": {
@@ -478,22 +483,9 @@ aws eks describe-cluster \
 }
 ```
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Caption: Full verification suite completed showing all parameters matching requirements including private endpoint, correct subnets, and EKS Auto Mode fully disabled*
-
-**Step 6.6 - Update kubeconfig for cluster access (within VPC only)**
-
-```bash
-aws eks update-kubeconfig \
-  --region us-east-1 \
-  --name devops-eks
-```
-
-```bash
-kubectl get svc
-```
-
-> **Important:** Because the cluster endpoint is private, `kubectl` commands will only succeed from within the VPC (for example, from an EC2 instance or a bastion host in the same VPC). Running these commands from outside the VPC will time out by design.
+> **SCREENSHOT**
+> ![Phase 5 - Full verification suite](screenshots/10-full-verification.png)
+> *Caption: Full verification suite completed — private endpoint confirmed (PrivateAccess: True, PublicAccess: False), correct subnets listed, and EKS Auto Mode fully disabled across compute and storage*
 
 ---
 
@@ -582,10 +574,6 @@ When disabling EKS Auto Mode, always disable all three sub-components in the sam
 
 Clusters with `endpointPublicAccess: false` are intentionally inaccessible from the public internet. Always provision a bastion host, AWS Cloud9 environment, or VPN connection within the same VPC before attempting `kubectl` operations. Document this constraint explicitly in team runbooks.
 
-**Always Pin Kubernetes Version**
-
-Use `aws eks describe-cluster-versions` to programmatically retrieve the latest stable version rather than hardcoding a version number. Hardcoded versions lead to drift and failed deployments when the pinned version is deprecated.
-
 **Verification as a Gate**
 
 Never consider provisioning complete without running the full verification suite. Each check targets a specific requirement and provides an audit trail. Treat verification as a non-negotiable final phase, not an optional step.
@@ -602,7 +590,7 @@ Always confirm that selected subnets correspond to distinct physical availabilit
 AWS does not allow partial configuration of EKS Auto Mode components. This is an underdocumented constraint that is only surfaced at runtime. Any automation that disables Auto Mode must disable all three components simultaneously: compute, load balancing, and block storage.
 
 **2. Tool availability cannot be assumed in ephemeral environments.**
-In cloud lab environments, common tools like `eksctl` and `kubectl` may not be present. Building a workflow that depends only on the AWS CLI as the primary tool eliminates this class of failure entirely. `eksctl` adds a convenience layer but is not necessary for cluster provisioning.
+In cloud lab environments, common tools like `eksctl` and `kubectl` may not be present. Building a workflow that depends only on the AWS CLI as the primary tool eliminates this class of failure entirely.
 
 **3. IAM roles are session-scoped in lab environments.**
 Lab environments frequently rotate AWS accounts and reset IAM state. Every provisioning workflow must include a role existence check and a creation step that runs conditionally. This prevents both "role not found" failures and "entity already exists" conflicts.
@@ -614,7 +602,7 @@ Manually copying VPC IDs and subnet IDs across multiple commands is error-prone.
 A private EKS endpoint is only useful if access from within the VPC is planned in advance. Teams should provision access infrastructure (bastion, VPN, or Cloud9) as part of the same deployment pipeline, not as an afterthought after finding that `kubectl` commands time out.
 
 **6. Status polling requires patience.**
-EKS control plane provisioning consistently takes 10-15 minutes. Implementing a polling loop with a reasonable interval (30 seconds) rather than hammering the API is both more efficient and more professional. Use `watch -n 30` or a loop script rather than manual repeated invocations.
+EKS control plane provisioning consistently takes 10-15 minutes. Polling the status at a reasonable interval rather than hammering the API is both more efficient and more professional.
 
 ---
 
@@ -625,7 +613,6 @@ EKS control plane provisioning consistently takes 10-15 minutes. Implementing a 
 | AWS EKS CreateCluster API | https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html |
 | AmazonEKSClusterPolicy | https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AmazonEKSClusterPolicy.html |
 | EKS Auto Mode Documentation | https://docs.aws.amazon.com/eks/latest/userguide/automode.html |
-| kubectl Installation | https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/ |
 | EKS Private Cluster Access | https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html |
 
 ---
@@ -634,7 +621,7 @@ EKS control plane provisioning consistently takes 10-15 minutes. Implementing a 
 
 
 
-<img width="1035" height="422" alt="image" src="https://github.com/user-attachments/assets/ff4f8237-e27f-47bb-aa36-76c995c28197" />
+
 <img width="1035" height="547" alt="image" src="https://github.com/user-attachments/assets/8dd2bee0-ca4c-4bdf-8b76-726a4d2328df" />
 <img width="1031" height="500" alt="image" src="https://github.com/user-attachments/assets/5c94059f-8463-49c3-90a4-571a883117bb" />
 <img width="1027" height="798" alt="image" src="https://github.com/user-attachments/assets/41ce8e8d-369a-4987-a8e5-822f89adecb5" />
