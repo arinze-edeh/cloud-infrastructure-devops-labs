@@ -350,11 +350,15 @@ aws eks create-cluster \
 ```
 
 > **SCREENSHOT**
-> ![Phase 4 - Cluster creation initiated](screenshots/06-cluster-creating-1.png)
+
+<img width="1031" height="848" alt="image" src="https://github.com/user-attachments/assets/584697d6-2358-419b-bfa3-e239bfae99b8" />
+
 > *Caption: Cluster creation initiated — full JSON response showing status CREATING with all configuration parameters confirmed*
 
 > **SCREENSHOT**
-> ![Phase 4 - Cluster creation JSON continued](screenshots/07-cluster-creating-2.png)
+
+<img width="1026" height="856" alt="image" src="https://github.com/user-attachments/assets/2352f9a7-601a-4109-8a0d-06aae981cd88" />
+
 > *Caption: JSON response continued showing computeConfig disabled, storageConfig blockStorage disabled, and status CREATING*
 
 **Step 4.2 - Poll cluster status until ACTIVE**
@@ -378,7 +382,9 @@ ACTIVE
 ```
 
 > **SCREENSHOT**
-> ![Phase 4 - Status polling](screenshots/08-status-polling.png)
+
+<img width="1037" height="870" alt="image" src="https://github.com/user-attachments/assets/b7f978f4-4340-43b5-9c29-e890a418d084" />
+
 > *Caption: Multiple status polls showing CREATING transitioning to ACTIVE after approximately 10 minutes*
 
 ---
@@ -631,8 +637,8 @@ EKS control plane provisioning consistently takes 10-15 minutes. Polling the sta
 
 
 
-<img width="1031" height="848" alt="image" src="https://github.com/user-attachments/assets/584697d6-2358-419b-bfa3-e239bfae99b8" />
-<img width="1026" height="856" alt="image" src="https://github.com/user-attachments/assets/2352f9a7-601a-4109-8a0d-06aae981cd88" />
-<img width="1037" height="870" alt="image" src="https://github.com/user-attachments/assets/b7f978f4-4340-43b5-9c29-e890a418d084" />
+
+
+
 <img width="1026" height="517" alt="image" src="https://github.com/user-attachments/assets/7959cb15-95b2-4d71-a36d-34dcb6e47d38" />
 <img width="1031" height="861" alt="image" src="https://github.com/user-attachments/assets/c5187a3b-3959-48c2-a24a-ee2a77d23879" />
