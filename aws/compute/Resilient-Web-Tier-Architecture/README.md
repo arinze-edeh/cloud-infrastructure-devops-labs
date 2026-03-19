@@ -599,7 +599,7 @@ aws elbv2 describe-target-health \
 
 > **Screenshot**
 
-
+<img width="1032" height="747" alt="image" src="https://github.com/user-attachments/assets/39d15344-536f-4ea9-8bee-98b5783ddf88" />
 
 > `Terminal showing ASG instance table with InService/Healthy AND describe-target-health output with State: healthy]`
 
@@ -815,5 +815,5 @@ Subnets              : subnet-08fc950d95b191d64 (us-east-1f)
 
 
 
-<img width="1032" height="747" alt="image" src="https://github.com/user-attachments/assets/39d15344-536f-4ea9-8bee-98b5783ddf88" />
+
 <img width="1029" height="855" alt="image" src="https://github.com/user-attachments/assets/4f03dd84-72e6-4c9c-8acb-1bd978cb7521" />
