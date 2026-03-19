@@ -127,7 +127,11 @@ kml_rg_main-21feedb32ed4471f  eastus      Succeeded
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal output showing `az account show` and `az group list --output table` confirming the active subscription and resource group in East US]**
+**SCREENSHOT:** 
+
+<img width="1030" height="563" alt="image" src="https://github.com/user-attachments/assets/f460eb4c-2034-4eb2-aabf-4e66dade540a" />
+
+>Terminal output showing `az account show` and `az group list --output table` confirming the active subscription and resource group in `East US`
 
 ---
 
@@ -168,7 +172,13 @@ az storage account create \
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing the full JSON response from `az storage account create` with `provisioningState: Succeeded` and the `primaryEndpoints.web` URL highlighted]**
+**SCREENSHOTS:** 
+
+<img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/6944a481-1b3d-4845-ab19-a3cd0b3b7967" />
+<img width="1033" height="868" alt="image" src="https://github.com/user-attachments/assets/9d726326-03ce-4664-8d67-8562672edf01" />
+<img width="1029" height="630" alt="image" src="https://github.com/user-attachments/assets/ed21c32c-1f00-4318-855c-f6cd6d87f0ea" />
+
+>Terminal showing the full JSON response from `az storage account create` with `provisioningState: Succeeded` and the `primaryEndpoints.web` URL highlighted
 
 ---
 
@@ -446,10 +456,8 @@ A `curl -I` check against the endpoint gives an immediate, unambiguous signal of
 
 
 
-<img width="1030" height="563" alt="image" src="https://github.com/user-attachments/assets/f460eb4c-2034-4eb2-aabf-4e66dade540a" />
-<img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/6944a481-1b3d-4845-ab19-a3cd0b3b7967" />
-<img width="1033" height="868" alt="image" src="https://github.com/user-attachments/assets/9d726326-03ce-4664-8d67-8562672edf01" />
-<img width="1029" height="630" alt="image" src="https://github.com/user-attachments/assets/ed21c32c-1f00-4318-855c-f6cd6d87f0ea" />
+
+
 <img width="1035" height="851" alt="image" src="https://github.com/user-attachments/assets/d3d0821a-94d2-4a41-9c90-757738600157" />
 <img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/d52d2926-a25e-41c2-bc24-3ad31c448dc2" />
 <img width="1032" height="868" alt="image" src="https://github.com/user-attachments/assets/bcb677a0-bf96-4c79-9bda-2fb9bfbf1a56" />
