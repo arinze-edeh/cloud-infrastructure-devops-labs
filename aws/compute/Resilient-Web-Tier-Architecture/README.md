@@ -278,9 +278,10 @@ aws ec2 describe-launch-templates \
   --region us-east-1
 ```
 
-> **Screenshot**
+> **Screenshots**
 
-
+<img width="1030" height="859" alt="image" src="https://github.com/user-attachments/assets/b14e89b3-ac4f-44c9-aeec-387d5bb8a0a0" />
+<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/7901f4a4-4d59-4d7a-bcba-74b93e2f4ffa" />
 
 > `Terminal showing launch template creation output with LaunchTemplateId lt-044b18f242a5d9e4d and version numbers]`
 
@@ -811,8 +812,7 @@ Subnets              : subnet-08fc950d95b191d64 (us-east-1f)
 
 
 
-<img width="1030" height="859" alt="image" src="https://github.com/user-attachments/assets/b14e89b3-ac4f-44c9-aeec-387d5bb8a0a0" />
-<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/7901f4a4-4d59-4d7a-bcba-74b93e2f4ffa" />
+
 <img width="1031" height="529" alt="image" src="https://github.com/user-attachments/assets/2c672e2e-ed54-4895-8576-9380c4aa36ca" />
 <img width="1034" height="838" alt="image" src="https://github.com/user-attachments/assets/f9b1cbf7-f3dd-471d-8ab9-bccdd9986ab5" />
 <img width="1034" height="874" alt="image" src="https://github.com/user-attachments/assets/f8d8c179-7ab4-4516-8bf7-bbe060766ec0" />
