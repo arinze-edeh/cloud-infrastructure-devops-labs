@@ -180,8 +180,11 @@ CMD ["apache2ctl", "-D", "FOREGROUND"]
 
 Save and exit the editor (`:wq` in vi).
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: vi editor open at /opt/docker/Dockerfile showing all Dockerfile instructions]`
+> **Screenshot**
+
+<img width="1042" height="867" alt="image" src="https://github.com/user-attachments/assets/f958116a-6273-4dd3-b599-19519128e2c6" />
+
+> `vi editor open at /opt/docker/Dockerfile showing all Dockerfile instructions`
 
 ---
 
@@ -207,8 +210,11 @@ EXPOSE 6100
 CMD ["apache2ctl", "-D", "FOREGROUND"]
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: cat /opt/docker/Dockerfile output confirming all lines match the specification exactly]`
+> **Screenshot**
+
+<img width="1030" height="749" alt="image" src="https://github.com/user-attachments/assets/6e3d2839-2ef9-4316-b350-ad65134dd52a" />
+
+> `cat /opt/docker/Dockerfile output confirming all lines match the specification exactly`
 
 ---
 
@@ -226,8 +232,11 @@ logout
 Connection to stapp03 closed.
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing exit and connection closed confirmation, returning to jump-host prompt]`
+> **Screenshot**
+
+<img width="1030" height="780" alt="image" src="https://github.com/user-attachments/assets/8087fb49-b26d-4b0d-913b-202676d84a82" />
+
+> `Terminal showing exit and connection closed confirmation, returning to jump-host prompt`
 
 ---
 
@@ -418,12 +427,3 @@ Placing `apt-get update` and `apt-get install` in the same `RUN` layer is critic
 | Wrong server modified | Skipped hostname verification | Always run `hostname` immediately after SSH login |
 
 ---
-
-
-
-
-<img width="1042" height="867" alt="image" src="https://github.com/user-attachments/assets/f958116a-6273-4dd3-b599-19519128e2c6" />
-<img width="1030" height="749" alt="image" src="https://github.com/user-attachments/assets/6e3d2839-2ef9-4316-b350-ad65134dd52a" />
-<img width="1030" height="780" alt="image" src="https://github.com/user-attachments/assets/8087fb49-b26d-4b0d-913b-202676d84a82" />
-
-
