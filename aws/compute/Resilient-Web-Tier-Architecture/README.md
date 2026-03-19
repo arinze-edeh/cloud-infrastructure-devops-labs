@@ -71,9 +71,6 @@ Internet
     | us-east-1f | us-east-1d
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: AWS Console - EC2 Dashboard showing the running instance, ASG, and ALB in us-east-1]`
-
 ---
 
 ## Problem Statement
@@ -138,8 +135,11 @@ aws ec2 create-security-group \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing security group creation output with GroupId highlighted]`
+> **Screenshot**
+
+
+
+> `Terminal showing security group creation output with GroupId highlighted]`
 
 **Add inbound rule for HTTP on port 80:**
 
@@ -170,8 +170,11 @@ aws ec2 authorize-security-group-ingress \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing authorize-security-group-ingress output with Return: true and CidrIpv4: 0.0.0.0/0]`
+> **Screenshot**
+
+
+
+> `Terminal showing authorize-security-group-ingress output with Return: true and CidrIpv4: 0.0.0.0/0]`
 
 ---
 
@@ -195,8 +198,11 @@ aws ec2 describe-images \
 ami-05024c2628f651b80
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing the describe-images command returning the latest AMI ID]`
+> **Screenshotr**
+
+
+
+> `Terminal showing the describe-images command returning the latest AMI ID]`
 
 ---
 
@@ -272,8 +278,11 @@ aws ec2 describe-launch-templates \
   --region us-east-1
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing launch template creation output with LaunchTemplateId lt-044b18f242a5d9e4d and version numbers]`
+> **Screenshot**
+
+
+
+> `Terminal showing launch template creation output with LaunchTemplateId lt-044b18f242a5d9e4d and version numbers]`
 
 ---
 
@@ -320,8 +329,11 @@ aws ec2 describe-subnets \
 +---------------------------+--------------+
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing VPC ID output and full subnet table with all six Availability Zones]`
+> **Screenshot**
+
+
+
+> `Terminal showing VPC ID output and full subnet table with all six Availability Zones]`
 
 **Selected subnets for this deployment:**
 
@@ -371,8 +383,11 @@ aws elbv2 create-target-group \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing create-target-group output with TargetGroupArn and health check configuration]`
+> **Screenshot**
+
+
+
+> `Terminal showing create-target-group output with TargetGroupArn and health check configuration]`
 
 ---
 
@@ -408,8 +423,11 @@ aws elbv2 create-load-balancer \
 
 > **Note:** State `provisioning` is expected and normal. The ALB becomes `active` within 1 to 2 minutes.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing create-load-balancer output with LoadBalancerArn and DNSName]`
+> **Screenshot**
+
+
+
+> `Terminal showing create-load-balancer output with LoadBalancerArn and DNSName]`
 
 ---
 
@@ -444,8 +462,11 @@ aws elbv2 create-listener \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing create-listener output confirming Port 80, Protocol HTTP, and forward action to datacenter-tg]`
+> **Screenshot**
+
+
+
+> `Terminal showing create-listener output confirming Port 80, Protocol HTTP, and forward action to datacenter-tg]`
 
 ---
 
@@ -477,8 +498,11 @@ aws autoscaling describe-auto-scaling-groups \
   --region us-east-1
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing describe-auto-scaling-groups output with MinSize: 1, MaxSize: 2, DesiredCapacity: 1, HealthCheckType: ELB, and TargetGroupARNs]`
+> **Screenshot**
+
+
+
+> `Terminal showing describe-auto-scaling-groups output with MinSize: 1, MaxSize: 2, DesiredCapacity: 1, HealthCheckType: ELB, and TargetGroupARNs]`
 
 ---
 
@@ -515,8 +539,11 @@ aws autoscaling put-scaling-policy \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing put-scaling-policy output with PolicyARN and both AlarmHigh and AlarmLow CloudWatch alarms created]`
+> **Screenshot**
+
+
+
+> `Terminal showing put-scaling-policy output with PolicyARN and both AlarmHigh and AlarmLow CloudWatch alarms created]`
 
 ---
 
@@ -569,8 +596,11 @@ aws elbv2 describe-target-health \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing ASG instance table with InService/Healthy AND describe-target-health output with State: healthy]`
+> **Screenshot**
+
+
+
+> `Terminal showing ASG instance table with InService/Healthy AND describe-target-health output with State: healthy]`
 
 ---
 
@@ -592,11 +622,17 @@ curl -v http://datacenter-alb-910242966.us-east-1.elb.amazonaws.com
 <p>If you see this page, the nginx web server is successfully installed and working.</p>
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing full curl -v output with HTTP/1.1 200 OK, Server: nginx/1.28.2 header, and Welcome to nginx! in the HTML body]`
+> **Screenshot**
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Browser tab opened to the ALB DNS URL displaying the default Nginx welcome page]`
+
+
+> `Terminal showing full curl -v output with HTTP/1.1 200 OK, Server: nginx/1.28.2 header, and Welcome to nginx! in the HTML body]`
+
+> **Screenshot**
+
+
+
+> `Browser tab opened to the ALB DNS URL displaying the default Nginx welcome page]`
 
 ---
 
