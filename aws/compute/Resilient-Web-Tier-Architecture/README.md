@@ -137,7 +137,7 @@ aws ec2 create-security-group \
 
 > **Screenshot**
 
-
+<img width="1033" height="699" alt="image" src="https://github.com/user-attachments/assets/a93491d7-2d31-46ce-ae0c-e4507027d9f8" />
 
 > `Terminal showing security group creation output with GroupId highlighted]`
 
@@ -172,7 +172,7 @@ aws ec2 authorize-security-group-ingress \
 
 > **Screenshot**
 
-
+<img width="1033" height="699" alt="image" src="https://github.com/user-attachments/assets/a93491d7-2d31-46ce-ae0c-e4507027d9f8" />
 
 > `Terminal showing authorize-security-group-ingress output with Return: true and CidrIpv4: 0.0.0.0/0]`
 
@@ -775,26 +775,41 @@ Subnets              : subnet-08fc950d95b191d64 (us-east-1f)
 ## Validation Checklist
 
 ✅ Security group `datacenter-sg` created with TCP 80 inbound from `0.0.0.0/0`
+
 ✅ Inbound rule confirmed with `Return: true` in CLI output
+
 ✅ Latest Amazon Linux 2 AMI ID retrieved dynamically
+
 ✅ User Data script verified to use `amazon-linux-extras install nginx1 -y`
+
 ✅ User Data base64-encoded and embedded in launch template
+
 ✅ Launch template `datacenter-launch-template` exists with `LatestVersionNumber: 1`
+
 ✅ Default VPC and at least two subnets across different AZs identified
+
 ✅ Target group `datacenter-tg` created with HTTP health check on path `/` returning 200
+
 ✅ ALB `datacenter-alb` created as internet-facing across two AZs
+
 ✅ ALB listener configured on port 80 forwarding to `datacenter-tg`
+
 ✅ ASG `datacenter-asg` created with Min 1, Desired 1, Max 2
+
 ✅ ASG `health-check-type` set to `ELB` with `health-check-grace-period` of 120 seconds
+
 ✅ CPU scaling policy attached targeting 50% utilization with both CloudWatch alarms created
+
 ✅ ASG instance shows `LifecycleState: InService` and `HealthStatus: Healthy`
+
 ✅ Target group shows `State: healthy` for registered instance
+
 ✅ `curl http://datacenter-alb-910242966.us-east-1.elb.amazonaws.com` returns HTTP 200 with `Welcome to nginx!`
 
 ---
 
 
-<img width="1033" height="699" alt="image" src="https://github.com/user-attachments/assets/a93491d7-2d31-46ce-ae0c-e4507027d9f8" />
+
 <img width="1029" height="678" alt="image" src="https://github.com/user-attachments/assets/f592799f-05e8-49cf-bbc3-322b72081b39" />
 <img width="1030" height="859" alt="image" src="https://github.com/user-attachments/assets/b14e89b3-ac4f-44c9-aeec-387d5bb8a0a0" />
 <img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/7901f4a4-4d59-4d7a-bcba-74b93e2f4ffa" />
