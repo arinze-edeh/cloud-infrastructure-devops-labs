@@ -330,9 +330,9 @@ aws ec2 describe-subnets \
 +---------------------------+--------------+
 ```
 
-> **Screenshot**
+>**Screenshot**
 
-
+<img width="1034" height="838" alt="image" src="https://github.com/user-attachments/assets/f9b1cbf7-f3dd-471d-8ab9-bccdd9986ab5" />
 
 > `Terminal showing VPC ID output and full subnet table with all six Availability Zones]`
 
@@ -811,10 +811,6 @@ Subnets              : subnet-08fc950d95b191d64 (us-east-1f)
 
 
 
-
-
-<img width="1031" height="529" alt="image" src="https://github.com/user-attachments/assets/2c672e2e-ed54-4895-8576-9380c4aa36ca" />
-<img width="1034" height="838" alt="image" src="https://github.com/user-attachments/assets/f9b1cbf7-f3dd-471d-8ab9-bccdd9986ab5" />
 <img width="1034" height="874" alt="image" src="https://github.com/user-attachments/assets/f8d8c179-7ab4-4516-8bf7-bbe060766ec0" />
 <img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/de7854cb-34e4-4e44-9bdb-0817e0ae8a5d" />
 <img width="1034" height="785" alt="image" src="https://github.com/user-attachments/assets/c68028f8-c43e-4012-a313-5d9829614805" />
