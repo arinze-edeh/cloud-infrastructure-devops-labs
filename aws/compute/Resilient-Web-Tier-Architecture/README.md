@@ -503,7 +503,7 @@ aws autoscaling describe-auto-scaling-groups \
 
 <img width="1030" height="825" alt="image" src="https://github.com/user-attachments/assets/f66fcf0e-ae39-4342-89d6-8a361ec58d14" />
 
-> `Terminal showing describe-auto-scaling-groups output with MinSize: 1, MaxSize: 2, DesiredCapacity: 1, HealthCheckType: ELB, and TargetGroupARNs]`
+> `Terminal showing output with MinSize: 1, MaxSize: 2, DesiredCapacity: 1, HealthCheckType: ELB, and TargetGroupARNs]`
 
 ---
 
