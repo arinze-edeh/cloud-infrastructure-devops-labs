@@ -242,7 +242,12 @@ az storage account update \
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing `az storage account update` response with `allowBlobPublicAccess: true` confirmed]**
+**SCREENSHOTS:**
+
+<img width="1032" height="868" alt="image" src="https://github.com/user-attachments/assets/bcb677a0-bf96-4c79-9bda-2fb9bfbf1a56" />
+<img width="1030" height="863" alt="image" src="https://github.com/user-attachments/assets/f7a52b2d-fbdb-4500-8f47-79351799b53c" />
+
+>Terminal showing `az storage account update` response with `allowBlobPublicAccess: true` confirmed
 
 ---
 
@@ -268,7 +273,11 @@ NBdBm8MFJVQlWL4dpvD1Yx9rSDSCO5yJQcPf5yxQSXZC78bOH4Neee18Z1GW2DJvyeVDsNJxhejw+ASt
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal output from `az storage account keys list` showing the masked or visible key returned in tsv format]**
+**SCREENSHOT:** 
+
+<img width="1032" height="321" alt="image" src="https://github.com/user-attachments/assets/88224ab6-c428-4073-888c-a0fd9f84e475" />
+
+>Terminal output from `az storage account keys list` showing the masked or visible key returned in tsv format
 
 ---
 
@@ -307,7 +316,11 @@ az storage blob upload \
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing the `az storage blob upload` progress bar completing at 100% and the JSON response with `lastModified` timestamp confirmed]**
+**SCREENSHOT:** 
+
+<img width="1032" height="599" alt="image" src="https://github.com/user-attachments/assets/1f4394a4-819d-4f05-9f5c-58221e71d49e" />
+
+>Terminal showing the `az storage blob upload` progress bar completing at 100% and the JSON response with `lastModified` timestamp confirmed
 
 ---
 
@@ -334,7 +347,11 @@ Server: Windows-Azure-Web/1.0 Microsoft-HTTPAPI/2.0
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing `curl -I` output with `HTTP/1.1 200 OK`, `Content-Type: text/html`, and the `Last-Modified` timestamp matching the upload time]**
+**SCREENSHOT:** 
+
+<img width="1031" height="303" alt="image" src="https://github.com/user-attachments/assets/dd6b827d-2bb9-472f-9040-8597c83a7461" />
+
+>Terminal showing `curl -I` output with `HTTP/1.1 200 OK`, `Content-Type: text/html`, and the `Last-Modified` timestamp matching the upload time
 
 ---
 
@@ -350,7 +367,11 @@ https://devopswebst23591.z13.web.core.windows.net/
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Browser window navigated to `https://devopswebst23591.z13.web.core.windows.net/` displaying the text "Welcome to KKE labs!" confirming successful static website deployment]**
+**SCREENSHOT:** 
+
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/efce9e5c-0354-4247-ba32-cfd43e047e76" />
+
+>Browser window navigated to `https://devopswebst23591.z13.web.core.windows.net/` displaying the text "Welcome to KKE labs!" confirming successful static website deployment
 
 ---
 
@@ -458,19 +479,3 @@ A `curl -I` check against the endpoint gives an immediate, unambiguous signal of
 * [Azure CDN Integration with Static Websites](https://learn.microsoft.com/en-us/azure/storage/blobs/static-website-content-delivery-network)
 
 ---
-
-
-
-
-
-
-<img width="1032" height="868" alt="image" src="https://github.com/user-attachments/assets/bcb677a0-bf96-4c79-9bda-2fb9bfbf1a56" />
-<img width="1030" height="863" alt="image" src="https://github.com/user-attachments/assets/f7a52b2d-fbdb-4500-8f47-79351799b53c" />
-<img width="1032" height="321" alt="image" src="https://github.com/user-attachments/assets/88224ab6-c428-4073-888c-a0fd9f84e475" />
-<img width="1032" height="599" alt="image" src="https://github.com/user-attachments/assets/1f4394a4-819d-4f05-9f5c-58221e71d49e" />
-<img width="1035" height="858" alt="image" src="https://github.com/user-attachments/assets/74dee2d0-9a9d-4e2a-897b-6cd525ae24d0" />
-<img width="1036" height="728" alt="image" src="https://github.com/user-attachments/assets/f24b171a-c505-406e-ac74-dccbbf20e94d" />
-<img width="1031" height="303" alt="image" src="https://github.com/user-attachments/assets/dd6b827d-2bb9-472f-9040-8597c83a7461" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/efce9e5c-0354-4247-ba32-cfd43e047e76" />
-
-
