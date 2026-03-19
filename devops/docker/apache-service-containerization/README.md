@@ -277,7 +277,7 @@ CMD ["apache2ctl", "-D", "FOREGROUND"]
 
 ---
 
-## Verification (Optional)
+## Verification
 
 After creating the Dockerfile, optionally build and test the image to confirm correctness.
 
