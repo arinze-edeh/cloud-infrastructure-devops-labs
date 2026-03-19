@@ -210,7 +210,12 @@ az storage blob service-properties update \
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal output from `az storage blob service-properties update` confirming `staticWebsite.enabled: true` and `indexDocument: index.html`]**
+**SCREENSHOTS:** 
+
+<img width="1035" height="851" alt="image" src="https://github.com/user-attachments/assets/d3d0821a-94d2-4a41-9c90-757738600157" />
+<img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/d52d2926-a25e-41c2-bc24-3ad31c448dc2" />
+
+>Terminal output from `az storage blob service-properties update` confirming `staticWebsite.enabled: true` and `indexDocument: index.html`
 
 ---
 
@@ -458,8 +463,7 @@ A `curl -I` check against the endpoint gives an immediate, unambiguous signal of
 
 
 
-<img width="1035" height="851" alt="image" src="https://github.com/user-attachments/assets/d3d0821a-94d2-4a41-9c90-757738600157" />
-<img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/d52d2926-a25e-41c2-bc24-3ad31c448dc2" />
+
 <img width="1032" height="868" alt="image" src="https://github.com/user-attachments/assets/bcb677a0-bf96-4c79-9bda-2fb9bfbf1a56" />
 <img width="1030" height="863" alt="image" src="https://github.com/user-attachments/assets/f7a52b2d-fbdb-4500-8f47-79351799b53c" />
 <img width="1032" height="321" alt="image" src="https://github.com/user-attachments/assets/88224ab6-c428-4073-888c-a0fd9f84e475" />
