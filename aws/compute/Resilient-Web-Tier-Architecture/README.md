@@ -501,7 +501,7 @@ aws autoscaling describe-auto-scaling-groups \
 
 > **Screenshot**
 
-
+<img width="1030" height="825" alt="image" src="https://github.com/user-attachments/assets/f66fcf0e-ae39-4342-89d6-8a361ec58d14" />
 
 > `Terminal showing describe-auto-scaling-groups output with MinSize: 1, MaxSize: 2, DesiredCapacity: 1, HealthCheckType: ELB, and TargetGroupARNs]`
 
@@ -542,7 +542,7 @@ aws autoscaling put-scaling-policy \
 
 > **Screenshot**
 
-
+<img width="1030" height="825" alt="image" src="https://github.com/user-attachments/assets/f66fcf0e-ae39-4342-89d6-8a361ec58d14" />
 
 > `Terminal showing put-scaling-policy output with PolicyARN and both AlarmHigh and AlarmLow CloudWatch alarms created]`
 
@@ -814,6 +814,6 @@ Subnets              : subnet-08fc950d95b191d64 (us-east-1f)
 
 
 
-<img width="1030" height="825" alt="image" src="https://github.com/user-attachments/assets/f66fcf0e-ae39-4342-89d6-8a361ec58d14" />
+
 <img width="1032" height="747" alt="image" src="https://github.com/user-attachments/assets/39d15344-536f-4ea9-8bee-98b5783ddf88" />
 <img width="1029" height="855" alt="image" src="https://github.com/user-attachments/assets/4f03dd84-72e6-4c9c-8acb-1bd978cb7521" />
