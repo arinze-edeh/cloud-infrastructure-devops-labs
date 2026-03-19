@@ -615,8 +615,8 @@ curl -v http://datacenter-alb-910242966.us-east-1.elb.amazonaws.com
 
 **Expected output (key indicators):**
 ```
-<title>Welcome to nginx !< /title>
-<h1>Welcome to nginx !< /h1>
+<title>Welcome to nginx !</title>
+<h1>Welcome to nginx !</h1>
 ```
 
 > **Screenshot**
@@ -795,7 +795,7 @@ Subnets              : subnet-08fc950d95b191d64 (us-east-1f)
 
 ✅ Target group shows `State: healthy` for registered instance
 
-✅ `curl http://datacenter-alb-910242966.us-east-1.elb.amazonaws.com` returns HTTP 200 with `Welcome to nginx!`
+✅ `curl http://datacenter-alb-910242966.us-east-1.elb.amazonaws.com` returns `Welcome to nginx!`
 
 ---
 
