@@ -386,7 +386,7 @@ aws elbv2 create-target-group \
 
 > **Screenshot**
 
-
+<img width="1034" height="874" alt="image" src="https://github.com/user-attachments/assets/f8d8c179-7ab4-4516-8bf7-bbe060766ec0" />
 
 > `Terminal showing create-target-group output with TargetGroupArn and health check configuration]`
 
@@ -811,7 +811,7 @@ Subnets              : subnet-08fc950d95b191d64 (us-east-1f)
 
 
 
-<img width="1034" height="874" alt="image" src="https://github.com/user-attachments/assets/f8d8c179-7ab4-4516-8bf7-bbe060766ec0" />
+
 <img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/de7854cb-34e4-4e44-9bdb-0817e0ae8a5d" />
 <img width="1034" height="785" alt="image" src="https://github.com/user-attachments/assets/c68028f8-c43e-4012-a313-5d9829614805" />
 <img width="1030" height="825" alt="image" src="https://github.com/user-attachments/assets/f66fcf0e-ae39-4342-89d6-8a361ec58d14" />
