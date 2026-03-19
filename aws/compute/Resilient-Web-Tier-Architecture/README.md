@@ -615,25 +615,15 @@ curl -v http://datacenter-alb-910242966.us-east-1.elb.amazonaws.com
 
 **Expected output (key indicators):**
 ```
-* Connected to datacenter-alb-910242966.us-east-1.elb.amazonaws.com port 80
-< HTTP/1.1 200 OK
-< Server: nginx/1.28.2
-...
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and working.</p>
+<title>Welcome to nginx !< /title>
+<h1>Welcome to nginx !< /h1>
 ```
 
 > **Screenshot**
 
-
+<img width="1029" height="855" alt="image" src="https://github.com/user-attachments/assets/4f03dd84-72e6-4c9c-8acb-1bd978cb7521" />
 
 > `Terminal showing full curl -v output with HTTP/1.1 200 OK, Server: nginx/1.28.2 header, and Welcome to nginx! in the HTML body]`
-
-> **Screenshot**
-
-
-
-> `Browser tab opened to the ALB DNS URL displaying the default Nginx welcome page]`
 
 ---
 
@@ -816,4 +806,4 @@ Subnets              : subnet-08fc950d95b191d64 (us-east-1f)
 
 
 
-<img width="1029" height="855" alt="image" src="https://github.com/user-attachments/assets/4f03dd84-72e6-4c9c-8acb-1bd978cb7521" />
+
