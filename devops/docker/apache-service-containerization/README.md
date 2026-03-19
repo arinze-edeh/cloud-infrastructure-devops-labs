@@ -277,7 +277,7 @@ CMD ["apache2ctl", "-D", "FOREGROUND"]
 
 ---
 
-## Verification
+## Verification (Optional)
 
 After creating the Dockerfile, optionally build and test the image to confirm correctness.
 
@@ -288,8 +288,6 @@ cd /opt/docker/
 sudo docker build -t nautilus-apache2:v1 .
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: docker build output showing successful image build with each layer completing]`
 
 ### Run a Test Container
 
@@ -316,8 +314,7 @@ HTTP/1.1 200 OK
 Server: Apache/2.x.x (Ubuntu)
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: curl -I output showing HTTP 200 OK response from Apache2 on port 6100]`
+
 
 ### Inspect the Port Inside the Container
 
@@ -325,8 +322,6 @@ Server: Apache/2.x.x (Ubuntu)
 sudo docker exec nautilus-test ss -tlnp | grep 6100
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: ss -tlnp output inside container confirming Apache2 listening on 0.0.0.0:6100]`
 
 ---
 
