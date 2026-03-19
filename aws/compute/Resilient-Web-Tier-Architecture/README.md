@@ -198,9 +198,9 @@ aws ec2 describe-images \
 ami-05024c2628f651b80
 ```
 
-> **Screenshotr**
+> **Screenshot**
 
-
+<img width="1029" height="678" alt="image" src="https://github.com/user-attachments/assets/f592799f-05e8-49cf-bbc3-322b72081b39" />
 
 > `Terminal showing the describe-images command returning the latest AMI ID]`
 
@@ -810,7 +810,7 @@ Subnets              : subnet-08fc950d95b191d64 (us-east-1f)
 
 
 
-<img width="1029" height="678" alt="image" src="https://github.com/user-attachments/assets/f592799f-05e8-49cf-bbc3-322b72081b39" />
+
 <img width="1030" height="859" alt="image" src="https://github.com/user-attachments/assets/b14e89b3-ac4f-44c9-aeec-387d5bb8a0a0" />
 <img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/7901f4a4-4d59-4d7a-bcba-74b93e2f4ffa" />
 <img width="1031" height="529" alt="image" src="https://github.com/user-attachments/assets/2c672e2e-ed54-4895-8576-9380c4aa36ca" />
