@@ -145,9 +145,11 @@ az account list --output table
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-01-account-show.png]`
-> *Caption: Output of `az account show` confirming the active subscription and authenticated service principal.*
+**SCREENSHOT**
+
+<img width="1032" height="538" alt="image" src="https://github.com/user-attachments/assets/24b275f3-63c7-4a85-9370-2c14d73b2540" />
+
+> *Output of `az account show` confirming the active subscription and authenticated service principal.*
 
 ---
 
@@ -175,7 +177,7 @@ Object ID: 85ac0efb-4740-457a-9a16-940eee7ef86e
 
 **SCREENSHOT PLACEHOLDER**
 > `[screenshot-02-object-id-retrieval.png]`
-> *Caption: Service Principal Object ID resolved from Client ID using `az ad sp show`.*
+> *Service Principal Object ID resolved from Client ID using `az ad sp show`.*
 
 ---
 
@@ -579,7 +581,7 @@ The auto-generated access policy granted `all` permissions to the Service Princi
 ---
 
 
-<img width="1032" height="538" alt="image" src="https://github.com/user-attachments/assets/24b275f3-63c7-4a85-9370-2c14d73b2540" />
+
 <img width="1032" height="711" alt="image" src="https://github.com/user-attachments/assets/09932a87-db2e-493a-8274-6a9c1bab5811" />
 <img width="1029" height="431" alt="image" src="https://github.com/user-attachments/assets/97600d30-1d04-45ec-a327-7833b71a2b29" />
 <img width="1032" height="317" alt="image" src="https://github.com/user-attachments/assets/9e441031-d257-4cce-821b-f42dd6333286" />
