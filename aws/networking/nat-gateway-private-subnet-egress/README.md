@@ -304,8 +304,11 @@ aws ec2 describe-internet-gateways \
 +--------------+------------+-------------------------+
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output showing IGW State as "available" and attached VPC ID]`
+> **Screenshot**
+
+<img width="1026" height="782" alt="image" src="https://github.com/user-attachments/assets/105ed8ac-441d-4997-a8aa-011dd47b1ad2" />
+
+> `Terminal output showing IGW State as "available" and attached VPC ID`
 
 ---
 
@@ -701,7 +704,7 @@ Tagging after the fact risks losing track of resource IDs, especially in multi-r
 
 
 
-<img width="1026" height="782" alt="image" src="https://github.com/user-attachments/assets/105ed8ac-441d-4997-a8aa-011dd47b1ad2" />
+
 <img width="1036" height="610" alt="image" src="https://github.com/user-attachments/assets/6dedf271-8981-4bef-b037-b7fffab86369" />
 <img width="1032" height="799" alt="image" src="https://github.com/user-attachments/assets/1122cdd8-b7c0-46a6-970d-26dd4616b589" />
 <img width="1032" height="807" alt="image" src="https://github.com/user-attachments/assets/54d569eb-434c-4423-878d-98504d1e39d0" />
