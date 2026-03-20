@@ -571,9 +571,10 @@ aws ec2 describe-route-tables \
 |+--------------+-------------------------+---------+|
 ```
 
-> **Screenshot**
+> **Screenshots**
 
-
+<img width="1035" height="618" alt="image" src="https://github.com/user-attachments/assets/c1420252-1f56-42db-89ab-d2d43bbdd960" />
+<img width="1032" height="806" alt="image" src="https://github.com/user-attachments/assets/1f625092-cccc-42e3-90d2-7e4b20d79b9e" />
 
 > `Private route table showing 0.0.0.0/0 route targeting the NAT Gateway ID and private subnet association`
 
@@ -595,8 +596,11 @@ aws s3 ls s3://xfusion-nat-3445/
 
 The presence of `xfusion-test.txt` in the bucket confirms that the private EC2 instance successfully reached the internet via the NAT Gateway and uploaded the file to S3.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of "aws s3 ls s3://xfusion-nat-3445/" showing xfusion-test.txt with timestamp]`
+> **Screenshot**
+
+<img width="1034" height="712" alt="image" src="https://github.com/user-attachments/assets/f0a58856-0e27-4f2e-98e3-778843dda05c" />
+
+> `Terminal output of "aws s3 ls s3://xfusion-nat-3445/" showing xfusion-test.txt with timestamp`
 
 ---
 
@@ -720,6 +724,5 @@ Tagging after the fact risks losing track of resource IDs, especially in multi-r
 <img width="1031" height="492" alt="image" src="https://github.com/user-attachments/assets/ca8a1af6-7cd2-4ea2-9e58-4f564aee949f" />
 
 <img width="1035" height="786" alt="image" src="https://github.com/user-attachments/assets/97c07788-4b41-465b-9903-4a29e1559097" />
-<img width="1035" height="618" alt="image" src="https://github.com/user-attachments/assets/c1420252-1f56-42db-89ab-d2d43bbdd960" />
-<img width="1032" height="806" alt="image" src="https://github.com/user-attachments/assets/1f625092-cccc-42e3-90d2-7e4b20d79b9e" />
-<img width="1034" height="712" alt="image" src="https://github.com/user-attachments/assets/f0a58856-0e27-4f2e-98e3-778843dda05c" />
+
+
