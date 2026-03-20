@@ -175,8 +175,10 @@ Object ID: 85ac0efb-4740-457a-9a16-940eee7ef86e
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-02-object-id-retrieval.png]`
+**SCREENSHOT**
+
+<img width="1032" height="711" alt="image" src="https://github.com/user-attachments/assets/09932a87-db2e-493a-8274-6a9c1bab5811" />
+
 > *Service Principal Object ID resolved from Client ID using `az ad sp show`.*
 
 ---
@@ -582,7 +584,7 @@ The auto-generated access policy granted `all` permissions to the Service Princi
 
 
 
-<img width="1032" height="711" alt="image" src="https://github.com/user-attachments/assets/09932a87-db2e-493a-8274-6a9c1bab5811" />
+
 <img width="1029" height="431" alt="image" src="https://github.com/user-attachments/assets/97600d30-1d04-45ec-a327-7833b71a2b29" />
 <img width="1032" height="317" alt="image" src="https://github.com/user-attachments/assets/9e441031-d257-4cce-821b-f42dd6333286" />
 <img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/ce5f9d95-e460-4eee-87aa-a3c6d71f8244" />
