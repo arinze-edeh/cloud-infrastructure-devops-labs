@@ -631,9 +631,6 @@ aws ec2 describe-nat-gateways \
 aws s3 ls s3://xfusion-nat-3445/
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: All four validation commands run sequentially with clean output confirming "available" states and file presence in S3]`
-
 ---
 
 ## Best Practices
