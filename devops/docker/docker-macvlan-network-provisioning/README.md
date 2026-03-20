@@ -76,8 +76,11 @@ From the jump host, initiate an SSH session to `stapp02` as user `steve`. Accept
 thor@jump-host ~$ ssh steve@stapp02
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT_01 - SSH connection prompt and ED25519 fingerprint verification for stapp02]`
+> **Screenshot**
+
+<img width="1019" height="437" alt="image" src="https://github.com/user-attachments/assets/12ba8a74-c2ce-44c9-97eb-b2b6d3d2b31b" />
+
+> `SSH connection prompt and ED25519 fingerprint verification for stapp02`
 
 **Expected Output:**
 
@@ -102,8 +105,11 @@ steve
 stapp02
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT_02 - whoami and hostname output confirming correct user and host]`
+> **Screenshot**
+
+<img width="1020" height="520" alt="image" src="https://github.com/user-attachments/assets/bebbd4a9-5bf9-4933-9124-e3cc62c2fbbe" />
+
+> `whoami and hostname output confirming correct user and host`
 
 **Why this matters:** Confirming identity and hostname before executing privileged operations is a critical safety gate, especially in multi-server environments where a misidentified target can cause unintended infrastructure changes.
 
@@ -117,8 +123,11 @@ Verify that the Docker daemon is active and running before proceeding with netwo
 [steve@stapp02 ~]$ sudo systemctl status docker
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT_03 - sudo systemctl status docker showing active (running) state]`
+> **Screenshot**
+
+<img width="1021" height="858" alt="image" src="https://github.com/user-attachments/assets/e2f792f6-6d31-48b8-a7a3-e423df618a9f" />
+
+> `sudo systemctl status docker showing active (running) state]`
 
 **Expected Output (key lines):**
 
@@ -322,9 +331,9 @@ All ticket requirements were verified against the final inspected state:
 
 
 
-<img width="1019" height="437" alt="image" src="https://github.com/user-attachments/assets/12ba8a74-c2ce-44c9-97eb-b2b6d3d2b31b" />
-<img width="1020" height="520" alt="image" src="https://github.com/user-attachments/assets/bebbd4a9-5bf9-4933-9124-e3cc62c2fbbe" />
-<img width="1021" height="858" alt="image" src="https://github.com/user-attachments/assets/e2f792f6-6d31-48b8-a7a3-e423df618a9f" />
+
+
+
 <img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/989faa19-d6f0-4320-bf81-e0d2b966f34a" />
 <img width="1028" height="765" alt="image" src="https://github.com/user-attachments/assets/e52ddb34-8d81-4833-9600-fe37b4838b32" />
 <img width="1030" height="468" alt="image" src="https://github.com/user-attachments/assets/dfea542a-2a9e-49c9-977c-80bf3ddc0cbe" />
