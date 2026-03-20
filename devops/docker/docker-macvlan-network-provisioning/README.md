@@ -127,7 +127,7 @@ Verify that the Docker daemon is active and running before proceeding with netwo
 
 <img width="1021" height="858" alt="image" src="https://github.com/user-attachments/assets/e2f792f6-6d31-48b8-a7a3-e423df618a9f" />
 
-> `sudo systemctl status docker showing active (running) state]`
+> `sudo systemctl status docker showing active (running) state`
 
 **Expected Output (key lines):**
 
@@ -149,8 +149,10 @@ Audit the existing Docker networks to confirm the baseline state and ensure no n
 [steve@stapp02 ~]$ sudo docker network ls
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT_04 - docker network ls showing default bridge, host, and none networks before creation]`
+> **Screenshot**
+<img width="1028" height="765" alt="image" src="https://github.com/user-attachments/assets/e52ddb34-8d81-4833-9600-fe37b4838b32" />
+
+> `docker network ls showing default bridge, host, and none networks before creation`
 
 **Expected Output:**
 
@@ -177,8 +179,11 @@ Create the `ecommerce` Docker network using the `macvlan` driver with the specif
   ecommerce
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT_05 - docker network create command with macvlan driver, subnet, ip-range, and the returned network ID hash]`
+> **Screenshot**
+
+<img width="1030" height="468" alt="image" src="https://github.com/user-attachments/assets/dfea542a-2a9e-49c9-977c-80bf3ddc0cbe" />
+
+> `docker network create command with macvlan driver, subnet, ip-range, and the returned network ID hash`
 
 **Expected Output:**
 
@@ -207,8 +212,11 @@ Re-list all Docker networks to confirm the `ecommerce` network is now present wi
 [steve@stapp02 ~]$ sudo docker network ls
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT_06 - docker network ls output showing ecommerce network with macvlan driver listed alongside default networks]`
+> **Screenshot**
+
+<img width="1037" height="507" alt="image" src="https://github.com/user-attachments/assets/527fa9d1-d079-49fd-99df-cf41c07a59c2" />
+
+> `docker network ls output showing ecommerce network with macvlan driver listed alongside default networks`
 
 **Expected Output:**
 
@@ -232,8 +240,11 @@ Perform a full inspection of the `ecommerce` network to validate all configurati
 [steve@stapp02 ~]$ sudo docker network inspect ecommerce
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT_07 - Full docker network inspect ecommerce JSON output showing Driver, Subnet, IPRange, and all IPAM configuration fields]`
+> **Screenshot**
+
+<img width="1033" height="858" alt="image" src="https://github.com/user-attachments/assets/9853df7a-4cca-40ff-aba3-adcd8832f79c" />
+
+> `Full docker network inspect ecommerce JSON output showing Driver, Subnet, IPRange, and all IPAM configuration fields`
 
 **Expected Output (abridged):**
 
@@ -274,9 +285,6 @@ All ticket requirements were verified against the final inspected state:
 | IP Range | `10.10.1.0/24` | `10.10.1.0/24` | PASS |
 | Scope | `local` | `local` | PASS |
 | IPv6 Enabled | `false` | `false` | PASS |
-
-> **Screenshot Placeholder**
-> `[SCREENSHOT_08 - Side-by-side or annotated final terminal state showing ticket requirements mapped to inspect output]`
 
 ---
 
@@ -328,15 +336,3 @@ All ticket requirements were verified against the final inspected state:
 * [systemd Documentation: systemctl](https://www.freedesktop.org/software/systemd/man/systemctl.html)
 
 ---
-
-
-
-
-
-
-<img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/989faa19-d6f0-4320-bf81-e0d2b966f34a" />
-<img width="1028" height="765" alt="image" src="https://github.com/user-attachments/assets/e52ddb34-8d81-4833-9600-fe37b4838b32" />
-<img width="1030" height="468" alt="image" src="https://github.com/user-attachments/assets/dfea542a-2a9e-49c9-977c-80bf3ddc0cbe" />
-<img width="1037" height="507" alt="image" src="https://github.com/user-attachments/assets/527fa9d1-d079-49fd-99df-cf41c07a59c2" />
-<img width="1033" height="858" alt="image" src="https://github.com/user-attachments/assets/9853df7a-4cca-40ff-aba3-adcd8832f79c" />
-
