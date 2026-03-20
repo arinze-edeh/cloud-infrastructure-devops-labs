@@ -374,9 +374,11 @@ ls -lh /root/EncryptedData.bin
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-08-encrypt.png]`
-> *Caption: Successful encryption producing a 685-byte ciphertext blob saved to `/root/EncryptedData.bin`.*
+**SCREENSHOT**
+
+<img width="1033" height="610" alt="image" src="https://github.com/user-attachments/assets/acec18e2-b598-4911-a2db-a7bc32099274" />
+
+> *Successful encryption producing a 685-byte ciphertext blob saved to `/root/EncryptedData.bin`.*
 
 ---
 
@@ -603,7 +605,7 @@ The auto-generated access policy granted `all` permissions to the Service Princi
 
 
 
-<img width="1033" height="610" alt="image" src="https://github.com/user-attachments/assets/acec18e2-b598-4911-a2db-a7bc32099274" />
+
 <img width="1034" height="494" alt="image" src="https://github.com/user-attachments/assets/4ea2954b-e8fe-43d1-b6d5-a4386f62621a" />
 <img width="1036" height="483" alt="image" src="https://github.com/user-attachments/assets/9e7ef0bc-96c0-46fc-ab9f-73a2ba02ac32" />
 <img width="1031" height="563" alt="image" src="https://github.com/user-attachments/assets/7dc0c9aa-6c5f-49d4-ac43-d156be0e3b82" />
