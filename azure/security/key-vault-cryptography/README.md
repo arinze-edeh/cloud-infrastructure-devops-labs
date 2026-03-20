@@ -374,9 +374,10 @@ ls -lh /root/EncryptedData.bin
 
 ---
 
-**SCREENSHOT**
+**SCREENSHOTS**
 
-<img width="1033" height="610" alt="image" src="https://github.com/user-attachments/assets/acec18e2-b598-4911-a2db-a7bc32099274" />
+
+<img width="1034" height="494" alt="image" src="https://github.com/user-attachments/assets/4ea2954b-e8fe-43d1-b6d5-a4386f62621a" />
 
 > *Successful encryption producing a 685-byte ciphertext blob saved to `/root/EncryptedData.bin`.*
 
@@ -410,9 +411,11 @@ Decrypted (base64): VGhpcyBpcyBhIHNlbnNpdGl2ZSBmaWxlLgo=
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-09-decrypt.png]`
-> *Caption: Key Vault decryption returning the original Base64-encoded plaintext string.*
+**SCREENSHOT**
+
+<img width="1036" height="483" alt="image" src="https://github.com/user-attachments/assets/9e7ef0bc-96c0-46fc-ab9f-73a2ba02ac32" />
+
+> *Key Vault decryption returning the original Base64-encoded plaintext string.*
 
 ---
 
@@ -433,9 +436,11 @@ This is a sensitive file.
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-10-decoded-output.png]`
-> *Caption: Base64-decoded output restoring the original plaintext content.*
+**SCREENSHOT**
+
+<img width="1036" height="483" alt="image" src="https://github.com/user-attachments/assets/9e7ef0bc-96c0-46fc-ab9f-73a2ba02ac32" />
+
+> *Base64-decoded output restoring the original plaintext content.*
 
 ---
 
@@ -472,9 +477,12 @@ e7533db289f7b96fd958a96215889e95  /root/DecryptedData.txt
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-11-validation-diff-md5.png]`
-> *Caption: `diff` and `md5sum` both confirm the decrypted file is a bit-for-bit match to the original.*
+**SCREENSHOT**
+
+<img width="1031" height="563" alt="image" src="https://github.com/user-attachments/assets/7dc0c9aa-6c5f-49d4-ac43-d156be0e3b82" />
+
+
+> *`diff` and `md5sum` both confirm the decrypted file is a bit-for-bit match to the original.*
 
 ---
 
@@ -498,6 +506,10 @@ unrecognized arguments: --enable-soft-delete true
 
 **Resolution:** Remove the `--enable-soft-delete` flag entirely. Soft Delete is automatically enabled. Use `--retention-days` to control the retention window.
 
+**SCREENSHOT**
+
+<img width="1029" height="431" alt="image" src="https://github.com/user-attachments/assets/97600d30-1d04-45ec-a327-7833b71a2b29" />
+
 ---
 
 ### Error 2: `enablePurgeProtection` Cannot Be Set to False
@@ -516,6 +528,10 @@ Enabling the purge protection for a vault is an irreversible action.
 **Root Cause:** Once Purge Protection is enabled on a vault, it cannot be disabled. Azure also rejects explicit attempts to set it to `false` in some API versions as a protective measure.
 
 **Resolution:** Omit the `--enable-purge-protection` flag entirely for this scenario. The vault was created without Purge Protection, which is acceptable when the lab requires the ability to purge the vault within the soft-delete retention window.
+
+**SCREENSHOT**
+
+<img width="1032" height="317" alt="image" src="https://github.com/user-attachments/assets/9e441031-d257-4cce-821b-f42dd6333286" />
 
 ---
 
@@ -595,19 +611,3 @@ The auto-generated access policy granted `all` permissions to the Service Princi
 * [Azure RBAC vs Access Policies](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-access-policy)
 
 ---
-
-
-
-
-<img width="1029" height="431" alt="image" src="https://github.com/user-attachments/assets/97600d30-1d04-45ec-a327-7833b71a2b29" />
-<img width="1032" height="317" alt="image" src="https://github.com/user-attachments/assets/9e441031-d257-4cce-821b-f42dd6333286" />
-
-
-
-
-
-<img width="1034" height="494" alt="image" src="https://github.com/user-attachments/assets/4ea2954b-e8fe-43d1-b6d5-a4386f62621a" />
-<img width="1036" height="483" alt="image" src="https://github.com/user-attachments/assets/9e7ef0bc-96c0-46fc-ab9f-73a2ba02ac32" />
-<img width="1031" height="563" alt="image" src="https://github.com/user-attachments/assets/7dc0c9aa-6c5f-49d4-ac43-d156be0e3b82" />
-
-
