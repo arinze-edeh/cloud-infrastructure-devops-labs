@@ -564,8 +564,12 @@ aws ec2 describe-route-tables \
 |+--------------+-------------------------+---------+|
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Private route table showing 0.0.0.0/0 route targeting the NAT Gateway ID and private subnet association]`
+> **Screenshots**
+
+<img width="1036" height="610" alt="image" src="https://github.com/user-attachments/assets/6dedf271-8981-4bef-b037-b7fffab86369" />
+<img width="1032" height="799" alt="image" src="https://github.com/user-attachments/assets/1122cdd8-b7c0-46a6-970d-26dd4616b589" />
+
+> `Private route table showing 0.0.0.0/0 route targeting the NAT Gateway ID and private subnet association`
 
 ---
 
@@ -705,8 +709,7 @@ Tagging after the fact risks losing track of resource IDs, especially in multi-r
 
 
 
-<img width="1036" height="610" alt="image" src="https://github.com/user-attachments/assets/6dedf271-8981-4bef-b037-b7fffab86369" />
-<img width="1032" height="799" alt="image" src="https://github.com/user-attachments/assets/1122cdd8-b7c0-46a6-970d-26dd4616b589" />
+
 <img width="1032" height="807" alt="image" src="https://github.com/user-attachments/assets/54d569eb-434c-4423-878d-98504d1e39d0" />
 <img width="1031" height="492" alt="image" src="https://github.com/user-attachments/assets/ca8a1af6-7cd2-4ea2-9e58-4f564aee949f" />
 <img width="1032" height="750" alt="image" src="https://github.com/user-attachments/assets/33ba0439-33b7-43a5-bbb0-b8f4da550e75" />
