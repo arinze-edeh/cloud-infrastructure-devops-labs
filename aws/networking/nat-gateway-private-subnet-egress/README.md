@@ -401,7 +401,7 @@ aws ec2 describe-route-tables \
 |+--------------+---------+-------------------------+|
 ```
 
-> **Screenshot**
+> **Screenshots**
 
 <img width="1036" height="610" alt="image" src="https://github.com/user-attachments/assets/6dedf271-8981-4bef-b037-b7fffab86369" />
 <img width="1032" height="799" alt="image" src="https://github.com/user-attachments/assets/1122cdd8-b7c0-46a6-970d-26dd4616b589" />
