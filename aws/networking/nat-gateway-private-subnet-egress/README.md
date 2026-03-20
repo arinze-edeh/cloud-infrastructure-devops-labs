@@ -474,8 +474,11 @@ aws ec2 describe-nat-gateways \
 +----------------+----------------+------------+-----------------------------+
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: NAT Gateway details showing State "available", EIP, and public subnet placement]`
+> **Screenshot**
+
+<img width="1032" height="750" alt="image" src="https://github.com/user-attachments/assets/33ba0439-33b7-43a5-bbb0-b8f4da550e75" />
+
+> `NAT Gateway details showing State "available", EIP, and public subnet placement`
 
 ---
 
@@ -715,7 +718,7 @@ Tagging after the fact risks losing track of resource IDs, especially in multi-r
 
 <img width="1032" height="807" alt="image" src="https://github.com/user-attachments/assets/54d569eb-434c-4423-878d-98504d1e39d0" />
 <img width="1031" height="492" alt="image" src="https://github.com/user-attachments/assets/ca8a1af6-7cd2-4ea2-9e58-4f564aee949f" />
-<img width="1032" height="750" alt="image" src="https://github.com/user-attachments/assets/33ba0439-33b7-43a5-bbb0-b8f4da550e75" />
+
 <img width="1035" height="786" alt="image" src="https://github.com/user-attachments/assets/97c07788-4b41-465b-9903-4a29e1559097" />
 <img width="1035" height="618" alt="image" src="https://github.com/user-attachments/assets/c1420252-1f56-42db-89ab-d2d43bbdd960" />
 <img width="1032" height="806" alt="image" src="https://github.com/user-attachments/assets/1f625092-cccc-42e3-90d2-7e4b20d79b9e" />
