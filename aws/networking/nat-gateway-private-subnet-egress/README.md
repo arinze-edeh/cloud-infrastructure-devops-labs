@@ -709,17 +709,3 @@ Tagging after the fact risks losing track of resource IDs, especially in multi-r
 | VPC Subnet CIDR Blocks | https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html |
 
 ---
-
-
-
-
-
-
-
-
-<img width="1032" height="807" alt="image" src="https://github.com/user-attachments/assets/54d569eb-434c-4423-878d-98504d1e39d0" />
-<img width="1031" height="492" alt="image" src="https://github.com/user-attachments/assets/ca8a1af6-7cd2-4ea2-9e58-4f564aee949f" />
-
-<img width="1035" height="786" alt="image" src="https://github.com/user-attachments/assets/97c07788-4b41-465b-9903-4a29e1559097" />
-
-
