@@ -281,9 +281,11 @@ Key ID: https://xfusion-6778.vault.azure.net/keys/xfusion-key/890c23c674d244bdb7
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-05-key-id.png]`
-> *Caption: Versioned Key ID URI retrieved from Key Vault for use in encryption operations.*
+**SCREENSHOT**
+
+<img width="1035" height="327" alt="image" src="https://github.com/user-attachments/assets/4192dcb4-d59f-488e-a991-65b33f52fdad" />
+
+> *Versioned Key ID URI retrieved from Key Vault for use in encryption operations.*
 
 ---
 
@@ -595,7 +597,7 @@ The auto-generated access policy granted `all` permissions to the Service Princi
 <img width="1032" height="317" alt="image" src="https://github.com/user-attachments/assets/9e441031-d257-4cce-821b-f42dd6333286" />
 
 
-<img width="1035" height="327" alt="image" src="https://github.com/user-attachments/assets/4192dcb4-d59f-488e-a991-65b33f52fdad" />
+
 <img width="1033" height="374" alt="image" src="https://github.com/user-attachments/assets/a0f49612-4d18-4b21-98f7-0621ddd79f77" />
 <img width="1033" height="610" alt="image" src="https://github.com/user-attachments/assets/acec18e2-b598-4911-a2db-a7bc32099274" />
 <img width="1034" height="494" alt="image" src="https://github.com/user-attachments/assets/4ea2954b-e8fe-43d1-b6d5-a4386f62621a" />
