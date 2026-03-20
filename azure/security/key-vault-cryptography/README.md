@@ -212,9 +212,12 @@ az keyvault create \
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-03-keyvault-created.png]`
-> *Caption: Successful Key Vault creation output showing `provisioningState: Succeeded` and auto-configured access policy.*
+**SCREENSHOTS**
+
+<img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/ce5f9d95-e460-4eee-87aa-a3c6d71f8244" />
+<img width="1031" height="870" alt="image" src="https://github.com/user-attachments/assets/f3ce9f49-14f3-4c1d-92c0-454ba13f09be" />
+
+> *Successful Key Vault creation output showing `provisioningState: Succeeded` and auto-configured access policy.*
 
 ---
 
@@ -587,8 +590,7 @@ The auto-generated access policy granted `all` permissions to the Service Princi
 
 <img width="1029" height="431" alt="image" src="https://github.com/user-attachments/assets/97600d30-1d04-45ec-a327-7833b71a2b29" />
 <img width="1032" height="317" alt="image" src="https://github.com/user-attachments/assets/9e441031-d257-4cce-821b-f42dd6333286" />
-<img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/ce5f9d95-e460-4eee-87aa-a3c6d71f8244" />
-<img width="1031" height="870" alt="image" src="https://github.com/user-attachments/assets/f3ce9f49-14f3-4c1d-92c0-454ba13f09be" />
+
 <img width="1034" height="756" alt="image" src="https://github.com/user-attachments/assets/c61077bc-6e32-4bb3-ba7a-844af38632b3" />
 <img width="1031" height="871" alt="image" src="https://github.com/user-attachments/assets/dd362971-c691-495a-9bdf-05d06ba53037" />
 <img width="1035" height="327" alt="image" src="https://github.com/user-attachments/assets/4192dcb4-d59f-488e-a991-65b33f52fdad" />
