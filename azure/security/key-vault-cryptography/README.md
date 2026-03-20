@@ -306,8 +306,10 @@ This is a sensitive file.
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-06-sensitive-file.png]`
+**SCREENSHOT**
+
+<img width="1033" height="374" alt="image" src="https://github.com/user-attachments/assets/a0f49612-4d18-4b21-98f7-0621ddd79f77" />
+
 > *Caption: Plaintext sensitive file at `/root/SensitiveData.txt`, 26 bytes in size.*
 
 ---
@@ -331,9 +333,11 @@ VGhpcyBpcyBhIHNlbnNpdGl2ZSBmaWxlLgo=
 
 ---
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-07-base64-encode.png]`
-> *Caption: Plaintext file Base64-encoded and saved to `/root/SensitiveData_b64.txt`.*
+**SCREENSHOT**
+
+<img width="1033" height="374" alt="image" src="https://github.com/user-attachments/assets/a0f49612-4d18-4b21-98f7-0621ddd79f77" />
+
+> *Plaintext file Base64-encoded and saved to `/root/SensitiveData_b64.txt`.*
 
 ---
 
@@ -598,7 +602,7 @@ The auto-generated access policy granted `all` permissions to the Service Princi
 
 
 
-<img width="1033" height="374" alt="image" src="https://github.com/user-attachments/assets/a0f49612-4d18-4b21-98f7-0621ddd79f77" />
+
 <img width="1033" height="610" alt="image" src="https://github.com/user-attachments/assets/acec18e2-b598-4911-a2db-a7bc32099274" />
 <img width="1034" height="494" alt="image" src="https://github.com/user-attachments/assets/4ea2954b-e8fe-43d1-b6d5-a4386f62621a" />
 <img width="1036" height="483" alt="image" src="https://github.com/user-attachments/assets/9e7ef0bc-96c0-46fc-ab9f-73a2ba02ac32" />
