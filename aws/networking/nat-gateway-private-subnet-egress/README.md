@@ -193,8 +193,11 @@ aws ec2 describe-subnets \
 +--------------+-----------------------+
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output showing VPC_ID, PRIV_SUBNET_ID, PRIV_AZ variables and subnet table]`
+> **Screenshot**
+
+<img width="1027" height="807" alt="image" src="https://github.com/user-attachments/assets/cbf561a7-eae6-472d-b22b-6b74e44e5512" />
+
+> `Terminal output showing VPC_ID, PRIV_SUBNET_ID, PRIV_AZ variables and subnet table`
 
 ---
 
@@ -694,7 +697,7 @@ Tagging after the fact risks losing track of resource IDs, especially in multi-r
 
 
 <img width="1029" height="555" alt="image" src="https://github.com/user-attachments/assets/a9fccecc-8e0a-4a16-a5e5-a6f26c11e50a" />
-<img width="1027" height="807" alt="image" src="https://github.com/user-attachments/assets/cbf561a7-eae6-472d-b22b-6b74e44e5512" />
+
 <img width="1027" height="547" alt="image" src="https://github.com/user-attachments/assets/3bc58222-ec53-4747-8059-07a7dbc7b48a" />
 <img width="1026" height="782" alt="image" src="https://github.com/user-attachments/assets/105ed8ac-441d-4997-a8aa-011dd47b1ad2" />
 <img width="1036" height="610" alt="image" src="https://github.com/user-attachments/assets/6dedf271-8981-4bef-b037-b7fffab86369" />
