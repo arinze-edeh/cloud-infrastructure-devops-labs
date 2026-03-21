@@ -408,9 +408,11 @@ az storage entity show \
 
 > **Validation pattern:** Always verify individual entity reads after bulk inserts. This is the equivalent of a read-after-write consistency check and is critical in eventual-consistency distributed storage systems.
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-07-entity-show-task1-task2.png]`
-> *Caption: Individual entity reads confirming `status: completed` for Task 1 and `status: in-progress` for Task 2.*
+**SCREENSHOT**
+
+<img width="1029" height="611" alt="image" src="https://github.com/user-attachments/assets/e69021f3-dd5c-4f59-aa29-5bcf5d601b40" />
+
+> *Individual entity reads confirming `status: completed` for Task 1 and `status: in-progress` for Task 2.*
 
 ---
 
@@ -568,6 +570,6 @@ The storage account was created without resource tags. In enterprise environment
 
 
 <img width="1033" height="603" alt="image" src="https://github.com/user-attachments/assets/e09bed54-7eb0-4487-97db-6f5db2468121" />
-<img width="1029" height="611" alt="image" src="https://github.com/user-attachments/assets/e69021f3-dd5c-4f59-aa29-5bcf5d601b40" />
+
 <img width="1034" height="800" alt="image" src="https://github.com/user-attachments/assets/6673ad0c-853c-48a7-bdde-18a5ab4adc9d" />
 
