@@ -108,7 +108,12 @@ stapp01
 Docker version 26.1.3, build b72abbb
 ```
 
-**[SCREENSHOT PLACEHOLDER: Terminal output confirming hostname as stapp01 and Docker version 26.1.3]**
+**SCREENSHOT:** 
+
+<img width="1015" height="214" alt="image" src="https://github.com/user-attachments/assets/56343ee7-894a-4034-8a17-a821ad765da2" />
+
+
+>Terminal output confirming hostname as stapp01 and Docker version 26.1.3
 
 ---
 
