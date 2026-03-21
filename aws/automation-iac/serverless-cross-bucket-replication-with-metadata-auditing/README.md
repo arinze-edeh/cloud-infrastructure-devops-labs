@@ -616,8 +616,11 @@ END RequestId: dbcd0015-198c-4c16-a13d-d8e6285dd9fd
 REPORT RequestId: dbcd0015-198c-4c16-a13d-d8e6285dd9fd  Duration: 541.47 ms  Billed Duration: 1053 ms  Memory Size: 128 MB  Max Memory Used: 95 MB  Init Duration: 511.15 ms
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot of the full CloudWatch `filter-log-events` output showing all INFO log lines, the DynamoDB JSON payload, and the REPORT line with duration and memory metrics*
+> **SCREENSHOT**
+
+<img width="1036" height="554" alt="image" src="https://github.com/user-attachments/assets/ebe427af-1bca-4697-a1cf-595b1eebb24f" />
+
+> *Screenshot of the full CloudWatch `filter-log-events` output showing all INFO log lines, the DynamoDB JSON payload, and the REPORT line with duration and memory metrics*
 
 ---
 
@@ -831,4 +834,4 @@ destination_bucket = "datacenter-private-1666"
 
 <img width="1038" height="869" alt="image" src="https://github.com/user-attachments/assets/198e32c6-9ef1-43f7-a7a0-e863ef4b1d1d" />
 <img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/2ba8d90f-3ed7-4148-9762-64d2c7387816" />
-<img width="1036" height="554" alt="image" src="https://github.com/user-attachments/assets/ebe427af-1bca-4697-a1cf-595b1eebb24f" />
+
