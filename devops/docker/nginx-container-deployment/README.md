@@ -173,7 +173,11 @@ docker.io/library/nginx:stable
 
 > **Why `nginx:stable`?** The `stable` tag tracks the latest LTS-equivalent nginx release, offering a balance of security patches and API stability compared to `latest` or `mainline` tags.
 
-**[SCREENSHOT PLACEHOLDER: docker pull nginx:stable command showing all layers pulled and digest confirmation]**
+**SCREENSHOT:** 
+
+<img width="1032" height="854" alt="image" src="https://github.com/user-attachments/assets/6522bad1-8e45-4f4f-bf23-1a48e97dc0f3" />
+
+>docker pull nginx:stable command showing all layers pulled and digest confirmation
 
 ---
 
@@ -191,7 +195,11 @@ sudo docker images | grep nginx
 nginx   stable   4fc974d655ce   4 days ago   161MB
 ```
 
-**[SCREENSHOT PLACEHOLDER: docker images output filtered for nginx showing the stable tag, image ID, and size]**
+**SCREENSHOT:** 
+
+<img width="1033" height="487" alt="image" src="https://github.com/user-attachments/assets/c0e9feb5-a6b1-4e4a-9ab9-cad5ec131771" />
+
+>docker images output filtered for nginx showing the stable tag, image ID, and size
 
 ---
 
@@ -452,8 +460,8 @@ The `stable` tag follows nginx's stable release branch, which receives security 
 
 
 
-<img width="1032" height="854" alt="image" src="https://github.com/user-attachments/assets/6522bad1-8e45-4f4f-bf23-1a48e97dc0f3" />
-<img width="1033" height="487" alt="image" src="https://github.com/user-attachments/assets/c0e9feb5-a6b1-4e4a-9ab9-cad5ec131771" />
+
+
 <img width="1034" height="394" alt="image" src="https://github.com/user-attachments/assets/46cdc338-53f4-445b-b4fa-1527cb43bd43" />
 <img width="1131" height="465" alt="image" src="https://github.com/user-attachments/assets/d7d8f7c6-ab11-4dd7-a6b2-3642c5eba560" />
 <img width="1133" height="593" alt="image" src="https://github.com/user-attachments/assets/50ef05c1-f857-47a0-aa7a-5884148e39c5" />
