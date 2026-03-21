@@ -828,15 +828,3 @@ destination_bucket = "datacenter-private-1666"
 
 
 
-
-
-
-
-
-
-<img width="1029" height="862" alt="image" src="https://github.com/user-attachments/assets/e6d09963-ad8f-4423-a1fd-e3363477217f" />
-
-
-
-
-
