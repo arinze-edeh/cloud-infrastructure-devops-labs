@@ -439,9 +439,11 @@ tasks           2         Build To-Do App      in-progress
 
 > **Performance note:** `az storage entity query` without a filter performs a full table scan. In production, always use `--filter` with OData expressions (e.g., `--filter "status eq 'in-progress'"`) to avoid unnecessary RU consumption and latency at scale.
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-08-entity-query-all.png]`
-> *Caption: Full table query output displaying both task entities in a formatted table confirming correct data persistence.*
+**SCREENSHOT**
+
+<img width="1034" height="800" alt="image" src="https://github.com/user-attachments/assets/6673ad0c-853c-48a7-bdde-18a5ab4adc9d" />
+
+> *Full table query output displaying both task entities in a formatted table confirming correct data persistence.*
 
 ---
 
@@ -571,5 +573,5 @@ The storage account was created without resource tags. In enterprise environment
 
 <img width="1033" height="603" alt="image" src="https://github.com/user-attachments/assets/e09bed54-7eb0-4487-97db-6f5db2468121" />
 
-<img width="1034" height="800" alt="image" src="https://github.com/user-attachments/assets/6673ad0c-853c-48a7-bdde-18a5ab4adc9d" />
+
 
