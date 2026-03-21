@@ -229,8 +229,11 @@ aws iam create-role \
   --assume-role-policy-document file:///tmp/trust-policy.json
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot of the `create-role` response showing the Role ARN: `arn:aws:iam::604248583746:role/lambda_execution_role`*
+> **SCREENSHOT**
+
+<img width="1037" height="805" alt="image" src="https://github.com/user-attachments/assets/e7becad1-1b85-4066-bc30-996957b439a0" />
+
+> *Screenshot of the `create-role` response showing the Role ARN: `arn:aws:iam::604248583746:role/lambda_execution_role`*
 
 #### 2.3 Create Scoped Permissions Policy
 
@@ -775,7 +778,7 @@ destination_bucket = "datacenter-private-1666"
 
 
 
-<img width="1037" height="805" alt="image" src="https://github.com/user-attachments/assets/e7becad1-1b85-4066-bc30-996957b439a0" />
+
 <img width="1030" height="861" alt="image" src="https://github.com/user-attachments/assets/b5a44786-764f-4e34-aa02-85224eedabf6" />
 <img width="1034" height="865" alt="image" src="https://github.com/user-attachments/assets/14ecea50-4c7c-45ad-9a32-8ee1ff83781e" />
 <img width="1034" height="463" alt="image" src="https://github.com/user-attachments/assets/e73e2a88-eaaa-46c9-b05b-b6c1d4732dd4" />
