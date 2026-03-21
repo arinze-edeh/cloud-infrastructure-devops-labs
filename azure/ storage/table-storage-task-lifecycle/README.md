@@ -257,9 +257,11 @@ echo $STORAGE_KEY
 
 > **Security Warning:** Storage account keys grant full, unrestricted access to all data in the account. In production, use **Azure Managed Identities** or **Azure Active Directory (Entra ID)** authentication with RBAC instead of Shared Key authentication. Never commit keys to version control. Use `.env` files listed in `.gitignore` or Azure Key Vault for secret management.
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-04-storage-key-retrieval.png]`
-> *Caption: Terminal showing the storage account key successfully extracted and echoed as a shell variable.*
+**SCREENSHOT**
+
+<img width="1029" height="360" alt="image" src="https://github.com/user-attachments/assets/410d4190-53f0-42a7-8fdd-13a31ac94066" />
+
+> *Terminal showing the storage account key successfully extracted and echoed as a shell variable.*
 
 ---
 
@@ -559,7 +561,7 @@ The storage account was created without resource tags. In enterprise environment
 
 
 
-<img width="1029" height="360" alt="image" src="https://github.com/user-attachments/assets/410d4190-53f0-42a7-8fdd-13a31ac94066" />
+
 <img width="1033" height="820" alt="image" src="https://github.com/user-attachments/assets/f417e947-9e7a-4157-889c-ee1ec3d2fd3f" />
 <img width="1033" height="603" alt="image" src="https://github.com/user-attachments/assets/e09bed54-7eb0-4487-97db-6f5db2468121" />
 <img width="1029" height="611" alt="image" src="https://github.com/user-attachments/assets/e69021f3-dd5c-4f59-aa29-5bcf5d601b40" />
