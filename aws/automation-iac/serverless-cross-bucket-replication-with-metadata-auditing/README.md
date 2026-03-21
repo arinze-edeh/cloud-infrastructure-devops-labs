@@ -447,8 +447,11 @@ aws s3api get-bucket-notification-configuration \
   --bucket datacenter-public-14515
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot confirming the `LambdaFunctionConfigurations` response shows the correct Lambda ARN and `s3:ObjectCreated:*` event type*
+> **SCREENSHOT**
+
+<img width="1028" height="807" alt="image" src="https://github.com/user-attachments/assets/ff79f0f3-8d59-4ece-9369-3d9f4f8e5ef8" />
+
+> *Screenshot confirming the `LambdaFunctionConfigurations` response shows the correct Lambda ARN and `s3:ObjectCreated:*` event type*
 
 ---
 
@@ -808,7 +811,7 @@ destination_bucket = "datacenter-private-1666"
 
 
 
-<img width="1028" height="807" alt="image" src="https://github.com/user-attachments/assets/ff79f0f3-8d59-4ece-9369-3d9f4f8e5ef8" />
+
 <img width="1031" height="853" alt="image" src="https://github.com/user-attachments/assets/d7cf8696-c45d-4e51-8d10-4058b7df78dd" />
 <img width="1029" height="862" alt="image" src="https://github.com/user-attachments/assets/e6d09963-ad8f-4423-a1fd-e3363477217f" />
 <img width="1032" height="597" alt="image" src="https://github.com/user-attachments/assets/7a0f958c-4cd4-49c2-bfc5-a58afd57d048" />
