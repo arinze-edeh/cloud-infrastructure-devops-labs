@@ -259,7 +259,11 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS  
 > * `PORTS` must reflect `0.0.0.0:8084->80/tcp` confirming both IPv4 and IPv6 binding
 > * `NAMES` must show `ecommerce`
 
-**[SCREENSHOT PLACEHOLDER: docker ps output showing ecommerce container in Up status with 0.0.0.0:8084->80/tcp port mapping]**
+**SCREENSHOT:** 
+
+<img width="1131" height="465" alt="image" src="https://github.com/user-attachments/assets/d7d8f7c6-ab11-4dd7-a6b2-3642c5eba560" />
+
+>docker ps output showing ecommerce container in Up status with 0.0.0.0:8084->80/tcp port mapping
 
 ---
 
@@ -284,7 +288,11 @@ sudo docker inspect ecommerce | grep -A 5 "PortBindings"
 
 > An empty `HostIp` value (`""`) means Docker binds to all available host interfaces, which is the expected behavior here.
 
-**[SCREENSHOT PLACEHOLDER: docker inspect output showing PortBindings with 80/tcp mapped to HostPort 8084]**
+**SCREENSHOT: 
+
+<img width="1133" height="593" alt="image" src="https://github.com/user-attachments/assets/50ef05c1-f857-47a0-aa7a-5884148e39c5" />
+
+>docker inspect output showing PortBindings with 80/tcp mapped to HostPort 8084
 
 ---
 
@@ -463,15 +471,3 @@ The `stable` tag follows nginx's stable release branch, which receives security 
 * [Docker Security Best Practices](https://docs.docker.com/engine/security/)
 
 ---
-
-
-
-
-
-
-
-
-<img width="1131" height="465" alt="image" src="https://github.com/user-attachments/assets/d7d8f7c6-ab11-4dd7-a6b2-3642c5eba560" />
-<img width="1133" height="593" alt="image" src="https://github.com/user-attachments/assets/50ef05c1-f857-47a0-aa7a-5884148e39c5" />
-
-
