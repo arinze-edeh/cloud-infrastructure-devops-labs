@@ -139,7 +139,11 @@ sudo systemctl status docker
 > * `enabled` in the `Loaded` line confirms the service auto-starts on reboot
 > * `Main PID` should reference `dockerd`
 
-**[SCREENSHOT PLACEHOLDER: systemctl status docker output showing active (running) state with green dot indicator]**
+**SCREENSHOT:** 
+
+<img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/738d9627-01ab-4326-8d65-6f24b95c0181" />
+
+>`systemctl status docker` output showing active (running) state with green dot indicator
 
 ---
 
@@ -447,7 +451,7 @@ The `stable` tag follows nginx's stable release branch, which receives security 
 
 
 
-<img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/738d9627-01ab-4326-8d65-6f24b95c0181" />
+
 <img width="1032" height="854" alt="image" src="https://github.com/user-attachments/assets/6522bad1-8e45-4f4f-bf23-1a48e97dc0f3" />
 <img width="1033" height="487" alt="image" src="https://github.com/user-attachments/assets/c0e9feb5-a6b1-4e4a-9ab9-cad5ec131771" />
 <img width="1034" height="394" alt="image" src="https://github.com/user-attachments/assets/46cdc338-53f4-445b-b4fa-1527cb43bd43" />
