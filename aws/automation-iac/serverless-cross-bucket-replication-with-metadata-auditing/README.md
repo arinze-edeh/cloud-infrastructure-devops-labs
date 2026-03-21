@@ -468,8 +468,11 @@ aws dynamodb create-table \
   --region us-east-1
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot of the `create-table` response showing `"TableStatus": "CREATING"` and the Table ARN*
+> **SCREENSHOT**
+
+<img width="1031" height="853" alt="image" src="https://github.com/user-attachments/assets/d7cf8696-c45d-4e51-8d10-4058b7df78dd" />
+
+> *Screenshot of the `create-table` response showing `"TableStatus": "CREATING"` and the Table ARN*
 
 #### 5.2 Wait for Table to Become Active
 
@@ -812,7 +815,7 @@ destination_bucket = "datacenter-private-1666"
 
 
 
-<img width="1031" height="853" alt="image" src="https://github.com/user-attachments/assets/d7cf8696-c45d-4e51-8d10-4058b7df78dd" />
+
 <img width="1029" height="862" alt="image" src="https://github.com/user-attachments/assets/e6d09963-ad8f-4423-a1fd-e3363477217f" />
 <img width="1032" height="597" alt="image" src="https://github.com/user-attachments/assets/7a0f958c-4cd4-49c2-bfc5-a58afd57d048" />
 <img width="1029" height="404" alt="image" src="https://github.com/user-attachments/assets/0e32864b-f0c5-43af-a958-d7288c58684e" />
