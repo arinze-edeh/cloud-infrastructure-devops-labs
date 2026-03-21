@@ -167,7 +167,7 @@ aws s3api get-public-access-block --bucket datacenter-public-14515
 
 <img width="1035" height="851" alt="image" src="https://github.com/user-attachments/assets/a44958ef-e155-42a1-a600-2decef758ccc" />
 
-> *screenshot showing the bucket policy JSON and public access block configuration confirming all four block flags are `false`*
+> *Screenshot showing the bucket policy JSON and public access block configuration confirming all four block flags are `false`*
 
 #### 1.5 Create the Private Destination Bucket
 
@@ -192,8 +192,11 @@ aws s3api put-public-access-block \
 aws s3api get-public-access-block --bucket datacenter-private-1666
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot confirming all four public access block flags are `true` on the private bucket*
+> **SCREENSHOT**
+
+<img width="1040" height="466" alt="image" src="https://github.com/user-attachments/assets/d440dbce-f4ef-412e-9164-a1aec122dcce" />
+
+> *Screenshot confirming all four public access block flags are `true` on the private bucket*
 
 ---
 
@@ -772,10 +775,6 @@ destination_bucket = "datacenter-private-1666"
 
 
 
-<img width="1028" height="612" alt="image" src="https://github.com/user-attachments/assets/0335cae1-7b92-4aee-a310-017a9664ceae" />
-
-<img width="1039" height="749" alt="image" src="https://github.com/user-attachments/assets/9d0790a0-912b-4ebf-ab18-fe210888cfef" />
-<img width="1040" height="466" alt="image" src="https://github.com/user-attachments/assets/d440dbce-f4ef-412e-9164-a1aec122dcce" />
 <img width="1037" height="805" alt="image" src="https://github.com/user-attachments/assets/e7becad1-1b85-4066-bc30-996957b439a0" />
 <img width="1030" height="861" alt="image" src="https://github.com/user-attachments/assets/b5a44786-764f-4e34-aa02-85224eedabf6" />
 <img width="1034" height="865" alt="image" src="https://github.com/user-attachments/assets/14ecea50-4c7c-45ad-9a32-8ee1ff83781e" />
