@@ -348,9 +348,11 @@ az storage entity insert \
 
 > **Design note:** The `PartitionKey=tasks` groups all tasks under a single logical partition. For large-scale applications, partition by user ID, project ID, or date range to maximize throughput and avoid partition hotspots.
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-06-entity-insert-task1-task2.png]`
-> *Caption: Both entity insert operations returning HTTP-equivalent success responses with `etag` and `date` fields.*
+**SCREENSHOT**
+
+<img width="1033" height="820" alt="image" src="https://github.com/user-attachments/assets/f417e947-9e7a-4157-889c-ee1ec3d2fd3f" />
+
+> *Both entity insert operations returning HTTP-equivalent success responses with `etag` and `date` fields.*
 
 ---
 
@@ -564,7 +566,7 @@ The storage account was created without resource tags. In enterprise environment
 
 
 
-<img width="1033" height="820" alt="image" src="https://github.com/user-attachments/assets/f417e947-9e7a-4157-889c-ee1ec3d2fd3f" />
+
 <img width="1033" height="603" alt="image" src="https://github.com/user-attachments/assets/e09bed54-7eb0-4487-97db-6f5db2468121" />
 <img width="1029" height="611" alt="image" src="https://github.com/user-attachments/assets/e69021f3-dd5c-4f59-aa29-5bcf5d601b40" />
 <img width="1034" height="800" alt="image" src="https://github.com/user-attachments/assets/6673ad0c-853c-48a7-bdde-18a5ab4adc9d" />
