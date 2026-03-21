@@ -562,16 +562,3 @@ The storage account was created without resource tags. In enterprise environment
 - [Azure Table Storage Design Patterns](https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-design-patterns)
 
 ---
-
-
-
-
-
-
-
-
-
-<img width="1033" height="603" alt="image" src="https://github.com/user-attachments/assets/e09bed54-7eb0-4487-97db-6f5db2468121" />
-
-
-
