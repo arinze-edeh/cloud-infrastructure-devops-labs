@@ -331,6 +331,8 @@ cat /root/lambda-function.py
 
 > **SCREENSHOTS**
 
+<img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/8426c5d2-3a89-4231-98f5-bae2a1317961" />
+<img width="1029" height="857" alt="image" src="https://github.com/user-attachments/assets/9eca401e-7029-4759-bf3c-92cd00a1c33b" />
 <img width="1030" height="343" alt="image" src="https://github.com/user-attachments/assets/da52fc91-4278-44c2-a948-3be3319b8502" />
 <img width="1031" height="839" alt="image" src="https://github.com/user-attachments/assets/f151b785-c140-409e-94db-a02cf7864194" />
 <img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/5f8e1237-d6c8-4901-9006-8043ad419bc8" />
@@ -824,8 +826,7 @@ destination_bucket = "datacenter-private-1666"
 
 
 
-<img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/8426c5d2-3a89-4231-98f5-bae2a1317961" />
-<img width="1029" height="857" alt="image" src="https://github.com/user-attachments/assets/9eca401e-7029-4759-bf3c-92cd00a1c33b" />
+
 
 
 
