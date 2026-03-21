@@ -108,8 +108,11 @@ aws sts get-caller-identity
 aws configure get region
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot of `aws sts get-caller-identity` output confirming account ID and IAM user ARN*
+> **SCREENSHOT**
+
+<img width="1038" height="494" alt="image" src="https://github.com/user-attachments/assets/2e98aa30-bbe9-43d7-96cc-80503db48643" />
+
+> *Screenshot of `aws sts get-caller-identity` output confirming account ID and IAM user ARN*
 
 ---
 
@@ -765,7 +768,7 @@ destination_bucket = "datacenter-private-1666"
 ---
 
 
-<img width="1038" height="494" alt="image" src="https://github.com/user-attachments/assets/2e98aa30-bbe9-43d7-96cc-80503db48643" />
+
 <img width="1028" height="612" alt="image" src="https://github.com/user-attachments/assets/0335cae1-7b92-4aee-a310-017a9664ceae" />
 <img width="1035" height="851" alt="image" src="https://github.com/user-attachments/assets/a44958ef-e155-42a1-a600-2decef758ccc" />
 <img width="1039" height="749" alt="image" src="https://github.com/user-attachments/assets/9d0790a0-912b-4ebf-ab18-fe210888cfef" />
