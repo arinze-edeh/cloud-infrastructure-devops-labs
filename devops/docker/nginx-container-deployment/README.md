@@ -231,7 +231,11 @@ sudo docker run -d \
 
 > The returned 64-character string is the full container ID, confirming successful creation.
 
-**[SCREENSHOT PLACEHOLDER: docker run command with full container ID returned confirming successful container creation]**
+**SCREENSHOT:** 
+
+<img width="1034" height="394" alt="image" src="https://github.com/user-attachments/assets/46cdc338-53f4-445b-b4fa-1527cb43bd43" />
+
+>docker run command with full container ID returned confirming successful container creation
 
 ---
 
@@ -466,7 +470,7 @@ The `stable` tag follows nginx's stable release branch, which receives security 
 
 
 
-<img width="1034" height="394" alt="image" src="https://github.com/user-attachments/assets/46cdc338-53f4-445b-b4fa-1527cb43bd43" />
+
 <img width="1131" height="465" alt="image" src="https://github.com/user-attachments/assets/d7d8f7c6-ab11-4dd7-a6b2-3642c5eba560" />
 <img width="1133" height="593" alt="image" src="https://github.com/user-attachments/assets/50ef05c1-f857-47a0-aa7a-5884148e39c5" />
 
