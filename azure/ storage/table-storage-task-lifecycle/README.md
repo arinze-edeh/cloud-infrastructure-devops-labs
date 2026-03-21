@@ -109,21 +109,6 @@ az --version
 
 ---
 
-## Project Structure
-
-```
-azure-table-storage-todo/
-|
-|-- README.md                   # This documentation
-|-- scripts/
-|   |-- provision.sh            # Full end-to-end provisioning script
-|   |-- insert-entities.sh      # Entity insertion script
-|   |-- query-entities.sh       # Entity query and verification script
-|-- .env.example                # Environment variable template (never commit secrets)
-```
-
----
-
 ## Step-by-Step Implementation
 
 ### Step 1: Verify Azure CLI and Account Context
@@ -161,9 +146,11 @@ az account show
 
 > **Why this matters:** Running `az account show` before any deployment is a non-negotiable first step in multi-subscription environments. Deploying into the wrong subscription is a common and costly mistake.
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-01-az-version-and-account-show.png]`
-> *Caption: Terminal output showing Azure CLI version 2.67.0 and active account context for the Azure Free Labs subscription.*
+**SCREENSHOT**
+
+<img width="1031" height="814" alt="image" src="https://github.com/user-attachments/assets/9dac55a1-d987-405d-89a9-06b574a5be40" />
+
+> *Terminal output showing Azure CLI version 2.67.0 and active account context for the Azure Free Labs subscription.*
 
 ---
 
@@ -560,20 +547,10 @@ The storage account was created without resource tags. In enterprise environment
 
 ---
 
-## Author
-
-**Nautilus DevOps Engineering Team**
-Platform: Azure Cloud | Environment: `AzureCloud` | Region: `eastus`
-Provisioned: `2026-03-21` | CLI Version: `azure-cli 2.67.0`
-
----
-
-*This documentation follows the Nautilus DevOps documentation standard. All infrastructure changes must be peer-reviewed, version-controlled, and linked to an approved change record before production deployment.*
 
 
 
 
-<img width="1031" height="814" alt="image" src="https://github.com/user-attachments/assets/9dac55a1-d987-405d-89a9-06b574a5be40" />
 <img width="1033" height="839" alt="image" src="https://github.com/user-attachments/assets/3de3ecac-3970-4fe1-ad92-fe2fba20c4db" />
 <img width="1031" height="860" alt="image" src="https://github.com/user-attachments/assets/60c05979-8ba3-40b1-a224-04ce04096b48" />
 <img width="1031" height="858" alt="image" src="https://github.com/user-attachments/assets/f1e0c5fb-73e9-4142-869b-cad0fcc69050" />
