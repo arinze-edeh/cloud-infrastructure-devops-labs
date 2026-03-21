@@ -564,8 +564,11 @@ Expected output structure:
 }
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot of the full DynamoDB scan response showing the audit record with `"Status": "Success"`, source/destination buckets, and the object key `sample.zip`*
+> **SCREENSHOT**
+
+<img width="1030" height="842" alt="image" src="https://github.com/user-attachments/assets/0728106a-b1e3-4289-a6e6-f87e2a9f1ab0" />
+
+> *Screenshot of the full DynamoDB scan response showing the audit record with `"Status": "Success"`, source/destination buckets, and the object key `sample.zip`*
 
 ---
 
@@ -825,7 +828,7 @@ destination_bucket = "datacenter-private-1666"
 <img width="1029" height="862" alt="image" src="https://github.com/user-attachments/assets/e6d09963-ad8f-4423-a1fd-e3363477217f" />
 
 
-<img width="1030" height="842" alt="image" src="https://github.com/user-attachments/assets/0728106a-b1e3-4289-a6e6-f87e2a9f1ab0" />
+
 <img width="1038" height="869" alt="image" src="https://github.com/user-attachments/assets/198e32c6-9ef1-43f7-a7a0-e863ef4b1d1d" />
 <img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/2ba8d90f-3ed7-4148-9762-64d2c7387816" />
 <img width="1036" height="554" alt="image" src="https://github.com/user-attachments/assets/ebe427af-1bca-4697-a1cf-595b1eebb24f" />
