@@ -313,7 +313,11 @@ curl http://localhost:8084
 > * Port 8084 on the host correctly forwards traffic to port 80 inside the container
 > * nginx is serving requests inside the container as expected
 
-**[SCREENSHOT PLACEHOLDER: curl http://localhost:8084 returning the nginx welcome HTML confirming full end-to-end connectivity]**
+**SCREENSHOT:** 
+
+<img width="1132" height="784" alt="image" src="https://github.com/user-attachments/assets/61609576-906e-4939-8d9e-808f491b3596" />
+
+>curl http://localhost:8084 returning the nginx welcome HTML confirming full end-to-end connectivity
 
 ---
 
@@ -465,5 +469,5 @@ The `stable` tag follows nginx's stable release branch, which receives security 
 <img width="1034" height="394" alt="image" src="https://github.com/user-attachments/assets/46cdc338-53f4-445b-b4fa-1527cb43bd43" />
 <img width="1131" height="465" alt="image" src="https://github.com/user-attachments/assets/d7d8f7c6-ab11-4dd7-a6b2-3642c5eba560" />
 <img width="1133" height="593" alt="image" src="https://github.com/user-attachments/assets/50ef05c1-f857-47a0-aa7a-5884148e39c5" />
-<img width="1132" height="784" alt="image" src="https://github.com/user-attachments/assets/61609576-906e-4939-8d9e-808f491b3596" />
+
 
