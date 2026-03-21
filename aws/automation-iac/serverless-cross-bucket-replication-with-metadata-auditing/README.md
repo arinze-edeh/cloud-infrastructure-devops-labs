@@ -379,8 +379,12 @@ aws lambda get-function \
   --region us-east-1
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot of `get-function` output showing `"State": "Active"` and `"LastUpdateStatus": "Successful"`*
+> **SCREENSHOTS**
+
+<img width="1037" height="848" alt="image" src="https://github.com/user-attachments/assets/81d40008-94bd-412c-84ef-07ca9e70ed5c" />
+<img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/019484de-de36-44ad-8864-f19b58026357" />
+
+> *Screenshots of `get-function` output showing `"State": "Active"` and `"LastUpdateStatus": "Successful"`*
 
 #### 3.7 Grant S3 Permission to Invoke Lambda
 
@@ -799,8 +803,7 @@ destination_bucket = "datacenter-private-1666"
 
 <img width="1031" height="271" alt="image" src="https://github.com/user-attachments/assets/4e9354e3-d650-4ef7-9e9b-4e84463d2532" />
 
-<img width="1037" height="848" alt="image" src="https://github.com/user-attachments/assets/81d40008-94bd-412c-84ef-07ca9e70ed5c" />
-<img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/019484de-de36-44ad-8864-f19b58026357" />
+
 <img width="1036" height="529" alt="image" src="https://github.com/user-attachments/assets/8599275d-558a-4a39-ad49-deaa1f33ae76" />
 <img width="1028" height="807" alt="image" src="https://github.com/user-attachments/assets/ff79f0f3-8d59-4ece-9369-3d9f4f8e5ef8" />
 <img width="1031" height="853" alt="image" src="https://github.com/user-attachments/assets/d7cf8696-c45d-4e51-8d10-4058b7df78dd" />
