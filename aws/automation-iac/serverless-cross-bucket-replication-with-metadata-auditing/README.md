@@ -531,8 +531,11 @@ Expected output:
 2026-03-21 02:22:41   164 sample.zip
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot of `aws s3 ls s3://datacenter-private-1666/` output confirming `sample.zip` is present with the correct size and timestamp*
+> **SCREENSHOT**
+
+<img width="1029" height="404" alt="image" src="https://github.com/user-attachments/assets/0e32864b-f0c5-43af-a958-d7288c58684e" />
+
+> *Screenshot of `aws s3 ls s3://datacenter-private-1666/` output confirming `sample.zip` is present with the correct size and timestamp*
 
 #### 6.4 Scan DynamoDB for Audit Log Entry
 
@@ -821,7 +824,7 @@ destination_bucket = "datacenter-private-1666"
 
 <img width="1029" height="862" alt="image" src="https://github.com/user-attachments/assets/e6d09963-ad8f-4423-a1fd-e3363477217f" />
 
-<img width="1029" height="404" alt="image" src="https://github.com/user-attachments/assets/0e32864b-f0c5-43af-a958-d7288c58684e" />
+
 <img width="1030" height="842" alt="image" src="https://github.com/user-attachments/assets/0728106a-b1e3-4289-a6e6-f87e2a9f1ab0" />
 <img width="1038" height="869" alt="image" src="https://github.com/user-attachments/assets/198e32c6-9ef1-43f7-a7a0-e863ef4b1d1d" />
 <img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/2ba8d90f-3ed7-4148-9762-64d2c7387816" />
