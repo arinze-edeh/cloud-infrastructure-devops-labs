@@ -13,7 +13,6 @@
 
 - [Business Problem](#business-problem)
 - [Solution Architecture](#solution-architecture)
-- [Architecture Diagram](#architecture-diagram)
 - [Infrastructure Components](#infrastructure-components)
 - [Prerequisites](#prerequisites)
 - [Step-by-Step Implementation](#step-by-step-implementation)
@@ -77,14 +76,6 @@ This pipeline implements a fully event-driven, serverless architecture on AWS. W
         v
 [CloudWatch Logs: /aws/lambda/datacenter-copyfunction]
 ```
-
----
-
-## Architecture Diagram
-
-> **SCREENSHOT PLACEHOLDER**
-> *Insert architecture diagram screenshot here showing the full event-driven flow:*
-> *S3 Public Bucket -> Lambda Trigger -> Lambda Function -> S3 Private Bucket + DynamoDB*
 
 ---
 
