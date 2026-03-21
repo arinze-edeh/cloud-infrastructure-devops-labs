@@ -407,8 +407,11 @@ aws lambda get-policy \
   --region us-east-1
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot of `get-policy` output confirming the S3 principal is allowed to invoke the function with the correct `ArnLike` condition on the source bucket ARN*
+> **SCREENSHOT**
+
+<img width="1036" height="529" alt="image" src="https://github.com/user-attachments/assets/8599275d-558a-4a39-ad49-deaa1f33ae76" />
+
+> *Screenshot of `get-policy` output confirming the S3 principal is allowed to invoke the function with the correct `ArnLike` condition on the source bucket ARN*
 
 ---
 
@@ -804,7 +807,7 @@ destination_bucket = "datacenter-private-1666"
 <img width="1031" height="271" alt="image" src="https://github.com/user-attachments/assets/4e9354e3-d650-4ef7-9e9b-4e84463d2532" />
 
 
-<img width="1036" height="529" alt="image" src="https://github.com/user-attachments/assets/8599275d-558a-4a39-ad49-deaa1f33ae76" />
+
 <img width="1028" height="807" alt="image" src="https://github.com/user-attachments/assets/ff79f0f3-8d59-4ece-9369-3d9f4f8e5ef8" />
 <img width="1031" height="853" alt="image" src="https://github.com/user-attachments/assets/d7cf8696-c45d-4e51-8d10-4058b7df78dd" />
 <img width="1029" height="862" alt="image" src="https://github.com/user-attachments/assets/e6d09963-ad8f-4423-a1fd-e3363477217f" />
