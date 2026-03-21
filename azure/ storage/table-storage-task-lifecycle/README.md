@@ -286,9 +286,11 @@ az storage table create \
 
 > **Key concept:** A `true` response in the `created` field confirms the table did not previously exist and was created fresh. If the table already existed, the response would return `false` without error, making this command idempotent and safe for use in automation pipelines.
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-05-table-create.png]`
-> *Caption: Azure CLI confirming table `tasks` was successfully created with `"created": true`.*
+**SCREENSHOT**
+
+<img width="1008" height="206" alt="image" src="https://github.com/user-attachments/assets/44743951-1800-49ab-b89b-c943296f1836" />
+
+> *Azure CLI confirming table `tasks` was successfully created with `"created": true`.*
 
 ---
 
