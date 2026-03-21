@@ -366,6 +366,7 @@ aws lambda create-function \
 
 > **SCREENSHOTS**
 
+<img width="1031" height="271" alt="image" src="https://github.com/user-attachments/assets/4e9354e3-d650-4ef7-9e9b-4e84463d2532" />
 <img width="1028" height="864" alt="image" src="https://github.com/user-attachments/assets/2cdabfc0-1d83-4f2f-b71e-29f327ea7f4c" />
 <img width="1033" height="854" alt="image" src="https://github.com/user-attachments/assets/7a749d7a-a45b-4662-849a-b202153d1387" />
 
@@ -827,7 +828,7 @@ destination_bucket = "datacenter-private-1666"
 <img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/8426c5d2-3a89-4231-98f5-bae2a1317961" />
 <img width="1029" height="857" alt="image" src="https://github.com/user-attachments/assets/9eca401e-7029-4759-bf3c-92cd00a1c33b" />
 
-<img width="1031" height="271" alt="image" src="https://github.com/user-attachments/assets/4e9354e3-d650-4ef7-9e9b-4e84463d2532" />
+
 
 
 
