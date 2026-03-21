@@ -497,8 +497,11 @@ Expected output:
 "ACTIVE"
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot showing `"ACTIVE"` status returned for the DynamoDB table*
+> **SCREENSHOT**
+
+<img width="1032" height="597" alt="image" src="https://github.com/user-attachments/assets/7a0f958c-4cd4-49c2-bfc5-a58afd57d048" />
+
+> *Screenshot showing `"ACTIVE"` status returned for the DynamoDB table*
 
 ---
 
@@ -817,7 +820,7 @@ destination_bucket = "datacenter-private-1666"
 
 
 <img width="1029" height="862" alt="image" src="https://github.com/user-attachments/assets/e6d09963-ad8f-4423-a1fd-e3363477217f" />
-<img width="1032" height="597" alt="image" src="https://github.com/user-attachments/assets/7a0f958c-4cd4-49c2-bfc5-a58afd57d048" />
+
 <img width="1029" height="404" alt="image" src="https://github.com/user-attachments/assets/0e32864b-f0c5-43af-a958-d7288c58684e" />
 <img width="1030" height="842" alt="image" src="https://github.com/user-attachments/assets/0728106a-b1e3-4289-a6e6-f87e2a9f1ab0" />
 <img width="1038" height="869" alt="image" src="https://github.com/user-attachments/assets/198e32c6-9ef1-43f7-a7a0-e863ef4b1d1d" />
