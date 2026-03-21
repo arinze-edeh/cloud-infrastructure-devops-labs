@@ -824,7 +824,6 @@ destination_bucket = "datacenter-private-1666"
 
 
 
-<img width="1034" height="463" alt="image" src="https://github.com/user-attachments/assets/e73e2a88-eaaa-46c9-b05b-b6c1d4732dd4" />
 <img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/8426c5d2-3a89-4231-98f5-bae2a1317961" />
 <img width="1029" height="857" alt="image" src="https://github.com/user-attachments/assets/9eca401e-7029-4759-bf3c-92cd00a1c33b" />
 
