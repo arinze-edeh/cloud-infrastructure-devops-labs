@@ -791,7 +791,7 @@ destination_bucket = "datacenter-private-1666"
 
 - You are running AWS CLI v1. Use `aws logs filter-log-events` as documented in [CloudWatch Log Validation](#cloudwatch-log-validation).
 
-**Screenshots**
+>**Screenshots**
 
 <img width="1038" height="869" alt="image" src="https://github.com/user-attachments/assets/198e32c6-9ef1-43f7-a7a0-e863ef4b1d1d" />
 <img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/2ba8d90f-3ed7-4148-9762-64d2c7387816" />
