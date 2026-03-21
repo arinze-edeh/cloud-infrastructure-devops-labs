@@ -84,7 +84,11 @@ tony@stapp01's password:
 
 > **Note:** On first connection, SSH will prompt for host key verification. Type `yes` to trust and permanently add the host fingerprint to `~/.ssh/known_hosts`.
 
-**[SCREENSHOT PLACEHOLDER: SSH login to stapp01 from jump host showing successful authentication]**
+**SCREENSHOT:** 
+
+<img width="1025" height="372" alt="image" src="https://github.com/user-attachments/assets/3312fe02-d605-4f48-a48d-f0b56d05bc1d" />
+
+>SSH login to stapp01 from jump host showing successful authentication
 
 ---
 
@@ -437,7 +441,7 @@ The `stable` tag follows nginx's stable release branch, which receives security 
 
 
 
-<img width="1025" height="372" alt="image" src="https://github.com/user-attachments/assets/3312fe02-d605-4f48-a48d-f0b56d05bc1d" />
+
 <img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/738d9627-01ab-4326-8d65-6f24b95c0181" />
 <img width="1032" height="854" alt="image" src="https://github.com/user-attachments/assets/6522bad1-8e45-4f4f-bf23-1a48e97dc0f3" />
 <img width="1033" height="487" alt="image" src="https://github.com/user-attachments/assets/c0e9feb5-a6b1-4e4a-9ab9-cad5ec131771" />
