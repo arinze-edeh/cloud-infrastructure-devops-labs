@@ -303,8 +303,12 @@ aws iam attach-role-policy \
 aws iam list-attached-role-policies --role-name lambda_execution_role
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot showing both `AWSLambdaBasicExecutionRole` and `lambda_s3_dynamodb_policy` listed as attached policies*
+> **SCREENSHOTS**
+
+<img width="1030" height="861" alt="image" src="https://github.com/user-attachments/assets/b5a44786-764f-4e34-aa02-85224eedabf6" />
+<img width="1034" height="865" alt="image" src="https://github.com/user-attachments/assets/14ecea50-4c7c-45ad-9a32-8ee1ff83781e" />
+
+> *Screenshots showing both `AWSLambdaBasicExecutionRole` and `lambda_s3_dynamodb_policy` listed as attached policies*
 
 ---
 
@@ -779,8 +783,7 @@ destination_bucket = "datacenter-private-1666"
 
 
 
-<img width="1030" height="861" alt="image" src="https://github.com/user-attachments/assets/b5a44786-764f-4e34-aa02-85224eedabf6" />
-<img width="1034" height="865" alt="image" src="https://github.com/user-attachments/assets/14ecea50-4c7c-45ad-9a32-8ee1ff83781e" />
+
 <img width="1034" height="463" alt="image" src="https://github.com/user-attachments/assets/e73e2a88-eaaa-46c9-b05b-b6c1d4732dd4" />
 <img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/8426c5d2-3a89-4231-98f5-bae2a1317961" />
 <img width="1029" height="857" alt="image" src="https://github.com/user-attachments/assets/9eca401e-7029-4759-bf3c-92cd00a1c33b" />
