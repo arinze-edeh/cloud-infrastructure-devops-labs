@@ -172,9 +172,11 @@ kml_rg_main-4132cedd91b749aa  eastus      Succeeded
 
 > **Why this matters:** Confirming the resource group status is `Succeeded` ensures no underlying Azure Resource Manager issues exist that could cause downstream provisioning failures.
 
-**SCREENSHOT PLACEHOLDER**
-> `[screenshot-02-resource-group-list.png]`
-> *Caption: Azure CLI listing the resource group `kml_rg_main-4132cedd91b749aa` in `eastus` with status `Succeeded`.*
+**SCREENSHOT**
+
+<img width="1033" height="839" alt="image" src="https://github.com/user-attachments/assets/3de3ecac-3970-4fe1-ad92-fe2fba20c4db" />
+
+> *Azure CLI listing the resource group `kml_rg_main-4132cedd91b749aa` in `eastus` with status `Succeeded`.*
 
 ---
 
@@ -551,7 +553,7 @@ The storage account was created without resource tags. In enterprise environment
 
 
 
-<img width="1033" height="839" alt="image" src="https://github.com/user-attachments/assets/3de3ecac-3970-4fe1-ad92-fe2fba20c4db" />
+
 <img width="1031" height="860" alt="image" src="https://github.com/user-attachments/assets/60c05979-8ba3-40b1-a224-04ce04096b48" />
 <img width="1031" height="858" alt="image" src="https://github.com/user-attachments/assets/f1e0c5fb-73e9-4142-869b-cad0fcc69050" />
 <img width="1032" height="856" alt="image" src="https://github.com/user-attachments/assets/345205f0-f930-457d-a488-0bcd256edf02" />
