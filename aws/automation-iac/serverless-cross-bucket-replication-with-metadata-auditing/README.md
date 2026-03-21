@@ -329,8 +329,13 @@ sed -i 's/REPLACE-WITH-YOUR-PRIVATE-BUCKET/datacenter-private-1666/g' /root/lamb
 cat /root/lambda-function.py
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> *Insert screenshot of `cat /root/lambda-function.py` output confirming `datacenter-S3CopyLogs` and `datacenter-private-1666` are correctly substituted at lines 8 and 14 respectively*
+> **SCREENSHOTS**
+
+<img width="1030" height="343" alt="image" src="https://github.com/user-attachments/assets/da52fc91-4278-44c2-a948-3be3319b8502" />
+<img width="1031" height="839" alt="image" src="https://github.com/user-attachments/assets/f151b785-c140-409e-94db-a02cf7864194" />
+<img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/5f8e1237-d6c8-4901-9006-8043ad419bc8" />
+
+> *Screenshots of `cat /root/lambda-function.py` output confirming `datacenter-S3CopyLogs` and `datacenter-private-1666` are correctly substituted at lines 8 and 14 respectively*
 
 #### 3.3 Package Lambda Deployment Artifact
 
@@ -787,9 +792,7 @@ destination_bucket = "datacenter-private-1666"
 <img width="1034" height="463" alt="image" src="https://github.com/user-attachments/assets/e73e2a88-eaaa-46c9-b05b-b6c1d4732dd4" />
 <img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/8426c5d2-3a89-4231-98f5-bae2a1317961" />
 <img width="1029" height="857" alt="image" src="https://github.com/user-attachments/assets/9eca401e-7029-4759-bf3c-92cd00a1c33b" />
-<img width="1030" height="343" alt="image" src="https://github.com/user-attachments/assets/da52fc91-4278-44c2-a948-3be3319b8502" />
-<img width="1031" height="839" alt="image" src="https://github.com/user-attachments/assets/f151b785-c140-409e-94db-a02cf7864194" />
-<img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/5f8e1237-d6c8-4901-9006-8043ad419bc8" />
+
 <img width="1031" height="271" alt="image" src="https://github.com/user-attachments/assets/4e9354e3-d650-4ef7-9e9b-4e84463d2532" />
 <img width="1028" height="864" alt="image" src="https://github.com/user-attachments/assets/2cdabfc0-1d83-4f2f-b71e-29f327ea7f4c" />
 <img width="1033" height="854" alt="image" src="https://github.com/user-attachments/assets/7a749d7a-a45b-4662-849a-b202153d1387" />
