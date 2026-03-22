@@ -210,7 +210,11 @@ drwxr-xr-x 2 root root 4096 Mar 22 03:27 /opt/itadmin
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal output of `ls -ld /opt/docker` and `ls -ld /opt/itadmin` confirming both directories exist]**
+**SCREENSHOT:** 
+
+<img width="1033" height="351" alt="image" src="https://github.com/user-attachments/assets/7d471edf-86b0-4355-ab50-194347c8f461" />
+
+>Terminal output of `ls -ld /opt/docker` and `ls -ld /opt/itadmin` confirming both directories exist
 
 ---
 
@@ -700,15 +704,8 @@ All Docker operations in this runbook required `root` because the target directo
 
 
 
-
-<img width="1031" height="492" alt="image" src="https://github.com/user-attachments/assets/4b429b33-ae2b-410d-9868-b0ff197db12e" />
-<img width="1032" height="531" alt="image" src="https://github.com/user-attachments/assets/541330ec-62b2-43c5-b894-8efe63bda371" />
-
-<img width="1031" height="855" alt="image" src="https://github.com/user-attachments/assets/d38e654b-06fa-4cb6-9166-6cf8cec59fe4" />
-<img width="1032" height="862" alt="image" src="https://github.com/user-attachments/assets/1358030c-dc4c-4913-ba38-89a747abf7f8" />
-
 <img width="1032" height="629" alt="image" src="https://github.com/user-attachments/assets/1e4e3e5a-27d2-4883-a7c6-64261e737415" />
-<img width="1033" height="351" alt="image" src="https://github.com/user-attachments/assets/7d471edf-86b0-4355-ab50-194347c8f461" />
+
 <img width="1031" height="478" alt="image" src="https://github.com/user-attachments/assets/c3c64ddf-c1ac-46be-844e-c521b50f9158" />
 <img width="1032" height="502" alt="image" src="https://github.com/user-attachments/assets/c63e255b-b8db-4735-a073-9fb2b7ad76f6" />
 <img width="1030" height="683" alt="image" src="https://github.com/user-attachments/assets/01edc9cc-a6e5-4da7-a691-24ccf81746ff" />
