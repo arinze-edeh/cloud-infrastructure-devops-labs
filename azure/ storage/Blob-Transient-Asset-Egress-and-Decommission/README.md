@@ -280,8 +280,11 @@ Name         Blob Type    Blob Tier    Length    Content Type    Last Modified
 xfusion.txt  BlockBlob    Hot          33        text/plain      2026-03-22T04:05:58+00:00
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Blob list table output showing single blob "xfusion.txt" as BlockBlob on Hot tier]`
+> **Screenshot**
+
+<img width="1031" height="748" alt="image" src="https://github.com/user-attachments/assets/804a4b44-1545-4d58-a11a-8e736f837057" />
+
+> `Blob list table output showing single blob "xfusion.txt" as BlockBlob on Hot tier`
 
 #### Step 3.4 -- Count Total Blobs (Pre-Download Baseline)
 
@@ -700,7 +703,7 @@ az storage container list \
 
 
 
-<img width="1031" height="748" alt="image" src="https://github.com/user-attachments/assets/804a4b44-1545-4d58-a11a-8e736f837057" />
+
 <img width="1031" height="386" alt="image" src="https://github.com/user-attachments/assets/85f5d510-77fc-4646-8f9c-691fd3404ea1" />
 <img width="1032" height="672" alt="image" src="https://github.com/user-attachments/assets/37655035-ab1f-4470-9141-6bbccfe0ca61" />
 <img width="1036" height="665" alt="image" src="https://github.com/user-attachments/assets/f5dcc5d0-538e-4ede-bd61-eaa218cffcee" />
