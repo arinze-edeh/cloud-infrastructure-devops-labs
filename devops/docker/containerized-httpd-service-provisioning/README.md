@@ -424,7 +424,12 @@ d00b6dfa43b6   httpd:latest   "httpd-foreground"   2 minutes ago   Up 2 minutes 
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal output of `docker ps` showing the httpd container in `Up` status with the correct port mapping `0.0.0.0:8089->80/tcp`]**
+**SCREENSHOT:** 
+
+<img width="1015" height="177" alt="image" src="https://github.com/user-attachments/assets/8a3d8244-fc90-40c7-a81b-4380e3e4968f" />
+
+
+>Terminal output of `docker ps` showing the httpd container in `Up` status with the correct port mapping `0.0.0.0:8089->80/tcp`
 
 ---
 
