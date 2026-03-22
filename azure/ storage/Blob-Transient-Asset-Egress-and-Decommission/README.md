@@ -502,8 +502,11 @@ cat /opt/xfusion.txt
 Welcome to KKE Azure Cloud Labs!
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: ls -lah /opt/xfusion.txt showing 33-byte file (root-owned, Mar 22 04:25) followed immediately by cat /opt/xfusion.txt output displaying "Welcome to KKE Azure Cloud Labs!"]`
+> **Screenshot**
+
+<img width="1032" height="580" alt="image" src="https://github.com/user-attachments/assets/febfeca1-ef93-42fb-a656-82f196ea6829" />
+
+> `ls -lah /opt/xfusion.txt showing 33-byte file (root-owned, Mar 22 04:25) followed immediately by cat /opt/xfusion.txt output displaying "Welcome to KKE Azure Cloud Labs!"`
 
 > **Integrity Check:** File size on disk (33 bytes) matches the blob `Length` field (33) from the pre-download inventory. File permissions are `rw-r--r--` (root-owned, world-readable). The source container is deleted and the data is confirmed safe and intact on the local host. Migration and cleanup complete.
 
@@ -707,4 +710,4 @@ az storage container list \
 <img width="1031" height="386" alt="image" src="https://github.com/user-attachments/assets/85f5d510-77fc-4646-8f9c-691fd3404ea1" />
 <img width="1032" height="672" alt="image" src="https://github.com/user-attachments/assets/37655035-ab1f-4470-9141-6bbccfe0ca61" />
 <img width="1036" height="665" alt="image" src="https://github.com/user-attachments/assets/f5dcc5d0-538e-4ede-bd61-eaa218cffcee" />
-<img width="1032" height="580" alt="image" src="https://github.com/user-attachments/assets/febfeca1-ef93-42fb-a656-82f196ea6829" />
+
