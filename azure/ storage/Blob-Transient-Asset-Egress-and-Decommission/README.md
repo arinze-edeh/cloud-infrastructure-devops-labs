@@ -466,7 +466,7 @@ az storage container list \
 
 > **Screenshot**
 
-<img width="1011" height="405" alt="image" src="https://github.com/user-attachments/assets/b3450cf5-b532-40c4-a708-70c77e6a581e" />
+<img width="1036" height="665" alt="image" src="https://github.com/user-attachments/assets/f5dcc5d0-538e-4ede-bd61-eaa218cffcee" />
 
 
 > `az storage container list returning empty table confirming no containers remain in xfusionst27608`
@@ -695,16 +695,3 @@ az storage container list \
 | Status | Completed and Verified |
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-<img width="1036" height="665" alt="image" src="https://github.com/user-attachments/assets/f5dcc5d0-538e-4ede-bd61-eaa218cffcee" />
-
