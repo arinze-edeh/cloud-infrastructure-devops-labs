@@ -256,8 +256,11 @@ az storage container show \
 | Has Immutability Policy | `false` |
 | Has Legal Hold | `false` |
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az storage container show output confirming container is unlocked, private, and has no legal hold]`
+> **Screenshot**
+
+<img width="1029" height="844" alt="image" src="https://github.com/user-attachments/assets/1c39ff5b-0bc5-4774-bc53-5ba7ec3d4529" />
+
+> `az storage container show output confirming container is unlocked, private, and has no legal hold`
 
 #### Step 3.3 -- List Blobs in Container
 
@@ -696,7 +699,7 @@ az storage container list \
 
 
 
-<img width="1029" height="844" alt="image" src="https://github.com/user-attachments/assets/1c39ff5b-0bc5-4774-bc53-5ba7ec3d4529" />
+
 <img width="1031" height="748" alt="image" src="https://github.com/user-attachments/assets/804a4b44-1545-4d58-a11a-8e736f837057" />
 <img width="1031" height="386" alt="image" src="https://github.com/user-attachments/assets/85f5d510-77fc-4646-8f9c-691fd3404ea1" />
 <img width="1032" height="672" alt="image" src="https://github.com/user-attachments/assets/37655035-ab1f-4470-9141-6bbccfe0ca61" />
