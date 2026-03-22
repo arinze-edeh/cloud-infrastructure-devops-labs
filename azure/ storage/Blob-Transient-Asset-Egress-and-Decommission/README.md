@@ -179,8 +179,11 @@ az storage account list \
 kml_rg_main-ca1fc5d65be64345
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az storage account list query output returning resource group "kml_rg_main-ca1fc5d65be64345"]`
+> **Screenshot**
+
+<img width="1033" height="537" alt="image" src="https://github.com/user-attachments/assets/8c21fdc0-5c5f-4c9a-99a1-fcdd6273121c" />
+
+> `az storage account list query output returning resource group "kml_rg_main-ca1fc5d65be64345"`
 
 #### Step 2.2 -- Export Resource Group to Shell Variable
 
@@ -195,8 +198,11 @@ echo $RG
 kml_rg_main-ca1fc5d65be64345
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Shell variable RG set and echoed to confirm correct value]`
+> **Screenshot**
+
+<img width="1029" height="634" alt="image" src="https://github.com/user-attachments/assets/8e6d165a-d300-497e-8c26-e7a45037dfd8" />
+
+> `Shell variable RG set and echoed to confirm correct value`
 
 ---
 
@@ -681,12 +687,11 @@ az storage container list \
 
 ---
 
-*This runbook is maintained by the Nautilus DevOps Cloud Operations team. All destructive operations in this document require peer review and change management approval before execution in production environments.*
 
 
 
-<img width="1033" height="537" alt="image" src="https://github.com/user-attachments/assets/8c21fdc0-5c5f-4c9a-99a1-fcdd6273121c" />
-<img width="1029" height="634" alt="image" src="https://github.com/user-attachments/assets/8e6d165a-d300-497e-8c26-e7a45037dfd8" />
+
+
 <img width="1035" height="497" alt="image" src="https://github.com/user-attachments/assets/98bf154f-3a1b-422c-b73a-3c564326b1d8" />
 <img width="1029" height="844" alt="image" src="https://github.com/user-attachments/assets/1c39ff5b-0bc5-4774-bc53-5ba7ec3d4529" />
 <img width="1031" height="748" alt="image" src="https://github.com/user-attachments/assets/804a4b44-1545-4d58-a11a-8e736f837057" />
