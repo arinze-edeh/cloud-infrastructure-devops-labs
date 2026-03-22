@@ -165,11 +165,7 @@ Before writing any CloudFormation, inspect the provided Lambda code to understan
 cat /root/index.py
 ```
 
-> **Screenshot**
-
-<img width="1030" height="700" alt="image" src="https://github.com/user-attachments/assets/b89e922f-b0f1-4929-a5e8-c0e6aaf70f57" />
-
-> `Output of cat /root/index.py showing full Lambda source code`
+![SCREENSHOT-01: cat /root/index.py showing full Lambda source code](https://github.com/user-attachments/assets/b89e922f-b0f1-4929-a5e8-c0e6aaf70f57)
 
 **Key findings from inspection:**
 
@@ -374,14 +370,19 @@ grep "Handler:" /root/nautilus-priority-stack.yml
 grep "EventSourceMapping" /root/nautilus-priority-stack.yml
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-02: Output of ls -lh and grep verification commands confirming template contents]`
+![SCREENSHOT-02: ls -lh and grep verification commands confirming template contents](https://github.com/user-attachments/assets/79bc08bb-875b-4542-8a34-2ba86f88f7db)
 
 ---
 
 ### Phase 3 -- Validate the Template
 
 > **Note:** Python's `yaml.safe_load` does NOT understand CloudFormation intrinsic function tags like `!Ref` and `!GetAtt`. The resulting `ConstructorError` is expected and harmless. Use AWS CloudFormation validation exclusively.
+
+```bash
+python3 -c "import yaml; yaml.safe_load(open('/root/nautilus-priority-stack.yml'))" && echo "YAML syntax OK"
+```
+
+![SCREENSHOT-03a: Python yaml.safe_load ConstructorError for tag !Ref -- expected and harmless](https://github.com/user-attachments/assets/c256f2f4-3df8-4b9d-8952-a35719dd8f99)
 
 ```bash
 aws cloudformation validate-template \
@@ -400,8 +401,7 @@ aws cloudformation validate-template \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-03: Successful AWS CloudFormation validate-template response showing CAPABILITY_NAMED_IAM]`
+![SCREENSHOT-03b: AWS CloudFormation validate-template success showing CAPABILITY_NAMED_IAM](https://github.com/user-attachments/assets/c36de50a-3ab5-48ed-92ee-431e8f4934ea)
 
 ---
 
@@ -415,13 +415,63 @@ aws cloudformation create-stack \
   --region us-east-1
 ```
 
-Wait for stack creation to complete:
+**First deployment attempt** (with inline policy -- will fail):
 
 ```bash
 aws cloudformation wait stack-create-complete \
   --stack-name nautilus-priority-stack \
+  --region us-east-1
+```
+
+![SCREENSHOT-04a: First create-stack returning StackId then ROLLBACK_COMPLETE waiter failure](https://github.com/user-attachments/assets/ee5bd82a-23a8-4a75-b19d-880980195258)
+
+![SCREENSHOT-04a-2: ROLLBACK_COMPLETE terminal failure state waiter output](https://github.com/user-attachments/assets/963508d5-4fd8-4b0a-a39b-edee32720acd)
+
+Diagnose the failure:
+
+```bash
+aws cloudformation describe-stack-events \
+  --stack-name nautilus-priority-stack \
+  --region us-east-1 \
+  --query 'StackEvents[?ResourceStatus==`CREATE_FAILED`].[LogicalResourceId,ResourceStatusReason]' \
+  --output table
+```
+
+![SCREENSHOT-04b: describe-stack-events table showing LambdaExecutionRole CREATE_FAILED iam:PutRolePolicy not authorized](https://github.com/user-attachments/assets/8e006760-7c8e-4efe-ab81-91e5a2660154)
+
+Delete the failed stack before redeploying:
+
+```bash
+aws cloudformation delete-stack \
+  --stack-name nautilus-priority-stack \
+  --region us-east-1
+
+aws cloudformation wait stack-delete-complete \
+  --stack-name nautilus-priority-stack \
+  --region us-east-1
+
+echo "Stack deleted"
+```
+
+![SCREENSHOT-04c: stack-delete-complete wait returning Stack deleted confirming clean removal](https://github.com/user-attachments/assets/5e669cf2-afb0-4d01-a3dc-8f9d356f0ef4)
+
+Redeploy after applying the ManagedPolicy fix:
+
+```bash
+aws cloudformation create-stack \
+  --stack-name nautilus-priority-stack \
+  --template-body file:///root/nautilus-priority-stack.yml \
+  --capabilities CAPABILITY_NAMED_IAM \
+  --region us-east-1
+
+aws cloudformation wait stack-create-complete \
+  --stack-name nautilus-priority-stack \
   --region us-east-1 && echo "CREATE_COMPLETE"
 ```
+
+![SCREENSHOT-04d: Second validate-template showing AWS::IAM::ManagedPolicy then CREATE_COMPLETE](https://github.com/user-attachments/assets/6dc4aafe-c3ca-42de-b6a6-98c976aa03d1)
+
+![SCREENSHOT-04d-2: Second deployment CREATE_COMPLETE confirmation](https://github.com/user-attachments/assets/cb0f25c5-03b8-4f32-b0d5-8aa4e503737f)
 
 Confirm final status:
 
@@ -431,19 +481,6 @@ aws cloudformation describe-stacks \
   --region us-east-1 \
   --query 'Stacks[0].StackStatus' \
   --output text
-```
-
-> **Screenshot Placeholder**
-> `[SCREENSHOT-04: Terminal showing CREATE_COMPLETE confirmation after stack deployment]`
-
-**If the stack rolls back**, immediately retrieve the failure reason:
-
-```bash
-aws cloudformation describe-stack-events \
-  --stack-name nautilus-priority-stack \
-  --region us-east-1 \
-  --query 'StackEvents[?ResourceStatus==`CREATE_FAILED`].[LogicalResourceId,ResourceStatusReason]' \
-  --output table
 ```
 
 ---
@@ -469,8 +506,7 @@ aws iam get-role --role-name lambda_execution_role \
   --query 'Role.[RoleName,Arn]'
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-05: All resource verification commands showing expected names, ARNs, and env vars]`
+![SCREENSHOT-05: All resource verification -- SQS queues, SNS topic, Lambda config with env vars, IAM role confirmed](https://github.com/user-attachments/assets/0e077702-4f7e-4cf9-96c1-e29e992912d5)
 
 ---
 
@@ -507,12 +543,27 @@ aws sns publish --topic-arn $topicarn \
   --region us-east-1
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-06: SNS publish commands returning four unique MessageIds confirming delivery]`
+![SCREENSHOT-06: SNS publish commands returning four unique MessageIds confirming delivery to topic](https://github.com/user-attachments/assets/94208f50-5c3c-4e38-9ef6-c7c6508c8334)
 
 #### Step 6.2 -- Invoke Lambda and Observe Priority Order
 
 > **Important:** This environment uses **AWS CLI v1**. The flags `--payload` and `--cli-binary-format` are CLI v2 only and must NOT be used. The output file is a positional argument placed after all named flags.
+
+**First attempt (CLI v2 flags -- fails on CLI v1):**
+
+```bash
+aws lambda invoke \
+  --function-name nautilus-priorities-queue-function \
+  --region us-east-1 --payload '{}' \
+  --cli-binary-format raw-in-base64-out \
+  /tmp/out1.json && cat /tmp/out1.json
+```
+
+![SCREENSHOT-07a: Lambda invoke attempts failing -- Unknown options --cli-binary-format out1 and out2](https://github.com/user-attachments/assets/4f647f1e-e238-4063-9a23-7507b9171c12)
+
+![SCREENSHOT-07a-2: Lambda invoke continued -- Unknown options out3 and out4 full CLI v1 incompatibility trace](https://github.com/user-attachments/assets/78ad6644-8238-4ffb-b7ee-0d489c8d1187)
+
+**Corrected invocations (CLI v1 compatible syntax):**
 
 ```bash
 # Invocation 1 -- expect High Priority message 1
@@ -544,11 +595,11 @@ aws lambda invoke \
 cat /tmp/out4.json
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-07: Invocations 1 and 2 output showing "High Priority message 1" and "High Priority message 2" deleted]`
+![SCREENSHOT-07b: Invocation 1 -- High Priority message 1 deleted StatusCode 200](https://github.com/user-attachments/assets/6194a704-a4e0-4063-8d3a-9d82dc651f12)
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-08: Invocations 3 and 4 output showing "Low Priority message 1" and "Low Priority message 2" deleted, confirming fallback behavior]`
+![SCREENSHOT-07c: Invocation 2 -- High Priority message 2 deleted then Invocation 3 -- Low Priority message 1 deleted confirming High queue empty fallback](https://github.com/user-attachments/assets/4020e4b7-ae63-4a0a-9606-37251f241e30)
+
+![SCREENSHOT-07d: Invocation 4 -- Sandbox.Timedout after 3.00 seconds Lambda timeout race condition on empty queues](https://github.com/user-attachments/assets/a77c1fc6-e655-4e79-8273-ebf0cfe4b9c5)
 
 ---
 
@@ -565,8 +616,7 @@ LambdaExecutionRole | Resource handler returned message:
 to perform: iam:PutRolePolicy on resource: role lambda_execution_role"
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-09: describe-stack-events output showing iam:PutRolePolicy ACCESS_DENIED failure]`
+![SCREENSHOT-09: describe-stack-events table showing iam:PutRolePolicy ACCESS_DENIED on LambdaExecutionRole](https://github.com/user-attachments/assets/8e006760-7c8e-4efe-ab81-91e5a2660154)
 
 **Root Cause:**
 
@@ -620,6 +670,18 @@ Unknown options: --cli-binary-format, /tmp/out1.json
 
 The initial Lambda invoke commands used `--cli-binary-format raw-in-base64-out` and `--payload '{}'` with the output file as a positional argument mixed with named flags -- all of which are AWS CLI v2 features. The client host runs AWS CLI v1.
 
+**Error output observed:**
+
+```
+Unknown options: --cli-binary-format, /tmp/out1.json
+Note: AWS CLI version 2, the latest major version of the AWS CLI, is now stable
+and recommended for general use.
+```
+
+![SCREENSHOT-09b: All four Lambda invoke attempts failing Unknown options --cli-binary-format out1 through out4 full trace](https://github.com/user-attachments/assets/4f647f1e-e238-4063-9a23-7507b9171c12)
+
+![SCREENSHOT-09b-2: Continued Unknown options errors out2 through out4](https://github.com/user-attachments/assets/78ad6644-8238-4ffb-b7ee-0d489c8d1187)
+
 **Resolution:**
 
 Removed all CLI v2-specific flags. In CLI v1, the output file is a required positional argument placed at the end of the command after all named flags. The `--payload` flag is also unnecessary since the Lambda handler ignores the event input.
@@ -656,12 +718,29 @@ aws lambda update-function-configuration \
   --function-name nautilus-priorities-queue-function \
   --timeout 10 \
   --region us-east-1
+
+aws lambda get-function-configuration \
+  --function-name nautilus-priorities-queue-function \
+  --region us-east-1 \
+  --query '[FunctionName,Timeout]'
 ```
 
-**Best practice:** Lambda timeout should always be at least `WaitTimeSeconds + 5` seconds of buffer. The CloudFormation template was already authored with `Timeout: 60` -- the issue arose only because invocation 4 was attempted when the 4th message (Low Priority message 2) was still in flight after the previous timeout interrupted before it could be consumed. Invocation 5 (after the timeout fix) successfully consumed it.
+![SCREENSHOT-10a: update-function-configuration full response showing Timeout 10 and get-function-configuration confirming FunctionName and Timeout=10](https://github.com/user-attachments/assets/8c327785-027d-4693-a08f-bc149a5998a8)
+
+![SCREENSHOT-10a-2: get-function-configuration query confirming Timeout updated to 10](https://github.com/user-attachments/assets/d6a63ad7-ec35-49e3-a137-e06cd6a0d3e2)
+
+Then invoke again to drain the remaining Low Priority message 2 that was left in queue:
+
+```bash
+aws lambda invoke \
+  --function-name nautilus-priorities-queue-function \
+  --region us-east-1 \
+  /tmp/out5.json
+cat /tmp/out5.json
+```
 
 > **Screenshot Placeholder**
-> `[SCREENSHOT-10: Invocation 5 output showing "Low Priority message 2" deleted with StatusCode 200 and no error]`
+> `[SCREENSHOT-10b: Invocation 5 output showing StatusCode 200 and "Low Priority message 2" deleted -- no timeout error, confirming the fix worked correctly]`
 
 ---
 
@@ -764,7 +843,23 @@ echo "Stack and all resources deleted successfully"
 
 ---
 
+## Author
 
+**Nautilus DevOps Team**
+Implemented and documented as part of the AWS Priority Queuing infrastructure lab.
+Region: `us-east-1` | Stack: `nautilus-priority-stack` | Date: March 22, 2026
+
+---
+
+*This README documents a real production-equivalent lab deployment. All commands, outputs, error states, and resolutions reflect the actual execution trace of this implementation.*
+
+
+
+
+
+
+
+<img width="1030" height="700" alt="image" src="https://github.com/user-attachments/assets/b89e922f-b0f1-4929-a5e8-c0e6aaf70f57" />
 <img width="1039" height="645" alt="image" src="https://github.com/user-attachments/assets/79bc08bb-875b-4542-8a34-2ba86f88f7db" />
 <img width="1029" height="601" alt="image" src="https://github.com/user-attachments/assets/c256f2f4-3df8-4b9d-8952-a35719dd8f99" />
 <img width="1026" height="477" alt="image" src="https://github.com/user-attachments/assets/c36de50a-3ab5-48ed-92ee-431e8f4934ea" />
