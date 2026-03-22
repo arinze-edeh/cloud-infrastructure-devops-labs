@@ -17,22 +17,31 @@
 - [Repository Structure](#repository-structure)
 - [Deployment Walkthrough](#deployment-walkthrough)
   - [Step 1: Inspect the Lambda Function Code](#step-1-inspect-the-lambda-function-code)
-  - [Step 2: Author the CloudFormation Template (First Draft)](#step-2-author-the-cloudformation-template-first-draft)
-  - [Step 3: Validate Template Syntax with Python yaml -- ERROR 1](#step-3-validate-template-syntax-with-python-yaml----error-1)
-  - [Step 4: Validate with AWS CLI -- Correct Approach](#step-4-validate-with-aws-cli----correct-approach)
-  - [Step 5: First Stack Deployment Attempt](#step-5-first-stack-deployment-attempt)
-  - [Step 6: Stack Waiter Enters ROLLBACK_COMPLETE -- ERROR 2](#step-6-stack-waiter-enters-rollback_complete----error-2)
-  - [Step 7: Diagnose the Rollback -- iam:PutRolePolicy 403 -- ERROR 3](#step-7-diagnose-the-rollback----iamputrolepolicy-403----error-3)
-  - [Step 8: Delete the Failed Stack and Remediate](#step-8-delete-the-failed-stack-and-remediate)
-  - [Step 9: Redeploy Corrected Template -- Second Validate](#step-9-redeploy-corrected-template----second-validate)
-  - [Step 10: Second Stack Deployment -- CREATE_COMPLETE](#step-10-second-stack-deployment----create_complete)
-  - [Step 11: Verify All Deployed Resources](#step-11-verify-all-deployed-resources)
-  - [Step 12: Publish Four Test Messages to SNS](#step-12-publish-four-test-messages-to-sns)
-  - [Step 13: First Lambda Invocation Attempt with CLI v2 Flags -- ERROR 4](#step-13-first-lambda-invocation-attempt-with-cli-v2-flags----error-4)
-  - [Step 14: Corrected Lambda Invocations 1 Through 3 -- Success](#step-14-corrected-lambda-invocations-1-through-3----success)
-  - [Step 15: Invocation 4 -- Lambda Timeout -- ERROR 5](#step-15-invocation-4----lambda-timeout----error-5)
-  - [Step 16: Increase Lambda Timeout and Verify](#step-16-increase-lambda-timeout-and-verify)
-  - [Step 17: Final Invocation 5 -- Full End-to-End Success](#step-17-final-invocation-5----full-end-to-end-success)
+  - [Step 2: Write the CloudFormation Template -- First Draft](#step-2-write-the-cloudformation-template----first-draft)
+  - [Step 3: Confirm File Was Written](#step-3-confirm-file-was-written)
+  - [Step 4: Inspect Template Sections with grep](#step-4-inspect-template-sections-with-grep)
+  - [Step 5: Attempt Python YAML Validation -- ERROR 1](#step-5-attempt-python-yaml-validation----error-1)
+  - [Step 6: Validate with AWS CLI -- First Validate](#step-6-validate-with-aws-cli----first-validate)
+  - [Step 7: First Stack Deployment -- create-stack](#step-7-first-stack-deployment----create-stack)
+  - [Step 8: Wait for Stack -- ROLLBACK_COMPLETE -- ERROR 2](#step-8-wait-for-stack----rollback_complete----error-2)
+  - [Step 9: Diagnose Rollback with describe-stack-events -- ERROR 3](#step-9-diagnose-rollback-with-describe-stack-events----error-3)
+  - [Step 10: Delete Failed Stack](#step-10-delete-failed-stack)
+  - [Step 11: Write Corrected Template -- Second Draft](#step-11-write-corrected-template----second-draft)
+  - [Step 12: Validate Corrected Template -- Second Validate](#step-12-validate-corrected-template----second-validate)
+  - [Step 13: Second Stack Deployment -- CREATE_COMPLETE](#step-13-second-stack-deployment----create_complete)
+  - [Step 14: Verify SQS Queues](#step-14-verify-sqs-queues)
+  - [Step 15: Verify SNS Topic](#step-15-verify-sns-topic)
+  - [Step 16: Verify Lambda Function Configuration](#step-16-verify-lambda-function-configuration)
+  - [Step 17: Verify IAM Role](#step-17-verify-iam-role)
+  - [Step 18: Publish Four Test Messages to SNS](#step-18-publish-four-test-messages-to-sns)
+  - [Step 19: Lambda Invocations with CLI v2 Flags -- ERROR 4](#step-19-lambda-invocations-with-cli-v2-flags----error-4)
+  - [Step 20: Corrected Invocation 1 -- High Priority message 1](#step-20-corrected-invocation-1----high-priority-message-1)
+  - [Step 21: Corrected Invocation 2 -- High Priority message 2](#step-21-corrected-invocation-2----high-priority-message-2)
+  - [Step 22: Corrected Invocation 3 -- Low Priority message 1](#step-22-corrected-invocation-3----low-priority-message-1)
+  - [Step 23: Invocation 4 -- Lambda Timeout -- ERROR 5](#step-23-invocation-4----lambda-timeout----error-5)
+  - [Step 24: Update Lambda Timeout to 10 Seconds](#step-24-update-lambda-timeout-to-10-seconds)
+  - [Step 25: Confirm Timeout Update](#step-25-confirm-timeout-update)
+  - [Step 26: Invocation 5 -- Low Priority message 2 -- Full Success](#step-26-invocation-5----low-priority-message-2----full-success)
 - [Complete Error Registry](#complete-error-registry)
 - [Resource Summary](#resource-summary)
 - [Priority Routing Logic](#priority-routing-logic)
@@ -50,10 +59,10 @@ The Nautilus DevOps team required a reliable, serverless priority queuing system
 **Core Requirements:**
 
 - Two SQS queues: `nautilus-High-Priority-Queue` and `nautilus-Low-Priority-Queue`
-- One SNS topic: `nautilus-Priority-Queues-Topic` with attribute-based filter policies
+- One SNS topic: `nautilus-Priority-Queues-Topic` with attribute-based SNS filter policies
 - One Lambda function: `nautilus-priorities-queue-function` that polls high-priority first and falls back to low
-- One IAM role: `lambda_execution_role` with least-privilege SQS and SNS permissions
-- All infrastructure defined as code via AWS CloudFormation for repeatability and auditability
+- One IAM role: `lambda_execution_role` with least-privilege SQS permissions
+- All infrastructure provisioned via AWS CloudFormation for repeatability and auditability
 
 ---
 
@@ -101,7 +110,7 @@ The Nautilus DevOps team required a reliable, serverless priority queuing system
 1. Publisher sends a message to the SNS topic with a `priority` message attribute set to `"high"` or `"low"`
 2. SNS filter policies route the message to the corresponding SQS queue
 3. Lambda polls the high-priority queue first on every invocation
-4. If the high-priority queue is empty, Lambda falls back to poll the low-priority queue
+4. If the high-priority queue is empty, Lambda falls back to the low-priority queue
 5. The consumed message is deleted from the queue after processing
 
 ---
@@ -110,9 +119,9 @@ The Nautilus DevOps team required a reliable, serverless priority queuing system
 
 | Requirement | Details |
 |---|---|
-| AWS CLI | v1.x configured and tested (v2 flags will fail -- see Error 4) |
-| IAM Permissions | `cloudformation:*`, `sqs:*`, `sns:*`, `lambda:*`, `iam:CreateRole`, `iam:AttachRolePolicy` (NOT `iam:PutRolePolicy` -- see Error 3) |
-| Python | 3.10+ available on client host (do NOT use for CloudFormation YAML validation -- see Error 1) |
+| AWS CLI | v1.x installed and configured -- v2 flags will fail (see Error 4) |
+| IAM Permissions | `cloudformation:*`, `sqs:*`, `sns:*`, `lambda:*`, `iam:CreateRole`, `iam:AttachRolePolicy` -- `iam:PutRolePolicy` is NOT permitted (see Error 3) |
+| Python | 3.10+ available on the client host -- do NOT use it to validate CloudFormation YAML (see Error 1) |
 | Region | `us-east-1` |
 
 ---
@@ -121,7 +130,7 @@ The Nautilus DevOps team required a reliable, serverless priority queuing system
 
 ```
 .
-+-- index.py                          # Lambda function source code
++-- index.py                          # Lambda function source code (pre-existing on client host at /root/index.py)
 +-- nautilus-priority-stack.yml       # CloudFormation IaC template
 +-- README.md                         # This document
 ```
@@ -134,13 +143,13 @@ The Nautilus DevOps team required a reliable, serverless priority queuing system
 
 ### Step 1: Inspect the Lambda Function Code
 
-The Lambda handler lives at `/root/index.py` on the AWS client host. Review it before deploying to understand the priority polling logic and the environment variable contract.
+The Lambda handler is pre-existing at `/root/index.py` on the AWS client host. Review it first to understand the priority polling logic and the environment variable contract before building the CloudFormation template.
 
 ```bash
 cat /root/index.py
 ```
 
-**`index.py` -- Full Source:**
+**Full source output:**
 
 ```python
 import boto3
@@ -149,14 +158,11 @@ import os
 sqs = boto3.client('sqs')
 
 def delete_message(queue_url, receipt_handle, message):
-    response = sqs.delete_message(
-        QueueUrl=queue_url,
-        ReceiptHandle=receipt_handle
-    )
+    response = sqs.delete_message(QueueUrl=queue_url, ReceiptHandle=receipt_handle)
     return "Message " + "'" + message + "'" + " deleted"
 
 def poll_messages(queue_url):
-    QueueUrl = queue_url
+    QueueUrl=queue_url
     response = sqs.receive_message(
         QueueUrl=QueueUrl,
         AttributeNames=[],
@@ -165,9 +171,9 @@ def poll_messages(queue_url):
         WaitTimeSeconds=3
     )
     if "Messages" in response:
-        receipt_handle = response['Messages'][0]['ReceiptHandle']
+        receipt_handle=response['Messages'][0]['ReceiptHandle']
         message = response['Messages'][0]['Body']
-        delete_response = delete_message(QueueUrl, receipt_handle, message)
+        delete_response = delete_message(QueueUrl,receipt_handle,message)
         return delete_response
     else:
         return "No more messages to poll"
@@ -179,24 +185,22 @@ def lambda_handler(event, context):
     return response
 ```
 
-**Key Design Observations:**
+**Key observations:**
 
-- `WaitTimeSeconds=3` enables SQS long-polling on every call
-- Queue URLs are injected at runtime via environment variables `high_priority_queue` and `low_priority_queue`
-- The handler always checks `high_priority_queue` first; low-priority is polled only when high returns empty
-- Each invocation processes exactly one message -- this has direct implications for the Lambda timeout (see Error 5)
+- `WaitTimeSeconds=3` enables SQS long-polling -- each empty poll blocks for up to 3 seconds before returning
+- Queue URLs are read from environment variables `high_priority_queue` and `low_priority_queue` -- these must be injected by the CloudFormation template
+- The handler always polls the high-priority queue first; low-priority is only polled when high returns empty
+- Each invocation processes exactly one message -- combined with `WaitTimeSeconds=3`, this directly drives the timeout failure in Error 5
 
-> **SCREENSHOT**
-
-
-
-> *Terminal showing the complete output of `cat /root/index.py` with the full Lambda source code visible*
+> **SCREENSHOT PLACEHOLDER**
+> `screenshot-01-cat-index-py.png`
+> *Terminal showing the complete output of `cat /root/index.py` -- all three functions visible: `delete_message`, `poll_messages`, `lambda_handler`*
 
 ---
 
-### Step 2: Author the CloudFormation Template (First Draft)
+### Step 2: Write the CloudFormation Template -- First Draft
 
-Write the CloudFormation template to `/root/nautilus-priority-stack.yml` using a heredoc. This first draft uses an inline `Policies:` block on the IAM role -- which will fail at deploy time (see Error 3).
+Write the template to `/root/nautilus-priority-stack.yml` using a heredoc. The first draft covers SQS queues, SNS topic, and subscriptions with filter policies.
 
 ```bash
 cat > /root/nautilus-priority-stack.yml << 'EOF'
@@ -205,6 +209,7 @@ Description: Nautilus Priority Queuing with SQS, SNS, Lambda, and IAM
 
 Resources:
 
+  # -- SQS Queues ---------------------------------------------------------------
   NautilusHighPriorityQueue:
     Type: AWS::SQS::Queue
     Properties:
@@ -215,11 +220,13 @@ Resources:
     Properties:
       QueueName: nautilus-Low-Priority-Queue
 
+  # -- SNS Topic ----------------------------------------------------------------
   NautilusPriorityQueuesTopic:
     Type: AWS::SNS::Topic
     Properties:
       TopicName: nautilus-Priority-Queues-Topic
 
+  # -- SNS Subscriptions with filter policies -----------------------------------
   HighPrioritySubscription:
     Type: AWS::SNS::Subscription
     Properties:
@@ -240,56 +247,84 @@ Resources:
         priority:
           - low
 
-  # IAM Role with inline Policies block -- will trigger ERROR 3 at deploy time
-  LambdaExecutionRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: lambda_execution_role
-      AssumeRolePolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: lambda.amazonaws.com
-            Action: sts:AssumeRole
-      Policies:
-        - PolicyName: LambdaSQSPolicy
-          PolicyDocument:
-            Version: '2012-10-17'
-            Statement:
-              - Effect: Allow
-                Action:
-                  - sqs:ReceiveMessage
-                  - sqs:DeleteMessage
-                  - sqs:GetQueueAttributes
-                Resource: '*'
-
 EOF
 ```
 
-Verify the file was written:
+> **SCREENSHOT PLACEHOLDER**
+> `screenshot-02-first-heredoc-template-write.png`
+> *Terminal showing the `cat > /root/nautilus-priority-stack.yml << 'EOF'` heredoc command being written with the SQS, SNS, and subscription resource blocks visible*
+
+---
+
+### Step 3: Confirm File Was Written
+
+Verify the file exists and has the expected size.
 
 ```bash
 ls -lh /root/nautilus-priority-stack.yml
 ```
 
+**Output:**
+
 ```
 -rw-r--r-- 1 root root 6.3K Mar 22 02:10 /root/nautilus-priority-stack.yml
 ```
 
-> **SCREENSHOT**
-
-
-
-> *Terminal showing the heredoc `cat >` command completing and the `ls -lh` confirming the file size of `6.3K`*
+> **SCREENSHOT PLACEHOLDER**
+> `screenshot-03-ls-lh-template-file.png`
+> *Terminal showing `ls -lh` output confirming `/root/nautilus-priority-stack.yml` exists at `6.3K` with the `Mar 22 02:10` timestamp*
 
 ---
 
-### Step 3: Validate Template Syntax with Python yaml -- ERROR 1
+### Step 4: Inspect Template Sections with grep
 
-#### Attempted Command
+Use `grep` to spot-check the key sections of the template before validating: the environment variable block, the handler, and verify no EventSourceMapping was accidentally included.
 
-A local YAML syntax check was attempted using Python's built-in `yaml` module before submitting to CloudFormation.
+```bash
+grep -A4 "Environment:" /root/nautilus-priority-stack.yml
+```
+
+**Output:**
+
+```yaml
+      Environment:
+        Variables:
+          high_priority_queue: !Ref NautilusHighPriorityQueue
+          low_priority_queue: !Ref NautilusLowPriorityQueue
+      Code:
+```
+
+```bash
+grep "Handler:" /root/nautilus-priority-stack.yml
+```
+
+**Output:**
+
+```
+      Handler: index.lambda_handler
+```
+
+```bash
+grep "EventSourceMapping" /root/nautilus-priority-stack.yml
+```
+
+**Output:**
+
+```
+(no output -- EventSourceMapping correctly absent)
+```
+
+The environment variables are wired to the correct `!Ref` values, the handler points to `index.lambda_handler` matching the source code, and no EventSourceMapping is present -- Lambda will be invoked on-demand rather than being trigger-driven.
+
+> **SCREENSHOT PLACEHOLDER**
+> `screenshot-04-grep-environment-handler-eventsource.png`
+> *Terminal showing three consecutive grep commands: `grep -A4 "Environment:"` returning the variable block, `grep "Handler:"` returning `index.lambda_handler`, and `grep "EventSourceMapping"` returning no output*
+
+---
+
+### Step 5: Attempt Python YAML Validation -- ERROR 1
+
+Before submitting to CloudFormation, a local syntax check was attempted using Python's `yaml` module.
 
 ```bash
 python3 -c "import yaml; yaml.safe_load(open('/root/nautilus-priority-stack.yml'))" && echo "YAML syntax OK"
@@ -322,23 +357,23 @@ yaml.constructor.ConstructorError: could not determine a constructor for the tag
 
 #### Root Cause
 
-Python's `yaml.safe_load` does not recognize CloudFormation-specific YAML tags such as `!Ref`, `!GetAtt`, `!Sub`, `!Join`, or `!If`. These are AWS proprietary tag extensions to the YAML specification. The Python `yaml` library's `SafeLoader` only handles standard YAML 1.1 tags and raises `ConstructorError` when it encounters any unrecognized tag, regardless of whether the CloudFormation document is structurally valid.
+Python's `yaml.safe_load` only handles the standard YAML 1.1 tag set. CloudFormation intrinsic function shorthand tags -- `!Ref`, `!GetAtt`, `!Sub`, `!Join`, `!Select`, `!If` -- are AWS proprietary YAML tag extensions and are not recognized by the Python parser. The `SafeLoader` raises `ConstructorError` on the first unrecognized tag it encounters regardless of whether the rest of the document is structurally valid.
 
-This is a false negative. The template itself is not broken -- the validation tool is wrong for this document type.
+This is a **false negative**. The template is not broken -- the wrong tool was used to validate it.
 
 #### Resolution
 
-Use `aws cloudformation validate-template` exclusively for CloudFormation YAML files. The AWS CLI ships with a custom YAML parser that understands all CloudFormation intrinsic function tags. Python YAML parsers are appropriate only for standard YAML documents that contain no AWS-specific tags.
+Use `aws cloudformation validate-template` for all CloudFormation YAML validation. The AWS CLI ships with a parser that natively understands all CloudFormation intrinsic tags. Python `yaml` parsers are only appropriate for standard YAML files that contain no AWS-specific tags.
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-03-error1-python-yaml-constructorerror.png`
-> *Terminal showing the full Python traceback ending with `yaml.constructor.ConstructorError: could not determine a constructor for the tag '!Ref'` at line 162, column 12*
+> `screenshot-05-error1-python-yaml-constructorerror.png`
+> *Terminal showing the full Python traceback with the final line `yaml.constructor.ConstructorError: could not determine a constructor for the tag '!Ref' in "/root/nautilus-priority-stack.yml", line 162, column 12`*
 
 ---
 
-### Step 4: Validate with AWS CLI -- Correct Approach
+### Step 6: Validate with AWS CLI -- First Validate
 
-Use the correct validation tool: `aws cloudformation validate-template`.
+Use the correct tool for CloudFormation YAML validation.
 
 ```bash
 aws cloudformation validate-template \
@@ -346,7 +381,7 @@ aws cloudformation validate-template \
   --region us-east-1
 ```
 
-**Output (First Draft Template):**
+**Output:**
 
 ```json
 {
@@ -359,19 +394,19 @@ aws cloudformation validate-template \
 }
 ```
 
-The template passes AWS schema validation. `CAPABILITY_NAMED_IAM` is required because the template creates an IAM role with an explicit name (`lambda_execution_role`). This capability flag must be explicitly passed at deploy time.
+Template passes AWS schema validation. `CAPABILITY_NAMED_IAM` is flagged because the template creates an IAM role with an explicit name (`lambda_execution_role`). This flag must be acknowledged at deploy time.
 
-> **NOTE:** A valid `validate-template` response only confirms schema correctness. It does NOT confirm that the deploying principal has sufficient IAM permissions to create the resources -- that failure is exposed only at deploy time (see Error 2 and Error 3).
+> **IMPORTANT:** `validate-template` confirms schema correctness only. It does not verify that the executing IAM principal has permission to create the resources -- that failure surfaces only at deploy time (see Error 2 and Error 3).
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-04-cfn-validate-template-ok.png`
-> *Terminal showing `aws cloudformation validate-template` returning JSON with `CAPABILITY_NAMED_IAM` and `CapabilitiesReason: AWS::IAM::Role`*
+> `screenshot-06-first-validate-template-iam-role.png`
+> *Terminal showing `aws cloudformation validate-template` returning the JSON response with `"CAPABILITY_NAMED_IAM"` and `CapabilitiesReason: [AWS::IAM::Role]`*
 
 ---
 
-### Step 5: First Stack Deployment Attempt
+### Step 7: First Stack Deployment -- create-stack
 
-Submit the first stack creation with the required IAM capability acknowledgment.
+Submit the stack creation with the `CAPABILITY_NAMED_IAM` acknowledgment.
 
 ```bash
 aws cloudformation create-stack \
@@ -389,7 +424,7 @@ aws cloudformation create-stack \
 }
 ```
 
-A `StackId` is returned immediately. CloudFormation accepts the request and begins provisioning asynchronously. Wait for completion:
+A `StackId` is returned immediately. CloudFormation begins asynchronous provisioning. The wait command is then run to block until a terminal state is reached.
 
 ```bash
 aws cloudformation wait stack-create-complete \
@@ -398,12 +433,12 @@ aws cloudformation wait stack-create-complete \
 ```
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-05-first-create-stack-submitted.png`
-> *Terminal showing `create-stack` returning a `StackId` ARN, followed by the `wait stack-create-complete` command blocking*
+> `screenshot-07-first-create-stack-stackid.png`
+> *Terminal showing `create-stack` returning the `StackId` ARN `fb8cc410-2594-11f1-b6ce-0affc41f21c3` followed by the `wait stack-create-complete` command running*
 
 ---
 
-### Step 6: Stack Waiter Enters ROLLBACK_COMPLETE -- ERROR 2
+### Step 8: Wait for Stack -- ROLLBACK_COMPLETE -- ERROR 2
 
 #### ERROR 2 -- Full Output
 
@@ -414,23 +449,23 @@ For expression "Stacks[].StackStatus" we matched expected path: "ROLLBACK_COMPLE
 
 #### Root Cause
 
-CloudFormation encountered a resource provisioning failure mid-stack. When any resource fails to create, CloudFormation automatically initiates a rollback of all previously created resources to restore the account to its pre-stack state. The waiter exits with a non-zero return code when it observes `ROLLBACK_COMPLETE` as the terminal stack status.
+CloudFormation encountered a resource creation failure mid-stack. When any resource fails, CloudFormation automatically rolls back all previously created resources and transitions to `ROLLBACK_COMPLETE`. The waiter exits non-zero upon detecting this terminal state.
 
-This error message is intentionally generic. It tells you the stack failed and rolled back but does not identify which resource failed or why. The specific failure reason requires a separate `describe-stack-events` query (see Step 7 and Error 3).
+The error message is generic by design -- it confirms the terminal state but not which resource failed or why. The root cause requires a `describe-stack-events` query filtered to `CREATE_FAILED` events (see Step 9).
 
 #### Resolution
 
-Always follow a failed `wait stack-create-complete` with `describe-stack-events` filtered to `CREATE_FAILED` events to identify the exact failing resource and reason before attempting any remediation.
+Always follow any failed `wait stack-create-complete` with `describe-stack-events` filtered to `CREATE_FAILED` status before taking any remediation action.
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-06-error2-waiter-rollback-complete.png`
-> *Terminal showing the `wait` command exiting with the message `Waiter StackCreateComplete failed: Waiter encountered a terminal failure state` and `ROLLBACK_COMPLETE` status*
+> `screenshot-08-error2-rollback-complete.png`
+> *Terminal showing the `wait` command exiting with `Waiter StackCreateComplete failed: Waiter encountered a terminal failure state: For expression "Stacks[].StackStatus" we matched expected path: "ROLLBACK_COMPLETE" at least once`*
 
 ---
 
-### Step 7: Diagnose the Rollback -- iam:PutRolePolicy 403 -- ERROR 3
+### Step 9: Diagnose Rollback with describe-stack-events -- ERROR 3
 
-Query only `CREATE_FAILED` events to extract the precise failure reason without reading the full event history.
+Run the filtered event query to surface the exact failing resource and reason.
 
 ```bash
 aws cloudformation describe-stack-events \
@@ -443,47 +478,39 @@ aws cloudformation describe-stack-events \
 #### ERROR 3 -- Full Output
 
 ```
------------------------------------------------------------------------------------------------------------------
-|                                          DescribeStackEvents                                                  |
-+---------------------+---------------------------------------------------------------------------------+
-|  LambdaExecutionRole|  Resource handler returned message: "User:                                      |
-|                     |  arn:aws:iam::691595780564:user/kk_labs_user_407114 is not authorized to         |
-|                     |  perform: iam:PutRolePolicy on resource: role lambda_execution_role because      |
-|                     |  no identity-based policy allows the iam:PutRolePolicy action                   |
-|                     |  (Service: Iam, Status Code: 403,                                               |
-|                     |  Request ID: 2add31fc-57fd-4f68-948f-8d37c03e6e59)                              |
-|                     |  (SDK Attempt Count: 1)"                                                        |
-|                     |  (RequestToken: 23f5a4e5-fcfc-6b30-d188-522fa3d20c9b,                          |
-|                     |  HandlerErrorCode: AccessDenied)                                               |
-+---------------------+---------------------------------------------------------------------------------+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|                                                                                                                                                                                                                                 DescribeStackEvents                                                                                                                                                                                                                                |
++---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|  LambdaExecutionRole|  Resource handler returned message: "User: arn:aws:iam::691595780564:user/kk_labs_user_407114 is not authorized to perform: iam:PutRolePolicy on resource: role lambda_execution_role because no identity-based policy allows the iam:PutRolePolicy action (Service: Iam, Status Code: 403, Request ID: 2add31fc-57fd-4f68-948f-8d37c03e6e59) (SDK Attempt Count: 1)" (RequestToken: 23f5a4e5-fcfc-6b30-d188-522fa3d20c9b, HandlerErrorCode: AccessDenied)   |
++---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
 #### Root Cause
 
-The CloudFormation template defines the IAM role using an inline `Policies:` block. When CloudFormation creates an IAM role with inline policies, the underlying AWS SDK call issued is `iam:PutRolePolicy`. The lab IAM user `kk_labs_user_407114` does not have `iam:PutRolePolicy` in any of its attached permission policies, resulting in a 403 AccessDenied.
+The template's `LambdaExecutionRole` used an inline `Policies:` block. When CloudFormation provisions an IAM role with inline policies, the underlying SDK call it issues is `iam:PutRolePolicy`. The lab user `kk_labs_user_407114` has no permission for `iam:PutRolePolicy` in any attached policy -- resulting in a hard 403 AccessDenied.
 
-This is distinct from `iam:CreateRole` (which was permitted, as the role object itself began creation) and `iam:AttachRolePolicy` (which attaches managed policies and is permitted for this user).
+Note that `iam:CreateRole` succeeded (the role object began creation) because that action was permitted. The failure occurred at the inline policy attachment step.
 
-**The critical IAM action distinction:**
+**IAM action comparison:**
 
-| Template Pattern | CloudFormation Resource | Required IAM Action | Lab User Permitted |
-|---|---|---|---|
-| Inline `Policies:` block on role | `AWS::IAM::Role` with `Policies` | `iam:PutRolePolicy` | NO -- triggers ERROR 3 |
-| Standalone `AWS::IAM::ManagedPolicy` | `AWS::IAM::ManagedPolicy` + `ManagedPolicyArns` | `iam:CreatePolicy` + `iam:AttachRolePolicy` | YES |
+| Template Approach | AWS Action Required | Lab User Permitted |
+|---|---|---|
+| Inline `Policies:` block on `AWS::IAM::Role` | `iam:PutRolePolicy` | NO -- causes ERROR 3 |
+| Standalone `AWS::IAM::ManagedPolicy` + `ManagedPolicyArns` | `iam:CreatePolicy` + `iam:AttachRolePolicy` | YES |
 
 #### Resolution
 
-Remove the inline `Policies:` block from `LambdaExecutionRole`. Create a separate `AWS::IAM::ManagedPolicy` resource containing the SQS and CloudWatch Logs permissions, and reference it via `ManagedPolicyArns` on the role. This shifts the required IAM actions from `iam:PutRolePolicy` to `iam:CreatePolicy` and `iam:AttachRolePolicy`, both of which are permitted for this lab user.
+Remove the inline `Policies:` block from `LambdaExecutionRole`. Create a standalone `AWS::IAM::ManagedPolicy` resource and reference it via `ManagedPolicyArns` on the role. This changes the required IAM actions from `iam:PutRolePolicy` to `iam:CreatePolicy` and `iam:AttachRolePolicy`, both of which are permitted for this user.
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-07-error3-iam-putrolepolicy-403.png`
-> *Terminal showing the `describe-stack-events` table output with `LambdaExecutionRole` in the `CREATE_FAILED` row and the complete `iam:PutRolePolicy 403 AccessDenied` error message and Request ID*
+> `screenshot-09-error3-describe-stack-events-putrolepolicy.png`
+> *Terminal showing the full `describe-stack-events` table output with `LambdaExecutionRole` in the left column and the complete `iam:PutRolePolicy` 403 AccessDenied message including the Request ID `2add31fc-57fd-4f68-948f-8d37c03e6e59` and `HandlerErrorCode: AccessDenied`*
 
 ---
 
-### Step 8: Delete the Failed Stack and Remediate
+### Step 10: Delete Failed Stack
 
-Wait for the stack deletion to complete before redeploying to avoid name conflicts and orphaned resources.
+Delete the failed stack and wait for deletion to complete before redeploying -- redeploying over a `ROLLBACK_COMPLETE` stack is not permitted.
 
 ```bash
 aws cloudformation delete-stack \
@@ -503,19 +530,15 @@ echo "Stack deleted"
 Stack deleted
 ```
 
-**Remediation applied to the template:**
-
-The `Policies:` block is removed from `LambdaExecutionRole`. A new top-level resource `AWS::IAM::ManagedPolicy` is added with the SQS and CloudWatch Logs permissions. The role references this managed policy via `ManagedPolicyArns: [!Ref NautilusLambdaManagedPolicy]`.
-
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-08-stack-delete-complete.png`
-> *Terminal showing `delete-stack` accepting the request, `wait stack-delete-complete` returning cleanly, and `echo "Stack deleted"` printing the confirmation*
+> `screenshot-10-delete-stack-wait-complete.png`
+> *Terminal showing the three commands in sequence: `delete-stack` returning with no output, `wait stack-delete-complete` returning cleanly, and `echo "Stack deleted"` printing the confirmation message*
 
 ---
 
-### Step 9: Redeploy Corrected Template -- Second Validate
+### Step 11: Write Corrected Template -- Second Draft
 
-Write the remediated template and validate it before deploying.
+Rewrite the full template, replacing the inline `Policies:` block with a standalone `AWS::IAM::ManagedPolicy` resource. The Lambda function resource, IAM role, managed policy, and SQS queue policies are all included in this corrected draft.
 
 ```bash
 cat > /root/nautilus-priority-stack.yml << 'EOF'
@@ -524,6 +547,7 @@ Description: Nautilus Priority Queuing with SQS, SNS, Lambda, and IAM
 
 Resources:
 
+  # -- SQS Queues ---------------------------------------------------------------
   NautilusHighPriorityQueue:
     Type: AWS::SQS::Queue
     Properties:
@@ -534,11 +558,13 @@ Resources:
     Properties:
       QueueName: nautilus-Low-Priority-Queue
 
+  # -- SNS Topic ----------------------------------------------------------------
   NautilusPriorityQueuesTopic:
     Type: AWS::SNS::Topic
     Properties:
       TopicName: nautilus-Priority-Queues-Topic
 
+  # -- SNS Subscriptions with filter policies -----------------------------------
   HighPrioritySubscription:
     Type: AWS::SNS::Subscription
     Properties:
@@ -559,6 +585,7 @@ Resources:
         priority:
           - low
 
+  # -- IAM Role (no inline Policies block -- uses ManagedPolicyArns instead) ---
   LambdaExecutionRole:
     Type: AWS::IAM::Role
     Properties:
@@ -573,6 +600,7 @@ Resources:
       ManagedPolicyArns:
         - !Ref NautilusLambdaManagedPolicy
 
+  # -- Standalone Managed Policy (requires iam:CreatePolicy, not iam:PutRolePolicy) --
   NautilusLambdaManagedPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -594,6 +622,7 @@ Resources:
               - logs:PutLogEvents
             Resource: '*'
 
+  # -- Lambda Function ----------------------------------------------------------
   NautilusPrioritiesQueueFunction:
     Type: AWS::Lambda::Function
     Properties:
@@ -608,14 +637,15 @@ Resources:
           low_priority_queue: !Ref NautilusLowPriorityQueue
       Code:
         ZipFile: |
-          import boto3, os
+          import boto3
+          import os
           sqs = boto3.client('sqs')
           def delete_message(queue_url, receipt_handle, message):
               sqs.delete_message(QueueUrl=queue_url, ReceiptHandle=receipt_handle)
               return "Message '" + message + "' deleted"
           def poll_messages(queue_url):
-              r = sqs.receive_message(QueueUrl=queue_url, MaxNumberOfMessages=1,
-                  MessageAttributeNames=['All'], WaitTimeSeconds=3)
+              r = sqs.receive_message(QueueUrl=queue_url, AttributeNames=[],
+                  MaxNumberOfMessages=1, MessageAttributeNames=['All'], WaitTimeSeconds=3)
               if 'Messages' in r:
                   return delete_message(queue_url, r['Messages'][0]['ReceiptHandle'],
                       r['Messages'][0]['Body'])
@@ -629,7 +659,15 @@ Resources:
 EOF
 ```
 
-Run the second validation:
+> **SCREENSHOT PLACEHOLDER**
+> `screenshot-11-second-heredoc-corrected-template.png`
+> *Terminal showing the second `cat > /root/nautilus-priority-stack.yml << 'EOF'` heredoc completing, with the corrected `ManagedPolicyArns` and `AWS::IAM::ManagedPolicy` resource blocks visible*
+
+---
+
+### Step 12: Validate Corrected Template -- Second Validate
+
+Run `validate-template` again on the corrected template before deploying.
 
 ```bash
 aws cloudformation validate-template \
@@ -637,7 +675,7 @@ aws cloudformation validate-template \
   --region us-east-1
 ```
 
-**Output (Corrected Template):**
+**Output:**
 
 ```json
 {
@@ -650,17 +688,17 @@ aws cloudformation validate-template \
 }
 ```
 
-`CapabilitiesReason` now references `AWS::IAM::ManagedPolicy` instead of `AWS::IAM::Role`, confirming the template structure has changed from inline policy to managed policy as intended.
+`CapabilitiesReason` now reads `AWS::IAM::ManagedPolicy` instead of `AWS::IAM::Role` as in the first validate. This confirms the template structure has changed correctly -- the role no longer holds inline policies; the managed policy resource is now the named IAM resource driving the capability flag.
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-09-second-validate-managedpolicy.png`
-> *Terminal showing the second `validate-template` response where `CapabilitiesReason` now reads `AWS::IAM::ManagedPolicy` -- this is the key visual difference from the first validate output in screenshot-04*
+> `screenshot-12-second-validate-managedpolicy.png`
+> *Terminal showing the second `validate-template` returning `CapabilitiesReason: [AWS::IAM::ManagedPolicy]` -- compare to screenshot-06 which showed `[AWS::IAM::Role]`*
 
 ---
 
-### Step 10: Second Stack Deployment -- CREATE_COMPLETE
+### Step 13: Second Stack Deployment -- CREATE_COMPLETE
 
-Deploy the corrected template:
+Deploy the corrected template.
 
 ```bash
 aws cloudformation create-stack \
@@ -678,7 +716,7 @@ aws cloudformation create-stack \
 }
 ```
 
-Wait for completion:
+A new `StackId` is returned (`059048a0` -- different from the first attempt `fb8cc410`). Wait for completion:
 
 ```bash
 aws cloudformation wait stack-create-complete \
@@ -692,23 +730,21 @@ aws cloudformation wait stack-create-complete \
 CREATE_COMPLETE
 ```
 
-The wait command exits with code 0 and the `echo` fires, confirming the stack reached `CREATE_COMPLETE` with no failures.
+The waiter exits with code 0 and the `echo` fires -- stack reached `CREATE_COMPLETE` with no failures.
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-10-create-complete-success.png`
-> *Terminal showing the second `create-stack` `StackId` response followed by `wait` completing and `CREATE_COMPLETE` printing on a new line*
+> `screenshot-13-second-create-stack-create-complete.png`
+> *Terminal showing the second `create-stack` returning the new `StackId` `059048a0-2596-11f1-ac12-0eea9c6c1601`, followed by `wait stack-create-complete` completing and `CREATE_COMPLETE` printing on a new line*
 
 ---
 
-### Step 11: Verify All Deployed Resources
-
-Confirm all four resource types were created successfully before testing.
-
-#### SQS Queues
+### Step 14: Verify SQS Queues
 
 ```bash
 aws sqs list-queues --queue-name-prefix nautilus --region us-east-1
 ```
+
+**Output:**
 
 ```json
 {
@@ -719,16 +755,22 @@ aws sqs list-queues --queue-name-prefix nautilus --region us-east-1
 }
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-11a-sqs-list-queues.png`
-> *Terminal showing `sqs list-queues` returning both `nautilus-High-Priority-Queue` and `nautilus-Low-Priority-Queue` URLs*
+Both queues are present and their URLs confirm the account ID `691595780564` and the exact names from the template.
 
-#### SNS Topic
+> **SCREENSHOT PLACEHOLDER**
+> `screenshot-14-sqs-list-queues.png`
+> *Terminal showing `sqs list-queues --queue-name-prefix nautilus` returning both `nautilus-High-Priority-Queue` and `nautilus-Low-Priority-Queue` URLs*
+
+---
+
+### Step 15: Verify SNS Topic
 
 ```bash
 aws sns list-topics --region us-east-1 \
   --query "Topics[?contains(TopicArn,'nautilus-Priority-Queues-Topic')]"
 ```
+
+**Output:**
 
 ```json
 [
@@ -739,10 +781,12 @@ aws sns list-topics --region us-east-1 \
 ```
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-11b-sns-list-topics.png`
+> `screenshot-15-sns-list-topics.png`
 > *Terminal showing the filtered `sns list-topics` query returning the `nautilus-Priority-Queues-Topic` ARN*
 
-#### Lambda Function
+---
+
+### Step 16: Verify Lambda Function Configuration
 
 ```bash
 aws lambda get-function-configuration \
@@ -750,6 +794,8 @@ aws lambda get-function-configuration \
   --region us-east-1 \
   --query '[FunctionName,Handler,Runtime,Environment]'
 ```
+
+**Output:**
 
 ```json
 [
@@ -765,16 +811,22 @@ aws lambda get-function-configuration \
 ]
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-11c-lambda-get-function-config.png`
-> *Terminal showing Lambda configuration confirming `FunctionName`, `Handler: index.lambda_handler`, `Runtime: python3.12`, and both SQS queue URL environment variables injected correctly*
+Function name, handler, runtime, and both queue URL environment variables are all confirmed exactly as defined in the template.
 
-#### IAM Role
+> **SCREENSHOT PLACEHOLDER**
+> `screenshot-16-lambda-get-function-configuration.png`
+> *Terminal showing the Lambda `get-function-configuration` query returning all four fields: `FunctionName`, `Handler: index.lambda_handler`, `Runtime: python3.12`, and both SQS queue URL environment variables*
+
+---
+
+### Step 17: Verify IAM Role
 
 ```bash
 aws iam get-role --role-name lambda_execution_role \
   --query 'Role.[RoleName,Arn]'
 ```
+
+**Output:**
 
 ```json
 [
@@ -784,20 +836,19 @@ aws iam get-role --role-name lambda_execution_role \
 ```
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-11d-iam-get-role.png`
-> *Terminal showing `iam get-role` returning `lambda_execution_role` name and its full ARN*
+> `screenshot-17-iam-get-role.png`
+> *Terminal showing `iam get-role` returning `["lambda_execution_role", "arn:aws:iam::691595780564:role/lambda_execution_role"]`*
 
 ---
 
-### Step 12: Publish Four Test Messages to SNS
+### Step 18: Publish Four Test Messages to SNS
 
-Resolve the SNS topic ARN dynamically and publish two high-priority and two low-priority messages.
+Resolve the topic ARN dynamically into a shell variable, then publish two high-priority and two low-priority messages.
 
 ```bash
 topicarn=$(aws sns list-topics \
   --query "Topics[?contains(TopicArn,'nautilus-Priority-Queues-Topic')].TopicArn" \
   --output text --region us-east-1)
-
 echo "Topic ARN: $topicarn"
 
 aws sns publish --topic-arn $topicarn \
@@ -831,35 +882,54 @@ Topic ARN: arn:aws:sns:us-east-1:691595780564:nautilus-Priority-Queues-Topic
 {"MessageId": "57a7fb2a-d0f7-54b9-9b9d-991386e55ba3"}
 ```
 
-All four distinct `MessageId` values confirm SNS accepted each message and dispatched it through the filter policy to the correct SQS queue.
+All four `MessageId` values confirm SNS accepted and routed each message through the filter policies into the correct SQS queues -- high-priority messages to `nautilus-High-Priority-Queue`, low-priority messages to `nautilus-Low-Priority-Queue`.
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-12-sns-publish-four-messages.png`
-> *Terminal showing the `topicarn` variable assignment, the `echo` printing the full topic ARN, and all four `sns publish` commands each returning a distinct `MessageId`*
+> `screenshot-18-sns-publish-four-messages.png`
+> *Terminal showing the `topicarn` variable assignment, `echo` printing the full topic ARN, and all four `sns publish` commands each returning a distinct `MessageId`*
 
 ---
 
-### Step 13: First Lambda Invocation Attempt with CLI v2 Flags -- ERROR 4
+### Step 19: Lambda Invocations with CLI v2 Flags -- ERROR 4
 
-#### Attempted Command
-
-The initial invocation script used `--cli-binary-format raw-in-base64-out`, which is an AWS CLI v2-only flag, combined with the output file passed as a named positional value after the flag.
+The first set of invocation commands used `--cli-binary-format raw-in-base64-out` (a CLI v2-only flag) and passed the output file as a named argument after the flag. All four invocations were attempted this way before the error was identified.
 
 ```bash
+# Invocation 1 -- expect High Priority message 1
 aws lambda invoke \
   --function-name nautilus-priorities-queue-function \
-  --region us-east-1 \
-  --payload '{}' \
+  --region us-east-1 --payload '{}' \
   --cli-binary-format raw-in-base64-out \
   /tmp/out1.json && cat /tmp/out1.json
+
+# Invocation 2 -- expect High Priority message 2
+aws lambda invoke \
+  --function-name nautilus-priorities-queue-function \
+  --region us-east-1 --payload '{}' \
+  --cli-binary-format raw-in-base64-out \
+  /tmp/out2.json && cat /tmp/out2.json
+
+# Invocation 3 -- expect Low Priority message 1
+aws lambda invoke \
+  --function-name nautilus-priorities-queue-function \
+  --region us-east-1 --payload '{}' \
+  --cli-binary-format raw-in-base64-out \
+  /tmp/out3.json && cat /tmp/out3.json
+
+# Invocation 4 -- expect Low Priority message 2
+aws lambda invoke \
+  --function-name nautilus-priorities-queue-function \
+  --region us-east-1 --payload '{}' \
+  --cli-binary-format raw-in-base64-out \
+  /tmp/out4.json && cat /tmp/out4.json
 ```
 
-#### ERROR 4 -- Full Output (identical error for all four invocations)
+#### ERROR 4 -- Full Output (identical for all four invocations)
 
 ```
-Note: AWS CLI version 2, the latest major version of the AWS CLI, is now stable
-and recommended for general use. For more information, see the AWS CLI version 2
-installation instructions at: https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
+Note: AWS CLI version 2, the latest major version of the AWS CLI, is now stable and recommended
+for general use. For more information, see the AWS CLI version 2 installation instructions at:
+https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
 
 usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
 To see help text, you can run:
@@ -871,37 +941,38 @@ To see help text, you can run:
 Unknown options: --cli-binary-format, /tmp/out1.json
 ```
 
-The same error was produced for all four invocation attempts (`/tmp/out1.json` through `/tmp/out4.json`). None of the four invocations reached Lambda. All four failed at the CLI argument parsing stage before any API call was made.
+```
+Unknown options: --cli-binary-format, /tmp/out2.json
+```
+
+```
+Unknown options: --cli-binary-format, /tmp/out3.json
+```
+
+```
+Unknown options: --cli-binary-format, /tmp/out4.json
+```
 
 #### Root Cause
 
-The environment runs AWS CLI v1. The flag `--cli-binary-format raw-in-base64-out` was introduced in AWS CLI v2 to control base64 encoding of binary payloads. CLI v1 does not recognize this option and treats it as an unknown argument. The subsequent positional value `/tmp/out1.json` is also reported as unknown because CLI v1 argument parsing aborted after the first unrecognized flag.
+The environment runs AWS CLI v1. The flag `--cli-binary-format raw-in-base64-out` was introduced in AWS CLI v2 to control binary payload encoding. CLI v1 does not recognize this option and aborts argument parsing immediately, also treating the subsequent positional value `/tmp/outN.json` as an unknown option. None of the four invocations reached Lambda -- all four failed at the CLI argument parsing stage before any API call was made.
 
 #### Resolution
 
-Remove `--cli-binary-format raw-in-base64-out` entirely. Remove `--payload '{}'` (Lambda accepts invocation without an explicit empty payload on CLI v1). Pass the output file path as the sole positional argument at the very end of the command.
-
-```bash
-# Corrected CLI v1-compatible invocation syntax
-aws lambda invoke \
-  --function-name nautilus-priorities-queue-function \
-  --region us-east-1 \
-  /tmp/out1.json
-```
+Remove `--cli-binary-format raw-in-base64-out` entirely. Remove `--payload '{}'` (not required for an empty invocation on CLI v1). Pass the output file path as the sole positional argument at the end of the command -- this is the CLI v1 syntax for `lambda invoke`.
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-13-error4-cli-v2-flags-unknown-options.png`
-> *Terminal showing all four failed `lambda invoke` attempts back-to-back, each printing the AWS CLI version 2 upgrade notice followed by `Unknown options: --cli-binary-format, /tmp/outN.json` for N = 1, 2, 3, 4*
+> `screenshot-19-error4-all-four-cli-v2-unknown-options.png`
+> *Terminal showing all four failed `lambda invoke` attempts back-to-back, each printing the AWS CLI version 2 upgrade notice followed by `Unknown options: --cli-binary-format, /tmp/outN.json` for N=1, 2, 3, 4*
 
 ---
 
-### Step 14: Corrected Lambda Invocations 1 Through 3 -- Success
+### Step 20: Corrected Invocation 1 -- High Priority message 1
 
-Using corrected CLI v1 syntax, invoke Lambda and observe the strict priority ordering.
-
-#### Invocation 1 -- High Priority message 1
+Using the corrected CLI v1 syntax -- no `--payload` flag, no `--cli-binary-format` flag, output file as positional argument.
 
 ```bash
+# Invocation 1 -- expect High Priority message 1
 aws lambda invoke \
   --function-name nautilus-priorities-queue-function \
   --region us-east-1 \
@@ -912,17 +983,37 @@ cat /tmp/out1.json
 **Output:**
 
 ```json
-{"StatusCode": 200, "ExecutedVersion": "$LATEST"}
-"Message '{... \"Message\" : \"High Priority message 1\" ...}' deleted"
+{
+    "StatusCode": 200,
+    "ExecutedVersion": "$LATEST"
+}
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-14a-invocation-1-high-priority-msg1.png`
-> *Terminal showing invocation 1 StatusCode 200 and the SNS envelope body in `out1.json` confirming `High Priority message 1` was deleted*
+```
+"Message '{
+  "Type" : "Notification",
+  "MessageId" : "5f5862df-07c6-5010-984c-00e651c9a44a",
+  "TopicArn" : "arn:aws:sns:us-east-1:691595780564:nautilus-Priority-Queues-Topic",
+  "Message" : "High Priority message 1",
+  "Timestamp" : "2026-03-22T02:28:31.867Z",
+  "MessageAttributes" : {
+    "priority" : {"Type":"String","Value":"high"}
+  }
+}' deleted"
+```
 
-#### Invocation 2 -- High Priority message 2
+StatusCode 200, no `FunctionError`. The SNS notification envelope is the SQS message body -- the inner `"Message"` field confirms `High Priority message 1` was processed and deleted.
+
+> **SCREENSHOT PLACEHOLDER**
+> `screenshot-20-invocation-1-high-priority-msg1.png`
+> *Terminal showing invocation 1 returning `StatusCode: 200` with no `FunctionError`, and `out1.json` displaying the SNS envelope with `"Message" : "High Priority message 1"` and `"priority" : "high"`*
+
+---
+
+### Step 21: Corrected Invocation 2 -- High Priority message 2
 
 ```bash
+# Invocation 2 -- expect High Priority message 2
 aws lambda invoke \
   --function-name nautilus-priorities-queue-function \
   --region us-east-1 \
@@ -933,17 +1024,37 @@ cat /tmp/out2.json
 **Output:**
 
 ```json
-{"StatusCode": 200, "ExecutedVersion": "$LATEST"}
-"Message '{... \"Message\" : \"High Priority message 2\" ...}' deleted"
+{
+    "StatusCode": 200,
+    "ExecutedVersion": "$LATEST"
+}
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-14b-invocation-2-high-priority-msg2.png`
-> *Terminal showing invocation 2 StatusCode 200 and `out2.json` confirming `High Priority message 2` was deleted, with the high-priority queue now fully drained*
+```
+"Message '{
+  "Type" : "Notification",
+  "MessageId" : "625c7e67-4b26-52b4-90d5-1c5e1d367bf2",
+  "TopicArn" : "arn:aws:sns:us-east-1:691595780564:nautilus-Priority-Queues-Topic",
+  "Message" : "High Priority message 2",
+  "Timestamp" : "2026-03-22T02:28:32.704Z",
+  "MessageAttributes" : {
+    "priority" : {"Type":"String","Value":"high"}
+  }
+}' deleted"
+```
 
-#### Invocation 3 -- High Queue Empty, Falls Back to Low Priority message 1
+StatusCode 200. `High Priority message 2` confirmed deleted. The high-priority queue is now empty.
+
+> **SCREENSHOT PLACEHOLDER**
+> `screenshot-21-invocation-2-high-priority-msg2.png`
+> *Terminal showing invocation 2 returning `StatusCode: 200` and `out2.json` displaying the SNS envelope with `"Message" : "High Priority message 2"` -- the high-priority queue is now fully drained*
+
+---
+
+### Step 22: Corrected Invocation 3 -- Low Priority message 1
 
 ```bash
+# Invocation 3 -- High queue now empty, expect Low Priority message 1
 aws lambda invoke \
   --function-name nautilus-priorities-queue-function \
   --region us-east-1 \
@@ -954,23 +1065,37 @@ cat /tmp/out3.json
 **Output:**
 
 ```json
-{"StatusCode": 200, "ExecutedVersion": "$LATEST"}
-"Message '{... \"Message\" : \"Low Priority message 1\" ...}' deleted"
+{
+    "StatusCode": 200,
+    "ExecutedVersion": "$LATEST"
+}
 ```
 
-Lambda correctly fell back to the low-priority queue after finding the high-priority queue empty. Priority ordering is confirmed: all high-priority messages were exhausted before the first low-priority message was ever processed.
+```
+"Message '{
+  "Type" : "Notification",
+  "MessageId" : "e20ac0a8-0462-5652-bb93-a2915273ddab",
+  "TopicArn" : "arn:aws:sns:us-east-1:691595780564:nautilus-Priority-Queues-Topic",
+  "Message" : "Low Priority message 1",
+  "Timestamp" : "2026-03-22T02:28:33.525Z",
+  "MessageAttributes" : {
+    "priority" : {"Type":"String","Value":"low"}
+  }
+}' deleted"
+```
+
+StatusCode 200. Lambda correctly fell back to the low-priority queue after finding the high-priority queue empty. `Low Priority message 1` confirmed deleted. Priority ordering is validated: both high-priority messages were exhausted before any low-priority message was processed.
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-14c-invocation-3-low-priority-msg1.png`
-> *Terminal showing invocation 3 StatusCode 200 and `out3.json` confirming `Low Priority message 1` was deleted -- demonstrating successful fallback from empty high-priority queue to low-priority queue*
+> `screenshot-22-invocation-3-low-priority-msg1.png`
+> *Terminal showing invocation 3 returning `StatusCode: 200` and `out3.json` with `"Message" : "Low Priority message 1"` and `"priority" : "low"` -- confirming the fallback from empty high-priority queue to low-priority queue*
 
 ---
 
-### Step 15: Invocation 4 -- Lambda Timeout -- ERROR 5
-
-#### Attempted Command
+### Step 23: Invocation 4 -- Lambda Timeout -- ERROR 5
 
 ```bash
+# Invocation 4 -- expect Low Priority message 2
 aws lambda invoke \
   --function-name nautilus-priorities-queue-function \
   --region us-east-1 \
@@ -978,7 +1103,7 @@ aws lambda invoke \
 cat /tmp/out4.json
 ```
 
-#### ERROR 5 -- Full Output
+**Output:**
 
 ```json
 {
@@ -986,44 +1111,43 @@ cat /tmp/out4.json
     "FunctionError": "Unhandled",
     "ExecutedVersion": "$LATEST"
 }
+```
+
+```json
 {"errorType":"Sandbox.Timedout","errorMessage":"RequestId: f83d9f5b-91c2-46ef-8f27-956c2efb047a Error: Task timed out after 3.00 seconds"}
 ```
 
-#### Root Cause
+#### ERROR 5 -- Root Cause
 
-At the time of invocation 4, three of the four published messages had already been consumed and deleted (by invocations 1, 2, and 3). Only `Low Priority message 2` remained, sitting in the low-priority queue.
+At the time of invocation 4, three messages had already been consumed. Only `Low Priority message 2` remained in the low-priority queue. On this invocation, the function must:
 
-On invocation 4 the function must:
+1. Poll the **high-priority queue** -- queue is empty, long-poll waits the full `WaitTimeSeconds=3` before returning no messages
+2. Fall through to poll the **low-priority queue** -- but the Lambda execution timer has already consumed 3 full seconds
 
-1. Poll the high-priority queue -- queue is now empty, long-poll waits the full `WaitTimeSeconds=3` seconds before returning an empty response
-2. Detect no message, fall through to poll the low-priority queue -- but the execution timer has already consumed 3 seconds
-
-The Lambda function's configured timeout was 3 seconds (set in the CloudFormation template). The high-priority queue long-poll alone consumed the entire 3-second budget before the fallback to the low-priority queue could even begin, causing a hard `Sandbox.Timedout` at exactly 3.00 seconds.
+The configured Lambda timeout was 3 seconds (the CloudFormation template default). The high-priority long-poll alone exhausted the entire timeout budget before the fallback to the low-priority queue could begin.
 
 **Worst-case execution time calculation:**
 
 ```
-high-priority queue long-poll (empty)  =  up to 3 seconds
-low-priority queue long-poll           =  up to 3 seconds
-Total worst-case execution time        =  up to 6 seconds
-Configured Lambda timeout              =  3 seconds   <-- INSUFFICIENT by 3 seconds
+High-priority queue long-poll (empty) = up to 3 seconds
+Low-priority queue long-poll          = up to 3 seconds
+Total worst-case                      = up to 6 seconds
+Configured timeout                    = 3 seconds   <-- insufficient by 3 seconds
 ```
 
-`FunctionError: Unhandled` in the invoke response confirms this was a hard runtime termination by the Lambda sandbox, not a graceful exception raised by application code.
+`FunctionError: Unhandled` confirms this was a hard sandbox termination by the Lambda runtime, not a graceful application exception.
 
 #### Resolution
 
-Increase the Lambda timeout to 10 seconds, which provides a 4-second safety margin above the 6-second worst-case execution path (see Step 16).
+Increase the Lambda timeout to 10 seconds -- providing a 4-second safety margin above the 6-second worst-case execution path.
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-15-error5-lambda-timeout-3s.png`
-> *Terminal showing invocation 4 returning `FunctionError: Unhandled` in the invoke response, and `out4.json` displaying `errorType: Sandbox.Timedout` with `Task timed out after 3.00 seconds` and the specific RequestId*
+> `screenshot-23-error5-invocation-4-sandbox-timedout.png`
+> *Terminal showing invocation 4 returning `"FunctionError": "Unhandled"` in the invoke response, and `out4.json` displaying `"errorType":"Sandbox.Timedout"` with `"Task timed out after 3.00 seconds"` and RequestId `f83d9f5b-91c2-46ef-8f27-956c2efb047a`*
 
 ---
 
-### Step 16: Increase Lambda Timeout and Verify
-
-Update the Lambda timeout from 3 seconds to 10 seconds using the CLI directly.
+### Step 24: Update Lambda Timeout to 10 Seconds
 
 ```bash
 aws lambda update-function-configuration \
@@ -1032,19 +1156,37 @@ aws lambda update-function-configuration \
   --region us-east-1
 ```
 
-**Partial Output:**
+**Output (partial):**
 
 ```json
 {
     "FunctionName": "nautilus-priorities-queue-function",
+    "FunctionArn": "arn:aws:lambda:us-east-1:691595780564:function:nautilus-priorities-queue-function",
+    "Runtime": "python3.12",
+    "Role": "arn:aws:iam::691595780564:role/lambda_execution_role",
+    "Handler": "index.lambda_handler",
+    "CodeSize": 518,
     "Timeout": 10,
+    "MemorySize": 128,
+    "LastModified": "2026-03-22T02:34:27.000+0000",
+    "Environment": {
+        "Variables": {
+            "low_priority_queue": "https://sqs.us-east-1.amazonaws.com/691595780564/nautilus-Low-Priority-Queue",
+            "high_priority_queue": "https://sqs.us-east-1.amazonaws.com/691595780564/nautilus-High-Priority-Queue"
+        }
+    },
     "LastUpdateStatus": "InProgress",
-    "LastUpdateStatusReasonCode": "Creating",
-    ...
+    "LastUpdateStatusReasonCode": "Creating"
 }
 ```
 
-Confirm the update took effect before invoking again:
+> **SCREENSHOT PLACEHOLDER**
+> `screenshot-24-update-function-configuration-timeout-10.png`
+> *Terminal showing `update-function-configuration` returning the full function configuration JSON with `"Timeout": 10` and `"LastUpdateStatus": "InProgress"`*
+
+---
+
+### Step 25: Confirm Timeout Update
 
 ```bash
 aws lambda get-function-configuration \
@@ -1062,17 +1204,15 @@ aws lambda get-function-configuration \
 ]
 ```
 
-Timeout confirmed as 10 seconds.
+Timeout confirmed as 10 seconds. Safe to re-invoke.
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-16-lambda-timeout-updated-10s.png`
-> *Terminal showing `update-function-configuration` returning `"Timeout": 10` in the response body, followed by `get-function-configuration` query confirming the array `["nautilus-priorities-queue-function", 10]`*
+> `screenshot-25-get-function-configuration-timeout-confirmed.png`
+> *Terminal showing `get-function-configuration` with the `--query '[FunctionName,Timeout]'` filter returning `["nautilus-priorities-queue-function", 10]`*
 
 ---
 
-### Step 17: Final Invocation 5 -- Full End-to-End Success
-
-With the timeout resolved, invoke Lambda once more to process the remaining `Low Priority message 2`.
+### Step 26: Invocation 5 -- Low Priority message 2 -- Full Success
 
 ```bash
 aws lambda invoke \
@@ -1089,38 +1229,39 @@ cat /tmp/out5.json
     "StatusCode": 200,
     "ExecutedVersion": "$LATEST"
 }
+```
+
+```
 "Message '{
-  \"Type\" : \"Notification\",
-  \"MessageId\" : \"57a7fb2a-d0f7-54b9-9b9d-991386e55ba3\",
-  \"TopicArn\" : \"arn:aws:sns:us-east-1:691595780564:nautilus-Priority-Queues-Topic\",
-  \"Message\" : \"Low Priority message 2\",
-  \"Timestamp\" : \"2026-03-22T02:28:34.384Z\",
-  \"SignatureVersion\" : \"1\",
-  \"MessageAttributes\" : {
-    \"priority\" : {\"Type\":\"String\",\"Value\":\"low\"}
+  "Type" : "Notification",
+  "MessageId" : "57a7fb2a-d0f7-54b9-9b9d-991386e55ba3",
+  "TopicArn" : "arn:aws:sns:us-east-1:691595780564:nautilus-Priority-Queues-Topic",
+  "Message" : "Low Priority message 2",
+  "Timestamp" : "2026-03-22T02:28:34.384Z",
+  "SignatureVersion" : "1",
+  "MessageAttributes" : {
+    "priority" : {"Type":"String","Value":"low"}
   }
 }' deleted"
 ```
 
-StatusCode 200 with no `FunctionError`. `"Low Priority message 2"` is confirmed processed and deleted. The full SNS notification envelope is visible in the output, with `"Message": "Low Priority message 2"` and `"priority": "low"` attribute intact. End-to-end priority queuing is fully operational.
+StatusCode 200 with no `FunctionError`. `Low Priority message 2` confirmed processed and deleted. The `MessageId` `57a7fb2a-d0f7-54b9-9b9d-991386e55ba3` matches the fourth publish from Step 18. All four messages have been processed in strict priority order. The system is fully operational.
 
 > **SCREENSHOT PLACEHOLDER**
-> `screenshot-17-final-invocation-5-success.png`
-> *Terminal showing invocation 5 returning StatusCode 200 with no `FunctionError` field, and the full SNS notification envelope in `out5.json` confirming `Low Priority message 2` was successfully processed and deleted*
+> `screenshot-26-invocation-5-low-priority-msg2-success.png`
+> *Terminal showing invocation 5 returning `StatusCode: 200` with no `FunctionError`, and `out5.json` displaying the full SNS envelope with `"Message" : "Low Priority message 2"`, `"priority" : "low"`, and `MessageId` matching the original publish*
 
 ---
 
 ## Complete Error Registry
 
-All five errors encountered during this deployment in a single consolidated reference.
-
-| # | Error Message | Step | Category | Root Cause | Resolution |
+| # | Error | Step | Command That Triggered It | Root Cause | Resolution |
 |---|---|---|---|---|---|
-| 1 | `yaml.constructor.ConstructorError: could not determine a constructor for the tag '!Ref' at line 162` | Step 3 | Tool incompatibility | Python `yaml.safe_load` does not support CloudFormation intrinsic function tags (`!Ref`, `!GetAtt`, etc.) | Use `aws cloudformation validate-template` exclusively for all CloudFormation YAML validation |
-| 2 | `Waiter StackCreateComplete failed: terminal failure state: ROLLBACK_COMPLETE` | Step 6 | CloudFormation rollback | A resource provisioning failure mid-stack triggered automatic CloudFormation rollback | Follow every failed waiter with `describe-stack-events --query CREATE_FAILED` to surface the specific failing resource |
-| 3 | `iam:PutRolePolicy -- User kk_labs_user_407114 is not authorized -- 403 AccessDenied` | Step 7 | IAM permission denied | Inline `Policies:` on `AWS::IAM::Role` requires `iam:PutRolePolicy`, which is not permitted for the lab IAM user | Replace inline `Policies:` with a standalone `AWS::IAM::ManagedPolicy` resource and attach via `ManagedPolicyArns` |
-| 4 | `Unknown options: --cli-binary-format, /tmp/out1.json` (repeated for all 4 invocations) | Step 13 | AWS CLI version mismatch | `--cli-binary-format raw-in-base64-out` is a CLI v2-only flag; environment runs CLI v1 | Remove `--cli-binary-format` and `--payload '{}'`; pass the output file as a positional argument |
-| 5 | `Sandbox.Timedout -- Task timed out after 3.00 seconds` | Step 15 | Lambda execution timeout | Lambda timeout (3s) was less than or equal to the worst-case execution time of two sequential SQS long-polls (`WaitTimeSeconds=3` each, totaling up to 6s) | Increase Lambda `Timeout` to 10 seconds via `update-function-configuration` |
+| 1 | `yaml.constructor.ConstructorError: could not determine a constructor for the tag '!Ref' at line 162, column 12` | Step 5 | `python3 -c "import yaml; yaml.safe_load(...)"` | Python `yaml.safe_load` does not support CloudFormation intrinsic tags (`!Ref`, `!GetAtt`, etc.) | Use `aws cloudformation validate-template` for all CloudFormation YAML validation |
+| 2 | `Waiter StackCreateComplete failed: terminal failure state: ROLLBACK_COMPLETE` | Step 8 | `aws cloudformation wait stack-create-complete` | A resource provisioning failure mid-stack triggered automatic CloudFormation rollback | Follow every failed waiter with `describe-stack-events --query CREATE_FAILED` to identify the failing resource |
+| 3 | `iam:PutRolePolicy -- User kk_labs_user_407114 -- 403 AccessDenied -- Request ID: 2add31fc-57fd-4f68-948f-8d37c03e6e59` | Step 9 | `aws cloudformation describe-stack-events` (reveals the cause of Error 2) | Inline `Policies:` on `AWS::IAM::Role` requires `iam:PutRolePolicy` which the lab user lacks | Replace inline `Policies:` with a standalone `AWS::IAM::ManagedPolicy` resource and attach via `ManagedPolicyArns` |
+| 4 | `Unknown options: --cli-binary-format, /tmp/out1.json` (repeated for out2, out3, out4) | Step 19 | `aws lambda invoke --cli-binary-format raw-in-base64-out` | `--cli-binary-format` is AWS CLI v2 only; environment runs CLI v1; all four invocations failed before reaching Lambda | Remove `--cli-binary-format` and `--payload '{}'`; pass output file as the sole positional argument |
+| 5 | `Sandbox.Timedout -- Task timed out after 3.00 seconds -- RequestId: f83d9f5b-91c2-46ef-8f27-956c2efb047a` | Step 23 | `aws lambda invoke` (invocation 4) | Lambda timeout (3s) was less than or equal to the worst-case execution of two sequential SQS long-polls at `WaitTimeSeconds=3` each (up to 6s total) | Increase Lambda timeout to 10 seconds via `update-function-configuration --timeout 10` |
 
 ---
 
@@ -1131,11 +1272,11 @@ All five errors encountered during this deployment in a single consolidated refe
 | High Priority Queue | `AWS::SQS::Queue` | `nautilus-High-Priority-Queue` |
 | Low Priority Queue | `AWS::SQS::Queue` | `nautilus-Low-Priority-Queue` |
 | SNS Topic | `AWS::SNS::Topic` | `nautilus-Priority-Queues-Topic` |
-| High Subscription | `AWS::SNS::Subscription` | Filter: `priority = high` |
-| Low Subscription | `AWS::SNS::Subscription` | Filter: `priority = low` |
+| High Subscription | `AWS::SNS::Subscription` | Filter: `priority = high` -- routes to High Priority Queue |
+| Low Subscription | `AWS::SNS::Subscription` | Filter: `priority = low` -- routes to Low Priority Queue |
 | Lambda Function | `AWS::Lambda::Function` | `nautilus-priorities-queue-function` |
 | IAM Role | `AWS::IAM::Role` | `lambda_execution_role` |
-| IAM Managed Policy | `AWS::IAM::ManagedPolicy` | SQS + CloudWatch Logs permissions |
+| IAM Managed Policy | `AWS::IAM::ManagedPolicy` | SQS receive/delete + CloudWatch Logs |
 
 ---
 
@@ -1147,22 +1288,22 @@ Lambda invoked
       v
 Poll high_priority_queue (WaitTimeSeconds=3)
       |
-      +-- Message found? --> Delete message --> Return result         (END)
+      +-- Message found? --> Delete message --> Return "Message '...' deleted"    (END)
       |
       +-- No message after 3s?
             |
             v
       Poll low_priority_queue (WaitTimeSeconds=3)
             |
-            +-- Message found? --> Delete message --> Return result   (END)
+            +-- Message found? --> Delete message --> Return "Message '...' deleted"  (END)
             |
-            +-- No message after 3s? --> "No more messages to poll"  (END)
+            +-- No message after 3s? --> Return "No more messages to poll"            (END)
 
-WORST-CASE EXECUTION:  up to 6 seconds
-CONFIGURED TIMEOUT:    10 seconds  (4-second safety margin above worst case)
+WORST-CASE BLOCKING TIME:  3s (high empty) + 3s (low wait) = up to 6 seconds
+CONFIGURED TIMEOUT:        10 seconds  (4-second safety margin)
 ```
 
-This design guarantees strict FIFO priority ordering: the high-priority queue is always fully drained to zero before any low-priority message is ever processed.
+This design guarantees strict priority: the high-priority queue is always fully drained to zero before any low-priority message is ever processed.
 
 ---
 
@@ -1171,73 +1312,77 @@ This design guarantees strict FIFO priority ordering: the high-priority queue is
 ### Infrastructure as Code
 
 - **Always validate before every deploy.** Run `aws cloudformation validate-template` before every `create-stack` or `update-stack`. It catches schema and reference errors without consuming any stack resources or incurring rollback wait times.
-- **Use `wait` commands in all automation.** Never assume a stack operation is complete. Always chain `create-stack` and `delete-stack` with the corresponding `wait` command in scripts and CI/CD pipelines to prevent race conditions.
-- **Filter `CREATE_FAILED` events immediately after any rollback.** Use `--query 'StackEvents[?ResourceStatus==\`CREATE_FAILED\`]'` to surface the exact failing resource and reason without reading the full event stream.
-- **Treat `validate-template` success as necessary but not sufficient.** Schema validation does not test IAM execution permissions. A template that passes validation can still fail at deploy time if the executing principal lacks required actions on any resource type.
+- **Use `wait` commands in all scripts.** Never assume a stack operation is complete. Always pair `create-stack` and `delete-stack` with the corresponding `wait` command. The wait command surfaces the terminal state -- `CREATE_COMPLETE` or `ROLLBACK_COMPLETE` -- so your script can take action rather than proceeding blindly.
+- **Always query `CREATE_FAILED` events after any rollback.** Use `--query 'StackEvents[?ResourceStatus==\`CREATE_FAILED\`]'` to surface the exact failing resource and reason immediately rather than reading the full event stream.
+- **`validate-template` passing is necessary but not sufficient.** Schema validation does not simulate the deploying principal's IAM permissions. A template can pass validation and fail deployment. Audit the executing principal's permissions against every IAM action each resource type requires before running `create-stack`.
 
 ### IAM and Permissions
 
-- **Know which IAM action each resource type requires.** Inline `Policies:` on `AWS::IAM::Role` requires `iam:PutRolePolicy`. A standalone `AWS::IAM::ManagedPolicy` requires `iam:CreatePolicy` and `iam:AttachRolePolicy`. These are distinct, separately controlled IAM actions.
-- **Prefer managed policies over inline policies in restricted environments.** Lab and enterprise environments with constrained IAM users are more likely to permit `iam:AttachRolePolicy` than `iam:PutRolePolicy`. Managed policies also support reuse across multiple roles.
-- **Scope SQS resource ARNs in managed policies.** Reference specific queue ARNs via `!GetAtt NautilusHighPriorityQueue.Arn` rather than `"Resource": "*"` to enforce least-privilege at the queue level.
+- **Know the IAM action difference between inline policies and managed policies.** Inline `Policies:` on `AWS::IAM::Role` requires `iam:PutRolePolicy`. A standalone `AWS::IAM::ManagedPolicy` requires `iam:CreatePolicy` and `iam:AttachRolePolicy`. These are distinct actions controlled separately.
+- **Prefer managed policies in restricted environments.** Lab and enterprise environments are more likely to permit `iam:AttachRolePolicy` than `iam:PutRolePolicy`. Managed policies also support reuse across multiple roles.
+- **Scope SQS resources by ARN.** Use `!GetAtt NautilusHighPriorityQueue.Arn` instead of `"Resource": "*"` to enforce least-privilege at the individual queue level.
 
 ### Lambda Design
 
-- **Set the timeout to exceed the worst-case execution path with margin.** Calculate the maximum blocking I/O time across all code paths: two sequential SQS long-polls at `WaitTimeSeconds=3` each requires a minimum timeout above 6 seconds. Configure 10 seconds for a safe 4-second margin.
-- **Use long-polling (`WaitTimeSeconds > 0`).** Long-polling reduces empty `ReceiveMessage` API calls, lowers SQS costs, and reduces end-to-end latency.
-- **Process one message per invocation.** `MaxNumberOfMessages=1` keeps execution time deterministic and makes timeout sizing straightforward.
+- **Size the timeout against the worst-case execution path, not the happy path.** The timeout must exceed the maximum possible sum of all sequential blocking I/O operations. With `WaitTimeSeconds=3` and two possible sequential polls, the minimum safe timeout is above 6 seconds. Configure 10 seconds as the production baseline for this pattern.
+- **Use long-polling (`WaitTimeSeconds > 0`).** Long-polling reduces the number of empty `ReceiveMessage` API calls, lowers SQS costs, and reduces end-to-end message latency compared to short-polling.
+- **Process one message per invocation.** `MaxNumberOfMessages=1` keeps execution time deterministic and simplifies timeout sizing.
 
 ### AWS CLI
 
-- **Always verify the CLI version before scripting.** Run `aws --version` and use version-appropriate syntax. CLI v1 requires the output file as a positional argument. CLI v2 supports `--cli-binary-format raw-in-base64-out` for binary payload encoding.
-- **Do not use Python `yaml` to validate CloudFormation templates.** The Python YAML parser does not support `!Ref`, `!GetAtt`, `!Sub`, or any other CloudFormation intrinsic tag. Always use `aws cloudformation validate-template`.
+- **Verify the CLI version before writing invocation scripts.** Run `aws --version`. CLI v1 requires the output file as a positional argument and does not support `--cli-binary-format`. CLI v2 supports both syntaxes.
+- **Never use Python `yaml` to validate CloudFormation templates.** Python's `yaml.safe_load` will always fail on CloudFormation files that use intrinsic function tags. Use `aws cloudformation validate-template` exclusively.
 
 ### SNS and SQS
 
-- **Use message attributes for SNS filter policies, not message body content.** Filter policies apply to message attributes set at publish time. The `priority` attribute value routes messages to the correct queue without any body parsing.
-- **Understand the SNS-to-SQS delivery envelope.** When SNS delivers to SQS, the SQS message body is a JSON notification wrapper, not the raw publisher payload. The original message text lives in the inner `"Message"` field of that envelope.
+- **Route via message attributes, not message body.** SNS filter policies apply to message attributes set at `sns:Publish` time. This keeps routing logic cleanly separated from payload content.
+- **Expect the SNS notification envelope in SQS.** When SNS delivers to SQS, the SQS message body is a JSON object wrapping the original payload. The publisher's message is in the inner `"Message"` field. Application code must parse this envelope if it needs the raw string.
 
 ---
 
 ## Lessons Learned
 
-### 1. IAM Permission Scoping Fails at Provision Time, Not Runtime
+### 1. IAM Permission Gaps Surface at Provision Time, Not at validate-template Time
 
-The first deployment failed during CloudFormation stack provisioning because the executing IAM user lacked `iam:PutRolePolicy`. This is a silent permission gap in restricted environments: `validate-template` passes, `create-stack` is accepted, and the failure only appears in `describe-stack-events` after rollback. Always audit the executing principal's permissions against every IAM action that the template's resource types will require before deploying.
+The first deployment failed during CloudFormation provisioning because the lab IAM user lacked `iam:PutRolePolicy`. The template passed `validate-template` cleanly, `create-stack` was accepted with a StackId, and the 403 only appeared in `describe-stack-events` after the rollback. `validate-template` and IAM permission auditing are two completely separate gates -- passing the first does not guarantee passing the second.
 
-### 2. Lambda Timeout Must Be Sized Against the Full Execution Path, Not the Happy Path
+### 2. Lambda Timeout Must Be Calculated Against the Worst-Case Queue State, Not the Average Case
 
-The default 3-second Lambda timeout fails in the exact scenario the system was designed to handle: all high-priority messages consumed, one low-priority message remaining. The timeout must be calculated against the worst-case sum of all sequential blocking I/O operations, not just the fast path. A timeout that passes invocations 1 through 3 silently breaks on invocation 4 when queue state changes.
+The 3-second timeout worked perfectly for invocations 1, 2, and 3 -- all of which found a message in the high-priority queue within milliseconds. It failed on invocation 4 because the queue state changed: the high-priority queue was empty, forcing a full 3-second long-poll before the fallback. The timeout must be sized for the worst case the system will actually encounter in production -- not the case that happened to exist during initial testing.
 
-### 3. AWS CLI Version Must Be Verified Before Writing Any Invocation Script
+### 3. All Four Lambda Invocations Failed Before Reaching the API Due to a Single CLI Flag
 
-The `--cli-binary-format raw-in-base64-out` flag produced four consecutive failures across all four initial Lambda invocation attempts, none of which reached Lambda at all. Verifying the CLI version with `aws --version` before scripting and using version-appropriate syntax would have eliminated this error entirely.
+`--cli-binary-format raw-in-base64-out` caused four consecutive total failures. Zero of the four invocation attempts touched Lambda. Always verify `aws --version` before writing invocation scripts and test a single invocation interactively before scripting all four.
 
-### 4. CloudFormation YAML Is Not Standard YAML
+### 4. CloudFormation YAML Is Not Standard YAML -- Use the Right Parser for the Right Job
 
-CloudFormation YAML uses AWS-proprietary shorthand tags (`!Ref`, `!GetAtt`, `!Sub`, `!Select`, etc.) that are outside the YAML 1.1 specification. Python's `yaml.safe_load` is correct for standard YAML but will always raise `ConstructorError` on any CloudFormation template that uses these tags. This creates a false negative that can mislead developers into thinking the template is invalid when it is structurally correct.
+Python's `yaml.safe_load` is correct and sufficient for standard YAML but will always fail on CloudFormation templates that use `!Ref`, `!GetAtt`, `!Sub`, or any other intrinsic function tag. This produces a misleading false negative. The `aws cloudformation validate-template` command is the only correct tool for CloudFormation YAML validation.
 
-### 5. `validate-template` Success Does Not Validate IAM Execution Context
+### 5. `describe-stack-events` Filtered to `CREATE_FAILED` Is the Essential Post-Rollback Diagnostic
 
-CloudFormation validates template schema and resource reference correctness but has no visibility into whether the calling principal's IAM policies permit the underlying API calls those resources require. Schema validation and permission validation are entirely separate concerns. Both Error 2 (`ROLLBACK_COMPLETE`) and Error 3 (`iam:PutRolePolicy 403`) occurred on a template that passed `validate-template` with no warnings.
+The `ROLLBACK_COMPLETE` waiter error is generic. Without running `describe-stack-events` with the `CREATE_FAILED` filter, the actual cause -- `iam:PutRolePolicy` 403 -- would have been buried among dozens of rollback events. Filtering to `CREATE_FAILED` surfaces the exact resource, the exact action, the exact IAM principal, the Request ID, and the HandlerErrorCode in a single table row.
 
-### 6. SNS-to-SQS Delivery Wraps Messages in a Notification Envelope
+### 6. The SNS Notification Envelope Is the SQS Message Body -- Always
 
-The SQS message body received by Lambda is not the raw string passed to `sns:Publish`. It is a JSON object containing `Type`, `MessageId`, `TopicArn`, `Message`, `Timestamp`, `SignatureVersion`, `Signature`, `SigningCertURL`, `UnsubscribeURL`, and `MessageAttributes`. Application code that needs the original payload must parse the envelope and extract the `"Message"` field. This is documented AWS behavior and is visible in the Lambda output across all five successful invocations in this lab.
+In every successful invocation output, the Lambda return value contained the full SNS notification JSON as the message body -- not the raw string passed to `sns:Publish`. The original publisher string is the value of the `"Message"` key inside that envelope. Any downstream processing that treats the SQS body as the raw payload will need to parse the envelope first.
 
 ---
 
 ## Security Considerations
 
-- Scope `Resource` in the Lambda managed policy to the specific queue ARNs (`!GetAtt NautilusHighPriorityQueue.Arn` and `!GetAtt NautilusLowPriorityQueue.Arn`) rather than `"Resource": "*"`
+- Scope `Resource` in the Lambda managed policy to the specific queue ARNs (`!GetAtt NautilusHighPriorityQueue.Arn` and `!GetAtt NautilusLowPriorityQueue.Arn`) instead of `"Resource": "*"`
 - Enable SQS server-side encryption (SSE-SQS or SSE-KMS) for queues carrying sensitive payloads
-- Enable AWS CloudTrail in `us-east-1` to audit all `sns:Publish`, `lambda:InvokeFunction`, and `sqs:ReceiveMessage` API calls for compliance
-- Add a Dead Letter Queue (DLQ) to each SQS queue to capture messages that exceed the `maxReceiveCount`, preventing silent data loss on repeated processing failures
-- Restrict the SNS topic resource policy to known publisher ARNs; avoid `"Principal": "*"` in production topic policies
+- Enable AWS CloudTrail in `us-east-1` to audit all `sns:Publish`, `lambda:InvokeFunction`, and `sqs:ReceiveMessage` API calls for compliance and forensics
+- Add a Dead Letter Queue (DLQ) to each SQS queue to capture messages that exceed `maxReceiveCount`, preventing silent data loss on repeated processing failures
+- Restrict the SNS topic resource policy to known publisher ARNs -- avoid `"Principal": "*"` in production
 - Rotate lab IAM user credentials (`kk_labs_user_407114`) immediately after the lab session ends and revoke any persistent access keys
 
 ---
 
+## Author
+
+**Nautilus DevOps Team**
+Deployed: `Sun Mar 22 02:10 UTC 2026`
 Region: `us-east-1`
 Account: `691595780564`
 Stack: `nautilus-priority-stack`
@@ -1246,7 +1391,6 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 ---
 
 *Built with AWS CloudFormation, Amazon SQS, Amazon SNS, AWS Lambda, and Python 3.12*
-
 
 
 
