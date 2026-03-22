@@ -361,7 +361,11 @@ httpd   latest   95e97c51ad04   5 days ago   117MB
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal output of `docker pull httpd:latest` showing all layers pulled and digest confirmed, followed by `docker images | grep httpd` confirming local availability]**
+**SCREENSHOT:** 
+
+<img width="1038" height="292" alt="image" src="https://github.com/user-attachments/assets/7cb65b6d-6d46-4ffd-bc4e-4db4d79269e6" />
+
+>Terminal output of `docker pull httpd:latest` showing all layers pulled and digest confirmed, followed by `docker images | grep httpd` confirming local availability]**
 
 ---
 
@@ -720,7 +724,7 @@ All Docker operations in this runbook required `root` because the target directo
 <img width="1032" height="608" alt="image" src="https://github.com/user-attachments/assets/952edd05-3aff-4ee1-896a-743f0fea3409" />
 <img width="1036" height="569" alt="image" src="https://github.com/user-attachments/assets/ab9a7ca4-05ca-4a53-b3e4-48a7627a3849" />
 
-<img width="1038" height="292" alt="image" src="https://github.com/user-attachments/assets/7cb65b6d-6d46-4ffd-bc4e-4db4d79269e6" />
+
 <img width="1032" height="440" alt="image" src="https://github.com/user-attachments/assets/f193e882-605e-4a82-82eb-21f95860f19c" />
 <img width="1036" height="857" alt="image" src="https://github.com/user-attachments/assets/9ba022f1-b1d3-4603-91db-376af9a2354d" />
 <img width="1032" height="862" alt="image" src="https://github.com/user-attachments/assets/ac60fbd4-096a-4a5d-82cd-6bf158f95689" />
