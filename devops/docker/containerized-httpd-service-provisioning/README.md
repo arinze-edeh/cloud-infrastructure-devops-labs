@@ -390,7 +390,11 @@ WARN[0000] /opt/docker/docker-compose.yml: the attribute `version` is obsolete, 
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal output of `docker compose up -d` showing the network and container creation events with success checkmarks]**
+**SCREENSHOT:** 
+
+<img width="1032" height="440" alt="image" src="https://github.com/user-attachments/assets/f193e882-605e-4a82-82eb-21f95860f19c" />
+
+>Terminal output of `docker compose up -d` showing the network and container creation events with success checkmarks]**
 
 ---
 
@@ -725,7 +729,7 @@ All Docker operations in this runbook required `root` because the target directo
 <img width="1036" height="569" alt="image" src="https://github.com/user-attachments/assets/ab9a7ca4-05ca-4a53-b3e4-48a7627a3849" />
 
 
-<img width="1032" height="440" alt="image" src="https://github.com/user-attachments/assets/f193e882-605e-4a82-82eb-21f95860f19c" />
+
 <img width="1036" height="857" alt="image" src="https://github.com/user-attachments/assets/9ba022f1-b1d3-4603-91db-376af9a2354d" />
 <img width="1032" height="862" alt="image" src="https://github.com/user-attachments/assets/ac60fbd4-096a-4a5d-82cd-6bf158f95689" />
 <img width="1030" height="856" alt="image" src="https://github.com/user-attachments/assets/a9c70ed3-9924-42bd-baff-bba352c1a09f" />
