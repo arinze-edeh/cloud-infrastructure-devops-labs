@@ -433,8 +433,7 @@ az storage container delete \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az storage container delete returning {"deleted": true} confirming deletion accepted by Azure]`
+> `az storage container delete returning {"deleted": true} confirming deletion accepted by Azure`
 
 #### Step 5.2 -- Confirm Container No Longer Exists
 
@@ -453,8 +452,7 @@ az storage container exists \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az storage container exists returning {"exists": false} confirming container is permanently gone]`
+> ` az storage container exists returning {"exists": false} confirming container is permanently gone`
 
 #### Step 5.3 -- List All Remaining Containers (Final State Audit)
 
