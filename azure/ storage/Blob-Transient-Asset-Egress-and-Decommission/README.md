@@ -127,9 +127,6 @@ azure-cli    2.67.0
 Python (Linux) 3.10.15
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az --version output showing CLI version 2.67.0 and Python 3.10.15]`
-
 #### Step 1.2 -- Confirm Active Subscription
 
 ```bash
@@ -150,17 +147,17 @@ az account show
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az account show output confirming correct subscription "Azure Free Labs" is active]`
-
 #### Step 1.3 -- List All Subscriptions (Audit Trail)
 
 ```bash
 az account list --output table
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az account list table showing single subscription "Azure Free Labs" as default]`
+> **Screenshot**
+
+<img width="1037" height="838" alt="image" src="https://github.com/user-attachments/assets/a4dfd370-301c-47aa-aea5-7485a61b3888" />
+
+> `az account list table showing single subscription "Azure Free Labs" as default`
 
 ---
 
@@ -687,7 +684,7 @@ az storage container list \
 *This runbook is maintained by the Nautilus DevOps Cloud Operations team. All destructive operations in this document require peer review and change management approval before execution in production environments.*
 
 
-<img width="1037" height="838" alt="image" src="https://github.com/user-attachments/assets/a4dfd370-301c-47aa-aea5-7485a61b3888" />
+
 <img width="1033" height="537" alt="image" src="https://github.com/user-attachments/assets/8c21fdc0-5c5f-4c9a-99a1-fcdd6273121c" />
 <img width="1029" height="634" alt="image" src="https://github.com/user-attachments/assets/8e6d165a-d300-497e-8c26-e7a45037dfd8" />
 <img width="1035" height="497" alt="image" src="https://github.com/user-attachments/assets/98bf154f-3a1b-422c-b73a-3c564326b1d8" />
