@@ -192,8 +192,10 @@ def lambda_handler(event, context):
 - The handler always polls the high-priority queue first; low-priority is only polled when high returns empty
 - Each invocation processes exactly one message -- combined with `WaitTimeSeconds=3`, this directly drives the timeout failure in Error 5
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-01-cat-index-py.png`
+> **SCREENSHOT**
+
+<img width="1030" height="700" alt="image" src="https://github.com/user-attachments/assets/b89e922f-b0f1-4929-a5e8-c0e6aaf70f57" />
+
 > *Terminal showing the complete output of `cat /root/index.py` -- all three functions visible: `delete_message`, `poll_messages`, `lambda_handler`*
 
 ---
@@ -1394,7 +1396,6 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1030" height="700" alt="image" src="https://github.com/user-attachments/assets/b89e922f-b0f1-4929-a5e8-c0e6aaf70f57" />
 <img width="1039" height="645" alt="image" src="https://github.com/user-attachments/assets/79bc08bb-875b-4542-8a34-2ba86f88f7db" />
 <img width="1029" height="601" alt="image" src="https://github.com/user-attachments/assets/c256f2f4-3df8-4b9d-8952-a35719dd8f99" />
 <img width="1026" height="477" alt="image" src="https://github.com/user-attachments/assets/c36de50a-3ab5-48ed-92ee-431e8f4934ea" />
