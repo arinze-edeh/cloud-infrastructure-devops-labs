@@ -165,8 +165,11 @@ Before writing any CloudFormation, inspect the provided Lambda code to understan
 cat /root/index.py
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-01: Output of cat /root/index.py showing full Lambda source code]`
+> **Screenshot**
+
+<img width="1030" height="700" alt="image" src="https://github.com/user-attachments/assets/b89e922f-b0f1-4929-a5e8-c0e6aaf70f57" />
+
+> `Output of cat /root/index.py showing full Lambda source code`
 
 **Key findings from inspection:**
 
@@ -761,7 +764,7 @@ echo "Stack and all resources deleted successfully"
 
 ---
 
-<img width="1030" height="700" alt="image" src="https://github.com/user-attachments/assets/b89e922f-b0f1-4929-a5e8-c0e6aaf70f57" />
+
 <img width="1039" height="645" alt="image" src="https://github.com/user-attachments/assets/79bc08bb-875b-4542-8a34-2ba86f88f7db" />
 <img width="1029" height="601" alt="image" src="https://github.com/user-attachments/assets/c256f2f4-3df8-4b9d-8952-a35719dd8f99" />
 <img width="1026" height="477" alt="image" src="https://github.com/user-attachments/assets/c36de50a-3ab5-48ed-92ee-431e8f4934ea" />
