@@ -741,18 +741,3 @@ While the Compose file defines intent, `docker inspect` shows what Docker actual
 All Docker operations in this runbook required `root` because the target directories (`/opt/docker`, `/opt/itadmin`) are owned by root and the Docker socket is accessible only to the `docker` group or root. **Action:** As a longer-term hardening measure, add the service account (`steve`) to the `docker` group (`usermod -aG docker steve`) and set correct directory ownership, eliminating the need for `sudo su -` for routine Docker operations.
 
 ---
-
-
-
-<img width="1032" height="629" alt="image" src="https://github.com/user-attachments/assets/1e4e3e5a-27d2-4883-a7c6-64261e737415" />
-
-<img width="1031" height="478" alt="image" src="https://github.com/user-attachments/assets/c3c64ddf-c1ac-46be-844e-c521b50f9158" />
-<img width="1032" height="502" alt="image" src="https://github.com/user-attachments/assets/c63e255b-b8db-4735-a073-9fb2b7ad76f6" />
-
-<img width="1032" height="608" alt="image" src="https://github.com/user-attachments/assets/952edd05-3aff-4ee1-896a-743f0fea3409" />
-<img width="1036" height="569" alt="image" src="https://github.com/user-attachments/assets/ab9a7ca4-05ca-4a53-b3e4-48a7627a3849" />
-
-
-
-
-
