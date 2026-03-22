@@ -271,7 +271,11 @@ services:
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing `cat /opt/docker/docker-compose.yml` with full YAML content displayed correctly]**
+**SCREENSHOT:** 
+
+<img width="1030" height="683" alt="image" src="https://github.com/user-attachments/assets/01edc9cc-a6e5-4da7-a691-24ccf81746ff" />
+
+>Terminal showing `cat /opt/docker/docker-compose.yml` with full YAML content displayed correctly
 
 ---
 
@@ -708,7 +712,7 @@ All Docker operations in this runbook required `root` because the target directo
 
 <img width="1031" height="478" alt="image" src="https://github.com/user-attachments/assets/c3c64ddf-c1ac-46be-844e-c521b50f9158" />
 <img width="1032" height="502" alt="image" src="https://github.com/user-attachments/assets/c63e255b-b8db-4735-a073-9fb2b7ad76f6" />
-<img width="1030" height="683" alt="image" src="https://github.com/user-attachments/assets/01edc9cc-a6e5-4da7-a691-24ccf81746ff" />
+
 <img width="1032" height="608" alt="image" src="https://github.com/user-attachments/assets/952edd05-3aff-4ee1-896a-743f0fea3409" />
 <img width="1036" height="569" alt="image" src="https://github.com/user-attachments/assets/ab9a7ca4-05ca-4a53-b3e4-48a7627a3849" />
 <img width="1032" height="687" alt="image" src="https://github.com/user-attachments/assets/b97ac666-ea78-4f9d-b03e-1e16b31bc863" />
