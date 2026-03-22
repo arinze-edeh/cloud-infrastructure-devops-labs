@@ -524,7 +524,13 @@ docker inspect httpd --format='{{json .Mounts}}' | python3 -m json.tool
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing output of `docker port httpd` and the formatted JSON output of `docker inspect httpd --format='{{json .Mounts}}'` piped through `python3 -m json.tool`]**
+**SCREENSHOT:** 
+
+
+<img width="1035" height="510" alt="image" src="https://github.com/user-attachments/assets/1c1d1064-6ebe-4297-b4c8-a51ce2230574" />
+
+
+>Terminal showing output of `docker port httpd` and the formatted JSON output of `docker inspect httpd --format='{{json .Mounts}}'` piped through `python3 -m json.tool`
 
 ---
 
@@ -555,7 +561,13 @@ curl http://localhost:8089
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing `curl http://localhost:8089` returning the Apache HTTPD directory listing HTML with `index1.html` listed as a link, confirming end-to-end connectivity and volume mount integrity]**
+**SCREENSHOT:** 
+
+
+<img width="1035" height="510" alt="image" src="https://github.com/user-attachments/assets/1c1d1064-6ebe-4297-b4c8-a51ce2230574" />
+
+
+>Terminal showing `curl http://localhost:8089` returning the Apache HTTPD directory listing HTML with `index1.html` listed as a link, confirming end-to-end connectivity and volume mount integrity
 
 ---
 
@@ -742,7 +754,5 @@ All Docker operations in this runbook required `root` because the target directo
 
 
 
-
-<img width="1035" height="510" alt="image" src="https://github.com/user-attachments/assets/1c1d1064-6ebe-4297-b4c8-a51ce2230574" />
 
 
