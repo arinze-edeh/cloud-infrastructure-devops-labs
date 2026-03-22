@@ -222,14 +222,17 @@ STORAGE_KEY=$(az storage account keys list \
 echo $STORAGE_KEY
 ```
 
-**Output (redacted for documentation):**
+**Output:**
 
 ```
 /OYRMyRWEwir8X5kMFpD/rf5s7cfBzn...==
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: STORAGE_KEY variable populated with base64-encoded storage key value]`
+> **Screenshotr**
+
+<img width="1035" height="497" alt="image" src="https://github.com/user-attachments/assets/98bf154f-3a1b-422c-b73a-3c564326b1d8" />
+
+> `STORAGE_KEY variable populated with base64-encoded storage key value`
 
 > **Security Advisory:** Avoid echoing storage keys in production environments or shared terminal sessions. Pipe directly to secure variables or use Azure Key Vault references.
 
@@ -692,7 +695,7 @@ az storage container list \
 
 
 
-<img width="1035" height="497" alt="image" src="https://github.com/user-attachments/assets/98bf154f-3a1b-422c-b73a-3c564326b1d8" />
+
 <img width="1029" height="844" alt="image" src="https://github.com/user-attachments/assets/1c39ff5b-0bc5-4774-bc53-5ba7ec3d4529" />
 <img width="1031" height="748" alt="image" src="https://github.com/user-attachments/assets/804a4b44-1545-4d58-a11a-8e736f837057" />
 <img width="1031" height="386" alt="image" src="https://github.com/user-attachments/assets/85f5d510-77fc-4646-8f9c-691fd3404ea1" />
