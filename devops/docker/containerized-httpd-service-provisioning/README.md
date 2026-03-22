@@ -145,7 +145,7 @@ root
 
 <img width="1033" height="560" alt="image" src="https://github.com/user-attachments/assets/87710ba2-9b6a-4ac6-b0da-95d73775a968" />
 
->Terminal showing successful SSH connection to stapp02 and root escalation via `sudo su -`**
+>Terminal showing successful SSH connection to stapp02 and root escalation via `sudo su -`
 
 ---
 
@@ -178,7 +178,12 @@ Docker Compose version v5.0.2
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal output showing `docker --version`, `systemctl status docker` showing active state, and `docker compose version`]**
+**SCREENSHOT:** 
+
+<img width="1034" height="615" alt="image" src="https://github.com/user-attachments/assets/d16cca94-afa0-441e-b043-e5e2a5e9073d" />
+
+
+>Terminal output showing `docker --version`, `systemctl status docker` showing active state, and `docker compose version`
 
 ---
 
@@ -701,7 +706,7 @@ All Docker operations in this runbook required `root` because the target directo
 
 <img width="1031" height="855" alt="image" src="https://github.com/user-attachments/assets/d38e654b-06fa-4cb6-9166-6cf8cec59fe4" />
 <img width="1032" height="862" alt="image" src="https://github.com/user-attachments/assets/1358030c-dc4c-4913-ba38-89a747abf7f8" />
-<img width="1034" height="615" alt="image" src="https://github.com/user-attachments/assets/d16cca94-afa0-441e-b043-e5e2a5e9073d" />
+
 <img width="1032" height="629" alt="image" src="https://github.com/user-attachments/assets/1e4e3e5a-27d2-4883-a7c6-64261e737415" />
 <img width="1033" height="351" alt="image" src="https://github.com/user-attachments/assets/7d471edf-86b0-4355-ab50-194347c8f461" />
 <img width="1031" height="478" alt="image" src="https://github.com/user-attachments/assets/c3c64ddf-c1ac-46be-844e-c521b50f9158" />
