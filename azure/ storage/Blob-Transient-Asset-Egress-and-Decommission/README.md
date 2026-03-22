@@ -326,8 +326,11 @@ drwxr-xr-x 1 root root 4096 Mar 22 04:05 /opt
 Write access confirmed
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: ls -ld /opt showing directory permissions and write test confirming access]`
+> **Screenshot**
+
+<img width="1031" height="386" alt="image" src="https://github.com/user-attachments/assets/85f5d510-77fc-4646-8f9c-691fd3404ea1" />
+
+> `ls -ld /opt showing directory permissions and write test confirming access`
 
 #### Step 4.2 -- Execute Batch Download from Container to /opt
 
@@ -709,7 +712,7 @@ az storage container list \
 
 
 
-<img width="1031" height="386" alt="image" src="https://github.com/user-attachments/assets/85f5d510-77fc-4646-8f9c-691fd3404ea1" />
+
 <img width="1032" height="672" alt="image" src="https://github.com/user-attachments/assets/37655035-ab1f-4470-9141-6bbccfe0ca61" />
 <img width="1036" height="665" alt="image" src="https://github.com/user-attachments/assets/f5dcc5d0-538e-4ede-bd61-eaa218cffcee" />
 
