@@ -739,8 +739,7 @@ aws lambda invoke \
 cat /tmp/out5.json
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT-10b: Invocation 5 output showing StatusCode 200 and "Low Priority message 2" deleted -- no timeout error, confirming the fix worked correctly]`
+![SCREENSHOT-10b: Invocation 5 -- Low Priority message 2 deleted StatusCode 200 no timeout error confirming fix worked](https://github.com/user-attachments/assets/02e96455-daa7-49ec-bd7d-d5324a7a1f2d)
 
 ---
 
@@ -843,6 +842,36 @@ echo "Stack and all resources deleted successfully"
 
 ---
 
+## Appendix -- Full Execution Trace
+
+The following screenshots capture the complete unedited terminal session in chronological order, from the initial Lambda source inspection through the final successful invocation. These serve as the authoritative audit trail for this deployment.
+
+### Terminal Session Page 1 -- Lambda Inspection and First Template Write
+
+![Full execution trace page 1 -- cat index.py template write and first deployment attempt](https://github.com/user-attachments/assets/64a8da7b-9c74-43a7-945f-859d7447f31e)
+
+### Terminal Session Page 2 -- First Rollback and Diagnosis
+
+![Full execution trace page 2 -- ROLLBACK_COMPLETE waiter failure and describe-stack-events iam:PutRolePolicy error](https://github.com/user-attachments/assets/4390a804-60c5-4823-a6b8-d52ac0b858c9)
+
+### Terminal Session Page 3 -- Stack Delete, ManagedPolicy Fix, Redeploy and Resource Verification
+
+![Full execution trace page 3 -- stack delete complete second template write validate-template CREATE_COMPLETE and resource verification](https://github.com/user-attachments/assets/5f2a8652-efe0-4574-ad3f-aedc7b7232e2)
+
+### Terminal Session Page 4 -- SNS Publish and CLI v2 Invoke Errors
+
+![Full execution trace page 4 -- SNS publish four messages and all four Lambda invoke Unknown options CLI v1 failures](https://github.com/user-attachments/assets/4d2652fd-9801-44af-aee7-610361ed41a8)
+
+### Terminal Session Page 5 -- Corrected Invocations 1 Through 4 and Timeout Error
+
+![Full execution trace page 5 -- corrected CLI v1 invocations 1 through 3 success and invocation 4 Sandbox.Timedout error](https://github.com/user-attachments/assets/18c096de-2a66-4bef-91f4-d31754f34aac)
+
+### Terminal Session Page 6 -- Timeout Fix and Final Successful Invocation
+
+![Full execution trace page 6 -- update-function-configuration timeout 10 get-function-configuration verify and invocation 5 Low Priority message 2 deleted](https://github.com/user-attachments/assets/aa4984d1-498e-4b43-a1ff-d20502228477)
+
+---
+
 ## Author
 
 **Nautilus DevOps Team**
@@ -852,8 +881,6 @@ Region: `us-east-1` | Stack: `nautilus-priority-stack` | Date: March 22, 2026
 ---
 
 *This README documents a real production-equivalent lab deployment. All commands, outputs, error states, and resolutions reflect the actual execution trace of this implementation.*
-
-
 
 
 
