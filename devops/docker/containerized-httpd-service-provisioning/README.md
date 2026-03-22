@@ -475,7 +475,14 @@ docker inspect httpd
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal output of `docker inspect httpd` with the `Mounts` and `PortBindings` sections visible, confirming correct bind mount source, destination, and read-write mode]**
+**SCREENSHOTS:**
+
+<img width="1036" height="857" alt="image" src="https://github.com/user-attachments/assets/9ba022f1-b1d3-4603-91db-376af9a2354d" />
+<img width="1032" height="862" alt="image" src="https://github.com/user-attachments/assets/ac60fbd4-096a-4a5d-82cd-6bf158f95689" />
+<img width="1030" height="856" alt="image" src="https://github.com/user-attachments/assets/a9c70ed3-9924-42bd-baff-bba352c1a09f" />
+<img width="1035" height="854" alt="image" src="https://github.com/user-attachments/assets/04e1175d-4626-432d-932c-ee5e103e16bb" />
+
+>Terminal output of `docker inspect httpd` with the `Mounts` and `PortBindings` sections visible, confirming correct bind mount source, destination, and read-write mode
 
 ---
 
@@ -735,10 +742,7 @@ All Docker operations in this runbook required `root` because the target directo
 
 
 
-<img width="1036" height="857" alt="image" src="https://github.com/user-attachments/assets/9ba022f1-b1d3-4603-91db-376af9a2354d" />
-<img width="1032" height="862" alt="image" src="https://github.com/user-attachments/assets/ac60fbd4-096a-4a5d-82cd-6bf158f95689" />
-<img width="1030" height="856" alt="image" src="https://github.com/user-attachments/assets/a9c70ed3-9924-42bd-baff-bba352c1a09f" />
-<img width="1035" height="854" alt="image" src="https://github.com/user-attachments/assets/04e1175d-4626-432d-932c-ee5e103e16bb" />
+
 <img width="1035" height="510" alt="image" src="https://github.com/user-attachments/assets/1c1d1064-6ebe-4297-b4c8-a51ce2230574" />
 
 
