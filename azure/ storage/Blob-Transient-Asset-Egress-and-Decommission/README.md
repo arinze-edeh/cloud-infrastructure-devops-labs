@@ -286,26 +286,6 @@ xfusion.txt  BlockBlob    Hot          33        text/plain      2026-03-22T04:0
 
 > `Blob list table output showing single blob "xfusion.txt" as BlockBlob on Hot tier`
 
-#### Step 3.4 -- Count Total Blobs (Pre-Download Baseline)
-
-```bash
-az storage blob list \
-  --container-name xfusion-blob-11509 \
-  --account-name xfusionst27608 \
-  --account-key $STORAGE_KEY \
-  --query "length(@)" \
-  --output tsv
-```
-
-**Output:**
-
-```
-1
-```
-
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Blob count query returning "1" confirming exactly one blob exists before download]`
-
 ---
 
 ### Phase 4: Blob Download to Local Host
@@ -382,7 +362,32 @@ drwxr-xr-x 1 root root 4.0K Mar 22 03:02 .init
 
 > `ls -lah /opt showing xfusion.txt downloaded at 04:25 with 33 bytes matching blob size`
 
-#### Step 4.4 -- Verify File Count in /opt
+
+#### Step 4.4 -- Count Total Blobs (Pre-Download Baseline)
+
+```bash
+az storage blob list \
+  --container-name xfusion-blob-11509 \
+  --account-name xfusionst27608 \
+  --account-key $STORAGE_KEY \
+  --query "length(@)" \
+  --output tsv
+```
+
+**Output:**
+
+```
+1
+```
+
+> **Screenshot**
+
+<img width="1032" height="672" alt="image" src="https://github.com/user-attachments/assets/37655035-ab1f-4470-9141-6bbccfe0ca61" />
+
+> `Blob count query returning "1" confirming exactly one blob exists before download]`
+
+
+#### Step 4.5 -- Verify File Count in /opt
 
 ```bash
 ls /opt/ | wc -l
@@ -394,31 +399,11 @@ ls /opt/ | wc -l
 3
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: ls /opt | wc -l output confirming 3 visible files in /opt after download]`
+> **Screenshot**
 
-#### Step 4.5 -- Verify Downloaded File in /opt
+<img width="1032" height="672" alt="image" src="https://github.com/user-attachments/assets/37655035-ab1f-4470-9141-6bbccfe0ca61" />
 
-Confirm the blob landed correctly in the destination directory:
-
-```bash
-ls -lah /opt/
-```
-
-**Output (post-download):**
-
-```
-total 28K
-drwxr-xr-x 1 root root 4.0K Mar 22 04:25 .
-dr-xr-xr-x 1 root root 4.0K Mar 22 04:06 ..
--rw-r--r-- 1 root root  445 Mar 22 04:05 creds.json
-drwxr-xr-x 1 root root 4.0K Mar 22 03:02 .init
--rw-r--r-- 1 root root 2.7K Mar 22 04:05 showcreds
--rw-r--r-- 1 root root   33 Mar 22 04:25 xfusion.txt
-```
-
-> **Screenshot Placeholder**
-> `[SCREENSHOT: ls -lah /opt showing xfusion.txt downloaded at 04:25 with 33 bytes matching blob size]`
+> `ls /opt | wc -l output confirming 3 visible files in /opt after download`
 
 ---
 
@@ -720,6 +705,6 @@ az storage container list \
 
 
 
-<img width="1032" height="672" alt="image" src="https://github.com/user-attachments/assets/37655035-ab1f-4470-9141-6bbccfe0ca61" />
+
 <img width="1036" height="665" alt="image" src="https://github.com/user-attachments/assets/f5dcc5d0-538e-4ede-bd61-eaa218cffcee" />
 
