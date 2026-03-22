@@ -141,7 +141,11 @@ root
 
 ---
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing successful SSH connection to stapp02 and root escalation via `sudo su -`]**
+**SCREENSHOT:** 
+
+<img width="1033" height="560" alt="image" src="https://github.com/user-attachments/assets/87710ba2-9b6a-4ac6-b0da-95d73775a968" />
+
+>Terminal showing successful SSH connection to stapp02 and root escalation via `sudo su -`**
 
 ---
 
@@ -694,7 +698,7 @@ All Docker operations in this runbook required `root` because the target directo
 
 <img width="1031" height="492" alt="image" src="https://github.com/user-attachments/assets/4b429b33-ae2b-410d-9868-b0ff197db12e" />
 <img width="1032" height="531" alt="image" src="https://github.com/user-attachments/assets/541330ec-62b2-43c5-b894-8efe63bda371" />
-<img width="1033" height="560" alt="image" src="https://github.com/user-attachments/assets/87710ba2-9b6a-4ac6-b0da-95d73775a968" />
+
 <img width="1031" height="855" alt="image" src="https://github.com/user-attachments/assets/d38e654b-06fa-4cb6-9166-6cf8cec59fe4" />
 <img width="1032" height="862" alt="image" src="https://github.com/user-attachments/assets/1358030c-dc4c-4913-ba38-89a747abf7f8" />
 <img width="1034" height="615" alt="image" src="https://github.com/user-attachments/assets/d16cca94-afa0-441e-b043-e5e2a5e9073d" />
