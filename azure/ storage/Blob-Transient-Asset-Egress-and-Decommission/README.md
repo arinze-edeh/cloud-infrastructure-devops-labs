@@ -351,8 +351,11 @@ Finished[#############################################################]  100.000
 ]
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az storage blob download-batch progress bar completing at 100% with "xfusion.txt" listed]`
+> **Screenshot**
+
+<img width="1015" height="411" alt="image" src="https://github.com/user-attachments/assets/da8e85e5-2568-4fdf-ace0-c3e113bdf546" />
+
+> `az storage blob download-batch progress bar completing at 100% with "xfusion.txt" listed`
 
 #### Step 4.3 -- Verify Downloaded File in /opt
 
@@ -372,8 +375,12 @@ drwxr-xr-x 1 root root 4.0K Mar 22 03:02 .init
 -rw-r--r-- 1 root root   33 Mar 22 04:25 xfusion.txt
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: ls -lah /opt showing xfusion.txt downloaded at 04:25 with 33 bytes matching blob size]`
+> **Screenshot**
+
+<img width="1015" height="411" alt="image" src="https://github.com/user-attachments/assets/d3855e4e-d3b6-40e8-8835-6bb48cf9145e" />
+
+
+> `ls -lah /opt showing xfusion.txt downloaded at 04:25 with 33 bytes matching blob size`
 
 #### Step 4.4 -- Verify File Count in /opt
 
