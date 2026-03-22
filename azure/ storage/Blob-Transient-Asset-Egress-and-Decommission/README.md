@@ -471,8 +471,12 @@ az storage container list \
 (empty)
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az storage container list returning empty table confirming no containers remain in xfusionst27608]`
+> **Screenshot**
+
+<img width="1011" height="405" alt="image" src="https://github.com/user-attachments/assets/b3450cf5-b532-40c4-a708-70c77e6a581e" />
+
+
+> `az storage container list returning empty table confirming no containers remain in xfusionst27608`
 
 #### Step 5.4 -- Final File Integrity Verification on Local Host
 
