@@ -1,6 +1,6 @@
 # Azure Blob Storage Container Migration and Cleanup
 
-> **Enterprise Cloud Operations | Azure Storage | DevOps Runbook**
+> **Enterprise Cloud Operations | Azure Storage | DevOps**
 
 ![Azure](https://img.shields.io/badge/Azure-Storage-0089D6?style=flat-square&logo=microsoft-azure&logoColor=white)
 ![CLI](https://img.shields.io/badge/Azure%20CLI-2.67.0-blue?style=flat-square)
