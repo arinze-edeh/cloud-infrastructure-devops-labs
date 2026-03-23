@@ -1229,7 +1229,7 @@ aws lambda update-function-configuration \
 }
 ```
 
-> **SCREENSHOT**
+> **SCREENSHOTS**
 
 <img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/5f2a8652-efe0-4574-ad3f-aedc7b7232e2" />
 <img width="1036" height="867" alt="image" src="https://github.com/user-attachments/assets/4d2652fd-9801-44af-aee7-610361ed41a8" />
@@ -1259,8 +1259,10 @@ aws lambda get-function-configuration \
 
 Timeout confirmed as 10 seconds. Safe to re-invoke.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-25-get-function-configuration-timeout-confirmed.png`
+> **SCREENSHOT**
+
+<img width="1007" height="473" alt="image" src="https://github.com/user-attachments/assets/d052d323-2c49-4dee-afc1-6f769ed5af0f" />
+
 > *Terminal showing `get-function-configuration` with the `--query '[FunctionName,Timeout]'` filter returning `["nautilus-priorities-queue-function", 10]`*
 
 ---
@@ -1436,8 +1438,6 @@ In every successful invocation output, the Lambda return value contained the ful
 
 ## Author
 
-**Nautilus DevOps Team**
-Deployed: `Sun Mar 22 02:10 UTC 2026`
 Region: `us-east-1`
 Account: `691595780564`
 Stack: `nautilus-priority-stack`
@@ -1446,15 +1446,3 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 ---
 
 *Built with AWS CloudFormation, Amazon SQS, Amazon SNS, AWS Lambda, and Python 3.12*
-
-
-
-
-
-
-
-
-
-
-
-
