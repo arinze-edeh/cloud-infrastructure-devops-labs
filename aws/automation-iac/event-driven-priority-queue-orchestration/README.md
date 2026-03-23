@@ -758,8 +758,10 @@ CREATE_COMPLETE
 
 The waiter exits with code 0 and the `echo` fires -- stack reached `CREATE_COMPLETE` with no failures.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-13-second-create-stack-create-complete.png`
+> **SCREENSHOT**
+
+<img width="1036" height="553" alt="image" src="https://github.com/user-attachments/assets/4020e4b7-ae63-4a0a-9606-37251f241e30" />
+
 > *Terminal showing the second `create-stack` returning the new `StackId` `059048a0-2596-11f1-ac12-0eea9c6c1601`, followed by `wait stack-create-complete` completing and `CREATE_COMPLETE` printing on a new line*
 
 ---
@@ -1433,7 +1435,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 <img width="1031" height="650" alt="image" src="https://github.com/user-attachments/assets/6194a704-a4e0-4063-8d3a-9d82dc651f12" />
-<img width="1036" height="553" alt="image" src="https://github.com/user-attachments/assets/4020e4b7-ae63-4a0a-9606-37251f241e30" />
+
 <img width="1031" height="747" alt="image" src="https://github.com/user-attachments/assets/a77c1fc6-e655-4e79-8273-ebf0cfe4b9c5" />
 <img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/8c327785-027d-4693-a08f-bc149a5998a8" />
 <img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/d6a63ad7-ec35-49e3-a137-e06cd6a0d3e2" />
