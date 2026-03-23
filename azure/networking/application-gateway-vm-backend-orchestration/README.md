@@ -592,12 +592,10 @@ VM Private IP: 10.0.1.4
 
 > **Note:** Always capture private IPs dynamically using `--show-details --query privateIps` rather than assuming the assigned address. Azure DHCP assigns IPs based on prior subnet allocations, and assumptions will break in shared or re-used environments.
 
-**Screenshot 14: VM private IP echo output**
+**Screenshot: VM private IP echo output**
 > Terminal showing `echo "VM Private IP: $VM_PRIVATE_IP"` resolved to `10.0.1.4` confirming the dynamic IP query succeeded.
 
-```
-[ SCREENSHOT PLACEHOLDER: 14_vm_private_ip_echo.png ]
-```
+<img width="1292" height="722" alt="image" src="https://github.com/user-attachments/assets/801c967d-3b42-45df-a4fe-09643136ee56" />
 
 ---
 
@@ -1237,7 +1235,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 
-<img width="1292" height="722" alt="image" src="https://github.com/user-attachments/assets/801c967d-3b42-45df-a4fe-09643136ee56" />
+
 <img width="1303" height="860" alt="image" src="https://github.com/user-attachments/assets/23e2b348-15b5-43fe-8567-b5fb1a829f55" />
 <img width="1301" height="868" alt="image" src="https://github.com/user-attachments/assets/ecafc348-e6e3-4d51-948f-40997665628f" />
 <img width="1297" height="823" alt="image" src="https://github.com/user-attachments/assets/bc1b417b-f53c-4f16-8c75-e2f97c985526" />
