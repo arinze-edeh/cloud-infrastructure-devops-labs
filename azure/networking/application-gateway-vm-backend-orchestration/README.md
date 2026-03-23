@@ -480,12 +480,10 @@ systemctl enable nginx
 
 > **Note:** `systemctl enable nginx` ensures the service restarts automatically after a VM reboot. Without this, a reboot would leave the backend unhealthy from the AGW health probe perspective.
 
-**Screenshot 11: userdata.sh creation and verification**
+**Screenshot: userdata.sh creation and verification**
 > Terminal showing the heredoc write command followed by `cat /tmp/userdata.sh` confirming all five lines of the Nginx startup script are correctly written to disk.
 
-```
-[ SCREENSHOT PLACEHOLDER: 11_userdata_sh_created.png ]
-```
+<img width="1297" height="682" alt="image" src="https://github.com/user-attachments/assets/ab9a01b8-ac18-452a-b229-23accf7c58b2" />
 
 ---
 
@@ -1240,7 +1238,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 
-<img width="1297" height="682" alt="image" src="https://github.com/user-attachments/assets/ab9a01b8-ac18-452a-b229-23accf7c58b2" />
+
 <img width="1294" height="617" alt="image" src="https://github.com/user-attachments/assets/c2a9b852-1f76-4c85-b751-1d0b7cde4abc" />
 <img width="1297" height="866" alt="image" src="https://github.com/user-attachments/assets/478a28f1-db91-4878-b915-bf88a9d7e872" />
 <img width="1292" height="722" alt="image" src="https://github.com/user-attachments/assets/801c967d-3b42-45df-a4fe-09643136ee56" />
