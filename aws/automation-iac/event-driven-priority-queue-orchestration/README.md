@@ -845,8 +845,10 @@ aws lambda get-function-configuration \
 
 Function name, handler, runtime, and both queue URL environment variables are all confirmed exactly as defined in the template.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-16-lambda-get-function-configuration.png`
+> **SCREENSHOT**
+
+<img width="1031" height="747" alt="image" src="https://github.com/user-attachments/assets/a77c1fc6-e655-4e79-8273-ebf0cfe4b9c5" />
+
 > *Terminal showing the Lambda `get-function-configuration` query returning all four fields: `FunctionName`, `Handler: index.lambda_handler`, `Runtime: python3.12`, and both SQS queue URL environment variables*
 
 ---
