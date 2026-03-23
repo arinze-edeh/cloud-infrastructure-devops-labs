@@ -843,12 +843,10 @@ az network application-gateway create \
 
 **Root cause:** Same policy as Attempt 1. All non-Basic SKUs are rejected. The full SKU elimination trail is now complete: `Standard_v2` blocked by policy, `Basic` blocked by CLI, `Standard_Small` blocked by policy. The only path forward is to bypass the CLI entirely.
 
-**Screenshot 20: AGW Standard_Small policy violation error**
+**Screenshot: AGW Standard_Small policy violation error**
 > Terminal showing the `RequestDisallowedByPolicy` JSON error for the `Standard_Small` attempt, completing the three-attempt SKU elimination trail that establishes the requirement for the `az rest` workaround.
 
-```
-[ SCREENSHOT PLACEHOLDER: 20_agw_standard_small_policy_error.png ]
-```
+<img width="1299" height="866" alt="image" src="https://github.com/user-attachments/assets/781a4fef-f6fa-4152-9fc4-04fb93efd02a" />
 
 ---
 
@@ -1213,6 +1211,6 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 <img width="1299" height="431" alt="image" src="https://github.com/user-attachments/assets/10e6d9ff-0452-40c1-8e47-cd7673991a78" />
 <img width="1292" height="679" alt="image" src="https://github.com/user-attachments/assets/caa78f80-e534-48d4-ba67-84153fb0817f" />
 <img width="1302" height="715" alt="image" src="https://github.com/user-attachments/assets/4f55a175-9192-4853-b19a-63826a585433" />
-<img width="1299" height="866" alt="image" src="https://github.com/user-attachments/assets/781a4fef-f6fa-4152-9fc4-04fb93efd02a" />
+
 
 
