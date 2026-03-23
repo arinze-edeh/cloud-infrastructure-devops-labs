@@ -156,6 +156,7 @@ az configure --defaults location=eastus
 <img width="1057" height="467" alt="image" src="https://github.com/user-attachments/assets/eda006d6-f1c7-4d99-9638-1fc75d7a5a54" />
 
 > Confirms subscription identity, tenant ID, and enabled state.
+
 > Terminal confirming `az configure --defaults location=eastus` executed with no error output.
 
 ---
@@ -180,9 +181,7 @@ Resource Group: kml_rg_main-de7d6381a5594d46
 **Screenshot 2: Resource group query output**
 > Terminal showing `echo "Resource Group: $RG"` resolved to `kml_rg_main-de7d6381a5594d46`.
 
-```
-[ SCREENSHOT PLACEHOLDER: 02_resource_group_echo.png ]
-```
+<img width="1055" height="475" alt="image" src="https://github.com/user-attachments/assets/1428b368-8b77-4059-a322-6b488be7aac0" />
 
 ---
 
@@ -1248,7 +1247,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 
-<img width="1055" height="475" alt="image" src="https://github.com/user-attachments/assets/1428b368-8b77-4059-a322-6b488be7aac0" />
+
 <img width="1062" height="872" alt="image" src="https://github.com/user-attachments/assets/9c5a13dd-af35-43ba-ab0a-70a397e9b387" />
 <img width="1062" height="883" alt="image" src="https://github.com/user-attachments/assets/52ca01ad-1f4f-4b2e-8323-f10b84fa375c" />
 <img width="1063" height="883" alt="image" src="https://github.com/user-attachments/assets/177930c2-d3c2-4979-b896-b8c46f5df905" />
