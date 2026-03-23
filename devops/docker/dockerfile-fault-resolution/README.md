@@ -578,7 +578,9 @@ test-container
 
 Docker echoes the container name on successful removal. The container is now fully deleted from Docker's state.
 
-***Screenshot Placeholder: Terminal showing docker rm test-container returning test-container as confirmation of removal***
+***Screenshot: Terminal showing docker rm test-container returning test-container as confirmation of removal***
+
+<img width="1032" height="305" alt="image" src="https://github.com/user-attachments/assets/584a75a7-0875-4a11-bce4-3e1f9dcd3366" />
 
 ---
 
@@ -598,7 +600,9 @@ The second diagnostic attempt was `netstat`, the traditional BSD-era network sta
 
 **What happened:** `netstat` is part of the `net-tools` package, which is considered deprecated on modern Linux distributions and is absent from this minimal environment. A third tool must be tried.
 
-***Screenshot Placeholder: Terminal showing netstat -tlnp returning -bash: netstat: command not found***
+***Screenshot: Terminal showing netstat -tlnp returning -bash: netstat: command not found***
+
+<img width="1032" height="305" alt="image" src="https://github.com/user-attachments/assets/584a75a7-0875-4a11-bce4-3e1f9dcd3366" />
 
 ---
 
@@ -1006,7 +1010,7 @@ Date: March 23, 2026
 
 
 
-<img width="1032" height="305" alt="image" src="https://github.com/user-attachments/assets/584a75a7-0875-4a11-bce4-3e1f9dcd3366" />
+
 <img width="1032" height="348" alt="image" src="https://github.com/user-attachments/assets/3f14bcdd-3f85-4e13-953b-f58160c96183" />
 <img width="1033" height="839" alt="image" src="https://github.com/user-attachments/assets/31f43bee-c290-4e35-9db2-d63cde17efc9" />
 <img width="1032" height="858" alt="image" src="https://github.com/user-attachments/assets/f6dd1214-9d57-4030-ab84-70d56fa634c1" />
