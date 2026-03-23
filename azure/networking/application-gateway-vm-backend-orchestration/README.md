@@ -336,12 +336,10 @@ az network vnet subnet create \
 }
 ```
 
-**Screenshot 7: VM subnet creation JSON response**
+**Screenshot: VM subnet creation JSON response**
 > Output confirming `xfusion-vm-subnet` with `addressPrefix: 10.0.1.0/24`, `networkSecurityGroup` reference populated (confirming NSG was attached), and `provisioningState: Succeeded`.
 
-```
-[ SCREENSHOT PLACEHOLDER: 07_vm_subnet_create_response.png ]
-```
+<img width="1298" height="860" alt="image" src="https://github.com/user-attachments/assets/8968e87f-23f6-4e20-b1d0-38998a4a6ce6" />
 
 ---
 
@@ -1247,7 +1245,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 <img width="1330" height="626" alt="image" src="https://github.com/user-attachments/assets/c0d4856d-a6d3-4c98-bfd0-f588287f98ed" />
 
-<img width="1298" height="860" alt="image" src="https://github.com/user-attachments/assets/8968e87f-23f6-4e20-b1d0-38998a4a6ce6" />
+
 <img width="1294" height="863" alt="image" src="https://github.com/user-attachments/assets/9f4e2790-2853-4f7a-aa68-3c8dd91336b5" />
 <img width="1298" height="701" alt="image" src="https://github.com/user-attachments/assets/ca06e14d-fa51-4b95-828a-f4a20ee5fca0" />
 <img width="1297" height="682" alt="image" src="https://github.com/user-attachments/assets/ab9a01b8-ac18-452a-b229-23accf7c58b2" />
