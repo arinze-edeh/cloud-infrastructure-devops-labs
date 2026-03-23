@@ -1074,12 +1074,11 @@ AGW Public IP: 20.25.49.151
 
 An HTTP `200` confirms the complete traffic path is operational: public internet to AGW public IP (`20.25.49.151`), through the listener (`xfusion-listener`) and routing rule (`xfusion-routing-rule`), to the Nginx instance on the backend VM at `10.0.1.4:80`.
 
-**Screenshot 24: curl HTTP 200 response via AGW public IP**
+**Screenshot: curl HTTP 200 response via AGW public IP**
 > Terminal showing `AGW Public IP: 20.25.49.151` on the first line immediately followed by the `curl` command output returning `200`, confirming successful end-to-end HTTP traffic flow through the Application Gateway.
 
-```
-[ SCREENSHOT PLACEHOLDER: 24_curl_agw_http_200.png ]
-```
+<img width="1297" height="547" alt="image" src="https://github.com/user-attachments/assets/cfb6feee-a52a-4e19-8667-81efb0768cc4" />
+
 
 ---
 
@@ -1207,21 +1206,6 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 ---
 
-## Author
-
-**Deployment completed on:** Mon Mar 23 2026
-**Region:** East US
-**Subscription:** Azure Free Labs
-**Lab window:** 03:34:45 UTC to 04:34:45 UTC
-
----
-
-*This README was authored following FAANG-grade infrastructure documentation standards. All commands, error traces, and resolutions reflect the exact terminal session executed during deployment. Each screenshot placeholder is numbered and labeled to map 1:1 to the specific terminal output it should capture. Replace all placeholders with actual screenshots before publishing to GitHub.*
-
-
-
-
-
 
 
 
@@ -1248,4 +1232,3 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 <img width="1298" height="868" alt="image" src="https://github.com/user-attachments/assets/0483809a-e361-4496-b26f-103bc1528180" />
 <img width="1296" height="655" alt="image" src="https://github.com/user-attachments/assets/1e6cc023-c60a-41bf-b1a7-b875a5013af8" />
 <img width="1303" height="362" alt="image" src="https://github.com/user-attachments/assets/24b3eb83-96eb-4e0e-8cfa-ddc3540fa0fd" />
-<img width="1297" height="547" alt="image" src="https://github.com/user-attachments/assets/cfb6feee-a52a-4e19-8667-81efb0768cc4" />
