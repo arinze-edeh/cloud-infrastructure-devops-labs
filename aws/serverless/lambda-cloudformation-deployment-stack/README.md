@@ -248,7 +248,11 @@ aws cloudformation validate-template \
 
 > **Critical:** The `CAPABILITY_NAMED_IAM` flag is explicitly required because the template creates an IAM role with a custom name (`lambda_execution_role`). AWS enforces this acknowledgement to prevent accidental privilege escalation. This flag must be passed during stack creation.
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing the `validate-template` command with the `Capabilities` array output confirming `CAPABILITY_NAMED_IAM`]**
+**SCREENSHOT:** 
+
+<img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/a52f195a-f479-46fc-9e8b-9cfe463ae52c" />
+
+>Terminal showing the `validate-template` command with the `Capabilities` array output confirming `CAPABILITY_NAMED_IAM`
 
 ---
 
@@ -609,5 +613,5 @@ aws logs delete-log-group \
 
 
 
-<img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/a52f195a-f479-46fc-9e8b-9cfe463ae52c" />
+
 <img width="1035" height="805" alt="image" src="https://github.com/user-attachments/assets/7d200a72-c3eb-4e7b-b22f-2595a78ed93d" />
