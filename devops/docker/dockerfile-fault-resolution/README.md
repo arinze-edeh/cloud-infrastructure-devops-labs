@@ -179,8 +179,6 @@ Change directory to `/opt/docker` where the Dockerfile and build context reside.
 
 No output. Prompt changes to `[steve@stapp02 docker]$` confirming the navigation.
 
-***Screenshot Placeholder: Terminal showing the prompt update to [steve@stapp02 docker]$ after the cd command***
-
 ---
 
 ### Step 4 - Inspect the Directory Structure
@@ -211,7 +209,9 @@ drwxr-xr-x 2 root root 4096 Mar 23 02:00 html
 
 > **Critical finding:** `steve` cannot modify the Dockerfile. Privilege escalation to `root` will be required before applying fixes.
 
-***Screenshot Placeholder: Terminal showing the full ls -la /opt/docker output with permissions, ownership and file sizes for Dockerfile, certs and html entries***
+***Screenshot: Terminal showing the full ls -la /opt/docker output with permissions, ownership and file sizes for Dockerfile, certs and html entries***
+
+<img width="1031" height="516" alt="image" src="https://github.com/user-attachments/assets/0903dbd0-a764-4db6-bce4-2044b0b6b1bc" />
 
 ---
 
@@ -983,7 +983,7 @@ Date: March 23, 2026
 
 
 
-<img width="1031" height="516" alt="image" src="https://github.com/user-attachments/assets/0903dbd0-a764-4db6-bce4-2044b0b6b1bc" />
+
 <img width="1031" height="794" alt="image" src="https://github.com/user-attachments/assets/7ae23057-2961-4560-ab34-28f43fb68469" />
 <img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/cf17cd4e-b740-4f16-8238-59d2c9d0c2e2" />
 <img width="1033" height="732" alt="image" src="https://github.com/user-attachments/assets/fce1ed3c-0516-40e5-8fff-512ce675d8bb" />
