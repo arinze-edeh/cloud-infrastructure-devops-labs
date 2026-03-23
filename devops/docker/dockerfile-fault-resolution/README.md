@@ -301,8 +301,6 @@ The `sudo su -` login shell reset the working directory to `/root`. Navigate bac
 
 Prompt changes to `[root@stapp02 docker]#`.
 
-***Screenshot Placeholder: Terminal showing the cd /opt/docker command and prompt update to [root@stapp02 docker]#***
-
 ---
 
 ### Step 8 - Fix Instruction 1: Replace `IMAGE` with `FROM`
@@ -320,8 +318,6 @@ Use `sed` in-place substitution (`-i`) to replace the invalid `IMAGE` keyword wi
 > * `FROM ` - replaces with `FROM ` preserving the space before `httpd:2.4.43`
 > * Without the `^` anchor, a line containing the word `IMAGE` anywhere would also be matched, risking unintended changes
 
-***Screenshot Placeholder: Terminal showing the sed -i command for IMAGE to FROM executing silently with no error output***
-
 ---
 
 ### Step 9 - Fix Instruction 2: Replace `ADD sed` with `RUN sed`
@@ -336,7 +332,9 @@ Use a second `sed` in-place substitution to replace all four occurrences of `ADD
 
 > **Why this is safe for `COPY` lines:** The `^ADD sed` pattern specifically matches lines starting with `ADD sed`. The three `COPY` lines begin with `COPY`, not `ADD`, and are completely unaffected. The three valid `COPY` instructions remain unchanged.
 
-***Screenshot Placeholder: Terminal showing the sed -i command for ADD sed to RUN sed executing silently***
+***Screenshot: Terminal showing the sed -i command for ADD sed to RUN sed executing silently***
+
+<img width="1033" height="732" alt="image" src="https://github.com/user-attachments/assets/fce1ed3c-0516-40e5-8fff-512ce675d8bb" />
 
 ---
 
@@ -991,7 +989,7 @@ Date: March 23, 2026
 
 
 
-<img width="1033" height="732" alt="image" src="https://github.com/user-attachments/assets/fce1ed3c-0516-40e5-8fff-512ce675d8bb" />
+
 <img width="1039" height="387" alt="image" src="https://github.com/user-attachments/assets/b87daacd-26cb-4491-a9bb-ac2536dbd5af" />
 <img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/bafede78-6375-4169-9a14-14917d6f2764" />
 <img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/1f289a07-8c76-492c-8c22-7d47b376892f" />
