@@ -869,8 +869,10 @@ aws iam get-role --role-name lambda_execution_role \
 ]
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-17-iam-get-role.png`
+> **SCREENSHOT**
+
+<img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/8c327785-027d-4693-a08f-bc149a5998a8" />
+
 > *Terminal showing `iam get-role` returning `["lambda_execution_role", "arn:aws:iam::691595780564:role/lambda_execution_role"]`*
 
 ---
@@ -1435,7 +1437,6 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/8c327785-027d-4693-a08f-bc149a5998a8" />
 <img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/d6a63ad7-ec35-49e3-a137-e06cd6a0d3e2" />
 <img width="1033" height="865" alt="image" src="https://github.com/user-attachments/assets/aa4984d1-498e-4b43-a1ff-d20502228477" />
 <img width="1039" height="859" alt="image" src="https://github.com/user-attachments/assets/02e96455-daa7-49ec-bd7d-d5324a7a1f2d" />
