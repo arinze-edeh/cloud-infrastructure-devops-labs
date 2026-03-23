@@ -48,7 +48,6 @@
 - [Best Practices](#best-practices)
 - [Lessons Learned](#lessons-learned)
 - [Security Considerations](#security-considerations)
-- [Author](#author)
 
 ---
 
@@ -1436,13 +1435,14 @@ In every successful invocation output, the Lambda return value contained the ful
 
 ---
 
-## Author
 
 Region: `us-east-1`
+
 Account: `691595780564`
+
 Stack: `nautilus-priority-stack`
+
 Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priority-stack/059048a0-2596-11f1-ac12-0eea9c6c1601`
 
----
 
 *Built with AWS CloudFormation, Amazon SQS, Amazon SNS, AWS Lambda, and Python 3.12*
