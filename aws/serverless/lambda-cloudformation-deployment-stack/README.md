@@ -392,7 +392,12 @@ REPORT RequestId: 3d3edf59-17a7-4491-b493-47533c6489b7  Duration: 1.88 ms  Bille
 
 > **Log Decoding:** `--log-type Tail` returns the last 4 KB of execution logs as a base64-encoded string in the API response. Piping through `base64 --decode` renders it human-readable. This is especially useful in environments without direct CloudWatch Logs access.
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing the full decoded log output including `START`, the `Welcome to KKE AWS Labs!` print statement, `END`, and the `REPORT` line with duration metrics]**
+**SCREENSHOT:** 
+
+
+<img width="1035" height="805" alt="image" src="https://github.com/user-attachments/assets/7d200a72-c3eb-4e7b-b22f-2595a78ed93d" />
+
+>Terminal showing the full decoded log output including `START`, the `Welcome to KKE AWS Labs!` print statement, `END`, and the `REPORT` line with duration metrics]**
 
 ---
 
@@ -411,7 +416,12 @@ cat output.json
 
 > **Contract Verification:** The response payload is the Lambda function contract. `statusCode: 200` and the exact body string `Welcome to KKE AWS Labs!` must match requirements verbatim. Any deviation (typo, case mismatch, extra whitespace) is a functional defect.
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing `cat output.json` with the exact JSON payload `{"statusCode": 200, "body": "Welcome to KKE AWS Labs!"}`]**
+**SCREENSHOT:** 
+
+
+<img width="1035" height="805" alt="image" src="https://github.com/user-attachments/assets/7d200a72-c3eb-4e7b-b22f-2595a78ed93d" />
+
+>Terminal showing `cat output.json` with the exact JSON payload `{"statusCode": 200, "body": "Welcome to KKE AWS Labs!"}`]**
 
 ---
 
@@ -619,10 +629,3 @@ aws logs delete-log-group \
 | Template Path | `/root/devops-lambda.yml` |
 
 ---
-
-
-
-
-
-
-
