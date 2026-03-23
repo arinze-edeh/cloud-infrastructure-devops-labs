@@ -714,8 +714,10 @@ aws cloudformation validate-template \
 
 `CapabilitiesReason` now reads `AWS::IAM::ManagedPolicy` instead of `AWS::IAM::Role` as in the first validate. This confirms the template structure has changed correctly -- the role no longer holds inline policies; the managed policy resource is now the named IAM resource driving the capability flag.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-12-second-validate-managedpolicy.png`
+> **SCREENSHOT**
+
+<img width="1032" height="506" alt="image" src="https://github.com/user-attachments/assets/78ad6644-8238-4ffb-b7ee-0d489c8d1187" />
+
 > *Terminal showing the second `validate-template` returning `CapabilitiesReason: [AWS::IAM::ManagedPolicy]` -- compare to screenshot-06 which showed `[AWS::IAM::Role]`*
 
 ---
@@ -1429,7 +1431,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1032" height="506" alt="image" src="https://github.com/user-attachments/assets/78ad6644-8238-4ffb-b7ee-0d489c8d1187" />
+
 <img width="1031" height="650" alt="image" src="https://github.com/user-attachments/assets/6194a704-a4e0-4063-8d3a-9d82dc651f12" />
 <img width="1036" height="553" alt="image" src="https://github.com/user-attachments/assets/4020e4b7-ae63-4a0a-9606-37251f241e30" />
 <img width="1031" height="747" alt="image" src="https://github.com/user-attachments/assets/a77c1fc6-e655-4e79-8273-ebf0cfe4b9c5" />
