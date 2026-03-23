@@ -999,8 +999,11 @@ The environment runs AWS CLI v1. The flag `--cli-binary-format raw-in-base64-out
 
 Remove `--cli-binary-format raw-in-base64-out` entirely. Remove `--payload '{}'` (not required for an empty invocation on CLI v1). Pass the output file path as the sole positional argument at the end of the command -- this is the CLI v1 syntax for `lambda invoke`.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-19-error4-all-four-cli-v2-unknown-options.png`
+> **SCREENSHOT**
+
+<img width="1033" height="865" alt="image" src="https://github.com/user-attachments/assets/aa4984d1-498e-4b43-a1ff-d20502228477" />
+<img width="1039" height="859" alt="image" src="https://github.com/user-attachments/assets/02e96455-daa7-49ec-bd7d-d5324a7a1f2d" />
+
 > *Terminal showing all four failed `lambda invoke` attempts back-to-back, each printing the AWS CLI version 2 upgrade notice followed by `Unknown options: --cli-binary-format, /tmp/outN.json` for N=1, 2, 3, 4*
 
 ---
@@ -1440,8 +1443,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1033" height="865" alt="image" src="https://github.com/user-attachments/assets/aa4984d1-498e-4b43-a1ff-d20502228477" />
-<img width="1039" height="859" alt="image" src="https://github.com/user-attachments/assets/02e96455-daa7-49ec-bd7d-d5324a7a1f2d" />
+
 <img width="1033" height="857" alt="image" src="https://github.com/user-attachments/assets/64a8da7b-9c74-43a7-945f-859d7447f31e" />
 <img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/4390a804-60c5-4823-a6b8-d52ac0b858c9" />
 <img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/5f2a8652-efe0-4574-ad3f-aedc7b7232e2" />
