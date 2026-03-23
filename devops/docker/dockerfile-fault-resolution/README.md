@@ -376,7 +376,9 @@ Use `cat -n` to display the Dockerfile with line numbers to confirm all five bro
 * Lines 11, 13, 15: `COPY` - unchanged and valid
 * No `IMAGE` or `ADD sed` directives remain anywhere
 
-***Screenshot Placeholder: Terminal showing the full cat -n /opt/docker/Dockerfile output with all 15 numbered lines and all instructions showing as corrected***
+***Screenshot: Terminal showing the full cat -n /opt/docker/Dockerfile output with all 15 numbered lines and all instructions showing as corrected***
+
+<img width="1039" height="387" alt="image" src="https://github.com/user-attachments/assets/b87daacd-26cb-4491-a9bb-ac2536dbd5af" />
 
 ---
 
@@ -990,7 +992,7 @@ Date: March 23, 2026
 
 
 
-<img width="1039" height="387" alt="image" src="https://github.com/user-attachments/assets/b87daacd-26cb-4491-a9bb-ac2536dbd5af" />
+
 <img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/bafede78-6375-4169-9a14-14917d6f2764" />
 <img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/1f289a07-8c76-492c-8c22-7d47b376892f" />
 <img width="1033" height="317" alt="image" src="https://github.com/user-attachments/assets/64140f7d-9fdd-428f-87dc-ec9f87ea56cc" />
