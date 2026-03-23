@@ -250,12 +250,10 @@ az network nsg rule create \
 }
 ```
 
-**Screenshot 4: NSG rule create JSON response**
+**Screenshot: NSG rule create JSON response**
 > `az network nsg rule create` output confirming `Allow-HTTP` with priority 100, protocol Tcp, direction Inbound, destinationPortRange 80, access Allow, and provisioningState Succeeded.
 
-```
-[ SCREENSHOT PLACEHOLDER: 04_nsg_rule_create_response.png ]
-```
+<img width="1066" height="735" alt="image" src="https://github.com/user-attachments/assets/aea89e13-bf2d-4b1c-8e46-db13fa583fbc" />
 
 ---
 
@@ -1249,7 +1247,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 
-<img width="1066" height="735" alt="image" src="https://github.com/user-attachments/assets/aea89e13-bf2d-4b1c-8e46-db13fa583fbc" />
+
 <img width="1329" height="596" alt="image" src="https://github.com/user-attachments/assets/52e04450-4d06-408b-890c-9d3f8883d2ec" />
 <img width="1330" height="626" alt="image" src="https://github.com/user-attachments/assets/c0d4856d-a6d3-4c98-bfd0-f588287f98ed" />
 <img width="1298" height="602" alt="image" src="https://github.com/user-attachments/assets/b9513bb6-ff81-44f9-b581-2f7716edec6c" />
