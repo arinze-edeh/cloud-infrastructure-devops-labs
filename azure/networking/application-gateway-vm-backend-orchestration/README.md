@@ -518,12 +518,10 @@ unrecognized arguments: --os-disk-sku Standard_LRS
 
 **Resolution:** Replace `--os-disk-sku Standard_LRS` with `--storage-sku Standard_LRS` and re-run. See Step 13.
 
-**Screenshot 12: VM create error - unrecognized --os-disk-sku argument**
+**Screenshot: VM create error - unrecognized --os-disk-sku argument**
 > Terminal showing the `az vm create` command with `--os-disk-sku Standard_LRS` and the resulting `unrecognized arguments: --os-disk-sku Standard_LRS` error message from the Azure CLI.
 
-```
-[ SCREENSHOT PLACEHOLDER: 12_vm_create_os_disk_sku_error.png ]
-```
+<img width="1294" height="617" alt="image" src="https://github.com/user-attachments/assets/c2a9b852-1f76-4c85-b751-1d0b7cde4abc" />
 
 ---
 
@@ -1239,7 +1237,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 
-<img width="1294" height="617" alt="image" src="https://github.com/user-attachments/assets/c2a9b852-1f76-4c85-b751-1d0b7cde4abc" />
+
 <img width="1297" height="866" alt="image" src="https://github.com/user-attachments/assets/478a28f1-db91-4878-b915-bf88a9d7e872" />
 <img width="1292" height="722" alt="image" src="https://github.com/user-attachments/assets/801c967d-3b42-45df-a4fe-09643136ee56" />
 <img width="1303" height="860" alt="image" src="https://github.com/user-attachments/assets/23e2b348-15b5-43fe-8567-b5fb1a829f55" />
