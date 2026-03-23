@@ -215,7 +215,12 @@ cat /root/devops-lambda.yml
 
 > **Pro Tip:** Always use a heredoc with `'EOF'` (single-quoted) when writing YAML via the CLI. This prevents shell interpolation of `$` characters, `!` exclamation marks, and backticks that are common in CloudFormation templates.
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing the `cat /root/devops-lambda.yml` output with the full template content rendered correctly]**
+**SCREENSHOTS:** 
+
+<img width="1030" height="865" alt="image" src="https://github.com/user-attachments/assets/d98c3789-567a-4f5f-97f3-426e8b189d60" />
+<img width="1031" height="854" alt="image" src="https://github.com/user-attachments/assets/b58d6ec7-3cbc-4237-aa9d-4ede1e18fe4c" />
+
+>Terminal showing the `cat /root/devops-lambda.yml` output with the full template content rendered correctly]
 
 ---
 
@@ -603,7 +608,6 @@ aws logs delete-log-group \
 
 
 
-<img width="1030" height="865" alt="image" src="https://github.com/user-attachments/assets/d98c3789-567a-4f5f-97f3-426e8b189d60" />
-<img width="1031" height="854" alt="image" src="https://github.com/user-attachments/assets/b58d6ec7-3cbc-4237-aa9d-4ede1e18fe4c" />
+
 <img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/a52f195a-f479-46fc-9e8b-9cfe463ae52c" />
 <img width="1035" height="805" alt="image" src="https://github.com/user-attachments/assets/7d200a72-c3eb-4e7b-b22f-2595a78ed93d" />
