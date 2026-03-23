@@ -47,7 +47,6 @@
 * [Validation Matrix](#validation-matrix)
 * [Best Practices](#best-practices)
 * [Lessons Learned](#lessons-learned)
-* [References](#references)
 
 ---
 
@@ -791,7 +790,9 @@ ttyd
 
 The process is named `ttyd`.
 
-***Screenshot Placeholder: Terminal showing cat /proc/66/comm returning ttyd***
+***Screenshot: Terminal showing cat /proc/66/comm returning ttyd***
+
+<img width="1394" height="428" alt="image" src="https://github.com/user-attachments/assets/cca1d0d3-2c18-4043-8ffd-aecbb970ff0f" />
 
 ---
 
@@ -822,7 +823,9 @@ Read the complete invocation command for PID `66`. In `/proc/<PID>/cmdline`, arg
 
 > **Critical finding:** This is the Stratos DC lab platform's own browser-based terminal service. `ttyd` is started at PID `66` early in boot and is hardcoded to port `8080`. It is the process that provides the web terminal used to interact with this server through the lab UI. Terminating it would disconnect the browser session. It is a reserved platform service and must not be killed.
 
-***Screenshot Placeholder: Terminal showing cat /proc/66/cmdline piped to tr showing the full ttyd invocation with -p 8080 clearly visible***
+***Screenshot: Terminal showing cat /proc/66/cmdline piped to tr showing the full ttyd invocation with -p 8080 clearly visible***
+
+<img width="1394" height="428" alt="image" src="https://github.com/user-attachments/assets/cca1d0d3-2c18-4043-8ffd-aecbb970ff0f" />
 
 ---
 
@@ -850,7 +853,9 @@ Pid:    66
 
 Port `8080` on host `stapp02` is permanently occupied by the `ttyd` platform terminal service (PID 66). The container cannot be mapped to host port `8080` in this environment without terminating `ttyd`. As this is a platform service outside the scope of the task, no further action is taken. The primary deliverable, building `nautilus-image`, was completed successfully in Step 11.
 
-***Screenshot Placeholder: Terminal showing cat /proc/66/status grepped output with Name ttyd, State S sleeping, and Pid 66***
+***Screenshot: Terminal showing cat /proc/66/status grepped output with Name ttyd, State S sleeping, and Pid 66***
+
+<img width="1394" height="428" alt="image" src="https://github.com/user-attachments/assets/cca1d0d3-2c18-4043-8ffd-aecbb970ff0f" />
 
 ---
 
@@ -873,7 +878,10 @@ thor@jump-host ~$
 2. Second `exit` closes the SSH session to `stapp02`
 3. The terminal returns to `thor@jump-host ~$`, confirming full disconnection
 
-***Screenshot Placeholder: Terminal showing the two exit commands, the two logout messages, the Connection to stapp02 closed message, and the return to the jump-host prompt***
+***Screenshot: Terminal showing the two exit commands, the two logout messages, the Connection to stapp02 closed message, and the return to the jump-host prompt***
+
+<img width="1175" height="554" alt="image" src="https://github.com/user-attachments/assets/74c6f8cc-2779-4640-bc5d-af43115f11b2" />
+
 
 ---
 
@@ -1000,35 +1008,3 @@ The task required fixing the Dockerfile and building the image. Both were achiev
 * [iproute2 `ss` Command Reference](https://man7.org/linux/man-pages/man8/ss.8.html)
 
 ---
-
-## Author
-
-**Nautilus DevOps Team**
-Infrastructure: Stratos DC
-Server: Application Server 2 (`stapp02`)
-Performed by: `steve` (escalated to `root` for file modification)
-Accessed via: Jump Host (`thor@jump-host`)
-Date: March 23, 2026
-
----
-
-> **Disclaimer:** This runbook documents a specific incident resolution within the Nautilus DevOps lab environment at Stratos DC. Infrastructure details including IP addresses, usernames, and passwords are environment-specific lab values. Never store production credentials in documentation or version control systems.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1394" height="428" alt="image" src="https://github.com/user-attachments/assets/cca1d0d3-2c18-4043-8ffd-aecbb970ff0f" />
-<img width="1175" height="554" alt="image" src="https://github.com/user-attachments/assets/74c6f8cc-2779-4640-bc5d-af43115f11b2" />
-
-
