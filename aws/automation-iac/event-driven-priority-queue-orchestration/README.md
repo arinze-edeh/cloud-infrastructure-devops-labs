@@ -1262,8 +1262,10 @@ cat /tmp/out5.json
 
 StatusCode 200 with no `FunctionError`. `Low Priority message 2` confirmed processed and deleted. The `MessageId` `57a7fb2a-d0f7-54b9-9b9d-991386e55ba3` matches the fourth publish from Step 18. All four messages have been processed in strict priority order. The system is fully operational.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-26-invocation-5-low-priority-msg2-success.png`
+> **SCREENSHOT**
+
+<img width="1032" height="874" alt="image" src="https://github.com/user-attachments/assets/18c096de-2a66-4bef-91f4-d31754f34aac" />
+
 > *Terminal showing invocation 5 returning `StatusCode: 200` with no `FunctionError`, and `out5.json` displaying the full SNS envelope with `"Message" : "Low Priority message 2"`, `"priority" : "low"`, and `MessageId` matching the original publish*
 
 ---
@@ -1432,6 +1434,6 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 <img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/4390a804-60c5-4823-a6b8-d52ac0b858c9" />
 <img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/5f2a8652-efe0-4574-ad3f-aedc7b7232e2" />
 <img width="1036" height="867" alt="image" src="https://github.com/user-attachments/assets/4d2652fd-9801-44af-aee7-610361ed41a8" />
-<img width="1032" height="874" alt="image" src="https://github.com/user-attachments/assets/18c096de-2a66-4bef-91f4-d31754f34aac" />
+
 
 
