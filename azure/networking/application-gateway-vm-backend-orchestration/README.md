@@ -367,12 +367,10 @@ az network vnet subnet create \
 
 > **Important:** Azure Application Gateway subnets must NOT have an NSG attached unless the NSG explicitly allows AGW management traffic on ports `65200-65535`. Omitting the NSG on this subnet avoids health probe failures and provisioning errors.
 
-**Screenshot 8: AGW subnet creation JSON response**
+**Screenshot: AGW subnet creation JSON response**
 > Output confirming `xfusion-agw-subnet` with `addressPrefix: 10.0.2.0/24`, no `networkSecurityGroup` field present, and `provisioningState: Succeeded`.
 
-```
-[ SCREENSHOT PLACEHOLDER: 08_agw_subnet_create_response.png ]
-```
+<img width="1294" height="863" alt="image" src="https://github.com/user-attachments/assets/9f4e2790-2853-4f7a-aa68-3c8dd91336b5" />
 
 ---
 
@@ -396,12 +394,10 @@ AddressPrefix    Name                ProvisioningState    ResourceGroup
 10.0.2.0/24      xfusion-agw-subnet  Succeeded            kml_rg_main-de7d6381a5594d46
 ```
 
-**Screenshot 9: Subnet list table output**
+**Screenshot: Subnet list table output**
 > Terminal showing both `xfusion-vm-subnet` (`10.0.1.0/24`) and `xfusion-agw-subnet` (`10.0.2.0/24`) with `ProvisioningState: Succeeded` for both entries.
 
-```
-[ SCREENSHOT PLACEHOLDER: 09_subnet_list_table.png ]
-```
+<img width="1294" height="863" alt="image" src="https://github.com/user-attachments/assets/9f4e2790-2853-4f7a-aa68-3c8dd91336b5" />
 
 ---
 
@@ -1246,7 +1242,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 <img width="1330" height="626" alt="image" src="https://github.com/user-attachments/assets/c0d4856d-a6d3-4c98-bfd0-f588287f98ed" />
 
 
-<img width="1294" height="863" alt="image" src="https://github.com/user-attachments/assets/9f4e2790-2853-4f7a-aa68-3c8dd91336b5" />
+
 <img width="1298" height="701" alt="image" src="https://github.com/user-attachments/assets/ca06e14d-fa51-4b95-828a-f4a20ee5fca0" />
 <img width="1297" height="682" alt="image" src="https://github.com/user-attachments/assets/ab9a01b8-ac18-452a-b229-23accf7c58b2" />
 <img width="1294" height="617" alt="image" src="https://github.com/user-attachments/assets/c2a9b852-1f76-4c85-b751-1d0b7cde4abc" />
