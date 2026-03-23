@@ -999,7 +999,7 @@ The environment runs AWS CLI v1. The flag `--cli-binary-format raw-in-base64-out
 
 Remove `--cli-binary-format raw-in-base64-out` entirely. Remove `--payload '{}'` (not required for an empty invocation on CLI v1). Pass the output file path as the sole positional argument at the end of the command -- this is the CLI v1 syntax for `lambda invoke`.
 
-> **SCREENSHOT**
+> **SCREENSHOTS**
 
 <img width="1033" height="865" alt="image" src="https://github.com/user-attachments/assets/aa4984d1-498e-4b43-a1ff-d20502228477" />
 <img width="1039" height="859" alt="image" src="https://github.com/user-attachments/assets/02e96455-daa7-49ec-bd7d-d5324a7a1f2d" />
@@ -1045,8 +1045,10 @@ cat /tmp/out1.json
 
 StatusCode 200, no `FunctionError`. The SNS notification envelope is the SQS message body -- the inner `"Message"` field confirms `High Priority message 1` was processed and deleted.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-20-invocation-1-high-priority-msg1.png`
+> **SCREENSHOT**
+
+<img width="1033" height="857" alt="image" src="https://github.com/user-attachments/assets/64a8da7b-9c74-43a7-945f-859d7447f31e" />
+
 > *Terminal showing invocation 1 returning `StatusCode: 200` with no `FunctionError`, and `out1.json` displaying the SNS envelope with `"Message" : "High Priority message 1"` and `"priority" : "high"`*
 
 ---
@@ -1086,8 +1088,10 @@ cat /tmp/out2.json
 
 StatusCode 200. `High Priority message 2` confirmed deleted. The high-priority queue is now empty.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-21-invocation-2-high-priority-msg2.png`
+> **SCREENSHOT**
+
+<img width="1033" height="857" alt="image" src="https://github.com/user-attachments/assets/64a8da7b-9c74-43a7-945f-859d7447f31e" />
+
 > *Terminal showing invocation 2 returning `StatusCode: 200` and `out2.json` displaying the SNS envelope with `"Message" : "High Priority message 2"` -- the high-priority queue is now fully drained*
 
 ---
@@ -1444,7 +1448,6 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1033" height="857" alt="image" src="https://github.com/user-attachments/assets/64a8da7b-9c74-43a7-945f-859d7447f31e" />
 <img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/4390a804-60c5-4823-a6b8-d52ac0b858c9" />
 <img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/5f2a8652-efe0-4574-ad3f-aedc7b7232e2" />
 <img width="1036" height="867" alt="image" src="https://github.com/user-attachments/assets/4d2652fd-9801-44af-aee7-610361ed41a8" />
