@@ -153,7 +153,11 @@ aws sts get-caller-identity
 
 > **Checkpoint:** Confirm the `Account` ID and `Arn` match your target environment before proceeding. A mismatch here means your CLI profile is pointed at the wrong account.
 
-**[SCREENSHOT PLACEHOLDER: Terminal output showing `aws sts get-caller-identity` with Account ID and ARN clearly visible]**
+**SCREENSHOT:** 
+
+<img width="1033" height="432" alt="image" src="https://github.com/user-attachments/assets/fca053c2-a873-4cb4-b384-6bfccc7290a2" />
+
+>Terminal output showing `aws sts get-caller-identity` with Account ID and ARN clearly visible
 
 ---
 
@@ -598,7 +602,7 @@ aws logs delete-log-group \
 
 
 
-<img width="1033" height="432" alt="image" src="https://github.com/user-attachments/assets/fca053c2-a873-4cb4-b384-6bfccc7290a2" />
+
 <img width="1030" height="865" alt="image" src="https://github.com/user-attachments/assets/d98c3789-567a-4f5f-97f3-426e8b189d60" />
 <img width="1031" height="854" alt="image" src="https://github.com/user-attachments/assets/b58d6ec7-3cbc-4237-aa9d-4ede1e18fe4c" />
 <img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/a52f195a-f479-46fc-9e8b-9cfe463ae52c" />
