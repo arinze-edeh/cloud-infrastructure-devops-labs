@@ -1229,8 +1229,12 @@ aws lambda update-function-configuration \
 }
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-24-update-function-configuration-timeout-10.png`
+> **SCREENSHOT**
+
+<img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/5f2a8652-efe0-4574-ad3f-aedc7b7232e2" />
+<img width="1036" height="867" alt="image" src="https://github.com/user-attachments/assets/4d2652fd-9801-44af-aee7-610361ed41a8" />
+
+
 > *Terminal showing `update-function-configuration` returning the full function configuration JSON with `"Timeout": 10` and `"LastUpdateStatus": "InProgress"`*
 
 ---
@@ -1451,10 +1455,6 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-
-
-<img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/5f2a8652-efe0-4574-ad3f-aedc7b7232e2" />
-<img width="1036" height="867" alt="image" src="https://github.com/user-attachments/assets/4d2652fd-9801-44af-aee7-610361ed41a8" />
 
 
 
