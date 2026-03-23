@@ -1131,8 +1131,10 @@ cat /tmp/out3.json
 
 StatusCode 200. Lambda correctly fell back to the low-priority queue after finding the high-priority queue empty. `Low Priority message 1` confirmed deleted. Priority ordering is validated: both high-priority messages were exhausted before any low-priority message was processed.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-22-invocation-3-low-priority-msg1.png`
+> **SCREENSHOT**
+
+<img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/4390a804-60c5-4823-a6b8-d52ac0b858c9" />
+
 > *Terminal showing invocation 3 returning `StatusCode: 200` and `out3.json` with `"Message" : "Low Priority message 1"` and `"priority" : "low"` -- confirming the fallback from empty high-priority queue to low-priority queue*
 
 ---
@@ -1448,7 +1450,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/4390a804-60c5-4823-a6b8-d52ac0b858c9" />
+
 <img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/5f2a8652-efe0-4574-ad3f-aedc7b7232e2" />
 <img width="1036" height="867" alt="image" src="https://github.com/user-attachments/assets/4d2652fd-9801-44af-aee7-610361ed41a8" />
 
