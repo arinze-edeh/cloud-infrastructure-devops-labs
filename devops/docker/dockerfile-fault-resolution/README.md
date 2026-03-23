@@ -285,7 +285,9 @@ Enter `Am3ric@` when prompted. The prompt changes to `[root@stapp02 ~]#`.
 
 > **Why `sudo su -` and not just `sudo`:** `sudo su -` creates a full root login shell with root's complete environment. The `~` in the resulting prompt confirms the working directory has reset to `/root`. This is intentional and documented. It means the next step must re-navigate to `/opt/docker`.
 
-***Screenshot Placeholder: Terminal showing the sudo lecture text, the password prompt, and the successful root prompt [root@stapp02 ~]#***
+***Screenshot: Terminal showing the sudo lecture text, the password prompt, and the successful root prompt [root@stapp02 ~]#***
+
+<img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/cf17cd4e-b740-4f16-8238-59d2c9d0c2e2" />
 
 ---
 
@@ -988,7 +990,7 @@ Date: March 23, 2026
 
 
 
-<img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/cf17cd4e-b740-4f16-8238-59d2c9d0c2e2" />
+
 <img width="1033" height="732" alt="image" src="https://github.com/user-attachments/assets/fce1ed3c-0516-40e5-8fff-512ce675d8bb" />
 <img width="1039" height="387" alt="image" src="https://github.com/user-attachments/assets/b87daacd-26cb-4491-a9bb-ac2536dbd5af" />
 <img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/bafede78-6375-4169-9a14-14917d6f2764" />
