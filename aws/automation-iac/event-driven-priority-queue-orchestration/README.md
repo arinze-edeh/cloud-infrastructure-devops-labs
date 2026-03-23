@@ -374,8 +374,10 @@ This is a **false negative**. The template is not broken -- the wrong tool was u
 
 Use `aws cloudformation validate-template` for all CloudFormation YAML validation. The AWS CLI ships with a parser that natively understands all CloudFormation intrinsic tags. Python `yaml` parsers are only appropriate for standard YAML files that contain no AWS-specific tags.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-05-error1-python-yaml-constructorerror.png`
+> **SCREENSHOT**
+
+<img width="1033" height="559" alt="image" src="https://github.com/user-attachments/assets/963508d5-4fd8-4b0a-a39b-edee32720acd" />
+
 > *Terminal showing the full Python traceback with the final line `yaml.constructor.ConstructorError: could not determine a constructor for the tag '!Ref' in "/root/nautilus-priority-stack.yml", line 162, column 12`*
 
 ---
@@ -1406,7 +1408,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1033" height="559" alt="image" src="https://github.com/user-attachments/assets/963508d5-4fd8-4b0a-a39b-edee32720acd" />
+
 <img width="1034" height="264" alt="image" src="https://github.com/user-attachments/assets/8e006760-7c8e-4efe-ab81-91e5a2660154" />
 <img width="1037" height="458" alt="image" src="https://github.com/user-attachments/assets/5e669cf2-afb0-4d01-a3dc-8f9d356f0ef4" />
 <img width="1031" height="361" alt="image" src="https://github.com/user-attachments/assets/6dc4aafe-c3ca-42de-b6a6-98c976aa03d1" />
