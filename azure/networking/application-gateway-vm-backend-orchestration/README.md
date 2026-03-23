@@ -764,12 +764,10 @@ az network application-gateway create \
 
 **Root cause:** A subscription-level Azure Policy (`azure_application_gateway-tpm`) restricts AGW deployments to `Basic` SKU only. `Standard_v2` is explicitly denied.
 
-**Screenshot 18: AGW Standard_v2 RequestDisallowedByPolicy error**
+**Screenshot: AGW Standard_v2 RequestDisallowedByPolicy error**
 > Terminal showing the full `RequestDisallowedByPolicy` JSON error response for the `Standard_v2` AGW deployment attempt, including the policy definition ID, enforcement reason, and `policyDefinitionEffect: deny`.
 
-```
-[ SCREENSHOT PLACEHOLDER: 18_agw_standard_v2_policy_error.png ]
-```
+<img width="1297" height="823" alt="image" src="https://github.com/user-attachments/assets/bc1b417b-f53c-4f16-8c75-e2f97c985526" />
 
 ---
 
@@ -1212,7 +1210,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 <img width="1303" height="860" alt="image" src="https://github.com/user-attachments/assets/23e2b348-15b5-43fe-8567-b5fb1a829f55" />
 
-<img width="1297" height="823" alt="image" src="https://github.com/user-attachments/assets/bc1b417b-f53c-4f16-8c75-e2f97c985526" />
+
 <img width="1299" height="866" alt="image" src="https://github.com/user-attachments/assets/82f14e2f-790c-4244-a8a0-d0bf12d71c35" />
 <img width="1299" height="431" alt="image" src="https://github.com/user-attachments/assets/10e6d9ff-0452-40c1-8e47-cd7673991a78" />
 <img width="1292" height="679" alt="image" src="https://github.com/user-attachments/assets/caa78f80-e534-48d4-ba67-84153fb0817f" />
