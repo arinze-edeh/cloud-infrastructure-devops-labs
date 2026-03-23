@@ -305,12 +305,10 @@ az network vnet create \
 }
 ```
 
-**Screenshot 6: VNet creation JSON response**
+**Screenshot: VNet creation JSON response**
 > `az network vnet create` output showing `xfusion-vnet` with `addressPrefixes: ["10.0.0.0/16"]`, `provisioningState: Succeeded`, and an empty `subnets` array confirming no subnets exist yet.
 
-```
-[ SCREENSHOT PLACEHOLDER: 06_vnet_create_response.png ]
-```
+<img width="1298" height="602" alt="image" src="https://github.com/user-attachments/assets/b9513bb6-ff81-44f9-b581-2f7716edec6c" />
 
 ---
 
@@ -1248,7 +1246,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 <img width="1330" height="626" alt="image" src="https://github.com/user-attachments/assets/c0d4856d-a6d3-4c98-bfd0-f588287f98ed" />
-<img width="1298" height="602" alt="image" src="https://github.com/user-attachments/assets/b9513bb6-ff81-44f9-b581-2f7716edec6c" />
+
 <img width="1298" height="860" alt="image" src="https://github.com/user-attachments/assets/8968e87f-23f6-4e20-b1d0-38998a4a6ce6" />
 <img width="1294" height="863" alt="image" src="https://github.com/user-attachments/assets/9f4e2790-2853-4f7a-aa68-3c8dd91336b5" />
 <img width="1298" height="701" alt="image" src="https://github.com/user-attachments/assets/ca06e14d-fa51-4b95-828a-f4a20ee5fca0" />
