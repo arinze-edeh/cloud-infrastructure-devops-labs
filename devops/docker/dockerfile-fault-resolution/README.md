@@ -253,7 +253,10 @@ COPY html/index.html /usr/local/apache2/htdocs/
 | 7 | `ADD sed` | `RUN sed` |
 | 9 | `ADD sed` | `RUN sed` |
 
-***Screenshot Placeholder: Terminal showing the full cat /opt/docker/Dockerfile output with the broken IMAGE keyword on the first line and all four ADD sed lines visible***
+***Screenshot: Terminal showing the full cat /opt/docker/Dockerfile output with the broken IMAGE keyword on the first line and all four ADD sed lines visible***
+
+
+<img width="1031" height="794" alt="image" src="https://github.com/user-attachments/assets/7ae23057-2961-4560-ab34-28f43fb68469" />
 
 ---
 
@@ -984,7 +987,7 @@ Date: March 23, 2026
 
 
 
-<img width="1031" height="794" alt="image" src="https://github.com/user-attachments/assets/7ae23057-2961-4560-ab34-28f43fb68469" />
+
 <img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/cf17cd4e-b740-4f16-8238-59d2c9d0c2e2" />
 <img width="1033" height="732" alt="image" src="https://github.com/user-attachments/assets/fce1ed3c-0516-40e5-8fff-512ce675d8bb" />
 <img width="1039" height="387" alt="image" src="https://github.com/user-attachments/assets/b87daacd-26cb-4491-a9bb-ac2536dbd5af" />
