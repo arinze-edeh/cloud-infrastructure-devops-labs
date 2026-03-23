@@ -656,7 +656,9 @@ The Linux kernel exposes all active TCP connections in `/proc/net/tcp` (IPv4) an
 
 The socket inode `2932112603` is the key. This inode number appears as a symlink target in the file descriptor directory of the owning process under `/proc/<PID>/fd/`.
 
-***Screenshot Placeholder: Terminal showing the grep -r 1F90 /proc/net/tcp output with the full hex encoded TCP entry line***
+***Screenshot: Terminal showing the grep -r 1F90 /proc/net/tcp output with the full hex encoded TCP entry line***
+
+<img width="1013" height="173" alt="image" src="https://github.com/user-attachments/assets/4efae4b6-5da6-478b-adb2-2e021ef9d8b2" />
 
 ---
 
