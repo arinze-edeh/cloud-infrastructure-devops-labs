@@ -1013,12 +1013,11 @@ Press `Ctrl+C` once `Succeeded` is confirmed.
 
 > **Note:** Do not proceed to Steps 23-25 while the state shows `Updating`. The AGW will not route traffic until `operationalState` transitions from `Stopped` to `Running`, which occurs when `provisioningState` reaches `Succeeded`.
 
-**Screenshot 22: watch provisioningState output showing Succeeded**
+**Screenshots: watch provisioningState output showing Succeeded**
 > Terminal running `watch` with the repeated query showing `provisioningState` value `Succeeded`, confirming the AGW has fully provisioned and is ready to route traffic.
 
-```
-[ SCREENSHOT PLACEHOLDER: 22_agw_provisioning_succeeded.png ]
-```
+<img width="1298" height="868" alt="image" src="https://github.com/user-attachments/assets/0483809a-e361-4496-b26f-103bc1528180" />
+<img width="1296" height="655" alt="image" src="https://github.com/user-attachments/assets/1e6cc023-c60a-41bf-b1a7-b875a5013af8" />
 
 ---
 
@@ -1221,6 +1220,5 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 <img width="1295" height="865" alt="image" src="https://github.com/user-attachments/assets/9f655645-26b7-4609-983a-ee4f8dc60d0a" />
 <img width="1297" height="851" alt="image" src="https://github.com/user-attachments/assets/f32a6541-eb7d-46f0-9de5-d3e0d4028c9b" />
 <img width="1297" height="857" alt="image" src="https://github.com/user-attachments/assets/aa38dbb0-2564-45f4-bbd2-ed6d98c7e1aa" />
-<img width="1298" height="868" alt="image" src="https://github.com/user-attachments/assets/0483809a-e361-4496-b26f-103bc1528180" />
-<img width="1296" height="655" alt="image" src="https://github.com/user-attachments/assets/1e6cc023-c60a-41bf-b1a7-b875a5013af8" />
+
 
