@@ -622,7 +622,10 @@ The third diagnostic attempt was `fuser`, which identifies processes using files
 
 **What happened:** `fuser` is part of the `psmisc` package, which is also absent from this environment. With all three standard port investigation tools unavailable (`ss`, `netstat`, `fuser`), the only remaining option is the Linux `/proc` filesystem, which is always available regardless of installed packages.
 
-***Screenshot Placeholder: Terminal showing fuser 8080/tcp returning -bash: fuser: command not found***
+***Screenshot: Terminal showing fuser 8080/tcp returning -bash: fuser: command not found***
+
+
+<img width="1032" height="348" alt="image" src="https://github.com/user-attachments/assets/3f14bcdd-3f85-4e13-953b-f58160c96183" />
 
 ---
 
@@ -1011,7 +1014,6 @@ Date: March 23, 2026
 
 
 
-<img width="1032" height="348" alt="image" src="https://github.com/user-attachments/assets/3f14bcdd-3f85-4e13-953b-f58160c96183" />
 <img width="1033" height="839" alt="image" src="https://github.com/user-attachments/assets/31f43bee-c290-4e35-9db2-d63cde17efc9" />
 <img width="1032" height="858" alt="image" src="https://github.com/user-attachments/assets/f6dd1214-9d57-4030-ab84-70d56fa634c1" />
 <img width="1027" height="861" alt="image" src="https://github.com/user-attachments/assets/01979849-999d-41af-87cf-0474320c3457" />
