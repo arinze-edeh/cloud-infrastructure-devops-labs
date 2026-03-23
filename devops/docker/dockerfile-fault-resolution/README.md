@@ -556,7 +556,9 @@ The first instinct was to use `ss` (socket statistics), the modern `iproute2`-ba
 
 **What happened:** `ss` is provided by the `iproute2` package. It is not installed in this minimal server environment. A different tool must be tried.
 
-***Screenshot Placeholder: Terminal showing the ss -tlnp command returning -bash: ss: command not found***
+***Screenshot: Terminal showing the ss -tlnp command returning -bash: ss: command not found***
+
+<img width="1033" height="232" alt="image" src="https://github.com/user-attachments/assets/3aa91f2d-9397-4724-809e-e674dea0a042" />
 
 ---
 
@@ -1003,7 +1005,7 @@ Date: March 23, 2026
 
 
 
-<img width="1033" height="232" alt="image" src="https://github.com/user-attachments/assets/3aa91f2d-9397-4724-809e-e674dea0a042" />
+
 <img width="1032" height="305" alt="image" src="https://github.com/user-attachments/assets/584a75a7-0875-4a11-bce4-3e1f9dcd3366" />
 <img width="1032" height="348" alt="image" src="https://github.com/user-attachments/assets/3f14bcdd-3f85-4e13-953b-f58160c96183" />
 <img width="1033" height="839" alt="image" src="https://github.com/user-attachments/assets/31f43bee-c290-4e35-9db2-d63cde17efc9" />
