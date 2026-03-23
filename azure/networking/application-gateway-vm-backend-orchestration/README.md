@@ -1,6 +1,6 @@
 # Azure VM + Application Gateway Deployment
 
-> **Enterprise HTTP Load Balancing on Azure Free Labs**
+> **Enterprise HTTP Load Balancing on Azure**
 > Deploying a Ubuntu 22.04 VM running Nginx behind an Azure Application Gateway (Basic SKU) using Azure CLI, with full NSG configuration, VNet/subnet segmentation, and public IP routing.
 
 ---
