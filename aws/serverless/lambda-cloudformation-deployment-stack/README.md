@@ -285,7 +285,11 @@ aws cloudformation wait stack-create-complete \
 
 > **Note:** `aws cloudformation wait stack-create-complete` polls the stack status every 30 seconds (up to 120 times) and exits 0 only on `CREATE_COMPLETE`. Any rollback or failure state causes a non-zero exit code, making it safe to use in CI/CD pipelines.
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing the `create-stack` command with the returned `StackId` ARN]**
+**SCREENSHOT:** 
+
+<img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/a52f195a-f479-46fc-9e8b-9cfe463ae52c" />
+
+>Terminal showing the `create-stack` command with the returned `StackId` ARN
 
 ---
 
@@ -307,7 +311,11 @@ aws cloudformation describe-stacks \
 
 > **Incident Prevention:** Never skip this verification step in automated pipelines. Stacks can reach `CREATE_COMPLETE` at the stack level while individual resources are in a degraded state in edge cases. Follow this with resource-level verification (Steps 6+).
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing `describe-stacks` query returning `"CREATE_COMPLETE"` status]**
+**SCREENSHOT:** 
+
+<img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/a52f195a-f479-46fc-9e8b-9cfe463ae52c" />
+
+>Terminal showing `describe-stacks` query returning `"CREATE_COMPLETE"` status
 
 ---
 
