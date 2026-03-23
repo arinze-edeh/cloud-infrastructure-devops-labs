@@ -680,8 +680,11 @@ Resources:
 EOF
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-11-second-heredoc-corrected-template.png`
+> **SCREENSHOTS**
+
+<img width="1037" height="844" alt="image" src="https://github.com/user-attachments/assets/94208f50-5c3c-4e38-9ef6-c7c6508c8334" />
+<img width="1030" height="600" alt="image" src="https://github.com/user-attachments/assets/4f647f1e-e238-4063-9a23-7507b9171c12" />
+
 > *Terminal showing the second `cat > /root/nautilus-priority-stack.yml << 'EOF'` heredoc completing, with the corrected `ManagedPolicyArns` and `AWS::IAM::ManagedPolicy` resource blocks visible*
 
 ---
@@ -1425,8 +1428,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1037" height="844" alt="image" src="https://github.com/user-attachments/assets/94208f50-5c3c-4e38-9ef6-c7c6508c8334" />
-<img width="1030" height="600" alt="image" src="https://github.com/user-attachments/assets/4f647f1e-e238-4063-9a23-7507b9171c12" />
+
 <img width="1032" height="506" alt="image" src="https://github.com/user-attachments/assets/78ad6644-8238-4ffb-b7ee-0d489c8d1187" />
 <img width="1031" height="650" alt="image" src="https://github.com/user-attachments/assets/6194a704-a4e0-4063-8d3a-9d82dc651f12" />
 <img width="1036" height="553" alt="image" src="https://github.com/user-attachments/assets/4020e4b7-ae63-4a0a-9606-37251f241e30" />
