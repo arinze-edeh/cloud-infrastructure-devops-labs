@@ -178,7 +178,7 @@ Resource Group: kml_rg_main-de7d6381a5594d46
 
 > **Note:** Always query the resource group dynamically on Free Labs. The suffix is session-specific and changes between lab instances. Hardcoding the name will cause failures in a new session.
 
-**Screenshot 2: Resource group query output**
+**Screenshot: Resource group query output**
 > Terminal showing `echo "Resource Group: $RG"` resolved to `kml_rg_main-de7d6381a5594d46`.
 
 <img width="1055" height="475" alt="image" src="https://github.com/user-attachments/assets/1428b368-8b77-4059-a322-6b488be7aac0" />
@@ -208,12 +208,12 @@ az network nsg create \
 
 > **Note:** `securityRules` (custom rules) will be an empty array at this stage. Default rules cannot be deleted but are overridden by custom rules with lower priority numbers.
 
-**Screenshot 3: NSG creation JSON response**
-> Full `az network nsg create` response showing `"provisioningState": "Succeeded"`, `"name": "xfusion-nsg"`, and the populated `defaultSecurityRules` array with all six default entries.
+**Screenshots: NSG creation JSON response**
+>  `az network nsg create` response showing `"provisioningState": "Succeeded"`, `"name": "xfusion-nsg"`, and the populated `defaultSecurityRules` array with all six default entries.
 
-```
-[ SCREENSHOT PLACEHOLDER: 03_nsg_create_response.png ]
-```
+<img width="1062" height="872" alt="image" src="https://github.com/user-attachments/assets/9c5a13dd-af35-43ba-ab0a-70a397e9b387" />
+<img width="1062" height="883" alt="image" src="https://github.com/user-attachments/assets/52ca01ad-1f4f-4b2e-8323-f10b84fa375c" />
+<img width="1063" height="883" alt="image" src="https://github.com/user-attachments/assets/177930c2-d3c2-4979-b896-b8c46f5df905" />
 
 ---
 
@@ -1248,9 +1248,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 
-<img width="1062" height="872" alt="image" src="https://github.com/user-attachments/assets/9c5a13dd-af35-43ba-ab0a-70a397e9b387" />
-<img width="1062" height="883" alt="image" src="https://github.com/user-attachments/assets/52ca01ad-1f4f-4b2e-8323-f10b84fa375c" />
-<img width="1063" height="883" alt="image" src="https://github.com/user-attachments/assets/177930c2-d3c2-4979-b896-b8c46f5df905" />
+
 <img width="1066" height="735" alt="image" src="https://github.com/user-attachments/assets/aea89e13-bf2d-4b1c-8e46-db13fa583fbc" />
 <img width="1329" height="596" alt="image" src="https://github.com/user-attachments/assets/52e04450-4d06-408b-890c-9d3f8883d2ec" />
 <img width="1330" height="626" alt="image" src="https://github.com/user-attachments/assets/c0d4856d-a6d3-4c98-bfd0-f588287f98ed" />
