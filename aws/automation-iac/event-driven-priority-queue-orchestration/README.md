@@ -323,8 +323,10 @@ grep "EventSourceMapping" /root/nautilus-priority-stack.yml
 
 The environment variables are wired to the correct `!Ref` values, the handler points to `index.lambda_handler` matching the source code, and no EventSourceMapping is present -- Lambda will be invoked on-demand rather than being trigger-driven.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-04-grep-environment-handler-eventsource.png`
+> **SCREENSHOT**
+
+<img width="1036" height="337" alt="image" src="https://github.com/user-attachments/assets/ee5bd82a-23a8-4a75-b19d-880980195258" />
+
 > *Terminal showing three consecutive grep commands: `grep -A4 "Environment:"` returning the variable block, `grep "Handler:"` returning `index.lambda_handler`, and `grep "EventSourceMapping"` returning no output*
 
 ---
@@ -1403,7 +1405,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1036" height="337" alt="image" src="https://github.com/user-attachments/assets/ee5bd82a-23a8-4a75-b19d-880980195258" />
+
 <img width="1033" height="559" alt="image" src="https://github.com/user-attachments/assets/963508d5-4fd8-4b0a-a39b-edee32720acd" />
 <img width="1034" height="264" alt="image" src="https://github.com/user-attachments/assets/8e006760-7c8e-4efe-ab81-91e5a2660154" />
 <img width="1037" height="458" alt="image" src="https://github.com/user-attachments/assets/5e669cf2-afb0-4d01-a3dc-8f9d356f0ef4" />
