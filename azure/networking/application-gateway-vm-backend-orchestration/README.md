@@ -1209,12 +1209,6 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 
-<img width="1330" height="626" alt="image" src="https://github.com/user-attachments/assets/c0d4856d-a6d3-4c98-bfd0-f588287f98ed" />
-
-
-
-
-
 
 
 
