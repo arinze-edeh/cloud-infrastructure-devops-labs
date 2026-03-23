@@ -1103,12 +1103,12 @@ Healthy
 
 > **Note:** If the backend reports `Unknown` or `Unhealthy`, verify: (1) Nginx is running on the VM with `systemctl status nginx`, (2) the NSG on `xfusion-vm-subnet` allows TCP 80 inbound from the AGW subnet `10.0.2.0/24`, and (3) the AGW `operationalState` is `Running` and not `Stopped`.
 
-**Screenshot 25: Backend health status Healthy**
+**Screenshot: Backend health status Healthy**
 > Terminal showing `az network application-gateway show-backend-health` with the `--query` path returning the single value `Healthy`, confirming the AGW health probe is passing against the Nginx VM backend at `10.0.1.4`.
 
-```
-[ SCREENSHOT PLACEHOLDER: 25_agw_backend_health_healthy.png ]
-```
+<img width="1294" height="577" alt="image" src="https://github.com/user-attachments/assets/53155d51-066a-4249-89d1-d887c025c229" />
+
+
 
 ---
 
@@ -1242,12 +1242,10 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 <img width="1292" height="679" alt="image" src="https://github.com/user-attachments/assets/caa78f80-e534-48d4-ba67-84153fb0817f" />
 <img width="1302" height="715" alt="image" src="https://github.com/user-attachments/assets/4f55a175-9192-4853-b19a-63826a585433" />
 <img width="1299" height="866" alt="image" src="https://github.com/user-attachments/assets/781a4fef-f6fa-4152-9fc4-04fb93efd02a" />
-<<img width="1295" height="865" alt="image" src="https://github.com/user-attachments/assets/9f655645-26b7-4609-983a-ee4f8dc60d0a" />
+<img width="1295" height="865" alt="image" src="https://github.com/user-attachments/assets/9f655645-26b7-4609-983a-ee4f8dc60d0a" />
 <img width="1297" height="851" alt="image" src="https://github.com/user-attachments/assets/f32a6541-eb7d-46f0-9de5-d3e0d4028c9b" />
 <img width="1297" height="857" alt="image" src="https://github.com/user-attachments/assets/aa38dbb0-2564-45f4-bbd2-ed6d98c7e1aa" />
 <img width="1298" height="868" alt="image" src="https://github.com/user-attachments/assets/0483809a-e361-4496-b26f-103bc1528180" />
 <img width="1296" height="655" alt="image" src="https://github.com/user-attachments/assets/1e6cc023-c60a-41bf-b1a7-b875a5013af8" />
 <img width="1303" height="362" alt="image" src="https://github.com/user-attachments/assets/24b3eb83-96eb-4e0e-8cfa-ddc3540fa0fd" />
 <img width="1297" height="547" alt="image" src="https://github.com/user-attachments/assets/cfb6feee-a52a-4e19-8667-81efb0768cc4" />
-<img width="1294" height="577" alt="image" src="https://github.com/user-attachments/assets/53155d51-066a-4249-89d1-d887c025c229" />
-
