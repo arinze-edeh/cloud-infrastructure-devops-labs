@@ -85,9 +85,3 @@ az group create \
 
 
 
-
-
-
-
-
-
