@@ -1188,14 +1188,3 @@ The VM received `10.0.1.4` in the `10.0.1.0/24` subnet following Azure's standar
 A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-health` returning `Healthy` confirms the AGW health probe is independently passing. Both checks together validate the complete operational path. Neither check alone is sufficient to sign off a deployment.
 
 ---
-
-
-
-
-
-
-
-<img width="1303" height="860" alt="image" src="https://github.com/user-attachments/assets/23e2b348-15b5-43fe-8567-b5fb1a829f55" />
-
-
-
