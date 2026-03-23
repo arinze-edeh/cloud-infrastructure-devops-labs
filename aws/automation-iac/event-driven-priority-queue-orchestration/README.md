@@ -920,8 +920,10 @@ Topic ARN: arn:aws:sns:us-east-1:691595780564:nautilus-Priority-Queues-Topic
 
 All four `MessageId` values confirm SNS accepted and routed each message through the filter policies into the correct SQS queues -- high-priority messages to `nautilus-High-Priority-Queue`, low-priority messages to `nautilus-Low-Priority-Queue`.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-18-sns-publish-four-messages.png`
+> **SCREENSHOT**
+
+<img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/d6a63ad7-ec35-49e3-a137-e06cd6a0d3e2" />
+
 > *Terminal showing the `topicarn` variable assignment, `echo` printing the full topic ARN, and all four `sns publish` commands each returning a distinct `MessageId`*
 
 ---
@@ -1437,7 +1439,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/d6a63ad7-ec35-49e3-a137-e06cd6a0d3e2" />
+
 <img width="1033" height="865" alt="image" src="https://github.com/user-attachments/assets/aa4984d1-498e-4b43-a1ff-d20502228477" />
 <img width="1039" height="859" alt="image" src="https://github.com/user-attachments/assets/02e96455-daa7-49ec-bd7d-d5324a7a1f2d" />
 <img width="1033" height="857" alt="image" src="https://github.com/user-attachments/assets/64a8da7b-9c74-43a7-945f-859d7447f31e" />
