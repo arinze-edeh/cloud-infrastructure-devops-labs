@@ -12,25 +12,35 @@
 - [Prerequisites](#prerequisites)
 - [Environment Setup](#environment-setup)
 - [Step-by-Step Deployment](#step-by-step-deployment)
-  - [Step 1: Configure Defaults and Identify Resource Group](#step-1-configure-defaults-and-identify-resource-group)
-  - [Step 2: Create Network Security Group (NSG)](#step-2-create-network-security-group-nsg)
-  - [Step 3: Add Inbound HTTP Rule to NSG](#step-3-add-inbound-http-rule-to-nsg)
-  - [Step 4: Create Virtual Network and Subnets](#step-4-create-virtual-network-and-subnets)
-  - [Step 5: Generate SSH Key Pair](#step-5-generate-ssh-key-pair)
-  - [Step 6: Create VM Startup Script (Nginx)](#step-6-create-vm-startup-script-nginx)
-  - [Step 7: Create the Virtual Machine](#step-7-create-the-virtual-machine)
-  - [Step 8: Retrieve VM Private IP](#step-8-retrieve-vm-private-ip)
-  - [Step 9: Create Public IP for Application Gateway](#step-9-create-public-ip-for-application-gateway)
-  - [Step 10: Deploy Application Gateway (Basic SKU via REST API)](#step-10-deploy-application-gateway-basic-sku-via-rest-api)
-  - [Step 11: Monitor Provisioning State](#step-11-monitor-provisioning-state)
-  - [Step 12: Validate Application Gateway Configuration](#step-12-validate-application-gateway-configuration)
-  - [Step 13: Test Public HTTP Endpoint](#step-13-test-public-http-endpoint)
-  - [Step 14: Verify Backend Health](#step-14-verify-backend-health)
+  - [Step 1: Verify Azure Account and Configure Defaults](#step-1-verify-azure-account-and-configure-defaults)
+  - [Step 2: Identify Resource Group](#step-2-identify-resource-group)
+  - [Step 3: Create Network Security Group](#step-3-create-network-security-group)
+  - [Step 4: Add Inbound HTTP Rule to NSG](#step-4-add-inbound-http-rule-to-nsg)
+  - [Step 5: Verify NSG Rule List](#step-5-verify-nsg-rule-list)
+  - [Step 6: Create Virtual Network](#step-6-create-virtual-network)
+  - [Step 7: Create VM Subnet](#step-7-create-vm-subnet)
+  - [Step 8: Create Application Gateway Subnet](#step-8-create-application-gateway-subnet)
+  - [Step 9: Verify Subnets](#step-9-verify-subnets)
+  - [Step 10: Generate SSH Key Pair](#step-10-generate-ssh-key-pair)
+  - [Step 11: Create VM Cloud-Init Startup Script](#step-11-create-vm-cloud-init-startup-script)
+  - [Step 12: Create the Virtual Machine - First Attempt Error](#step-12-create-the-virtual-machine---first-attempt-error)
+  - [Step 13: Create the Virtual Machine - Corrected](#step-13-create-the-virtual-machine---corrected)
+  - [Step 14: Retrieve VM Private IP](#step-14-retrieve-vm-private-ip)
+  - [Step 15: Create Public IP - First Attempt Error](#step-15-create-public-ip---first-attempt-error)
+  - [Step 16: Delete Stale Public IP and Recreate with Standard SKU](#step-16-delete-stale-public-ip-and-recreate-with-standard-sku)
+  - [Step 17: Confirm Public IP Address](#step-17-confirm-public-ip-address)
+  - [Step 18: Deploy Application Gateway - Attempt 1 Standard_v2 Policy Blocked](#step-18-deploy-application-gateway---attempt-1-standard_v2-policy-blocked)
+  - [Step 19: Deploy Application Gateway - Attempt 2 Basic via CLI Blocked](#step-19-deploy-application-gateway---attempt-2-basic-via-cli-blocked)
+  - [Step 20: Deploy Application Gateway - Attempt 3 Standard_Small Policy Blocked](#step-20-deploy-application-gateway---attempt-3-standard_small-policy-blocked)
+  - [Step 21: Deploy Application Gateway - Resolution Basic SKU via az rest](#step-21-deploy-application-gateway---resolution-basic-sku-via-az-rest)
+  - [Step 22: Monitor Provisioning State](#step-22-monitor-provisioning-state)
+  - [Step 23: Validate Application Gateway Configuration](#step-23-validate-application-gateway-configuration)
+  - [Step 24: Test Public HTTP Endpoint](#step-24-test-public-http-endpoint)
+  - [Step 25: Verify Backend Health](#step-25-verify-backend-health)
 - [Errors Encountered and Resolutions](#errors-encountered-and-resolutions)
 - [Resource Summary](#resource-summary)
 - [Best Practices](#best-practices)
 - [Lessons Learned](#lessons-learned)
-- [Screenshots](#screenshots)
 
 ---
 
@@ -77,8 +87,8 @@ Internet
     |
     v
 [VM: xfusion-vm]  (private: 10.0.1.4)
-    Subnet: xfusion-vm-subnet (10.0.2.0/24)
-    NSG: xfusion-nsg (Allow TCP 80 inbound)
+    Subnet: xfusion-vm-subnet (10.0.1.0/24)
+    NSG: xfusion-nsg  (Allow TCP 80 inbound)
     OS: Ubuntu 22.04
     Web Server: Nginx (auto-started via cloud-init)
 ```
@@ -93,24 +103,11 @@ Internet
 * `curl` for endpoint validation
 * `ssh-keygen` for key pair generation
 
-**Verify Azure CLI authentication:**
-
-```bash
-az account show
-```
-
-**Expected output fields to confirm:**
-
-```
-"name": "Azure Free Labs"
-"state": "Enabled"
-```
-
 ---
 
 ## Environment Setup
 
-All commands below assume the following environment variables are set. Export these before executing any step:
+Export these variables before executing any step:
 
 ```bash
 export RG=$(az group list --query "[0].name" -o tsv)
@@ -130,13 +127,51 @@ az configure --defaults location=eastus
 
 ---
 
-### Step 1: Configure Defaults and Identify Resource Group
+### Step 1: Verify Azure Account and Configure Defaults
 
-Set the default Azure location and capture the pre-existing resource group name into a shell variable for reuse throughout all commands.
+Confirm the authenticated Azure session and subscription before any resource operations. Set `eastus` as the default location to avoid specifying `--location` on every command.
+
+```bash
+az account show
+```
+
+**Expected output (key fields):**
+
+```json
+{
+  "name": "Azure Free Labs",
+  "state": "Enabled",
+  "user": { "type": "servicePrincipal" }
+}
+```
 
 ```bash
 az configure --defaults location=eastus
+```
 
+> **Note:** On Azure Free Labs, authentication is performed via a pre-configured service principal. Verify `"state": "Enabled"` and `"isDefault": true` before proceeding.
+
+**Screenshot 1a: az account show output**
+> Confirms subscription identity, tenant ID, and enabled state.
+
+```
+[ SCREENSHOT PLACEHOLDER: 01a_az_account_show.png ]
+```
+
+**Screenshot 1b: az configure defaults**
+> Terminal confirming `az configure --defaults location=eastus` executed with no error output.
+
+```
+[ SCREENSHOT PLACEHOLDER: 01b_az_configure_defaults.png ]
+```
+
+---
+
+### Step 2: Identify Resource Group
+
+Dynamically capture the pre-existing resource group name into `$RG` for reuse across all subsequent commands.
+
+```bash
 RG=$(az group list --query "[0].name" -o tsv)
 echo "Resource Group: $RG"
 ```
@@ -147,13 +182,20 @@ echo "Resource Group: $RG"
 Resource Group: kml_rg_main-de7d6381a5594d46
 ```
 
-> **Note:** On Azure Free Labs, the resource group is pre-provisioned. Always query it dynamically rather than hardcoding to avoid stale references across lab sessions.
+> **Note:** Always query the resource group dynamically on Free Labs. The suffix is session-specific and changes between lab instances. Hardcoding the name will cause failures in a new session.
+
+**Screenshot 2: Resource group query output**
+> Terminal showing `echo "Resource Group: $RG"` resolved to `kml_rg_main-de7d6381a5594d46`.
+
+```
+[ SCREENSHOT PLACEHOLDER: 02_resource_group_echo.png ]
+```
 
 ---
 
-### Step 2: Create Network Security Group (NSG)
+### Step 3: Create Network Security Group
 
-Create the NSG that will be associated with the VM subnet. Azure automatically attaches a set of default security rules covering inbound/outbound VNET and internet traffic.
+Create the NSG `xfusion-nsg` that will be associated with the VM subnet. Azure automatically populates six default security rules upon creation.
 
 ```bash
 az network nsg create \
@@ -161,9 +203,7 @@ az network nsg create \
   --resource-group $RG
 ```
 
-**Verify default rules were created:**
-
-The response will contain `defaultSecurityRules` including:
+**Default rules auto-created:**
 
 | Rule Name | Direction | Access | Priority |
 |---|---|---|---|
@@ -174,13 +214,20 @@ The response will contain `defaultSecurityRules` including:
 | AllowInternetOutBound | Outbound | Allow | 65001 |
 | DenyAllOutBound | Outbound | Deny | 65500 |
 
-> **Note:** `securityRules` (custom rules) will be empty at this stage. Default rules cannot be deleted but can be overridden with lower priority numbers.
+> **Note:** `securityRules` (custom rules) will be an empty array at this stage. Default rules cannot be deleted but are overridden by custom rules with lower priority numbers.
+
+**Screenshot 3: NSG creation JSON response**
+> Full `az network nsg create` response showing `"provisioningState": "Succeeded"`, `"name": "xfusion-nsg"`, and the populated `defaultSecurityRules` array with all six default entries.
+
+```
+[ SCREENSHOT PLACEHOLDER: 03_nsg_create_response.png ]
+```
 
 ---
 
-### Step 3: Add Inbound HTTP Rule to NSG
+### Step 4: Add Inbound HTTP Rule to NSG
 
-Add a custom inbound rule to allow HTTP (TCP port 80) traffic from any source. Priority `100` ensures this rule is evaluated before the `DenyAllInBound` default at `65500`.
+Add a custom inbound security rule allowing HTTP traffic (TCP port 80) from any source. Priority `100` ensures this rule is evaluated before the `DenyAllInBound` default at priority `65500`.
 
 ```bash
 az network nsg rule create \
@@ -197,10 +244,38 @@ az network nsg rule create \
   --access Allow
 ```
 
-**Verify the rule was added:**
+**Expected key fields in response:**
+
+```json
+{
+  "name": "Allow-HTTP",
+  "priority": 100,
+  "protocol": "Tcp",
+  "direction": "Inbound",
+  "access": "Allow",
+  "destinationPortRange": "80",
+  "provisioningState": "Succeeded"
+}
+```
+
+**Screenshot 4: NSG rule create JSON response**
+> `az network nsg rule create` output confirming `Allow-HTTP` with priority 100, protocol Tcp, direction Inbound, destinationPortRange 80, access Allow, and provisioningState Succeeded.
+
+```
+[ SCREENSHOT PLACEHOLDER: 04_nsg_rule_create_response.png ]
+```
+
+---
+
+### Step 5: Verify NSG Rule List
+
+List all custom security rules on the NSG in table format to confirm the `Allow-HTTP` rule was applied correctly.
 
 ```bash
-az network nsg rule list --nsg-name xfusion-nsg --resource-group $RG -o table
+az network nsg rule list \
+  --nsg-name xfusion-nsg \
+  --resource-group $RG \
+  -o table
 ```
 
 **Expected output:**
@@ -211,13 +286,18 @@ Name        Priority    Protocol    Direction    DestinationPortRanges    Access
 Allow-HTTP  100         Tcp         Inbound      80                       Allow
 ```
 
+**Screenshot 5: NSG rule list table output**
+> Terminal showing `az network nsg rule list -o table` with `Allow-HTTP` as the single custom rule entry at priority 100 on port 80.
+
+```
+[ SCREENSHOT PLACEHOLDER: 05_nsg_rule_list_table.png ]
+```
+
 ---
 
-### Step 4: Create Virtual Network and Subnets
+### Step 6: Create Virtual Network
 
-Create the virtual network with a `/16` address space, then provision two dedicated subnets: one for the VM and one for the Application Gateway.
-
-**Create the VNet:**
+Create the VNet `xfusion-vnet` with a `/16` address space that will contain both the VM and Application Gateway subnets.
 
 ```bash
 az network vnet create \
@@ -226,7 +306,29 @@ az network vnet create \
   --address-prefix 10.0.0.0/16
 ```
 
-**Create the VM subnet (with NSG attached):**
+**Expected key fields in response:**
+
+```json
+{
+  "name": "xfusion-vnet",
+  "addressSpace": { "addressPrefixes": ["10.0.0.0/16"] },
+  "provisioningState": "Succeeded",
+  "subnets": []
+}
+```
+
+**Screenshot 6: VNet creation JSON response**
+> `az network vnet create` output showing `xfusion-vnet` with `addressPrefixes: ["10.0.0.0/16"]`, `provisioningState: Succeeded`, and an empty `subnets` array confirming no subnets exist yet.
+
+```
+[ SCREENSHOT PLACEHOLDER: 06_vnet_create_response.png ]
+```
+
+---
+
+### Step 7: Create VM Subnet
+
+Create `xfusion-vm-subnet` within the VNet and attach `xfusion-nsg` to it. All VM traffic will be governed by the NSG rules defined in Steps 3 and 4.
 
 ```bash
 az network vnet subnet create \
@@ -237,7 +339,29 @@ az network vnet subnet create \
   --network-security-group xfusion-nsg
 ```
 
-**Create the Application Gateway subnet (no NSG):**
+**Expected key fields in response:**
+
+```json
+{
+  "name": "xfusion-vm-subnet",
+  "addressPrefix": "10.0.1.0/24",
+  "networkSecurityGroup": { "resourceGroup": "kml_rg_main-de7d6381a5594d46" },
+  "provisioningState": "Succeeded"
+}
+```
+
+**Screenshot 7: VM subnet creation JSON response**
+> Output confirming `xfusion-vm-subnet` with `addressPrefix: 10.0.1.0/24`, `networkSecurityGroup` reference populated (confirming NSG was attached), and `provisioningState: Succeeded`.
+
+```
+[ SCREENSHOT PLACEHOLDER: 07_vm_subnet_create_response.png ]
+```
+
+---
+
+### Step 8: Create Application Gateway Subnet
+
+Create the dedicated `xfusion-agw-subnet` for the Application Gateway. No NSG is attached to this subnet.
 
 ```bash
 az network vnet subnet create \
@@ -247,9 +371,30 @@ az network vnet subnet create \
   --address-prefix 10.0.2.0/24
 ```
 
-> **Important:** Azure Application Gateway subnets must NOT have an NSG attached unless the NSG explicitly allows AGW management traffic (ports 65200-65535 for V2, or 65503-65534 for V1/Basic). For simplicity and to avoid provisioning issues, the AGW subnet is left NSG-free in this deployment.
+**Expected key fields in response:**
 
-**Verify both subnets:**
+```json
+{
+  "name": "xfusion-agw-subnet",
+  "addressPrefix": "10.0.2.0/24",
+  "provisioningState": "Succeeded"
+}
+```
+
+> **Important:** Azure Application Gateway subnets must NOT have an NSG attached unless the NSG explicitly allows AGW management traffic on ports `65200-65535`. Omitting the NSG on this subnet avoids health probe failures and provisioning errors.
+
+**Screenshot 8: AGW subnet creation JSON response**
+> Output confirming `xfusion-agw-subnet` with `addressPrefix: 10.0.2.0/24`, no `networkSecurityGroup` field present, and `provisioningState: Succeeded`.
+
+```
+[ SCREENSHOT PLACEHOLDER: 08_agw_subnet_create_response.png ]
+```
+
+---
+
+### Step 9: Verify Subnets
+
+Confirm both subnets exist with correct CIDR allocations and provisioning state before proceeding to VM and AGW creation.
 
 ```bash
 az network vnet subnet list \
@@ -261,17 +406,24 @@ az network vnet subnet list \
 **Expected output:**
 
 ```
-AddressPrefix    Name                ProvisioningState
----------------  ------------------  -------------------
-10.0.1.0/24      xfusion-vm-subnet   Succeeded
-10.0.2.0/24      xfusion-agw-subnet  Succeeded
+AddressPrefix    Name                ProvisioningState    ResourceGroup
+---------------  ------------------  -------------------  ----------------------------
+10.0.1.0/24      xfusion-vm-subnet   Succeeded            kml_rg_main-de7d6381a5594d46
+10.0.2.0/24      xfusion-agw-subnet  Succeeded            kml_rg_main-de7d6381a5594d46
+```
+
+**Screenshot 9: Subnet list table output**
+> Terminal showing both `xfusion-vm-subnet` (`10.0.1.0/24`) and `xfusion-agw-subnet` (`10.0.2.0/24`) with `ProvisioningState: Succeeded` for both entries.
+
+```
+[ SCREENSHOT PLACEHOLDER: 09_subnet_list_table.png ]
 ```
 
 ---
 
-### Step 5: Generate SSH Key Pair
+### Step 10: Generate SSH Key Pair
 
-Generate an RSA 2048-bit SSH key pair for authenticating to the VM. The public key will be injected during VM creation.
+Generate an RSA 2048-bit SSH key pair for VM authentication. The public key will be injected at VM creation time via `--ssh-key-values`.
 
 **Check for existing key:**
 
@@ -279,26 +431,50 @@ Generate an RSA 2048-bit SSH key pair for authenticating to the VM. The public k
 cat ~/.ssh/id_rsa.pub
 ```
 
-If the file does not exist (expected on a fresh lab environment), generate a new key pair:
+Key file was absent on this lab environment:
+
+```
+cat: /root/.ssh/id_rsa.pub: No such file or directory
+```
+
+Generate a new key pair:
 
 ```bash
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ""
 cat ~/.ssh/id_rsa.pub
 ```
 
-**Expected output (truncated):**
+**Expected output:**
 
 ```
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC... root@azure-client
+Generating public/private rsa key pair.
+Your identification has been saved in /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:ywll5VAceuZW3Ua6xh7gScIhG6us28Jz7/sRtyR8m9Y root@azure-client
 ```
 
-> **Security Note:** The `-N ""` flag sets an empty passphrase, which is acceptable for lab environments. In production, always protect private keys with strong passphrases and store them in a secrets manager (e.g., Azure Key Vault).
+> **Security Note:** The `-N ""` flag sets an empty passphrase, acceptable only for lab environments. In production, always protect private keys with strong passphrases and store them in Azure Key Vault.
+
+**Screenshot 10a: cat ~/.ssh/id_rsa.pub not found**
+> Terminal showing `cat: /root/.ssh/id_rsa.pub: No such file or directory` confirming no pre-existing SSH key on this lab host.
+
+```
+[ SCREENSHOT PLACEHOLDER: 10a_ssh_key_not_found.png ]
+```
+
+**Screenshot 10b: ssh-keygen output and public key**
+> Full `ssh-keygen` terminal output including the randomart image, followed by `cat ~/.ssh/id_rsa.pub` displaying the generated RSA public key value beginning with `ssh-rsa AAAAB3...`.
+
+```
+[ SCREENSHOT PLACEHOLDER: 10b_ssh_keygen_and_pubkey.png ]
+```
 
 ---
 
-### Step 6: Create VM Startup Script (Nginx)
+### Step 11: Create VM Cloud-Init Startup Script
 
-Write a cloud-init compatible shell script that installs and enables Nginx on first boot. This is passed to the VM via `--custom-data`.
+Write the Nginx installation script to `/tmp/userdata.sh`. This file is passed to the VM via `--custom-data` and executed by cloud-init on first boot.
 
 ```bash
 cat > /tmp/userdata.sh << 'EOF'
@@ -310,19 +486,76 @@ systemctl enable nginx
 EOF
 ```
 
-**Verify the script was written:**
+Verify the script was written correctly:
 
 ```bash
 cat /tmp/userdata.sh
 ```
 
-> **Note:** Azure `--custom-data` accepts a raw shell script or a cloud-config YAML file. Azure passes the content to `cloud-init` on the VM. The script runs once at first boot as root.
+**Expected output:**
+
+```bash
+#!/bin/bash
+apt-get update -y
+apt-get install -y nginx
+systemctl start nginx
+systemctl enable nginx
+```
+
+> **Note:** `systemctl enable nginx` ensures the service restarts automatically after a VM reboot. Without this, a reboot would leave the backend unhealthy from the AGW health probe perspective.
+
+**Screenshot 11: userdata.sh creation and verification**
+> Terminal showing the heredoc write command followed by `cat /tmp/userdata.sh` confirming all five lines of the Nginx startup script are correctly written to disk.
+
+```
+[ SCREENSHOT PLACEHOLDER: 11_userdata_sh_created.png ]
+```
 
 ---
 
-### Step 7: Create the Virtual Machine
+### Step 12: Create the Virtual Machine - First Attempt Error
 
-Deploy the VM into the VM subnet with no public IP. The private IP will be assigned dynamically from the `10.0.1.0/24` range. The Nginx installation script is passed as `--custom-data`.
+**Problem:** The first `az vm create` command used `--os-disk-sku`, which is not a valid parameter for this Azure CLI version.
+
+```bash
+az vm create \
+  --name xfusion-vm \
+  --resource-group $RG \
+  --image Ubuntu2204 \
+  --size Standard_B1s \
+  --admin-username azureuser \
+  --ssh-key-values ~/.ssh/id_rsa.pub \
+  --authentication-type ssh \
+  --os-disk-sku Standard_LRS \
+  --vnet-name xfusion-vnet \
+  --subnet xfusion-vm-subnet \
+  --nsg xfusion-nsg \
+  --public-ip-address "" \
+  --custom-data /tmp/userdata.sh
+```
+
+**Error received:**
+
+```
+unrecognized arguments: --os-disk-sku Standard_LRS
+```
+
+**Root cause:** `--os-disk-sku` does not exist as a parameter in `az vm create`. The correct parameter for specifying disk storage type is `--storage-sku`.
+
+**Resolution:** Replace `--os-disk-sku Standard_LRS` with `--storage-sku Standard_LRS` and re-run. See Step 13.
+
+**Screenshot 12: VM create error - unrecognized --os-disk-sku argument**
+> Terminal showing the `az vm create` command with `--os-disk-sku Standard_LRS` and the resulting `unrecognized arguments: --os-disk-sku Standard_LRS` error message from the Azure CLI.
+
+```
+[ SCREENSHOT PLACEHOLDER: 12_vm_create_os_disk_sku_error.png ]
+```
+
+---
+
+### Step 13: Create the Virtual Machine - Corrected
+
+Replace `--os-disk-sku` with `--storage-sku`. The VM is deployed with `--public-ip-address ""` to ensure no public IP is attached, placing it exclusively on the private subnet accessible only through the Application Gateway.
 
 ```bash
 az vm create \
@@ -345,38 +578,31 @@ az vm create \
 
 ```json
 {
+  "fqdns": "",
+  "location": "eastus",
+  "macAddress": "00-0D-3A-1C-9E-3C",
   "powerState": "VM running",
   "privateIpAddress": "10.0.1.4",
   "publicIpAddress": "",
-  "resourceGroup": "kml_rg_main-de7d6381a5594d46"
+  "resourceGroup": "kml_rg_main-de7d6381a5594d46",
+  "zones": ""
 }
 ```
 
-> **Key Design Decision:** `--public-ip-address ""` explicitly disables public IP allocation. All traffic must flow through the Application Gateway, enforcing the hub-and-spoke access pattern.
+> **Key Design Decision:** `--public-ip-address ""` explicitly disables public IP allocation. All public traffic must enter through the Application Gateway only, enforcing centralized traffic control.
 
-**Error encountered (and resolved):**
+**Screenshot 13: VM create success JSON response**
+> `az vm create` output confirming `"powerState": "VM running"`, `"privateIpAddress": "10.0.1.4"`, and `"publicIpAddress": ""` for `xfusion-vm`, confirming the VM is up with no public IP.
 
 ```
-unrecognized arguments: --os-disk-sku Standard_LRS
-```
-
-**Root cause:** `--os-disk-sku` is not a valid parameter for `az vm create`.
-
-**Fix:** Replace `--os-disk-sku` with `--storage-sku`:
-
-```bash
-# WRONG
---os-disk-sku Standard_LRS
-
-# CORRECT
---storage-sku Standard_LRS
+[ SCREENSHOT PLACEHOLDER: 13_vm_create_success.png ]
 ```
 
 ---
 
-### Step 8: Retrieve VM Private IP
+### Step 14: Retrieve VM Private IP
 
-Capture the VM private IP for use as the Application Gateway backend target.
+Capture the VM private IP dynamically and store it in `$VM_PRIVATE_IP` for use as the Application Gateway backend pool target address.
 
 ```bash
 VM_PRIVATE_IP=$(az vm show \
@@ -394,11 +620,22 @@ echo "VM Private IP: $VM_PRIVATE_IP"
 VM Private IP: 10.0.1.4
 ```
 
+> **Note:** Always capture private IPs dynamically using `--show-details --query privateIps` rather than assuming the assigned address. Azure DHCP assigns IPs based on prior subnet allocations, and assumptions will break in shared or re-used environments.
+
+**Screenshot 14: VM private IP echo output**
+> Terminal showing `echo "VM Private IP: $VM_PRIVATE_IP"` resolved to `10.0.1.4` confirming the dynamic IP query succeeded.
+
+```
+[ SCREENSHOT PLACEHOLDER: 14_vm_private_ip_echo.png ]
+```
+
 ---
 
-### Step 9: Create Public IP for Application Gateway
+### Step 15: Create Public IP - First Attempt Error
 
-Provision a Standard SKU Static public IP for the Application Gateway frontend.
+**Context:** An initial Standard SKU public IP was created during the first deployment sequence, assigned address `172.174.27.169`. After the first AGW deployment failed (Step 18), this IP was deleted to clear the dependency. A subsequent attempt to create a Basic SKU IP to match AGW Basic tier also failed due to subscription quota.
+
+**Initial Standard IP creation (later deleted):**
 
 ```bash
 az network public-ip create \
@@ -408,7 +645,96 @@ az network public-ip create \
   --allocation-method Static
 ```
 
-**Confirm the assigned IP:**
+Assigned: `172.174.27.169`
+
+**Deleted after initial AGW attempt failed:**
+
+```bash
+az network public-ip delete \
+  --name xfusion-agw-ip \
+  --resource-group $RG
+```
+
+**Attempt with Basic SKU (failed):**
+
+```bash
+az network public-ip create \
+  --name xfusion-agw-ip \
+  --resource-group $RG \
+  --sku Basic \
+  --allocation-method Dynamic
+```
+
+**Error received:**
+
+```
+(IPv4BasicSkuPublicIpCountLimitReached) Cannot create more than 0 IPv4 Basic SKU
+public IP addresses for this subscription in this region.
+Code: IPv4BasicSkuPublicIpCountLimitReached
+```
+
+**Root cause:** The Azure Free Labs subscription enforces a hard quota of zero for Basic SKU public IPs in `eastus`. Basic public IPs are deprecated and unavailable on this subscription tier.
+
+**Screenshot 15a: Initial Standard public IP creation showing 172.174.27.169**
+> `az network public-ip create` response with `"ipAddress": "172.174.27.169"` and `"sku": {"name": "Standard"}` from the first provisioning attempt.
+
+```
+[ SCREENSHOT PLACEHOLDER: 15a_public_ip_initial_172.png ]
+```
+
+**Screenshot 15b: Basic SKU public IP quota error**
+> Terminal showing the `IPv4BasicSkuPublicIpCountLimitReached` error: `Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region`.
+
+```
+[ SCREENSHOT PLACEHOLDER: 15b_public_ip_basic_quota_error.png ]
+```
+
+---
+
+### Step 16: Delete Stale Public IP and Recreate with Standard SKU
+
+Delete the existing public IP and recreate it with Standard SKU Static configuration, which is supported by this subscription and required by the Standard AGW public IP dependency.
+
+```bash
+az network public-ip delete \
+  --name xfusion-agw-ip \
+  --resource-group $RG
+```
+
+Recreate with Standard SKU:
+
+```bash
+az network public-ip create \
+  --name xfusion-agw-ip \
+  --resource-group $RG \
+  --sku Standard \
+  --allocation-method Static
+```
+
+**Expected key fields in response:**
+
+```json
+{
+  "name": "xfusion-agw-ip",
+  "ipAddress": "20.25.49.151",
+  "publicIPAllocationMethod": "Static",
+  "sku": { "name": "Standard" },
+  "provisioningState": "Succeeded"
+}
+```
+
+**Screenshot 16: Recreated Standard public IP with address 20.25.49.151**
+> `az network public-ip create` response showing `"ipAddress": "20.25.49.151"`, `"sku": {"name": "Standard"}`, `"publicIPAllocationMethod": "Static"`, and `"provisioningState": "Succeeded"`.
+
+```
+[ SCREENSHOT PLACEHOLDER: 16_public_ip_standard_recreated.png ]
+```
+
+---
+
+### Step 17: Confirm Public IP Address
+
+Extract and confirm the final assigned public IP that will serve as the AGW frontend entry point.
 
 ```bash
 az network public-ip show \
@@ -424,38 +750,18 @@ az network public-ip show \
 20.25.49.151
 ```
 
-**Errors encountered (and resolved):**
-
-**Attempt 1: Wrong SKU name**
-
-```bash
---sku Basic --allocation-method Dynamic
-```
-
-**Error:**
+**Screenshot 17: Public IP address confirmation**
+> Terminal showing `az network public-ip show --query ipAddress -o tsv` returning the single value `20.25.49.151`.
 
 ```
-(IPv4BasicSkuPublicIpCountLimitReached) Cannot create more than 0 IPv4 Basic SKU
-public IP addresses for this subscription in this region.
+[ SCREENSHOT PLACEHOLDER: 17_public_ip_tsv_confirm.png ]
 ```
-
-**Root cause:** Azure Free Labs blocks Basic SKU public IPs in the `eastus` region at the subscription level.
-
-**Fix:** Use `Standard` SKU with `Static` allocation:
-
-```bash
---sku Standard --allocation-method Static
-```
-
-> **Note:** A Standard SKU public IP was also created and deleted prior to the above error. The deletion was necessary to recreate with correct settings after the initial AGW provisioning attempt failed.
 
 ---
 
-### Step 10: Deploy Application Gateway (Basic SKU via REST API)
+### Step 18: Deploy Application Gateway - Attempt 1 Standard_v2 Policy Blocked
 
-This step required multiple attempts due to Azure Policy enforcement and Azure CLI SKU validation conflicts. Full error trail and resolution are documented below.
-
-**Attempt 1: Standard_v2 SKU (Policy Blocked)**
+**Problem:** The first AGW deployment used `Standard_v2` SKU, which was immediately rejected by an Azure Policy enforcing `Basic` SKU only on this subscription.
 
 ```bash
 az network application-gateway create \
@@ -474,47 +780,119 @@ az network application-gateway create \
   --priority 100
 ```
 
-**Error:**
+**Error received:**
+
+```json
+{
+  "error": {
+    "code": "InvalidTemplateDeployment",
+    "details": [{
+      "code": "RequestDisallowedByPolicy",
+      "message": "Resource 'xfusion-agw' was disallowed by policy.
+      Reasons: 'Only the Basic SKU is allowed for Azure Application Gateway.
+      Please update the SKU to comply.'"
+    }]
+  }
+}
+```
+
+**Root cause:** A subscription-level Azure Policy (`azure_application_gateway-tpm`) restricts AGW deployments to `Basic` SKU only. `Standard_v2` is explicitly denied.
+
+**Screenshot 18: AGW Standard_v2 RequestDisallowedByPolicy error**
+> Terminal showing the full `RequestDisallowedByPolicy` JSON error response for the `Standard_v2` AGW deployment attempt, including the policy definition ID, enforcement reason, and `policyDefinitionEffect: deny`.
 
 ```
-RequestDisallowedByPolicy: Resource 'xfusion-agw' was disallowed by policy.
-Reasons: 'Only the Basic SKU is allowed for Azure Application Gateway.'
+[ SCREENSHOT PLACEHOLDER: 18_agw_standard_v2_policy_error.png ]
 ```
 
-**Attempt 2: Basic SKU via CLI (CLI Validation Blocked)**
+---
+
+### Step 19: Deploy Application Gateway - Attempt 2 Basic via CLI Blocked
+
+**Problem:** Passing `--sku Basic` directly to `az network application-gateway create` fails because the installed CLI version does not enumerate `Basic` as a valid `--sku` value, even though it is required by the subscription policy.
 
 ```bash
 az network application-gateway create \
+  --name xfusion-agw \
+  --resource-group $RG \
+  --vnet-name xfusion-vnet \
+  --subnet xfusion-agw-subnet \
+  --public-ip-address xfusion-agw-ip \
   --sku Basic \
-  ...
+  --capacity 1 \
+  --frontend-port 80 \
+  --http-settings-port 80 \
+  --http-settings-protocol Http \
+  --routing-rule-type Basic \
+  --servers $VM_PRIVATE_IP \
+  --priority 100
 ```
 
-**Error:**
+**Error received:**
 
 ```
-'Basic' is not a valid value for '--sku'.
+az network application-gateway create: 'Basic' is not a valid value for '--sku'.
 Allowed values: Standard_Small, Standard_Medium, WAF_Medium, WAF_Large, Standard_v2, WAF_v2.
 ```
 
-**Root cause:** The Azure CLI version installed in the lab does not enumerate `Basic` as a valid `--sku` value, even though the Azure REST API and policy enforcement require it.
+**Root cause:** The CLI's local argument validator hardcodes an allowed-values list for `--sku`. `Basic` exists in the ARM API and is required by the policy, but has not been added to this CLI version's enumeration. This creates the core conflict of this deployment: Azure Policy requires `Basic`, CLI refuses to pass it.
 
-**Attempt 3: Standard_Small SKU (Policy Blocked)**
+**Screenshot 19: AGW --sku Basic CLI validation error**
+> Terminal showing `'Basic' is not a valid value for '--sku'` with the full allowed values list confirming `Basic` is absent and the conflict with the subscription policy is established.
+
+```
+[ SCREENSHOT PLACEHOLDER: 19_agw_cli_basic_sku_invalid.png ]
+```
+
+---
+
+### Step 20: Deploy Application Gateway - Attempt 3 Standard_Small Policy Blocked
+
+**Problem:** `Standard_Small`, the first value in the CLI's allowed-values list, was also blocked by the same subscription policy. This eliminated all CLI-accessible SKUs as viable options.
 
 ```bash
 az network application-gateway create \
+  --name xfusion-agw \
+  --resource-group $RG \
+  --vnet-name xfusion-vnet \
+  --subnet xfusion-agw-subnet \
+  --public-ip-address xfusion-agw-ip \
   --sku Standard_Small \
-  ...
+  --capacity 1 \
+  --frontend-port 80 \
+  --http-settings-port 80 \
+  --http-settings-protocol Http \
+  --routing-rule-type Basic \
+  --servers $VM_PRIVATE_IP \
+  --priority 100
 ```
 
-**Error:**
+**Error received:**
+
+```json
+{
+  "error": {
+    "code": "RequestDisallowedByPolicy",
+    "message": "Resource 'xfusion-agw' was disallowed by policy.
+    Reasons: 'Only the Basic SKU is allowed for Azure Application Gateway.'"
+  }
+}
+```
+
+**Root cause:** Same policy as Attempt 1. All non-Basic SKUs are rejected. The full SKU elimination trail is now complete: `Standard_v2` blocked by policy, `Basic` blocked by CLI, `Standard_Small` blocked by policy. The only path forward is to bypass the CLI entirely.
+
+**Screenshot 20: AGW Standard_Small policy violation error**
+> Terminal showing the `RequestDisallowedByPolicy` JSON error for the `Standard_Small` attempt, completing the three-attempt SKU elimination trail that establishes the requirement for the `az rest` workaround.
 
 ```
-RequestDisallowedByPolicy: Only the Basic SKU is allowed for Azure Application Gateway.
+[ SCREENSHOT PLACEHOLDER: 20_agw_standard_small_policy_error.png ]
 ```
 
-**Resolution: Use az rest to call the ARM API directly**
+---
 
-Bypass the CLI's local SKU enumeration by submitting the full ARM resource definition via `az rest`:
+### Step 21: Deploy Application Gateway - Resolution Basic SKU via az rest
+
+**Resolution:** Bypass the CLI's local SKU argument validation entirely by submitting the complete ARM resource definition directly via `az rest --method PUT`. The ARM REST API accepts `Basic` as a valid SKU name, satisfying the subscription policy.
 
 ```bash
 RG="kml_rg_main-de7d6381a5594d46"
@@ -615,7 +993,7 @@ az rest \
   }'
 ```
 
-**Expected response confirms:**
+**Expected response confirms AGW accepted and provisioning:**
 
 ```json
 {
@@ -623,16 +1001,34 @@ az rest \
   "properties": {
     "sku": { "name": "Basic", "tier": "Basic", "capacity": 1 },
     "provisioningState": "Updating",
-    "operationalState": "Stopped"
+    "operationalState": "Stopped",
+    "backendAddressPools": [{ "name": "xfusion-backendpool" }],
+    "backendHttpSettingsCollection": [{ "name": "xfusion-http-settings" }],
+    "httpListeners": [{ "name": "xfusion-listener" }],
+    "requestRoutingRules": [{ "name": "xfusion-routing-rule" }]
   }
 }
 ```
 
+**Screenshot 21a: az rest PUT command submitted**
+> Terminal showing the `az rest --method PUT` command being submitted with the ARM API URL (`api-version=2023-05-01`) and the opening of the full JSON request body.
+
+```
+[ SCREENSHOT PLACEHOLDER: 21a_az_rest_put_command.png ]
+```
+
+**Screenshot 21b: az rest successful AGW provisioning response**
+> JSON response from `az rest` confirming `"sku": {"name": "Basic", "tier": "Basic"}`, `"provisioningState": "Updating"`, and all four component names correctly created: `xfusion-backendpool`, `xfusion-http-settings`, `xfusion-listener`, `xfusion-routing-rule`.
+
+```
+[ SCREENSHOT PLACEHOLDER: 21b_az_rest_agw_provisioning_response.png ]
+```
+
 ---
 
-### Step 11: Monitor Provisioning State
+### Step 22: Monitor Provisioning State
 
-Application Gateway provisioning typically takes 5 to 10 minutes. Poll the provisioning state until `Succeeded` is returned.
+Application Gateway provisioning is asynchronous and typically takes 5 to 10 minutes. Poll the provisioning state every 30 seconds until `Succeeded` is returned.
 
 ```bash
 watch -n 30 'az network application-gateway show \
@@ -649,11 +1045,20 @@ Succeeded
 
 Press `Ctrl+C` once `Succeeded` is confirmed.
 
+> **Note:** Do not proceed to Steps 23-25 while the state shows `Updating`. The AGW will not route traffic until `operationalState` transitions from `Stopped` to `Running`, which occurs when `provisioningState` reaches `Succeeded`.
+
+**Screenshot 22: watch provisioningState output showing Succeeded**
+> Terminal running `watch` with the repeated query showing `provisioningState` value `Succeeded`, confirming the AGW has fully provisioned and is ready to route traffic.
+
+```
+[ SCREENSHOT PLACEHOLDER: 22_agw_provisioning_succeeded.png ]
+```
+
 ---
 
-### Step 12: Validate Application Gateway Configuration
+### Step 23: Validate Application Gateway Configuration
 
-Confirm all AGW components were created correctly with a single structured query:
+Query all AGW component names in a single structured table to confirm every resource was created with the correct naming and the correct SKU.
 
 ```bash
 az network application-gateway show \
@@ -671,11 +1076,18 @@ SKU    BackendPool          HTTPSettings           Listener          RoutingRule
 Basic  xfusion-backendpool  xfusion-http-settings  xfusion-listener  xfusion-routing-rule
 ```
 
+**Screenshot 23: AGW configuration summary table**
+> Terminal showing the `az network application-gateway show -o table` output confirming all five fields: `SKU=Basic`, `BackendPool=xfusion-backendpool`, `HTTPSettings=xfusion-http-settings`, `Listener=xfusion-listener`, `RoutingRule=xfusion-routing-rule`.
+
+```
+[ SCREENSHOT PLACEHOLDER: 23_agw_config_summary_table.png ]
+```
+
 ---
 
-### Step 13: Test Public HTTP Endpoint
+### Step 24: Test Public HTTP Endpoint
 
-Retrieve the AGW public IP and send an HTTP request to confirm the web server is reachable through the gateway:
+Retrieve the AGW public IP and issue an HTTP request to confirm the full traffic path is operational from the public internet through the gateway to the Nginx VM.
 
 ```bash
 AGW_IP=$(az network public-ip show \
@@ -694,13 +1106,20 @@ AGW Public IP: 20.25.49.151
 200
 ```
 
-An HTTP `200` response confirms traffic successfully traversed the Application Gateway and reached the Nginx instance on the backend VM.
+An HTTP `200` confirms the complete traffic path is operational: public internet to AGW public IP (`20.25.49.151`), through the listener (`xfusion-listener`) and routing rule (`xfusion-routing-rule`), to the Nginx instance on the backend VM at `10.0.1.4:80`.
+
+**Screenshot 24: curl HTTP 200 response via AGW public IP**
+> Terminal showing `AGW Public IP: 20.25.49.151` on the first line immediately followed by the `curl` command output returning `200`, confirming successful end-to-end HTTP traffic flow through the Application Gateway.
+
+```
+[ SCREENSHOT PLACEHOLDER: 24_curl_agw_http_200.png ]
+```
 
 ---
 
-### Step 14: Verify Backend Health
+### Step 25: Verify Backend Health
 
-Confirm that the Application Gateway health probe reports the backend VM as healthy:
+Confirm that the Application Gateway health probe independently reports the backend VM as `Healthy`. This is the definitive validation that the AGW can reach and receive valid responses from the Nginx backend, separate from the user-facing `curl` test.
 
 ```bash
 az network application-gateway show-backend-health \
@@ -716,19 +1135,26 @@ az network application-gateway show-backend-health \
 Healthy
 ```
 
-> **Note:** If the backend reports `Unknown` or `Unhealthy`, check that Nginx is running on the VM (`systemctl status nginx`) and that the NSG on `xfusion-vm-subnet` allows TCP 80 from the AGW subnet `10.0.2.0/24`.
+> **Note:** If the backend reports `Unknown` or `Unhealthy`, verify: (1) Nginx is running on the VM with `systemctl status nginx`, (2) the NSG on `xfusion-vm-subnet` allows TCP 80 inbound from the AGW subnet `10.0.2.0/24`, and (3) the AGW `operationalState` is `Running` and not `Stopped`.
+
+**Screenshot 25: Backend health status Healthy**
+> Terminal showing `az network application-gateway show-backend-health` with the `--query` path returning the single value `Healthy`, confirming the AGW health probe is passing against the Nginx VM backend at `10.0.1.4`.
+
+```
+[ SCREENSHOT PLACEHOLDER: 25_agw_backend_health_healthy.png ]
+```
 
 ---
 
 ## Errors Encountered and Resolutions
 
-| # | Command | Error | Root Cause | Resolution |
-|---|---|---|---|---|
-| 1 | `az vm create` | `unrecognized arguments: --os-disk-sku` | Parameter does not exist in this CLI version | Replace with `--storage-sku Standard_LRS` |
-| 2 | `az network application-gateway create --sku Standard_v2` | `RequestDisallowedByPolicy: Only the Basic SKU is allowed` | Subscription-level Azure Policy enforces Basic SKU only | Use `--sku Basic` or bypass via `az rest` |
-| 3 | `az network application-gateway create --sku Basic` | `'Basic' is not a valid value for '--sku'` | CLI version does not expose Basic as an enumerated value despite ARM supporting it | Use `az rest` with ARM API directly at `api-version=2023-05-01` |
-| 4 | `az network application-gateway create --sku Standard_Small` | `RequestDisallowedByPolicy: Only the Basic SKU is allowed` | Same policy as error 2 | Use `az rest` with `"name": "Basic", "tier": "Basic"` in the SKU body |
-| 5 | `az network public-ip create --sku Basic` | `IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 Basic SKU IPs` | Subscription quota for Basic public IPs is zero in this region | Delete the existing Standard IP, recreate with `--sku Standard --allocation-method Static` |
+| # | Step | Command | Error | Root Cause | Resolution |
+|---|---|---|---|---|---|
+| 1 | 12 | `az vm create --os-disk-sku` | `unrecognized arguments: --os-disk-sku Standard_LRS` | Parameter does not exist in `az vm create` | Replace with `--storage-sku Standard_LRS` |
+| 2 | 15 | `az network public-ip create --sku Basic` | `IPv4BasicSkuPublicIpCountLimitReached` | Subscription quota for Basic public IPs is zero in eastus | Use `--sku Standard --allocation-method Static` |
+| 3 | 18 | `az network application-gateway create --sku Standard_v2` | `RequestDisallowedByPolicy: Only Basic SKU allowed` | Subscription Azure Policy blocks all non-Basic AGW SKUs | Must use `Basic` SKU; use `az rest` workaround |
+| 4 | 19 | `az network application-gateway create --sku Basic` | `'Basic' is not a valid value for '--sku'` | CLI version does not enumerate Basic as an accepted value | Use `az rest --method PUT` with ARM API directly at `api-version=2023-05-01` |
+| 5 | 20 | `az network application-gateway create --sku Standard_Small` | `RequestDisallowedByPolicy: Only Basic SKU allowed` | Same policy as error 3; eliminates all CLI-accessible SKUs | Use `az rest --method PUT` with `"name": "Basic", "tier": "Basic"` in SKU body |
 
 ---
 
@@ -743,8 +1169,8 @@ Healthy
 | VM Subnet | `xfusion-vm-subnet` | `10.0.1.0/24`, NSG: xfusion-nsg |
 | AGW Subnet | `xfusion-agw-subnet` | `10.0.2.0/24`, no NSG |
 | VM | `xfusion-vm` | Ubuntu 22.04, Standard_B1s, private IP: 10.0.1.4 |
-| VM Admin User | `azureuser` | SSH key auth |
-| Web Server | Nginx | Auto-installed via cloud-init |
+| VM Admin User | `azureuser` | SSH key authentication |
+| Web Server | Nginx | Auto-installed via cloud-init on first boot |
 | Public IP | `xfusion-agw-ip` | Standard Static: 20.25.49.151 |
 | Application Gateway | `xfusion-agw` | Basic SKU, capacity 1 |
 | Backend Pool | `xfusion-backendpool` | IP: 10.0.1.4 |
@@ -759,175 +1185,59 @@ Healthy
 ### Networking
 
 * Always use separate subnets for the Application Gateway and backend VMs. This isolates AGW management traffic and prevents NSG conflicts.
-* Do NOT attach an NSG to the AGW subnet unless you explicitly allow the AGW management port range (`65200-65535` for v2/Basic).
-* Assign no public IP to backend VMs. All public access must route through the gateway to enforce centralized traffic inspection and NSG control.
-* Use `/24` or smaller subnets for AGW. Azure Application Gateway consumes one IP per gateway instance plus one for the subnet gateway.
+* Do NOT attach an NSG to the AGW subnet unless you explicitly allow AGW management traffic on ports `65200-65535`. Omitting the NSG is the safest default.
+* Assign no public IP to backend VMs. All public access must route through the gateway to enforce centralized traffic control and single-point access management.
+* Use `/24` or smaller subnets for the AGW subnet. Azure Application Gateway consumes IP addresses per instance plus standard subnet reservations.
 
 ### Security
 
-* Apply NSG rules with least-privilege principles: allow only the specific ports required (`TCP 80` in this case), not wildcard port ranges.
-* Rotate SSH keys periodically and store private keys in Azure Key Vault, not on the client filesystem.
+* Apply NSG rules with least-privilege: allow only the specific ports required, not wildcard port ranges in production.
+* Rotate SSH keys periodically and store private keys in Azure Key Vault rather than on the client filesystem.
 * In production, front the Application Gateway with Azure Web Application Firewall (WAF) to protect against OWASP Top 10 threats.
-* Enable HTTPS on the Application Gateway listener and use TLS termination at the AGW layer with a certificate from Azure Key Vault.
+* Enable HTTPS on the AGW listener and use TLS termination with certificates managed through Azure Key Vault.
 
 ### Infrastructure as Code
 
-* Parameterize all resource names, IPs, and subscription IDs. Avoid hardcoding values across commands.
-* Export environment variables at the start of every session (`RG`, `SUBSCRIPTION`, `VM_PRIVATE_IP`) and validate them with `echo` before running destructive or resource-creating commands.
-* Use `az rest` as a last resort to bypass CLI validation gaps. Document the specific `api-version` used and test against the target ARM API version in your target environment.
+* Parameterize all resource names, IPs, and subscription IDs. Never hardcode values across commands, especially in lab environments where resource group names change per session.
+* Export environment variables at the start of every session and validate them with `echo` before executing resource-creating commands.
+* Use `az rest` deliberately as an escape hatch when CLI validation conflicts with ARM API capabilities. Always document the `api-version` used.
 
 ### VM Configuration
 
-* Always verify `--custom-data` scripts are idempotent. Cloud-init runs the script once at first boot; if the VM is reimaged, the script will run again.
-* Use `systemctl enable nginx` alongside `systemctl start nginx` to ensure the service survives reboots.
-* Use `cloud-config` YAML (`#cloud-config` header) for complex initialization over raw shell scripts for better error handling and logging visibility in `/var/log/cloud-init-output.log`.
+* Verify `--custom-data` scripts are idempotent. Cloud-init runs the script once at first boot; reimaging the VM will re-execute it.
+* Always pair `systemctl start` with `systemctl enable` to ensure services survive reboots and remain available to AGW health probes.
+* Prefer `cloud-config` YAML over raw shell scripts for complex initialization. Cloud-config produces structured logs in `/var/log/cloud-init-output.log` for easier debugging.
 
 ### Observability
 
-* Poll `provisioningState` with `watch` rather than querying once and assuming success. Application Gateway provisioning is asynchronous and can take up to 15 minutes.
-* Use `az network application-gateway show-backend-health` immediately after provisioning to confirm end-to-end connectivity before marking the deployment complete.
-* Set up Azure Monitor alerts on AGW backend health and unhealthy host count metrics for production workloads.
+* Poll `provisioningState` with `watch` rather than querying once and assuming completion. Application Gateway provisioning is asynchronous and takes 5 to 15 minutes.
+* Run `az network application-gateway show-backend-health` immediately after provisioning as a mandatory post-deployment gate before marking the deployment complete.
+* Configure Azure Monitor alerts on AGW backend health and unhealthy host count metrics for all production workloads.
 
 ---
 
 ## Lessons Learned
 
 **1. Azure Policy enforcement and CLI SKU enumeration can be out of sync.**
-The subscription policy enforced `Basic` SKU only, but the installed Azure CLI version did not list `Basic` as an accepted `--sku` value. The resolution was to bypass the CLI entirely and use `az rest` with the raw ARM API body. Always check active Azure Policies before designing your deployment commands.
+The subscription policy enforced `Basic` SKU only, but the installed CLI version did not list `Basic` as an accepted `--sku` value. The resolution was to bypass the CLI entirely using `az rest` with the raw ARM API body. Always audit active Azure Policies before designing deployment commands for any subscription.
 
 **2. Azure CLI parameter naming is version-sensitive.**
-`--os-disk-sku` does not exist; the correct parameter is `--storage-sku`. Always consult `az vm create --help` or the current official CLI reference for the exact parameter set in your installed version. Do not copy commands from generic tutorials without validating against `--help` output.
+`--os-disk-sku` does not exist; the correct parameter is `--storage-sku`. Always validate parameter names against `az vm create --help` for the installed CLI version before executing. Do not copy commands from external tutorials without verifying them against current CLI help output.
 
-**3. Basic SKU public IPs may be quota-blocked even in free tier subscriptions.**
-The Azure Free Labs subscription had a quota of zero for Basic SKU public IPs in `eastus`. Standard SKU public IPs (Static) are the correct and future-proof choice. Azure has announced deprecation of Basic SKU public IPs; new deployments should always use Standard SKU.
+**3. Basic SKU public IPs are quota-blocked and deprecated.**
+The Azure Free Labs subscription had a hard quota of zero for Basic SKU public IPs in `eastus`. Standard SKU public IPs with Static allocation are the correct and future-proof choice for all new deployments. Azure has announced the deprecation of Basic SKU public IPs, and they should not be used in any new infrastructure.
 
-**4. Application Gateway subnets must be dedicated.**
-Attempting to attach an NSG to the AGW subnet without explicitly allowing the health probe and management port ranges will cause the gateway to fail health checks and prevent traffic from reaching backends. Dedicate the subnet and leave NSG management to the VM subnet.
+**4. Application Gateway subnets must be dedicated and NSG-free by default.**
+Attaching an NSG to the AGW subnet without explicitly allowing management traffic on ports `65200-65535` causes health probe failures and blocks traffic from reaching backends. The safest practice is to leave the AGW subnet without an NSG and apply all access control on the VM subnet instead.
 
-**5. az rest is a powerful escape hatch for policy-compliant deployments.**
-When the CLI wrapper and Azure Policy are misaligned (policy requires a SKU the CLI will not accept), directly calling the ARM REST API via `az rest --method PUT` with the full resource body resolves the conflict. This requires knowing the correct `api-version`, which can be found in the ARM API reference for the specific resource type.
+**5. az rest is the correct and authoritative escape hatch when CLI and ARM Policy conflict.**
+When the CLI argument validator rejects a value that Azure Policy requires, directly calling the ARM REST API via `az rest --method PUT` with a full resource body resolves the conflict cleanly. This requires constructing all nested resource ID paths manually and specifying the correct ARM `api-version` from the official reference.
 
-**6. Dynamic IP assignment from DHCP is predictable in small subnets.**
-The VM received `10.0.1.4` (the first assignable host after `.1` gateway, `.2` DNS, `.3` broadcast reservation) in the `10.0.1.0/24` subnet. For backend pool targeting by IP, use `az vm show --show-details --query privateIps` to capture the IP dynamically rather than assuming it.
+**6. Dynamic IP assignment in small subnets is predictable but must never be assumed.**
+The VM received `10.0.1.4` in the `10.0.1.0/24` subnet following Azure's standard address reservation pattern (`.1` gateway, `.2` DNS, `.3` broadcast). Always capture private IPs dynamically with `az vm show --show-details --query privateIps` rather than hardcoding assumed addresses into backend pool configurations.
 
-**7. Backend health validation is a critical post-deployment gate.**
-A `200` HTTP response from `curl` proves traffic is flowing, but `show-backend-health` showing `Healthy` proves the AGW health probe is passing. Both checks together confirm the full end-to-end path is operational. Never skip backend health validation.
-
----
-
-## Screenshots
-
-### Screenshot 1: Azure Account Verification
-> `az account show` output confirming subscription name, state, and authenticated service principal.
-
-```
-[ SCREENSHOT PLACEHOLDER: az_account_show_output.png ]
-```
-
-### Screenshot 2: NSG Creation with Default Rules
-> `az network nsg create` response showing the six auto-generated default security rules for `xfusion-nsg`.
-
-```
-[ SCREENSHOT PLACEHOLDER: nsg_creation_default_rules.png ]
-```
-
-### Screenshot 3: Custom HTTP Inbound Rule
-> `az network nsg rule list -o table` confirming `Allow-HTTP` rule at priority 100 on TCP port 80.
-
-```
-[ SCREENSHOT PLACEHOLDER: nsg_rule_allow_http_table.png ]
-```
-
-### Screenshot 4: VNet and Subnet Creation
-> `az network vnet subnet list -o table` showing both `xfusion-vm-subnet` and `xfusion-agw-subnet` with correct CIDR ranges and provisioning state `Succeeded`.
-
-```
-[ SCREENSHOT PLACEHOLDER: vnet_subnet_list_table.png ]
-```
-
-### Screenshot 5: SSH Key Generation
-> Terminal output of `ssh-keygen` showing key fingerprint and randomart, followed by `cat ~/.ssh/id_rsa.pub` with the full public key.
-
-```
-[ SCREENSHOT PLACEHOLDER: ssh_keygen_output.png ]
-```
-
-### Screenshot 6: VM Creation Success
-> `az vm create` JSON response confirming `"powerState": "VM running"`, `"privateIpAddress": "10.0.1.4"`, and `"publicIpAddress": ""`.
-
-```
-[ SCREENSHOT PLACEHOLDER: vm_create_success.png ]
-```
-
-### Screenshot 7: VM Create Error (--os-disk-sku)
-> CLI error output: `unrecognized arguments: --os-disk-sku Standard_LRS` demonstrating the incorrect parameter before correction to `--storage-sku`.
-
-```
-[ SCREENSHOT PLACEHOLDER: vm_create_error_os_disk_sku.png ]
-```
-
-### Screenshot 8: Public IP Creation
-> `az network public-ip create` response showing `"ipAddress": "20.25.49.151"` and `"sku": {"name": "Standard"}`.
-
-```
-[ SCREENSHOT PLACEHOLDER: public_ip_standard_created.png ]
-```
-
-### Screenshot 9: Basic SKU Public IP Quota Error
-> CLI error: `IPv4BasicSkuPublicIpCountLimitReached: Cannot create more than 0 IPv4 Basic SKU public IP addresses` confirming the subscription-level restriction.
-
-```
-[ SCREENSHOT PLACEHOLDER: public_ip_basic_quota_error.png ]
-```
-
-### Screenshot 10: Application Gateway Policy Violation (Standard_v2)
-> Full policy violation JSON error showing `RequestDisallowedByPolicy` and the policy definition requiring `Basic` SKU only.
-
-```
-[ SCREENSHOT PLACEHOLDER: agw_policy_violation_standard_v2.png ]
-```
-
-### Screenshot 11: Application Gateway CLI SKU Error (Basic)
-> CLI validation error: `'Basic' is not a valid value for '--sku'. Allowed values: Standard_Small, Standard_Medium...` showing the CLI/policy mismatch.
-
-```
-[ SCREENSHOT PLACEHOLDER: agw_cli_sku_basic_invalid.png ]
-```
-
-### Screenshot 12: Application Gateway Policy Violation (Standard_Small)
-> Policy enforcement JSON error confirming `Standard_Small` was also blocked, completing the SKU elimination trail before the `az rest` resolution.
-
-```
-[ SCREENSHOT PLACEHOLDER: agw_policy_violation_standard_small.png ]
-```
-
-### Screenshot 13: Application Gateway Deployed via az rest
-> Successful `az rest --method PUT` response showing AGW provisioning state `Updating` with `"sku": {"name": "Basic", "tier": "Basic"}` confirming the workaround succeeded.
-
-```
-[ SCREENSHOT PLACEHOLDER: agw_rest_api_success_basic_sku.png ]
-```
-
-### Screenshot 14: Application Gateway Configuration Summary
-> `az network application-gateway show -o table` output confirming SKU=Basic, backend pool, HTTP settings, listener, and routing rule names.
-
-```
-[ SCREENSHOT PLACEHOLDER: agw_config_summary_table.png ]
-```
-
-### Screenshot 15: HTTP 200 from AGW Public IP
-> Terminal output showing `AGW Public IP: 20.25.49.151` followed by `curl` returning `200`, confirming end-to-end traffic flow through the gateway to the Nginx VM.
-
-```
-[ SCREENSHOT PLACEHOLDER: curl_agw_http_200.png ]
-```
-
-### Screenshot 16: Backend Health Status
-> `az network application-gateway show-backend-health` output returning `Healthy`, confirming AGW health probe is passing against the VM backend.
-
-```
-[ SCREENSHOT PLACEHOLDER: agw_backend_health_healthy.png ]
-```
+**7. Both curl HTTP 200 and backend health Healthy are required validation gates.**
+A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-health` returning `Healthy` confirms the AGW health probe is independently passing. Both checks together validate the complete operational path. Neither check alone is sufficient to sign off a deployment.
 
 ---
 
@@ -940,7 +1250,7 @@ A `200` HTTP response from `curl` proves traffic is flowing, but `show-backend-h
 
 ---
 
-*This README was authored following FAANG-grade infrastructure documentation standards. All commands, error traces, and resolutions reflect the exact terminal session executed during deployment.*
+*This README was authored following FAANG-grade infrastructure documentation standards. All commands, error traces, and resolutions reflect the exact terminal session executed during deployment. Each screenshot placeholder is numbered and labeled to map 1:1 to the specific terminal output it should capture. Replace all placeholders with actual screenshots before publishing to GitHub.*
 
 
 
