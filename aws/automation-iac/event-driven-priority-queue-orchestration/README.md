@@ -409,8 +409,10 @@ Template passes AWS schema validation. `CAPABILITY_NAMED_IAM` is flagged because
 
 > **IMPORTANT:** `validate-template` confirms schema correctness only. It does not verify that the executing IAM principal has permission to create the resources -- that failure surfaces only at deploy time (see Error 2 and Error 3).
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-06-first-validate-template-iam-role.png`
+> **SCREENSHOT**
+
+<img width="1034" height="264" alt="image" src="https://github.com/user-attachments/assets/8e006760-7c8e-4efe-ab81-91e5a2660154" />
+
 > *Terminal showing `aws cloudformation validate-template` returning the JSON response with `"CAPABILITY_NAMED_IAM"` and `CapabilitiesReason: [AWS::IAM::Role]`*
 
 ---
@@ -1409,7 +1411,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1034" height="264" alt="image" src="https://github.com/user-attachments/assets/8e006760-7c8e-4efe-ab81-91e5a2660154" />
+
 <img width="1037" height="458" alt="image" src="https://github.com/user-attachments/assets/5e669cf2-afb0-4d01-a3dc-8f9d356f0ef4" />
 <img width="1031" height="361" alt="image" src="https://github.com/user-attachments/assets/6dc4aafe-c3ca-42de-b6a6-98c976aa03d1" />
 <img width="1035" height="676" alt="image" src="https://github.com/user-attachments/assets/cb0f25c5-03b8-4f32-b0d5-8aa4e503737f" />
