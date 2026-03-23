@@ -460,7 +460,10 @@ Build the Docker image using the corrected Dockerfile. The build context is `/op
 
 All 8 build stages completed with `DONE`. Image SHA256: `75f3dc558b364ea4a579032defe94513a9e82360bd43aebfd07c6966f5151461`. Build log captured at `/tmp/build.log`.
 
-***Screenshot Placeholder: Full terminal output of the docker build command showing all 13 build stages from #0 through #13 with DONE on every step and the final naming to nautilus-image***
+***Screenshots: Full terminal output of the docker build command showing all 13 build stages from #0 through #13 with DONE on every step and the final naming to nautilus-image***
+
+<img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/bafede78-6375-4169-9a14-14917d6f2764" />
+<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/1f289a07-8c76-492c-8c22-7d47b376892f" />
 
 ---
 
@@ -993,8 +996,6 @@ Date: March 23, 2026
 
 
 
-<img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/bafede78-6375-4169-9a14-14917d6f2764" />
-<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/1f289a07-8c76-492c-8c22-7d47b376892f" />
 <img width="1033" height="317" alt="image" src="https://github.com/user-attachments/assets/64140f7d-9fdd-428f-87dc-ec9f87ea56cc" />
 <img width="1033" height="232" alt="image" src="https://github.com/user-attachments/assets/3aa91f2d-9397-4724-809e-e674dea0a042" />
 <img width="1032" height="305" alt="image" src="https://github.com/user-attachments/assets/584a75a7-0875-4a11-bce4-3e1f9dcd3366" />
