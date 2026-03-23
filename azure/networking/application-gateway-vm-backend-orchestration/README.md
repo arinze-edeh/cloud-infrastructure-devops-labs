@@ -276,12 +276,10 @@ Name        Priority    Protocol    Direction    DestinationPortRanges    Access
 Allow-HTTP  100         Tcp         Inbound      80                       Allow
 ```
 
-**Screenshot 5: NSG rule list table output**
+**Screenshot: NSG rule list table output**
 > Terminal showing `az network nsg rule list -o table` with `Allow-HTTP` as the single custom rule entry at priority 100 on port 80.
 
-```
-[ SCREENSHOT PLACEHOLDER: 05_nsg_rule_list_table.png ]
-```
+<img width="1329" height="596" alt="image" src="https://github.com/user-attachments/assets/52e04450-4d06-408b-890c-9d3f8883d2ec" />
 
 ---
 
@@ -1248,7 +1246,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 
-<img width="1329" height="596" alt="image" src="https://github.com/user-attachments/assets/52e04450-4d06-408b-890c-9d3f8883d2ec" />
+
 <img width="1330" height="626" alt="image" src="https://github.com/user-attachments/assets/c0d4856d-a6d3-4c98-bfd0-f588287f98ed" />
 <img width="1298" height="602" alt="image" src="https://github.com/user-attachments/assets/b9513bb6-ff81-44f9-b581-2f7716edec6c" />
 <img width="1298" height="860" alt="image" src="https://github.com/user-attachments/assets/8968e87f-23f6-4e20-b1d0-38998a4a6ce6" />
