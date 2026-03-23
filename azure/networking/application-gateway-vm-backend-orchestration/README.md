@@ -979,9 +979,10 @@ az rest \
 **Screenshot 21a: az rest PUT command submitted**
 > Terminal showing the `az rest --method PUT` command being submitted with the ARM API URL (`api-version=2023-05-01`) and the opening of the full JSON request body.
 
-```
-[ SCREENSHOT PLACEHOLDER: 21a_az_rest_put_command.png ]
-```
+<img width="1295" height="865" alt="image" src="https://github.com/user-attachments/assets/9f655645-26b7-4609-983a-ee4f8dc60d0a" />
+<img width="1297" height="851" alt="image" src="https://github.com/user-attachments/assets/f32a6541-eb7d-46f0-9de5-d3e0d4028c9b" />
+<img width="1297" height="857" alt="image" src="https://github.com/user-attachments/assets/aa38dbb0-2564-45f4-bbd2-ed6d98c7e1aa" />
+
 
 **Screenshot 21b: az rest successful AGW provisioning response**
 > JSON response from `az rest` confirming `"sku": {"name": "Basic", "tier": "Basic"}`, `"provisioningState": "Updating"`, and all four component names correctly created: `xfusion-backendpool`, `xfusion-http-settings`, `xfusion-listener`, `xfusion-routing-rule`.
@@ -1217,8 +1218,5 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 <img width="1292" height="679" alt="image" src="https://github.com/user-attachments/assets/caa78f80-e534-48d4-ba67-84153fb0817f" />
 <img width="1302" height="715" alt="image" src="https://github.com/user-attachments/assets/4f55a175-9192-4853-b19a-63826a585433" />
 <img width="1299" height="866" alt="image" src="https://github.com/user-attachments/assets/781a4fef-f6fa-4152-9fc4-04fb93efd02a" />
-<img width="1295" height="865" alt="image" src="https://github.com/user-attachments/assets/9f655645-26b7-4609-983a-ee4f8dc60d0a" />
-<img width="1297" height="851" alt="image" src="https://github.com/user-attachments/assets/f32a6541-eb7d-46f0-9de5-d3e0d4028c9b" />
-<img width="1297" height="857" alt="image" src="https://github.com/user-attachments/assets/aa38dbb0-2564-45f4-bbd2-ed6d98c7e1aa" />
 
 
