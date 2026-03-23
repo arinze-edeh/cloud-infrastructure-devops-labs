@@ -785,8 +785,10 @@ aws sqs list-queues --queue-name-prefix nautilus --region us-east-1
 
 Both queues are present and their URLs confirm the account ID `691595780564` and the exact names from the template.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-14-sqs-list-queues.png`
+> **SCREENSHOT**
+
+<img width="1031" height="747" alt="image" src="https://github.com/user-attachments/assets/a77c1fc6-e655-4e79-8273-ebf0cfe4b9c5" />
+
 > *Terminal showing `sqs list-queues --queue-name-prefix nautilus` returning both `nautilus-High-Priority-Queue` and `nautilus-Low-Priority-Queue` URLs*
 
 ---
@@ -808,8 +810,10 @@ aws sns list-topics --region us-east-1 \
 ]
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-15-sns-list-topics.png`
+> **SCREENSHOT**
+
+<img width="1031" height="747" alt="image" src="https://github.com/user-attachments/assets/a77c1fc6-e655-4e79-8273-ebf0cfe4b9c5" />
+
 > *Terminal showing the filtered `sns list-topics` query returning the `nautilus-Priority-Queues-Topic` ARN*
 
 ---
@@ -1429,14 +1433,6 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-
-
-
-
-
-<img width="1031" height="650" alt="image" src="https://github.com/user-attachments/assets/6194a704-a4e0-4063-8d3a-9d82dc651f12" />
-
-<img width="1031" height="747" alt="image" src="https://github.com/user-attachments/assets/a77c1fc6-e655-4e79-8273-ebf0cfe4b9c5" />
 <img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/8c327785-027d-4693-a08f-bc149a5998a8" />
 <img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/d6a63ad7-ec35-49e3-a137-e06cd6a0d3e2" />
 <img width="1033" height="865" alt="image" src="https://github.com/user-attachments/assets/aa4984d1-498e-4b43-a1ff-d20502228477" />
