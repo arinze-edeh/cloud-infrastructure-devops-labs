@@ -151,19 +151,12 @@ az configure --defaults location=eastus
 
 > **Note:** On Azure Free Labs, authentication is performed via a pre-configured service principal. Verify `"state": "Enabled"` and `"isDefault": true` before proceeding.
 
-**Screenshot 1a: az account show output**
+**Screenshot: az account show output & az configure defaults**
+
+<img width="1057" height="467" alt="image" src="https://github.com/user-attachments/assets/eda006d6-f1c7-4d99-9638-1fc75d7a5a54" />
+
 > Confirms subscription identity, tenant ID, and enabled state.
-
-```
-[ SCREENSHOT PLACEHOLDER: 01a_az_account_show.png ]
-```
-
-**Screenshot 1b: az configure defaults**
 > Terminal confirming `az configure --defaults location=eastus` executed with no error output.
-
-```
-[ SCREENSHOT PLACEHOLDER: 01b_az_configure_defaults.png ]
-```
 
 ---
 
@@ -1254,7 +1247,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 
-<img width="1057" height="467" alt="image" src="https://github.com/user-attachments/assets/eda006d6-f1c7-4d99-9638-1fc75d7a5a54" />
+
 <img width="1055" height="475" alt="image" src="https://github.com/user-attachments/assets/1428b368-8b77-4059-a322-6b488be7aac0" />
 <img width="1062" height="872" alt="image" src="https://github.com/user-attachments/assets/9c5a13dd-af35-43ba-ab0a-70a397e9b387" />
 <img width="1062" height="883" alt="image" src="https://github.com/user-attachments/assets/52ca01ad-1f4f-4b2e-8323-f10b84fa375c" />
