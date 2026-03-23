@@ -1042,12 +1042,10 @@ SKU    BackendPool          HTTPSettings           Listener          RoutingRule
 Basic  xfusion-backendpool  xfusion-http-settings  xfusion-listener  xfusion-routing-rule
 ```
 
-**Screenshot 23: AGW configuration summary table**
+**Screenshot: AGW configuration summary table**
 > Terminal showing the `az network application-gateway show -o table` output confirming all five fields: `SKU=Basic`, `BackendPool=xfusion-backendpool`, `HTTPSettings=xfusion-http-settings`, `Listener=xfusion-listener`, `RoutingRule=xfusion-routing-rule`.
 
-```
-[ SCREENSHOT PLACEHOLDER: 23_agw_config_summary_table.png ]
-```
+<img width="1303" height="362" alt="image" src="https://github.com/user-attachments/assets/24b3eb83-96eb-4e0e-8cfa-ddc3540fa0fd" />
 
 ---
 
@@ -1225,4 +1223,4 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 <img width="1297" height="857" alt="image" src="https://github.com/user-attachments/assets/aa38dbb0-2564-45f4-bbd2-ed6d98c7e1aa" />
 <img width="1298" height="868" alt="image" src="https://github.com/user-attachments/assets/0483809a-e361-4496-b26f-103bc1528180" />
 <img width="1296" height="655" alt="image" src="https://github.com/user-attachments/assets/1e6cc023-c60a-41bf-b1a7-b875a5013af8" />
-<img width="1303" height="362" alt="image" src="https://github.com/user-attachments/assets/24b3eb83-96eb-4e0e-8cfa-ddc3540fa0fd" />
+
