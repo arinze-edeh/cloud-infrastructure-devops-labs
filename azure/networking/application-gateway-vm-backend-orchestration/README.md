@@ -651,6 +651,8 @@ Code: IPv4BasicSkuPublicIpCountLimitReached
 **Screenshot: Basic SKU public IP quota error**
 > Terminal showing the `IPv4BasicSkuPublicIpCountLimitReached` error: `Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region`.
 
+<img width="1292" height="679" alt="image" src="https://github.com/user-attachments/assets/caa78f80-e534-48d4-ba67-84153fb0817f" />
+
 ```
 [ SCREENSHOT PLACEHOLDER: 15b_public_ip_basic_quota_error.png ]
 ```
@@ -1209,7 +1211,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 <img width="1299" height="431" alt="image" src="https://github.com/user-attachments/assets/10e6d9ff-0452-40c1-8e47-cd7673991a78" />
-<img width="1292" height="679" alt="image" src="https://github.com/user-attachments/assets/caa78f80-e534-48d4-ba67-84153fb0817f" />
+
 <img width="1302" height="715" alt="image" src="https://github.com/user-attachments/assets/4f55a175-9192-4853-b19a-63826a585433" />
 
 
