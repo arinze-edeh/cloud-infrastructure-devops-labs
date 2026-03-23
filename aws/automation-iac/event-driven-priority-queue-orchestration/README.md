@@ -445,8 +445,10 @@ aws cloudformation wait stack-create-complete \
   --region us-east-1
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-07-first-create-stack-stackid.png`
+> **SCREENSHOT**
+
+<img width="1037" height="458" alt="image" src="https://github.com/user-attachments/assets/5e669cf2-afb0-4d01-a3dc-8f9d356f0ef4" />
+
 > *Terminal showing `create-stack` returning the `StackId` ARN `fb8cc410-2594-11f1-b6ce-0affc41f21c3` followed by the `wait stack-create-complete` command running*
 
 ---
@@ -1412,7 +1414,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1037" height="458" alt="image" src="https://github.com/user-attachments/assets/5e669cf2-afb0-4d01-a3dc-8f9d356f0ef4" />
+
 <img width="1031" height="361" alt="image" src="https://github.com/user-attachments/assets/6dc4aafe-c3ca-42de-b6a6-98c976aa03d1" />
 <img width="1035" height="676" alt="image" src="https://github.com/user-attachments/assets/cb0f25c5-03b8-4f32-b0d5-8aa4e503737f" />
 <img width="1031" height="753" alt="image" src="https://github.com/user-attachments/assets/0e077702-4f7e-4cf9-96c1-e29e992912d5" />
