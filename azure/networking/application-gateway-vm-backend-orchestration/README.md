@@ -643,14 +643,12 @@ Code: IPv4BasicSkuPublicIpCountLimitReached
 
 **Root cause:** The Azure Free Labs subscription enforces a hard quota of zero for Basic SKU public IPs in `eastus`. Basic public IPs are deprecated and unavailable on this subscription tier.
 
-**Screenshot 15a: Initial Standard public IP creation showing 172.174.27.169**
+**Screenshot: Initial Standard public IP creation showing 172.174.27.169**
 > `az network public-ip create` response with `"ipAddress": "172.174.27.169"` and `"sku": {"name": "Standard"}` from the first provisioning attempt.
 
-```
-[ SCREENSHOT PLACEHOLDER: 15a_public_ip_initial_172.png ]
-```
+<img width="1301" height="868" alt="image" src="https://github.com/user-attachments/assets/ecafc348-e6e3-4d51-948f-40997665628f" />
 
-**Screenshot 15b: Basic SKU public IP quota error**
+**Screenshot: Basic SKU public IP quota error**
 > Terminal showing the `IPv4BasicSkuPublicIpCountLimitReached` error: `Cannot create more than 0 IPv4 Basic SKU public IP addresses for this subscription in this region`.
 
 ```
@@ -1237,7 +1235,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 <img width="1303" height="860" alt="image" src="https://github.com/user-attachments/assets/23e2b348-15b5-43fe-8567-b5fb1a829f55" />
-<img width="1301" height="868" alt="image" src="https://github.com/user-attachments/assets/ecafc348-e6e3-4d51-948f-40997665628f" />
+
 <img width="1297" height="823" alt="image" src="https://github.com/user-attachments/assets/bc1b417b-f53c-4f16-8c75-e2f97c985526" />
 <img width="1299" height="866" alt="image" src="https://github.com/user-attachments/assets/82f14e2f-790c-4244-a8a0-d0bf12d71c35" />
 <img width="1299" height="431" alt="image" src="https://github.com/user-attachments/assets/10e6d9ff-0452-40c1-8e47-cd7673991a78" />
