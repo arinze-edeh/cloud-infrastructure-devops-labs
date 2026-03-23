@@ -1188,8 +1188,10 @@ Configured timeout                    = 3 seconds   <-- insufficient by 3 second
 
 Increase the Lambda timeout to 10 seconds -- providing a 4-second safety margin above the 6-second worst-case execution path.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-23-error5-invocation-4-sandbox-timedout.png`
+> **SCREENSHOT**
+
+<img width="1032" height="865" alt="image" src="https://github.com/user-attachments/assets/4390a804-60c5-4823-a6b8-d52ac0b858c9" />
+
 > *Terminal showing invocation 4 returning `"FunctionError": "Unhandled"` in the invoke response, and `out4.json` displaying `"errorType":"Sandbox.Timedout"` with `"Task timed out after 3.00 seconds"` and RequestId `f83d9f5b-91c2-46ef-8f27-956c2efb047a`*
 
 ---
