@@ -252,8 +252,11 @@ Resources:
 EOF
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-02-first-heredoc-template-write.png`
+> **SCREENSHOT**
+
+<img width="1039" height="645" alt="image" src="https://github.com/user-attachments/assets/79bc08bb-875b-4542-8a34-2ba86f88f7db" />
+<img width="1029" height="601" alt="image" src="https://github.com/user-attachments/assets/c256f2f4-3df8-4b9d-8952-a35719dd8f99" />
+
 > *Terminal showing the `cat > /root/nautilus-priority-stack.yml << 'EOF'` heredoc command being written with the SQS, SNS, and subscription resource blocks visible*
 
 ---
@@ -1396,8 +1399,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1039" height="645" alt="image" src="https://github.com/user-attachments/assets/79bc08bb-875b-4542-8a34-2ba86f88f7db" />
-<img width="1029" height="601" alt="image" src="https://github.com/user-attachments/assets/c256f2f4-3df8-4b9d-8952-a35719dd8f99" />
+
 <img width="1026" height="477" alt="image" src="https://github.com/user-attachments/assets/c36de50a-3ab5-48ed-92ee-431e8f4934ea" />
 <img width="1036" height="337" alt="image" src="https://github.com/user-attachments/assets/ee5bd82a-23a8-4a75-b19d-880980195258" />
 <img width="1033" height="559" alt="image" src="https://github.com/user-attachments/assets/963508d5-4fd8-4b0a-a39b-edee32720acd" />
