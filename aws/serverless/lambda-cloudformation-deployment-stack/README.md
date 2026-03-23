@@ -356,9 +356,13 @@ aws iam get-role \
 
 > **Security Validation:** Confirm the role ARN in the Lambda configuration matches the expected pattern `arn:aws:iam::<account_id>:role/lambda_execution_role`. Any deviation indicates configuration drift or an unintended role substitution.
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing `get-function` output with FunctionName, Runtime `python3.12`, and the IAM Role ARN all confirmed]**
+**SCREENSHOT:**
 
-**[SCREENSHOT PLACEHOLDER: Terminal showing `get-role` output returning `"lambda_execution_role"`]**
+
+<img width="1035" height="805" alt="image" src="https://github.com/user-attachments/assets/7d200a72-c3eb-4e7b-b22f-2595a78ed93d" />
+
+>Terminal showing `get-function` output with FunctionName, Runtime `python3.12`, and the IAM Role ARN all confirmed
+>Terminal showing `get-role` output returning `"lambda_execution_role"`
 
 ---
 
@@ -622,4 +626,3 @@ aws logs delete-log-group \
 
 
 
-<img width="1035" height="805" alt="image" src="https://github.com/user-attachments/assets/7d200a72-c3eb-4e7b-b22f-2595a78ed93d" />
