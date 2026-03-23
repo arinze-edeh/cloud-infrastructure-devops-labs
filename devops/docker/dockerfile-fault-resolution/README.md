@@ -147,8 +147,6 @@ Type `yes` to accept and permanently store the fingerprint, then enter `steve`'s
 
 > **What happened:** The jump host had no prior record of `stapp02`'s host key. Typing `yes` appended the fingerprint to `~/.ssh/known_hosts` on the jump host. On all future connections, SSH will silently verify against this cached fingerprint. Typing `no` would have aborted the connection. Supplying the fingerprint directly would have verified it before trusting.
 
-***Screenshot Placeholder: Terminal on jump-host showing the SSH ECDSA/ED25519 host key warning prompt, the yes confirmation, the Permanently added message, and the password prompt***
-
 ---
 
 ### Step 2 - Verify Target Identity
@@ -165,7 +163,9 @@ steve
 
 Both outputs match expected values. Proceeding.
 
-***Screenshot Placeholder: Terminal showing hostname returning stapp02 and whoami returning steve on consecutive lines***
+***Screenshot: Terminal showing hostname returning stapp02 and whoami returning steve on consecutive lines***
+
+<img width="1035" height="481" alt="image" src="https://github.com/user-attachments/assets/7fb18cd8-b7ae-4e00-9baf-6b7f5ef3a7de" />
 
 ---
 
@@ -982,7 +982,7 @@ Date: March 23, 2026
 
 
 
-<img width="1035" height="481" alt="image" src="https://github.com/user-attachments/assets/7fb18cd8-b7ae-4e00-9baf-6b7f5ef3a7de" />
+
 <img width="1031" height="516" alt="image" src="https://github.com/user-attachments/assets/0903dbd0-a764-4db6-bce4-2044b0b6b1bc" />
 <img width="1031" height="794" alt="image" src="https://github.com/user-attachments/assets/7ae23057-2961-4560-ab34-28f43fb68469" />
 <img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/cf17cd4e-b740-4f16-8238-59d2c9d0c2e2" />
