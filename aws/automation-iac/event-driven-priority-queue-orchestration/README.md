@@ -549,8 +549,10 @@ echo "Stack deleted"
 Stack deleted
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-10-delete-stack-wait-complete.png`
+> **SCREENSHOT**
+
+<img width="1031" height="753" alt="image" src="https://github.com/user-attachments/assets/0e077702-4f7e-4cf9-96c1-e29e992912d5" />
+
 > *Terminal showing the three commands in sequence: `delete-stack` returning with no output, `wait stack-delete-complete` returning cleanly, and `echo "Stack deleted"` printing the confirmation message*
 
 ---
@@ -1422,7 +1424,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1031" height="753" alt="image" src="https://github.com/user-attachments/assets/0e077702-4f7e-4cf9-96c1-e29e992912d5" />
+
 <img width="1037" height="844" alt="image" src="https://github.com/user-attachments/assets/94208f50-5c3c-4e38-9ef6-c7c6508c8334" />
 <img width="1030" height="600" alt="image" src="https://github.com/user-attachments/assets/4f647f1e-e238-4063-9a23-7507b9171c12" />
 <img width="1032" height="506" alt="image" src="https://github.com/user-attachments/assets/78ad6644-8238-4ffb-b7ee-0d489c8d1187" />
