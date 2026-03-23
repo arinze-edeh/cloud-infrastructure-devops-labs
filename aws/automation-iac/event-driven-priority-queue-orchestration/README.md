@@ -472,8 +472,10 @@ The error message is generic by design -- it confirms the terminal state but not
 
 Always follow any failed `wait stack-create-complete` with `describe-stack-events` filtered to `CREATE_FAILED` status before taking any remediation action.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-08-error2-rollback-complete.png`
+> **SCREENSHOT**
+
+<img width="1031" height="361" alt="image" src="https://github.com/user-attachments/assets/6dc4aafe-c3ca-42de-b6a6-98c976aa03d1" />
+
 > *Terminal showing the `wait` command exiting with `Waiter StackCreateComplete failed: Waiter encountered a terminal failure state: For expression "Stacks[].StackStatus" we matched expected path: "ROLLBACK_COMPLETE" at least once`*
 
 ---
@@ -1417,7 +1419,6 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1031" height="361" alt="image" src="https://github.com/user-attachments/assets/6dc4aafe-c3ca-42de-b6a6-98c976aa03d1" />
 <img width="1035" height="676" alt="image" src="https://github.com/user-attachments/assets/cb0f25c5-03b8-4f32-b0d5-8aa4e503737f" />
 <img width="1031" height="753" alt="image" src="https://github.com/user-attachments/assets/0e077702-4f7e-4cf9-96c1-e29e992912d5" />
 <img width="1037" height="844" alt="image" src="https://github.com/user-attachments/assets/94208f50-5c3c-4e38-9ef6-c7c6508c8334" />
