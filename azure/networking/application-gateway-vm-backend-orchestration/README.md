@@ -801,12 +801,10 @@ Allowed values: Standard_Small, Standard_Medium, WAF_Medium, WAF_Large, Standard
 
 **Root cause:** The CLI's local argument validator hardcodes an allowed-values list for `--sku`. `Basic` exists in the ARM API and is required by the policy, but has not been added to this CLI version's enumeration. This creates the core conflict of this deployment: Azure Policy requires `Basic`, CLI refuses to pass it.
 
-**Screenshot 19: AGW --sku Basic CLI validation error**
+**Screenshot: AGW --sku Basic CLI validation error**
 > Terminal showing `'Basic' is not a valid value for '--sku'` with the full allowed values list confirming `Basic` is absent and the conflict with the subscription policy is established.
 
-```
-[ SCREENSHOT PLACEHOLDER: 19_agw_cli_basic_sku_invalid.png ]
-```
+<img width="1299" height="866" alt="image" src="https://github.com/user-attachments/assets/82f14e2f-790c-4244-a8a0-d0bf12d71c35" />
 
 ---
 
@@ -1211,7 +1209,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 <img width="1303" height="860" alt="image" src="https://github.com/user-attachments/assets/23e2b348-15b5-43fe-8567-b5fb1a829f55" />
 
 
-<img width="1299" height="866" alt="image" src="https://github.com/user-attachments/assets/82f14e2f-790c-4244-a8a0-d0bf12d71c35" />
+
 <img width="1299" height="431" alt="image" src="https://github.com/user-attachments/assets/10e6d9ff-0452-40c1-8e47-cd7673991a78" />
 <img width="1292" height="679" alt="image" src="https://github.com/user-attachments/assets/caa78f80-e534-48d4-ba67-84153fb0817f" />
 <img width="1302" height="715" alt="image" src="https://github.com/user-attachments/assets/4f55a175-9192-4853-b19a-63826a585433" />
