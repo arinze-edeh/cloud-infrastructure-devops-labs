@@ -680,7 +680,11 @@ The first attempt to match socket inode `2932112603` to a PID used a single broa
 
 The output scrolled through dozens of `/proc/<PID>/fd` directory listings with no clear signal identifying which single PID owned the matching socket. This approach was abandoned as too noisy to be reliable.
 
-***Screenshot Placeholder: Terminal showing the overly broad ls -la /proc/*/fd pipeline producing many lines of output across multiple process directories making it impossible to identify the correct PID***
+***Screenshots: Terminal showing the overly broad ls -la /proc/*/fd pipeline producing many lines of output across multiple process directories making it impossible to identify the correct PID***
+
+<img width="1033" height="839" alt="image" src="https://github.com/user-attachments/assets/31f43bee-c290-4e35-9db2-d63cde17efc9" />
+<img width="1032" height="858" alt="image" src="https://github.com/user-attachments/assets/f6dd1214-9d57-4030-ab84-70d56fa634c1" />
+<img width="1027" height="861" alt="image" src="https://github.com/user-attachments/assets/01979849-999d-41af-87cf-0474320c3457" />
 
 ---
 
@@ -1016,9 +1020,7 @@ Date: March 23, 2026
 
 
 
-<img width="1033" height="839" alt="image" src="https://github.com/user-attachments/assets/31f43bee-c290-4e35-9db2-d63cde17efc9" />
-<img width="1032" height="858" alt="image" src="https://github.com/user-attachments/assets/f6dd1214-9d57-4030-ab84-70d56fa634c1" />
-<img width="1027" height="861" alt="image" src="https://github.com/user-attachments/assets/01979849-999d-41af-87cf-0474320c3457" />
+
 <img width="1032" height="347" alt="image" src="https://github.com/user-attachments/assets/741e2d9e-b397-45ff-9656-c39aadf13570" />
 <img width="1394" height="428" alt="image" src="https://github.com/user-attachments/assets/cca1d0d3-2c18-4043-8ffd-aecbb970ff0f" />
 <img width="1175" height="554" alt="image" src="https://github.com/user-attachments/assets/74c6f8cc-2779-4640-bc5d-af43115f11b2" />
