@@ -563,12 +563,10 @@ az vm create \
 
 > **Key Design Decision:** `--public-ip-address ""` explicitly disables public IP allocation. All public traffic must enter through the Application Gateway only, enforcing centralized traffic control.
 
-**Screenshot 13: VM create success JSON response**
+**Screenshot: VM create success JSON response**
 > `az vm create` output confirming `"powerState": "VM running"`, `"privateIpAddress": "10.0.1.4"`, and `"publicIpAddress": ""` for `xfusion-vm`, confirming the VM is up with no public IP.
 
-```
-[ SCREENSHOT PLACEHOLDER: 13_vm_create_success.png ]
-```
+<img width="1297" height="866" alt="image" src="https://github.com/user-attachments/assets/478a28f1-db91-4878-b915-bf88a9d7e872" />
 
 ---
 
@@ -1238,7 +1236,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 
-<img width="1297" height="866" alt="image" src="https://github.com/user-attachments/assets/478a28f1-db91-4878-b915-bf88a9d7e872" />
+
 <img width="1292" height="722" alt="image" src="https://github.com/user-attachments/assets/801c967d-3b42-45df-a4fe-09643136ee56" />
 <img width="1303" height="860" alt="image" src="https://github.com/user-attachments/assets/23e2b348-15b5-43fe-8567-b5fb1a829f55" />
 <img width="1301" height="868" alt="image" src="https://github.com/user-attachments/assets/ecafc348-e6e3-4d51-948f-40997665628f" />
