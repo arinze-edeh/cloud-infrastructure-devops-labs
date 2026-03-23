@@ -275,8 +275,10 @@ ls -lh /root/nautilus-priority-stack.yml
 -rw-r--r-- 1 root root 6.3K Mar 22 02:10 /root/nautilus-priority-stack.yml
 ```
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-03-ls-lh-template-file.png`
+> **SCREENSHOT**
+
+<img width="1026" height="477" alt="image" src="https://github.com/user-attachments/assets/c36de50a-3ab5-48ed-92ee-431e8f4934ea" />
+
 > *Terminal showing `ls -lh` output confirming `/root/nautilus-priority-stack.yml` exists at `6.3K` with the `Mar 22 02:10` timestamp*
 
 ---
@@ -1400,7 +1402,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1026" height="477" alt="image" src="https://github.com/user-attachments/assets/c36de50a-3ab5-48ed-92ee-431e8f4934ea" />
+
 <img width="1036" height="337" alt="image" src="https://github.com/user-attachments/assets/ee5bd82a-23a8-4a75-b19d-880980195258" />
 <img width="1033" height="559" alt="image" src="https://github.com/user-attachments/assets/963508d5-4fd8-4b0a-a39b-edee32720acd" />
 <img width="1034" height="264" alt="image" src="https://github.com/user-attachments/assets/8e006760-7c8e-4efe-ab81-91e5a2660154" />
