@@ -704,7 +704,9 @@ Before running the targeted PID loop, extract only the socket inode number to us
 
 The inode `2932112603` is cleanly isolated. This will now be used in a controlled per-PID loop.
 
-***Screenshot Placeholder: Terminal showing grep 1F90 /proc/net/tcp piped to awk print 10 returning only 2932112603***
+***Screenshot: Terminal showing grep 1F90 /proc/net/tcp piped to awk print 10 returning only 2932112603***
+
+<img width="1032" height="347" alt="image" src="https://github.com/user-attachments/assets/741e2d9e-b397-45ff-9656-c39aadf13570" />
 
 ---
 
@@ -734,7 +736,9 @@ PID: 66
 
 **Result:** PID `66` owns file descriptor `11`, which is a socket pointing to inode `2932112603` - the same inode as the process listening on port `8080`.
 
-***Screenshot Placeholder: Terminal showing the for loop executing and producing the single output line with socket:[2932112603] and PID: 66***
+***Screenshot: Terminal showing the for loop executing and producing the single output line with socket:[2932112603] and PID: 66***
+
+<img width="1032" height="347" alt="image" src="https://github.com/user-attachments/assets/741e2d9e-b397-45ff-9656-c39aadf13570" />
 
 ---
 
@@ -765,7 +769,9 @@ lrwx------ 1 root root 64 Mar 23 02:28 11 -> socket:[2932112603]
 
 > **Root cause:** `$NF` in awk gives the last whitespace-delimited token of a line. In an `ls -la` symlink line, the last token is the symlink target, not the directory path. To extract the PID from the path `/proc/<PID>/fd`, the PID must be parsed from the directory path itself, for example from `$pid` in the loop. Since PID `66` was already confirmed in Step 22, subsequent steps reference it directly.
 
-***Screenshot Placeholder: Terminal showing the failed cat command with the awk NF extraction producing the nonsensical path /proc/socket:[2932112603]/cmdline and the No such file or directory error***
+***Screenshot: Terminal showing the failed cat command with the awk NF extraction producing the nonsensical path /proc/socket:[2932112603]/cmdline and the No such file or directory error***
+
+<img width="1032" height="347" alt="image" src="https://github.com/user-attachments/assets/741e2d9e-b397-45ff-9656-c39aadf13570" />
 
 ---
 
@@ -1021,7 +1027,7 @@ Date: March 23, 2026
 
 
 
-<img width="1032" height="347" alt="image" src="https://github.com/user-attachments/assets/741e2d9e-b397-45ff-9656-c39aadf13570" />
+
 <img width="1394" height="428" alt="image" src="https://github.com/user-attachments/assets/cca1d0d3-2c18-4043-8ffd-aecbb970ff0f" />
 <img width="1175" height="554" alt="image" src="https://github.com/user-attachments/assets/74c6f8cc-2779-4640-bc5d-af43115f11b2" />
 
