@@ -483,7 +483,9 @@ nautilus-image   latest    75f3dc558b36   3 minutes ago   166MB
 
 Image confirmed: repository `nautilus-image`, tag `latest`, ID `75f3dc558b36`, size `166MB`.
 
-***Screenshot Placeholder: Terminal showing docker images grep output with nautilus-image latest 75f3dc558b36 3 minutes ago 166MB***
+***Screenshot: Terminal showing docker images grep output with nautilus-image latest 75f3dc558b36 3 minutes ago 166MB***
+
+<img width="1033" height="317" alt="image" src="https://github.com/user-attachments/assets/64140f7d-9fdd-428f-87dc-ec9f87ea56cc" />
 
 ---
 
@@ -510,7 +512,9 @@ docker: Error response from daemon: driver failed programming external connectiv
 
 > **Important distinction:** Docker allocates the container ID and writes container metadata before it attempts to bind host ports. The port binding failure happens after container creation. This means the container exists in `docker ps -a` (stopped state) even though it never ran, and must be explicitly removed.
 
-***Screenshot Placeholder: Terminal showing the docker run command with the container ID on line 1 followed by the full Error response from daemon port binding error on line 2***
+***Screenshot: Terminal showing the docker run command with the container ID on line 1 followed by the full Error response from daemon port binding error on line 2***
+
+<img width="1033" height="317" alt="image" src="https://github.com/user-attachments/assets/64140f7d-9fdd-428f-87dc-ec9f87ea56cc" />
 
 ---
 
@@ -530,7 +534,9 @@ Verify that the failed `docker run` did not produce a running container.
 
 `docker ps` lists only containers in the running state. Empty output confirms `test-container` is not running. The container exists stopped in `docker ps -a` but is not active. The port investigation and cleanup proceed next.
 
-***Screenshot Placeholder: Terminal showing docker ps grep test-container returning no output confirming no running container***
+***Screenshot: Terminal showing docker ps grep test-container returning no output confirming no running container***
+
+<img width="1033" height="317" alt="image" src="https://github.com/user-attachments/assets/64140f7d-9fdd-428f-87dc-ec9f87ea56cc" />
 
 ---
 
@@ -996,7 +1002,7 @@ Date: March 23, 2026
 
 
 
-<img width="1033" height="317" alt="image" src="https://github.com/user-attachments/assets/64140f7d-9fdd-428f-87dc-ec9f87ea56cc" />
+
 <img width="1033" height="232" alt="image" src="https://github.com/user-attachments/assets/3aa91f2d-9397-4724-809e-e674dea0a042" />
 <img width="1032" height="305" alt="image" src="https://github.com/user-attachments/assets/584a75a7-0875-4a11-bce4-3e1f9dcd3366" />
 <img width="1032" height="348" alt="image" src="https://github.com/user-attachments/assets/3f14bcdd-3f85-4e13-953b-f58160c96183" />
