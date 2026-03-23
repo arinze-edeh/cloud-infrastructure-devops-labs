@@ -436,19 +436,15 @@ SHA256:ywll5VAceuZW3Ua6xh7gScIhG6us28Jz7/sRtyR8m9Y root@azure-client
 
 > **Security Note:** The `-N ""` flag sets an empty passphrase, acceptable only for lab environments. In production, always protect private keys with strong passphrases and store them in Azure Key Vault.
 
-**Screenshot 10a: cat ~/.ssh/id_rsa.pub not found**
+**Screenshot: cat ~/.ssh/id_rsa.pub not found**
 > Terminal showing `cat: /root/.ssh/id_rsa.pub: No such file or directory` confirming no pre-existing SSH key on this lab host.
 
-```
-[ SCREENSHOT PLACEHOLDER: 10a_ssh_key_not_found.png ]
-```
+<img width="1298" height="701" alt="image" src="https://github.com/user-attachments/assets/ca06e14d-fa51-4b95-828a-f4a20ee5fca0" />
 
-**Screenshot 10b: ssh-keygen output and public key**
+**Screenshot: ssh-keygen output and public key**
 > Full `ssh-keygen` terminal output including the randomart image, followed by `cat ~/.ssh/id_rsa.pub` displaying the generated RSA public key value beginning with `ssh-rsa AAAAB3...`.
 
-```
-[ SCREENSHOT PLACEHOLDER: 10b_ssh_keygen_and_pubkey.png ]
-```
+<img width="1298" height="701" alt="image" src="https://github.com/user-attachments/assets/ca06e14d-fa51-4b95-828a-f4a20ee5fca0" />
 
 ---
 
@@ -1243,7 +1239,7 @@ A `curl` returning `200` confirms user-facing traffic is flowing. `show-backend-
 
 
 
-<img width="1298" height="701" alt="image" src="https://github.com/user-attachments/assets/ca06e14d-fa51-4b95-828a-f4a20ee5fca0" />
+
 <img width="1297" height="682" alt="image" src="https://github.com/user-attachments/assets/ab9a01b8-ac18-452a-b229-23accf7c58b2" />
 <img width="1294" height="617" alt="image" src="https://github.com/user-attachments/assets/c2a9b852-1f76-4c85-b751-1d0b7cde4abc" />
 <img width="1297" height="866" alt="image" src="https://github.com/user-attachments/assets/478a28f1-db91-4878-b915-bf88a9d7e872" />
