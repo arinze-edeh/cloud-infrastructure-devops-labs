@@ -519,8 +519,10 @@ Note that `iam:CreateRole` succeeded (the role object began creation) because th
 
 Remove the inline `Policies:` block from `LambdaExecutionRole`. Create a standalone `AWS::IAM::ManagedPolicy` resource and reference it via `ManagedPolicyArns` on the role. This changes the required IAM actions from `iam:PutRolePolicy` to `iam:CreatePolicy` and `iam:AttachRolePolicy`, both of which are permitted for this user.
 
-> **SCREENSHOT PLACEHOLDER**
-> `screenshot-09-error3-describe-stack-events-putrolepolicy.png`
+> **SCREENSHOT**
+
+<img width="1035" height="676" alt="image" src="https://github.com/user-attachments/assets/cb0f25c5-03b8-4f32-b0d5-8aa4e503737f" />
+
 > *Terminal showing the full `describe-stack-events` table output with `LambdaExecutionRole` in the left column and the complete `iam:PutRolePolicy` 403 AccessDenied message including the Request ID `2add31fc-57fd-4f68-948f-8d37c03e6e59` and `HandlerErrorCode: AccessDenied`*
 
 ---
@@ -1419,7 +1421,7 @@ Stack ARN: `arn:aws:cloudformation:us-east-1:691595780564:stack/nautilus-priorit
 
 
 
-<img width="1035" height="676" alt="image" src="https://github.com/user-attachments/assets/cb0f25c5-03b8-4f32-b0d5-8aa4e503737f" />
+
 <img width="1031" height="753" alt="image" src="https://github.com/user-attachments/assets/0e077702-4f7e-4cf9-96c1-e29e992912d5" />
 <img width="1037" height="844" alt="image" src="https://github.com/user-attachments/assets/94208f50-5c3c-4e38-9ef6-c7c6508c8334" />
 <img width="1030" height="600" alt="image" src="https://github.com/user-attachments/assets/4f647f1e-e238-4063-9a23-7507b9171c12" />
