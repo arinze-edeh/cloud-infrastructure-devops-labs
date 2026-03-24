@@ -1052,8 +1052,9 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 
 **Prevention:** Pin Azure CLI versions in all CI/CD pipelines. Run `az eventhubs eventhub create --help` against the target CLI version before any deployment script is executed after an upgrade.
 
-> **Screenshot Placeholder -- Lesson 1**
-> `[SCREENSHOT: Side-by-side terminal comparison: LEFT panel shows Step 7 failed command with "✖" prompt and "unrecognized arguments: --message-retention 1" error output; RIGHT panel shows Step 8 corrected command with "➜" prompt and the JSON response confirming "status": "Active"]`
+> **Screenshot -- Lesson 1**
+
+<img width="1034" height="839" alt="image" src="https://github.com/user-attachments/assets/629dec36-d539-4f36-95be-23dfcc923852" />
 
 ---
 
