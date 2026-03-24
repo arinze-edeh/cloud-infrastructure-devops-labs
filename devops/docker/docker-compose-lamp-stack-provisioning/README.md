@@ -277,7 +277,11 @@ CONTAINER ID   IMAGE            COMMAND                  CREATED          STATUS
 30e14804de45   mariadb:latest   "docker-entrypoint.s…"   31 seconds ago   Up 29 seconds   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp   mysql_web
 ```
 
-**[ SCREENSHOT PLACEHOLDER: docker ps output showing php_web on port 8085 and mysql_web on port 3306 both in Up state ]**
+**SCREENSHOT:** 
+
+<img width="1176" height="803" alt="image" src="https://github.com/user-attachments/assets/1a836970-11d4-4ecf-9e66-3eb4e9d022c0" />
+
+>docker ps output showing php_web on port 8085 and mysql_web on port 3306 both in Up state
 
 ---
 
@@ -303,7 +307,12 @@ Perform an HTTP request against the PHP/Apache service to confirm it is serving 
 
 A `200 OK` response with the application HTML confirms full stack health.
 
-**[ SCREENSHOT PLACEHOLDER: curl http://localhost:8085 returning the xFusionCorp Industries welcome page HTML ]**
+**SCREENSHOT:** 
+
+
+<img width="1173" height="863" alt="image" src="https://github.com/user-attachments/assets/b7e730d5-57cd-4a33-950d-5521e0de13d6" />
+
+>curl http://localhost:8085 returning the xFusionCorp Industries welcome page HTML
 
 ---
 
@@ -427,11 +436,3 @@ Credentials visible in `docker inspect` or `cat docker-compose.yml` are a real s
 | `image not found` error during pull | Incorrect image name or tag / network unrestricted | Verify image name spelling and Docker Hub connectivity from the host |
 
 ---
-
-
-
-
-
-
-<img width="1176" height="803" alt="image" src="https://github.com/user-attachments/assets/1a836970-11d4-4ecf-9e66-3eb4e9d022c0" />
-<img width="1173" height="863" alt="image" src="https://github.com/user-attachments/assets/b7e730d5-57cd-4a33-950d-5521e0de13d6" />
