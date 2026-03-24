@@ -319,8 +319,11 @@ Name                  Location    SKU       AutoInflate    State
 datacenter-namespace  eastus      Standard  True           Succeeded
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of az eventhubs namespace show --output table showing datacenter-namespace, eastus, Standard, AutoInflate True, State Succeeded]`
+> **Screenshot**
+
+<img width="1031" height="595" alt="image" src="https://github.com/user-attachments/assets/8ef48449-cb6c-4a57-bc45-823e0d868a66" />
+
+> `Terminal output of az eventhubs namespace show --output table showing datacenter-namespace, eastus, Standard, AutoInflate True, State Succeeded`
 
 ---
 
@@ -1118,7 +1121,7 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 
 
 
-<img width="1031" height="595" alt="image" src="https://github.com/user-attachments/assets/8ef48449-cb6c-4a57-bc45-823e0d868a66" />
+
 <img width="1035" height="446" alt="image" src="https://github.com/user-attachments/assets/26bccb2e-90a2-4045-9557-3443584bf4c4" />
 <img width="1034" height="839" alt="image" src="https://github.com/user-attachments/assets/6663943f-d2d7-46b3-80ac-0de6c198b5c3" />
 <img width="1035" height="806" alt="image" src="https://github.com/user-attachments/assets/6dad978e-98ba-4c50-9de8-08749834d0b5" />
