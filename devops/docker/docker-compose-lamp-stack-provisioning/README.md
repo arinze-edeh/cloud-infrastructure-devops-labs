@@ -159,7 +159,7 @@ drwxr-xr-x 2 root root 4096 Mar 24 01:01 /opt/sysops
 
 <img width="1036" height="613" alt="image" src="https://github.com/user-attachments/assets/65964fae-3f44-43b8-9c99-853aeea2a13a" />
 
->ls -ld /opt/sysops showing correct directory creation ]**
+>ls -ld /opt/sysops showing correct directory creation
 
 ---
 
@@ -203,7 +203,13 @@ Verify the written file:
 [banner@stapp03 ~]$ cat /opt/sysops/docker-compose.yml
 ```
 
-**[ SCREENSHOT PLACEHOLDER: cat output of /opt/sysops/docker-compose.yml showing full contents ]**
+**SCREENSHOTS:** 
+
+
+<img width="1036" height="767" alt="image" src="https://github.com/user-attachments/assets/10479e1a-d4bf-47db-be67-c97830acae03" />
+<img width="1034" height="545" alt="image" src="https://github.com/user-attachments/assets/b3dd8fa9-757d-4428-a1c2-f6f8c5317cac" />
+
+>cat output of /opt/sysops/docker-compose.yml showing full contents
 
 ---
 
@@ -417,8 +423,6 @@ Credentials visible in `docker inspect` or `cat docker-compose.yml` are a real s
 
 
 
-<img width="1036" height="767" alt="image" src="https://github.com/user-attachments/assets/10479e1a-d4bf-47db-be67-c97830acae03" />
-<img width="1034" height="545" alt="image" src="https://github.com/user-attachments/assets/b3dd8fa9-757d-4428-a1c2-f6f8c5317cac" />
 <img width="1034" height="579" alt="image" src="https://github.com/user-attachments/assets/c7df766a-f5f0-42c3-a387-3f81e4c29b41" />
 <img width="1031" height="732" alt="image" src="https://github.com/user-attachments/assets/75efba69-ddf9-4d34-b089-2087c4156166" />
 <img width="1176" height="803" alt="image" src="https://github.com/user-attachments/assets/1a836970-11d4-4ecf-9e66-3eb4e9d022c0" />
