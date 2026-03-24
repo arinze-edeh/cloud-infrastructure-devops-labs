@@ -4,7 +4,6 @@
 [![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=flat-square&logo=python)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/Platform-Ubuntu%2022.04-E95420?style=flat-square&logo=ubuntu)](https://ubuntu.com/)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=flat-square)]()
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)]()
 
 ---
 
@@ -36,7 +35,6 @@
   - [Step 19: Validate IncomingMessages Metric](#step-19-validate-incomingmessages-metric)
   - [Step 20: Validate IncomingBytes Metric](#step-20-validate-incomingbytes-metric)
   - [Step 21: Full Stack Health Verification](#step-21-full-stack-health-verification)
-- [Project Structure](#project-structure)
 - [Configuration Reference](#configuration-reference)
 - [Errors Encountered and Resolutions](#errors-encountered-and-resolutions)
 - [Best Practices](#best-practices)
