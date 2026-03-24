@@ -222,7 +222,12 @@ Before launching the stack, ensure the host-side bind mount paths exist to preve
 [banner@stapp03 ~]$ sudo mkdir -p /var/lib/mysql
 ```
 
-**[ SCREENSHOT PLACEHOLDER: mkdir commands for /var/www/html and /var/lib/mysql ]**
+**SCREENSHOT:** 
+
+
+<img width="1034" height="579" alt="image" src="https://github.com/user-attachments/assets/c7df766a-f5f0-42c3-a387-3f81e4c29b41" />
+
+>mkdir commands for /var/www/html and /var/lib/mysql
 
 ---
 
@@ -423,7 +428,6 @@ Credentials visible in `docker inspect` or `cat docker-compose.yml` are a real s
 
 
 
-<img width="1034" height="579" alt="image" src="https://github.com/user-attachments/assets/c7df766a-f5f0-42c3-a387-3f81e4c29b41" />
 <img width="1031" height="732" alt="image" src="https://github.com/user-attachments/assets/75efba69-ddf9-4d34-b089-2087c4156166" />
 <img width="1176" height="803" alt="image" src="https://github.com/user-attachments/assets/1a836970-11d4-4ecf-9e66-3eb4e9d022c0" />
 <img width="1173" height="863" alt="image" src="https://github.com/user-attachments/assets/b7e730d5-57cd-4a33-950d-5521e0de13d6" />
