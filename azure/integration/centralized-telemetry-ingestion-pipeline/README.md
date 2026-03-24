@@ -811,8 +811,11 @@ TimeStamp             Total
 * The timestamp (`05:54:00Z`) aligns with the execution window of the log producer runs
 * The metric total of 120 for 60 application events is expected -- see [Lessons Learned](#3-incomingmessages-count-exceeds-application-level-event-count) for full explanation
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of the az monitor metrics list IncomingMessages command showing the results table with TimeStamp 2026-03-24T05:54:00Z and Total 120.0]`
+> **Screenshot**
+
+<img width="1033" height="852" alt="image" src="https://github.com/user-attachments/assets/8c432816-f684-45ea-929e-0bd3ab9deccf" />
+
+> `Terminal output of the az monitor metrics list IncomingMessages command showing the results table with TimeStamp 2026-03-24T05:54:00Z and Total 120.0`
 
 ---
 
@@ -842,8 +845,11 @@ TimeStamp             Total
 * `Total: 8569.0` bytes confirms actual payload was ingested, not just empty protocol frames
 * Timestamp (`05:55:00Z`) is 1 minute after the `IncomingMessages` timestamp, consistent with Azure Monitor's per-metric aggregation cadence
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of the az monitor metrics list IncomingBytes command showing the results table with TimeStamp 2026-03-24T05:55:00Z and Total 8569.0]`
+> **Screenshot**
+
+<img width="1033" height="852" alt="image" src="https://github.com/user-attachments/assets/8c432816-f684-45ea-929e-0bd3ab9deccf" />
+
+> `Terminal output of the az monitor metrics list IncomingBytes command showing the results table with TimeStamp 2026-03-24T05:55:00Z and Total 8569.0`
 
 ---
 
@@ -1118,6 +1124,6 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 <img width="1033" height="858" alt="image" src="https://github.com/user-attachments/assets/ed916cf4-37ae-437e-9c19-93ec2b9c53bf" />
 <img width="1037" height="867" alt="image" src="https://github.com/user-attachments/assets/4915be82-422d-456f-b883-fcaa47723458" />
 <img width="1026" height="861" alt="image" src="https://github.com/user-attachments/assets/0b9216bb-3bcd-40d2-a9fb-1698ee7967d1" />
-<img width="1033" height="852" alt="image" src="https://github.com/user-attachments/assets/8c432816-f684-45ea-929e-0bd3ab9deccf" />
+
 
 
