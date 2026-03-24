@@ -898,45 +898,11 @@ VM running
 
 All three components confirmed healthy. The centralized log collection pipeline is fully operational.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing the complete full stack health check output with all three section headers (===== NAMESPACE =====, ===== EVENT HUB =====, ===== VM STATUS =====) and their respective tables and values confirming Succeeded, Active, and VM running]`
+> **Screenshot**
 
----
+<img width="1031" height="828" alt="image" src="https://github.com/user-attachments/assets/5a05d1fb-2e94-4c84-bc12-6231ce859ec8" />
 
-## Project Structure
-
-```
-.
-|-- README.md                    # This document
-|-- send_logs.py                 # Python Event Hub producer (deployed on VM at /home/azureuser/)
-|-- scripts/
-|   |-- full_stack_check.sh      # Consolidated health check script (Step 21)
-|   |-- verify_metrics.sh        # Azure Monitor metrics validation script (Steps 19 and 20)
-|-- docs/
-|   |-- architecture.png         # Pipeline architecture diagram
-|   |-- screenshots/
-|       |-- step-01-account-show.png              # az account show JSON output
-|       |-- step-02-account-list.png              # az account list table
-|       |-- step-03-group-list.png                # az group list table
-|       |-- step-04-vm-list.png                   # az vm list table
-|       |-- step-05-namespace-create.png          # namespace create JSON output
-|       |-- step-06-namespace-verify.png          # namespace show table
-|       |-- step-07-eventhub-error.png            # ERROR: --message-retention failure
-|       |-- step-08-eventhub-create-fixed.png     # corrected create JSON output
-|       |-- step-09-eventhub-verify.png           # eventhub show table
-|       |-- step-10-connection-string.png         # connection string echo (key masked)
-|       |-- step-11-ssh-login.png                 # VM IP echo and SSH welcome banner
-|       |-- step-12-script-inspect.png            # ls -la and cat pre-modification
-|       |-- step-13-sdk-verify.png                # pip3 show azure-eventhub output
-|       |-- step-14-sed-inject.png                # sed -i command clean execution
-|       |-- step-15-script-updated.png            # cat post-modification (key masked)
-|       |-- step-16-runs-1-2-3.png                # three individual script run outputs
-|       |-- step-17-runs-4-5-6-loop.png           # for loop three run outputs
-|       |-- step-18-exit-vm.png                   # exit and connection closed message
-|       |-- step-19-incoming-messages.png         # IncomingMessages metric table
-|       |-- step-20-incoming-bytes.png            # IncomingBytes metric table
-|       |-- step-21-full-stack-health.png         # consolidated health check output
-```
+> `Terminal showing the complete full stack health check output with all three section headers (===== NAMESPACE =====, ===== EVENT HUB =====, ===== VM STATUS =====) and their respective tables and values confirming Succeeded, Active, and VM running`
 
 ---
 
@@ -1153,5 +1119,5 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 <img width="1037" height="867" alt="image" src="https://github.com/user-attachments/assets/4915be82-422d-456f-b883-fcaa47723458" />
 <img width="1026" height="861" alt="image" src="https://github.com/user-attachments/assets/0b9216bb-3bcd-40d2-a9fb-1698ee7967d1" />
 <img width="1033" height="852" alt="image" src="https://github.com/user-attachments/assets/8c432816-f684-45ea-929e-0bd3ab9deccf" />
-<img width="1031" height="828" alt="image" src="https://github.com/user-attachments/assets/5a05d1fb-2e94-4c84-bc12-6231ce859ec8" />
+
 
