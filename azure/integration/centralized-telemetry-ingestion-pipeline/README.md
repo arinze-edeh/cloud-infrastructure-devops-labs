@@ -611,8 +611,11 @@ Required-by:
 * `Location: /usr/local/lib/python3.10/dist-packages` -- installed system-wide for Python 3.10
 * Dependencies `azure-core` and `typing-extensions` are present and satisfied
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of pip3 show azure-eventhub showing Name: azure-eventhub, Version: 5.15.1, Location, and Requires fields confirming the SDK is fully installed]`
+> **Screenshot**
+
+<img width="1035" height="523" alt="image" src="https://github.com/user-attachments/assets/71b5b0d3-00b0-4b0e-8c80-f5df6e7b8365" />
+
+> `Terminal output of pip3 show azure-eventhub showing Name: azure-eventhub, Version: 5.15.1, Location, and Requires fields confirming the SDK is fully installed`
 
 ---
 
@@ -1129,6 +1132,6 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 
 
 
-<img width="1035" height="523" alt="image" src="https://github.com/user-attachments/assets/71b5b0d3-00b0-4b0e-8c80-f5df6e7b8365" />
+
 
 <img width="1032" height="702" alt="image" src="https://github.com/user-attachments/assets/3b6a1117-3c61-407a-8195-4a68c1ac695c" />
