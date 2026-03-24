@@ -177,8 +177,11 @@ Azure Free Labs  AzureCloud   f0c3bcdd-5ce2-4fa0-8cf3-41559747512b  54c1a2d3-d10
 * `IsDefault: True` matches the subscription confirmed in Step 1
 * `State: Enabled` confirms the subscription is active
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of az account list --output table showing exactly one row: Azure Free Labs, AzureCloud, Enabled, IsDefault True]`
+> **Screenshot**
+
+<img width="1031" height="617" alt="image" src="https://github.com/user-attachments/assets/1af38257-1af6-4363-82e1-b18eead5c680" />
+
+> `Terminal output of az account list --output table showing exactly one row: Azure Free Labs, AzureCloud, Enabled, IsDefault True`
 
 ---
 
