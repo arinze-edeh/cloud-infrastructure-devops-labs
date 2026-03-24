@@ -290,8 +290,12 @@ az eventhubs namespace create \
 * `"zoneRedundant": true` -- Standard SKU in eastus applies zone redundancy automatically
 * `"minimumTlsVersion": "1.2"` -- TLS 1.2 enforced, no legacy TLS allowed
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of az eventhubs namespace create returning the full JSON block with provisioningState: Succeeded, isAutoInflateEnabled: true, kafkaEnabled: true, and status: Active all visible]`
+> **Screenshots**
+
+<img width="1037" height="846" alt="image" src="https://github.com/user-attachments/assets/8cbcbd47-d0e0-4d52-9734-f17d3dfe8d29" />
+<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/347fabf8-3f62-4f6e-94dd-9d4ede9ec0e5" />
+
+> `Terminal output of az eventhubs namespace create returning the full JSON block with provisioningState: Succeeded, isAutoInflateEnabled: true, kafkaEnabled: true, and status: Active all visible`
 
 ---
 
@@ -1114,8 +1118,6 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 
 
 
-<img width="1037" height="846" alt="image" src="https://github.com/user-attachments/assets/8cbcbd47-d0e0-4d52-9734-f17d3dfe8d29" />
-<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/347fabf8-3f62-4f6e-94dd-9d4ede9ec0e5" />
 <img width="1031" height="595" alt="image" src="https://github.com/user-attachments/assets/8ef48449-cb6c-4a57-bc45-823e0d868a66" />
 <img width="1035" height="446" alt="image" src="https://github.com/user-attachments/assets/26bccb2e-90a2-4045-9557-3443584bf4c4" />
 <img width="1034" height="839" alt="image" src="https://github.com/user-attachments/assets/6663943f-d2d7-46b3-80ac-0de6c198b5c3" />
