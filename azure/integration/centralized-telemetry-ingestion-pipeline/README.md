@@ -516,8 +516,12 @@ Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 6.8.0-1044-azure x86_64)
 * ECDSA fingerprint verified and host permanently added to known hosts
 * System information banner confirms Ubuntu 22.04.5 LTS and private IP `10.0.0.4` on `eth0`
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing the full SSH sequence: VM_IP echo output of 20.115.31.19, the ECDSA fingerprint prompt answered "yes", and the full Ubuntu 22.04 welcome banner with system information table]`
+> **Screenshots**
+
+<img width="1035" height="620" alt="image" src="https://github.com/user-attachments/assets/d3e30b11-1f4c-4f76-9e09-6422a74a6314" />
+<img width="1033" height="865" alt="image" src="https://github.com/user-attachments/assets/98abe896-436a-4419-8f49-7368f5301b6f" />
+
+> `Terminal showing the full SSH sequence: VM_IP echo output of 20.115.31.19, the ECDSA fingerprint prompt answered "yes", and the full Ubuntu 22.04 welcome banner with system information table`
 
 ---
 
@@ -1138,8 +1142,6 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 
 
 
-<img width="1035" height="620" alt="image" src="https://github.com/user-attachments/assets/d3e30b11-1f4c-4f76-9e09-6422a74a6314" />
-<img width="1033" height="865" alt="image" src="https://github.com/user-attachments/assets/98abe896-436a-4419-8f49-7368f5301b6f" />
 <img width="1033" height="665" alt="image" src="https://github.com/user-attachments/assets/8262e888-19f0-441e-856c-15c6f2af30a1" />
 <img width="1035" height="523" alt="image" src="https://github.com/user-attachments/assets/71b5b0d3-00b0-4b0e-8c80-f5df6e7b8365" />
 <img width="1034" height="485" alt="image" src="https://github.com/user-attachments/assets/1292dc59-839f-43fb-b791-4709564f197c" />
