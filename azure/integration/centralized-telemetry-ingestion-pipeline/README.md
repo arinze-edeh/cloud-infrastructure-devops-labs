@@ -463,8 +463,11 @@ Endpoint=sb://datacenter-namespace.servicebus.windows.net/;SharedAccessKeyName=R
 
 > **Security Note:** The SAS key shown above was rotated immediately after this lab session closed. Never commit connection strings to source control. In production, retrieve secrets at runtime from Azure Key Vault or environment variables.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of the CONNECTION_STRING variable assignment and echo command showing the full Endpoint=sb:// format connection string (mask the SharedAccessKey value before publishing)]`
+> **Screenshot**
+
+<img width="1034" height="446" alt="image" src="https://github.com/user-attachments/assets/d8016fc3-62f5-496a-b2dd-548cf655ce07" />
+
+> `Terminal output of the CONNECTION_STRING variable assignment and echo command showing the full Endpoint=sb:// format connection string (mask the SharedAccessKey value before publishing)`
 
 ---
 
@@ -1134,7 +1137,7 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 
 
 
-<img width="1034" height="446" alt="image" src="https://github.com/user-attachments/assets/d8016fc3-62f5-496a-b2dd-548cf655ce07" />
+
 <img width="1035" height="620" alt="image" src="https://github.com/user-attachments/assets/d3e30b11-1f4c-4f76-9e09-6422a74a6314" />
 <img width="1033" height="865" alt="image" src="https://github.com/user-attachments/assets/98abe896-436a-4419-8f49-7368f5301b6f" />
 <img width="1033" height="665" alt="image" src="https://github.com/user-attachments/assets/8262e888-19f0-441e-856c-15c6f2af30a1" />
