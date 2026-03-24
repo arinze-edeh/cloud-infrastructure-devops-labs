@@ -102,7 +102,11 @@ banner@stapp03's password:
 
 > **Note:** The fingerprint is stored permanently in `~/.ssh/known_hosts` after first acceptance. For production environments, validate the fingerprint out-of-band before accepting.
 
-**[ SCREENSHOT PLACEHOLDER: Successful SSH login to stapp03 from jump-host ]**
+**SCREENSHOT:** 
+
+<img width="1032" height="469" alt="image" src="https://github.com/user-attachments/assets/15d97e48-f4f4-485d-a485-62fe3be8e1a7" />
+
+>Successful SSH login to stapp03 from jump-host
 
 ---
 
@@ -401,7 +405,7 @@ Credentials visible in `docker inspect` or `cat docker-compose.yml` are a real s
 ---
 
 
-<img width="1032" height="469" alt="image" src="https://github.com/user-attachments/assets/15d97e48-f4f4-485d-a485-62fe3be8e1a7" />
+
 <img width="1035" height="501" alt="image" src="https://github.com/user-attachments/assets/e1bd9115-8369-4008-b317-06ef9f771c6e" />
 <img width="1036" height="613" alt="image" src="https://github.com/user-attachments/assets/65964fae-3f44-43b8-9c99-853aeea2a13a" />
 <img width="1036" height="767" alt="image" src="https://github.com/user-attachments/assets/10479e1a-d4bf-47db-be67-c97830acae03" />
