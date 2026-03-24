@@ -467,7 +467,7 @@ Endpoint=sb://datacenter-namespace.servicebus.windows.net/;SharedAccessKeyName=R
 
 <img width="1034" height="446" alt="image" src="https://github.com/user-attachments/assets/d8016fc3-62f5-496a-b2dd-548cf655ce07" />
 
-> `Terminal output of the CONNECTION_STRING variable assignment and echo command showing the full Endpoint=sb:// format connection string (mask the SharedAccessKey value before publishing)`
+> `Terminal output of the CONNECTION_STRING variable assignment and echo command showing the full Endpoint=sb:// format connection string`
 
 ---
 
@@ -574,8 +574,11 @@ with producer:
 * `event_hub_name` is already set to `"datacenter-hub"`, matching the hub created in Step 8
 * The `create_batch()` + `send_batch()` pattern is used -- the recommended approach for efficient, reliable event delivery
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing the ls -la output confirming -rwxr-xr-x permissions and 622 byte file size, followed by the cat output of send_logs.py with the <your_event_hub_connection_string> placeholder clearly visible]`
+> **Screenshot**
+
+<img width="1033" height="665" alt="image" src="https://github.com/user-attachments/assets/8262e888-19f0-441e-856c-15c6f2af30a1" />
+
+> `Terminal showing the ls -la output confirming -rwxr-xr-x permissions and 622 byte file size, followed by the cat output of send_logs.py with the <your_event_hub_connection_string> placeholder clearly visible`
 
 ---
 
@@ -1142,7 +1145,6 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 
 
 
-<img width="1033" height="665" alt="image" src="https://github.com/user-attachments/assets/8262e888-19f0-441e-856c-15c6f2af30a1" />
 <img width="1035" height="523" alt="image" src="https://github.com/user-attachments/assets/71b5b0d3-00b0-4b0e-8c80-f5df6e7b8365" />
 <img width="1034" height="485" alt="image" src="https://github.com/user-attachments/assets/1292dc59-839f-43fb-b791-4709564f197c" />
 <img width="1032" height="702" alt="image" src="https://github.com/user-attachments/assets/3b6a1117-3c61-407a-8195-4a68c1ac695c" />
