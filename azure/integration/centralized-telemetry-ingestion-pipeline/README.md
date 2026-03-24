@@ -403,8 +403,11 @@ az eventhubs eventhub create \
 * `"messageRetentionInDays": 7` -- 7-day default retention applied automatically
 * `"retentionTimeInHours": 168` -- consistent with the 7-day default
 
-> **Screenshot Placeholder -- RESOLUTION**
-> `[SCREENSHOT: Terminal showing the corrected az eventhubs eventhub create command (without --message-retention) with the "➜" green prompt symbol and the full JSON response with "status": "Active", "partitionCount": 2, and "retentionTimeInHours": 168 visible]`
+> **Screenshot -- RESOLUTION**
+
+<img width="1034" height="839" alt="image" src="https://github.com/user-attachments/assets/6663943f-d2d7-46b3-80ac-0de6c198b5c3" />
+
+> `Terminal showing the corrected az eventhubs eventhub create command (without --message-retention) with the "➜" green prompt symbol and the full JSON response with "status": "Active", "partitionCount": 2, and "retentionTimeInHours": 168 visible`
 
 ---
 
@@ -1126,7 +1129,7 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 
 
 
-<img width="1034" height="839" alt="image" src="https://github.com/user-attachments/assets/6663943f-d2d7-46b3-80ac-0de6c198b5c3" />
+
 <img width="1035" height="806" alt="image" src="https://github.com/user-attachments/assets/6dad978e-98ba-4c50-9de8-08749834d0b5" />
 <img width="1034" height="446" alt="image" src="https://github.com/user-attachments/assets/d8016fc3-62f5-496a-b2dd-548cf655ce07" />
 <img width="1035" height="620" alt="image" src="https://github.com/user-attachments/assets/d3e30b11-1f4c-4f76-9e09-6422a74a6314" />
