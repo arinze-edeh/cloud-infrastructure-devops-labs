@@ -126,7 +126,12 @@ Docker version 26.1.3, build b72abbb
 Docker Compose version v5.0.2
 ```
 
-**[ SCREENSHOT PLACEHOLDER: docker --version and docker compose version output on stapp03 ]**
+**SCREENSHOT:** 
+
+<img width="1035" height="501" alt="image" src="https://github.com/user-attachments/assets/e1bd9115-8369-4008-b317-06ef9f771c6e" />
+
+
+>docker --version and docker compose version output on stapp03
 
 ---
 
@@ -406,7 +411,7 @@ Credentials visible in `docker inspect` or `cat docker-compose.yml` are a real s
 
 
 
-<img width="1035" height="501" alt="image" src="https://github.com/user-attachments/assets/e1bd9115-8369-4008-b317-06ef9f771c6e" />
+
 <img width="1036" height="613" alt="image" src="https://github.com/user-attachments/assets/65964fae-3f44-43b8-9c99-853aeea2a13a" />
 <img width="1036" height="767" alt="image" src="https://github.com/user-attachments/assets/10479e1a-d4bf-47db-be67-c97830acae03" />
 <img width="1034" height="545" alt="image" src="https://github.com/user-attachments/assets/b3dd8fa9-757d-4428-a1c2-f6f8c5317cac" />
