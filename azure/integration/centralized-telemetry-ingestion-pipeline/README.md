@@ -352,8 +352,11 @@ Read more about the command in reference docs
 
 **What happened:** The CLI exited with a non-zero status code, shown by the `✖` prompt symbol. The Event Hub was **not created**. The `--message-retention` flag was removed from the Azure CLI when the Event Hubs ARM API was updated, and no backward-compatible alias was provided.
 
-> **Screenshot Placeholder -- ERROR**
-> `[SCREENSHOT: Terminal showing the "✖" red prompt symbol, the complete failed az eventhubs eventhub create command with --message-retention 1, and the full error text: "unrecognized arguments: --message-retention 1" followed by the CLI reference hint]`
+> **Screenshot -- ERROR**
+
+<img width="1035" height="446" alt="image" src="https://github.com/user-attachments/assets/26bccb2e-90a2-4045-9557-3443584bf4c4" />
+
+> `Terminal showing the "✖" red prompt symbol, the complete failed az eventhubs eventhub create command with --message-retention 1, and the full error text: "unrecognized arguments: --message-retention 1" followed by the CLI reference hint`
 
 **Resolution:** Remove the `--message-retention` flag and re-run. See [Step 8](#step-8-create-the-event-hub----corrected-command) for the corrected command and [Errors Encountered and Resolutions](#errors-encountered-and-resolutions) for full root cause analysis.
 
@@ -1122,7 +1125,7 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 
 
 
-<img width="1035" height="446" alt="image" src="https://github.com/user-attachments/assets/26bccb2e-90a2-4045-9557-3443584bf4c4" />
+
 <img width="1034" height="839" alt="image" src="https://github.com/user-attachments/assets/6663943f-d2d7-46b3-80ac-0de6c198b5c3" />
 <img width="1035" height="806" alt="image" src="https://github.com/user-attachments/assets/6dad978e-98ba-4c50-9de8-08749834d0b5" />
 <img width="1034" height="446" alt="image" src="https://github.com/user-attachments/assets/d8016fc3-62f5-496a-b2dd-548cf655ce07" />
