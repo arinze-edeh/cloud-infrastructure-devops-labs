@@ -613,7 +613,7 @@ Required-by:
 
 > **Screenshot**
 
-<img width="1035" height="523" alt="image" src="https://github.com/user-attachments/assets/71b5b0d3-00b0-4b0e-8c80-f5df6e7b8365" />
+<img width="1032" height="702" alt="image" src="https://github.com/user-attachments/assets/3b6a1117-3c61-407a-8195-4a68c1ac695c" />
 
 > `Terminal output of pip3 show azure-eventhub showing Name: azure-eventhub, Version: 5.15.1, Location, and Requires fields confirming the SDK is fully installed`
 
@@ -629,8 +629,11 @@ sed -i 's|connection_str = "<your_event_hub_connection_string>"|connection_str =
 
 > **Lab-Only Pattern Warning:** Injecting credentials directly into a script file via `sed` is strictly a lab convenience pattern. This must never be used in production environments. See [Lessons Learned -- SAS Key Injection](#4-sas-key-injection-via-sed-is-a-lab-only-pattern) for the production-safe alternative using environment variables or Azure Key Vault.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing the full sed -i command executing cleanly and returning to the shell prompt with no error output, confirming the in-place substitution completed successfully]`
+> **Screenshot**
+
+<img width="1035" height="523" alt="image" src="https://github.com/user-attachments/assets/71b5b0d3-00b0-4b0e-8c80-f5df6e7b8365" />
+
+> `Terminal showing the full sed -i command executing cleanly and returning to the shell prompt with no error output, confirming the in-place substitution completed successfully`
 
 ---
 
@@ -1122,16 +1125,3 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 * [Azure Managed Identity for Event Hubs](https://learn.microsoft.com/en-us/azure/event-hubs/authenticate-managed-identity)
 * [Azure Key Vault Secrets SDK for Python](https://learn.microsoft.com/en-us/python/api/overview/azure/keyvault-secrets-readme)
 * [Conventional Commits Specification](https://www.conventionalcommits.org/)
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1032" height="702" alt="image" src="https://github.com/user-attachments/assets/3b6a1117-3c61-407a-8195-4a68c1ac695c" />
