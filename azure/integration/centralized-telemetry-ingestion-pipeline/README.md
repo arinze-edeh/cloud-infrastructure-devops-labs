@@ -206,8 +206,11 @@ kml_rg_main-53613478641048b5  eastus      Succeeded
 * `kml_rg_main-53613478641048b5` exists with `Status: Succeeded`
 * `Location: eastus` matches the required deployment region for all pipeline resources
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of az group list --output table showing kml_rg_main-53613478641048b5 in eastus with Status: Succeeded]`
+> **Screenshot**
+
+<img width="1034" height="696" alt="image" src="https://github.com/user-attachments/assets/dbad102f-ed65-4c05-afaa-e8d742de461a" />
+
+> `Terminal output of az group list --output table showing kml_rg_main-53613478641048b5 in eastus with Status: Succeeded`
 
 ---
 
@@ -233,8 +236,11 @@ datacenter-vm  KML_RG_MAIN-53613478641048B5  eastus
 * `Location: eastus` is consistent with all other pipeline resources
 * No availability zone is assigned -- single-zone deployment acceptable for this workload
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of az vm list --output table showing datacenter-vm in KML_RG_MAIN-53613478641048B5 in eastus]`
+> **Screenshot**
+
+<img width="1034" height="696" alt="image" src="https://github.com/user-attachments/assets/dbad102f-ed65-4c05-afaa-e8d742de461a" />
+
+> `Terminal output of az vm list --output table showing datacenter-vm in KML_RG_MAIN-53613478641048B5 in eastus`
 
 ---
 
@@ -1107,7 +1113,7 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 
 
 
-<img width="1034" height="696" alt="image" src="https://github.com/user-attachments/assets/dbad102f-ed65-4c05-afaa-e8d742de461a" />
+
 <img width="1037" height="846" alt="image" src="https://github.com/user-attachments/assets/8cbcbd47-d0e0-4d52-9734-f17d3dfe8d29" />
 <img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/347fabf8-3f62-4f6e-94dd-9d4ede9ec0e5" />
 <img width="1031" height="595" alt="image" src="https://github.com/user-attachments/assets/8ef48449-cb6c-4a57-bc45-823e0d868a66" />
