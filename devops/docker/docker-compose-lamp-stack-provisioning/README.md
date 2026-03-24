@@ -155,7 +155,11 @@ Verify ownership and permissions:
 drwxr-xr-x 2 root root 4096 Mar 24 01:01 /opt/sysops
 ```
 
-**[ SCREENSHOT PLACEHOLDER: ls -ld /opt/sysops showing correct directory creation ]**
+**SCREENSHOT:** 
+
+<img width="1036" height="613" alt="image" src="https://github.com/user-attachments/assets/65964fae-3f44-43b8-9c99-853aeea2a13a" />
+
+>ls -ld /opt/sysops showing correct directory creation ]**
 
 ---
 
@@ -412,7 +416,7 @@ Credentials visible in `docker inspect` or `cat docker-compose.yml` are a real s
 
 
 
-<img width="1036" height="613" alt="image" src="https://github.com/user-attachments/assets/65964fae-3f44-43b8-9c99-853aeea2a13a" />
+
 <img width="1036" height="767" alt="image" src="https://github.com/user-attachments/assets/10479e1a-d4bf-47db-be67-c97830acae03" />
 <img width="1034" height="545" alt="image" src="https://github.com/user-attachments/assets/b3dd8fa9-757d-4428-a1c2-f6f8c5317cac" />
 <img width="1034" height="579" alt="image" src="https://github.com/user-attachments/assets/c7df766a-f5f0-42c3-a387-3f81e4c29b41" />
