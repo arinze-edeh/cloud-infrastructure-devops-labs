@@ -253,7 +253,11 @@ Navigate to the Compose file directory and start all services in detached mode.
 
 > Both images are pulled from Docker Hub, a default bridge network (`sysops_default`) is created automatically, and both containers are started.
 
-**[ SCREENSHOT PLACEHOLDER: docker compose up -d output showing all 27 layers pulled and both containers created ]**
+**SCREENSHOT:** 
+
+<img width="1031" height="732" alt="image" src="https://github.com/user-attachments/assets/75efba69-ddf9-4d34-b089-2087c4156166" />
+
+>docker compose up -d output showing all 27 layers pulled and both containers created
 
 ---
 
@@ -428,6 +432,6 @@ Credentials visible in `docker inspect` or `cat docker-compose.yml` are a real s
 
 
 
-<img width="1031" height="732" alt="image" src="https://github.com/user-attachments/assets/75efba69-ddf9-4d34-b089-2087c4156166" />
+
 <img width="1176" height="803" alt="image" src="https://github.com/user-attachments/assets/1a836970-11d4-4ecf-9e66-3eb4e9d022c0" />
 <img width="1173" height="863" alt="image" src="https://github.com/user-attachments/assets/b7e730d5-57cd-4a33-950d-5521e0de13d6" />
