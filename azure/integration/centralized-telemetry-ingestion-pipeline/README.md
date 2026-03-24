@@ -761,7 +761,7 @@ Log entry 10 sent.
 
 > **Screenshot**
 
-<img width="1026" height="861" alt="image" src="https://github.com/user-attachments/assets/0b9216bb-3bcd-40d2-a9fb-1698ee7967d1" />
+<img width="1037" height="867" alt="image" src="https://github.com/user-attachments/assets/4915be82-422d-456f-b883-fcaa47723458" />
 
 > `Terminal showing the complete loop execution output with "--- Run 1 ---", "--- Run 2 ---", and "--- Run 3 ---" section headers and all 30 Log entry N sent. lines, completing cleanly with no error output`
 
@@ -1128,7 +1128,7 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 <img width="1032" height="702" alt="image" src="https://github.com/user-attachments/assets/3b6a1117-3c61-407a-8195-4a68c1ac695c" />
 <img width="1031" height="868" alt="image" src="https://github.com/user-attachments/assets/26d7d561-f559-4d09-bccf-cbb2133f8c12" />
 <img width="1033" height="858" alt="image" src="https://github.com/user-attachments/assets/ed916cf4-37ae-437e-9c19-93ec2b9c53bf" />
-<img width="1037" height="867" alt="image" src="https://github.com/user-attachments/assets/4915be82-422d-456f-b883-fcaa47723458" />
+
 
 
 
