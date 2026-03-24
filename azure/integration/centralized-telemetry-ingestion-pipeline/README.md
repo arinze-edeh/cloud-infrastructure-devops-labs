@@ -706,8 +706,11 @@ python3 /home/azureuser/send_logs.py   # Run 3 -- identical output
 
 **Running total after Step 16:** 30 log events sent (3 runs x 10 entries per run).
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing three sequential executions of python3 /home/azureuser/send_logs.py, each producing Log entry 1 through 10 sent., all completing with the "➜" green prompt symbol and no errors between runs]`
+> **Screenshot**
+
+<img width="1033" height="858" alt="image" src="https://github.com/user-attachments/assets/ed916cf4-37ae-437e-9c19-93ec2b9c53bf" />
+
+> `Terminal showing three sequential executions of python3 /home/azureuser/send_logs.py, each producing Log entry 1 through 10 sent., all completing with the "➜" green prompt symbol and no errors between runs`
 
 ---
 
@@ -1127,8 +1130,6 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 <img width="1034" height="485" alt="image" src="https://github.com/user-attachments/assets/1292dc59-839f-43fb-b791-4709564f197c" />
 <img width="1032" height="702" alt="image" src="https://github.com/user-attachments/assets/3b6a1117-3c61-407a-8195-4a68c1ac695c" />
 <img width="1031" height="868" alt="image" src="https://github.com/user-attachments/assets/26d7d561-f559-4d09-bccf-cbb2133f8c12" />
-<img width="1033" height="858" alt="image" src="https://github.com/user-attachments/assets/ed916cf4-37ae-437e-9c19-93ec2b9c53bf" />
-
 
 
 
