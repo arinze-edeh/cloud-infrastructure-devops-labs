@@ -987,8 +987,11 @@ https://aka.ms/cli_ref
 Read more about the command in reference docs
 ```
 
-> **Screenshot Placeholder -- ERROR-01: Terminal Error Output**
-> `[SCREENSHOT: Terminal showing the "✖" red prompt symbol, the complete failed az eventhubs eventhub create command with --message-retention 1 visible, and the full error text "unrecognized arguments: --message-retention 1" with the CLI reference hint line below it]`
+> **Screenshot -- ERROR-01: Terminal Error Output**
+
+<img width="1034" height="839" alt="image" src="https://github.com/user-attachments/assets/629dec36-d539-4f36-95be-23dfcc923852" />
+
+> `Terminal showing the "✖" red prompt symbol, the complete failed az eventhubs eventhub create command with --message-retention 1 visible, and the full error text "unrecognized arguments: --message-retention 1" with the CLI reference hint line below it`
 
 #### Root Cause
 
@@ -998,8 +1001,11 @@ The `--message-retention` flag was a shorthand for the `messageRetentionInDays` 
 
 The `--message-retention 1` flag was removed from the command entirely. The corrected command was re-run successfully in Step 8. The Standard SKU default of 7 days (168 hours) was accepted as returned automatically in `retentionDescription.retentionTimeInHours`.
 
-> **Screenshot Placeholder -- ERROR-01: Successful Resolution**
-> `[SCREENSHOT: Terminal showing the corrected az eventhubs eventhub create command (no --message-retention flag) with the "➜" green prompt symbol and the complete JSON response showing "status": "Active", "partitionCount": 2, "messageRetentionInDays": 7, and "retentionTimeInHours": 168]`
+> **Screenshot -- ERROR-01: Successful Resolution**
+
+<img width="1034" height="839" alt="image" src="https://github.com/user-attachments/assets/629dec36-d539-4f36-95be-23dfcc923852" />
+
+> `Terminal showing the corrected az eventhubs eventhub create command (no --message-retention flag) with the "➜" green prompt symbol and the complete JSON response showing "status": "Active", "partitionCount": 2, "messageRetentionInDays": 7, and "retentionTimeInHours": 168`
 
 #### Prevention Going Forward
 
