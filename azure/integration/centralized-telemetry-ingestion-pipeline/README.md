@@ -669,8 +669,11 @@ with producer:
 * The connection string begins correctly with `Endpoint=sb://datacenter-namespace.servicebus.windows.net/`
 * No other lines in the script were modified by the substitution
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of cat /home/azureuser/send_logs.py post-modification showing the full Endpoint=sb:// connection string now on the connection_str line (mask the SharedAccessKey value before publishing)]`
+> **Screenshot**
+
+<img width="1034" height="485" alt="image" src="https://github.com/user-attachments/assets/1292dc59-839f-43fb-b791-4709564f197c" />
+
+> `Terminal output of cat /home/azureuser/send_logs.py post-modification showing the full Endpoint=sb:// connection string now on the connection_str line (mask the SharedAccessKey value before publishing)`
 
 ---
 
@@ -1127,5 +1130,5 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 
 
 <img width="1035" height="523" alt="image" src="https://github.com/user-attachments/assets/71b5b0d3-00b0-4b0e-8c80-f5df6e7b8365" />
-<img width="1034" height="485" alt="image" src="https://github.com/user-attachments/assets/1292dc59-839f-43fb-b791-4709564f197c" />
+
 <img width="1032" height="702" alt="image" src="https://github.com/user-attachments/assets/3b6a1117-3c61-407a-8195-4a68c1ac695c" />
