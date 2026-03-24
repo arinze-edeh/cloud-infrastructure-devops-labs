@@ -432,8 +432,11 @@ Name            Status    Partitions
 datacenter-hub  Active    2
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of az eventhubs eventhub show --output table showing datacenter-hub, Status Active, Partitions 2]`
+> **Screenshot**
+
+<img width="1035" height="806" alt="image" src="https://github.com/user-attachments/assets/6dad978e-98ba-4c50-9de8-08749834d0b5" />
+
+> `Terminal output of az eventhubs eventhub show --output table showing datacenter-hub, Status Active, Partitions 2`
 
 ---
 
@@ -1130,7 +1133,7 @@ The `--message-retention 1` flag was removed from the command entirely. The corr
 
 
 
-<img width="1035" height="806" alt="image" src="https://github.com/user-attachments/assets/6dad978e-98ba-4c50-9de8-08749834d0b5" />
+
 <img width="1034" height="446" alt="image" src="https://github.com/user-attachments/assets/d8016fc3-62f5-496a-b2dd-548cf655ce07" />
 <img width="1035" height="620" alt="image" src="https://github.com/user-attachments/assets/d3e30b11-1f4c-4f76-9e09-6422a74a6314" />
 <img width="1033" height="865" alt="image" src="https://github.com/user-attachments/assets/98abe896-436a-4419-8f49-7368f5301b6f" />
