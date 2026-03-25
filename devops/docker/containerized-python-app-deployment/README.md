@@ -122,6 +122,96 @@ steve@stapp02's password:
 
 ---
 
+---
+ 
+### Step 2: Inspect the Source Directory and Verify File Permissions
+ 
+After logging in, the first action is to list the contents of the pre-staged source directory to confirm what files are present and who owns them.
+ 
+```bash
+[steve@stapp02 ~]$ ls -la /python_app/src/
+```
+ 
+**Output:**
+ 
+```
+total 16
+drwxr-xr-x 2 root root 4096 Mar 25 20:46 .
+drwxr-xr-x 3 root root 4096 Mar 25 20:46 ..
+-rw-r--r-- 1 root root    5 Mar 25 20:46 requirements.txt
+-rw-r--r-- 1 root root  278 Mar 25 20:46 server.py
+```
+ 
+> **Observation:** Both `requirements.txt` and `server.py` are present and owned by `root` with world-readable permissions (`-rw-r--r--`). The `steve` user can read these files but cannot modify them.
+ 
+Next, confirm the specific file attributes of the application entry point directly:
+ 
+```bash
+[steve@stapp02 ~]$ ls -la /python_app/src/server.py
+```
+ 
+**Output:**
+ 
+```
+-rw-r--r-- 1 root root 278 Mar 25 20:46 /python_app/src/server.py
+```
+ 
+> **Observation:** `server.py` is 278 bytes, owned by `root`, and readable by all users. This confirms the script is accessible for the Docker build `COPY` instruction.
+ 
+> **Screenshot**
+
+<img width="1029" height="620" alt="image" src="https://github.com/user-attachments/assets/de438761-1400-4698-a625-735fc4fc7343" />
+
+> `Terminal showing ls -la /python_app/src/ listing both files, followed by ls -la /python_app/src/server.py confirming individual file attributes`
+ 
+---
+ 
+### Step 3: Review the Dependency Manifest and Inspect the Parent Directory
+ 
+Read the contents of `requirements.txt` to confirm which Python packages the application depends on:
+ 
+```bash
+[steve@stapp02 ~]$ cat /python_app/src/requirements.txt
+```
+ 
+**Output:**
+ 
+```
+flask
+```
+ 
+> **Observation:** The only declared dependency is `flask` with no pinned version. This means the latest available Flask release will be installed at image build time. In production workloads, always pin dependency versions (e.g., `flask==3.0.3`) to guarantee reproducible builds across environments.
+ 
+> **Screenshot**
+
+<img width="1032" height="600" alt="image" src="https://github.com/user-attachments/assets/4eddd673-8f3a-43c2-b63b-c09f9985ec87" />
+
+> `cat /python_app/src/requirements.txt output showing flask as the sole dependency`
+ 
+Now inspect the parent `/python_app/` directory to understand the full layout and ownership before attempting any writes:
+ 
+```bash
+[steve@stapp02 ~]$ ls -la /python_app/
+```
+ 
+**Output:**
+ 
+```
+total 12
+drwxr-xr-x 3 root root 4096 Mar 25 20:46 .
+dr-xr-xr-x 1 root root 4096 Mar 25 20:57 ..
+drwxr-xr-x 2 root root 4096 Mar 25 20:46 src
+```
+ 
+> **Critical Observation:** The `/python_app/` directory itself is owned by `root` and the `steve` user has no write permission on it (`drwxr-xr-x` -- owner has rwx, group and others have r-x only). This means any attempt by `steve` to create a new file directly under `/python_app/` will fail with a `Permission denied` error. This is the direct cause of the error encountered in the next step.
+ 
+> **Screenshot Placeholder**
+> `[SCREENSHOT: ls -la /python_app/ output showing root ownership and drwxr-xr-x permissions with no write access for steve]`
+ 
+---
+
+
+
 ### Step 2: Inspect the Application Directory
 
 After logging in, verify the pre-staged application structure.
@@ -159,7 +249,7 @@ drwxr-xr-x 2 root root 4096 Mar 25 20:46 src
 
 > **Screenshot**
 
-<img width="1029" height="620" alt="image" src="https://github.com/user-attachments/assets/de438761-1400-4698-a625-735fc4fc7343" />
+
 
 > `Terminal output showing ls -la /python_app/ and /python_app/src/ with root ownership`
 
@@ -195,7 +285,7 @@ Verify the server script exists with correct permissions:
 
 > **Screenshot**
 
-<img width="1032" height="600" alt="image" src="https://github.com/user-attachments/assets/4eddd673-8f3a-43c2-b63b-c09f9985ec87" />
+
 
 > `cat output of requirements.txt showing flask dependency`
 
