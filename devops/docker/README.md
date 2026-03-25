@@ -163,8 +163,11 @@ echo $RESOURCE_GROUP
 kml_rg_main-b4bf4bcbbdf8490c
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing the empty output from the centralus query, followed by the manually corrected RESOURCE_GROUP variable]`
+> **Screenshot**
+
+<img width="1034" height="500" alt="image" src="https://github.com/user-attachments/assets/70643674-44da-4ec7-a381-3e5c0e0888ed" />
+
+> `Terminal showing the empty output from the centralus query, followed by the manually corrected RESOURCE_GROUP variable`
 
 > **NOTE:** A resource group's location does not constrain where child resources like AKS clusters are deployed. Always verify independently.
 
@@ -524,7 +527,7 @@ kubectl get nodes -o wide
 
 
 
-<img width="1034" height="500" alt="image" src="https://github.com/user-attachments/assets/70643674-44da-4ec7-a381-3e5c0e0888ed" />
+
 <img width="1128" height="840" alt="image" src="https://github.com/user-attachments/assets/2c4f7380-755d-4096-94e9-ed492f6f48b2" />
 <img width="1149" height="864" alt="image" src="https://github.com/user-attachments/assets/02ebea6f-8131-456d-ba44-4b33191321be" />
 <img width="1263" height="860" alt="image" src="https://github.com/user-attachments/assets/52a739e5-e6d1-4a47-93aa-64fa7443b76b" />
