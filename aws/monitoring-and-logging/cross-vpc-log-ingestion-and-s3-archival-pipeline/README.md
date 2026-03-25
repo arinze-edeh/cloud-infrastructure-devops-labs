@@ -505,8 +505,11 @@ Public key added
 Keys distributed
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output showing successful SCP of devops-key.pem to both public and private EC2, and "Keys distributed" confirmation]`
+> **Screenshot**
+
+<img width="1081" height="848" alt="image" src="https://github.com/user-attachments/assets/19976361-e237-4ea2-ac39-e513eb673cd6" />
+
+> `Terminal output showing successful SCP of devops-key.pem to both public and private EC2, and "Keys distributed" confirmation]`
 
 ---
 
@@ -753,7 +756,7 @@ aws s3 ls s3://devops-s3-logs-25406/devops-priv-vpc/boot/
 
 
 
-<img width="1081" height="848" alt="image" src="https://github.com/user-attachments/assets/19976361-e237-4ea2-ac39-e513eb673cd6" />
+
 <img width="1079" height="863" alt="image" src="https://github.com/user-attachments/assets/a7e60128-588a-4a9d-9638-59fe16aff1aa" />
 <img width="1078" height="862" alt="image" src="https://github.com/user-attachments/assets/f4c8b422-25f7-4a49-82ee-f6c8f5f348cc" />
 <img width="1134" height="855" alt="image" src="https://github.com/user-attachments/assets/5fca679d-b771-451d-b568-60fc2f9cdd57" />
