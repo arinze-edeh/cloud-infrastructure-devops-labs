@@ -287,8 +287,12 @@ echo "KEY_NAME=$KEY_NAME  UBUNTU_AMI=$UBUNTU_AMI  PUB_SG_ID=$PUB_SG_ID  PUB_EC2_
 KEY_NAME=devops-key  UBUNTU_AMI=ami-00de3875b03809ec5  PUB_SG_ID=sg-0e7dff2b2dbff34fd  PUB_EC2_ID=i-05a7403454c019495
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: AWS Console > EC2 > Instances showing devops-pub-ec2 in running state with public IP, subnet, and security group visible]`
+> **Screenshots**
+
+<img width="1031" height="841" alt="image" src="https://github.com/user-attachments/assets/fd60add0-c99c-4d51-91d9-eefe5a917e52" />
+<img width="1034" height="865" alt="image" src="https://github.com/user-attachments/assets/d21d4f15-e399-4b28-bf2f-530141faef9d" />
+
+> `AWS Console > EC2 > Instances showing devops-pub-ec2 in running state with public IP, subnet, and security group visible`
 
 ---
 
@@ -747,9 +751,7 @@ aws s3 ls s3://devops-s3-logs-25406/devops-priv-vpc/boot/
 
 
 
-<img width="1034" height="845" alt="image" src="https://github.com/user-attachments/assets/d697d887-a697-42c2-b20a-3a951578f99b" />
-<img width="1031" height="841" alt="image" src="https://github.com/user-attachments/assets/fd60add0-c99c-4d51-91d9-eefe5a917e52" />
-<img width="1034" height="865" alt="image" src="https://github.com/user-attachments/assets/d21d4f15-e399-4b28-bf2f-530141faef9d" />
+
 <img width="1030" height="853" alt="image" src="https://github.com/user-attachments/assets/08a8cd81-0f55-4f52-88da-0cb6113bf1f7" />
 <img width="1028" height="867" alt="image" src="https://github.com/user-attachments/assets/ea8e1305-e144-4e9c-8cc2-24626e759ca2" />
 <img width="1024" height="862" alt="image" src="https://github.com/user-attachments/assets/e3ce40aa-58e1-460e-b7c1-fe17febc16f8" />
