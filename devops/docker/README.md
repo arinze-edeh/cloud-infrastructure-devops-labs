@@ -102,7 +102,7 @@ kml_rg_main-b4bf4bcbbdf8490c
 
 > **Screenshot**
 
-<img width="1027" height="445" alt="image" src="https://github.com/user-attachments/assets/9649807c-67d1-4fcd-be5b-396eada93e7d" />
+
 
 > `Terminal showing RESOURCE_GROUP variable set and echoed correctly`
 
@@ -127,8 +127,11 @@ kml_rg_main-b4bf4bcbbdf8490c  eastus      Succeeded
 
 **Key Observation:** The resource group is located in `eastus`. This is a critical detail because the AKS cluster must be deployed to `centralus` as a separate regional resource. Azure allows AKS clusters to be deployed to a different region than their parent resource group.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output of az group list --output table showing the resource group in eastus]`
+> **Screenshot**
+
+<img width="1027" height="445" alt="image" src="https://github.com/user-attachments/assets/9649807c-67d1-4fcd-be5b-396eada93e7d" />
+
+> `Terminal output of az group list --output table showing the resource group in eastus`
 
 ---
 
