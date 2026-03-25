@@ -509,7 +509,7 @@ Keys distributed
 
 <img width="1081" height="848" alt="image" src="https://github.com/user-attachments/assets/19976361-e237-4ea2-ac39-e513eb673cd6" />
 
-> `Terminal output showing successful SCP of devops-key.pem to both public and private EC2, and "Keys distributed" confirmation]`
+> `Terminal output showing successful SCP of devops-key.pem to both public and private EC2, and "Keys distributed" confirmation`
 
 ---
 
@@ -536,8 +536,11 @@ aws-cli/2.34.16 Python/3.14.3 Linux/6.8.0-1050-aws exe/x86_64.ubuntu.22
 AWS CLI installed
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing aws --version output on devops-pub-ec2 confirming aws-cli/2.x installation]`
+> **Screenshot**
+
+<img width="1079" height="863" alt="image" src="https://github.com/user-attachments/assets/a7e60128-588a-4a9d-9638-59fe16aff1aa" />
+
+> `Terminal showing aws --version output on devops-pub-ec2 confirming aws-cli/2.x installation`
 
 ---
 
@@ -757,7 +760,7 @@ aws s3 ls s3://devops-s3-logs-25406/devops-priv-vpc/boot/
 
 
 
-<img width="1079" height="863" alt="image" src="https://github.com/user-attachments/assets/a7e60128-588a-4a9d-9638-59fe16aff1aa" />
+
 <img width="1078" height="862" alt="image" src="https://github.com/user-attachments/assets/f4c8b422-25f7-4a49-82ee-f6c8f5f348cc" />
 <img width="1134" height="855" alt="image" src="https://github.com/user-attachments/assets/5fca679d-b771-451d-b568-60fc2f9cdd57" />
 <img width="1130" height="862" alt="image" src="https://github.com/user-attachments/assets/8f75199b-87e5-403a-9111-2a6d0bacbaac" />
