@@ -414,11 +414,11 @@ echo "PRIV_VPC_ID=$PRIV_VPC_ID  PRIV_VPC_CIDR=$PRIV_VPC_CIDR  PEERING_ID=$PEERIN
 PRIV_VPC_ID=vpc-09f0f241ccc7851e0  PRIV_VPC_CIDR=10.10.0.0/16  PEERING_ID=pcx-07ff722f053d64b7b  PRIV_RT_ID=rtb-0b2873c0c9a0cb96c
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: AWS Console > VPC > Peering Connections showing devops-vpc-peering with status Active between vpc-00c2cdb99aaab238e and vpc-09f0f241ccc7851e0]`
+> **Screenshots**
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: AWS Console > VPC > Route Tables > devops-priv-rt showing route 10.1.0.0/16 via pcx-07ff722f053d64b7b and devops-pub-rt showing route 10.10.0.0/16 via the same peering]`
+<img width="1028" height="844" alt="image" src="https://github.com/user-attachments/assets/ab08b5b2-a0a5-4bd6-a988-fcd8e93738fb" />
+<img width="1032" height="860" alt="image" src="https://github.com/user-attachments/assets/1bc4f0b6-0558-4b19-bedd-d8f9a6c4d28c" />
+<img width="1040" height="871" alt="image" src="https://github.com/user-attachments/assets/3517b524-fde7-432b-a6b9-3834f614cee6" />
 
 ---
 
@@ -750,9 +750,6 @@ aws s3 ls s3://devops-s3-logs-25406/devops-priv-vpc/boot/
 
 
 
-<img width="1028" height="844" alt="image" src="https://github.com/user-attachments/assets/ab08b5b2-a0a5-4bd6-a988-fcd8e93738fb" />
-<img width="1032" height="860" alt="image" src="https://github.com/user-attachments/assets/1bc4f0b6-0558-4b19-bedd-d8f9a6c4d28c" />
-<img width="1040" height="871" alt="image" src="https://github.com/user-attachments/assets/3517b524-fde7-432b-a6b9-3834f614cee6" />
 <img width="1080" height="861" alt="image" src="https://github.com/user-attachments/assets/9dd6b873-178c-4852-8bf6-48ce371c9fc7" />
 <img width="1082" height="871" alt="image" src="https://github.com/user-attachments/assets/283a6b21-a826-4953-ad22-aac8aa760ed0" />
 <img width="1081" height="848" alt="image" src="https://github.com/user-attachments/assets/19976361-e237-4ea2-ac39-e513eb673cd6" />
