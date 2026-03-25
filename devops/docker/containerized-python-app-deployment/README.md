@@ -363,8 +363,11 @@ Launch a detached container from the built image, mapping host port `8095` to co
 | `--name pythonapp_nautilus` | Assign a human-readable name to the container |
 | `-p 8095:8089` | Map host port 8095 to container port 8089 (`host:container`) |
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing docker run command with the full container ID returned on success]`
+> **Screenshot**
+
+<img width="1036" height="849" alt="image" src="https://github.com/user-attachments/assets/f8e9e95a-7c89-4909-913b-bdbb1cd8abe9" />
+
+> `Terminal showing docker run command with the full container ID returned on success`
 
 ---
 
@@ -483,6 +486,6 @@ Piping `docker ps` output through `grep` allows precise targeting of a specific 
 
 
 
-<img width="1036" height="849" alt="image" src="https://github.com/user-attachments/assets/f8e9e95a-7c89-4909-913b-bdbb1cd8abe9" />
+
 <img width="1037" height="854" alt="image" src="https://github.com/user-attachments/assets/bccaf754-f742-4500-b79b-7915b5d74e31" />
 <img width="1034" height="596" alt="image" src="https://github.com/user-attachments/assets/7916afdd-6309-44ae-86f9-420608602162" />
