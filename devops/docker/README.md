@@ -100,8 +100,11 @@ echo $RESOURCE_GROUP
 kml_rg_main-b4bf4bcbbdf8490c
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing RESOURCE_GROUP variable set and echoed correctly]`
+> **Screenshot**
+
+<img width="1027" height="445" alt="image" src="https://github.com/user-attachments/assets/9649807c-67d1-4fcd-be5b-396eada93e7d" />
+
+> `Terminal showing RESOURCE_GROUP variable set and echoed correctly`
 
 ---
 
@@ -517,7 +520,7 @@ kubectl get nodes -o wide
 *Cluster Provisioned | Kubernetes: 1.33.0 | Region: Central US*
 
 
-<img width="1027" height="445" alt="image" src="https://github.com/user-attachments/assets/9649807c-67d1-4fcd-be5b-396eada93e7d" />
+
 <img width="1034" height="500" alt="image" src="https://github.com/user-attachments/assets/70643674-44da-4ec7-a381-3e5c0e0888ed" />
 <img width="1128" height="840" alt="image" src="https://github.com/user-attachments/assets/2c4f7380-755d-4096-94e9-ed492f6f48b2" />
 <img width="1149" height="864" alt="image" src="https://github.com/user-attachments/assets/02ebea6f-8131-456d-ba44-4b33191321be" />
