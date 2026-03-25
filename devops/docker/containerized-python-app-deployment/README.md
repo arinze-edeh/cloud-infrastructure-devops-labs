@@ -205,8 +205,11 @@ drwxr-xr-x 2 root root 4096 Mar 25 20:46 src
  
 > **Critical Observation:** The `/python_app/` directory itself is owned by `root` and the `steve` user has no write permission on it (`drwxr-xr-x` -- owner has rwx, group and others have r-x only). This means any attempt by `steve` to create a new file directly under `/python_app/` will fail with a `Permission denied` error. This is the direct cause of the error encountered in the next step.
  
-> **Screenshot Placeholder**
-> `[SCREENSHOT: ls -la /python_app/ output showing root ownership and drwxr-xr-x permissions with no write access for steve]`
+> **Screenshot**
+
+<img width="1032" height="600" alt="image" src="https://github.com/user-attachments/assets/4eddd673-8f3a-43c2-b63b-c09f9985ec87" />
+
+> `ls -la /python_app/ output showing root ownership and drwxr-xr-x permissions with no write access for steve`
  
 ---
 
