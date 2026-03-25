@@ -64,9 +64,6 @@ Azure Subscription
            └── Azure Monitor Metrics: DISABLED
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Azure Portal showing the datacenter-aks cluster overview page with private endpoint enabled and region set to Central US]`
-
 ---
 
 ## Prerequisites
@@ -102,7 +99,7 @@ kml_rg_main-b4bf4bcbbdf8490c
 
 > **Screenshot**
 
-
+<img width="1034" height="500" alt="image" src="https://github.com/user-attachments/assets/70643674-44da-4ec7-a381-3e5c0e0888ed" />
 
 > `Terminal showing RESOURCE_GROUP variable set and echoed correctly`
 
