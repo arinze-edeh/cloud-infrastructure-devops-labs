@@ -157,8 +157,11 @@ drwxr-xr-x 2 root root 4096 Mar 25 20:46 src
 
 > **Observation:** All files and directories under `/python_app/` are owned by `root`. The `steve` user has read and execute permissions but **no write access**. This is a critical observation that will cause a permission failure in a subsequent step.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output showing ls -la /python_app/ and /python_app/src/ with root ownership]`
+> **Screenshot**
+
+<img width="1029" height="620" alt="image" src="https://github.com/user-attachments/assets/de438761-1400-4698-a625-735fc4fc7343" />
+
+> `Terminal output showing ls -la /python_app/ and /python_app/src/ with root ownership`
 
 ---
 
@@ -462,7 +465,6 @@ Piping `docker ps` output through `grep` allows precise targeting of a specific 
 
 
 
-<img width="1029" height="620" alt="image" src="https://github.com/user-attachments/assets/de438761-1400-4698-a625-735fc4fc7343" />
 <img width="1032" height="600" alt="image" src="https://github.com/user-attachments/assets/4eddd673-8f3a-43c2-b63b-c09f9985ec87" />
 <img width="1038" height="619" alt="image" src="https://github.com/user-attachments/assets/5e43fea8-42bc-4cf1-a778-0bae09f3d3aa" />
 <img width="1032" height="808" alt="image" src="https://github.com/user-attachments/assets/c82903a4-7263-4544-9b34-999ae03677a5" />
