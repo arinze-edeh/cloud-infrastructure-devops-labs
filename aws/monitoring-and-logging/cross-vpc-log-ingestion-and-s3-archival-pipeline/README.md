@@ -185,8 +185,11 @@ echo "PUB_VPC_ID=$PUB_VPC_ID  PUB_SUBNET_ID=$PUB_SUBNET_ID  PUB_RT_ID=$PUB_RT_ID
 PUB_VPC_ID=vpc-00c2cdb99aaab238e  PUB_SUBNET_ID=subnet-0d8b57cf9b154a022  PUB_RT_ID=rtb-0bb48479c56abb39d
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: AWS Console > VPC Dashboard showing devops-pub-vpc, devops-pub-subnet, and devops-pub-rt created with correct CIDRs and association state]`
+> **Screenshot**
+
+<img width="1032" height="837" alt="image" src="https://github.com/user-attachments/assets/391530a9-3e3d-4247-96d0-0038cbc48673" />
+
+> `AWS Console > VPC Dashboard showing devops-pub-vpc, devops-pub-subnet, and devops-pub-rt created with correct CIDRs and association state`
 
 ---
 
@@ -740,7 +743,7 @@ aws s3 ls s3://devops-s3-logs-25406/devops-priv-vpc/boot/
 
 
 
-<img width="1032" height="837" alt="image" src="https://github.com/user-attachments/assets/391530a9-3e3d-4247-96d0-0038cbc48673" />
+
 <img width="1028" height="866" alt="image" src="https://github.com/user-attachments/assets/8d064d34-1dd3-407b-8919-f8c779b4406c" />
 <img width="1034" height="845" alt="image" src="https://github.com/user-attachments/assets/d697d887-a697-42c2-b20a-3a951578f99b" />
 <img width="1031" height="841" alt="image" src="https://github.com/user-attachments/assets/fd60add0-c99c-4d51-91d9-eefe5a917e52" />
