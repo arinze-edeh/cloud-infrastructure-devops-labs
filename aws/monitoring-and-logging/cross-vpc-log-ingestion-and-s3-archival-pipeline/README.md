@@ -461,8 +461,10 @@ echo "PUB_PUBLIC=$PUB_EC2_PUBLIC_IP  PUB_PRIVATE=$PUB_EC2_PRIVATE_IP  PRIV_PRIVA
 PUB_PUBLIC=3.235.170.246  PUB_PRIVATE=10.1.1.85  PRIV_PRIVATE=10.10.1.235
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: AWS Console > EC2 > Security Groups > devops-priv-ec2 SG showing inbound rule: TCP 22 from 10.1.0.0/16 only]`
+> **Screenshots**
+
+<img width="1080" height="861" alt="image" src="https://github.com/user-attachments/assets/9dd6b873-178c-4852-8bf6-48ce371c9fc7" />
+<img width="1082" height="871" alt="image" src="https://github.com/user-attachments/assets/283a6b21-a826-4953-ad22-aac8aa760ed0" />
 
 ---
 
@@ -750,8 +752,7 @@ aws s3 ls s3://devops-s3-logs-25406/devops-priv-vpc/boot/
 
 
 
-<img width="1080" height="861" alt="image" src="https://github.com/user-attachments/assets/9dd6b873-178c-4852-8bf6-48ce371c9fc7" />
-<img width="1082" height="871" alt="image" src="https://github.com/user-attachments/assets/283a6b21-a826-4953-ad22-aac8aa760ed0" />
+
 <img width="1081" height="848" alt="image" src="https://github.com/user-attachments/assets/19976361-e237-4ea2-ac39-e513eb673cd6" />
 <img width="1079" height="863" alt="image" src="https://github.com/user-attachments/assets/a7e60128-588a-4a9d-9638-59fe16aff1aa" />
 <img width="1078" height="862" alt="image" src="https://github.com/user-attachments/assets/f4c8b422-25f7-4a49-82ee-f6c8f5f348cc" />
