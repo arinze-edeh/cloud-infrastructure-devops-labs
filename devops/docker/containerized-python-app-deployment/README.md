@@ -328,8 +328,11 @@ Build the image from `/python_app/` (the directory containing the `Dockerfile`),
 
 > **Observation:** The total build time was approximately 33 seconds. The majority of time was consumed pulling the `python:latest` base image layers (22 seconds) and installing pip packages (3.9 seconds). Subsequent builds with no changes to `requirements.txt` will be significantly faster due to Docker layer caching.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Full docker build output showing all 10 build steps completing with FINISHED status]`
+> **Screenshot**
+
+<img width="1036" height="866" alt="image" src="https://github.com/user-attachments/assets/2559d680-a243-4746-ba7a-669df2d354af" />
+
+> `Full docker build output showing all 10 build steps completing with FINISHED status`
 
 ---
 
@@ -480,7 +483,6 @@ Piping `docker ps` output through `grep` allows precise targeting of a specific 
 
 
 
-<img width="1036" height="866" alt="image" src="https://github.com/user-attachments/assets/2559d680-a243-4746-ba7a-669df2d354af" />
 <img width="1036" height="849" alt="image" src="https://github.com/user-attachments/assets/f8e9e95a-7c89-4909-913b-bdbb1cd8abe9" />
 <img width="1037" height="854" alt="image" src="https://github.com/user-attachments/assets/bccaf754-f742-4500-b79b-7915b5d74e31" />
 <img width="1034" height="596" alt="image" src="https://github.com/user-attachments/assets/7916afdd-6309-44ae-86f9-420608602162" />
