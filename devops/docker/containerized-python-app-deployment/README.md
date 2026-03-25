@@ -404,8 +404,11 @@ Welcome to xFusionCorp Industries!
 
 > The Flask application is live, responding to HTTP requests, and serving the expected response body. The deployment is complete and validated.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing docker ps grep output with Up status and port mapping, followed by curl response showing Welcome to xFusionCorp Industries!]`
+> **Screenshot**
+
+<img width="1034" height="596" alt="image" src="https://github.com/user-attachments/assets/7916afdd-6309-44ae-86f9-420608602162" />
+
+> `Terminal showing docker ps grep output with Up status and port mapping, followed by curl response showing Welcome to xFusionCorp Industries!`
 
 ---
 
@@ -479,13 +482,3 @@ Piping `docker ps` output through `grep` allows precise targeting of a specific 
 
 ---
 
-
-
-
-<img width="1038" height="619" alt="image" src="https://github.com/user-attachments/assets/5e43fea8-42bc-4cf1-a778-0bae09f3d3aa" />
-
-
-
-
-<img width="1037" height="854" alt="image" src="https://github.com/user-attachments/assets/bccaf754-f742-4500-b79b-7915b5d74e31" />
-<img width="1034" height="596" alt="image" src="https://github.com/user-attachments/assets/7916afdd-6309-44ae-86f9-420608602162" />
