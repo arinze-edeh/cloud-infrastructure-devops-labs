@@ -193,8 +193,11 @@ Verify the server script exists with correct permissions:
 -rw-r--r-- 1 root root 278 Mar 25 20:46 /python_app/src/server.py
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: cat output of requirements.txt showing flask dependency]`
+> **Screenshot**
+
+<img width="1032" height="600" alt="image" src="https://github.com/user-attachments/assets/4eddd673-8f3a-43c2-b63b-c09f9985ec87" />
+
+> `cat output of requirements.txt showing flask dependency`
 
 ---
 
@@ -465,7 +468,7 @@ Piping `docker ps` output through `grep` allows precise targeting of a specific 
 
 
 
-<img width="1032" height="600" alt="image" src="https://github.com/user-attachments/assets/4eddd673-8f3a-43c2-b63b-c09f9985ec87" />
+
 <img width="1038" height="619" alt="image" src="https://github.com/user-attachments/assets/5e43fea8-42bc-4cf1-a778-0bae09f3d3aa" />
 <img width="1032" height="808" alt="image" src="https://github.com/user-attachments/assets/c82903a4-7263-4544-9b34-999ae03677a5" />
 <img width="1031" height="866" alt="image" src="https://github.com/user-attachments/assets/e0e2135f-d652-4c4b-b75f-073a2f9d8362" />
