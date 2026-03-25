@@ -572,8 +572,11 @@ Mar 25 11:35:41 ip-10-10-1-235 systemd[1]: Mounted Huge Pages File System.
 -rw-r--r-- 1 root root 23 Mar 25 11:36 /var/log/boots.log
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing ls -lh output from devops-priv-ec2 confirming /var/log/boots.log exists at 23 bytes with correct permissions]`
+> **Screenshot**
+
+<img width="1078" height="862" alt="image" src="https://github.com/user-attachments/assets/f4c8b422-25f7-4a49-82ee-f6c8f5f348cc" />
+
+> `Terminal showing ls -lh output from devops-priv-ec2 confirming /var/log/boots.log exists at 23 bytes with correct permissions`
 
 ---
 
@@ -761,7 +764,6 @@ aws s3 ls s3://devops-s3-logs-25406/devops-priv-vpc/boot/
 
 
 
-<img width="1078" height="862" alt="image" src="https://github.com/user-attachments/assets/f4c8b422-25f7-4a49-82ee-f6c8f5f348cc" />
 <img width="1134" height="855" alt="image" src="https://github.com/user-attachments/assets/5fca679d-b771-451d-b568-60fc2f9cdd57" />
 <img width="1130" height="862" alt="image" src="https://github.com/user-attachments/assets/8f75199b-87e5-403a-9111-2a6d0bacbaac" />
 <img width="1049" height="857" alt="image" src="https://github.com/user-attachments/assets/7c8adb28-5c53-49eb-b170-f2e3aad26b2a" />
