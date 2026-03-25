@@ -349,11 +349,14 @@ definition created by the Managed Prometheus addon
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing the Managed Prometheus deletion message and the subsequent JSON confirming azureMonitorProfile.metrics.enabled = false]`
+> **Screenshots**
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Azure Portal showing the datacenter-aks Insights/Monitoring blade with monitoring disabled]`
+<img width="1266" height="820" alt="image" src="https://github.com/user-attachments/assets/7e0c445b-b7e6-4c41-9724-6395e929243d" />
+<img width="1259" height="867" alt="image" src="https://github.com/user-attachments/assets/9aa6681f-ede4-48cc-91f1-6abee19f2a30" />
+<img width="1263" height="868" alt="image" src="https://github.com/user-attachments/assets/450ff9fd-3d31-484e-9702-7daccd833c85" />
+<img width="1258" height="860" alt="image" src="https://github.com/user-attachments/assets/11af9e60-5928-4d53-bf6e-d33d708b783d" />
+
+> `Terminal showing the Managed Prometheus deletion message and the subsequent JSON confirming azureMonitorProfile.metrics.enabled = false`
 
 ---
 
@@ -469,9 +472,6 @@ az aks get-credentials \
 kubectl get nodes -o wide
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: kubectl get nodes output showing node in Ready state with Kubernetes version 1.33.0]`
-
 ---
 
 ## Best Practices
@@ -541,7 +541,4 @@ kubectl get nodes -o wide
 
 
 
-<img width="1266" height="820" alt="image" src="https://github.com/user-attachments/assets/7e0c445b-b7e6-4c41-9724-6395e929243d" />
-<img width="1259" height="867" alt="image" src="https://github.com/user-attachments/assets/9aa6681f-ede4-48cc-91f1-6abee19f2a30" />
-<img width="1263" height="868" alt="image" src="https://github.com/user-attachments/assets/450ff9fd-3d31-484e-9702-7daccd833c85" />
-<img width="1258" height="860" alt="image" src="https://github.com/user-attachments/assets/11af9e60-5928-4d53-bf6e-d33d708b783d" />
+
