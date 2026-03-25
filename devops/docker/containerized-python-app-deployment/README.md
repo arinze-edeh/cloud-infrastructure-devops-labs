@@ -226,8 +226,11 @@ EOF
 
 > **Root Cause:** Since `/python_app/` is owned by `root` and `steve` lacks write access, a direct shell redirect (`>`) fails. The shell attempts to open the target file for writing under the `steve` user context before executing any command, and the OS denies it immediately.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing Permission denied error when attempting to write Dockerfile as steve]`
+> **Screenshot**
+
+<img width="1032" height="808" alt="image" src="https://github.com/user-attachments/assets/c82903a4-7263-4544-9b34-999ae03677a5" />
+
+> `Terminal showing Permission denied error when attempting to write Dockerfile as steve`
 
 #### Resolution -- Escalate with sudo tee
 
@@ -470,7 +473,8 @@ Piping `docker ps` output through `grep` allows precise targeting of a specific 
 
 
 <img width="1038" height="619" alt="image" src="https://github.com/user-attachments/assets/5e43fea8-42bc-4cf1-a778-0bae09f3d3aa" />
-<img width="1032" height="808" alt="image" src="https://github.com/user-attachments/assets/c82903a4-7263-4544-9b34-999ae03677a5" />
+
+
 <img width="1031" height="866" alt="image" src="https://github.com/user-attachments/assets/e0e2135f-d652-4c4b-b75f-073a2f9d8362" />
 <img width="1028" height="834" alt="image" src="https://github.com/user-attachments/assets/9ad00123-6e9a-4c4f-9447-373ad33cff0c" />
 <img width="1036" height="866" alt="image" src="https://github.com/user-attachments/assets/2559d680-a243-4746-ba7a-669df2d354af" />
