@@ -281,11 +281,14 @@ to a safe location.
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Full terminal output of the az aks create command with provisioningState: Succeeded visible]`
+> **Screenshots**
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Azure Portal showing the datacenter-aks cluster blade with "Private cluster: Yes" and Kubernetes version 1.33.0 confirmed]`
+<img width="1263" height="860" alt="image" src="https://github.com/user-attachments/assets/52a739e5-e6d1-4a47-93aa-64fa7443b76b" />
+<img width="1263" height="860" alt="image" src="https://github.com/user-attachments/assets/a96b782c-6569-4010-9a27-f2b95bfe45f1" />
+<img width="1259" height="863" alt="image" src="https://github.com/user-attachments/assets/7185eb7c-4c80-42ca-9099-5abb6cb1eaec" />
+<img width="1256" height="860" alt="image" src="https://github.com/user-attachments/assets/5cb472e2-b5dd-4539-b7d4-7070a9bff3c1" />
+
+> `Terminal output of the az aks create command with provisioningState: Succeeded visible`
 
 ---
 
@@ -533,10 +536,7 @@ kubectl get nodes -o wide
 
 
 
-<img width="1263" height="860" alt="image" src="https://github.com/user-attachments/assets/52a739e5-e6d1-4a47-93aa-64fa7443b76b" />
-<img width="1263" height="860" alt="image" src="https://github.com/user-attachments/assets/a96b782c-6569-4010-9a27-f2b95bfe45f1" />
-<img width="1259" height="863" alt="image" src="https://github.com/user-attachments/assets/7185eb7c-4c80-42ca-9099-5abb6cb1eaec" />
-<img width="1256" height="860" alt="image" src="https://github.com/user-attachments/assets/5cb472e2-b5dd-4539-b7d4-7070a9bff3c1" />
+
 <img width="1258" height="422" alt="image" src="https://github.com/user-attachments/assets/1e8131bb-dccb-46cf-8c16-05454fcf570e" />
 <img width="1266" height="820" alt="image" src="https://github.com/user-attachments/assets/7e0c445b-b7e6-4c41-9724-6395e929243d" />
 <img width="1259" height="867" alt="image" src="https://github.com/user-attachments/assets/9aa6681f-ede4-48cc-91f1-6abee19f2a30" />
