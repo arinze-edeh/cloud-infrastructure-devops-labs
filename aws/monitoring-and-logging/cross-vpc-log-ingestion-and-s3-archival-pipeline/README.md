@@ -356,8 +356,10 @@ echo "S3 bucket ready: devops-s3-logs-25406"
 S3 bucket ready: devops-s3-logs-25406
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: AWS Console > S3 > devops-s3-logs-25406 > Permissions tab showing all public access blocked (four green checkmarks)]`
+> **Screenshot**
+
+<img width="1024" height="862" alt="image" src="https://github.com/user-attachments/assets/e3ce40aa-58e1-460e-b7c1-fe17febc16f8" />
+
 
 ---
 
@@ -747,7 +749,7 @@ aws s3 ls s3://devops-s3-logs-25406/devops-priv-vpc/boot/
 
 
 
-<img width="1024" height="862" alt="image" src="https://github.com/user-attachments/assets/e3ce40aa-58e1-460e-b7c1-fe17febc16f8" />
+
 <img width="1028" height="844" alt="image" src="https://github.com/user-attachments/assets/ab08b5b2-a0a5-4bd6-a988-fcd8e93738fb" />
 <img width="1032" height="860" alt="image" src="https://github.com/user-attachments/assets/1bc4f0b6-0558-4b19-bedd-d8f9a6c4d28c" />
 <img width="1040" height="871" alt="image" src="https://github.com/user-attachments/assets/3517b524-fde7-432b-a6b9-3834f614cee6" />
