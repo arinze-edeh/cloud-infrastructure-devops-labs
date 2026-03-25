@@ -194,8 +194,12 @@ KubernetesVersion    IsPreview    Upgrades                    SupportPlan
 
 **Verification:** Kubernetes `1.33.0` is confirmed available in `centralus` under `KubernetesOfficial` support. It is **not** in preview, making it safe for workload use.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Full terminal output of az aks get-versions --location centralus --output table with version 1.33.0 highlighted]`
+> **Screenshots**
+
+<img width="1128" height="840" alt="image" src="https://github.com/user-attachments/assets/2c4f7380-755d-4096-94e9-ed492f6f48b2" />
+<img width="1149" height="864" alt="image" src="https://github.com/user-attachments/assets/02ebea6f-8131-456d-ba44-4b33191321be" />
+
+> `Full terminal output of az aks get-versions --location centralus --output table with version 1.33.0 highlighted`
 
 ---
 
@@ -528,8 +532,7 @@ kubectl get nodes -o wide
 
 
 
-<img width="1128" height="840" alt="image" src="https://github.com/user-attachments/assets/2c4f7380-755d-4096-94e9-ed492f6f48b2" />
-<img width="1149" height="864" alt="image" src="https://github.com/user-attachments/assets/02ebea6f-8131-456d-ba44-4b33191321be" />
+
 <img width="1263" height="860" alt="image" src="https://github.com/user-attachments/assets/52a739e5-e6d1-4a47-93aa-64fa7443b76b" />
 <img width="1263" height="860" alt="image" src="https://github.com/user-attachments/assets/a96b782c-6569-4010-9a27-f2b95bfe45f1" />
 <img width="1259" height="863" alt="image" src="https://github.com/user-attachments/assets/7185eb7c-4c80-42ca-9099-5abb6cb1eaec" />
