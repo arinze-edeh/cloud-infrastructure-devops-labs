@@ -311,8 +311,11 @@ az aks show \
 
 **Interpretation:** No addon profiles are active. This confirms Container Insights was not auto-enabled during cluster creation. The cluster has no monitoring agents deployed.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing null output from the addonProfiles query confirming no addons are active]`
+> **Screenshot**
+
+<img width="1258" height="422" alt="image" src="https://github.com/user-attachments/assets/1e8131bb-dccb-46cf-8c16-05454fcf570e" />
+
+> `Terminal showing null output from the addonProfiles query confirming no addons are active`
 
 ---
 
@@ -537,7 +540,7 @@ kubectl get nodes -o wide
 
 
 
-<img width="1258" height="422" alt="image" src="https://github.com/user-attachments/assets/1e8131bb-dccb-46cf-8c16-05454fcf570e" />
+
 <img width="1266" height="820" alt="image" src="https://github.com/user-attachments/assets/7e0c445b-b7e6-4c41-9724-6395e929243d" />
 <img width="1259" height="867" alt="image" src="https://github.com/user-attachments/assets/9aa6681f-ede4-48cc-91f1-6abee19f2a30" />
 <img width="1263" height="868" alt="image" src="https://github.com/user-attachments/assets/450ff9fd-3d31-484e-9702-7daccd833c85" />
