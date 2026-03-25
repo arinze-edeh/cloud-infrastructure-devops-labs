@@ -224,8 +224,11 @@ echo "IGW_ID=$IGW_ID"
 IGW_ID=igw-0ec6e010f95525cfd
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: AWS Console > VPC > Route Tables > devops-pub-rt showing route 0.0.0.0/0 -> IGW and subnet association]`
+> **Screenshot**
+
+<img width="1028" height="866" alt="image" src="https://github.com/user-attachments/assets/8d064d34-1dd3-407b-8919-f8c779b4406c" />
+
+> `AWS Console > VPC > Route Tables > devops-pub-rt showing route 0.0.0.0/0 -> IGW and subnet association`
 
 ---
 
@@ -744,7 +747,6 @@ aws s3 ls s3://devops-s3-logs-25406/devops-priv-vpc/boot/
 
 
 
-<img width="1028" height="866" alt="image" src="https://github.com/user-attachments/assets/8d064d34-1dd3-407b-8919-f8c779b4406c" />
 <img width="1034" height="845" alt="image" src="https://github.com/user-attachments/assets/d697d887-a697-42c2-b20a-3a951578f99b" />
 <img width="1031" height="841" alt="image" src="https://github.com/user-attachments/assets/fd60add0-c99c-4d51-91d9-eefe5a917e52" />
 <img width="1034" height="865" alt="image" src="https://github.com/user-attachments/assets/d21d4f15-e399-4b28-bf2f-530141faef9d" />
