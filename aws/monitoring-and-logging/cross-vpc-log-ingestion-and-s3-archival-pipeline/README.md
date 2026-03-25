@@ -228,8 +228,6 @@ IGW_ID=igw-0ec6e010f95525cfd
 
 <img width="1028" height="866" alt="image" src="https://github.com/user-attachments/assets/8d064d34-1dd3-407b-8919-f8c779b4406c" />
 
-> `AWS Console > VPC > Route Tables > devops-pub-rt showing route 0.0.0.0/0 -> IGW and subnet association`
-
 ---
 
 ### Step 3: Launch the Public EC2 Instance
@@ -292,8 +290,6 @@ KEY_NAME=devops-key  UBUNTU_AMI=ami-00de3875b03809ec5  PUB_SG_ID=sg-0e7dff2b2dbf
 <img width="1031" height="841" alt="image" src="https://github.com/user-attachments/assets/fd60add0-c99c-4d51-91d9-eefe5a917e52" />
 <img width="1034" height="865" alt="image" src="https://github.com/user-attachments/assets/d21d4f15-e399-4b28-bf2f-530141faef9d" />
 
-> `AWS Console > EC2 > Instances showing devops-pub-ec2 in running state with public IP, subnet, and security group visible`
-
 ---
 
 ### Step 4: Create and Attach IAM Role with S3 Permissions
@@ -332,11 +328,10 @@ echo "IAM role attached"
 IAM role attached
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: AWS Console > EC2 > devops-pub-ec2 > Security tab showing IAM role devops-s3-role attached to the instance]`
+> **Screenshots**
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: AWS Console > IAM > Roles > devops-s3-role showing AmazonS3FullAccess policy attached and EC2 trust relationship]`
+<img width="1030" height="853" alt="image" src="https://github.com/user-attachments/assets/08a8cd81-0f55-4f52-88da-0cb6113bf1f7" />
+<img width="1028" height="867" alt="image" src="https://github.com/user-attachments/assets/ea8e1305-e144-4e9c-8cc2-24626e759ca2" />
 
 ---
 
@@ -752,8 +747,6 @@ aws s3 ls s3://devops-s3-logs-25406/devops-priv-vpc/boot/
 
 
 
-<img width="1030" height="853" alt="image" src="https://github.com/user-attachments/assets/08a8cd81-0f55-4f52-88da-0cb6113bf1f7" />
-<img width="1028" height="867" alt="image" src="https://github.com/user-attachments/assets/ea8e1305-e144-4e9c-8cc2-24626e759ca2" />
 <img width="1024" height="862" alt="image" src="https://github.com/user-attachments/assets/e3ce40aa-58e1-460e-b7c1-fe17febc16f8" />
 <img width="1028" height="844" alt="image" src="https://github.com/user-attachments/assets/ab08b5b2-a0a5-4bd6-a988-fcd8e93738fb" />
 <img width="1032" height="860" alt="image" src="https://github.com/user-attachments/assets/1bc4f0b6-0558-4b19-bedd-d8f9a6c4d28c" />
