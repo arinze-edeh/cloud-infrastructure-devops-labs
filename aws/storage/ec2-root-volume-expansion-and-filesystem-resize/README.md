@@ -231,8 +231,11 @@ aws ec2 describe-volumes-modifications \
 
 > **Key Observation:** `ModificationState` has transitioned from `modifying` to `optimizing`. This means the volume resize is **complete** at the storage layer. The `optimizing` state indicates AWS is fine-tuning I/O performance but the full 12 GiB is already available. It is now safe to proceed with OS-level partition and filesystem operations.
 
-<!-- SCREENSHOT PLACEHOLDER -->
-> **[SCREENSHOT 4]** -- AWS Console "Volumes Modifications" panel showing `optimizing` state and target size `12 GiB`.
+
+**SCREENSHOT** 
+
+<img width="1033" height="692" alt="image" src="https://github.com/user-attachments/assets/e2df4b0b-5574-4652-a193-1f9077dd84a3" />
+
 
 ---
 
@@ -633,7 +636,7 @@ Classification: Storage Capacity Expansion -- P2 Operational
 
 
 
-<img width="1033" height="692" alt="image" src="https://github.com/user-attachments/assets/e2df4b0b-5574-4652-a193-1f9077dd84a3" />
+
 <img width="1031" height="869" alt="image" src="https://github.com/user-attachments/assets/2f2f02c1-fd45-4dc1-8182-b7e7eda16d64" />
 <img width="1028" height="863" alt="image" src="https://github.com/user-attachments/assets/15a271d2-6384-463a-9827-2a4d581e3fd0" />
 <img width="1032" height="859" alt="image" src="https://github.com/user-attachments/assets/888df0e6-4e4e-46f4-88c5-b755c77b0b0f" />
