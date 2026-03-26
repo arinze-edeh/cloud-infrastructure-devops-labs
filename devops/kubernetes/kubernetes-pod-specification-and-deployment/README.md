@@ -298,6 +298,7 @@ pod-httpd   1/1     Running   0          44s
 
 > **Screenshot**
 
+<img width="1029" height="854" alt="image" src="https://github.com/user-attachments/assets/c65b92c0-f99a-4539-986d-3fc9198f0ac6" />
 
 > `kubectl get pod pod-httpd --watch showing 1/1 Running state before Ctrl+C interrupt`
 
@@ -320,8 +321,11 @@ pod-httpd   1/1     Running   0          3m49s   app=httpd_app
 
 **Validation:** Label `app=httpd_app` is confirmed on the running pod. Pod age confirms stable operation with zero restarts over 3 minutes and 49 seconds.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: kubectl get pod pod-httpd --show-labels confirming app=httpd_app label on Running pod]`
+> **Screenshot**
+
+
+
+> `kubectl get pod pod-httpd --show-labels confirming app=httpd_app label on Running pod`
 
 ---
 
@@ -493,7 +497,6 @@ kubectl delete pod <pod-name>
 
 
 
-<img width="1029" height="854" alt="image" src="https://github.com/user-attachments/assets/c65b92c0-f99a-4539-986d-3fc9198f0ac6" />
 <img width="1036" height="626" alt="image" src="https://github.com/user-attachments/assets/dc42f21e-010c-45c6-8e82-7c770213da97" />
 <img width="1032" height="519" alt="image" src="https://github.com/user-attachments/assets/356c311d-f96e-4007-99f6-fa526ab00f2b" />
 <img width="1034" height="803" alt="image" src="https://github.com/user-attachments/assets/35e4bff2-97d1-4a8c-a6aa-e3dff14adf26" />
