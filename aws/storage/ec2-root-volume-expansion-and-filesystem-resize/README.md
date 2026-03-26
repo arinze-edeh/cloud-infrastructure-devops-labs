@@ -299,7 +299,7 @@ Warning: Permanently added '54.226.22.120' (ECDSA) to the list of known hosts.
 > **Note:** Multiple newer Amazon Linux 2023 versions were listed upon login. This is informational. Updating the OS is outside the scope of this runbook but should be tracked as a follow-up action.
 
 
-**SCREENSHOT**
+**SCREENSHOTS**
 
 <img width="1028" height="863" alt="image" src="https://github.com/user-attachments/assets/15a271d2-6384-463a-9827-2a4d581e3fd0" />
 <img width="1032" height="859" alt="image" src="https://github.com/user-attachments/assets/888df0e6-4e4e-46f4-88c5-b755c77b0b0f" />
