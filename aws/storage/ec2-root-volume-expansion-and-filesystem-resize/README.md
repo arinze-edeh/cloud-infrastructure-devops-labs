@@ -503,8 +503,12 @@ Filesystem     Type  Size  Used Avail Use% Mounted on
 
 > **Key Observation:** Success. The root filesystem now shows `12G` total with `11G` available. Usage dropped from `19%` (pre-expansion) to `13%`, providing headroom for continued development workloads. The entire operation was completed with **zero downtime**.
 
-<!-- SCREENSHOT PLACEHOLDER -->
-> **[SCREENSHOT 11]** -- Terminal output of `df -hT /` showing filesystem size as `12G` with `11G` available, confirming full end-to-end resolution.
+
+**SCREENSHOT** 
+
+<img width="1037" height="601" alt="image" src="https://github.com/user-attachments/assets/b7997691-281e-4fd7-8fcc-6ef3a6172734" />
+
+>Terminal output of `df -hT /` showing filesystem size as `12G` with `11G` available, confirming full end-to-end resolution.
 
 ---
 
@@ -664,19 +668,3 @@ Classification: Storage Capacity Expansion -- P2 Operational
 ---
 
 *All commands are idempotent-safe unless noted. For ext4 filesystems, replace `xfs_growfs -d /` with `sudo resize2fs /dev/xvda1`.*
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1037" height="601" alt="image" src="https://github.com/user-attachments/assets/b7997691-281e-4fd7-8fcc-6ef3a6172734" />
-
-
