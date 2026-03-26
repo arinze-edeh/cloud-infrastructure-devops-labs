@@ -354,6 +354,10 @@ Filesystem     Type  Size  Used Avail Use% Mounted on
 
 > **Key Observation:** The XFS filesystem is still reporting `8.0G`. This is expected at this stage. The AWS-side expansion is complete, but the partition and filesystem inside the OS have not yet been resized. Proceeding to `growpart` will resolve the partition boundary issue.
 
+**SCREENSHOT**
+
+<img width="1031" height="421" alt="image" src="https://github.com/user-attachments/assets/7a4d4d29-7231-404d-a37d-6c2a2d947774" />
+
 ---
 
 ### Step 9 -- Inspect Partition Table (fdisk)
@@ -653,7 +657,7 @@ Classification: Storage Capacity Expansion -- P2 Operational
 
 
 
-<img width="1031" height="421" alt="image" src="https://github.com/user-attachments/assets/7a4d4d29-7231-404d-a37d-6c2a2d947774" />
+
 <img width="1035" height="718" alt="image" src="https://github.com/user-attachments/assets/b75c1bed-b77c-4a12-a7b9-8b211bf49abc" />
 <img width="1036" height="549" alt="image" src="https://github.com/user-attachments/assets/73c721b7-52d6-4fca-844b-56be020047ff" />
 <img width="1034" height="556" alt="image" src="https://github.com/user-attachments/assets/36e796d9-4d82-4129-bd56-81c823311a24" />
