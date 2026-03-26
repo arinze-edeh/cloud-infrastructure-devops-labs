@@ -328,8 +328,12 @@ xvda      202:0    0  12G  0 disk
 
 > **Key Observation:** The disk `xvda` now shows `12G` -- the kernel sees the full new volume size. However, the root partition `xvda1` still shows `8G`. This is the critical gap: **the block device is expanded but the partition boundary has not yet been moved**. The filesystem also remains at 8G. Two more steps are required.
 
-<!-- SCREENSHOT PLACEHOLDER -->
-> **[SCREENSHOT 6]** -- Terminal output of `lsblk` showing `xvda` at `12G` but `xvda1` still at `8G`.
+
+**SCREENSHOT**
+
+<img width="1029" height="457" alt="image" src="https://github.com/user-attachments/assets/1584b123-2095-4895-a8fd-94d09ce13f1b" />
+
+>Terminal output of `lsblk` showing `xvda` at `12G` but `xvda1` still at `8G`.
 
 ---
 
@@ -648,7 +652,7 @@ Classification: Storage Capacity Expansion -- P2 Operational
 
 
 
-<img width="1029" height="457" alt="image" src="https://github.com/user-attachments/assets/1584b123-2095-4895-a8fd-94d09ce13f1b" />
+
 <img width="1031" height="421" alt="image" src="https://github.com/user-attachments/assets/7a4d4d29-7231-404d-a37d-6c2a2d947774" />
 <img width="1035" height="718" alt="image" src="https://github.com/user-attachments/assets/b75c1bed-b77c-4a12-a7b9-8b211bf49abc" />
 <img width="1036" height="549" alt="image" src="https://github.com/user-attachments/assets/73c721b7-52d6-4fca-844b-56be020047ff" />
