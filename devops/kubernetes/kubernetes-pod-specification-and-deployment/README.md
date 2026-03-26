@@ -248,7 +248,7 @@ spec:
 
 > **Screenshot**
 
-
+<img width="1030" height="820" alt="image" src="https://github.com/user-attachments/assets/0696cc91-c860-436b-8f01-28682f30636d" />
 
 > `cat pod-httpd.yaml confirming correct YAML structure with all required fields`
 
@@ -270,8 +270,11 @@ pod/pod-httpd created
 
 **Validation:** The API server accepted the manifest and created the `pod-httpd` object in the `default` namespace.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: kubectl apply -f pod-httpd.yaml confirming pod/pod-httpd created]`
+> **Screenshot**
+
+
+
+> `kubectl apply -f pod-httpd.yaml confirming pod/pod-httpd created`
 
 ---
 
@@ -486,7 +489,7 @@ kubectl delete pod <pod-name>
 
 
 
-<img width="1030" height="820" alt="image" src="https://github.com/user-attachments/assets/0696cc91-c860-436b-8f01-28682f30636d" />
+
 <img width="1034" height="517" alt="image" src="https://github.com/user-attachments/assets/b25a3e8f-9bb7-4c19-87cb-958bb6a4c46f" />
 <img width="1029" height="854" alt="image" src="https://github.com/user-attachments/assets/c65b92c0-f99a-4539-986d-3fc9198f0ac6" />
 <img width="1036" height="626" alt="image" src="https://github.com/user-attachments/assets/dc42f21e-010c-45c6-8e82-7c770213da97" />
