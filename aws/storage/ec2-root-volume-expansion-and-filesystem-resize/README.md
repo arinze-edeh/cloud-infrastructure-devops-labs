@@ -477,8 +477,12 @@ data blocks changed from 2094075 to 3142651
 
 > **Key Observation:** `data blocks changed from 2094075 to 3142651` -- this is the definitive confirmation that the XFS filesystem has been successfully expanded. The `-d` flag targets the data subvolume (the root). The filesystem was resized **online** with no service interruption.
 
-<!-- SCREENSHOT PLACEHOLDER -->
-> **[SCREENSHOT 10]** -- Terminal output of `sudo xfs_growfs -d /` showing `data blocks changed from 2094075 to 3142651`.
+
+> **SCREENSHOT**
+
+<img width="1031" height="727" alt="image" src="https://github.com/user-attachments/assets/8a0dbb2c-0757-4d32-a215-b063e05b8cfb" />
+
+>Terminal output of `sudo xfs_growfs -d /` showing `data blocks changed from 2094075 to 3142651`.
 
 ---
 
@@ -672,7 +676,7 @@ Classification: Storage Capacity Expansion -- P2 Operational
 
 
 
-<img width="1031" height="727" alt="image" src="https://github.com/user-attachments/assets/8a0dbb2c-0757-4d32-a215-b063e05b8cfb" />
+
 <img width="1037" height="601" alt="image" src="https://github.com/user-attachments/assets/b7997691-281e-4fd7-8fcc-6ef3a6172734" />
 
 
