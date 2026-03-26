@@ -413,8 +413,12 @@ CHANGED: partition=1 start=24576 old: size=16752607 end=16777183 new: size=25141
 
 > **Key Observation:** Partition 1 has been successfully extended. The new end sector is `25165791`, effectively claiming the entire usable disk. The `CHANGED` status confirms the GPT was written and the PMBR mismatch was corrected. The filesystem itself is still 8G -- that is addressed in the next step.
 
-<!-- SCREENSHOT PLACEHOLDER -->
-> **[SCREENSHOT 8]** -- Terminal output showing `CHANGED: partition=1` with old and new size values confirming successful partition extension.
+
+**SCREENSHOT** 
+
+<img width="1036" height="549" alt="image" src="https://github.com/user-attachments/assets/73c721b7-52d6-4fca-844b-56be020047ff" />
+
+>Terminal output showing `CHANGED: partition=1` with old and new size values confirming successful partition extension.
 
 ---
 
@@ -662,7 +666,7 @@ Classification: Storage Capacity Expansion -- P2 Operational
 
 
 
-<img width="1036" height="549" alt="image" src="https://github.com/user-attachments/assets/73c721b7-52d6-4fca-844b-56be020047ff" />
+
 <img width="1034" height="556" alt="image" src="https://github.com/user-attachments/assets/36e796d9-4d82-4129-bd56-81c823311a24" />
 <img width="1031" height="727" alt="image" src="https://github.com/user-attachments/assets/8a0dbb2c-0757-4d32-a215-b063e05b8cfb" />
 <img width="1037" height="601" alt="image" src="https://github.com/user-attachments/assets/b7997691-281e-4fd7-8fcc-6ef3a6172734" />
