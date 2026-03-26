@@ -200,8 +200,10 @@ aws ec2 modify-volume \
 
 > **Key Observation:** `ModificationState` is `modifying` and `Progress` is `0`. The AWS EBS modification pipeline has been initiated. IOPS and throughput remain unchanged (`3000 IOPS`, `125 MB/s`) since only size was modified.
 
-<!-- SCREENSHOT PLACEHOLDER -->
-> **[SCREENSHOT 3]** -- AWS Console "Volumes" view showing the volume transitioning from `in-use` to `modifying` state with target size `12 GiB`.
+
+**SCREENSHOT** 
+
+<img width="1026" height="692" alt="image" src="https://github.com/user-attachments/assets/1ba8b60e-1117-4c25-a958-015661296c2b" />
 
 ---
 
@@ -630,7 +632,7 @@ Classification: Storage Capacity Expansion -- P2 Operational
 
 
 
-<img width="1026" height="692" alt="image" src="https://github.com/user-attachments/assets/1ba8b60e-1117-4c25-a958-015661296c2b" />
+
 <img width="1033" height="692" alt="image" src="https://github.com/user-attachments/assets/e2df4b0b-5574-4652-a193-1f9077dd84a3" />
 <img width="1031" height="869" alt="image" src="https://github.com/user-attachments/assets/2f2f02c1-fd45-4dc1-8182-b7e7eda16d64" />
 <img width="1028" height="863" alt="image" src="https://github.com/user-attachments/assets/15a271d2-6384-463a-9827-2a4d581e3fd0" />
