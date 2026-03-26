@@ -138,8 +138,11 @@ No resources found in default namespace.
 
 **Validation:** The namespace is empty. No resource naming conflicts exist.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: kubectl get pods returning empty default namespace]`
+> **Screenshot**
+
+<img width="1032" height="391" alt="image" src="https://github.com/user-attachments/assets/2bfdfd82-e6f5-4097-af3f-ea366d63d48b" />
+
+> `kubectl get pods returning empty default namespace`
 
 ---
 
