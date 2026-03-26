@@ -298,8 +298,13 @@ Warning: Permanently added '54.226.22.120' (ECDSA) to the list of known hosts.
 
 > **Note:** Multiple newer Amazon Linux 2023 versions were listed upon login. This is informational. Updating the OS is outside the scope of this runbook but should be tracked as a follow-up action.
 
-<!-- SCREENSHOT PLACEHOLDER -->
-> **[SCREENSHOT 5]** -- Terminal showing successful SSH login to `ec2-user@ip-172-31-30-151` with the Amazon Linux 2023 banner.
+
+**SCREENSHOT**
+
+<img width="1028" height="863" alt="image" src="https://github.com/user-attachments/assets/15a271d2-6384-463a-9827-2a4d581e3fd0" />
+<img width="1032" height="859" alt="image" src="https://github.com/user-attachments/assets/888df0e6-4e4e-46f4-88c5-b755c77b0b0f" />
+
+> Terminal showing successful SSH login to `ec2-user@ip-172-31-30-151` with the Amazon Linux 2023 banner.
 
 ---
 
@@ -642,8 +647,7 @@ Classification: Storage Capacity Expansion -- P2 Operational
 
 
 
-<img width="1028" height="863" alt="image" src="https://github.com/user-attachments/assets/15a271d2-6384-463a-9827-2a4d581e3fd0" />
-<img width="1032" height="859" alt="image" src="https://github.com/user-attachments/assets/888df0e6-4e4e-46f4-88c5-b755c77b0b0f" />
+
 <img width="1029" height="457" alt="image" src="https://github.com/user-attachments/assets/1584b123-2095-4895-a8fd-94d09ce13f1b" />
 <img width="1031" height="421" alt="image" src="https://github.com/user-attachments/assets/7a4d4d29-7231-404d-a37d-6c2a2d947774" />
 <img width="1035" height="718" alt="image" src="https://github.com/user-attachments/assets/b75c1bed-b77c-4a12-a7b9-8b211bf49abc" />
