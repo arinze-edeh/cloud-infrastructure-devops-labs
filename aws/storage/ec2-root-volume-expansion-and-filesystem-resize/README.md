@@ -442,8 +442,12 @@ xvda      202:0    0  12G  0 disk
 
 > **Key Observation:** `xvda1` now shows `12G`. Disk, partition, and mount are all aligned at 12G at the block device level. The final step is to notify the XFS filesystem driver of the new partition size.
 
-<!-- SCREENSHOT PLACEHOLDER -->
-> **[SCREENSHOT 9]** -- Terminal output of `lsblk` showing both `xvda` and `xvda1` now reporting `12G`.
+
+> **SCREENSHOT**
+
+<img width="1034" height="556" alt="image" src="https://github.com/user-attachments/assets/36e796d9-4d82-4129-bd56-81c823311a24" />
+
+>Terminal output of `lsblk` showing both `xvda` and `xvda1` now reporting `12G`.
 
 ---
 
@@ -667,7 +671,7 @@ Classification: Storage Capacity Expansion -- P2 Operational
 
 
 
-<img width="1034" height="556" alt="image" src="https://github.com/user-attachments/assets/36e796d9-4d82-4129-bd56-81c823311a24" />
+
 <img width="1031" height="727" alt="image" src="https://github.com/user-attachments/assets/8a0dbb2c-0757-4d32-a215-b063e05b8cfb" />
 <img width="1037" height="601" alt="image" src="https://github.com/user-attachments/assets/b7997691-281e-4fd7-8fcc-6ef3a6172734" />
 
