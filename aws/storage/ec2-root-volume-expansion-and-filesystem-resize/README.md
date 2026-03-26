@@ -662,9 +662,3 @@ df -hT /
 
 ---
 
-Region: `us-east-1`
-Classification: Storage Capacity Expansion -- P2 Operational
-
----
-
-*All commands are idempotent-safe unless noted. For ext4 filesystems, replace `xfs_growfs -d /` with `sudo resize2fs /dev/xvda1`.*
