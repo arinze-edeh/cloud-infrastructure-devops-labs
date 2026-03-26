@@ -175,8 +175,11 @@ status: {}
 
 **Validation:** The dry run confirms `httpd:latest` resolves correctly and the API server accepts the resource definition. No objects were created. The scaffold also reveals the minimum required fields for a Pod spec, which informs the custom manifest below.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: kubectl run --dry-run=client -o yaml output showing httpd:latest image resolved]`
+> **Screenshot**
+
+<img width="1024" height="553" alt="image" src="https://github.com/user-attachments/assets/9015b97f-8c47-4fa0-84df-28f164d25648" />
+
+> `kubectl run --dry-run=client -o yaml output showing httpd:latest image resolved`
 
 ---
 
@@ -210,8 +213,11 @@ EOF
 | `spec.containers[0].name` | `httpd-container` | Required container name per task specification |
 | `spec.containers[0].image` | `httpd:latest` | Explicit tag declaration required by task specification |
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing heredoc cat command writing pod-httpd.yaml successfully]`
+> **Screenshot**
+
+<img width="1032" height="759" alt="image" src="https://github.com/user-attachments/assets/3f29898a-11fb-4af9-9b42-a2862df140e4" />
+
+> `Terminal showing heredoc cat command writing pod-httpd.yaml successfully`
 
 ---
 
@@ -240,8 +246,11 @@ spec:
 
 **Validation:** All five required fields (`name`, `label key`, `label value`, `container name`, `image`) are confirmed correct and properly indented. The manifest is ready for application.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: cat pod-httpd.yaml confirming correct YAML structure with all required fields]`
+> **Screenshot**
+
+
+
+> `cat pod-httpd.yaml confirming correct YAML structure with all required fields`
 
 ---
 
@@ -475,8 +484,8 @@ kubectl delete pod <pod-name>
 
 
 
-<img width="1024" height="553" alt="image" src="https://github.com/user-attachments/assets/9015b97f-8c47-4fa0-84df-28f164d25648" />
-<img width="1032" height="759" alt="image" src="https://github.com/user-attachments/assets/3f29898a-11fb-4af9-9b42-a2862df140e4" />
+
+
 <img width="1030" height="820" alt="image" src="https://github.com/user-attachments/assets/0696cc91-c860-436b-8f01-28682f30636d" />
 <img width="1034" height="517" alt="image" src="https://github.com/user-attachments/assets/b25a3e8f-9bb7-4c19-87cb-958bb6a4c46f" />
 <img width="1029" height="854" alt="image" src="https://github.com/user-attachments/assets/c65b92c0-f99a-4539-986d-3fc9198f0ac6" />
