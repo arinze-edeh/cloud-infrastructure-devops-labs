@@ -114,8 +114,11 @@ Metrics-server is running at https://127.0.0.1:6443/api/v1/namespaces/kube-syste
 
 **Validation:** Control plane, CoreDNS, and Metrics-server are all operational. The cluster is ready for workload scheduling.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: kubectl cluster-info output showing all three services healthy]`
+> **Screenshot**
+
+<img width="1032" height="391" alt="image" src="https://github.com/user-attachments/assets/2bfdfd82-e6f5-4097-af3f-ea366d63d48b" />
+
+> `kubectl cluster-info output showing all three services healthy`
 
 ---
 
@@ -468,7 +471,7 @@ kubectl delete pod <pod-name>
 
 
 
-<img width="1032" height="391" alt="image" src="https://github.com/user-attachments/assets/2bfdfd82-e6f5-4097-af3f-ea366d63d48b" />
+
 <img width="1024" height="553" alt="image" src="https://github.com/user-attachments/assets/9015b97f-8c47-4fa0-84df-28f164d25648" />
 <img width="1032" height="759" alt="image" src="https://github.com/user-attachments/assets/3f29898a-11fb-4af9-9b42-a2862df140e4" />
 <img width="1030" height="820" alt="image" src="https://github.com/user-attachments/assets/0696cc91-c860-436b-8f01-28682f30636d" />
