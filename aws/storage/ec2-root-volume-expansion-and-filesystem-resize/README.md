@@ -263,6 +263,10 @@ aws ec2 describe-instances \
 
 > **Key Observation:** Public IP is `54.226.22.120`. DNS is `ec2-54-226-22-120.compute-1.amazonaws.com`. Both can be used for SSH. IP is preferred for scripted access; DNS is preferred for resilience against IP changes.
 
+**SCREENSHOT** 
+
+<img width="1031" height="869" alt="image" src="https://github.com/user-attachments/assets/2f2f02c1-fd45-4dc1-8182-b7e7eda16d64" />
+
 ---
 
 ### Step 6 -- Secure the Key Pair and SSH into the Instance
@@ -637,7 +641,7 @@ Classification: Storage Capacity Expansion -- P2 Operational
 
 
 
-<img width="1031" height="869" alt="image" src="https://github.com/user-attachments/assets/2f2f02c1-fd45-4dc1-8182-b7e7eda16d64" />
+
 <img width="1028" height="863" alt="image" src="https://github.com/user-attachments/assets/15a271d2-6384-463a-9827-2a4d581e3fd0" />
 <img width="1032" height="859" alt="image" src="https://github.com/user-attachments/assets/888df0e6-4e4e-46f4-88c5-b755c77b0b0f" />
 <img width="1029" height="457" alt="image" src="https://github.com/user-attachments/assets/1584b123-2095-4895-a8fd-94d09ce13f1b" />
