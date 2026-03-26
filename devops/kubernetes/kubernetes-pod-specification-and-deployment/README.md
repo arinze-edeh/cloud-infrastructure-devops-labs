@@ -323,7 +323,7 @@ pod-httpd   1/1     Running   0          3m49s   app=httpd_app
 
 > **Screenshot**
 
-
+<img width="1036" height="626" alt="image" src="https://github.com/user-attachments/assets/dc42f21e-010c-45c6-8e82-7c770213da97" />
 
 > `kubectl get pod pod-httpd --show-labels confirming app=httpd_app label on Running pod`
 
@@ -355,8 +355,11 @@ Containers:
 
 The `ConfigMapName: kube-root-ca.crt` line is standard Kubernetes cluster CA injection and is expected behavior, not an error.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: kubectl describe pod pod-httpd | grep output showing Name, Labels, Containers, and Image fields]`
+> **Screenshot**
+
+<img width="1032" height="519" alt="image" src="https://github.com/user-attachments/assets/356c311d-f96e-4007-99f6-fa526ab00f2b" />
+
+> `kubectl describe pod pod-httpd | grep output showing Name, Labels, Containers, and Image fields`
 
 ---
 
@@ -377,8 +380,11 @@ pod-httpd   1/1     Running   0          5m18s
 
 **Validation:** Pod `pod-httpd` is `Running` with `1/1` ready containers, zero restarts, and 5 minutes 18 seconds of stable uptime. All task requirements are fully satisfied.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Final kubectl get pod pod-httpd confirming 1/1 Running at 5m18s with 0 restarts]`
+> **Screenshot**
+
+<img width="1034" height="803" alt="image" src="https://github.com/user-attachments/assets/35e4bff2-97d1-4a8c-a6aa-e3dff14adf26" />
+
+> `Final kubectl get pod pod-httpd confirming 1/1 Running at 5m18s with 0 restarts`
 
 ---
 
@@ -489,16 +495,3 @@ kubectl delete pod <pod-name>
 ```
 
 ---
-
-
-
-
-
-
-
-
-<img width="1036" height="626" alt="image" src="https://github.com/user-attachments/assets/dc42f21e-010c-45c6-8e82-7c770213da97" />
-<img width="1032" height="519" alt="image" src="https://github.com/user-attachments/assets/356c311d-f96e-4007-99f6-fa526ab00f2b" />
-<img width="1034" height="803" alt="image" src="https://github.com/user-attachments/assets/35e4bff2-97d1-4a8c-a6aa-e3dff14adf26" />
-
-
