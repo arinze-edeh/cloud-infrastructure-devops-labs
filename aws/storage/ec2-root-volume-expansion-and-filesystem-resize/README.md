@@ -389,8 +389,11 @@ Partition table entries are not in disk order.
 
 > `xvda1` currently ends at sector `16777182`, well short of the disk end at sector `25165823`. The unallocated space is available for partition extension.
 
-<!-- SCREENSHOT PLACEHOLDER -->
-> **[SCREENSHOT 7]** -- Terminal output of `sudo fdisk -l` highlighting the GPT PMBR mismatch warning and the old partition end boundary for `xvda1`.
+> **SCREENSHOT**
+
+<img width="1035" height="718" alt="image" src="https://github.com/user-attachments/assets/b75c1bed-b77c-4a12-a7b9-8b211bf49abc" />
+
+> Terminal output of `sudo fdisk -l` highlighting the GPT PMBR mismatch warning and the old partition end boundary for `xvda1`.
 
 ---
 
@@ -658,7 +661,7 @@ Classification: Storage Capacity Expansion -- P2 Operational
 
 
 
-<img width="1035" height="718" alt="image" src="https://github.com/user-attachments/assets/b75c1bed-b77c-4a12-a7b9-8b211bf49abc" />
+
 <img width="1036" height="549" alt="image" src="https://github.com/user-attachments/assets/73c721b7-52d6-4fca-844b-56be020047ff" />
 <img width="1034" height="556" alt="image" src="https://github.com/user-attachments/assets/36e796d9-4d82-4129-bd56-81c823311a24" />
 <img width="1031" height="727" alt="image" src="https://github.com/user-attachments/assets/8a0dbb2c-0757-4d32-a215-b063e05b8cfb" />
