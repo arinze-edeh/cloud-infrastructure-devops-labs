@@ -414,8 +414,11 @@ When the `--watch` session (Step 7) was terminated with `Ctrl+C`, the shell prom
 kubectl get pod pod-httpd --show-labels
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing the concatenated command ^Cthor@jump-host ~kubectl get pod pod-httpd --show-labelsls and its output]`
+> **Screenshot**
+
+<img width="1036" height="626" alt="image" src="https://github.com/user-attachments/assets/b31b34ee-248d-46eb-9f32-3c5c20ef94fa" />
+
+> `Terminal showing the concatenated command ^Cthor@jump-host ~kubectl get pod pod-httpd --show-labelsls and its output`
 
 ---
 
