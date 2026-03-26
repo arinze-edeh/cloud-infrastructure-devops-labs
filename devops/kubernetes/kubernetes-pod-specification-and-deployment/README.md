@@ -272,7 +272,7 @@ pod/pod-httpd created
 
 > **Screenshot**
 
-
+<img width="1034" height="517" alt="image" src="https://github.com/user-attachments/assets/b25a3e8f-9bb7-4c19-87cb-958bb6a4c46f" />
 
 > `kubectl apply -f pod-httpd.yaml confirming pod/pod-httpd created`
 
@@ -296,8 +296,10 @@ pod-httpd   1/1     Running   0          44s
 
 **Validation:** The pod reached `Running` status with `READY: 1/1` and `RESTARTS: 0` within 44 seconds. The watch was manually terminated with `Ctrl+C` after confirming the healthy state.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: kubectl get pod pod-httpd --watch showing 1/1 Running state before Ctrl+C interrupt]`
+> **Screenshot**
+
+
+> `kubectl get pod pod-httpd --watch showing 1/1 Running state before Ctrl+C interrupt`
 
 ---
 
@@ -490,7 +492,7 @@ kubectl delete pod <pod-name>
 
 
 
-<img width="1034" height="517" alt="image" src="https://github.com/user-attachments/assets/b25a3e8f-9bb7-4c19-87cb-958bb6a4c46f" />
+
 <img width="1029" height="854" alt="image" src="https://github.com/user-attachments/assets/c65b92c0-f99a-4539-986d-3fc9198f0ac6" />
 <img width="1036" height="626" alt="image" src="https://github.com/user-attachments/assets/dc42f21e-010c-45c6-8e82-7c770213da97" />
 <img width="1032" height="519" alt="image" src="https://github.com/user-attachments/assets/356c311d-f96e-4007-99f6-fa526ab00f2b" />
