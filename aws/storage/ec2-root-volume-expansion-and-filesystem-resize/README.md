@@ -156,8 +156,11 @@ aws ec2 describe-volumes \
 
 > **Key Observation:** Volume is `8 GiB`, type `gp3`, attached at `/dev/xvda`, and currently `in-use`. This is the root device. Confirmed baseline state before modification.
 
-<!-- SCREENSHOT PLACEHOLDER -->
-> **[SCREENSHOT 2]** -- AWS Console "Volumes" view showing the volume state as `in-use`, size `8 GiB`, and attachment details.
+
+**SCREENSHOT** 
+
+<img width="1034" height="604" alt="image" src="https://github.com/user-attachments/assets/359c405d-69d0-49cf-b66b-58d140690fdc" />
+
 
 ---
 
@@ -626,7 +629,7 @@ Classification: Storage Capacity Expansion -- P2 Operational
 *All commands are idempotent-safe unless noted. For ext4 filesystems, replace `xfs_growfs -d /` with `sudo resize2fs /dev/xvda1`.*
 
 
-<img width="1034" height="604" alt="image" src="https://github.com/user-attachments/assets/359c405d-69d0-49cf-b66b-58d140690fdc" />
+
 <img width="1026" height="692" alt="image" src="https://github.com/user-attachments/assets/1ba8b60e-1117-4c25-a958-015661296c2b" />
 <img width="1033" height="692" alt="image" src="https://github.com/user-attachments/assets/e2df4b0b-5574-4652-a193-1f9077dd84a3" />
 <img width="1031" height="869" alt="image" src="https://github.com/user-attachments/assets/2f2f02c1-fd45-4dc1-8182-b7e7eda16d64" />
