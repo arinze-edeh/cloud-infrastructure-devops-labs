@@ -125,8 +125,10 @@ aws ec2 describe-instances \
 
 > **Key Observation:** Instance is in `running` state. The attached volume is `vol-0dd324452a07f97f1`. This confirms the correct target before any destructive or modifying actions are taken.
 
-<!-- SCREENSHOT PLACEHOLDER -->
-> **[SCREENSHOT 1]** -- AWS Console view of `datacenter-ec2` instance details showing instance ID, state, and attached volume under the "Storage" tab.
+
+**SCREENSHOT**
+
+<img width="1030" height="519" alt="image" src="https://github.com/user-attachments/assets/b25e379c-7f00-4a1b-acbf-98e28d5f3c75" />
 
 ---
 
@@ -623,7 +625,7 @@ Classification: Storage Capacity Expansion -- P2 Operational
 
 *All commands are idempotent-safe unless noted. For ext4 filesystems, replace `xfs_growfs -d /` with `sudo resize2fs /dev/xvda1`.*
 
-<img width="1030" height="519" alt="image" src="https://github.com/user-attachments/assets/b25e379c-7f00-4a1b-acbf-98e28d5f3c75" />
+
 <img width="1034" height="604" alt="image" src="https://github.com/user-attachments/assets/359c405d-69d0-49cf-b66b-58d140690fdc" />
 <img width="1026" height="692" alt="image" src="https://github.com/user-attachments/assets/1ba8b60e-1117-4c25-a958-015661296c2b" />
 <img width="1033" height="692" alt="image" src="https://github.com/user-attachments/assets/e2df4b0b-5574-4652-a193-1f9077dd84a3" />
