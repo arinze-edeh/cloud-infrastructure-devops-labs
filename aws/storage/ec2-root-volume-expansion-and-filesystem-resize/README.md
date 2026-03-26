@@ -32,7 +32,6 @@
 - [Best Practices](#best-practices)
 - [Lessons Learned](#lessons-learned)
 - [Quick Reference Cheatsheet](#quick-reference-cheatsheet)
-- [Author](#author)
 
 ---
 
