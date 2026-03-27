@@ -102,8 +102,11 @@ echo $RG
 kml_rg_main-8172d8914a6f4db7
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output showing RG variable assignment and echo result]`
+> **Screenshot**
+
+<img width="1031" height="403" alt="image" src="https://github.com/user-attachments/assets/1ca491ec-49f9-483e-8cef-b4bd4d10d684" />
+
+> `Terminal output showing RG variable assignment and echo result`
 
 ---
 
@@ -601,7 +604,7 @@ az role assignment create \
 
 
 
-<img width="1031" height="403" alt="image" src="https://github.com/user-attachments/assets/1ca491ec-49f9-483e-8cef-b4bd4d10d684" />
+
 <img width="1036" height="841" alt="image" src="https://github.com/user-attachments/assets/2f46273b-8c47-4ff2-9ae6-c727e273110d" />
 <img width="1034" height="865" alt="image" src="https://github.com/user-attachments/assets/be149425-5b46-49ad-acc3-d986cc7442bb" />
 <img width="1029" height="872" alt="image" src="https://github.com/user-attachments/assets/62146382-dee1-4dd5-9b3a-5d7eae58c2e0" />
