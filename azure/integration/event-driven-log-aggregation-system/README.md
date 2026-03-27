@@ -405,7 +405,7 @@ ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no azureuser@$VM_IP \
 
 > **Screenshot**
 
-
+<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/61f76155-0df5-4c84-8041-46d7c0df690d" />
 
 > `Terminal showing pip3 install completion with Successfully installed packages listed`
 
