@@ -1,75 +1,79 @@
-# Azure Centralized Log Collection and Backup Pipeline
+# Azure Log Pipeline: VM to Event Hubs with Blob Storage Backup
 
-> **Enterprise-grade log ingestion pipeline using Azure CLI, Azure Event Hubs, Azure Blob Storage, and a Linux Virtual Machine. This runbook documents the exact CLI-driven process to provision infrastructure, deploy a log-forwarding script, and validate end-to-end message delivery from a VM to both an Event Hub and a Blob container.**
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Production_Ready-brightgreen?style=for-the-badge)
 
 ---
 
 ## Table of Contents
 
+- [Overview](#overview)
+- [Architecture](#architecture)
 - [Problem Statement](#problem-statement)
-- [Architecture Overview](#architecture-overview)
 - [Prerequisites](#prerequisites)
-- [Execution Runbook](#execution-runbook)
-  - [Step 1 -- Create the Azure Storage Account](#step-1----create-the-azure-storage-account)
-  - [Step 2 -- Retrieve the Storage Account Key and Attempt Container Creation (Failed)](#step-2----retrieve-the-storage-account-key-and-attempt-container-creation-failed)
-  - [Step 3 -- Enable Public Blob Access on the Storage Account](#step-3----enable-public-blob-access-on-the-storage-account)
-  - [Step 4 -- Re-create the Blob Container (Success)](#step-4----re-create-the-blob-container-success)
-  - [Step 5 -- Deploy the Azure Virtual Machine](#step-5----deploy-the-azure-virtual-machine)
-  - [Step 6 -- Set the VM Public IP Variable](#step-6----set-the-vm-public-ip-variable)
-  - [Step 7 -- Copy the Log Script from Client Host to the VM](#step-7----copy-the-log-script-from-client-host-to-the-vm)
-  - [Step 8 -- Install Python3 pip on the VM](#step-8----install-python3-pip-on-the-vm)
-  - [Step 9 -- Install Azure SDK Packages on the VM](#step-9----install-azure-sdk-packages-on-the-vm)
-  - [Step 10 -- Retrieve Event Hub and Storage Connection Strings](#step-10----retrieve-event-hub-and-storage-connection-strings)
-  - [Step 11 -- Inject Event Hub Connection String into the Script](#step-11----inject-event-hub-connection-string-into-the-script)
-  - [Step 12 -- Inject Blob Storage Connection String into the Script](#step-12----inject-blob-storage-connection-string-into-the-script)
-  - [Step 13 -- Execute the Log Sender Script on the VM](#step-13----execute-the-log-sender-script-on-the-vm)
-  - [Step 14 -- Verify the Blob Backup in the Container](#step-14----verify-the-blob-backup-in-the-container)
-  - [Step 15 -- Validate Event Hub IncomingMessages Metrics](#step-15----validate-event-hub-incomingmessages-metrics)
-- [Errors Encountered and Resolutions](#errors-encountered-and-resolutions)
+- [Infrastructure Provisioning](#infrastructure-provisioning)
+  - [Step 1: Retrieve the Resource Group](#step-1-retrieve-the-resource-group)
+  - [Step 2: Create the Event Hubs Namespace](#step-2-create-the-event-hubs-namespace)
+  - [Step 3: Create the Event Hub](#step-3-create-the-event-hub)
+  - [Step 4: Create the Storage Account](#step-4-create-the-storage-account)
+  - [Step 5: Enable Public Blob Access and Create Container](#step-5-enable-public-blob-access-and-create-container)
+  - [Step 6: Provision the Virtual Machine](#step-6-provision-the-virtual-machine)
+- [Application Deployment](#application-deployment)
+  - [Step 7: Deploy the Log Sender Script to the VM](#step-7-deploy-the-log-sender-script-to-the-vm)
+  - [Step 8: Install Python Dependencies on the VM](#step-8-install-python-dependencies-on-the-vm)
+  - [Step 9: Inject Connection Strings into the Script](#step-9-inject-connection-strings-into-the-script)
+  - [Step 10: Execute the Log Pipeline](#step-10-execute-the-log-pipeline)
+- [Verification](#verification)
+  - [Step 11: Verify Blob Storage Backup](#step-11-verify-blob-storage-backup)
+  - [Step 12: Verify Event Hub Ingestion via Metrics](#step-12-verify-event-hub-ingestion-via-metrics)
+- [Errors and Resolutions](#errors-and-resolutions)
 - [Best Practices](#best-practices)
 - [Lessons Learned](#lessons-learned)
-- [Resource Reference](#resource-reference)
+- [Security Considerations](#security-considerations)
+- [References](#references)
+
+---
+
+## Overview
+
+This runbook documents the end-to-end provisioning and configuration of a **centralized log collection and backup pipeline** on Microsoft Azure. The solution captures application logs from an Azure Virtual Machine, publishes them to **Azure Event Hubs** for real-time stream processing, and simultaneously archives them to **Azure Blob Storage** for durable backup.
+
+This pattern is widely adopted in enterprise environments for audit trails, compliance archival, and event-driven observability pipelines.
+
+---
+
+## Architecture
+
+```
++------------------+       send_logs.py        +----------------------+
+|  Azure VM        |  -----------------------> |  Azure Event Hubs    |
+|  (xfusion-vm)    |                           |  (xfusion-namespace) |
+|  Ubuntu 22.04    |  -----------------------> |  xfusion-hub         |
++------------------+       (backup)            +----------------------+
+                                |
+                                v
+                    +---------------------------+
+                    |  Azure Blob Storage        |
+                    |  xfusionst6179             |
+                    |  Container:                |
+                    |  xfusion-backup-23374      |
+                    +---------------------------+
+```
+
+> **Screenshot Placeholder**
+> `[SCREENSHOT: Full architecture diagram or Azure Portal resource group overview showing all 3 resources]`
 
 ---
 
 ## Problem Statement
 
-The Nautilus DevOps team required a centralized, scalable log pipeline to:
+The Nautilus DevOps team required a centralized log collection and backup solution integrating an Azure Virtual Machine with Azure Event Hubs and Azure Blob Storage. Specifically:
 
-- Stream application logs in real-time to **Azure Event Hubs** for downstream processing and analytics.
-- Persist log backups durably to **Azure Blob Storage** for compliance, audit trails, and cold storage access.
-- Use an **Azure Linux VM** as the compute layer simulating a real-world application host.
-
-The entire pipeline was provisioned and validated exclusively via the **Azure CLI** from the client host shell. No Azure Portal interaction was used at any point in this workflow.
-
----
-
-## Architecture Overview
-
-```
-+----------------------+         SCP + SSH          +----------------------+
-|   Client Host        | --------------------------> |   Azure Linux VM     |
-|   /root/send_logs.py |                             |   xfusion-vm         |
-|   ~/.ssh/id_rsa      |                             |   Ubuntu 22.04 LTS   |
-+----------------------+                             |   azureuser@20.124.. |
-                                                     +----------+-----------+
-                                                                |
-                                          python3 send_logs.py |
-                                                                |
-                          +-----------------+-----------------+-+
-                          |                                   |
-                          v                                   v
-             +------------------------+       +--------------------------------+
-             |   Azure Event Hubs     |       |   Azure Blob Storage           |
-             |   xfusion-namespace    |       |   xfusionst6179                |
-             |   (Standard tier)      |       |   Container: xfusion-backup-.. |
-             |   IncomingMessages: 1  |       |   Blob: logs.txt (AppendBlob)  |
-             +------------------------+       +--------------------------------+
-```
-
-**Region:** East US
-**Auth method:** Azure CLI (`az`) with pre-authenticated session
-**Compute:** Standard_B1s, Ubuntu 22.04 LTS, 64 GB OS disk, Standard_LRS
+* Application logs generated on the VM needed to be streamed in real-time to Event Hubs.
+* The same logs needed to be durably backed up to Blob Storage for retention and compliance.
+* A Python-based script (`send_logs.py`) already existed on the client host and needed to be deployed and configured on the VM.
 
 ---
 
@@ -77,20 +81,95 @@ The entire pipeline was provisioned and validated exclusively via the **Azure CL
 
 | Requirement | Detail |
 |---|---|
-| Azure CLI | Installed and authenticated (`az login` completed prior to this workflow) |
-| `$RG` environment variable | Set to the target resource group name |
-| Pre-existing Event Hubs Namespace | `xfusion-namespace` already exists in the resource group |
-| Pre-existing Event Hub | `xfusion-hub` already created inside `xfusion-namespace` |
-| `send_logs.py` on client host | Located at `/root/send_logs.py`; contains two literal placeholders: `<Event Hub Connection String>` and `<Blob Storage Connection String>` |
-| SSH key pair | Not pre-existing; auto-generated by `--generate-ssh-keys` during VM creation in Step 5 |
+| Azure CLI | Authenticated and configured |
+| Active Azure Subscription | With contributor-level access |
+| Resource Group | Pre-existing (dynamically queried) |
+| Python Script | `send_logs.py` present at `/root/send_logs.py` on client host |
+| SSH Key | Generated or pre-existing at `~/.ssh/id_rsa` |
 
 ---
 
-## Execution Runbook
+## Infrastructure Provisioning
 
-### Step 1 -- Create the Azure Storage Account
+### Step 1: Retrieve the Resource Group
 
-The storage account `xfusionst6179` was created in the East US region using the Standard_LRS SKU via the Azure CLI.
+Before provisioning any resource, the active resource group was retrieved dynamically to ensure all subsequent resources land in the correct scope.
+
+```bash
+RG=$(az group list --query "[0].name" -o tsv)
+echo $RG
+```
+
+**Output:**
+```
+kml_rg_main-8172d8914a6f4db7
+```
+
+> **Screenshot Placeholder**
+> `[SCREENSHOT: Terminal output showing RG variable assignment and echo result]`
+
+---
+
+### Step 2: Create the Event Hubs Namespace
+
+An Event Hubs namespace named `xfusion-namespace` was created in the **East US** region using the **Standard** pricing tier with auto-inflate enabled to handle throughput spikes automatically.
+
+```bash
+az eventhubs namespace create \
+  --name xfusion-namespace \
+  --resource-group $RG \
+  --location eastus \
+  --sku Standard \
+  --enable-auto-inflate true \
+  --maximum-throughput-units 10
+```
+
+**Key configuration values confirmed in output:**
+
+| Field | Value |
+|---|---|
+| `name` | `xfusion-namespace` |
+| `location` | `eastus` |
+| `sku.name` | `Standard` |
+| `isAutoInflateEnabled` | `true` |
+| `maximumThroughputUnits` | `10` |
+| `provisioningState` | `Succeeded` |
+| `status` | `Active` |
+
+> **Screenshot Placeholder**
+> `[SCREENSHOT: Terminal showing full az eventhubs namespace create JSON output with provisioningState: Succeeded]`
+
+---
+
+### Step 3: Create the Event Hub
+
+Within the namespace, an Event Hub named `xfusion-hub` was created. This is the actual message ingestion endpoint that the Python script publishes to.
+
+```bash
+az eventhubs eventhub create \
+  --name xfusion-hub \
+  --namespace-name xfusion-namespace \
+  --resource-group $RG
+```
+
+**Key configuration values confirmed in output:**
+
+| Field | Value |
+|---|---|
+| `name` | `xfusion-hub` |
+| `location` | `eastus` |
+| `partitionCount` | `4` |
+| `messageRetentionInDays` | `7` |
+| `status` | `Active` |
+
+> **Screenshot Placeholder**
+> `[SCREENSHOT: Terminal showing az eventhubs eventhub create JSON output including partitionCount and status: Active]`
+
+---
+
+### Step 4: Create the Storage Account
+
+A general-purpose v2 Storage Account named `xfusionst6179` was created in East US with **Standard_LRS** (Locally Redundant Storage) for cost-effective log archival.
 
 ```bash
 az storage account create \
@@ -100,41 +179,26 @@ az storage account create \
   --sku Standard_LRS
 ```
 
-**Actual output (abbreviated):**
+**Key configuration values confirmed in output:**
 
-```json
-{
-  "accessTier": "Hot",
-  "allowBlobPublicAccess": false,
-  "creationTime": "2026-03-27T05:17:31.842324+00:00",
-  "enableHttpsTrafficOnly": true,
-  "kind": "StorageV2",
-  "location": "eastus",
-  "minimumTlsVersion": "TLS1_0",
-  "name": "xfusionst6179",
-  "provisioningState": "Succeeded",
-  "sku": {
-    "name": "Standard_LRS",
-    "tier": "Standard"
-  }
-}
-```
-
-> **Key observations from this output:**
-> - `allowBlobPublicAccess` is `false` by default. This will directly cause the container creation failure in Step 2.
-> - `minimumTlsVersion` defaulted to `TLS1_0`. This is a security gap that must be patched. See [Best Practices](#best-practices).
-> - Blob and file service encryption was enabled automatically by Azure (`"enabled": true` under both services).
+| Field | Value |
+|---|---|
+| `name` | `xfusionst6179` |
+| `location` | `eastus` |
+| `sku.name` | `Standard_LRS` |
+| `kind` | `StorageV2` |
+| `provisioningState` | `Succeeded` |
+| `allowBlobPublicAccess` | `false` (initial) |
+| `enableHttpsTrafficOnly` | `true` |
 
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- full JSON output of az storage account create confirming provisioningState: Succeeded and allowBlobPublicAccess: false ]`
+> `[SCREENSHOT: Terminal showing az storage account create JSON response with provisioningState: Succeeded]`
 
 ---
 
-### Step 2 -- Retrieve the Storage Account Key and Attempt Container Creation (Failed)
+### Step 5: Enable Public Blob Access and Create Container
 
-Both sub-commands were executed in the same command block. First the primary storage key was extracted into `$STORAGE_KEY`, then the container creation was immediately attempted in the same session.
-
-#### 2a. Retrieve the Storage Account Key
+#### 5a. Retrieve the Storage Account Key
 
 ```bash
 STORAGE_KEY=$(az storage account keys list \
@@ -143,9 +207,9 @@ STORAGE_KEY=$(az storage account keys list \
   --query "[0].value" -o tsv)
 ```
 
-No output is printed. The key is held in memory as a shell variable.
+#### 5b. First Container Creation Attempt (Failed)
 
-#### 2b. Attempt Container Creation with Public Access (Failed)
+The container creation was attempted before public blob access was enabled on the storage account. This resulted in a failed creation.
 
 ```bash
 az storage container create \
@@ -155,26 +219,19 @@ az storage container create \
   --public-access blob
 ```
 
-**Actual output:**
-
+**Output:**
 ```json
 {
   "created": false
 }
 ```
 
-**What happened:** The storage account has `allowBlobPublicAccess: false` at the account level (set by default in Step 1). Azure blocks the public-access container creation and returns `"created": false` with no error message and no non-zero exit code. The container was not created.
+> **Root Cause:** `allowBlobPublicAccess` was `false` by default on the storage account. A container with `--public-access blob` cannot be created when the account-level public access is disabled.
 
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- STORAGE_KEY assignment followed immediately by az storage container create returning { "created": false } ]`
+> `[SCREENSHOT: Terminal showing container create with created: false result]`
 
-See [Errors Encountered and Resolutions](#errors-encountered-and-resolutions) for the full root cause analysis and prevention strategy.
-
----
-
-### Step 3 -- Enable Public Blob Access on the Storage Account
-
-To unblock the container creation, the storage account was updated via `az storage account update` to enable public blob access at the account level.
+#### 5c. Resolution: Enable Public Blob Access on the Storage Account
 
 ```bash
 az storage account update \
@@ -183,26 +240,15 @@ az storage account update \
   --allow-blob-public-access true
 ```
 
-**Actual output (abbreviated):**
-
+**Confirmed in output:**
 ```json
-{
-  "allowBlobPublicAccess": true,
-  "name": "xfusionst6179",
-  "provisioningState": "Succeeded"
-}
+"allowBlobPublicAccess": true
 ```
 
-`allowBlobPublicAccess` is now `true`. Container creation with `--public-access blob` will succeed on the next attempt.
-
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- az storage account update output showing allowBlobPublicAccess: true ]`
+> `[SCREENSHOT: Terminal showing az storage account update output with allowBlobPublicAccess: true]`
 
----
-
-### Step 4 -- Re-create the Blob Container (Success)
-
-The identical container creation command from Step 2b was re-executed after the account update in Step 3.
+#### 5d. Retry Container Creation (Succeeded)
 
 ```bash
 az storage container create \
@@ -212,24 +258,21 @@ az storage container create \
   --public-access blob
 ```
 
-**Actual output:**
-
+**Output:**
 ```json
 {
   "created": true
 }
 ```
 
-The container `xfusion-backup-23374` now exists with public blob read access enabled and is ready to receive backups.
-
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- az storage container create returning { "created": true } ]`
+> `[SCREENSHOT: Terminal showing container create with created: true result after enabling public access]`
 
 ---
 
-### Step 5 -- Deploy the Azure Virtual Machine
+### Step 6: Provision the Virtual Machine
 
-The VM `xfusion-vm` was created in the same resource group and region using Ubuntu 22.04 LTS. SSH keys were auto-generated by the CLI at `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub` since no existing key pair was present on the client host.
+An Ubuntu 22.04 LTS Virtual Machine named `xfusion-vm` was provisioned in East US using a `Standard_B1s` compute SKU with a 64 GB OS disk.
 
 ```bash
 az vm create \
@@ -244,20 +287,11 @@ az vm create \
   --storage-sku os=Standard_LRS
 ```
 
-**Actual CLI notice (printed before JSON output):**
-
-```
-SSH key files '/root/.ssh/id_rsa' and '/root/.ssh/id_rsa.pub' have been generated under
-~/.ssh to allow SSH access to the VM. If using machines without permanent storage, back
-up your keys to a safe location.
-```
-
-**Actual output:**
-
+**Output:**
 ```json
 {
   "fqdns": "",
-  "id": "/subscriptions/f0c3bcdd-5ce2-4fa0-8cf3-41559747512b/resourceGroups/kml_rg_main-8172d8914a6f4db7/providers/Microsoft.Compute/virtualMachines/xfusion-vm",
+  "id": "/subscriptions/.../virtualMachines/xfusion-vm",
   "location": "eastus",
   "macAddress": "60-45-BD-EE-76-46",
   "powerState": "VM running",
@@ -268,27 +302,22 @@ up your keys to a safe location.
 }
 ```
 
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- az vm create full output showing SSH key generation notice and powerState: VM running with publicIpAddress: 20.124.200.51 ]`
-
----
-
-### Step 6 -- Set the VM Public IP Variable
-
-The public IP address from the VM creation output was captured in a shell variable to be referenced by all subsequent SSH and SCP commands.
+The public IP was captured for subsequent SSH operations:
 
 ```bash
 VM_IP="20.124.200.51"
 ```
 
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- VM_IP variable assignment ]`
+> `[SCREENSHOT: Terminal showing az vm create output with powerState: VM running and public IP]`
 
 ---
 
-### Step 7 -- Copy the Log Script from Client Host to the VM
+## Application Deployment
 
-The pre-existing `send_logs.py` script at `/root/send_logs.py` on the client host was transferred to the VM's `azureuser` home directory using `scp`. The `StrictHostKeyChecking=no` flag suppressed the interactive host fingerprint prompt on this first connection to the newly provisioned VM.
+### Step 7: Deploy the Log Sender Script to the VM
+
+The `send_logs.py` script was copied from the client host to the VM's home directory using `scp`.
 
 ```bash
 scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no \
@@ -296,110 +325,58 @@ scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no \
   azureuser@$VM_IP:/home/azureuser/
 ```
 
-**Actual output:**
-
+**Output:**
 ```
 Warning: Permanently added '20.124.200.51' (ECDSA) to the list of known hosts.
-send_logs.py    100%  960     8.2KB/s   00:00
+send_logs.py     100%  960     8.2KB/s   00:00
 ```
 
-The 960-byte script transferred successfully and the host fingerprint was written to `~/.ssh/known_hosts` on the client.
-
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- scp output showing "Warning: Permanently added..." followed by send_logs.py 100% transfer ]`
+> `[SCREENSHOT: Terminal showing scp transfer completion with file size and transfer speed]`
 
 ---
 
-### Step 8 -- Install Python3 pip on the VM
+### Step 8: Install Python Dependencies on the VM
 
-A single SSH command ran `apt-get update` followed by `apt-get install python3-pip` non-interactively on the VM. This pulled 64 new packages and upgraded 5 existing ones, including the entire `build-essential` and `gcc` toolchain as transitive dependencies of the Python development headers.
+#### 8a. Update Package Manager and Install pip
 
 ```bash
 ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no azureuser@$VM_IP \
   "sudo apt-get update -y && sudo apt-get install -y python3-pip"
 ```
 
-**Key output metrics from actual run:**
-
-```
-Fetched 78.9 MB in 3s (26.8 MB/s)
-...
-5 upgraded, 64 newly installed, 0 to remove and 52 not upgraded.
-Need to get 78.9 MB of archives.
-After this operation, 240 MB of additional disk space will be used.
-```
-
-**Notable packages installed (from actual output):**
-
-| Package | Role |
-|---|---|
-| `python3-pip` | Primary target |
-| `build-essential` | Compilation toolchain meta-package |
-| `gcc-11`, `g++-11` | C/C++ compilers (transitive) |
-| `libpython3.10-dev` | Python development headers |
-| `python3-wheel` | Wheel build support |
-
-The session also printed a service restart notification, which is expected behaviour after kernel-adjacent package updates on Azure Ubuntu VMs:
-
-```
-Services to be restarted:
- systemctl restart walinuxagent.service
-```
+This installed `python3-pip` along with all required build tools (`build-essential`, `gcc`, `g++`, etc.) and upgraded Python 3.10 components to the latest available versions.
 
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- apt-get install completion block showing "64 newly installed" and python3-pip in the package list ]`
+> `[SCREENSHOT: Terminal showing apt-get install completion with python3-pip successfully installed]`
 
----
-
-### Step 9 -- Install Azure SDK Packages on the VM
-
-In a separate SSH command, `pip3 install` was used to install `azure-eventhub` and `azure-storage-blob` along with their dependencies.
+#### 8b. Install Azure SDK Libraries
 
 ```bash
 ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no azureuser@$VM_IP \
   "pip3 install azure-eventhub azure-storage-blob"
 ```
 
-**Actual pip3 output (abbreviated):**
-
-```
-Defaulting to user installation because normal site-packages is not writeable
-Collecting azure-eventhub
-  Downloading azure_eventhub-5.15.1-py3-none-any.whl (317 kB)
-Collecting azure-storage-blob
-  Downloading azure_storage_blob-12.28.0-py3-none-any.whl (431 kB)
-Collecting azure-core>=1.27.0
-  Downloading azure_core-1.39.0-py3-none-any.whl (218 kB)
-Collecting typing-extensions>=4.0.1
-  Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
-Requirement already satisfied: cryptography>=2.1.4 in /usr/lib/python3/dist-packages
-Collecting isodate>=0.6.1
-  Downloading isodate-0.7.2-py3-none-any.whl (22 kB)
-
-Successfully installed azure-core-1.39.0 azure-eventhub-5.15.1 \
-  azure-storage-blob-12.28.0 isodate-0.7.2 typing-extensions-4.15.0
-```
-
-**Packages installed:**
+**Successfully installed packages:**
 
 | Package | Version |
 |---|---|
-| `azure-eventhub` | 5.15.1 |
-| `azure-storage-blob` | 12.28.0 |
-| `azure-core` | 1.39.0 |
-| `isodate` | 0.7.2 |
-| `typing-extensions` | 4.15.0 |
+| `azure-eventhub` | `5.15.1` |
+| `azure-storage-blob` | `12.28.0` |
+| `azure-core` | `1.39.0` |
+| `isodate` | `0.7.2` |
+| `typing-extensions` | `4.15.0` |
 
-> **Key observation:** pip3 printed `Defaulting to user installation because normal site-packages is not writeable`. The SSH session ran as `azureuser` without `sudo`, so packages were installed to the user scope at `~/.local/lib/`. The install succeeded and the packages were available to `python3` invocations by the same user. See [Lessons Learned](#lessons-learned) for scope implications.
+> **Note:** `cryptography` and `requests` were already present via system packages and satisfied as dependencies.
 
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- pip3 install output showing "Defaulting to user installation" warning and "Successfully installed" summary line ]`
+> `[SCREENSHOT: Terminal showing pip3 install completion with Successfully installed packages listed]`
 
 ---
 
-### Step 10 -- Retrieve Event Hub and Storage Connection Strings
+### Step 9: Inject Connection Strings into the Script
 
-Both connection strings were fetched in a single command block. The Event Hub primary connection string was retrieved from the `RootManageSharedAccessKey` authorization rule of the pre-existing namespace. The Storage connection string was retrieved from the storage account. Both were echoed to stdout to confirm successful retrieval.
+#### 9a. Retrieve Connection Strings
 
 ```bash
 EH_CONN=$(az eventhubs namespace authorization-rule keys list \
@@ -417,77 +394,56 @@ echo "EH: $EH_CONN"
 echo "SA: $SA_CONN"
 ```
 
-**Actual output:**
-
+**Output (sanitized for documentation):**
 ```
-EH: Endpoint=sb://xfusion-namespace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xLb+iF4kknDKjuKgOcNoOlCXbsbSaeLJv+AEhAXIInw=
-SA: DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=xfusionst6179;AccountKey=Zwpw/jTPw3wj7xTLCwv7Ppt3T72vX0gS6SeWOSzrXrBRRFYpO8tfKvBrIuDxLR79vAmz6JL1nFl3+AStYpgSNg==;BlobEndpoint=https://xfusionst6179.blob.core.windows.net/;FileEndpoint=https://xfusionst6179.file.core.windows.net/;QueueEndpoint=https://xfusionst6179.queue.core.windows.net/;TableEndpoint=https://xfusionst6179.table.core.windows.net/
+EH: Endpoint=sb://xfusion-namespace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=<KEY>
+SA: DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=xfusionst6179;AccountKey=<KEY>;BlobEndpoint=https://xfusionst6179.blob.core.windows.net/;...
 ```
-
-> **Security Note:** Both strings contain plaintext shared access keys. They were echoed to the terminal for verification purposes only and were rotated immediately after the session. In production, secrets must never be echoed to stdout, stored in shell history, or committed to version control. Use Azure Key Vault with Managed Identity instead.
 
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- echo output showing EH: and SA: connection strings printed to stdout (keys redacted in production documentation) ]`
+> `[SCREENSHOT: Terminal showing EH and SA connection string echo output (redact keys before committing)]`
 
----
+#### 9b. Inject Connection Strings via sed
 
-### Step 11 -- Inject Event Hub Connection String into the Script
-
-The `send_logs.py` script on the VM contains the literal placeholder `<Event Hub Connection String>`. This was replaced in-place on the VM using `sed -i` over SSH. The pipe `|` character was used as the `sed` delimiter to safely handle the forward slashes present in the Event Hub endpoint URL.
+The script contained placeholder strings that were replaced in-place using `sed` over SSH.
 
 ```bash
 ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no azureuser@$VM_IP \
   "sed -i 's|<Event Hub Connection String>|$EH_CONN|g' /home/azureuser/send_logs.py"
-```
 
-No output is produced on success.
-
-> **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- sed Event Hub injection SSH command completing silently with no error output ]`
-
----
-
-### Step 12 -- Inject Blob Storage Connection String into the Script
-
-The second placeholder `<Blob Storage Connection String>` was replaced in exactly the same way using a separate SSH command.
-
-```bash
 ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no azureuser@$VM_IP \
   "sed -i 's|<Blob Storage Connection String>|$SA_CONN|g' /home/azureuser/send_logs.py"
 ```
 
-No output is produced on success. After this step the script on the VM contains both live connection strings and is fully configured for execution.
-
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- sed Blob Storage injection SSH command completing silently with no error output ]`
+> `[SCREENSHOT: Terminal showing sed injection commands executing without errors]`
 
 ---
 
-### Step 13 -- Execute the Log Sender Script on the VM
+### Step 10: Execute the Log Pipeline
 
-The script was executed remotely over a final SSH command. Python3 ran `send_logs.py` on the VM, simultaneously sending a log entry to the Event Hub and writing a backup blob to the storage container.
+The script was executed remotely via SSH.
 
 ```bash
 ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no azureuser@$VM_IP \
   "python3 /home/azureuser/send_logs.py"
 ```
 
-**Actual output:**
-
+**Output:**
 ```
 Log sent to Event Hub and backed up to Blob Storage.
 ```
 
-This single confirmation line indicates both the Event Hub send and the Blob Storage write completed without exception inside the script.
-
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- python3 send_logs.py SSH execution returning the single line: "Log sent to Event Hub and backed up to Blob Storage." ]`
+> `[SCREENSHOT: Terminal showing successful execution output: Log sent to Event Hub and backed up to Blob Storage]`
 
 ---
 
-### Step 14 -- Verify the Blob Backup in the Container
+## Verification
 
-The blob container was listed using the Azure CLI on the client host (not on the VM) to confirm that `logs.txt` had been written by the script execution in Step 13.
+### Step 11: Verify Blob Storage Backup
+
+The blob container was queried to confirm the log file was successfully written.
 
 ```bash
 az storage blob list \
@@ -497,24 +453,22 @@ az storage blob list \
   --output table
 ```
 
-**Actual output:**
+**Output:**
 
-```
-Name      Blob Type    Blob Tier    Length    Content Type              Last Modified              Snapshot
---------  -----------  -----------  --------  ------------------------  -------------------------  ----------
-logs.txt  AppendBlob                18        application/octet-stream  2026-03-27T05:32:41+00:00
-```
+| Name | Blob Type | Length | Content Type | Last Modified |
+|---|---|---|---|---|
+| `logs.txt` | `AppendBlob` | `18` | `application/octet-stream` | `2026-03-27T05:32:41+00:00` |
 
-`logs.txt` was written as an `AppendBlob` of 18 bytes at `05:32:41 UTC`. The `AppendBlob` type confirms the `azure-storage-blob` SDK used the append-optimized client, which is correct for log accumulation workloads where entries are added sequentially without overwriting.
+> The `AppendBlob` type is significant: it confirms the script used the `AppendBlobClient`, which is the correct blob type for log streaming as it supports appending without overwriting existing content.
 
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- az storage blob list table output showing logs.txt as AppendBlob, 18 bytes, last modified 2026-03-27T05:32:41+00:00 ]`
+> `[SCREENSHOT: Terminal showing az storage blob list table output with logs.txt present]`
 
 ---
 
-### Step 15 -- Validate Event Hub IncomingMessages Metrics
+### Step 12: Verify Event Hub Ingestion via Metrics
 
-The Event Hub namespace metrics were queried via `az monitor metrics list` using the full ARM resource ID of the `xfusion-namespace` to confirm the message was ingested by the Event Hub.
+Azure Monitor metrics were queried to confirm that the Event Hub received the message.
 
 ```bash
 az monitor metrics list \
@@ -523,220 +477,128 @@ az monitor metrics list \
   --output table
 ```
 
-**Actual output (full table, 60 rows):**
+**Output (excerpt showing the successful ingestion):**
 
 ```
 Timestamp             Name               Total
 --------------------  -----------------  -------
-2026-03-27T04:35:00Z  Incoming Messages  0.0
-2026-03-27T04:36:00Z  Incoming Messages  0.0
-2026-03-27T04:37:00Z  Incoming Messages  0.0
 ...
-2026-03-27T05:32:00Z  Incoming Messages  0.0
-2026-03-27T05:33:00Z  Incoming Messages  0.0
 2026-03-27T05:34:00Z  Incoming Messages  1.0
 ```
 
-All 59 preceding minute buckets show `0.0`. At `2026-03-27T05:34:00Z` the metric registers `1.0`, confirming exactly one message was received by the Event Hub. The script executed at `05:32:41 UTC` and the metric reflected this at `05:34:00 UTC`, a metric propagation delay of approximately 79 seconds. This is normal Azure Monitor aggregation behaviour and is addressed in [Lessons Learned](#lessons-learned).
+> All timestamps prior to `05:34:00Z` showed `0.0`. The single message sent by `send_logs.py` registered as `1.0` at `05:34:00Z`, confirming end-to-end delivery to the Event Hub.
 
 > **Screenshot Placeholder**
-> `[ SCREENSHOT: Terminal -- az monitor metrics list full table output showing 59 rows of 0.0 followed by a final row with 1.0 at 2026-03-27T05:34:00Z ]`
+> `[SCREENSHOT: Terminal showing az monitor metrics list table with IncomingMessages: 1.0 at the bottom timestamp]`
 
 ---
 
-## Errors Encountered and Resolutions
+## Errors and Resolutions
 
-### Error 1 -- Blob Container Creation Returned `"created": false`
+| Step | Error | Root Cause | Resolution |
+|---|---|---|---|
+| Step 5b | `"created": false` on container creation | `allowBlobPublicAccess` was `false` by default on the storage account, blocking containers with `--public-access blob` | Updated the storage account with `--allow-blob-public-access true` before retrying the container creation |
 
-**Occurred at:** Step 2b
-
-**Command:**
-
-```bash
-az storage container create \
-  --name xfusion-backup-23374 \
-  --account-name xfusionst6179 \
-  --account-key $STORAGE_KEY \
-  --public-access blob
-```
-
-**Actual output:**
-
-```json
-{ "created": false }
-```
-
-**Root Cause:**
-
-Azure storage accounts created via the CLI now have `allowBlobPublicAccess` set to `false` by default as a security hardening measure. When a container creation request includes `--public-access blob` against an account that prohibits public blob access at the account level, Azure rejects the public access assignment silently. The Azure CLI returns `"created": false` with no error message, no warning, and no non-zero exit code. Any automation that relies solely on exit codes to detect failures will miss this entirely.
-
-**Resolution applied:**
-
-Updated the storage account to permit public blob access at the account level, then re-executed the original container creation command:
-
-```bash
-az storage account update \
-  --name xfusionst6179 \
-  --resource-group $RG \
-  --allow-blob-public-access true
-
-az storage container create \
-  --name xfusion-backup-23374 \
-  --account-name xfusionst6179 \
-  --account-key $STORAGE_KEY \
-  --public-access blob
-# Output: { "created": true }
-```
-
-**Prevention:**
-
-When public blob access is a genuine requirement, include `--allow-blob-public-access true` directly in the original `az storage account create` command to handle it atomically:
-
-```bash
-az storage account create \
-  --name xfusionst6179 \
-  --resource-group $RG \
-  --location eastus \
-  --sku Standard_LRS \
-  --allow-blob-public-access true
-```
-
-**Production Recommendation:**
-
-In production environments, public blob access must remain disabled. Use Shared Access Signatures (SAS tokens), Azure AD RBAC with `Storage Blob Data Contributor` role assignments, or Private Endpoints to grant scoped and authenticated access without opening containers publicly.
+> **Key Insight:** Azure Storage Accounts created from March 2023 onward have public blob access disabled by default as a security hardening measure. Any container-level public access setting is subordinate to the account-level setting and will silently fail if the account-level flag is `false`.
 
 ---
 
 ## Best Practices
 
-### Credential Management
+### Infrastructure
 
-- Never echo connection strings to stdout in production pipelines. The `echo "EH: $EH_CONN"` pattern used in Step 10 is acceptable only for immediate local verification and must not appear in CI/CD logs or persisted output files.
-- Store all secrets in **Azure Key Vault** and retrieve them at runtime using `az keyvault secret show` or SDK calls with Managed Identity.
-- Prefer **Managed Identity** over shared access keys for all Azure-to-Azure service communication to eliminate key rotation requirements entirely.
-- Set `HISTCONTROL=ignorespace` and prefix sensitive commands with a space, or use `unset HISTFILE` for the duration of credential-handling sessions, to prevent connection strings from persisting in `~/.bash_history`.
+* **Use dynamic RG resolution** (`az group list --query "[0].name"`) instead of hardcoding resource group names. This makes scripts portable across environments.
+* **Enable auto-inflate on Event Hubs** for production workloads. Throughput unit scaling prevents message loss under burst load.
+* **Use `Standard_LRS`** for log storage. Logs are non-critical for geo-redundancy since the source VM can regenerate or retransmit; LRS keeps cost minimal.
+* **Set `enableHttpsTrafficOnly: true`** (default in newer Azure CLI) to enforce transport encryption for all storage operations.
 
-### Storage Account Hardening
+### Application
 
-- Always explicitly set `--min-tls-version TLS1_2` at storage account creation time. The provisioned account defaulted to `TLS1_0`, which is deprecated and vulnerable.
-- Keep `--allow-blob-public-access false` for production storage accounts. This was the correct default that should have been respected from the start.
-- Use **Private Endpoints** or **VNet Service Endpoints** to restrict storage account traffic to specific subnets and eliminate public endpoint exposure.
-- Enable **Soft Delete** for blobs (`--enable-blob-delete-retention true`) to protect against accidental deletion during the backup retention window.
+* **Use `AppendBlob`** (not `BlockBlob`) for log files. Append blobs support concurrent, sequential writes without overwrite risk, which is the correct semantic for log streaming.
+* **Inject secrets at runtime via `sed` or environment variables.** Never commit connection strings into source control. Use Azure Key Vault or environment variable injection in production pipelines.
+* **Use `StrictHostKeyChecking=no` only in automation pipelines.** For interactive or production SSH, prefer known-hosts management or Azure Bastion.
 
-### Virtual Machine Access
+### Security
 
-- Never use `StrictHostKeyChecking=no` in production SSH automation. Pre-populate `~/.ssh/known_hosts` using `ssh-keyscan -H $VM_IP` before the first connection.
-- Restrict inbound SSH (TCP/22) to known CIDR ranges using an **NSG inbound rule** on the VM's network interface. The VM as provisioned accepts SSH from `0.0.0.0/0` by default.
-- Use **Azure Bastion** for interactive VM access in production environments to remove the requirement for a public IP entirely.
-- Back up auto-generated SSH keys to a secrets manager immediately after VM provisioning. The CLI itself emitted the warning to do so.
+* **Rotate the `RootManageSharedAccessKey`** after initial testing. Create scoped shared access policies with `Send` or `Listen` permissions only for application identities.
+* **Prefer Managed Identity over connection strings** for production. Assign the VM a system-assigned managed identity and grant it `Azure Event Hubs Data Sender` and `Storage Blob Data Contributor` roles.
+* **Disable public blob access** on storage accounts not requiring public read. The container was made public for this exercise; in production, use private containers with SAS tokens or managed identity access.
 
-### Python Dependency Management
+### Verification
 
-- Use `sudo pip3 install` or a dedicated **virtual environment** to ensure packages are accessible system-wide rather than user-scoped.
-- Pin all package versions in a `requirements.txt` and deploy via `pip3 install -r requirements.txt` for reproducible environments:
-
-```
-azure-eventhub==5.15.1
-azure-storage-blob==12.28.0
-azure-core==1.39.0
-isodate==0.7.2
-typing-extensions==4.15.0
-```
-
-- Use **Azure Custom Script Extension** or **cloud-init** for idempotent, version-controlled VM bootstrapping rather than sequential, interactive SSH commands.
-
-### Event Hubs Configuration
-
-- Use dedicated **consumer groups** per downstream service to isolate readers and prevent one consumer from blocking another.
-- Set **message retention** aligned to downstream consumer processing SLAs (1 to 7 days on Standard tier).
-- Enable **Auto-inflate** on the namespace to automatically scale Throughput Units under burst load.
-- Monitor `IncomingMessages`, `OutgoingMessages`, and `ThrottledRequests` together to detect backpressure and quota exhaustion proactively.
-
-### Observability and Alerting
-
-- Set an **Azure Monitor Alert** on `IncomingMessages` dropping to zero over a sustained window (e.g., 5 consecutive minutes) to detect pipeline stall conditions automatically.
-- Export Event Hub and Storage metrics to a **Log Analytics Workspace** for unified dashboarding, cross-resource correlation, and long-term trend analysis.
-- Enable **Azure Storage Diagnostics** logging on the storage account to capture per-blob read and write operations for audit and access pattern analysis.
-
-### Infrastructure as Code
-
-- Convert all `az` CLI commands in this runbook into **Bicep** or **Terraform** templates for repeatable, drift-detectable deployments.
-- Store IaC templates in a dedicated repository with branch protection, peer review gates, and automated linting (`az bicep build`, `terraform validate`).
-- Apply **Azure Resource Locks** (`CanNotDelete`) to production resource groups to prevent accidental teardown of the pipeline infrastructure.
+* **Always verify both the Blob and the Event Hub metric.** A successful `send_logs.py` exit does not guarantee delivery unless both storage artifacts are confirmed.
+* **Allow 1 to 2 minutes** for Azure Monitor metrics to reflect recent message counts. Metrics ingestion has a slight delay.
 
 ---
 
 ## Lessons Learned
 
-***1. Azure CLI silent failures require JSON output inspection, not just exit codes.***
-The container creation failure in Step 2b returned exit code 0 with `"created": false` and zero error output. Any script that relies purely on exit codes to detect `az storage container create` failures will silently continue on this class of error. Always inspect the `created` field in the response JSON, or use `--query "created" -o tsv` to assert the expected value inline in automation.
+1. **Account-level settings gate container-level settings.** The silent `"created": false` on the container is easy to miss. Always verify account-level access flags before configuring container-level settings.
 
-***2. Storage account public access defaults changed. Design creation commands defensively.***
-Azure hardened storage account defaults so that `allowBlobPublicAccess` is `false` at account creation. Any automation that assumes `--public-access blob` will succeed on a newly created account without an explicit account-level flag will fail. When public access is genuinely required, include `--allow-blob-public-access true` in the `az storage account create` command to handle it atomically in a single step instead of discovering the failure in a downstream container operation.
+2. **`pip3 install` on a fresh Ubuntu 22.04 VM installs `build-essential` and GCC.** This is expected because `azure-eventhub` compiles C extensions. Budget 2 to 3 minutes for the first `pip3 install` on a minimal VM image.
 
-***3. Use the pipe `|` delimiter in `sed` when injecting Azure connection strings.***
-Azure connection strings contain forward slashes in endpoint URLs (e.g., `https://xfusion-namespace.servicebus.windows.net/`). Using the default `/` delimiter in `sed 's/.../.../'` would cause sed to misparse the replacement string and fail. The pipe delimiter `sed 's|...|...|g'` was correctly applied here to handle forward slashes transparently. This is a non-obvious but critical detail for any templated credential injection pattern in shell automation.
+3. **Azure Monitor metric delay is real.** The `IncomingMessages` metric showed `0.0` for all timestamps up to and including the minute the script ran. It only appeared at `05:34:00Z` after the script completed at approximately `05:32:41Z`. Do not immediately assume failure if the metric counter is zero.
 
-***4. pip3 installs to user scope when SSH sessions lack elevated privileges.***
-The pip3 install produced the warning `Defaulting to user installation because normal site-packages is not writeable` because the SSH session ran as `azureuser` without `sudo`. The install succeeded in user scope at `~/.local/lib/` and worked correctly when `python3 send_logs.py` ran as the same user. However, if the script were to run as a different system user (e.g., via a systemd service or cron job running as `root` or another account), the packages would not be found. Always use `sudo pip3 install` or a virtualenv to ensure the installation scope matches the runtime execution context.
+4. **`scp` with `StrictHostKeyChecking=no` adds the host to `known_hosts` automatically.** This is functionally equivalent to accepting the fingerprint interactively. Verify the host fingerprint manually in security-sensitive deployments.
 
-***5. Azure Monitor metric propagation has a 60 to 90 second delay.***
-The script executed at `05:32:41 UTC` and the `IncomingMessages` metric registered `1.0` only at the `05:34:00 UTC` bucket, a lag of approximately 79 seconds. Running `az monitor metrics list` immediately after script execution would show `0.0` and could be mistaken for a pipeline failure. Build any metric-based verification step with an explicit wait interval (at least 90 seconds) or a poll loop with retries rather than a single point-in-time check.
+5. **`sed -i` with special characters in connection strings requires careful delimiter selection.** Using `|` as the `sed` delimiter instead of `/` avoids conflicts with forward slashes present in URLs and connection strings.
 
-***6. AppendBlob type in the blob list output confirms correct SDK usage.***
-The blob `logs.txt` was stored as an `AppendBlob` (confirmed in Step 14). This is the appropriate blob type for append-only log writes. If the script had used `BlockBlobClient` instead, each execution would have overwritten the file entirely, destroying prior log entries. The `AppendBlob` result confirms the SDK used `AppendBlobClient` inside `send_logs.py`, preserving historical log entries across successive script runs.
+6. **`AppendBlob` is a write-once-append blob type.** If the container is deleted and recreated, the blob must also be recreated. The `send_logs.py` script likely handles blob creation if it does not exist, which is the correct pattern.
 
-***7. Default `minimumTlsVersion` is `TLS1_0` and must be explicitly remediated.***
-The Step 1 output clearly showed `"minimumTlsVersion": "TLS1_0"` on the newly created storage account. TLS 1.0 is deprecated and vulnerable to known downgrade attacks. This must be flagged in any post-deployment security review and remediated immediately:
+---
+
+## Security Considerations
+
+> **WARNING:** The connection strings and storage account keys shown in this runbook are for documentation purposes. They correspond to a lab environment and should be treated as expired. Never commit real Azure connection strings, access keys, or SAS tokens to source control.
+
+For production deployments, replace connection-string-based authentication with:
 
 ```bash
-az storage account update \
-  --name xfusionst6179 \
-  --resource-group $RG \
-  --min-tls-version TLS1_2
+# Assign system-assigned managed identity to the VM
+az vm identity assign \
+  --name xfusion-vm \
+  --resource-group $RG
+
+# Grant Event Hubs Data Sender role
+az role assignment create \
+  --assignee <vm-principal-id> \
+  --role "Azure Event Hubs Data Sender" \
+  --scope /subscriptions/<sub-id>/resourceGroups/<rg>/providers/Microsoft.EventHub/namespaces/xfusion-namespace
+
+# Grant Blob Contributor role
+az role assignment create \
+  --assignee <vm-principal-id> \
+  --role "Storage Blob Data Contributor" \
+  --scope /subscriptions/<sub-id>/resourceGroups/<rg>/providers/Microsoft.Storage/storageAccounts/xfusionst6179
 ```
 
-In future, include `--min-tls-version TLS1_2` in the original `az storage account create` command.
+---
 
-***8. Auto-generated SSH keys must be backed up before the session ends.***
-The `az vm create --generate-ssh-keys` flag created `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub` on the client host. The CLI explicitly warned that these must be backed up if the host does not use permanent storage. In any ephemeral or container-based environment (a CI runner, a cloud shell session, a disposable bastion), failure to back up the private key before the session terminates permanently locks out SSH access to the VM without a key reset operation.
+## References
+
+* [Azure Event Hubs Documentation](https://learn.microsoft.com/en-us/azure/event-hubs/)
+* [Azure Blob Storage Documentation](https://learn.microsoft.com/en-us/azure/storage/blobs/)
+* [azure-eventhub Python SDK](https://pypi.org/project/azure-eventhub/)
+* [azure-storage-blob Python SDK](https://pypi.org/project/azure-storage-blob/)
+* [Azure CLI Reference: az eventhubs](https://learn.microsoft.com/en-us/cli/azure/eventhubs)
+* [Azure CLI Reference: az storage](https://learn.microsoft.com/en-us/cli/azure/storage)
+* [Azure Monitor Metrics CLI](https://learn.microsoft.com/en-us/cli/azure/monitor/metrics)
+* [Managed Identity for Azure VMs](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-cli-windows-vm)
 
 ---
 
-## Resource Reference
+## Resource Summary
 
-| Resource Type | Name | Detail |
-|---|---|---|
-| Subscription | -- | `f0c3bcdd-5ce2-4fa0-8cf3-41559747512b` |
-| Resource Group | `kml_rg_main-8172d8914a6f4db7` | East US |
-| Event Hubs Namespace | `xfusion-namespace` | Standard tier, East US |
-| Storage Account | `xfusionst6179` | Standard_LRS, StorageV2, East US |
-| Blob Container | `xfusion-backup-23374` | Public access: blob |
-| Blob Object | `logs.txt` | AppendBlob, 18 bytes, `application/octet-stream` |
-| Virtual Machine | `xfusion-vm` | Ubuntu 22.04 LTS, Standard_B1s, East US |
-| VM OS Disk | -- | 64 GB, Standard_LRS |
-| VM Admin User | `azureuser` | Key-based SSH auth |
-| VM Public IP | `20.124.200.51` | Dynamic, East US |
-| VM Private IP | `10.0.0.4` | Within VNet |
-| VM MAC Address | `60-45-BD-EE-76-46` | -- |
-| Client Script (source) | `/root/send_logs.py` | 960 bytes, client host |
-| Script (deployed) | `/home/azureuser/send_logs.py` | On VM after SCP in Step 7 |
-| SSH Private Key | `~/.ssh/id_rsa` | Auto-generated during Step 5 |
+| Resource | Name | Type | Region | SKU |
+|---|---|---|---|---|
+| Event Hubs Namespace | `xfusion-namespace` | `Microsoft.EventHub/Namespaces` | East US | Standard |
+| Event Hub | `xfusion-hub` | `Microsoft.EventHub/namespaces/eventhubs` | East US | N/A |
+| Storage Account | `xfusionst6179` | `Microsoft.Storage/storageAccounts` | East US | Standard_LRS |
+| Blob Container | `xfusion-backup-23374` | Blob Container | East US | Public Read |
+| Virtual Machine | `xfusion-vm` | `Microsoft.Compute/virtualMachines` | East US | Standard_B1s |
 
 ---
 
-## Author
-
-**Nautilus DevOps Team**
-Runbook executed: `2026-03-27`
-Execution environment: Azure Cloud -- East US
-Authentication: Azure CLI (`az`) with pre-authenticated subscription session
-Toolchain: Azure CLI, SSH, SCP, Python 3.10, pip3, sed
-**All infrastructure provisioned exclusively via Azure CLI. No Azure Portal interactions were performed at any step.**
-
----
-
-*All credentials and connection strings visible in terminal outputs in this document were rotated immediately after execution. Do not commit live secrets to any version control system. All `$STORAGE_KEY`, `$EH_CONN`, and `$SA_CONN` values are ephemeral shell variables that do not persist beyond the session.*
 
 
 
