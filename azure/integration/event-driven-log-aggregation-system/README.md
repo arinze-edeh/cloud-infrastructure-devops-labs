@@ -523,11 +523,10 @@ The storage account provisioned with `minimumTlsVersion: TLS1_0`. This is a secu
 ---
 
 Environment: Azure Cloud (East US)
+
 Authentication: Azure CLI with Subscription `f0c3bcdd-5ce2-4fa0-8cf3-41559747512b`
 
----
 
-*This document follows internal DevOps documentation standards. All credentials shown in terminal outputs are rotated post-execution. Do not commit live connection strings to any version control system.*
 
 
 <img width="1031" height="403" alt="image" src="https://github.com/user-attachments/assets/1ca491ec-49f9-483e-8cef-b4bd4d10d684" />
