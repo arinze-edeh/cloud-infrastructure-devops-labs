@@ -552,9 +552,10 @@ Events:
   Normal  Started    Started container httpd
 ```
 
-**Screenshot:**
+**Screenshots:**
 
-
+<img width="1028" height="864" alt="image" src="https://github.com/user-attachments/assets/76ed7ac8-81a9-4ad1-bd9d-1779f879106d" />
+<img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/585ddcb5-8263-4d63-904e-15c2fe91ba06" />
 
 > `Terminal output of "kubectl describe pod" showing image ID, all conditions True, and event timeline`
 
@@ -600,8 +601,11 @@ NAME                               DESIRED   CURRENT   READY   AGE
 replicaset.apps/httpd-6c755866c7   1         1         1       5m36s
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal showing all three resources (pod, deployment, replicaset) healthy under "kubectl get all -l app=httpd"]`
+**Screenshot:**
+
+<img width="1030" height="567" alt="image" src="https://github.com/user-attachments/assets/fe979471-377e-4afe-82ee-739908da5335" />
+
+> `Terminal showing all three resources (pod, deployment, replicaset) healthy under "kubectl get all -l app=httpd"`
 
 **Final State Summary:**
 
@@ -742,15 +746,3 @@ kubectl get deployment httpd -o yaml > httpd-deployment.yaml
 * [kubectl config Contexts](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)
 
 ---
-
-
-
-
-
-
-
-
-
-<img width="1028" height="864" alt="image" src="https://github.com/user-attachments/assets/76ed7ac8-81a9-4ad1-bd9d-1779f879106d" />
-<img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/585ddcb5-8263-4d63-904e-15c2fe91ba06" />
-<img width="1030" height="567" alt="image" src="https://github.com/user-attachments/assets/fe979471-377e-4afe-82ee-739908da5335" />
