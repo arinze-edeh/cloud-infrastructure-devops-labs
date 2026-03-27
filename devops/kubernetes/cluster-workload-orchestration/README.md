@@ -295,8 +295,11 @@ CURRENT   NAME      CLUSTER   AUTHINFO   NAMESPACE
 *         default   default   default
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal output of "kubectl config get-contexts" showing the asterisk on the "default" context]`
+**Screenshot:**
+
+<img width="1031" height="836" alt="image" src="https://github.com/user-attachments/assets/979d65c9-fee1-4d12-a899-6ea2d77760ff" />
+
+> `Terminal output of "kubectl config get-contexts" showing the asterisk on the "default" context`
 
 **Validation Criteria:** The `*` must appear next to the intended context. If it is absent or on the wrong context, switch using `kubectl config use-context <context-name>`.
 
@@ -316,8 +319,11 @@ kubectl get deployment httpd
 Error from server (NotFound): deployments.apps "httpd" not found
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal output showing the "NotFound" error for the httpd deployment]`
+**Screenshot:**
+
+<img width="1031" height="836" alt="image" src="https://github.com/user-attachments/assets/979d65c9-fee1-4d12-a899-6ea2d77760ff" />
+
+> `Terminal output showing the "NotFound" error for the httpd deployment`
 
 #### Error Analysis
 
@@ -723,7 +729,7 @@ kubectl get deployment httpd -o yaml > httpd-deployment.yaml
 
 
 
-<img width="1031" height="836" alt="image" src="https://github.com/user-attachments/assets/979d65c9-fee1-4d12-a899-6ea2d77760ff" />
+
 <img width="1028" height="859" alt="image" src="https://github.com/user-attachments/assets/c6a184fb-d8ae-4164-bbf5-298cb7ad30f1" />
 <img width="1032" height="766" alt="image" src="https://github.com/user-attachments/assets/238d1e85-aa0e-4529-a1b4-0f6565192904" />
 <img width="1035" height="858" alt="image" src="https://github.com/user-attachments/assets/9a6f3a57-8729-4a7f-aa20-2b4abb123ac8" />
