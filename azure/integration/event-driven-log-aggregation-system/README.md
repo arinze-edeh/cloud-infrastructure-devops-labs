@@ -357,8 +357,11 @@ Warning: Permanently added '20.124.200.51' (ECDSA) to the list of known hosts.
 send_logs.py     100%  960     8.2KB/s   00:00
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing scp transfer completion with file size and transfer speed]`
+> **Screenshot**
+
+<img width="1034" height="839" alt="image" src="https://github.com/user-attachments/assets/5d4e55d0-1df9-4577-9a3a-ebad1447f819" />
+
+> `Terminal showing scp transfer completion with file size and transfer speed`
 
 ---
 
@@ -373,8 +376,13 @@ ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no azureuser@$VM_IP \
 
 This installed `python3-pip` along with all required build tools (`build-essential`, `gcc`, `g++`, etc.) and upgraded Python 3.10 components to the latest available versions.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing apt-get install completion with python3-pip successfully installed]`
+> **Screenshots**
+
+<img width="1033" height="835" alt="image" src="https://github.com/user-attachments/assets/f507d5e8-dd58-4353-90e7-7d3f3129d5dd" />
+<img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/04732183-96dd-4df0-ba22-021ce105ceff" />
+<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/fe2cc2c4-3507-4c58-a6d4-6b8578d1764d" />
+
+> `Terminal showing apt-get install completion with python3-pip successfully installed`
 
 #### 8b. Install Azure SDK Libraries
 
@@ -395,8 +403,11 @@ ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no azureuser@$VM_IP \
 
 > **Note:** `cryptography` and `requests` were already present via system packages and satisfied as dependencies.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing pip3 install completion with Successfully installed packages listed]`
+> **Screenshot**
+
+
+
+> `Terminal showing pip3 install completion with Successfully installed packages listed`
 
 ---
 
@@ -630,10 +641,8 @@ az role assignment create \
 
 
 
-<img width="1034" height="839" alt="image" src="https://github.com/user-attachments/assets/5d4e55d0-1df9-4577-9a3a-ebad1447f819" />
-<img width="1033" height="835" alt="image" src="https://github.com/user-attachments/assets/f507d5e8-dd58-4353-90e7-7d3f3129d5dd" />
-<img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/04732183-96dd-4df0-ba22-021ce105ceff" />
-<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/fe2cc2c4-3507-4c58-a6d4-6b8578d1764d" />
+
+
 <img width="1035" height="647" alt="image" src="https://github.com/user-attachments/assets/8a3e2058-4c5c-42b6-99e8-a29edf151df4" />
 <img width="1033" height="542" alt="image" src="https://github.com/user-attachments/assets/9449b667-cd56-405b-bb82-ad6463ddca03" />
 <img width="1034" height="606" alt="image" src="https://github.com/user-attachments/assets/e6347d67-9a48-4ea6-b10e-5fac1446177a" />
