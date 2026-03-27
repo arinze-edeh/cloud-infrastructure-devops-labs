@@ -354,8 +354,11 @@ kubectl create deployment httpd --image=httpd:latest
 deployment.apps/httpd created
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal showing "deployment.apps/httpd created" confirmation message]`
+**Screenshot:**
+
+<img width="1028" height="859" alt="image" src="https://github.com/user-attachments/assets/c6a184fb-d8ae-4164-bbf5-298cb7ad30f1" />
+
+> `Terminal showing "deployment.apps/httpd created" confirmation message`
 
 **What This Command Does:**
 
@@ -730,7 +733,7 @@ kubectl get deployment httpd -o yaml > httpd-deployment.yaml
 
 
 
-<img width="1028" height="859" alt="image" src="https://github.com/user-attachments/assets/c6a184fb-d8ae-4164-bbf5-298cb7ad30f1" />
+
 <img width="1032" height="766" alt="image" src="https://github.com/user-attachments/assets/238d1e85-aa0e-4529-a1b4-0f6565192904" />
 <img width="1035" height="858" alt="image" src="https://github.com/user-attachments/assets/9a6f3a57-8729-4a7f-aa20-2b4abb123ac8" />
 <img width="1028" height="864" alt="image" src="https://github.com/user-attachments/assets/76ed7ac8-81a9-4ad1-bd9d-1779f879106d" />
