@@ -507,8 +507,11 @@ az storage blob list \
 
 > The `AppendBlob` type is significant: it confirms the script used the `AppendBlobClient`, which is the correct blob type for log streaming as it supports appending without overwriting existing content.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing az storage blob list table output with logs.txt present]`
+> **Screenshot**
+
+<img width="1029" height="782" alt="image" src="https://github.com/user-attachments/assets/2b98bf67-b0cf-4a43-9f95-f5ff10dbf262" />
+
+> `Terminal showing az storage blob list table output with logs.txt present`
 
 ---
 
@@ -534,8 +537,12 @@ Timestamp             Name               Total
 
 > All timestamps prior to `05:34:00Z` showed `0.0`. The single message sent by `send_logs.py` registered as `1.0` at `05:34:00Z`, confirming end-to-end delivery to the Event Hub.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing az monitor metrics list table with IncomingMessages: 1.0 at the bottom timestamp]`
+> **Screenshots**
+
+<img width="1034" height="867" alt="image" src="https://github.com/user-attachments/assets/58609aec-57c7-44fe-b6a0-c822a21c3425" />
+<img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/66bd43e8-21c3-4d17-8341-94bd6337f4ca" />
+
+> `Terminal showing az monitor metrics list table with IncomingMessages: 1.0 at the bottom timestamp`
 
 ---
 
@@ -644,17 +651,3 @@ az role assignment create \
 | Virtual Machine | `xfusion-vm` | `Microsoft.Compute/virtualMachines` | East US | Standard_B1s |
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-<img width="1029" height="782" alt="image" src="https://github.com/user-attachments/assets/2b98bf67-b0cf-4a43-9f95-f5ff10dbf262" />
-<img width="1034" height="867" alt="image" src="https://github.com/user-attachments/assets/58609aec-57c7-44fe-b6a0-c822a21c3425" />
-<img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/66bd43e8-21c3-4d17-8341-94bd6337f4ca" />
