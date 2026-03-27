@@ -479,7 +479,7 @@ Log sent to Event Hub and backed up to Blob Storage.
 
 > **Screenshot**
 
-
+<img width="1034" height="606" alt="image" src="https://github.com/user-attachments/assets/e6347d67-9a48-4ea6-b10e-5fac1446177a" />
 
 > `Terminal showing successful execution output: Log sent to Event Hub and backed up to Blob Storage`
 
@@ -654,7 +654,7 @@ az role assignment create \
 
 
 
-<img width="1034" height="606" alt="image" src="https://github.com/user-attachments/assets/e6347d67-9a48-4ea6-b10e-5fac1446177a" />
+
 <img width="1029" height="782" alt="image" src="https://github.com/user-attachments/assets/2b98bf67-b0cf-4a43-9f95-f5ff10dbf262" />
 <img width="1034" height="867" alt="image" src="https://github.com/user-attachments/assets/58609aec-57c7-44fe-b6a0-c822a21c3425" />
 <img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/66bd43e8-21c3-4d17-8341-94bd6337f4ca" />
