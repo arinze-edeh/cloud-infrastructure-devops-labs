@@ -240,8 +240,11 @@ az storage container create \
 
 > **Root Cause:** `allowBlobPublicAccess` was `false` by default on the storage account. A container with `--public-access blob` cannot be created when the account-level public access is disabled.
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing container create with created: false result]`
+> **Screenshot**
+
+<img width="1025" height="870" alt="image" src="https://github.com/user-attachments/assets/21ec68cc-2b72-4e22-b0c8-46ae0e0eb76a" />
+
+> `Terminal showing container create with created: false result`
 
 #### 5c. Resolution: Enable Public Blob Access on the Storage Account
 
@@ -620,7 +623,7 @@ az role assignment create \
 
 
 
-<img width="1025" height="870" alt="image" src="https://github.com/user-attachments/assets/21ec68cc-2b72-4e22-b0c8-46ae0e0eb76a" />
+
 <img width="1030" height="863" alt="image" src="https://github.com/user-attachments/assets/d1b7a02e-32be-482c-aa74-078c1c19cd54" />
 <img width="1028" height="864" alt="image" src="https://github.com/user-attachments/assets/da04f3f7-1eae-4be8-8dcf-a8ff823a2088" />
 <img width="1029" height="853" alt="image" src="https://github.com/user-attachments/assets/2bec3bb9-e537-4c1c-8fd0-fdc8dd3e6c40" />
