@@ -136,8 +136,12 @@ az eventhubs namespace create \
 | `provisioningState` | `Succeeded` |
 | `status` | `Active` |
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing full az eventhubs namespace create JSON output with provisioningState: Succeeded]`
+> **Screenshots**
+
+<img width="1036" height="841" alt="image" src="https://github.com/user-attachments/assets/2f46273b-8c47-4ff2-9ae6-c727e273110d" />
+<img width="1034" height="865" alt="image" src="https://github.com/user-attachments/assets/be149425-5b46-49ad-acc3-d986cc7442bb" />
+
+> `Terminal showing full az eventhubs namespace create JSON output with provisioningState: Succeeded`
 
 ---
 
@@ -162,8 +166,10 @@ az eventhubs eventhub create \
 | `messageRetentionInDays` | `7` |
 | `status` | `Active` |
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing az eventhubs eventhub create JSON output including partitionCount and status: Active]`
+> **Screenshot**
+
+
+> `Terminal showing az eventhubs eventhub create JSON output including partitionCount and status: Active`
 
 ---
 
@@ -605,8 +611,7 @@ az role assignment create \
 
 
 
-<img width="1036" height="841" alt="image" src="https://github.com/user-attachments/assets/2f46273b-8c47-4ff2-9ae6-c727e273110d" />
-<img width="1034" height="865" alt="image" src="https://github.com/user-attachments/assets/be149425-5b46-49ad-acc3-d986cc7442bb" />
+
 <img width="1029" height="872" alt="image" src="https://github.com/user-attachments/assets/62146382-dee1-4dd5-9b3a-5d7eae58c2e0" />
 <img width="1032" height="866" alt="image" src="https://github.com/user-attachments/assets/1a9578c8-7ff0-4e3b-a4c7-b9acbe501564" />
 <img width="1027" height="858" alt="image" src="https://github.com/user-attachments/assets/00096291-17c5-4c12-8b61-77ac3be05aab" />
