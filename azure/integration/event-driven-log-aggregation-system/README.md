@@ -287,7 +287,7 @@ az storage container create \
 
 > **Screenshot**
 
-
+<img width="1037" height="866" alt="image" src="https://github.com/user-attachments/assets/4ef92411-b5cc-49ed-b767-3b6bdd57ca94" />
 
 > `Terminal showing container create with created: true result after enabling public access`
 
@@ -331,8 +331,11 @@ The public IP was captured for subsequent SSH operations:
 VM_IP="20.124.200.51"
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing az vm create output with powerState: VM running and public IP]`
+> **Screenshot**
+
+<img width="1033" height="687" alt="image" src="https://github.com/user-attachments/assets/6f9ddbb4-f94a-4b86-af43-2f65573f4e96" />
+
+> `Terminal showing az vm create output with powerState: VM running and public IP`
 
 ---
 
@@ -627,14 +630,6 @@ az role assignment create \
 
 
 
-
-
-
-
-
-
-<img width="1037" height="866" alt="image" src="https://github.com/user-attachments/assets/4ef92411-b5cc-49ed-b767-3b6bdd57ca94" />
-<img width="1033" height="687" alt="image" src="https://github.com/user-attachments/assets/6f9ddbb4-f94a-4b86-af43-2f65573f4e96" />
 <img width="1034" height="839" alt="image" src="https://github.com/user-attachments/assets/5d4e55d0-1df9-4577-9a3a-ebad1447f819" />
 <img width="1033" height="835" alt="image" src="https://github.com/user-attachments/assets/f507d5e8-dd58-4353-90e7-7d3f3129d5dd" />
 <img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/04732183-96dd-4df0-ba22-021ce105ceff" />
