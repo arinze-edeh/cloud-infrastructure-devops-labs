@@ -385,8 +385,11 @@ NAME    READY   UP-TO-DATE   AVAILABLE   AGE
 httpd   1/1     1            1           2m15s
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal output of "kubectl get deployment httpd" showing 1/1 READY and 1 AVAILABLE]`
+**Screenshot:**
+
+<img width="1032" height="766" alt="image" src="https://github.com/user-attachments/assets/238d1e85-aa0e-4529-a1b4-0f6565192904" />
+
+> `Terminal output of "kubectl get deployment httpd" showing 1/1 READY and 1 AVAILABLE`
 
 **Column Definitions:**
 
@@ -416,8 +419,11 @@ NAME               DESIRED   CURRENT   READY   AGE
 httpd-6c755866c7   1         1         1       2m28s
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal showing the ReplicaSet "httpd-6c755866c7" with 1/1/1 desired/current/ready]`
+**Screenshot:**
+
+<img width="1032" height="766" alt="image" src="https://github.com/user-attachments/assets/238d1e85-aa0e-4529-a1b4-0f6565192904" />
+
+> `Terminal showing the ReplicaSet "httpd-6c755866c7" with 1/1/1 desired/current/ready`
 
 **Validation Criteria:** `DESIRED`, `CURRENT`, and `READY` must all be `1`. A ReplicaSet with `0` ready pods while the deployment shows available indicates an image pull failure or resource constraint.
 
@@ -438,8 +444,11 @@ NAME                     READY   STATUS    RESTARTS   AGE
 httpd-6c755866c7-zc2js   1/1     Running   0          2m41s
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal showing Pod "httpd-6c755866c7-zc2js" in Running status with 0 restarts]`
+**Screenshot:**
+
+<img width="1032" height="766" alt="image" src="https://github.com/user-attachments/assets/238d1e85-aa0e-4529-a1b4-0f6565192904" />
+
+> `Terminal showing Pod "httpd-6c755866c7-zc2js" in Running status with 0 restarts`
 
 **Pod Naming Convention:**
 
@@ -734,7 +743,7 @@ kubectl get deployment httpd -o yaml > httpd-deployment.yaml
 
 
 
-<img width="1032" height="766" alt="image" src="https://github.com/user-attachments/assets/238d1e85-aa0e-4529-a1b4-0f6565192904" />
+
 <img width="1035" height="858" alt="image" src="https://github.com/user-attachments/assets/9a6f3a57-8729-4a7f-aa20-2b4abb123ac8" />
 <img width="1028" height="864" alt="image" src="https://github.com/user-attachments/assets/76ed7ac8-81a9-4ad1-bd9d-1779f879106d" />
 <img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/585ddcb5-8263-4d63-904e-15c2fe91ba06" />
