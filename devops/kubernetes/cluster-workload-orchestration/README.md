@@ -491,8 +491,11 @@ Events:
   Normal  ScalingReplicaSet  3m20s  deployment-controller  Scaled up replica set httpd-6c755866c7 from 0 to 1
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal output of "kubectl describe deployment httpd" showing conditions and events]`
+**Screenshot:**
+
+<img width="1035" height="858" alt="image" src="https://github.com/user-attachments/assets/9a6f3a57-8729-4a7f-aa20-2b4abb123ac8" />
+
+> `Terminal output of "kubectl describe deployment httpd" showing conditions and events`
 
 **Key Observations:**
 
@@ -549,8 +552,11 @@ Events:
   Normal  Started    Started container httpd
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal output of "kubectl describe pod" showing image ID, all conditions True, and event timeline]`
+**Screenshot:**
+
+
+
+> `Terminal output of "kubectl describe pod" showing image ID, all conditions True, and event timeline`
 
 **Critical Fields Verified:**
 
@@ -744,7 +750,7 @@ kubectl get deployment httpd -o yaml > httpd-deployment.yaml
 
 
 
-<img width="1035" height="858" alt="image" src="https://github.com/user-attachments/assets/9a6f3a57-8729-4a7f-aa20-2b4abb123ac8" />
+
 <img width="1028" height="864" alt="image" src="https://github.com/user-attachments/assets/76ed7ac8-81a9-4ad1-bd9d-1779f879106d" />
 <img width="1034" height="859" alt="image" src="https://github.com/user-attachments/assets/585ddcb5-8263-4d63-904e-15c2fe91ba06" />
 <img width="1030" height="567" alt="image" src="https://github.com/user-attachments/assets/fe979471-377e-4afe-82ee-739908da5335" />
