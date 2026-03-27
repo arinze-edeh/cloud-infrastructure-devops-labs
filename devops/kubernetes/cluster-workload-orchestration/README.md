@@ -129,8 +129,11 @@ hostname
 jump-host
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal showing hostname output as "jump-host"]`
+**Screenshot:**
+
+<img width="1030" height="475" alt="image" src="https://github.com/user-attachments/assets/fdb129ae-1cdf-4b7a-946e-9b9118655783" />
+
+> `Terminal showing hostname output as "jump-host"`
 
 **Validation Criteria:** The hostname must return `jump-host`. If it returns any other value, you are on the wrong machine. Stop and re-establish your session.
 
@@ -150,8 +153,11 @@ which kubectl
 /usr/bin/kubectl
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal showing "which kubectl" output as "/usr/bin/kubectl"]`
+**Screenshot:**
+
+<img width="1030" height="475" alt="image" src="https://github.com/user-attachments/assets/fdb129ae-1cdf-4b7a-946e-9b9118655783" />
+
+> `Terminal showing "which kubectl" output as "/usr/bin/kubectl"`
 
 **Validation Criteria:** A valid filesystem path must be returned. An empty output or a `not found` error indicates `kubectl` is not installed or not on `$PATH`.
 
@@ -172,8 +178,11 @@ Client Version: v1.34.1
 Kustomize Version: v5.7.1
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal displaying kubectl client version v1.34.1 and Kustomize v5.7.1]`
+**Screenshot:**
+
+<img width="1030" height="475" alt="image" src="https://github.com/user-attachments/assets/fdb129ae-1cdf-4b7a-946e-9b9118655783" />
+
+> `Terminal displaying kubectl client version v1.34.1 and Kustomize v5.7.1`
 
 **Validation Criteria:** The client version must be within one minor version of the cluster server version (skew policy). A version mismatch beyond this range can cause API compatibility issues.
 
@@ -195,8 +204,11 @@ CoreDNS is running at https://127.0.0.1:6443/api/v1/namespaces/kube-system/servi
 Metrics-server is running at https://127.0.0.1:6443/api/v1/namespaces/kube-system/services/https:metrics-server:https/proxy
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal output of "kubectl cluster-info" showing control plane and CoreDNS/Metrics-server status]`
+**Screenshot:**
+
+<img width="1030" height="475" alt="image" src="https://github.com/user-attachments/assets/fdb129ae-1cdf-4b7a-946e-9b9118655783" />
+
+> `Terminal output of "kubectl cluster-info" showing control plane and CoreDNS/Metrics-server status`
 
 **Validation Criteria:** All three endpoints (control plane, CoreDNS, Metrics-server) must show a `running` status. A `connection refused` error indicates the API server is down or the kubeconfig endpoint is incorrect.
 
@@ -217,8 +229,11 @@ NAME        STATUS   ROLES           AGE   VERSION
 jump-host   Ready    control-plane   45m   v1.34.1+k3s1
 ```
 
-**Screenshot Placeholder:**
-> `[SCREENSHOT: Terminal showing "kubectl get nodes" with jump-host in Ready status]`
+**Screenshot:**
+
+<img width="1030" height="475" alt="image" src="https://github.com/user-attachments/assets/fdb129ae-1cdf-4b7a-946e-9b9118655783" />
+
+> `Terminal showing "kubectl get nodes" with jump-host in Ready status`
 
 **Validation Criteria:** All nodes must show `STATUS: Ready`. A `NotReady` status requires immediate investigation using `kubectl describe node <node-name>` before proceeding.
 
@@ -703,7 +718,7 @@ kubectl get deployment httpd -o yaml > httpd-deployment.yaml
 
 
 
-<img width="1030" height="475" alt="image" src="https://github.com/user-attachments/assets/fdb129ae-1cdf-4b7a-946e-9b9118655783" />
+
 <img width="1030" height="743" alt="image" src="https://github.com/user-attachments/assets/e5186454-4db8-4c4c-813e-8b14128a949f" />
 <img width="1031" height="836" alt="image" src="https://github.com/user-attachments/assets/979d65c9-fee1-4d12-a899-6ea2d77760ff" />
 <img width="1028" height="859" alt="image" src="https://github.com/user-attachments/assets/c6a184fb-d8ae-4164-bbf5-298cb7ad30f1" />
