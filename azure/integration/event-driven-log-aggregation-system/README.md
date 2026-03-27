@@ -437,8 +437,11 @@ EH: Endpoint=sb://xfusion-namespace.servicebus.windows.net/;SharedAccessKeyName=
 SA: DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=xfusionst6179;AccountKey=<KEY>;BlobEndpoint=https://xfusionst6179.blob.core.windows.net/;...
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing EH and SA connection string echo output (redact keys before committing)]`
+> **Screenshot**
+
+<img width="1035" height="647" alt="image" src="https://github.com/user-attachments/assets/8a3e2058-4c5c-42b6-99e8-a29edf151df4" />
+
+> `Terminal showing EH and SA connection string echo output (redact keys before committing)`
 
 #### 9b. Inject Connection Strings via sed
 
@@ -452,8 +455,11 @@ ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no azureuser@$VM_IP \
   "sed -i 's|<Blob Storage Connection String>|$SA_CONN|g' /home/azureuser/send_logs.py"
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing sed injection commands executing without errors]`
+> **Screenshot**
+
+
+
+> `Terminal showing sed injection commands executing without errors`
 
 ---
 
@@ -643,7 +649,7 @@ az role assignment create \
 
 
 
-<img width="1035" height="647" alt="image" src="https://github.com/user-attachments/assets/8a3e2058-4c5c-42b6-99e8-a29edf151df4" />
+
 <img width="1033" height="542" alt="image" src="https://github.com/user-attachments/assets/9449b667-cd56-405b-bb82-ad6463ddca03" />
 <img width="1034" height="606" alt="image" src="https://github.com/user-attachments/assets/e6347d67-9a48-4ea6-b10e-5fac1446177a" />
 <img width="1029" height="782" alt="image" src="https://github.com/user-attachments/assets/2b98bf67-b0cf-4a43-9f95-f5ff10dbf262" />
