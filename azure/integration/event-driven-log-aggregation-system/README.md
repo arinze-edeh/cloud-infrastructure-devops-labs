@@ -260,8 +260,13 @@ az storage account update \
 "allowBlobPublicAccess": true
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing az storage account update output with allowBlobPublicAccess: true]`
+> **Screenshots**
+
+<img width="1030" height="863" alt="image" src="https://github.com/user-attachments/assets/d1b7a02e-32be-482c-aa74-078c1c19cd54" />
+<img width="1028" height="864" alt="image" src="https://github.com/user-attachments/assets/da04f3f7-1eae-4be8-8dcf-a8ff823a2088" />
+<img width="1029" height="853" alt="image" src="https://github.com/user-attachments/assets/2bec3bb9-e537-4c1c-8fd0-fdc8dd3e6c40" />
+
+> `Terminal showing az storage account update output with allowBlobPublicAccess: true`
 
 #### 5d. Retry Container Creation (Succeeded)
 
@@ -280,8 +285,11 @@ az storage container create \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing container create with created: true result after enabling public access]`
+> **Screenshot**
+
+
+
+> `Terminal showing container create with created: true result after enabling public access`
 
 ---
 
@@ -624,9 +632,7 @@ az role assignment create \
 
 
 
-<img width="1030" height="863" alt="image" src="https://github.com/user-attachments/assets/d1b7a02e-32be-482c-aa74-078c1c19cd54" />
-<img width="1028" height="864" alt="image" src="https://github.com/user-attachments/assets/da04f3f7-1eae-4be8-8dcf-a8ff823a2088" />
-<img width="1029" height="853" alt="image" src="https://github.com/user-attachments/assets/2bec3bb9-e537-4c1c-8fd0-fdc8dd3e6c40" />
+
 <img width="1037" height="866" alt="image" src="https://github.com/user-attachments/assets/4ef92411-b5cc-49ed-b767-3b6bdd57ca94" />
 <img width="1033" height="687" alt="image" src="https://github.com/user-attachments/assets/6f9ddbb4-f94a-4b86-af43-2f65573f4e96" />
 <img width="1034" height="839" alt="image" src="https://github.com/user-attachments/assets/5d4e55d0-1df9-4577-9a3a-ebad1447f819" />
