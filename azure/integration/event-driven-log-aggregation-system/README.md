@@ -38,7 +38,7 @@
 
 ## Overview
 
-This runbook documents the end-to-end provisioning and configuration of a **centralized log collection and backup pipeline** on Microsoft Azure. The solution captures application logs from an Azure Virtual Machine, publishes them to **Azure Event Hubs** for real-time stream processing, and simultaneously archives them to **Azure Blob Storage** for durable backup.
+This documents the end-to-end provisioning and configuration of a **centralized log collection and backup pipeline** on Microsoft Azure. The solution captures application logs from an Azure Virtual Machine, publishes them to **Azure Event Hubs** for real-time stream processing, and simultaneously archives them to **Azure Blob Storage** for durable backup.
 
 This pattern is widely adopted in enterprise environments for audit trails, compliance archival, and event-driven observability pipelines.
 
@@ -61,9 +61,6 @@ This pattern is widely adopted in enterprise environments for audit trails, comp
                     |  xfusion-backup-23374      |
                     +---------------------------+
 ```
-
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Full architecture diagram or Azure Portal resource group overview showing all 3 resources]`
 
 ---
 
