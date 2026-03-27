@@ -198,8 +198,13 @@ az storage account create \
 | `allowBlobPublicAccess` | `false` (initial) |
 | `enableHttpsTrafficOnly` | `true` |
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing az storage account create JSON response with provisioningState: Succeeded]`
+> **Screenshots**
+
+<img width="1032" height="866" alt="image" src="https://github.com/user-attachments/assets/1a9578c8-7ff0-4e3b-a4c7-b9acbe501564" />
+<img width="1027" height="858" alt="image" src="https://github.com/user-attachments/assets/00096291-17c5-4c12-8b61-77ac3be05aab" />
+<img width="1026" height="861" alt="image" src="https://github.com/user-attachments/assets/a8a80c22-b98e-44d5-8c5b-f6a25ec7f4c0" />
+
+> `Terminal showing az storage account create JSON response with provisioningState: Succeeded`
 
 ---
 
@@ -614,9 +619,7 @@ az role assignment create \
 
 
 
-<img width="1032" height="866" alt="image" src="https://github.com/user-attachments/assets/1a9578c8-7ff0-4e3b-a4c7-b9acbe501564" />
-<img width="1027" height="858" alt="image" src="https://github.com/user-attachments/assets/00096291-17c5-4c12-8b61-77ac3be05aab" />
-<img width="1026" height="861" alt="image" src="https://github.com/user-attachments/assets/a8a80c22-b98e-44d5-8c5b-f6a25ec7f4c0" />
+
 <img width="1025" height="870" alt="image" src="https://github.com/user-attachments/assets/21ec68cc-2b72-4e22-b0c8-46ae0e0eb76a" />
 <img width="1030" height="863" alt="image" src="https://github.com/user-attachments/assets/d1b7a02e-32be-482c-aa74-078c1c19cd54" />
 <img width="1028" height="864" alt="image" src="https://github.com/user-attachments/assets/da04f3f7-1eae-4be8-8dcf-a8ff823a2088" />
