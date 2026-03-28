@@ -239,9 +239,11 @@ pod/httpd-pod created (server dry run)
 
 ---
 
-> **SCREENSHOT PLACEHOLDER**
-> `[screenshot-03-dry-run.png]`
-> *Caption: Terminal showing both --dry-run=client and --dry-run=server passing successfully.*
+> **SCREENSHOT**
+
+<img width="1031" height="742" alt="image" src="https://github.com/user-attachments/assets/22120df8-b1a6-49fe-8de8-9d59118a4f29" />
+
+> *Terminal showing both --dry-run=client and --dry-run=server passing successfully.*
 
 ---
 
@@ -612,7 +614,7 @@ kubectl describe pod httpd-pod
 
 
 
-<img width="1031" height="742" alt="image" src="https://github.com/user-attachments/assets/22120df8-b1a6-49fe-8de8-9d59118a4f29" />
+
 <img width="1034" height="744" alt="image" src="https://github.com/user-attachments/assets/cdd6cc1a-84f9-4137-bf5a-69e4a683df87" />
 <img width="1026" height="865" alt="image" src="https://github.com/user-attachments/assets/c2bdd40a-fcb7-44ef-a95c-54dca2c8f587" />
 <img width="1028" height="595" alt="image" src="https://github.com/user-attachments/assets/c154f4d6-81c2-4003-abb2-73c5f3dc5d75" />
