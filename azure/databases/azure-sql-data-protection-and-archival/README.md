@@ -211,8 +211,11 @@ az sql server firewall-rule create \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Firewall rule creation output showing AllowAllAzureIPs with 0.0.0.0/0.0.0.0 range]`
+> **Screenshot**
+
+<img width="1232" height="865" alt="image" src="https://github.com/user-attachments/assets/fe6f7219-83b0-4bb2-a65a-5d4ade1384df" />
+
+> `Firewall rule creation output showing AllowAllAzureIPs with 0.0.0.0/0.0.0.0 range`
 
 ---
 
@@ -684,7 +687,7 @@ The resource group was located in `eastus` while all new resources were provisio
 
 
 
-<img width="1232" height="865" alt="image" src="https://github.com/user-attachments/assets/fe6f7219-83b0-4bb2-a65a-5d4ade1384df" />
+
 <img width="1236" height="857" alt="image" src="https://github.com/user-attachments/assets/e8422294-b1ed-447f-b6d3-3058eaaa359e" />
 <img width="1233" height="866" alt="image" src="https://github.com/user-attachments/assets/a3c946aa-41b6-4156-9818-3669736cc462" />
 <img width="1232" height="856" alt="image" src="https://github.com/user-attachments/assets/8b3fec08-5585-41e6-9121-aa6d6a850dbc" />
