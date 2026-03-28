@@ -37,7 +37,7 @@ This document is intended for Site Reliability Engineers, Cloud Infrastructure E
 ```
 +-----------------------------+
 |   Azure Resource Group      |
-|   kml_rg_main-121b3e04c4.. |
+|   kml_rg_main-121b3e04c4..  |
 |                             |
 |  +----------------------+   |
 |  | Azure SQL Server     |   |
