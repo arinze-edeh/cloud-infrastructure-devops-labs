@@ -247,8 +247,13 @@ az sql db create \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az sql db create full JSON output with status: Online and edition: Basic confirmed]`
+> **Screenshots**
+
+<img width="1236" height="857" alt="image" src="https://github.com/user-attachments/assets/e8422294-b1ed-447f-b6d3-3058eaaa359e" />
+<img width="1233" height="866" alt="image" src="https://github.com/user-attachments/assets/a3c946aa-41b6-4156-9818-3669736cc462" />
+<img width="1232" height="856" alt="image" src="https://github.com/user-attachments/assets/8b3fec08-5585-41e6-9121-aa6d6a850dbc" />
+
+> `az sql db create full JSON output with status: Online and edition: Basic confirmed`
 
 ---
 
@@ -688,9 +693,7 @@ The resource group was located in `eastus` while all new resources were provisio
 
 
 
-<img width="1236" height="857" alt="image" src="https://github.com/user-attachments/assets/e8422294-b1ed-447f-b6d3-3058eaaa359e" />
-<img width="1233" height="866" alt="image" src="https://github.com/user-attachments/assets/a3c946aa-41b6-4156-9818-3669736cc462" />
-<img width="1232" height="856" alt="image" src="https://github.com/user-attachments/assets/8b3fec08-5585-41e6-9121-aa6d6a850dbc" />
+
 <img width="1231" height="392" alt="image" src="https://github.com/user-attachments/assets/fe52c907-7939-48b7-9de6-b5fe53014589" />
 <img width="1232" height="854" alt="image" src="https://github.com/user-attachments/assets/caac2a49-45b3-4854-9393-4dbfdbad4602" />
 <img width="1234" height="860" alt="image" src="https://github.com/user-attachments/assets/2cd265b6-d987-4350-9bf3-76e6702a3e45" />
