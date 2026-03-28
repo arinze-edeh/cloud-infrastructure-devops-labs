@@ -126,9 +126,11 @@ default
 
 ---
 
-> **SCREENSHOT PLACEHOLDER**
-> `[screenshot-01-cluster-info.png]`
-> *Caption: Terminal output showing kubectl version, cluster-info, and current context confirmation.*
+> **SCREENSHOT**
+
+<img width="1030" height="518" alt="image" src="https://github.com/user-attachments/assets/bb95e1e4-d5e4-4c41-87cb-fabc6e940f88" />
+
+> *Terminal output showing kubectl version, cluster-info, and current context confirmation.*
 
 ---
 
@@ -600,7 +602,7 @@ kubectl describe pod httpd-pod
 ---
 
 
-<img width="1030" height="518" alt="image" src="https://github.com/user-attachments/assets/bb95e1e4-d5e4-4c41-87cb-fabc6e940f88" />
+
 <img width="1030" height="522" alt="image" src="https://github.com/user-attachments/assets/8d28be08-81b6-48d3-b818-324426f65188" />
 <img width="1028" height="861" alt="image" src="https://github.com/user-attachments/assets/ab118cd3-30cc-493f-8385-28f4c2142b7d" />
 <img width="1031" height="742" alt="image" src="https://github.com/user-attachments/assets/22120df8-b1a6-49fe-8de8-9d59118a4f29" />
