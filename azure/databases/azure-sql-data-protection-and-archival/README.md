@@ -318,8 +318,13 @@ az storage account create \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az storage account create output with provisioningState: Succeeded and blob endpoint visible]`
+> **Screenshots**
+
+<img width="1232" height="854" alt="image" src="https://github.com/user-attachments/assets/caac2a49-45b3-4854-9393-4dbfdbad4602" />
+<img width="1234" height="860" alt="image" src="https://github.com/user-attachments/assets/2cd265b6-d987-4350-9bf3-76e6702a3e45" />
+<img width="1232" height="862" alt="image" src="https://github.com/user-attachments/assets/0f9bcb00-d8a9-4168-b6be-9b32af29aa70" />
+
+> `az storage account create output with provisioningState: Succeeded and blob endpoint visible`
 
 ---
 
@@ -698,9 +703,7 @@ The resource group was located in `eastus` while all new resources were provisio
 
 
 
-<img width="1232" height="854" alt="image" src="https://github.com/user-attachments/assets/caac2a49-45b3-4854-9393-4dbfdbad4602" />
-<img width="1234" height="860" alt="image" src="https://github.com/user-attachments/assets/2cd265b6-d987-4350-9bf3-76e6702a3e45" />
-<img width="1232" height="862" alt="image" src="https://github.com/user-attachments/assets/0f9bcb00-d8a9-4168-b6be-9b32af29aa70" />
+
 <img width="1227" height="590" alt="image" src="https://github.com/user-attachments/assets/92bb2ef3-ae79-4491-bbda-9f16ed28eb04" />
 <img width="1225" height="494" alt="image" src="https://github.com/user-attachments/assets/db0eaf97-c677-4eb8-95ae-750959d2c7dc" />
 <img width="1230" height="499" alt="image" src="https://github.com/user-attachments/assets/35c69824-4a70-4bab-984d-b86c2945280f" />
