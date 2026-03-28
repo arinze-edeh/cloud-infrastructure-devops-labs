@@ -119,8 +119,11 @@ Container: xfusion-container-22348
 Backup   : xfusion-db-backup
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output showing all environment variable echo statements confirmed]`
+> **Screenshot**
+
+<img width="1227" height="706" alt="image" src="https://github.com/user-attachments/assets/429d2818-492f-45f7-93b5-56a1f7e50413" />
+
+> `Terminal output showing all environment variable echo statements confirmed`
 
 ---
 
@@ -142,8 +145,11 @@ Name                          Location    Status
 kml_rg_main-121b3e04c4694db4  eastus      Succeeded
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az group list --output table showing kml_rg_main-121b3e04c4694db4 in Succeeded state]`
+> **Screenshot**
+
+<img width="1232" height="509" alt="image" src="https://github.com/user-attachments/assets/93694deb-0e6a-40c6-ab6c-e242817fea7a" />
+
+> `az group list --output table showing kml_rg_main-121b3e04c4694db4 in Succeeded state`
 
 ---
 
@@ -672,8 +678,8 @@ The resource group was located in `eastus` while all new resources were provisio
 
 
 
-<img width="1232" height="509" alt="image" src="https://github.com/user-attachments/assets/93694deb-0e6a-40c6-ab6c-e242817fea7a" />
-<img width="1227" height="706" alt="image" src="https://github.com/user-attachments/assets/429d2818-492f-45f7-93b5-56a1f7e50413" />
+
+
 <img width="1232" height="870" alt="image" src="https://github.com/user-attachments/assets/c3101ee3-b131-45e0-9449-73dd67e13405" />
 <img width="1232" height="865" alt="image" src="https://github.com/user-attachments/assets/fe6f7219-83b0-4bb2-a65a-5d4ade1384df" />
 <img width="1236" height="857" alt="image" src="https://github.com/user-attachments/assets/e8422294-b1ed-447f-b6d3-3058eaaa359e" />
