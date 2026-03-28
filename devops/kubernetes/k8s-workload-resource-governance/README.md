@@ -195,9 +195,11 @@ EOF
 
 ---
 
-> **SCREENSHOT PLACEHOLDER**
-> `[screenshot-02-manifest-cat.png]`
-> *Caption: Terminal showing the cat command output of httpd-pod.yaml confirming the manifest content.*
+> **SCREENSHOT**
+
+<img width="1028" height="861" alt="image" src="https://github.com/user-attachments/assets/ab118cd3-30cc-493f-8385-28f4c2142b7d" />
+
+> *Terminal showing the cat command output of httpd-pod.yaml confirming the manifest content.*
 
 ---
 
@@ -609,7 +611,7 @@ kubectl describe pod httpd-pod
 
 
 
-<img width="1028" height="861" alt="image" src="https://github.com/user-attachments/assets/ab118cd3-30cc-493f-8385-28f4c2142b7d" />
+
 <img width="1031" height="742" alt="image" src="https://github.com/user-attachments/assets/22120df8-b1a6-49fe-8de8-9d59118a4f29" />
 <img width="1034" height="744" alt="image" src="https://github.com/user-attachments/assets/cdd6cc1a-84f9-4137-bf5a-69e4a683df87" />
 <img width="1026" height="865" alt="image" src="https://github.com/user-attachments/assets/c2bdd40a-fcb7-44ef-a95c-54dca2c8f587" />
