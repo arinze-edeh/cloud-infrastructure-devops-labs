@@ -562,9 +562,10 @@ Finished[#############################################################]  100.000
 }
 ```
 
-> **Screenshot**
+> **Screenshots**
 
-
+<img width="1227" height="858" alt="image" src="https://github.com/user-attachments/assets/5c9121fb-074e-4f06-9be3-2689858d4b5f" />
+<img width="1230" height="859" alt="image" src="https://github.com/user-attachments/assets/1083e52a-7a8b-4f8a-902e-65f916b4903c" />
 
 > `az storage blob download terminal output showing 100% completion progress bar and JSON response`
 
@@ -584,8 +585,11 @@ ls -lh /opt/${BACKUP_FILE}.bacpac
 -rw-r--r-- 1 root root 2.8K Mar 28 05:24 /opt/xfusion-db-backup.bacpac
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: ls -lh output showing /opt/xfusion-db-backup.bacpac at 2.8K owned by root]`
+> **Screenshot**
+
+<img width="1231" height="860" alt="image" src="https://github.com/user-attachments/assets/6eb304ca-0616-4d55-b781-2579952341d9" />
+
+> `ls -lh output showing /opt/xfusion-db-backup.bacpac at 2.8K owned by root`
 
 ---
 
@@ -611,8 +615,11 @@ xfusion-db-backup.bacpac  BlockBlob    Hot          2771      application/octet-
 -rw-r--r-- 1 root root 2.8K Mar 28 05:24 /opt/xfusion-db-backup.bacpac
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Combined final verification output showing Online status, blob listing, and local file confirmed in a single terminal view]`
+> **Screenshot**
+
+<img width="1231" height="860" alt="image" src="https://github.com/user-attachments/assets/6eb304ca-0616-4d55-b781-2579952341d9" />
+
+> `Combined final verification output showing Online status, blob listing, and local file confirmed in a single terminal view`
 
 ---
 
@@ -714,29 +721,3 @@ The resource group was located in `eastus` while all new resources were provisio
 | Export Duration | ~4 minutes (queued: 05:19:14Z, completed: 05:23:22Z) |
 
 ---
-
-*Runbook authored by the Nautilus DevOps Infrastructure Team.*  
-*Classification: Internal Engineering Documentation.*  
-*Last updated: 2026-03-28*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1227" height="858" alt="image" src="https://github.com/user-attachments/assets/5c9121fb-074e-4f06-9be3-2689858d4b5f" />
-<img width="1230" height="859" alt="image" src="https://github.com/user-attachments/assets/1083e52a-7a8b-4f8a-902e-65f916b4903c" />
-<img width="1231" height="860" alt="image" src="https://github.com/user-attachments/assets/6eb304ca-0616-4d55-b781-2579952341d9" />
-
-
