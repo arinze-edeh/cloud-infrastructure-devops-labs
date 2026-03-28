@@ -294,9 +294,11 @@ Interrupt the watch with `Ctrl+C` once the pod is confirmed running.
 
 ---
 
-> **SCREENSHOT PLACEHOLDER**
-> `[screenshot-05-pod-watch.png]`
-> *Caption: Terminal showing kubectl get pod --watch output with pod status transitioning to 1/1 Running.*
+> **SCREENSHOT**
+
+<img width="1026" height="865" alt="image" src="https://github.com/user-attachments/assets/c2bdd40a-fcb7-44ef-a95c-54dca2c8f587" />
+
+> *Terminal showing kubectl get pod --watch output with pod status transitioning to 1/1 Running.*
 
 ---
 
@@ -618,7 +620,7 @@ kubectl describe pod httpd-pod
 
 
 
-<img width="1026" height="865" alt="image" src="https://github.com/user-attachments/assets/c2bdd40a-fcb7-44ef-a95c-54dca2c8f587" />
+
 <img width="1028" height="595" alt="image" src="https://github.com/user-attachments/assets/c154f4d6-81c2-4003-abb2-73c5f3dc5d75" />
 <img width="1031" height="611" alt="image" src="https://github.com/user-attachments/assets/6340598c-7dce-4b89-a746-482f1fe6f227" />
 <img width="1025" height="625" alt="image" src="https://github.com/user-attachments/assets/d7f3569a-267b-4edb-9f6e-a4161fde7785" />
