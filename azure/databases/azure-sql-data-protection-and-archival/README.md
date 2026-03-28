@@ -276,8 +276,11 @@ az sql db show \
 Online
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing "Online" status returned from az sql db show query]`
+> **Screenshot**
+
+<img width="1231" height="392" alt="image" src="https://github.com/user-attachments/assets/fe52c907-7939-48b7-9de6-b5fe53014589" />
+
+> `Terminal showing "Online" status returned from az sql db show query`
 
 ---
 
@@ -694,7 +697,7 @@ The resource group was located in `eastus` while all new resources were provisio
 
 
 
-<img width="1231" height="392" alt="image" src="https://github.com/user-attachments/assets/fe52c907-7939-48b7-9de6-b5fe53014589" />
+
 <img width="1232" height="854" alt="image" src="https://github.com/user-attachments/assets/caac2a49-45b3-4854-9393-4dbfdbad4602" />
 <img width="1234" height="860" alt="image" src="https://github.com/user-attachments/assets/2cd265b6-d987-4350-9bf3-76e6702a3e45" />
 <img width="1232" height="862" alt="image" src="https://github.com/user-attachments/assets/0f9bcb00-d8a9-4168-b6be-9b32af29aa70" />
