@@ -458,8 +458,11 @@ echo "URI: $STORAGE_URI"
 URI: https://xfusionst20759.blob.core.windows.net/xfusion-container-22348/xfusion-db-backup.bacpac
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing the constructed STORAGE_URI echoed correctly]`
+> **Screenshot**
+
+<img width="1230" height="669" alt="image" src="https://github.com/user-attachments/assets/8448a148-cd53-402b-b0f9-c872d7a56f9e" />
+
+> `Terminal showing the constructed STORAGE_URI echoed correctly`
 
 ---
 
@@ -720,7 +723,7 @@ The resource group was located in `eastus` while all new resources were provisio
 
 
 
-<img width="1230" height="669" alt="image" src="https://github.com/user-attachments/assets/8448a148-cd53-402b-b0f9-c872d7a56f9e" />
+
 <img width="1231" height="836" alt="image" src="https://github.com/user-attachments/assets/c6b9213a-2dd6-4bb6-8e67-0f3204cd42c9" />
 <img width="1228" height="769" alt="image" src="https://github.com/user-attachments/assets/17273094-b117-42a3-9a73-11b830a3d067" />
 <img width="1227" height="858" alt="image" src="https://github.com/user-attachments/assets/5c9121fb-074e-4f06-9be3-2689858d4b5f" />
