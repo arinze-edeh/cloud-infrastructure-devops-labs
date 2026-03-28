@@ -265,8 +265,10 @@ pod/httpd-pod created
 
 ---
 
-> **SCREENSHOT PLACEHOLDER**
-> `[screenshot-04-apply.png]`
+> **SCREENSHOT**
+
+<img width="1034" height="744" alt="image" src="https://github.com/user-attachments/assets/cdd6cc1a-84f9-4137-bf5a-69e4a683df87" />
+
 > *Caption: Terminal showing kubectl apply -f httpd-pod.yaml with the "pod/httpd-pod created" confirmation.*
 
 ---
@@ -615,7 +617,7 @@ kubectl describe pod httpd-pod
 
 
 
-<img width="1034" height="744" alt="image" src="https://github.com/user-attachments/assets/cdd6cc1a-84f9-4137-bf5a-69e4a683df87" />
+
 <img width="1026" height="865" alt="image" src="https://github.com/user-attachments/assets/c2bdd40a-fcb7-44ef-a95c-54dca2c8f587" />
 <img width="1028" height="595" alt="image" src="https://github.com/user-attachments/assets/c154f4d6-81c2-4003-abb2-73c5f3dc5d75" />
 <img width="1031" height="611" alt="image" src="https://github.com/user-attachments/assets/6340598c-7dce-4b89-a746-482f1fe6f227" />
