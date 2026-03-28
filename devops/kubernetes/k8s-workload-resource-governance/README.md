@@ -377,8 +377,11 @@ kubectl get pod httpd-pod -o jsonpath='{.spec.containers[0].resources.limits}'
 
 ---
 
-> **SCREENSHOT**
+> **SCREENSHOTS**
 
+
+<img width="1031" height="611" alt="image" src="https://github.com/user-attachments/assets/6340598c-7dce-4b89-a746-482f1fe6f227" />
+<img width="1025" height="625" alt="image" src="https://github.com/user-attachments/assets/d7f3569a-267b-4edb-9f6e-a4161fde7785" />
 <img width="1029" height="648" alt="image" src="https://github.com/user-attachments/assets/f4b12228-744c-41e9-a267-63f0b6e474d5" />
 
 > *Terminal showing all four JSONPath queries with their respective outputs confirming container name, image, requests, and limits.*
@@ -622,17 +625,3 @@ kubectl describe pod httpd-pod
 - [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
 ---
-
-
-
-
-
-
-
-
-
-<img width="1031" height="611" alt="image" src="https://github.com/user-attachments/assets/6340598c-7dce-4b89-a746-482f1fe6f227" />
-<img width="1025" height="625" alt="image" src="https://github.com/user-attachments/assets/d7f3569a-267b-4edb-9f6e-a4161fde7785" />
-
-
-
