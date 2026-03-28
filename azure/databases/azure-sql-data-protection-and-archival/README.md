@@ -401,8 +401,11 @@ Name                     Lease Status    Last Modified
 xfusion-container-22348                  2026-03-28T05:16:40+00:00
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az storage container list output confirming xfusion-container-22348 exists]`
+> **Screenshot**
+
+<img width="1230" height="499" alt="image" src="https://github.com/user-attachments/assets/35c69824-4a70-4bab-984d-b86c2945280f" />
+
+> `az storage container list output confirming xfusion-container-22348 exists`
 
 ---
 
@@ -712,7 +715,7 @@ The resource group was located in `eastus` while all new resources were provisio
 
 
 
-<img width="1230" height="499" alt="image" src="https://github.com/user-attachments/assets/35c69824-4a70-4bab-984d-b86c2945280f" />
+
 <img width="1233" height="739" alt="image" src="https://github.com/user-attachments/assets/49ebef8a-067b-404b-b701-9aae5f6a4146" />
 <img width="1230" height="669" alt="image" src="https://github.com/user-attachments/assets/8448a148-cd53-402b-b0f9-c872d7a56f9e" />
 <img width="1231" height="836" alt="image" src="https://github.com/user-attachments/assets/c6b9213a-2dd6-4bb6-8e67-0f3204cd42c9" />
