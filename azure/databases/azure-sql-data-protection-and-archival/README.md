@@ -347,8 +347,11 @@ echo "Key: ${STORAGE_KEY:0:10}..."
 Key: MpSsw8pPXB...
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal output showing masked storage key prefix confirming successful key retrieval]`
+> **Screenshot**
+
+<img width="1227" height="590" alt="image" src="https://github.com/user-attachments/assets/92bb2ef3-ae79-4491-bbda-9f16ed28eb04" />
+
+> `Terminal output showing masked storage key prefix confirming successful key retrieval`
 
 ---
 
@@ -704,7 +707,7 @@ The resource group was located in `eastus` while all new resources were provisio
 
 
 
-<img width="1227" height="590" alt="image" src="https://github.com/user-attachments/assets/92bb2ef3-ae79-4491-bbda-9f16ed28eb04" />
+
 <img width="1225" height="494" alt="image" src="https://github.com/user-attachments/assets/db0eaf97-c677-4eb8-95ae-750959d2c7dc" />
 <img width="1230" height="499" alt="image" src="https://github.com/user-attachments/assets/35c69824-4a70-4bab-984d-b86c2945280f" />
 <img width="1233" height="739" alt="image" src="https://github.com/user-attachments/assets/49ebef8a-067b-404b-b701-9aae5f6a4146" />
