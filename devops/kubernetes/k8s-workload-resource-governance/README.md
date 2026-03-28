@@ -377,9 +377,11 @@ kubectl get pod httpd-pod -o jsonpath='{.spec.containers[0].resources.limits}'
 
 ---
 
-> **SCREENSHOT PLACEHOLDER**
-> `[screenshot-06-jsonpath-validation.png]`
-> *Caption: Terminal showing all four JSONPath queries with their respective outputs confirming container name, image, requests, and limits.*
+> **SCREENSHOT**
+
+<img width="1029" height="648" alt="image" src="https://github.com/user-attachments/assets/f4b12228-744c-41e9-a267-63f0b6e474d5" />
+
+> *Terminal showing all four JSONPath queries with their respective outputs confirming container name, image, requests, and limits.*
 
 ---
 
@@ -431,9 +433,12 @@ Events:
 
 ---
 
-> **SCREENSHOT PLACEHOLDER**
-> `[screenshot-07-describe-pod.png]`
-> *Caption: Full kubectl describe pod httpd-pod output showing all container specs, resource limits, conditions, and events.*
+> **SCREENSHOTS**
+
+<img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/e2ea2782-3cbe-4c71-9caf-d279358ac0f5" />
+<img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/fba7626f-3480-45b7-bd39-75270a93fb0b" />
+
+> *Full kubectl describe pod httpd-pod output showing all container specs, resource limits, conditions, and events.*
 
 ---
 
@@ -628,7 +633,6 @@ kubectl describe pod httpd-pod
 
 <img width="1031" height="611" alt="image" src="https://github.com/user-attachments/assets/6340598c-7dce-4b89-a746-482f1fe6f227" />
 <img width="1025" height="625" alt="image" src="https://github.com/user-attachments/assets/d7f3569a-267b-4edb-9f6e-a4161fde7785" />
-<img width="1029" height="648" alt="image" src="https://github.com/user-attachments/assets/f4b12228-744c-41e9-a267-63f0b6e474d5" />
-<img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/e2ea2782-3cbe-4c71-9caf-d279358ac0f5" />
-<img width="1031" height="857" alt="image" src="https://github.com/user-attachments/assets/fba7626f-3480-45b7-bd39-75270a93fb0b" />
+
+
 
