@@ -148,6 +148,11 @@ No resources found in default namespace.
 
 > Verifying a clean namespace prevents naming collisions and ensures the pod state observed during validation is attributable solely to this deployment.
 
+> **SCREENSHOT**
+
+<img width="1030" height="522" alt="image" src="https://github.com/user-attachments/assets/8d28be08-81b6-48d3-b818-324426f65188" />
+
+
 ---
 
 ### Step 3: Author the Pod Manifest
@@ -603,7 +608,7 @@ kubectl describe pod httpd-pod
 
 
 
-<img width="1030" height="522" alt="image" src="https://github.com/user-attachments/assets/8d28be08-81b6-48d3-b818-324426f65188" />
+
 <img width="1028" height="861" alt="image" src="https://github.com/user-attachments/assets/ab118cd3-30cc-493f-8385-28f4c2142b7d" />
 <img width="1031" height="742" alt="image" src="https://github.com/user-attachments/assets/22120df8-b1a6-49fe-8de8-9d59118a4f29" />
 <img width="1034" height="744" alt="image" src="https://github.com/user-attachments/assets/cdd6cc1a-84f9-4137-bf5a-69e4a683df87" />
