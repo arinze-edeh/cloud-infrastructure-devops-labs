@@ -319,6 +319,10 @@ httpd-pod   1/1     Running   0          4m15s
 
 > `RESTARTS: 0` confirms no crashloops or OOMKill events occurred. The memory limit of 20Mi was sufficient for the Apache HTTPD process at idle.
 
+> **SCREENSHOT**
+
+<img width="1028" height="595" alt="image" src="https://github.com/user-attachments/assets/c154f4d6-81c2-4003-abb2-73c5f3dc5d75" />
+
 ---
 
 ## Validation and Verification
@@ -621,7 +625,7 @@ kubectl describe pod httpd-pod
 
 
 
-<img width="1028" height="595" alt="image" src="https://github.com/user-attachments/assets/c154f4d6-81c2-4003-abb2-73c5f3dc5d75" />
+
 <img width="1031" height="611" alt="image" src="https://github.com/user-attachments/assets/6340598c-7dce-4b89-a746-482f1fe6f227" />
 <img width="1025" height="625" alt="image" src="https://github.com/user-attachments/assets/d7f3569a-267b-4edb-9f6e-a4161fde7785" />
 <img width="1029" height="648" alt="image" src="https://github.com/user-attachments/assets/f4b12228-744c-41e9-a267-63f0b6e474d5" />
