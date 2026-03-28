@@ -497,8 +497,11 @@ az sql db export \
 }
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az sql db export JSON response showing status: Completed and errorMessage: null]`
+> **Screenshot**
+
+<img width="1231" height="836" alt="image" src="https://github.com/user-attachments/assets/c6b9213a-2dd6-4bb6-8e67-0f3204cd42c9" />
+
+> `az sql db export JSON response showing status: Completed and errorMessage: null`
 
 ---
 
@@ -522,8 +525,11 @@ Name                      Blob Type    Blob Tier    Length    Content Type      
 xfusion-db-backup.bacpac  BlockBlob    Hot          2771      application/octet-stream  2026-03-28T05:23:04+00:00
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: az storage blob list table output showing xfusion-db-backup.bacpac with Length 2771 in Hot tier]`
+> **Screenshot**
+
+
+
+> `az storage blob list table output showing xfusion-db-backup.bacpac with Length 2771 in Hot tier`
 
 ---
 
@@ -724,7 +730,7 @@ The resource group was located in `eastus` while all new resources were provisio
 
 
 
-<img width="1231" height="836" alt="image" src="https://github.com/user-attachments/assets/c6b9213a-2dd6-4bb6-8e67-0f3204cd42c9" />
+
 <img width="1228" height="769" alt="image" src="https://github.com/user-attachments/assets/17273094-b117-42a3-9a73-11b830a3d067" />
 <img width="1227" height="858" alt="image" src="https://github.com/user-attachments/assets/5c9121fb-074e-4f06-9be3-2689858d4b5f" />
 <img width="1230" height="859" alt="image" src="https://github.com/user-attachments/assets/1083e52a-7a8b-4f8a-902e-65f916b4903c" />
