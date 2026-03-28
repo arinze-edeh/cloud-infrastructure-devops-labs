@@ -435,8 +435,11 @@ echo "SAS OK: ${SAS_TOKEN:0:20}..."
 SAS OK: se=2026-03-28T08%3A1...
 ```
 
-> **Screenshot Placeholder**
-> `[SCREENSHOT: Terminal showing SAS token generation with masked prefix confirming success and expiry date]`
+> **Screenshot**
+
+<img width="1233" height="739" alt="image" src="https://github.com/user-attachments/assets/49ebef8a-067b-404b-b701-9aae5f6a4146" />
+
+> `Terminal showing SAS token generation with masked prefix confirming success and expiry date`
 
 ---
 
@@ -716,7 +719,7 @@ The resource group was located in `eastus` while all new resources were provisio
 
 
 
-<img width="1233" height="739" alt="image" src="https://github.com/user-attachments/assets/49ebef8a-067b-404b-b701-9aae5f6a4146" />
+
 <img width="1230" height="669" alt="image" src="https://github.com/user-attachments/assets/8448a148-cd53-402b-b0f9-c872d7a56f9e" />
 <img width="1231" height="836" alt="image" src="https://github.com/user-attachments/assets/c6b9213a-2dd6-4bb6-8e67-0f3204cd42c9" />
 <img width="1228" height="769" alt="image" src="https://github.com/user-attachments/assets/17273094-b117-42a3-9a73-11b830a3d067" />
