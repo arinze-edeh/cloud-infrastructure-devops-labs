@@ -270,9 +270,12 @@ docker push datacenteracr15620.azurecr.io/datacenter/python-app:latest
 - Total build time: ~12.7 seconds
 - Final image digest: `sha256:cef0472130d9a5308e7714a2aeecb1ed77c1e3f557d79a9996c690372ec366a0`
 
-**[SCREENSHOT PLACEHOLDER -- Terminal showing Docker build output with all 9 build steps FINISHED]**
+**SCREENSHOTS** 
 
-**[SCREENSHOT PLACEHOLDER -- Terminal showing docker push output with all layers Pushed and digest confirmation]**
+<img width="1064" height="863" alt="image" src="https://github.com/user-attachments/assets/2652be4a-66c3-4e87-8a46-403ae10825b5" />
+<img width="1061" height="852" alt="image" src="https://github.com/user-attachments/assets/7f8bc9f6-9d09-4597-b3a9-a28af92a03f4" />
+
+> Terminal showing Docker build output with all 9 build steps FINISHED, and docker push output with all layers Pushed and digest confirmation
 
 ---
 
@@ -658,8 +661,7 @@ The `--admin-enabled true` flag on ACR creates shared username/password credenti
 
 
 
-<img width="1064" height="863" alt="image" src="https://github.com/user-attachments/assets/2652be4a-66c3-4e87-8a46-403ae10825b5" />
-<img width="1061" height="852" alt="image" src="https://github.com/user-attachments/assets/7f8bc9f6-9d09-4597-b3a9-a28af92a03f4" />
+
 <img width="1061" height="866" alt="image" src="https://github.com/user-attachments/assets/4f520840-7a7b-4db3-9f3e-e64f1e924acd" />
 <img width="1057" height="854" alt="image" src="https://github.com/user-attachments/assets/d4b2abfa-f0f6-4c84-bcf7-79c573648670" />
 <img width="1061" height="859" alt="image" src="https://github.com/user-attachments/assets/c11b4236-0d6e-43b9-b114-5eba3fc8fd1a" />
