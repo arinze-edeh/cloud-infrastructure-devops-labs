@@ -234,7 +234,12 @@ az acr create \
 
 > **Security Note:** `--admin-enabled true` is acceptable for lab environments. In production, prefer Azure AD-based authentication using managed identities or service principals scoped with `AcrPull` role. Disable admin credentials post-deployment.
 
-**[SCREENSHOT PLACEHOLDER -- Azure Portal ACR overview page showing datacenteracr15620 in East US]**
+**SCREENSHOTS**
+
+<img width="1062" height="866" alt="image" src="https://github.com/user-attachments/assets/e6acf9c3-2e65-498c-98b1-40c0d526edec" />
+<img width="1053" height="862" alt="image" src="https://github.com/user-attachments/assets/bcca578a-369a-44d4-8975-9fe97f4e8fa1" />
+
+>Azure Portal ACR overview page showing datacenteracr15620 in East US]**
 
 ---
 
@@ -652,8 +657,7 @@ The `--admin-enabled true` flag on ACR creates shared username/password credenti
 
 
 
-<img width="1062" height="866" alt="image" src="https://github.com/user-attachments/assets/e6acf9c3-2e65-498c-98b1-40c0d526edec" />
-<img width="1053" height="862" alt="image" src="https://github.com/user-attachments/assets/bcca578a-369a-44d4-8975-9fe97f4e8fa1" />
+
 <img width="1064" height="863" alt="image" src="https://github.com/user-attachments/assets/2652be4a-66c3-4e87-8a46-403ae10825b5" />
 <img width="1061" height="852" alt="image" src="https://github.com/user-attachments/assets/7f8bc9f6-9d09-4597-b3a9-a28af92a03f4" />
 <img width="1061" height="866" alt="image" src="https://github.com/user-attachments/assets/4f520840-7a7b-4db3-9f3e-e64f1e924acd" />
