@@ -300,7 +300,7 @@ latest
 
 <img width="1061" height="866" alt="image" src="https://github.com/user-attachments/assets/4f520840-7a7b-4db3-9f3e-e64f1e924acd" />
 
->Terminal output of az acr repository show-tags confirming `latest` tag is present
+>Terminal: `az acr repository show-tags` table output showing `Result / -------- / latest`
 
 ---
 
