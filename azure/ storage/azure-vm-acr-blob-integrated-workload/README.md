@@ -168,7 +168,11 @@ az vm create \
 }
 ```
 
-**[SCREENSHOT PLACEHOLDER -- Azure Portal showing datacenter-vm in Running state in East US region]**
+**SCREENSHOT** 
+
+<img width="1061" height="836" alt="image" src="https://github.com/user-attachments/assets/6913f9ad-1c47-42c5-81ce-a5dd9c8860ce" />
+
+>Terminal showing datacenter-vm in Running state in East US region]**
 
 ---
 
