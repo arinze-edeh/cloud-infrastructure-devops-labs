@@ -383,7 +383,7 @@ az storage blob upload \
 
 >Terminal: `az storage account create` JSON output showing `"name": "datacenterstor15620"`, `"sku": {"name": "Standard_LRS"}`, `"kind": "StorageV2"`, and `"provisioningState": "Succeeded"`
 
->Terminal: `az storage blob upload` JSON output showing progress bar at 100%, `"lastModified"`, `"request_server_encrypted": true`, and `"content_md5"` fields confirming successful upload
+>`az storage blob upload` JSON output showing progress bar at 100%, `"lastModified"`, `"request_server_encrypted": true`, and `"content_md5"` fields confirming successful upload
 
 ---
 
