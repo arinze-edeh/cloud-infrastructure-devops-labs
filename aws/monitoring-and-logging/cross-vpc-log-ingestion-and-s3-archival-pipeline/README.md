@@ -1,6 +1,6 @@
 # AWS Secure Log Aggregation Pipeline: Private VPC to S3 via VPC Peering
 
-> **Enterprise DevOps | AWS Infrastructure | Log Pipeline Automation**
+> **Enterprise-Style DevOps | AWS Infrastructure | Log Pipeline Automation**
 > Securely aggregate system logs from a private EC2 instance across VPC boundaries into a centralized S3 bucket using VPC Peering, IAM roles, and automated cron-based pipelines.
 
 ---
