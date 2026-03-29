@@ -172,7 +172,7 @@ az vm create \
 
 <img width="1061" height="836" alt="image" src="https://github.com/user-attachments/assets/6913f9ad-1c47-42c5-81ce-a5dd9c8860ce" />
 
->Terminal showing datacenter-vm in Running state in East US region]**
+>Terminal showing datacenter-vm in Running state in East US region
 
 ---
 
@@ -196,7 +196,15 @@ az vm open-port \
 
 > **Note:** The `open-port-80` rule is assigned priority 900, higher precedence than the SSH rule at 1000. Lower number = higher precedence in Azure NSG evaluation.
 
-**[SCREENSHOT PLACEHOLDER -- Azure Portal NSG rules showing open-port-80 and default-allow-ssh inbound rules]**
+**SCREENSHOTS**
+
+<img width="1061" height="862" alt="image" src="https://github.com/user-attachments/assets/11112c7b-75c0-4db4-a975-8e0c0c3f9c06" />
+<img width="1062" height="860" alt="image" src="https://github.com/user-attachments/assets/d3c3760c-e166-4cf8-82dd-25ec87360ac2" />
+<img width="1062" height="866" alt="image" src="https://github.com/user-attachments/assets/a1c157b7-333c-4e95-a3a2-81816e3df13e" />
+<img width="1060" height="861" alt="image" src="https://github.com/user-attachments/assets/7ecad713-ab2a-4cc8-b87b-fa374c7c77b1" />
+<img width="1060" height="857" alt="image" src="https://github.com/user-attachments/assets/656f6240-994d-4bfa-88b2-4411af745209" />
+
+>Terminal showing open-port-80 and default-allow-ssh inbound rules
 
 ---
 
@@ -641,13 +649,9 @@ The `--admin-enabled true` flag on ACR creates shared username/password credenti
 
 
 
-<img width="943" height="457" alt="image" src="https://github.com/user-attachments/assets/ed87b018-2407-4d6c-b5d5-640b823a7398" />
 
-<img width="1061" height="862" alt="image" src="https://github.com/user-attachments/assets/11112c7b-75c0-4db4-a975-8e0c0c3f9c06" />
-<img width="1062" height="860" alt="image" src="https://github.com/user-attachments/assets/d3c3760c-e166-4cf8-82dd-25ec87360ac2" />
-<img width="1062" height="866" alt="image" src="https://github.com/user-attachments/assets/a1c157b7-333c-4e95-a3a2-81816e3df13e" />
-<img width="1060" height="861" alt="image" src="https://github.com/user-attachments/assets/7ecad713-ab2a-4cc8-b87b-fa374c7c77b1" />
-<img width="1060" height="857" alt="image" src="https://github.com/user-attachments/assets/656f6240-994d-4bfa-88b2-4411af745209" />
+
+
 <img width="1062" height="866" alt="image" src="https://github.com/user-attachments/assets/e6acf9c3-2e65-498c-98b1-40c0d526edec" />
 <img width="1053" height="862" alt="image" src="https://github.com/user-attachments/assets/bcca578a-369a-44d4-8975-9fe97f4e8fa1" />
 <img width="1064" height="863" alt="image" src="https://github.com/user-attachments/assets/2652be4a-66c3-4e87-8a46-403ae10825b5" />
