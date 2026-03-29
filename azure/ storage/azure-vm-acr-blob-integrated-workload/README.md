@@ -421,7 +421,17 @@ ssh -o StrictHostKeyChecking=no azureuser@$PUBLIC_IP '
 
 > **Note:** `StrictHostKeyChecking=no` is used here for first-time connection automation. This bypasses host key verification and should not be used in production. Instead, pre-populate `~/.ssh/known_hosts` with the host fingerprint.
 
-**[SCREENSHOT PLACEHOLDER -- Terminal showing SSH session with Docker and Azure CLI installation completing successfully]**
+**SCREENSHOTS**
+
+<img width="1054" height="861" alt="image" src="https://github.com/user-attachments/assets/f82c38ad-1022-4ab5-b82a-338884f8d7a8" />
+<img width="1061" height="863" alt="image" src="https://github.com/user-attachments/assets/1f3e54be-4c51-4e50-8a02-be677ee80fbc" />
+<img width="1050" height="862" alt="image" src="https://github.com/user-attachments/assets/9dbfada9-da6c-4fb3-b2b0-04b88aa34b91" />
+<img width="1063" height="869" alt="image" src="https://github.com/user-attachments/assets/8d7b40a7-73ea-40cd-8221-9600476d8f5a" />
+<img width="1059" height="855" alt="image" src="https://github.com/user-attachments/assets/561bab44-6d0e-4e5b-bb34-30b7125c9329" />
+<img width="1061" height="846" alt="image" src="https://github.com/user-attachments/assets/8e56d0ee-50cb-4f99-b06b-8c6f01301bb5" />
+
+
+>Terminal showing SSH session with Docker and Azure CLI installation completing successfully
 
 ---
 
@@ -675,12 +685,7 @@ The `--admin-enabled true` flag on ACR creates shared username/password credenti
 
 
 <img width="1061" height="517" alt="image" src="https://github.com/user-attachments/assets/df63e5c3-9b1e-4a67-916e-2b212f0eadc4" />
-<img width="1054" height="861" alt="image" src="https://github.com/user-attachments/assets/f82c38ad-1022-4ab5-b82a-338884f8d7a8" />
-<img width="1061" height="863" alt="image" src="https://github.com/user-attachments/assets/1f3e54be-4c51-4e50-8a02-be677ee80fbc" />
-<img width="1050" height="862" alt="image" src="https://github.com/user-attachments/assets/9dbfada9-da6c-4fb3-b2b0-04b88aa34b91" />
-<img width="1063" height="869" alt="image" src="https://github.com/user-attachments/assets/8d7b40a7-73ea-40cd-8221-9600476d8f5a" />
-<img width="1059" height="855" alt="image" src="https://github.com/user-attachments/assets/561bab44-6d0e-4e5b-bb34-30b7125c9329" />
-<img width="1061" height="846" alt="image" src="https://github.com/user-attachments/assets/8e56d0ee-50cb-4f99-b06b-8c6f01301bb5" />
+
 <img width="1055" height="841" alt="image" src="https://github.com/user-attachments/assets/2e352f9c-fcb5-4b80-a41c-52f205438585" />
 <img width="1065" height="848" alt="image" src="https://github.com/user-attachments/assets/0a5520b7-b56e-4614-9507-8bff8cbca8ed" />
 <img width="1060" height="382" alt="image" src="https://github.com/user-attachments/assets/1de40005-1fd3-41d8-a3f7-d9a43803ee2a" />
