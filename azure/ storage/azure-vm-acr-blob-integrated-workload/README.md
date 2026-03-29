@@ -121,7 +121,12 @@ SHA256:9Z549iiHRe2oexc7Ped6H4gYWLf8L7BUHej7Gw0rqLw root@azure-client
 
 > **Security Note:** The `-N ""` flag sets an empty passphrase for automation contexts. In production, always protect private keys with a strong passphrase and use an SSH agent.
 
-**[SCREENSHOT PLACEHOLDER -- SSH keygen output showing fingerprint and randomart image]**
+**SCREENSHOTS** 
+
+<img width="1060" height="851" alt="image" src="https://github.com/user-attachments/assets/e7239d8e-2aa9-473c-8b52-fb398bba1677" />
+<img width="1061" height="836" alt="image" src="https://github.com/user-attachments/assets/37f8cfa9-830d-4d31-95be-d318b3dc2a67" />
+
+>SSH keygen output showing fingerprint and randomart image
 
 ---
 
@@ -633,8 +638,7 @@ The `--admin-enabled true` flag on ACR creates shared username/password credenti
 
 
 <img width="943" height="457" alt="image" src="https://github.com/user-attachments/assets/ed87b018-2407-4d6c-b5d5-640b823a7398" />
-<img width="1060" height="851" alt="image" src="https://github.com/user-attachments/assets/e7239d8e-2aa9-473c-8b52-fb398bba1677" />
-<img width="1061" height="836" alt="image" src="https://github.com/user-attachments/assets/37f8cfa9-830d-4d31-95be-d318b3dc2a67" />
+
 <img width="1061" height="862" alt="image" src="https://github.com/user-attachments/assets/11112c7b-75c0-4db4-a975-8e0c0c3f9c06" />
 <img width="1062" height="860" alt="image" src="https://github.com/user-attachments/assets/d3c3760c-e166-4cf8-82dd-25ec87360ac2" />
 <img width="1062" height="866" alt="image" src="https://github.com/user-attachments/assets/a1c157b7-333c-4e95-a3a2-81816e3df13e" />
