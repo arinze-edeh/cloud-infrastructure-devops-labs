@@ -1,6 +1,6 @@
 # AWS RDS MySQL Private Instance Provisioning
 
-> **Enterprise-grade, repeatable runbook for provisioning a private MySQL 8.4.x RDS instance on AWS using the CLI. Problem-focused, resolution-driven, production-ready.**
+> **Enterprise-style, repeatable runbook for provisioning a private MySQL 8.4.x RDS instance on AWS using the CLI. Problem-focused, resolution-driven, production-ready.**
 
 ---
 
