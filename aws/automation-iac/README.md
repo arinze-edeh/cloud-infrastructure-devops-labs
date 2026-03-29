@@ -36,7 +36,7 @@ aws/
     │   └── README.md
     ├── serverless-cross-bucket-replication-with-metadata-auditing/
     │   └── README.md
-    └── README.md  ← (this file)
+    └── README.md
 ```
 
 ---
