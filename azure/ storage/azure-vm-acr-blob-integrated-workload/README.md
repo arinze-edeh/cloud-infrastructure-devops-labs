@@ -521,7 +521,11 @@ FileNotFoundError: [Errno 2] No such file or directory: 'config.json'
 
 **Root Cause:** The Flask application attempts to read `config.json` from its working directory (`/app/`) at runtime. The file was uploaded to Azure Blob Storage but was never mounted or copied into the running container. The container image itself did not include `config.json` (correctly, by design -- config should not be baked into images).
 
-**[SCREENSHOT PLACEHOLDER -- Terminal showing docker logs python-app with the FileNotFoundError traceback visible]**
+**SCREENSHOT**
+
+<img width="1058" height="666" alt="image" src="https://github.com/user-attachments/assets/f7ed9eb5-bda9-4191-8e41-6cf60a48b7c2" />
+
+>Terminal: `sudo docker logs python-app` output showing Flask startup lines followed by `[ERROR] Exception on / [HEAD]` and the full `FileNotFoundError: [Errno 2] No such file or directory: 'config.json'` traceback at line 8 of `/app/app.py`
 
 ---
 
@@ -696,7 +700,7 @@ The `--admin-enabled true` flag on ACR creates shared username/password credenti
 
 
 
-<img width="1058" height="666" alt="image" src="https://github.com/user-attachments/assets/f7ed9eb5-bda9-4191-8e41-6cf60a48b7c2" />
+
 <img width="1062" height="864" alt="image" src="https://github.com/user-attachments/assets/1fccc4a7-dc91-4891-b4a9-eea7d9236728" />
 <img width="1063" height="855" alt="image" src="https://github.com/user-attachments/assets/1b9aec67-5aed-4230-b9e9-ca6cee57bfaa" />
 <img width="1060" height="553" alt="image" src="https://github.com/user-attachments/assets/fda04578-546a-4912-80eb-6f528fe5375f" />
