@@ -1,6 +1,6 @@
 # AWS RDS Snapshot and Restore Operations
 
->#### *Enterprise Database Backup and Recovery Workflow | AWS RDS | MySQL 8.4*
+>#### *Enterprise-style Database Backup and Recovery Workflow | AWS RDS | MySQL 8.4*
 
 ---
 
