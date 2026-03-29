@@ -126,7 +126,7 @@ SHA256:9Z549iiHRe2oexc7Ped6H4gYWLf8L7BUHej7Gw0rqLw root@azure-client
 <img width="1060" height="851" alt="image" src="https://github.com/user-attachments/assets/e7239d8e-2aa9-473c-8b52-fb398bba1677" />
 <img width="1061" height="836" alt="image" src="https://github.com/user-attachments/assets/37f8cfa9-830d-4d31-95be-d318b3dc2a67" />
 
->SSH keygen output showing fingerprint and randomart image
+>Terminal: `ssh-keygen` output showing key saved to `/root/.ssh/id_rsa`, SHA256 fingerprint, and randomart image
 
 ---
 
@@ -172,7 +172,7 @@ az vm create \
 
 <img width="1061" height="836" alt="image" src="https://github.com/user-attachments/assets/6913f9ad-1c47-42c5-81ce-a5dd9c8860ce" />
 
->Terminal showing datacenter-vm in Running state in East US region
+>Terminal: `az vm create` JSON output showing `"powerState": "VM running"`, `"publicIpAddress": "138.91.112.58"`, and `"privateIpAddress": "10.0.0.4"`
 
 ---
 
@@ -204,7 +204,7 @@ az vm open-port \
 <img width="1060" height="861" alt="image" src="https://github.com/user-attachments/assets/7ecad713-ab2a-4cc8-b87b-fa374c7c77b1" />
 <img width="1060" height="857" alt="image" src="https://github.com/user-attachments/assets/656f6240-994d-4bfa-88b2-4411af745209" />
 
->Terminal showing open-port-80 and default-allow-ssh inbound rules
+>Terminal: `az vm open-port` JSON output showing `securityRules` array with `open-port-80` (priority 900, port 80) and `default-allow-ssh` (priority 1000, port 22) both with `"access": "Allow"`
 
 ---
 
@@ -239,8 +239,7 @@ az acr create \
 <img width="1062" height="866" alt="image" src="https://github.com/user-attachments/assets/e6acf9c3-2e65-498c-98b1-40c0d526edec" />
 <img width="1053" height="862" alt="image" src="https://github.com/user-attachments/assets/bcca578a-369a-44d4-8975-9fe97f4e8fa1" />
 
->Azure Portal ACR overview page showing datacenteracr15620 in East US]**
-
+>Terminal: `az acr create` JSON output showing `"loginServer": "datacenteracr15620.azurecr.io"`, `"adminUserEnabled": true`, and `"provisioningState": "Succeeded"`
 ---
 
 #### 2.2 Build, Tag, and Push the Docker Image
