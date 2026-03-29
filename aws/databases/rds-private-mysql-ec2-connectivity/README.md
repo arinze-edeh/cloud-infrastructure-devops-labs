@@ -1,4 +1,4 @@
-# Nautilus AWS Infrastructure: EC2 to RDS Private Connectivity
+# Private RDS Access via Security Group Chaining
 
 ![Project Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
 ![AWS](https://img.shields.io/badge/Cloud-AWS-orange)
