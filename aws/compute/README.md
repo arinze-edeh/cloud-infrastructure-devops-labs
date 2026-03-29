@@ -58,7 +58,7 @@ compute/
 
 ---
 
-### [Resilient Web Tier: ALB + EC2 Nginx (Ubuntu)](./Resilient-Web-Tier-Architecture/)
+### [Resilient Web Tier: ALB + EC2 Nginx (Ubuntu)](./resilient-web-tier-architecture/)
 
 **Quick Summary:** Load-balanced Nginx deployment on Ubuntu 22.04, provisioned with a strict pre-flight discovery pattern. Documents a real AZ mismatch failure caused by EC2 auto-placement and its resolution.
 
