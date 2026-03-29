@@ -18,6 +18,7 @@
   - [Phase 6: Rollout Status Monitoring](#phase-6-rollout-status-monitoring)
   - [Phase 7: Post-Update Verification](#phase-7-post-update-verification)
   - [Phase 8: Rollout History Audit](#phase-8-rollout-history-audit)
+  - [Phase 9: Browser-Level Service Reachability Verification](#phase-9-browser-level-service-reachability-verification)
 - [Errors Encountered and Resolutions](#errors-encountered-and-resolutions)
 - [Best Practices](#best-practices)
 - [Lessons Learned](#lessons-learned)
