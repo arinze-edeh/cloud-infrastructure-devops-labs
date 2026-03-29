@@ -431,7 +431,7 @@ ssh -o StrictHostKeyChecking=no azureuser@$PUBLIC_IP '
 <img width="1061" height="846" alt="image" src="https://github.com/user-attachments/assets/8e56d0ee-50cb-4f99-b06b-8c6f01301bb5" />
 
 
->Terminal showing SSH session with Docker and Azure CLI installation completing successfully
+>Terminal: SSH session output showing `docker.io 28.2.2` and `azure-cli 2.84.0` packages installed, systemctl docker enabled, and `No services need to be restarted` confirmation at session end
 
 ---
 
