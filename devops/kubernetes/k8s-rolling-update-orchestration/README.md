@@ -370,8 +370,11 @@ nginx-deployment-fc677cbc9    0         0         0       17m
 
 **Observation:** The new ReplicaSet `544f9896c8` was fully scaled to 3. The old ReplicaSet `fc677cbc9` was scaled down to 0 (retained for potential rollback). This is the expected behavior of a Kubernetes rolling update.
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Capture: Terminal output showing both ReplicaSets, new one at 3/3 and old one at 0/0/0*
+> **SCREENSHOT**
+
+<img width="1031" height="856" alt="image" src="https://github.com/user-attachments/assets/3afdd322-efe4-4119-b7dd-b2d19addfcbe" />
+
+> *Terminal output showing both ReplicaSets, new one at 3/3 and old one at 0/0/0*
 
 #### Step 7d: Deep Image Pull Verification via Pod Events
 
@@ -553,7 +556,7 @@ Capturing the pre-update image, replica count, ReplicaSet name, and pod labels b
 
 
 
-<img width="1031" height="856" alt="image" src="https://github.com/user-attachments/assets/3afdd322-efe4-4119-b7dd-b2d19addfcbe" />
+
 <img width="1026" height="833" alt="image" src="https://github.com/user-attachments/assets/4fa01b8a-6fa4-4d02-8807-c8a72d2d32ba" />
 <img width="1037" height="860" alt="image" src="https://github.com/user-attachments/assets/8c9f1e40-0a44-432b-8cb8-37cfbdc3e8b2" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/9430a2f1-b309-42c9-889e-44a47e3f0a21" />
