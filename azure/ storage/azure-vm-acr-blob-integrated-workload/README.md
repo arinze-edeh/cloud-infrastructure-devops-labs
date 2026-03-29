@@ -568,32 +568,60 @@ ssh azureuser@$PUBLIC_IP "
 ---
 
 #### 6.4 Post-Fix Validation -- HTTP 200 OK Confirmed
-
+ 
+Three checks were run in sequence to confirm full recovery: container process state, application log health, and external HTTP reachability.
+ 
+**Step 1 -- Confirm container is running:**
+ 
 ```bash
 ssh azureuser@$PUBLIC_IP "sudo docker ps"
 ```
-
+ 
 ```
-CONTAINER ID   IMAGE                                                         STATUS              PORTS
-549d2ead609d   datacenteracr15620.azurecr.io/datacenter/python-app:latest   Up About a minute   0.0.0.0:80->80/tcp
+CONTAINER ID   IMAGE                                                          COMMAND           CREATED             STATUS              PORTS                                   NAMES
+549d2ead609d   datacenteracr15620.azurecr.io/datacenter/python-app:latest   "python app.py"   About a minute ago  Up About a minute   0.0.0.0:80->80/tcp, [::]:80->80/tcp     python-app
 ```
-
+ 
+**Step 2 -- Inspect container logs to confirm clean startup (no errors):**
+ 
+```bash
+ssh azureuser@$PUBLIC_IP "sudo docker logs python-app"
+```
+ 
+```
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://172.17.0.2:80
+Press CTRL+C to quit
+```
+ 
+> **Key Distinction from Phase 6.2:** The logs now show a clean Flask startup with zero tracebacks and zero error lines. The absence of any `[ERROR]` or `FileNotFoundError` entries confirms that `config.json` was successfully located at `/app/config.json` via the volume mount. This log output is the definitive proof of fix at the application layer -- before even making an HTTP request.
+ 
+**Step 3 -- Confirm external HTTP reachability:**
+ 
 ```bash
 curl -I http://$PUBLIC_IP
 ```
-
+ 
 **Final Response (SUCCESS):**
 ```
 HTTP/1.1 200 OK
 Server: Werkzeug/3.1.7 Python/3.9.25
+Date: Sun, 29 Mar 2026 02:59:35 GMT
 Content-Type: text/html; charset=utf-8
 Content-Length: 57
+Connection: close
 ```
+ 
+**SCREENSHOT**
 
-**[SCREENSHOT PLACEHOLDER -- Terminal showing curl -I returning HTTP 200 OK with Werkzeug/Python server headers]**
+<img width="1059" height="507" alt="image" src="https://github.com/user-attachments/assets/1233e566-6999-4f52-aa7e-895a5309acc9" />
 
-**[SCREENSHOT PLACEHOLDER -- Browser screenshot of the Flask application responding at http://138.91.112.58 showing the application page loaded]**
-
+>Terminal: full post-fix validation sequence showing (1) `sudo docker ps` with container ID `549d2ead609d`, image `datacenteracr15620.azurecr.io/datacenter/python-app:latest`, command `"python app.py"`, status `Up About a minute`, and ports `0.0.0.0:80->80/tcp, [::]:80->80/tcp`; (2) `sudo docker logs python-app` showing clean Flask startup with `Serving Flask app 'app'`, `Debug mode: off`, the development server WARNING in red, and all three `Running on` address lines with zero errors or tracebacks; (3) `curl -I http://$PUBLIC_IP` returning `HTTP/1.1 200 OK`, `Server: Werkzeug/3.1.7 Python/3.9.25`, `Date: Sun, 29 Mar 2026 02:59:35 GMT`, `Content-Type: text/html; charset=utf-8`, `Content-Length: 57`, and `Connection: close`]**
+ 
 ---
 
 ## Errors Encountered and Resolutions
@@ -709,4 +737,4 @@ The `--admin-enabled true` flag on ACR creates shared username/password credenti
 
 
 <img width="1059" height="553" alt="image" src="https://github.com/user-attachments/assets/3bc78e07-76c5-437f-980f-1e8d710489e9" />
-<img width="1059" height="507" alt="image" src="https://github.com/user-attachments/assets/1233e566-6999-4f52-aa7e-895a5309acc9" />
+
