@@ -1,6 +1,6 @@
 # Azure VM Containerized Deployment with ACR and Blob Storage
 
-> **Enterprise DevOps Implementation** | Containerized Python Flask App on Azure IaaS with Private Container Registry and Blob-Backed Configuration Management
+> **DevOps Implementation** | Containerized Python Flask App on Azure IaaS with Private Container Registry and Blob-Backed Configuration Management
 
 ---
 
@@ -25,7 +25,7 @@
 
 ## Overview
 
-This project demonstrates an end-to-end enterprise containerized deployment pipeline on Microsoft Azure using CLI-driven Infrastructure as Code (IaC) principles. A Python Flask application is containerized, pushed to a private Azure Container Registry (ACR), deployed onto an Azure Virtual Machine (VM), and configured dynamically via a config file retrieved from Azure Blob Storage.
+This project demonstrates an end-to-end enterprise level containerized deployment pipeline on Microsoft Azure using CLI-driven Infrastructure as Code (IaC) principles. A Python Flask application is containerized, pushed to a private Azure Container Registry (ACR), deployed onto an Azure Virtual Machine (VM), and configured dynamically via a config file retrieved from Azure Blob Storage.
 
 **Core Problem Solved:** Eliminate hardcoded configuration inside container images by externalizing runtime config to Azure Blob Storage, enabling environment-specific deployments without image rebuilds.
 
