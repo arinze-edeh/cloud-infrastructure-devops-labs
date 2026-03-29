@@ -325,8 +325,11 @@ thor@jump-host ~$ kubectl describe deployment nginx-deployment | grep -i image
 
 **Observation:** The deployment spec now shows `nginx:1.17` as the active image.
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Capture: Terminal showing `Image: nginx:1.17` in the describe output*
+> **SCREENSHOT**
+
+<img width="1031" height="826" alt="image" src="https://github.com/user-attachments/assets/89f3ae89-ac46-4d25-831b-cbfb7fc0aa8c" />
+
+> *Terminal showing `Image: nginx:1.17` in the describe output*
 
 #### Step 7b: Pod Health Verification with Correct Label
 
@@ -345,8 +348,11 @@ nginx-deployment-544f9896c8-mn4gl   1/1     Running   0          59s
 
 **Observation:** All 3 pods were running under a new ReplicaSet hash `544f9896c8`, confirming the old pods were replaced. All pods showed `1/1 Running` with zero restarts.
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Capture: Terminal showing the 3 new pods under ReplicaSet `544f9896c8` all in Running state*
+> **SCREENSHOT**
+
+<img width="1031" height="826" alt="image" src="https://github.com/user-attachments/assets/89f3ae89-ac46-4d25-831b-cbfb7fc0aa8c" />
+
+> *Terminal showing the 3 new pods under ReplicaSet `544f9896c8` all in Running state*
 
 #### Step 7c: ReplicaSet Transition Verification
 
@@ -546,7 +552,7 @@ Capturing the pre-update image, replica count, ReplicaSet name, and pod labels b
 
 
 
-<img width="1031" height="826" alt="image" src="https://github.com/user-attachments/assets/89f3ae89-ac46-4d25-831b-cbfb7fc0aa8c" />
+
 <img width="1031" height="856" alt="image" src="https://github.com/user-attachments/assets/3afdd322-efe4-4119-b7dd-b2d19addfcbe" />
 <img width="1026" height="833" alt="image" src="https://github.com/user-attachments/assets/4fa01b8a-6fa4-4d02-8807-c8a72d2d32ba" />
 <img width="1037" height="860" alt="image" src="https://github.com/user-attachments/assets/8c9f1e40-0a44-432b-8cb8-37cfbdc3e8b2" />
