@@ -251,8 +251,11 @@ thor@jump-host ~$ kubectl describe deployment nginx-deployment | grep -A5 "Conta
 
 **Observation:** The container name was `nginx-container`. This was the exact name required for the `kubectl set image` command. The image was still `nginx:1.16` as expected.
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Capture: Terminal output of the container describe block confirming `nginx-container` name and `nginx:1.16` image*
+> **SCREENSHOT**
+
+<img width="1028" height="658" alt="image" src="https://github.com/user-attachments/assets/37b51236-dbb9-4b1e-ac95-4296044f906b" />
+
+> *Terminal output of the container describe block confirming `nginx-container` name and `nginx:1.16` image*
 
 ---
 
@@ -535,7 +538,7 @@ Capturing the pre-update image, replica count, ReplicaSet name, and pod labels b
 
 
 
-<img width="1028" height="658" alt="image" src="https://github.com/user-attachments/assets/37b51236-dbb9-4b1e-ac95-4296044f906b" />
+
 <img width="1035" height="718" alt="image" src="https://github.com/user-attachments/assets/51f4329e-3084-431d-bf59-669ae00fa03b" />
 <img width="1031" height="826" alt="image" src="https://github.com/user-attachments/assets/89f3ae89-ac46-4d25-831b-cbfb7fc0aa8c" />
 <img width="1031" height="856" alt="image" src="https://github.com/user-attachments/assets/3afdd322-efe4-4119-b7dd-b2d19addfcbe" />
