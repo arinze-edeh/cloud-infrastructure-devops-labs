@@ -224,8 +224,11 @@ nginx-deployment-fc677cbc9   3         3         3       13m
 
 **Observation:** One ReplicaSet was active with 3 desired, current, and ready replicas.
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Capture: Terminal output of `kubectl get replicaset` showing single ReplicaSet with 3/3 ready*
+> **SCREENSHOT**
+
+<img width="1025" height="597" alt="image" src="https://github.com/user-attachments/assets/bca28c4f-db7a-4db2-ace3-bdc82754c68c" />
+
+> *Terminal output of `kubectl get replicaset` showing single ReplicaSet with 3/3 ready*
 
 #### Step 4b: Container Specification Audit
 
@@ -531,7 +534,7 @@ Capturing the pre-update image, replica count, ReplicaSet name, and pod labels b
 
 
 
-<img width="1025" height="597" alt="image" src="https://github.com/user-attachments/assets/bca28c4f-db7a-4db2-ace3-bdc82754c68c" />
+
 <img width="1028" height="658" alt="image" src="https://github.com/user-attachments/assets/37b51236-dbb9-4b1e-ac95-4296044f906b" />
 <img width="1035" height="718" alt="image" src="https://github.com/user-attachments/assets/51f4329e-3084-431d-bf59-669ae00fa03b" />
 <img width="1031" height="826" alt="image" src="https://github.com/user-attachments/assets/89f3ae89-ac46-4d25-831b-cbfb7fc0aa8c" />
