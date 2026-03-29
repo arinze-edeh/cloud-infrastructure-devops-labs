@@ -174,8 +174,11 @@ No resources found in default namespace.
 
 **Problem:** The selector `app=nginx-deployment` did not match any pods. This indicated the pods were labeled differently than assumed.
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Capture: Terminal showing `No resources found in default namespace.` for the incorrect label selector*
+> **SCREENSHOT**
+
+<img width="1028" height="559" alt="image" src="https://github.com/user-attachments/assets/10405386-6c1c-4bd9-8b1a-06d86bff1028" />
+
+> *Terminal showing `No resources found in default namespace.` for the incorrect label selector*
 
 #### Step 3b: Label Discovery via `--show-labels`
 
@@ -196,8 +199,11 @@ nginx-deployment-fc677cbc9-cjjmr   1/1     Running   0          12m   app=nginx-
 
 **Observation:** The pods used the label `app=nginx-app`, not `app=nginx-deployment`. All 3 pods were running under ReplicaSet hash `fc677cbc9`. This discovery was critical for all subsequent pod-targeted verification commands.
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Capture: Full `kubectl get pods --show-labels` output showing the correct label `app=nginx-app` and ReplicaSet hash*
+> **SCREENSHOT**
+
+<img width="1028" height="559" alt="image" src="https://github.com/user-attachments/assets/10405386-6c1c-4bd9-8b1a-06d86bff1028" />
+
+> *Full `kubectl get pods --show-labels` output showing the correct label `app=nginx-app` and ReplicaSet hash*
 
 ---
 
@@ -524,7 +530,7 @@ Capturing the pre-update image, replica count, ReplicaSet name, and pod labels b
 
 
 
-<img width="1028" height="559" alt="image" src="https://github.com/user-attachments/assets/10405386-6c1c-4bd9-8b1a-06d86bff1028" />
+
 <img width="1025" height="597" alt="image" src="https://github.com/user-attachments/assets/bca28c4f-db7a-4db2-ace3-bdc82754c68c" />
 <img width="1028" height="658" alt="image" src="https://github.com/user-attachments/assets/37b51236-dbb9-4b1e-ac95-4296044f906b" />
 <img width="1035" height="718" alt="image" src="https://github.com/user-attachments/assets/51f4329e-3084-431d-bf59-669ae00fa03b" />
