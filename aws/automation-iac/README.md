@@ -12,7 +12,7 @@
 
 ## What This Repository Demonstrates
 
-Three AWS infrastructure projects, each one building on the last: a single compute resource provisioned from scratch, a multi-service event-driven messaging system, and a fully auditable data pipeline. Together they show a complete picture of cloud engineering — provisioning, orchestration, and observability — built exclusively through CLI and IaC with no console interaction at any stage.
+Three AWS infrastructure projects, each one building on the last: a single compute resource provisioned from scratch, a multi-service event-driven messaging system, and a fully auditable data pipeline. Together they show a complete picture of cloud engineering - provisioning, orchestration, and observability - built exclusively through CLI and IaC with no console interaction at any stage.
 
 **Every project is production-patterned:** least-privilege IAM at every layer, read-back CLI verification at every deployment step, and structured error documentation where failures occurred.
 
@@ -22,10 +22,10 @@ Three AWS infrastructure projects, each one building on the last: a single compu
 
 | Area | Demonstrated by |
 |---|---|
-| CLI & IaC automation | All resources provisioned, verified, and decommissioned through AWS CLI or CloudFormation — zero console steps |
+| CLI & IaC automation | All resources provisioned, verified, and decommissioned through AWS CLI or CloudFormation - zero console steps |
 | Least-privilege IAM | Security groups scoped to required ports only; Lambda roles limited to specific resource ARNs; `iam:AttachRolePolicy` vs `iam:PutRolePolicy` distinction resolved from a real 403 failure |
 | Event-driven architecture | SNS attribute-based routing to SQS (Project 2); S3 event notifications triggering Lambda (Project 3) |
-| Structured troubleshooting | Five failures documented in Project 2 with exact error output, root cause, and resolution — including CLI version incompatibility and Lambda timeout sizing |
+| Structured troubleshooting | Five failures documented in Project 2 with exact error output, root cause, and resolution - including CLI version incompatibility and Lambda timeout sizing |
 | Audit-compliant observability | DynamoDB audit trail with UUID partition keys, UTC timestamps, and `Failure` records on error (Project 3); all deployments validated via CloudWatch log inspection |
 | Idempotent bootstrapping | EC2 user-data script safe to re-execute on any fresh instance; no hardcoded AMI IDs |
 
@@ -88,7 +88,7 @@ Launched the instance tagged `Name=xfusion-ec2` for deterministic downstream que
 
 - No SSH key pair attached; administrative access routes through AWS Systems Manager Session Manager, eliminating inbound port 22
 - User data script is idempotent: safe to re-execute on any fresh instance without side effects
-- AMI resolved dynamically from SSM Parameter Store — never a hardcoded, potentially deprecated image ID
+- AMI resolved dynamically from SSM Parameter Store - never a hardcoded, potentially deprecated image ID
 
 **Outcome**
 
@@ -136,7 +136,7 @@ Publisher
 
 A single CloudFormation template provisions everything: two SQS queues, one SNS topic with `priority` attribute filter policies, a Python 3.12 Lambda function, and an IAM role.
 
-IAM is handled via a standalone `AWS::IAM::ManagedPolicy` rather than an inline `Policies:` block — inline policies require `iam:PutRolePolicy`, managed policies require only `iam:AttachRolePolicy`. This distinction resolved a real 403 rollback failure documented in the error registry.
+IAM is handled via a standalone `AWS::IAM::ManagedPolicy` rather than an inline `Policies:` block - inline policies require `iam:PutRolePolicy`, managed policies require only `iam:AttachRolePolicy`. This distinction resolved a real 403 rollback failure documented in the error registry.
 
 Queue URLs are injected into Lambda via CloudFormation intrinsic functions, keeping config fully decoupled from code. Long-polling (`WaitTimeSeconds=3`) is enabled on both queues.
 
@@ -145,7 +145,7 @@ Queue URLs are injected into Lambda via CloudFormation intrinsic functions, keep
 | # | Error | Root Cause | Resolution |
 |---|---|---|---|
 | 1 | `yaml.safe_load` rejects template | CloudFormation intrinsic tags (`!Ref`, `!GetAtt`) are not valid YAML | Use `yaml.load` with `Loader=yaml.FullLoader`, or validate via `aws cloudformation validate-template` |
-| 2 | CloudFormation rollback on stack create | `iam:PutRolePolicy` 403 — lab principal lacks permission for inline policies | Replace inline `Policies:` block with a standalone `AWS::IAM::ManagedPolicy` resource |
+| 2 | CloudFormation rollback on stack create | `iam:PutRolePolicy` 403 - lab principal lacks permission for inline policies | Replace inline `Policies:` block with a standalone `AWS::IAM::ManagedPolicy` resource |
 | 3 | CLI flag rejected on all four invocations | `--cli-binary-format` is AWS CLI v2-only; environment was running v1 | Remove the flag; use `--cli-binary-format raw-in-base64-out` only when v2 is confirmed |
 | 4 | Lambda timeout on worst-case path | 3-second timeout undersized against a 6-second two-queue long-poll | Increase timeout to ≥10 seconds to cover both queue polls |
 | 5 | Empty receives on SQS during testing | Short-poll returns immediately even when queue is non-empty | Enable long-polling with `WaitTimeSeconds=3` on both queues |
@@ -196,9 +196,9 @@ Four test messages (two high, two low) published and consumed in strict priority
 
 Two S3 buckets with opposite access profiles: the intake bucket has public read via bucket policy; the private bucket has all four public access block flags set to `true`.
 
-The Lambda execution role grants only `s3:GetObject` on the source, `s3:PutObject` on the destination, and `dynamodb:PutItem` on the specific table ARN — no wildcards. The `lambda add-permission` call includes both `--source-arn` and `--source-account` to prevent the confused deputy vulnerability, and is applied before the S3 event notification (S3 validates the permission at configuration time).
+The Lambda execution role grants only `s3:GetObject` on the source, `s3:PutObject` on the destination, and `dynamodb:PutItem` on the specific table ARN - no wildcards. The `lambda add-permission` call includes both `--source-arn` and `--source-account` to prevent the confused deputy vulnerability, and is applied before the S3 event notification (S3 validates the permission at configuration time).
 
-On each invocation, Lambda parses the event record, copies the object to the private bucket, and writes a DynamoDB audit record (UUID PK, UTC timestamp, source/dest, object key, status). A nested try/catch ensures a `Failure` record is written even when the copy fails — audit completeness is unconditional.
+On each invocation, Lambda parses the event record, copies the object to the private bucket, and writes a DynamoDB audit record (UUID PK, UTC timestamp, source/dest, object key, status). A nested try/catch ensures a `Failure` record is written even when the copy fails - audit completeness is unconditional.
 
 Resource names are injected at deploy time via `sed` substitution. A 10-second `sleep` after IAM role creation accounts for eventual consistency before Lambda deployment. DynamoDB uses `PAY_PER_REQUEST` to match the bursty write pattern.
 
@@ -241,5 +241,5 @@ Each project README is structured as: **Problem Statement → Architecture → P
 
 ## Author
 
-**Arinze Edeh** — Cloud Infrastructure and DevOps Automation
+**Arinze Edeh** - Cloud Infrastructure and DevOps Automation
 [GitHub: arinze-edeh](https://github.com/arinze-edeh)
