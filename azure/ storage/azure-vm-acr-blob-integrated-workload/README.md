@@ -319,15 +319,6 @@ az storage account create \
   --kind StorageV2
 ```
 
-**SCREENSHOTS**
-
-<img width="1057" height="854" alt="image" src="https://github.com/user-attachments/assets/d4b2abfa-f0f6-4c84-bcf7-79c573648670" />
-<img width="1061" height="859" alt="image" src="https://github.com/user-attachments/assets/c11b4236-0d6e-43b9-b114-5eba3fc8fd1a" />
-<img width="1058" height="867" alt="image" src="https://github.com/user-attachments/assets/d4f2945f-c35d-4bcf-b92f-969bd5d655af" />
-<img width="1064" height="866" alt="image" src="https://github.com/user-attachments/assets/26f348c0-586f-4b06-8a0e-9f1004dc3a05" />
-
->Azure Portal Storage Account overview showing datacenterstor15620 with Standard_LRS SKU
-
 ---
 
 #### 3.2 Export the Storage Connection String
@@ -383,7 +374,16 @@ az storage blob upload \
 }
 ```
 
-**[SCREENSHOT PLACEHOLDER -- Azure Portal Blob Storage container `datacenter-config` showing config.json blob with 37 bytes]**
+**SCREENSHOTS** 
+
+<img width="1057" height="854" alt="image" src="https://github.com/user-attachments/assets/d4b2abfa-f0f6-4c84-bcf7-79c573648670" />
+<img width="1061" height="859" alt="image" src="https://github.com/user-attachments/assets/c11b4236-0d6e-43b9-b114-5eba3fc8fd1a" />
+<img width="1058" height="867" alt="image" src="https://github.com/user-attachments/assets/d4f2945f-c35d-4bcf-b92f-969bd5d655af" />
+<img width="1064" height="866" alt="image" src="https://github.com/user-attachments/assets/26f348c0-586f-4b06-8a0e-9f1004dc3a05" />
+
+>Terminal: `az storage account create` JSON output showing `"name": "datacenterstor15620"`, `"sku": {"name": "Standard_LRS"}`, `"kind": "StorageV2"`, and `"provisioningState": "Succeeded"`
+
+>Terminal: `az storage blob upload` JSON output showing progress bar at 100%, `"lastModified"`, `"request_server_encrypted": true`, and `"content_md5"` fields confirming successful upload
 
 ---
 
