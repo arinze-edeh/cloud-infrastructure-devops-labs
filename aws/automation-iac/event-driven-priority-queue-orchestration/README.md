@@ -1,6 +1,6 @@
-# Nautilus Priority Queuing System on AWS
+# AWS Event-Driven Priority Queuing: Attribute-Based SNS Routing, Long-Poll Fallback Lambda, and CloudFormation IaC Troubleshooting
 
-> **Enterprise-grade priority message routing using Amazon SQS, SNS, Lambda, and CloudFormation**
+> **Enterprise-style priority message routing using Amazon SQS, SNS, Lambda, and CloudFormation**
 
 ![AWS](https://img.shields.io/badge/AWS-CloudFormation-FF9900?style=flat-square&logo=amazon-aws)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python)
