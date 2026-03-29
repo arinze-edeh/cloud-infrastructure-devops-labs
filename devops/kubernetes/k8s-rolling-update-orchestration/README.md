@@ -275,8 +275,11 @@ deployment.apps/nginx-deployment image updated
 
 **Observation:** Kubernetes accepted the image patch and began the rolling update process. The control plane began replacing old pods with new ones running `nginx:1.17`.
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Capture: Terminal showing the `deployment.apps/nginx-deployment image updated` confirmation message*
+> **SCREENSHOT**
+
+<img width="1035" height="718" alt="image" src="https://github.com/user-attachments/assets/51f4329e-3084-431d-bf59-669ae00fa03b" />
+
+> *Terminal showing the `deployment.apps/nginx-deployment image updated` confirmation message*
 
 ---
 
@@ -296,8 +299,11 @@ deployment "nginx-deployment" successfully rolled out
 
 **Observation:** Kubernetes confirmed the rollout completed successfully. All pods were replaced without error.
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Capture: Terminal showing `deployment "nginx-deployment" successfully rolled out`*
+> **SCREENSHOT**
+
+<img width="1035" height="718" alt="image" src="https://github.com/user-attachments/assets/51f4329e-3084-431d-bf59-669ae00fa03b" />
+
+> *Terminal showing `deployment "nginx-deployment" successfully rolled out`*
 
 ---
 
@@ -539,7 +545,7 @@ Capturing the pre-update image, replica count, ReplicaSet name, and pod labels b
 
 
 
-<img width="1035" height="718" alt="image" src="https://github.com/user-attachments/assets/51f4329e-3084-431d-bf59-669ae00fa03b" />
+
 <img width="1031" height="826" alt="image" src="https://github.com/user-attachments/assets/89f3ae89-ac46-4d25-831b-cbfb7fc0aa8c" />
 <img width="1031" height="856" alt="image" src="https://github.com/user-attachments/assets/3afdd322-efe4-4119-b7dd-b2d19addfcbe" />
 <img width="1026" height="833" alt="image" src="https://github.com/user-attachments/assets/4fa01b8a-6fa4-4d02-8807-c8a72d2d32ba" />
