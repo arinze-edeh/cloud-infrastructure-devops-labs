@@ -403,8 +403,11 @@ thor@jump-host ~$ kubectl describe pods -l app=nginx-app | grep -i image
 - All 3 pods confirmed running `nginx:1.17` with matching digest `sha256:6fff55...`
 - The image digest provides cryptographic confirmation of image integrity
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Capture: Full `kubectl describe pods -l app=nginx-app | grep -i image` output showing image pull events, digest, and cache reuse across all 3 pods*
+> **SCREENSHOT**
+
+<img width="1026" height="833" alt="image" src="https://github.com/user-attachments/assets/4fa01b8a-6fa4-4d02-8807-c8a72d2d32ba" />
+
+> *Full `kubectl describe pods -l app=nginx-app | grep -i image` output showing image pull events, digest, and cache reuse across all 3 pods*
 
 ---
 
@@ -427,8 +430,11 @@ REVISION  CHANGE-CAUSE
 
 **Observation:** Two revisions were recorded. Revision 1 was the original `nginx:1.16` deployment. Revision 2 was the updated `nginx:1.17` rollout. The `CHANGE-CAUSE` field was `<none>` because the `--record` flag or annotation was not used during the update. This is noted as a best practice improvement below.
 
-> **[SCREENSHOT PLACEHOLDER]**
-> *Capture: Terminal showing the two-revision rollout history with CHANGE-CAUSE fields as none*
+> **SCREENSHOT**
+
+<img width="1037" height="860" alt="image" src="https://github.com/user-attachments/assets/8c9f1e40-0a44-432b-8cb8-37cfbdc3e8b2" />
+
+> *Terminal showing the two-revision rollout history with CHANGE-CAUSE fields as none*
 
 ---
 
@@ -557,7 +563,7 @@ Capturing the pre-update image, replica count, ReplicaSet name, and pod labels b
 
 
 
-<img width="1026" height="833" alt="image" src="https://github.com/user-attachments/assets/4fa01b8a-6fa4-4d02-8807-c8a72d2d32ba" />
-<img width="1037" height="860" alt="image" src="https://github.com/user-attachments/assets/8c9f1e40-0a44-432b-8cb8-37cfbdc3e8b2" />
+
+
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/9430a2f1-b309-42c9-889e-44a47e3f0a21" />
 
