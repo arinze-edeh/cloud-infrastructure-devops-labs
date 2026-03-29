@@ -1,6 +1,6 @@
 # eks-private-cluster-deployment
 
-> **Enterprise-grade provisioning of a private Amazon EKS cluster using AWS CLI with IAM role configuration, EKS Auto Mode disabled, and multi-AZ high availability.**
+> **Enterprise-style provisioning of a private Amazon EKS cluster using AWS CLI with IAM role configuration, EKS Auto Mode disabled, and multi-AZ high availability.**
 
 ---
 
