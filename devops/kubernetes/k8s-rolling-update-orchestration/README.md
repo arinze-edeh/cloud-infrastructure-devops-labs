@@ -150,7 +150,7 @@ thor@jump-host ~$ kubectl describe deployment nginx-deployment | grep -i image
 
 > **SCREENSHOT**
 
-<img width="1033" height="626" alt="image" src="https://github.com/user-attachments/assets/d0261268-fb09-4f0f-bb9a-d88f604e723c" />
+<img width="1035" height="422" alt="image" src="https://github.com/user-attachments/assets/b331eb36-daca-4425-a7bf-6f8c160109aa" />
 
 > *Terminal output of `kubectl get deployment nginx-deployment` and `kubectl describe deployment nginx-deployment | grep -i image` showing 3/3 ready and nginx:1.16*
 
@@ -523,7 +523,7 @@ Capturing the pre-update image, replica count, ReplicaSet name, and pod labels b
 
 
 
-<img width="1035" height="422" alt="image" src="https://github.com/user-attachments/assets/b331eb36-daca-4425-a7bf-6f8c160109aa" />
+
 <img width="1028" height="559" alt="image" src="https://github.com/user-attachments/assets/10405386-6c1c-4bd9-8b1a-06d86bff1028" />
 <img width="1025" height="597" alt="image" src="https://github.com/user-attachments/assets/bca28c4f-db7a-4db2-ace3-bdc82754c68c" />
 <img width="1028" height="658" alt="image" src="https://github.com/user-attachments/assets/37b51236-dbb9-4b1e-ac95-4296044f906b" />
