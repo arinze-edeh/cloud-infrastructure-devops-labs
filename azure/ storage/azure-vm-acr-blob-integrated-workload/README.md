@@ -723,18 +723,3 @@ The `--admin-enabled true` flag on ACR creates shared username/password credenti
 | Docker Image | datacenter/python-app | latest | ACR hosted |
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1059" height="553" alt="image" src="https://github.com/user-attachments/assets/3bc78e07-76c5-437f-980f-1e8d710489e9" />
-
