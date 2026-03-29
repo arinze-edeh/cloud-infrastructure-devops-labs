@@ -437,6 +437,33 @@ REVISION  CHANGE-CAUSE
 > *Terminal showing the two-revision rollout history with CHANGE-CAUSE fields as none*
 
 ---
+ 
+### Phase 9: Browser-Level Service Reachability Verification
+ 
+With all pod-level and deployment-level verification complete, the final validation confirmed that the nginx service was reachable from a browser via the exposed NodePort, proving end-to-end operational status of the updated deployment.
+ 
+**Access URL:**
+ 
+```
+http://30008-port-ffgz6enhdsim4jwt.labs.kodekloud.com
+```
+ 
+**Observation:** The browser returned the default nginx welcome page, confirming:
+ 
+- The nginx service was correctly exposed via NodePort `30008` through the KodeKloud lab environment
+- The updated pods running `nginx:1.17` were actively serving HTTP traffic
+- No application-layer disruption occurred as a result of the rolling update
+- The deployment was fully operational from the end-user perspective
+ 
+This browser-level test is the definitive proof-of-life check that goes beyond CLI verification. A pod in `Running` state at the Kubernetes layer does not guarantee the application is actually serving traffic. The successful HTTP response closes the verification loop entirely.
+ 
+> **SCREENSHOT**
+
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/9430a2f1-b309-42c9-889e-44a47e3f0a21" />
+
+> *Browser window showing `Welcome to nginx!` page at `30008-port-ffgz6enhdsim4jwt.labs.kodekloud.com`, confirming the nginx:1.17 pods are actively serving HTTP traffic via NodePort 30008*
+ 
+---
 
 ## Errors Encountered and Resolutions
 
@@ -551,19 +578,3 @@ The `CHANGE-CAUSE` field being `<none>` in revision history creates an operation
 Capturing the pre-update image, replica count, ReplicaSet name, and pod labels before the update creates a rollback reference that does not depend on cluster state. If a rollout leaves the cluster partially degraded, this baseline enables faster recovery.
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/9430a2f1-b309-42c9-889e-44a47e3f0a21" />
-
