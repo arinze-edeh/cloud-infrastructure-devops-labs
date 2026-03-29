@@ -496,7 +496,11 @@ Server: Werkzeug/3.1.7 Python/3.9.25
 
 > This is an **application-level failure**, not an infrastructure failure. The VM, NSG, Docker, and network were all functioning correctly. The root cause required container log inspection.
 
-**[SCREENSHOT PLACEHOLDER -- Terminal showing curl -I returning HTTP 500 INTERNAL SERVER ERROR]**
+**SCREENSHOT**
+
+<img width="1061" height="421" alt="image" src="https://github.com/user-attachments/assets/6a146f3f-424e-4772-8eff-f987638e1488" />
+
+>Terminal: `curl -I http://138.91.112.58` output showing `HTTP/1.1 500 INTERNAL SERVER ERROR`, `Server: Werkzeug/3.1.7 Python/3.9.25`, and `Connection: close`
 
 ---
 
@@ -691,7 +695,7 @@ The `--admin-enabled true` flag on ACR creates shared username/password credenti
 
 
 
-<img width="1061" height="421" alt="image" src="https://github.com/user-attachments/assets/6a146f3f-424e-4772-8eff-f987638e1488" />
+
 <img width="1058" height="666" alt="image" src="https://github.com/user-attachments/assets/f7ed9eb5-bda9-4191-8e41-6cf60a48b7c2" />
 <img width="1062" height="864" alt="image" src="https://github.com/user-attachments/assets/1fccc4a7-dc91-4891-b4a9-eea7d9236728" />
 <img width="1063" height="855" alt="image" src="https://github.com/user-attachments/assets/1b9aec67-5aed-4230-b9e9-ca6cee57bfaa" />
