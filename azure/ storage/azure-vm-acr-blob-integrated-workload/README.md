@@ -320,7 +320,14 @@ az storage account create \
   --kind StorageV2
 ```
 
-**[SCREENSHOT PLACEHOLDER -- Azure Portal Storage Account overview showing datacenterstor15620 with Standard_LRS SKU]**
+**SCREENSHOTS**
+
+<img width="1057" height="854" alt="image" src="https://github.com/user-attachments/assets/d4b2abfa-f0f6-4c84-bcf7-79c573648670" />
+<img width="1061" height="859" alt="image" src="https://github.com/user-attachments/assets/c11b4236-0d6e-43b9-b114-5eba3fc8fd1a" />
+<img width="1058" height="867" alt="image" src="https://github.com/user-attachments/assets/d4f2945f-c35d-4bcf-b92f-969bd5d655af" />
+<img width="1064" height="866" alt="image" src="https://github.com/user-attachments/assets/26f348c0-586f-4b06-8a0e-9f1004dc3a05" />
+
+>Azure Portal Storage Account overview showing datacenterstor15620 with Standard_LRS SKU
 
 ---
 
@@ -667,10 +674,7 @@ The `--admin-enabled true` flag on ACR creates shared username/password credenti
 
 
 
-<img width="1057" height="854" alt="image" src="https://github.com/user-attachments/assets/d4b2abfa-f0f6-4c84-bcf7-79c573648670" />
-<img width="1061" height="859" alt="image" src="https://github.com/user-attachments/assets/c11b4236-0d6e-43b9-b114-5eba3fc8fd1a" />
-<img width="1058" height="867" alt="image" src="https://github.com/user-attachments/assets/d4f2945f-c35d-4bcf-b92f-969bd5d655af" />
-<img width="1064" height="866" alt="image" src="https://github.com/user-attachments/assets/26f348c0-586f-4b06-8a0e-9f1004dc3a05" />
+
 <img width="1061" height="517" alt="image" src="https://github.com/user-attachments/assets/df63e5c3-9b1e-4a67-916e-2b212f0eadc4" />
 <img width="1054" height="861" alt="image" src="https://github.com/user-attachments/assets/f82c38ad-1022-4ab5-b82a-338884f8d7a8" />
 <img width="1061" height="863" alt="image" src="https://github.com/user-attachments/assets/1f3e54be-4c51-4e50-8a02-be677ee80fbc" />
