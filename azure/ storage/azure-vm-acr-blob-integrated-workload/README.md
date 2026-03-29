@@ -297,7 +297,11 @@ Result
 latest
 ```
 
-**[SCREENSHOT PLACEHOLDER -- Terminal output of az acr repository show-tags confirming `latest` tag is present]**
+**SCREENSHOT**
+
+<img width="1061" height="866" alt="image" src="https://github.com/user-attachments/assets/4f520840-7a7b-4db3-9f3e-e64f1e924acd" />
+
+>Terminal output of az acr repository show-tags confirming `latest` tag is present
 
 ---
 
@@ -662,7 +666,7 @@ The `--admin-enabled true` flag on ACR creates shared username/password credenti
 
 
 
-<img width="1061" height="866" alt="image" src="https://github.com/user-attachments/assets/4f520840-7a7b-4db3-9f3e-e64f1e924acd" />
+
 <img width="1057" height="854" alt="image" src="https://github.com/user-attachments/assets/d4b2abfa-f0f6-4c84-bcf7-79c573648670" />
 <img width="1061" height="859" alt="image" src="https://github.com/user-attachments/assets/c11b4236-0d6e-43b9-b114-5eba3fc8fd1a" />
 <img width="1058" height="867" alt="image" src="https://github.com/user-attachments/assets/d4f2945f-c35d-4bcf-b92f-969bd5d655af" />
