@@ -31,7 +31,7 @@ aws/
     │   └── README.md
     ├── serverless-cross-bucket-replication-with-metadata-auditing/
     │   └── README.md
-    └── README.md 
+    └── README.md  ← (this file)
 ```
 
 ---
@@ -40,9 +40,9 @@ aws/
 
 ---
 
-### 1. Automated EC2 Nginx Web Server Provisioning via AWS CLI
+### [1. Automated EC2 Nginx Web Server Provisioning via AWS CLI](./ec2-nginx-bootstrap/README.md)
 
-**Directory:** `ec2-nginx-bootstrap/`
+**Directory:** [`ec2-nginx-bootstrap/`](./ec2-nginx-bootstrap/)
 
 **Purpose**
 
@@ -66,9 +66,9 @@ AWS CLI, EC2, VPC, Security Groups, Ubuntu 22.04 LTS, Nginx, Bash, AWS Systems M
 
 ---
 
-### 2. AWS Event-Driven Priority Queuing: SNS Attribute-Based Routing, Lambda Long-Poll Fallback, and CloudFormation IaC Troubleshooting
+### [2. AWS Event-Driven Priority Queuing: SNS Attribute-Based Routing, Lambda Long-Poll Fallback, and CloudFormation IaC Troubleshooting](./event-driven-priority-queue-orchestration/README.md)
 
-**Directory:** `event-driven-priority-queue-orchestration/`
+**Directory:** [`event-driven-priority-queue-orchestration/`](./event-driven-priority-queue-orchestration/)
 
 **Purpose**
 
@@ -80,26 +80,6 @@ The CloudFormation template defines two SQS queues (`nautilus-High-Priority-Queu
 
 The project documents five distinct errors encountered during implementation, each with full root cause analysis and resolution: Python YAML validation failing on CloudFormation intrinsic tags, a CloudFormation rollback traced to an IAM permission gap, AWS CLI v1 vs. v2 flag incompatibility on Lambda invocations, and a Lambda timeout failure caused by undersizing the timeout against the worst-case two-queue long-poll execution path.
 
-**Priority Routing Logic**
-
-```
-Lambda invoked
-      |
-      v
-Poll high-priority queue (WaitTimeSeconds=3)
-      |
-      +-- Message found  --> delete --> return result
-      |
-      +-- Empty after 3s --> poll low-priority queue (WaitTimeSeconds=3)
-                                  |
-                                  +-- Message found  --> delete --> return result
-                                  |
-                                  +-- Empty after 3s --> return "No more messages to poll"
-
-Worst-case blocking time:  up to 6 seconds
-Configured Lambda timeout: 10 seconds (4-second safety margin)
-```
-
 **Outcome**
 
 A fully operational priority queuing system validated by publishing four test messages (two high, two low) and confirming they were consumed in strict priority order across five Lambda invocations. All infrastructure was provisioned through CloudFormation with a complete error registry documenting every failure and resolution encountered during deployment.
@@ -110,9 +90,9 @@ AWS CloudFormation, SQS, SNS, Lambda (Python 3.12), IAM, AWS CLI v1, CloudWatch 
 
 ---
 
-### 3. Automated S3-to-S3 File Replication Pipeline with Lambda and DynamoDB Audit Logging
+### [3. Automated S3-to-S3 File Replication Pipeline with Lambda and DynamoDB Audit Logging](./serverless-cross-bucket-replication-with-metadata-auditing/README.md)
 
-**Directory:** `serverless-cross-bucket-replication-with-metadata-auditing/`
+**Directory:** [`serverless-cross-bucket-replication-with-metadata-auditing/`](./serverless-cross-bucket-replication-with-metadata-auditing/)
 
 **Purpose**
 
