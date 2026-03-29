@@ -12,11 +12,16 @@
 
 ## Overview
 
-This repository documents a collection of hands-on AWS infrastructure automation projects completed using the AWS CLI, CloudFormation, and serverless services. Each project demonstrates a self-contained, production-oriented workflow covering provisioning, configuration, IAM scoping, event-driven architecture, and operational verification.
+A collection of AWS infrastructure automation projects built entirely through the CLI and CloudFormation, with no console interaction at any stage. Each project is self-contained, fully documented, and structured around patterns common in scalable SaaS platforms, internal DevOps tooling, and cloud-native systems.
 
-The work in this directory reflects principles expected in professional DevOps environments: reproducible deployments driven entirely by code, least-privilege IAM design, structured audit trails, observable infrastructure, and systematic troubleshooting with documented resolution paths.
+These projects simulate production-style infrastructure scenarios including web service provisioning, event-driven message processing, and audit-compliant data pipelines. They reflect the engineering standards expected in environments where reproducibility, security, and observability are non-negotiable.
 
-All projects were executed without reliance on the AWS Management Console. Every resource was provisioned, verified, and decommissioned exclusively through CLI-driven or IaC-driven workflows, making each implementation suitable as a reference for CI/CD pipeline integration.
+**Consistent practices across all projects:**
+
+- All resources provisioned, verified, and decommissioned through CLI or IaC workflows
+- Least-privilege IAM applied at every layer
+- Every deployment phase confirmed with read-back verification commands
+- Structured troubleshooting with documented error resolution paths
 
 ---
 
@@ -44,21 +49,31 @@ aws/
 
 **Directory:** [`ec2-nginx-bootstrap/`](./ec2-nginx-bootstrap/)
 
+> **At a Glance**
+> | | |
+> |---|---|
+> | **What it does** | Provisions a public-facing Ubuntu EC2 instance running Nginx from zero using only the AWS CLI |
+> | **Key services** | EC2, VPC, Security Groups, SSM Parameter Store, Nginx |
+> | **Core concept** | Idempotent user-data bootstrapping with tag-based resource querying and zero SSH exposure |
+
 **Purpose**
 
-Provision a publicly accessible Ubuntu EC2 instance running Nginx, using only the AWS CLI, without any manual console interaction. The project establishes a repeatable, auditable deployment pattern suitable for web server bootstrapping in scripted or pipeline-driven environments.
+Establishes a repeatable, auditable web server deployment pattern suitable for scripted or pipeline-driven environments, without any manual console steps.
 
 **Approach**
 
-The workflow begins with IAM identity validation via `aws sts get-caller-identity` to confirm the correct principal and account before any resource creation. A dedicated security group (`xfusion-web-sg`) is created and scoped to permit only TCP port 80 inbound traffic, following the principle of least privilege. A Bash user data script installs Nginx, starts the service, and enables it for automatic restarts on reboot. The EC2 instance is launched with the `t2.micro` instance type using the latest Ubuntu 22.04 LTS AMI retrieved dynamically from AWS Systems Manager Parameter Store to avoid hardcoding deprecated image IDs. The instance is tagged at launch (`Name=xfusion-ec2`) to enable deterministic tag-based resource querying in all downstream steps. Deployment is validated with `curl -I` against the public IP, confirming an HTTP 200 response and the `Server: nginx` header.
+Validated IAM identity using `aws sts get-caller-identity` before touching any resources. Created a dedicated security group scoped to TCP port 80 only. Retrieved the latest Ubuntu 22.04 LTS AMI dynamically from SSM Parameter Store to avoid hardcoding deprecated image IDs.
+
+Launched the instance tagged `Name=xfusion-ec2` for deterministic downstream querying. A Bash user data script handles Nginx installation, service start, and `systemctl enable` at first boot. Deployment validated with `curl -I`, confirming HTTP 200 and the `Server: nginx` header.
 
 **Key Design Decisions**
 
-No SSH key pair is attached to the instance. Administrative access, if required, is designed to route through AWS Systems Manager Session Manager, eliminating the need for inbound port 22 and reducing the attack surface. The user data bootstrap script is idempotent: `apt-get install -y` is non-destructive if Nginx is already present, and `systemctl enable` produces the same result on repeated executions.
+- No SSH key pair attached; administrative access routes through AWS Systems Manager Session Manager, eliminating the need for inbound port 22
+- User data script is idempotent: safe to re-execute on any fresh instance without side effects
 
 **Outcome**
 
-A fully operational, publicly accessible Nginx web server deployed end-to-end through CLI commands with zero console interaction. The workflow is directly scriptable for use in CI/CD pipelines.
+Fully operational public Nginx web server deployed end-to-end through CLI commands. Workflow is directly scriptable for CI/CD integration.
 
 **Tools and Services**
 
@@ -70,19 +85,37 @@ AWS CLI, EC2, VPC, Security Groups, Ubuntu 22.04 LTS, Nginx, Bash, AWS Systems M
 
 **Directory:** [`event-driven-priority-queue-orchestration/`](./event-driven-priority-queue-orchestration/)
 
+> **At a Glance**
+> | | |
+> |---|---|
+> | **What it does** | Routes messages to separate SQS queues by priority using SNS filter policies, processed by a Lambda function that always drains high-priority first |
+> | **Key services** | CloudFormation, SNS, SQS, Lambda, IAM |
+> | **Core concept** | Attribute-based SNS routing combined with a poll-with-fallback Lambda pattern, fully provisioned as IaC with a documented error registry |
+
 **Purpose**
 
-Design and deploy a serverless priority message routing system that guarantees high-priority messages are always processed before low-priority messages, using SNS filter policies to route to separate SQS queues and a Lambda function implementing a poll-with-fallback pattern. All infrastructure is provisioned via a single CloudFormation template.
+Implements a serverless priority queuing system guaranteeing high-priority messages are always processed before low-priority ones. All infrastructure provisioned via a single CloudFormation template.
 
 **Approach**
 
-The CloudFormation template defines two SQS queues (`nautilus-High-Priority-Queue` and `nautilus-Low-Priority-Queue`), one SNS topic (`nautilus-Priority-Queues-Topic`) with attribute-based filter policies routing on the `priority` message attribute, a Python 3.12 Lambda function implementing the poll-with-fallback logic, and a least-privilege IAM role. A standalone `AWS::IAM::ManagedPolicy` resource is used instead of an inline `Policies:` block on the IAM role, which is a critical distinction in environments where `iam:PutRolePolicy` is not permitted but `iam:AttachRolePolicy` is. The Lambda function reads queue URLs from environment variables injected by CloudFormation intrinsic functions, keeping configuration decoupled from code. SQS long-polling (`WaitTimeSeconds=3`) is enabled to reduce empty-receive API calls and lower cost.
+The CloudFormation template defines two SQS queues, one SNS topic with attribute-based filter policies routing on the `priority` message attribute, a Python 3.12 Lambda function, and a least-privilege IAM role.
 
-The project documents five distinct errors encountered during implementation, each with full root cause analysis and resolution: Python YAML validation failing on CloudFormation intrinsic tags, a CloudFormation rollback traced to an IAM permission gap, AWS CLI v1 vs. v2 flag incompatibility on Lambda invocations, and a Lambda timeout failure caused by undersizing the timeout against the worst-case two-queue long-poll execution path.
+A standalone `AWS::IAM::ManagedPolicy` resource replaces the inline `Policies:` block on the IAM role. This is a critical distinction: inline policies require `iam:PutRolePolicy`, while managed policies require only `iam:AttachRolePolicy`, which resolves a real 403 deployment failure documented in the error registry.
+
+Lambda reads queue URLs from environment variables injected by CloudFormation intrinsic functions, keeping configuration fully decoupled from code. SQS long-polling (`WaitTimeSeconds=3`) is enabled on both queues to reduce empty-receive API calls.
+
+**Documented Errors and Resolutions**
+
+Five distinct failures are captured with full root cause analysis:
+
+- Python `yaml.safe_load` rejecting CloudFormation intrinsic tags (`!Ref`, `!GetAtt`)
+- CloudFormation rollback caused by `iam:PutRolePolicy` 403 on the lab IAM principal
+- AWS CLI v1 rejecting `--cli-binary-format`, a v2-only flag, across all four invocations
+- Lambda timeout at 3 seconds undersized against a worst-case 6-second two-queue long-poll path
 
 **Outcome**
 
-A fully operational priority queuing system validated by publishing four test messages (two high, two low) and confirming they were consumed in strict priority order across five Lambda invocations. All infrastructure was provisioned through CloudFormation with a complete error registry documenting every failure and resolution encountered during deployment.
+Four test messages (two high, two low) published and consumed in strict priority order across five Lambda invocations. Full error registry delivered alongside working infrastructure.
 
 **Tools and Services**
 
@@ -94,21 +127,35 @@ AWS CloudFormation, SQS, SNS, Lambda (Python 3.12), IAM, AWS CLI v1, CloudWatch 
 
 **Directory:** [`serverless-cross-bucket-replication-with-metadata-auditing/`](./serverless-cross-bucket-replication-with-metadata-auditing/)
 
+> **At a Glance**
+> | | |
+> |---|---|
+> | **What it does** | Automatically replicates objects from a public intake S3 bucket to a private destination bucket, writing a structured audit record to DynamoDB on every event |
+> | **Key services** | S3, Lambda, DynamoDB, IAM, CloudWatch Logs |
+> | **Core concept** | Event-driven serverless pipeline with least-privilege IAM, confused deputy protection, and tamper-evident audit logging |
+
 **Purpose**
 
-Implement a fully event-driven, serverless file replication pipeline that automatically copies objects uploaded to a public intake S3 bucket into a private destination bucket, writing a structured audit log entry to DynamoDB on every successful or failed copy event.
+Automates file replication between storage tiers with a durable, structured audit trail on every transfer. Addresses a pattern common in data ingestion pipelines and compliance-sensitive environments where file movement must be logged and verifiable.
 
 **Approach**
 
-Two S3 buckets are provisioned with explicitly opposite access configurations: the intake bucket (`datacenter-public-14515`) has public read access enabled via a bucket policy, while the private bucket (`datacenter-private-1666`) has all four public access block flags set to `true`. A Lambda execution IAM role is created with a custom scoped policy granting only `s3:GetObject` on the source bucket, `s3:PutObject` on the destination bucket, and `dynamodb:PutItem` on the specific audit table ARN, with no wildcard resource statements. The Lambda function is granted invocation permission via `lambda add-permission` with both `--source-arn` and `--source-account` specified to prevent the confused deputy vulnerability. The S3 event notification is configured after the Lambda permission is in place, as S3 validates the invocation permission at configuration time.
+Two S3 buckets are provisioned with opposite access profiles: the intake bucket has public read enabled via bucket policy; the private bucket has all four public access block flags set to `true`.
 
-The Lambda function parses the S3 event record, copies the object, builds a structured DynamoDB audit record with a UUID partition key, source and destination buckets, object key, UTC timestamp, and status, and persists the record. A nested try/catch pattern attempts to write a `Failure` audit entry even when the copy operation fails, preserving audit completeness. Environment-specific resource names are injected at deploy time using `sed` substitution on placeholder values in the function source, enabling the same template to be reused across environments.
+The Lambda execution role's custom policy grants only `s3:GetObject` on the source bucket, `s3:PutObject` on the destination, and `dynamodb:PutItem` on the specific table ARN. No wildcard resource statements are used. The `lambda add-permission` call includes both `--source-arn` and `--source-account` to prevent the confused deputy vulnerability. The S3 event notification is applied only after this permission is in place, as S3 validates it at configuration time.
 
-A 10-second `sleep` is inserted between IAM role creation and Lambda function deployment to account for IAM eventual consistency propagation, preventing intermittent `InvalidParameterValueException` failures. The DynamoDB table uses `PAY_PER_REQUEST` billing to match the bursty, event-driven write pattern without provisioned capacity.
+The Lambda function handles four responsibilities on each invocation:
+
+- Parses the S3 event record to extract bucket and object key
+- Copies the object to the private destination bucket
+- Builds a DynamoDB audit record with a UUID partition key, UTC timestamp, source and destination buckets, object key, and status
+- Uses a nested try/catch to write a `Failure` record even when the copy operation fails, preserving audit completeness
+
+Environment-specific resource names are injected at deploy time via `sed` substitution on named placeholders, enabling the same function template to target any environment without source code changes. A 10-second `sleep` between IAM role creation and Lambda deployment accounts for IAM eventual consistency propagation. DynamoDB uses `PAY_PER_REQUEST` billing to match the bursty, event-driven write pattern without provisioned capacity management.
 
 **Outcome**
 
-End-to-end validation confirmed that uploading `sample.zip` to the public bucket triggered the Lambda function, produced the replicated file in the private bucket within 15 seconds, and generated a correctly structured DynamoDB audit record with `"Status": "Success"`. CloudWatch log output was validated using `aws logs filter-log-events` to confirm all execution stages completed without errors.
+Uploading `sample.zip` triggered the Lambda function, replicated the file to the private bucket within 15 seconds, and produced a correctly structured DynamoDB audit record with `"Status": "Success"`. CloudWatch logs confirmed all execution stages completed cleanly, validated using `aws logs filter-log-events`.
 
 **Tools and Services**
 
@@ -124,7 +171,7 @@ AWS CLI, S3, Lambda (Python 3.12), DynamoDB, IAM, CloudWatch Logs, Bash
 | Infrastructure as Code | AWS CloudFormation |
 | Compute | EC2 (Ubuntu 22.04 LTS, t2.micro), AWS Lambda (Python 3.12) |
 | Messaging and Queuing | Amazon SQS (standard queues, long-polling), Amazon SNS (attribute-based filter policies) |
-| Storage | Amazon S3 (bucket policies, event notifications, public access controls), Amazon DynamoDB (PAY_PER_REQUEST, UUID partition keys) |
+| Storage | Amazon S3 (bucket policies, event notifications, access controls), Amazon DynamoDB (PAY_PER_REQUEST, UUID partition keys) |
 | Identity and Access | AWS IAM (roles, managed policies, resource-based policies, least-privilege scoping) |
 | Observability | Amazon CloudWatch Logs, AWS CloudTrail (recommended) |
 | Scripting and Tooling | AWS CLI v1 and v2, Bash, Python 3.12, `sed`, `curl` |
@@ -136,44 +183,44 @@ AWS CLI, S3, Lambda (Python 3.12), DynamoDB, IAM, CloudWatch Logs, Bash
 
 **Infrastructure as Code and CLI Automation**
 
-All three projects provision, configure, and validate AWS infrastructure exclusively through CLI commands and CloudFormation templates. No console interaction is required. Each workflow is directly scriptable and suitable for integration into CI/CD pipelines.
+All three projects provision, configure, and validate AWS infrastructure exclusively through CLI commands and CloudFormation templates. Every workflow is directly scriptable and suitable for CI/CD pipeline integration.
 
-**IAM Design and Least-Privilege Enforcement**
+**Least-Privilege IAM Design**
 
-Each project applies least-privilege IAM: security group ingress restricted to required ports only, Lambda execution roles scoped to specific resource ARNs, and a documented understanding of the distinction between `iam:PutRolePolicy` (inline policies) and `iam:AttachRolePolicy` (managed policies), which resolves a real deployment failure in the priority queue project.
+Least-privilege IAM is applied at every layer: security group ingress locked to required ports only, Lambda execution roles scoped to specific resource ARNs, and a practical understanding of the difference between `iam:PutRolePolicy` and `iam:AttachRolePolicy` drawn from a real deployment failure and its resolution.
 
 **Event-Driven Architecture**
 
-The priority queue and S3 replication projects both implement event-driven patterns: SNS-to-SQS routing with attribute-based filtering and Lambda poll-with-fallback logic in the first, and S3 event notifications triggering Lambda with a resource-based invocation policy in the second.
+Two projects implement distinct event-driven patterns. The priority queue system uses SNS attribute-based routing to SQS with a Lambda poll-with-fallback handler. The replication pipeline uses S3 event notifications to trigger Lambda with a resource-based invocation policy and confused deputy mitigation.
 
-**Structured Troubleshooting and Error Documentation**
+**Structured Troubleshooting**
 
-The priority queue project documents a complete error registry of five distinct failure modes, each with the exact error output, root cause analysis, and resolution. This reflects a professional diagnostic methodology: using `describe-stack-events` filtered to `CREATE_FAILED` to surface specific resource failures from generic CloudFormation rollback messages, identifying CLI version incompatibilities, and correctly sizing Lambda timeouts against worst-case execution paths rather than the happy path.
+The priority queue project captures five failure modes with exact error output, root cause analysis, and resolution steps. Diagnostic methodology includes filtering `describe-stack-events` to `CREATE_FAILED` events, identifying CLI version incompatibilities, and sizing Lambda timeouts against worst-case execution paths.
 
 **Operational Verification**
 
-Every project includes a verification step at each phase. Deployments are not considered complete until resource state is confirmed through read-back CLI queries (`get-function`, `get-bucket-notification-configuration`, `describe-instances`, `dynamodb scan`), HTTP validation, and CloudWatch log inspection.
+No deployment is considered complete until state is confirmed through read-back CLI queries (`get-function`, `get-bucket-notification-configuration`, `describe-instances`, `dynamodb scan`), HTTP response validation, and CloudWatch log inspection.
 
-**Audit and Observability**
+**Audit-Compliant Observability**
 
-The S3 replication project implements a structured DynamoDB audit log with UUID partition keys, UTC timestamps, source and destination metadata, and explicit failure record writes. CloudWatch log output is validated at the execution level, not just at the HTTP response level.
+The S3 replication pipeline writes structured DynamoDB audit records with UUID partition keys, UTC timestamps, and explicit `Failure` entries on error. Log output is validated at the execution level through CloudWatch, not just at the HTTP layer.
 
 ---
 
 ## How to Navigate This Repository
 
-Each project directory contains a self-contained `README.md` with the following structure:
+Each project directory contains a self-contained `README.md` structured as follows:
 
-- **Problem Statement**: The operational need the project addresses
-- **Architecture**: A text-based diagram of the resource topology and data flow
+- **Problem Statement**: The operational need and what manual process it replaces
+- **Architecture**: A text diagram of the resource topology and data flow
 - **Prerequisites**: Required tools, permissions, and environment configuration
 - **Step-by-Step Implementation**: Every CLI command used, with expected output and annotated screenshots
 - **Error Registry** (where applicable): Full error output, root cause, and resolution for every failure encountered
-- **Validation Checklist**: A verification table confirming the expected state of every provisioned resource
+- **Validation Checklist**: A table confirming the expected state of every provisioned resource
 - **Best Practices**: Design decisions and operational guidance derived from the implementation
-- **Cleanup**: Commands to terminate and delete all provisioned resources to avoid unnecessary charges
+- **Cleanup**: Commands to terminate and delete all provisioned resources
 
-To reproduce any project, clone the repository, verify your AWS identity with `aws sts get-caller-identity`, confirm your region with `aws configure get region`, and follow the step-by-step commands in the corresponding project README.
+To reproduce any project: clone the repository, confirm your identity with `aws sts get-caller-identity`, verify your region with `aws configure get region`, and follow the step-by-step commands in the relevant project README.
 
 ---
 
@@ -185,4 +232,4 @@ Cloud Infrastructure and DevOps Automation
 
 ---
 
-*All projects provisioned in AWS region `us-east-1`. Resources should be cleaned up after use to avoid incurring unnecessary charges. Refer to the Cleanup section in each project README for teardown commands.*
+*All projects provisioned in AWS region `us-east-1`. Refer to the Cleanup section in each project README for teardown commands to avoid unnecessary charges.*
