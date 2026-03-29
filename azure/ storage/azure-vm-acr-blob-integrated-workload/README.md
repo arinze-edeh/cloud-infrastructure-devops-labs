@@ -472,6 +472,8 @@ b5e121df1922   datacenteracr15620.azurecr.io/datacenter/python-app:latest   "pyt
 <img width="1055" height="841" alt="image" src="https://github.com/user-attachments/assets/2e352f9c-fcb5-4b80-a41c-52f205438585" />
 <img width="1065" height="848" alt="image" src="https://github.com/user-attachments/assets/0a5520b7-b56e-4614-9507-8bff8cbca8ed" />
 
+<img width="1060" height="382" alt="image" src="https://github.com/user-attachments/assets/1de40005-1fd3-41d8-a3f7-d9a43803ee2a" />
+
 >Terminal: `sudo docker ps` output showing container ID `b5e121df1922`, image `datacenteracr15620.azurecr.io/datacenter/python-app:latest`, command `"python app.py"`, status `Up About a minute`, and ports `0.0.0.0:80->80/tcp`
 
 ---
@@ -689,7 +691,6 @@ The `--admin-enabled true` flag on ACR creates shared username/password credenti
 
 
 
-<img width="1060" height="382" alt="image" src="https://github.com/user-attachments/assets/1de40005-1fd3-41d8-a3f7-d9a43803ee2a" />
 <img width="1061" height="421" alt="image" src="https://github.com/user-attachments/assets/6a146f3f-424e-4772-8eff-f987638e1488" />
 <img width="1058" height="666" alt="image" src="https://github.com/user-attachments/assets/f7ed9eb5-bda9-4191-8e41-6cf60a48b7c2" />
 <img width="1062" height="864" alt="image" src="https://github.com/user-attachments/assets/1fccc4a7-dc91-4891-b4a9-eea7d9236728" />
