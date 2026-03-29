@@ -274,7 +274,7 @@ docker push datacenteracr15620.azurecr.io/datacenter/python-app:latest
 <img width="1064" height="863" alt="image" src="https://github.com/user-attachments/assets/2652be4a-66c3-4e87-8a46-403ae10825b5" />
 <img width="1061" height="852" alt="image" src="https://github.com/user-attachments/assets/7f8bc9f6-9d09-4597-b3a9-a28af92a03f4" />
 
-> Terminal showing Docker build output with all 9 build steps FINISHED, and docker push output with all layers Pushed and digest confirmation
+> Terminal: `docker build` output showing all 9 build steps with `FINISHED` status, `docker:default` backend, base image `python:3.9-slim` resolved, and final line `naming to docker.io/datacenter/python-app:latest`, and `docker push` output showing all 7 layers with `Pushed` status and the final digest line `latest: digest: sha256:cef0472130d9a5308e7714a2aeecb1ed77c1e3f557d79a9996c690372ec366a0 size: 1783`
 
 ---
 
