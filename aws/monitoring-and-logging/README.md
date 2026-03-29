@@ -27,7 +27,7 @@ monitoring-and-logging/
 
 ---
 
-### cross-vpc-log-ingestion-and-s3-archival-pipeline
+### [cross-vpc-log-ingestion-and-s3-archival-pipeline](https://github.com/arinze-edeh/cloud-infrastructure-devops-labs/tree/main/aws/monitoring-and-logging/cross-vpc-log-ingestion-and-s3-archival-pipeline)
 
 **Quick Summary**
 Automated pipeline that ships boot logs from a private, internet-isolated EC2 instance across a VPC Peering connection to a public relay instance, which archives them to a private S3 bucket via IAM instance profile. Zero manual intervention after initial setup.
@@ -51,7 +51,7 @@ End-to-end pipeline confirmed operational. `boots.log` (23 bytes) lands at the c
 
 ---
 
-### ec2-performance-threshold-alerting
+### [ec2-performance-threshold-alerting](https://github.com/arinze-edeh/cloud-infrastructure-devops-labs/tree/main/aws/monitoring-and-logging/ec2-performance-threshold-alerting)
 
 **Quick Summary**
 CloudWatch alarm configured to trigger on CPU utilization reaching 90%, with SNS fan-out for notification delivery. EC2 health and alarm state validated via CLI.
