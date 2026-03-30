@@ -285,7 +285,11 @@ az storage blob show \
 
 *Expected output confirms blob name `index.html` and size `233` bytes.*
 
-Screenshot Placeholder: `06-blob-upload-verification.png`
+Screenshots:
+
+<img width="1030" height="510" alt="image" src="https://github.com/user-attachments/assets/d0cb6dcc-c785-400e-8b0d-b20732b3c6b5" />
+<img width="1033" height="512" alt="image" src="https://github.com/user-attachments/assets/aae3bd4b-11f4-43d1-9f0a-757e0184a5f1" />
+<img width="1028" height="801" alt="image" src="https://github.com/user-attachments/assets/a0f885cb-6257-4426-8996-15b3fb3b036f" />
 
 ---
 
@@ -577,9 +581,7 @@ Passing `$STORAGE_KEY` directly as a CLI argument results in the key appearing i
 
 
 <img width="1035" height="367" alt="image" src="https://github.com/user-attachments/assets/bb4bfc32-f121-4f90-a758-b956e4d33b1f" />
-<img width="1030" height="510" alt="image" src="https://github.com/user-attachments/assets/d0cb6dcc-c785-400e-8b0d-b20732b3c6b5" />
-<img width="1033" height="512" alt="image" src="https://github.com/user-attachments/assets/aae3bd4b-11f4-43d1-9f0a-757e0184a5f1" />
-<img width="1028" height="801" alt="image" src="https://github.com/user-attachments/assets/a0f885cb-6257-4426-8996-15b3fb3b036f" />
+
 <img width="1028" height="863" alt="image" src="https://github.com/user-attachments/assets/62c607ef-2063-40f6-82c9-ed815a939451" />
 <img width="1031" height="627" alt="image" src="https://github.com/user-attachments/assets/4963abd5-bca2-4810-8f0e-573b8cb56da3" />
 <img width="1033" height="853" alt="image" src="https://github.com/user-attachments/assets/8f5cf328-0fbc-4933-b781-f31ff75c0856" />
