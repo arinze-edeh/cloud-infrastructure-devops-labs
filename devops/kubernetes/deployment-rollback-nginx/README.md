@@ -353,7 +353,7 @@ The deployment is now running `nginx:1.16`, confirming the rollback was applied 
 
 > Screenshot:
 
-
+<img width="1031" height="621" alt="image" src="https://github.com/user-attachments/assets/b88aec87-4e8e-411d-8070-1e40fb2588b8" />
 
 > Terminal showing the `grep Image` output confirming `nginx:1.16` as the active container image.
 
@@ -468,6 +468,6 @@ This was not a blocking error in this lab but is a production-relevant considera
 
 
 
-<img width="1031" height="621" alt="image" src="https://github.com/user-attachments/assets/b88aec87-4e8e-411d-8070-1e40fb2588b8" />
+
 <img width="1027" height="717" alt="image" src="https://github.com/user-attachments/assets/24c3a701-3b69-4e82-ae36-940878e80556" />
 <img width="1038" height="748" alt="image" src="https://github.com/user-attachments/assets/a4b3c77e-1bb8-45b2-a3a4-1c7df8493d49" />
