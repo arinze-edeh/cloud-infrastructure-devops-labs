@@ -171,7 +171,12 @@ ScalingReplicaSet: Scaled down nginx-deployment-fc677cbc9 from 3 to 2
 ScalingReplicaSet: Scaled down nginx-deployment-fc677cbc9 from 1 to 0
 ```
 
-> Screenshot Placeholder: Terminal showing the full `kubectl describe deployment nginx-deployment` output, including image, strategy, ReplicaSet names, and event timeline.
+> Screenshots:
+
+<img width="1028" height="828" alt="image" src="https://github.com/user-attachments/assets/81177fb1-599a-43a4-8154-1a1583ca3274" />
+<img width="1033" height="860" alt="image" src="https://github.com/user-attachments/assets/d16075fa-3fa4-416e-8268-ad8854332926" />
+
+> Terminal showing the full `kubectl describe deployment nginx-deployment` output, including image, strategy, ReplicaSet names, and event timeline.
 
 ---
 
@@ -433,8 +438,7 @@ This was not a blocking error in this lab but is a production-relevant considera
 
 
 
-<img width="1028" height="828" alt="image" src="https://github.com/user-attachments/assets/81177fb1-599a-43a4-8154-1a1583ca3274" />
-<img width="1033" height="860" alt="image" src="https://github.com/user-attachments/assets/d16075fa-3fa4-416e-8268-ad8854332926" />
+
 <img width="1029" height="856" alt="image" src="https://github.com/user-attachments/assets/42f6997a-6339-47f1-a874-1671dd3310e3" />
 <img width="1031" height="855" alt="image" src="https://github.com/user-attachments/assets/f48432c3-20b6-4725-8ae1-ce14ef7144b8" />
 <img width="1036" height="428" alt="image" src="https://github.com/user-attachments/assets/b3fbd6c3-6a93-4002-92b3-eeb4ec2d6f75" />
