@@ -348,7 +348,9 @@ az vm show \
   -o table
 ```
 
-Screenshot Placeholder: `08-vm-public-ip-power-state.png`
+Screenshot: 
+
+<img width="1031" height="627" alt="image" src="https://github.com/user-attachments/assets/4963abd5-bca2-4810-8f0e-573b8cb56da3" />
 
 **4.3 Open Port 80 for HTTP Traffic**
 
@@ -584,7 +586,7 @@ Passing `$STORAGE_KEY` directly as a CLI argument results in the key appearing i
 
 
 
-<img width="1031" height="627" alt="image" src="https://github.com/user-attachments/assets/4963abd5-bca2-4810-8f0e-573b8cb56da3" />
+
 <img width="1033" height="853" alt="image" src="https://github.com/user-attachments/assets/8f5cf328-0fbc-4933-b781-f31ff75c0856" />
 <img width="1034" height="866" alt="image" src="https://github.com/user-attachments/assets/c19d4516-03ef-4a2e-a005-e2e953bf7341" />
 <img width="1027" height="857" alt="image" src="https://github.com/user-attachments/assets/a68e732a-027e-4d2c-8768-f79f7639422f" />
