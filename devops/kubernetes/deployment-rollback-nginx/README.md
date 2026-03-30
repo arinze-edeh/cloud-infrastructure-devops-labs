@@ -461,17 +461,3 @@ This was not a blocking error in this lab but is a production-relevant considera
 | `kubectl describe deployment nginx-deployment \| grep Image` | Quick-check the active image in the deployment template |
 | `kubectl get pods -l app=nginx-app` | List all pods associated with the deployment |
 | `kubectl get pods -l app=nginx-app -o jsonpath="{.items[*].spec.containers[*].image}"` | Verify image version uniformly across all running pods |
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1027" height="717" alt="image" src="https://github.com/user-attachments/assets/24c3a701-3b69-4e82-ae36-940878e80556" />
-
