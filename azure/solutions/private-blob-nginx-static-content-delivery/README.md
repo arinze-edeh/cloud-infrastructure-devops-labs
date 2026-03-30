@@ -325,7 +325,9 @@ az vm create \
 
 *VM Public IP assigned:* `40.87.17.28`
 
-Screenshot Placeholder: `07-vm-create-output.png`
+Screenshot: 
+
+<img width="1028" height="863" alt="image" src="https://github.com/user-attachments/assets/62c607ef-2063-40f6-82c9-ed815a939451" />
 
 **4.2 Retrieve and Confirm the VM Public IP**
 
@@ -580,9 +582,8 @@ Passing `$STORAGE_KEY` directly as a CLI argument results in the key appearing i
 
 
 
-<img width="1035" height="367" alt="image" src="https://github.com/user-attachments/assets/bb4bfc32-f121-4f90-a758-b956e4d33b1f" />
 
-<img width="1028" height="863" alt="image" src="https://github.com/user-attachments/assets/62c607ef-2063-40f6-82c9-ed815a939451" />
+
 <img width="1031" height="627" alt="image" src="https://github.com/user-attachments/assets/4963abd5-bca2-4810-8f0e-573b8cb56da3" />
 <img width="1033" height="853" alt="image" src="https://github.com/user-attachments/assets/8f5cf328-0fbc-4933-b781-f31ff75c0856" />
 <img width="1034" height="866" alt="image" src="https://github.com/user-attachments/assets/c19d4516-03ef-4a2e-a005-e2e953bf7341" />
