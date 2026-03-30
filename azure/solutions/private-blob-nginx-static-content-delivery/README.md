@@ -457,7 +457,11 @@ This single SSH session performs the following sequence:
 </html>
 ```
 
-Screenshot Placeholder: `11-blob-download-nginx-restart-local-curl.png`
+Screenshots:
+
+<img width="1033" height="836" alt="image" src="https://github.com/user-attachments/assets/349b99ed-6727-4ed7-8be6-bff7964e29af" />
+<img width="1037" height="865" alt="image" src="https://github.com/user-attachments/assets/01fc67d0-595e-4393-b723-3d847697656f" />
+<img width="1021" height="867" alt="image" src="https://github.com/user-attachments/assets/a7802422-146d-4690-8d19-f1d0077fe801" />
 
 ---
 
@@ -489,7 +493,9 @@ curl http://$PUBLIC_IP
 
 A successful HTTP 200 response returning the exact content of the uploaded blob confirms the end-to-end pipeline is functioning correctly: Blob Storage uploaded and preserved the asset, the VM fetched it securely, Nginx is serving it from the correct root, and the NSG is permitting inbound port 80 traffic.
 
-Screenshot Placeholder: `12-external-curl-public-ip-success.png`
+Screenshot:
+
+<img width="1033" height="647" alt="image" src="https://github.com/user-attachments/assets/a213aeb6-7ba4-4944-b9ec-3acd2f603489" />
 
 ---
 
@@ -588,21 +594,3 @@ Passing `$STORAGE_KEY` directly as a CLI argument results in the key appearing i
 | NSG | `nautilus-vmNSG` | Port 22 + Port 80 inbound | East US |
 
 ---
-
-*Produced by the Nautilus DevOps Team. Follow Azure best practices for security, accessibility, and performance when adapting this guide to production environments.*
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1033" height="836" alt="image" src="https://github.com/user-attachments/assets/349b99ed-6727-4ed7-8be6-bff7964e29af" />
-<img width="1037" height="865" alt="image" src="https://github.com/user-attachments/assets/01fc67d0-595e-4393-b723-3d847697656f" />
-<img width="1021" height="867" alt="image" src="https://github.com/user-attachments/assets/a7802422-146d-4690-8d19-f1d0077fe801" />
-<img width="1033" height="647" alt="image" src="https://github.com/user-attachments/assets/a213aeb6-7ba4-4944-b9ec-3acd2f603489" />
