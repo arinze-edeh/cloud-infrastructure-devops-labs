@@ -203,7 +203,11 @@ Two revisions exist:
 
 The rollback target is **Revision 1**, which ran `nginx:1.16`.
 
-> Screenshot Placeholder: Terminal showing `kubectl rollout history deployment/nginx-deployment` with both revisions listed.
+> Screenshot:
+
+<img width="1029" height="856" alt="image" src="https://github.com/user-attachments/assets/42f6997a-6339-47f1-a874-1671dd3310e3" />
+
+> Terminal showing `kubectl rollout history deployment/nginx-deployment` with both revisions listed.
 
 ---
 
@@ -439,7 +443,7 @@ This was not a blocking error in this lab but is a production-relevant considera
 
 
 
-<img width="1029" height="856" alt="image" src="https://github.com/user-attachments/assets/42f6997a-6339-47f1-a874-1671dd3310e3" />
+
 <img width="1031" height="855" alt="image" src="https://github.com/user-attachments/assets/f48432c3-20b6-4725-8ae1-ce14ef7144b8" />
 <img width="1036" height="428" alt="image" src="https://github.com/user-attachments/assets/b3fbd6c3-6a93-4002-92b3-eeb4ec2d6f75" />
 <img width="1035" height="465" alt="image" src="https://github.com/user-attachments/assets/8004757f-2f37-4b08-8e32-2df869b01c0a" />
