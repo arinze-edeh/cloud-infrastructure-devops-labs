@@ -218,7 +218,12 @@ az storage account show \
 
 *Expected output: `false`*
 
-Screenshot Placeholder: `05-storage-account-public-access-false.png`
+Screenshots: 
+
+<img width="1036" height="862" alt="image" src="https://github.com/user-attachments/assets/5815c3f7-6934-432e-be7d-13edc084c48f" />
+<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/ee19999f-67d2-4f02-aa5a-ded42a559d14" />
+<img width="1028" height="863" alt="image" src="https://github.com/user-attachments/assets/de066204-0fe6-4606-a396-fccdb215a1ae" />
+
 
 **3.3 Capture the Storage Account Key**
 
@@ -570,9 +575,7 @@ Passing `$STORAGE_KEY` directly as a CLI argument results in the key appearing i
 
 
 
-<img width="1036" height="862" alt="image" src="https://github.com/user-attachments/assets/5815c3f7-6934-432e-be7d-13edc084c48f" />
-<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/ee19999f-67d2-4f02-aa5a-ded42a559d14" />
-<img width="1028" height="863" alt="image" src="https://github.com/user-attachments/assets/de066204-0fe6-4606-a396-fccdb215a1ae" />
+
 <img width="1035" height="367" alt="image" src="https://github.com/user-attachments/assets/bb4bfc32-f121-4f90-a758-b956e4d33b1f" />
 <img width="1030" height="510" alt="image" src="https://github.com/user-attachments/assets/d0cb6dcc-c785-400e-8b0d-b20732b3c6b5" />
 <img width="1033" height="512" alt="image" src="https://github.com/user-attachments/assets/aae3bd4b-11f4-43d1-9f0a-757e0184a5f1" />
