@@ -1,4 +1,4 @@
-# Nautilus DevOps: Static Web Hosting on Azure (VNet + Blob Storage + Nginx + VM)
+# Static Web Hosting on Azure (VNet + Blob Storage + Nginx + VM)
 
 > **Enterprise-style static web application deployment on Microsoft Azure using a hardened Virtual Network, Azure Blob Storage as a secure content repository, and an Nginx-powered Ubuntu VM as the web server.**
 
@@ -102,8 +102,6 @@ az account show
 
 *Expected output confirms the active subscription, tenant, and service principal identity.*
 
-Screenshot Placeholder: `01-az-account-show-output.png`
-
 **1.2 Verify the Static Asset Exists on the Client Host**
 
 ```bash
@@ -124,7 +122,9 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
 
 The public key at `~/.ssh/id_rsa.pub` will be injected into the VM at provisioning time.
 
-Screenshot Placeholder: `02-ssh-keygen-output.png`
+Screenshot: 
+
+<img width="1033" height="786" alt="image" src="https://github.com/user-attachments/assets/18cefc47-6a93-483d-b528-f334b94d0ac3" />
 
 ---
 
@@ -563,7 +563,7 @@ Passing `$STORAGE_KEY` directly as a CLI argument results in the key appearing i
 
 
 <img width="1027" height="564" alt="image" src="https://github.com/user-attachments/assets/0b42ffee-6538-4dbd-afa0-fee8f6920036" />
-<img width="1033" height="786" alt="image" src="https://github.com/user-attachments/assets/18cefc47-6a93-483d-b528-f334b94d0ac3" />
+
 <img width="1037" height="862" alt="image" src="https://github.com/user-attachments/assets/b1ae8297-df8a-4d82-8b94-2788daa11d8e" />
 <img width="1033" height="864" alt="image" src="https://github.com/user-attachments/assets/595adc1f-618a-49cd-a17e-31d05da4d8b8" />
 <img width="1036" height="862" alt="image" src="https://github.com/user-attachments/assets/5815c3f7-6934-432e-be7d-13edc084c48f" />
