@@ -407,7 +407,13 @@ This single SSH session performs the following sequence:
 * Installs Azure CLI (version `2.84.0`) using the official Microsoft installation script.
 * Verifies the Azure CLI installation by printing the version string.
 
-Screenshot Placeholder: `10-nginx-azcli-install-verification.png`
+Screenshots:
+
+<img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/4c64c2a0-67a0-48f4-a06c-1ac5b8e1cb2b" />
+<img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/6046306e-4f41-4eb3-b6a9-7da651125323" />
+<img width="1025" height="860" alt="image" src="https://github.com/user-attachments/assets/1bc1ee75-c6f1-4b34-a639-64b66fa0f4f1" />
+<img width="1034" height="851" alt="image" src="https://github.com/user-attachments/assets/5a3fc563-37b0-4715-962a-16aee554b7f5" />
+<img width="1031" height="861" alt="image" src="https://github.com/user-attachments/assets/4646d053-e7d1-473c-a50e-61a45a8d284b" />
 
 **5.2 Download Blob, Set Permissions, Enable and Restart Nginx, Verify Locally**
 
@@ -595,11 +601,7 @@ Passing `$STORAGE_KEY` directly as a CLI argument results in the key appearing i
 
 
 
-<img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/4c64c2a0-67a0-48f4-a06c-1ac5b8e1cb2b" />
-<img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/6046306e-4f41-4eb3-b6a9-7da651125323" />
-<img width="1025" height="860" alt="image" src="https://github.com/user-attachments/assets/1bc1ee75-c6f1-4b34-a639-64b66fa0f4f1" />
-<img width="1034" height="851" alt="image" src="https://github.com/user-attachments/assets/5a3fc563-37b0-4715-962a-16aee554b7f5" />
-<img width="1031" height="861" alt="image" src="https://github.com/user-attachments/assets/4646d053-e7d1-473c-a50e-61a45a8d284b" />
+
 <img width="1033" height="836" alt="image" src="https://github.com/user-attachments/assets/349b99ed-6727-4ed7-8be6-bff7964e29af" />
 <img width="1037" height="865" alt="image" src="https://github.com/user-attachments/assets/01fc67d0-595e-4393-b723-3d847697656f" />
 <img width="1021" height="867" alt="image" src="https://github.com/user-attachments/assets/a7802422-146d-4690-8d19-f1d0077fe801" />
