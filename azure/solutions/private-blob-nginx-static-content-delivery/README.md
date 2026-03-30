@@ -376,7 +376,14 @@ az network nsg rule show \
 
 *Expected output: `open-port-80 | 80 | Allow`*
 
-Screenshot Placeholder: `09-nsg-rule-port-80-verification.png`
+Screenshots:
+
+<img width="1033" height="853" alt="image" src="https://github.com/user-attachments/assets/8f5cf328-0fbc-4933-b781-f31ff75c0856" />
+<img width="1034" height="866" alt="image" src="https://github.com/user-attachments/assets/c19d4516-03ef-4a2e-a005-e2e953bf7341" />
+<img width="1027" height="857" alt="image" src="https://github.com/user-attachments/assets/a68e732a-027e-4d2c-8768-f79f7639422f" />
+<img width="1029" height="858" alt="image" src="https://github.com/user-attachments/assets/2c14e93d-c792-4676-aa17-fad89b4f58b2" />
+<img width="1035" height="865" alt="image" src="https://github.com/user-attachments/assets/b41bf0b4-3999-4d85-8b04-501db291d5bb" />
+<img width="1033" height="864" alt="image" src="https://github.com/user-attachments/assets/f92d99e7-e5d2-443a-bda9-1096351e076a" />
 
 ---
 
@@ -587,12 +594,7 @@ Passing `$STORAGE_KEY` directly as a CLI argument results in the key appearing i
 
 
 
-<img width="1033" height="853" alt="image" src="https://github.com/user-attachments/assets/8f5cf328-0fbc-4933-b781-f31ff75c0856" />
-<img width="1034" height="866" alt="image" src="https://github.com/user-attachments/assets/c19d4516-03ef-4a2e-a005-e2e953bf7341" />
-<img width="1027" height="857" alt="image" src="https://github.com/user-attachments/assets/a68e732a-027e-4d2c-8768-f79f7639422f" />
-<img width="1029" height="858" alt="image" src="https://github.com/user-attachments/assets/2c14e93d-c792-4676-aa17-fad89b4f58b2" />
-<img width="1035" height="865" alt="image" src="https://github.com/user-attachments/assets/b41bf0b4-3999-4d85-8b04-501db291d5bb" />
-<img width="1033" height="864" alt="image" src="https://github.com/user-attachments/assets/f92d99e7-e5d2-443a-bda9-1096351e076a" />
+
 <img width="1034" height="862" alt="image" src="https://github.com/user-attachments/assets/4c64c2a0-67a0-48f4-a06c-1ac5b8e1cb2b" />
 <img width="1031" height="863" alt="image" src="https://github.com/user-attachments/assets/6046306e-4f41-4eb3-b6a9-7da651125323" />
 <img width="1025" height="860" alt="image" src="https://github.com/user-attachments/assets/1bc1ee75-c6f1-4b34-a639-64b66fa0f4f1" />
