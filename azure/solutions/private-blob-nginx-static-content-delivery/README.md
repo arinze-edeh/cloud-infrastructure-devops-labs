@@ -156,7 +156,9 @@ az network vnet create \
 * `10.0.0.0/16` provides 65,536 addresses, giving headroom for future subnet segmentation.
 * `eastus` is selected for proximity and service availability alignment.
 
-Screenshot Placeholder: `03-vnet-create-output.png`
+Screenshot: 
+
+<img width="1037" height="862" alt="image" src="https://github.com/user-attachments/assets/b1ae8297-df8a-4d82-8b94-2788daa11d8e" />
 
 **2.3 Create the Subnet**
 
@@ -180,7 +182,9 @@ az network vnet show \
   -o table
 ```
 
-Screenshot Placeholder: `04-vnet-subnet-verification.png`
+Screenshot: 
+
+
 
 ---
 
@@ -562,9 +566,9 @@ Passing `$STORAGE_KEY` directly as a CLI argument results in the key appearing i
 *Produced by the Nautilus DevOps Team. Follow Azure best practices for security, accessibility, and performance when adapting this guide to production environments.*
 
 
-<img width="1027" height="564" alt="image" src="https://github.com/user-attachments/assets/0b42ffee-6538-4dbd-afa0-fee8f6920036" />
 
-<img width="1037" height="862" alt="image" src="https://github.com/user-attachments/assets/b1ae8297-df8a-4d82-8b94-2788daa11d8e" />
+
+
 <img width="1033" height="864" alt="image" src="https://github.com/user-attachments/assets/595adc1f-618a-49cd-a17e-31d05da4d8b8" />
 <img width="1036" height="862" alt="image" src="https://github.com/user-attachments/assets/5815c3f7-6934-432e-be7d-13edc084c48f" />
 <img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/ee19999f-67d2-4f02-aa5a-ded42a559d14" />
