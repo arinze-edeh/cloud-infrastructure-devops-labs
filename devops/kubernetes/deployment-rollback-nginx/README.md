@@ -277,7 +277,11 @@ deployment.apps/nginx-deployment rolled back
 
 Kubernetes immediately begins terminating pods running `nginx:stable` and replacing them with pods running `nginx:1.16`, using the same RollingUpdate strategy (25% max unavailable, 25% max surge) to maintain availability throughout the transition.
 
-> Screenshot Placeholder: Terminal showing the `kubectl rollout undo deployment/nginx-deployment` command and the `rolled back` confirmation message.
+> Screenshot:
+
+<img width="1036" height="428" alt="image" src="https://github.com/user-attachments/assets/b3fbd6c3-6a93-4002-92b3-eeb4ec2d6f75" />
+
+> Terminal showing the `kubectl rollout undo deployment/nginx-deployment` command and the `rolled back` confirmation message.
 
 ---
 
@@ -449,7 +453,7 @@ This was not a blocking error in this lab but is a production-relevant considera
 
 
 
-<img width="1036" height="428" alt="image" src="https://github.com/user-attachments/assets/b3fbd6c3-6a93-4002-92b3-eeb4ec2d6f75" />
+
 <img width="1035" height="465" alt="image" src="https://github.com/user-attachments/assets/8004757f-2f37-4b08-8e32-2df869b01c0a" />
 <img width="1025" height="576" alt="image" src="https://github.com/user-attachments/assets/2d2dc728-201d-4209-9966-e6c817671027" />
 <img width="1031" height="621" alt="image" src="https://github.com/user-attachments/assets/b88aec87-4e8e-411d-8070-1e40fb2588b8" />
