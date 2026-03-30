@@ -394,7 +394,11 @@ nginx:1.16 nginx:1.16 nginx:1.16
 
 All three pods are uniformly running `nginx:1.16`. The rollback is complete and fully validated.
 
-> Screenshot Placeholder: Terminal showing `kubectl get pods` with all three pods in Running status, followed by the JSONPath output confirming `nginx:1.16` across all pod instances.
+> Screenshot:
+
+<img width="1038" height="748" alt="image" src="https://github.com/user-attachments/assets/a4b3c77e-1bb8-45b2-a3a4-1c7df8493d49" />
+
+> Terminal showing `kubectl get pods` with all three pods in Running status, followed by the JSONPath output confirming `nginx:1.16` across all pod instances.
 
 ---
 
@@ -470,4 +474,4 @@ This was not a blocking error in this lab but is a production-relevant considera
 
 
 <img width="1027" height="717" alt="image" src="https://github.com/user-attachments/assets/24c3a701-3b69-4e82-ae36-940878e80556" />
-<img width="1038" height="748" alt="image" src="https://github.com/user-attachments/assets/a4b3c77e-1bb8-45b2-a3a4-1c7df8493d49" />
+
