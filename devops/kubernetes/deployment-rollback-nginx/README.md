@@ -301,7 +301,11 @@ deployment "nginx-deployment" successfully rolled out
 
 This confirms the rollback completed without errors and all desired replicas are healthy.
 
-> Screenshot Placeholder: Terminal showing `kubectl rollout status` output with the `successfully rolled out` confirmation.
+> Screenshot:
+
+<img width="1035" height="465" alt="image" src="https://github.com/user-attachments/assets/8004757f-2f37-4b08-8e32-2df869b01c0a" />
+
+> Terminal showing `kubectl rollout status` output with the `successfully rolled out` confirmation.
 
 ---
 
@@ -323,7 +327,11 @@ REVISION  CHANGE-CAUSE
 
 **Important behavioral note:** Kubernetes does not restore Revision 1 in place. Instead, it creates a new Revision 3, which is functionally identical to the old Revision 1 (running `nginx:1.16`). Revision 1 is consumed and removed from the history. The faulty Revision 2 remains in history for audit purposes.
 
-> Screenshot Placeholder: Terminal showing updated rollout history with Revision 2 and the new Revision 3 listed.
+> Screenshot:
+
+
+
+> Terminal showing updated rollout history with Revision 2 and the new Revision 3 listed.
 
 ---
 
@@ -454,7 +462,7 @@ This was not a blocking error in this lab but is a production-relevant considera
 
 
 
-<img width="1035" height="465" alt="image" src="https://github.com/user-attachments/assets/8004757f-2f37-4b08-8e32-2df869b01c0a" />
+
 <img width="1025" height="576" alt="image" src="https://github.com/user-attachments/assets/2d2dc728-201d-4209-9966-e6c817671027" />
 <img width="1031" height="621" alt="image" src="https://github.com/user-attachments/assets/b88aec87-4e8e-411d-8070-1e40fb2588b8" />
 <img width="1027" height="717" alt="image" src="https://github.com/user-attachments/assets/24c3a701-3b69-4e82-ae36-940878e80556" />
