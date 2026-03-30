@@ -95,7 +95,11 @@ kubectl config current-context
 default
 ```
 
-> Screenshot Placeholder: Terminal showing `kubectl cluster-info` and `kubectl config current-context` outputs confirming cluster connectivity and active context.
+> Screenshot:
+
+<img width="1034" height="538" alt="image" src="https://github.com/user-attachments/assets/1bd060fc-3636-4fff-8ed5-1f89b1949202" />
+
+> Terminal showing `kubectl cluster-info` and `kubectl config current-context` outputs confirming cluster connectivity and active context.
 
 ---
 
@@ -130,7 +134,11 @@ nginx-deployment   3/3     3            3           15m
 
 All three replicas are `READY` and `AVAILABLE`, confirming the deployment is stable before intervention.
 
-> Screenshot Placeholder: Terminal output showing `kubectl get namespaces` and `kubectl get deployment nginx-deployment` with all replicas in the ready state.
+> Screenshot:
+
+<img width="1036" height="330" alt="image" src="https://github.com/user-attachments/assets/16a499d1-c25b-44fc-b917-e3fdab07689b" />
+
+> Terminal output showing `kubectl get namespaces` and `kubectl get deployment nginx-deployment` with all replicas in the ready state.
 
 ---
 
@@ -423,8 +431,8 @@ This was not a blocking error in this lab but is a production-relevant considera
 
 
 
-<img width="1034" height="538" alt="image" src="https://github.com/user-attachments/assets/1bd060fc-3636-4fff-8ed5-1f89b1949202" />
-<img width="1036" height="330" alt="image" src="https://github.com/user-attachments/assets/16a499d1-c25b-44fc-b917-e3fdab07689b" />
+
+
 <img width="1028" height="828" alt="image" src="https://github.com/user-attachments/assets/81177fb1-599a-43a4-8154-1a1583ca3274" />
 <img width="1033" height="860" alt="image" src="https://github.com/user-attachments/assets/d16075fa-3fa4-416e-8268-ad8854332926" />
 <img width="1029" height="856" alt="image" src="https://github.com/user-attachments/assets/42f6997a-6339-47f1-a874-1671dd3310e3" />
