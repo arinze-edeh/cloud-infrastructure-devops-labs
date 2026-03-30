@@ -253,7 +253,11 @@ This confirms:
 * Revision 1 corresponds to `nginx:1.16`, the previously validated stable image
 * Revision 2 corresponds to `nginx:stable`, the current faulty release
 
-> Screenshot Placeholder: Terminal showing `--revision=1` and `--revision=2` inspection outputs side by side, clearly contrasting `nginx:1.16` versus `nginx:stable`.
+> Screenshot:
+
+<img width="1031" height="855" alt="image" src="https://github.com/user-attachments/assets/f48432c3-20b6-4725-8ae1-ce14ef7144b8" />
+
+> Terminal showing `--revision=1` and `--revision=2` inspection outputs side by side, clearly contrasting `nginx:1.16` versus `nginx:stable`.
 
 ---
 
@@ -444,7 +448,7 @@ This was not a blocking error in this lab but is a production-relevant considera
 
 
 
-<img width="1031" height="855" alt="image" src="https://github.com/user-attachments/assets/f48432c3-20b6-4725-8ae1-ce14ef7144b8" />
+
 <img width="1036" height="428" alt="image" src="https://github.com/user-attachments/assets/b3fbd6c3-6a93-4002-92b3-eeb4ec2d6f75" />
 <img width="1035" height="465" alt="image" src="https://github.com/user-attachments/assets/8004757f-2f37-4b08-8e32-2df869b01c0a" />
 <img width="1025" height="576" alt="image" src="https://github.com/user-attachments/assets/2d2dc728-201d-4209-9966-e6c817671027" />
