@@ -184,7 +184,7 @@ az network vnet show \
 
 Screenshot: 
 
-
+<img width="1033" height="864" alt="image" src="https://github.com/user-attachments/assets/595adc1f-618a-49cd-a17e-31d05da4d8b8" />
 
 ---
 
@@ -569,7 +569,7 @@ Passing `$STORAGE_KEY` directly as a CLI argument results in the key appearing i
 
 
 
-<img width="1033" height="864" alt="image" src="https://github.com/user-attachments/assets/595adc1f-618a-49cd-a17e-31d05da4d8b8" />
+
 <img width="1036" height="862" alt="image" src="https://github.com/user-attachments/assets/5815c3f7-6934-432e-be7d-13edc084c48f" />
 <img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/ee19999f-67d2-4f02-aa5a-ded42a559d14" />
 <img width="1028" height="863" alt="image" src="https://github.com/user-attachments/assets/de066204-0fe6-4606-a396-fccdb215a1ae" />
