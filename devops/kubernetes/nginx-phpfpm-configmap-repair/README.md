@@ -232,7 +232,11 @@ nginx-phpfpm   2/2     Running   0          32s
 
 `2/2` confirms both `php-fpm-container` and `nginx-container` are healthy and operational.
 
-> **Screenshot Placeholder:** `kubectl get pod nginx-phpfpm` output showing `2/2 Running` status.
+> **Screenshot:**
+
+<img width="1030" height="705" alt="image" src="https://github.com/user-attachments/assets/f80ee53f-35f7-4df7-9b0a-73e72dee2fec" />
+
+> `kubectl get pod nginx-phpfpm` output showing `2/2 Running` status.
 
 ---
 
@@ -341,7 +345,7 @@ The HTML output confirms the full PHP processing pipeline is functional: Nginx a
 
 
 
-<img width="1030" height="705" alt="image" src="https://github.com/user-attachments/assets/f80ee53f-35f7-4df7-9b0a-73e72dee2fec" />
+
 <img width="1029" height="725" alt="image" src="https://github.com/user-attachments/assets/58776dcb-ea15-4f08-9751-9c3ec0d930c5" />
 <img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/4192317e-abaa-4c88-a15b-9e71ce4d2746" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/eff67b08-bed3-4e42-8a97-db430a0cd6f0" />
