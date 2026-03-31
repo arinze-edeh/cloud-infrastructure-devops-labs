@@ -1,6 +1,6 @@
 # Azure Table Storage To-Do Task Manager
 
-> **Enterprise-grade task management backend provisioned on Azure Table Storage using the Azure CLI**
+> **Enterprise-style task management backend provisioned on Azure Table Storage using the Azure CLI**
 > Developed for the Nautilus DevOps Platform | Region: `eastus` | Environment: `AzureCloud`
 
 ---
