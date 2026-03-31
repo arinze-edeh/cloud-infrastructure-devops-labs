@@ -638,7 +638,11 @@ Address    Health
 10.0.1.5   Healthy
 ```
 
-*Screenshot Placeholder: Backend health table showing 10.0.1.4 and 10.0.1.5 both as Healthy*
+*Screenshots: Backend health table showing 10.0.1.4 and 10.0.1.5 both as Healthy*
+
+<img width="1105" height="638" alt="image" src="https://github.com/user-attachments/assets/3091b60a-55ba-4c23-9b59-e837c8d7c2af" />
+<img width="1102" height="802" alt="image" src="https://github.com/user-attachments/assets/9febfb11-fbd5-4de1-8827-2bd43367e2eb" />
+<img width="1098" height="578" alt="image" src="https://github.com/user-attachments/assets/78daaa0b-113c-4bf1-a614-a8452afe1a87" />
 
 #### 8.4 Validate Round-Robin Load Balancing
 
@@ -669,7 +673,9 @@ Request 10: Welcome to KKE Labs:Version 1
 
 Both VMs appear in the response set, confirming that the Application Gateway is distributing traffic across the backend pool.
 
-*Screenshot Placeholder: curl loop output showing alternating Version 1 and Version 2 responses across 10 requests*
+*Screenshot: curl loop output showing alternating Version 1 and Version 2 responses across 10 requests*
+
+<img width="1106" height="860" alt="image" src="https://github.com/user-attachments/assets/1b965452-27f8-43cb-9d65-da74ddcb97de" />
 
 ---
 
@@ -735,25 +741,3 @@ The Application Gateway sends TCP health probe traffic from its own subnet to th
 | `GatewaySubnetCannotBeUsedForOtherResources` | VM placed in gateway subnet | Ensure VMs use `xfusion-subnet` and gateway uses `xfusion-apgw-subnet` exclusively |
 | `curl` returns connection timeout | Gateway not yet in `Running` operational state | Wait for `operationalState: Running` before testing |
 | VM extension `provisioningState: Failed` | Nginx install error inside VM | SSH to VM and check `/var/log/azure/custom-script/handler.log` |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1105" height="638" alt="image" src="https://github.com/user-attachments/assets/3091b60a-55ba-4c23-9b59-e837c8d7c2af" />
-<img width="1102" height="802" alt="image" src="https://github.com/user-attachments/assets/9febfb11-fbd5-4de1-8827-2bd43367e2eb" />
-<img width="1098" height="578" alt="image" src="https://github.com/user-attachments/assets/78daaa0b-113c-4bf1-a614-a8452afe1a87" />
-<img width="1106" height="860" alt="image" src="https://github.com/user-attachments/assets/1b965452-27f8-43cb-9d65-da74ddcb97de" />
