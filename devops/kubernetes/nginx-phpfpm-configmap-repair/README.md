@@ -250,7 +250,11 @@ kubectl cp /home/thor/index.php nginx-phpfpm:/var/www/html/index.php -c nginx-co
 
 Because `shared-files` is an `emptyDir` volume mounted at `/var/www/html` in both containers, the file becomes immediately accessible to `php-fpm-container` as well, without any additional copy operation.
 
-> **Screenshot Placeholder:** Terminal executing the `kubectl cp` command with no error output, confirming successful file transfer.
+> **Screenshot:**
+
+<img width="1029" height="725" alt="image" src="https://github.com/user-attachments/assets/58776dcb-ea15-4f08-9751-9c3ec0d930c5" />
+
+> Terminal executing the `kubectl cp` command with no error output, confirming successful file transfer.
 
 ---
 
@@ -274,7 +278,12 @@ pre {margin: 0; font-family: monospace;}
 
 The HTML output confirms the full PHP processing pipeline is functional: Nginx accepted the request, PHP-FPM executed the PHP script, and the rendered HTML was returned through FastCGI.
 
-> **Screenshot Placeholder:** Terminal output of the `kubectl exec curl` command showing the first five lines of the rendered HTML response.
+> **Screenshots:**
+
+<img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/4192317e-abaa-4c88-a15b-9e71ce4d2746" />
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/eff67b08-bed3-4e42-8a97-db430a0cd6f0" />
+
+> Terminal output of the `kubectl exec curl` command showing the first five lines of the rendered HTML response.
 
 ---
 
@@ -338,14 +347,3 @@ The HTML output confirms the full PHP processing pipeline is functional: Nginx a
 * [Nginx FastCGI Configuration](https://nginx.org/en/docs/http/ngx_http_fastcgi_module.html)
 * [PHP-FPM Official Documentation](https://www.php.net/manual/en/install.fpm.php)
 * [Kubernetes Sidecar Pattern](https://kubernetes.io/docs/concepts/workloads/pods/#using-pods)
-
-
-
-
-
-
-
-
-<img width="1029" height="725" alt="image" src="https://github.com/user-attachments/assets/58776dcb-ea15-4f08-9751-9c3ec0d930c5" />
-<img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/4192317e-abaa-4c88-a15b-9e71ce4d2746" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/eff67b08-bed3-4e42-8a97-db430a0cd6f0" />
