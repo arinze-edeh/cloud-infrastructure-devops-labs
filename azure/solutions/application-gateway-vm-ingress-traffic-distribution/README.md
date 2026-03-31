@@ -435,7 +435,11 @@ VM1 IP         : 10.0.1.4
 VM2 IP         : 10.0.1.5
 ```
 
-*Screenshot Placeholder: Variable echo output confirming Subscription ID, Subnet ID, IP ID, and VM private IPs*
+*Screenshots: Variable echo output confirming Subscription ID, Subnet ID, IP ID, and VM private IPs*
+
+<img width="1030" height="818" alt="image" src="https://github.com/user-attachments/assets/64686ee8-2c89-41e3-8579-0c58d4a456e5" />
+<img width="1033" height="842" alt="image" src="https://github.com/user-attachments/assets/7e2cabfb-09a5-41dc-b1c7-485eb556fd2c" />
+<img width="1037" height="671" alt="image" src="https://github.com/user-attachments/assets/4e54b550-d3cf-4016-a9eb-8ae579ba3837" />
 
 ---
 
@@ -739,9 +743,7 @@ The Application Gateway sends TCP health probe traffic from its own subnet to th
 
 
 
-<img width="1030" height="818" alt="image" src="https://github.com/user-attachments/assets/64686ee8-2c89-41e3-8579-0c58d4a456e5" />
-<img width="1033" height="842" alt="image" src="https://github.com/user-attachments/assets/7e2cabfb-09a5-41dc-b1c7-485eb556fd2c" />
-<img width="1037" height="671" alt="image" src="https://github.com/user-attachments/assets/4e54b550-d3cf-4016-a9eb-8ae579ba3837" />
+
 <img width="1102" height="842" alt="image" src="https://github.com/user-attachments/assets/eb9e623c-2613-4b9c-b39f-50e7feb3ed7c" />
 <img width="1105" height="865" alt="image" src="https://github.com/user-attachments/assets/0e294a29-377e-4091-966b-6059d0dafe5e" />
 <img width="1100" height="867" alt="image" src="https://github.com/user-attachments/assets/590929ca-2ebd-4ae2-830a-8189150d3419" />
