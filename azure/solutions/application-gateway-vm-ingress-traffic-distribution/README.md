@@ -329,7 +329,11 @@ xfusion-vm1  VM running  Succeeded       10.0.1.4     172.172.178.102
 xfusion-vm2  VM running  Succeeded       10.0.1.5     52.188.116.122
 ```
 
-*Screenshot Placeholder: VM list table confirming both VMs running with correct private IPs*
+*Screenshots: VM list table confirming both VMs running with correct private IPs*
+
+<img width="1031" height="860" alt="image" src="https://github.com/user-attachments/assets/3ef58efe-3871-4dcc-935b-585ec360abe5" />
+<img width="1035" height="864" alt="image" src="https://github.com/user-attachments/assets/11d9fc00-7670-4d22-bfed-6563c8950dcb" />
+<img width="1031" height="768" alt="image" src="https://github.com/user-attachments/assets/1d9dc4af-6544-4592-92b5-54933e459135" />
 
 ---
 
@@ -729,9 +733,7 @@ The Application Gateway sends TCP health probe traffic from its own subnet to th
 
 
 
-<img width="1031" height="860" alt="image" src="https://github.com/user-attachments/assets/3ef58efe-3871-4dcc-935b-585ec360abe5" />
-<img width="1035" height="864" alt="image" src="https://github.com/user-attachments/assets/11d9fc00-7670-4d22-bfed-6563c8950dcb" />
-<img width="1031" height="768" alt="image" src="https://github.com/user-attachments/assets/1d9dc4af-6544-4592-92b5-54933e459135" />
+
 <img width="1034" height="867" alt="image" src="https://github.com/user-attachments/assets/3bbbd73b-60b3-4f0d-82ba-f56a6db7512f" />
 <img width="1035" height="852" alt="image" src="https://github.com/user-attachments/assets/2f075281-4bf8-408e-9d96-b92f7cbb0823" />
 <img width="1036" height="807" alt="image" src="https://github.com/user-attachments/assets/6197d711-95c6-447a-828a-79e4f2567538" />
