@@ -1,6 +1,6 @@
 # Azure Application Gateway with Load-Balanced Backend VMs
 
-> **Enterprise-grade deployment of an Azure Application Gateway distributing HTTP traffic across two Nginx-backed Ubuntu virtual machines using Azure CLI.**
+> **Enterprise-style deployment of an Azure Application Gateway distributing HTTP traffic across two Nginx-backed Ubuntu virtual machines using Azure CLI.**
 
 ---
 
