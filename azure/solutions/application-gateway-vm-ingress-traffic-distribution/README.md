@@ -98,7 +98,9 @@ Identify the target resource group dynamically to avoid hardcoding environment-s
 az group list --output table
 ```
 
-*Screenshot Placeholder: az group list output showing kml_rg_main-e632ffb9f5df49e1 in East US*
+*Screenshot: az group list output showing kml_rg_main-e632ffb9f5df49e1 in East US*
+
+<img width="1034" height="435" alt="image" src="https://github.com/user-attachments/assets/65dc6d89-c1e9-4147-a015-ee39031ee044" />
 
 Store the resource group name in an environment variable for reuse throughout the session:
 
@@ -130,7 +132,9 @@ az network vnet create \
 
 **Key output field to verify:** `"provisioningState": "Succeeded"`
 
-*Screenshot Placeholder: VNet creation JSON output confirming provisioningState Succeeded*
+*Screenshot: VNet creation JSON output confirming provisioningState Succeeded*
+
+<img width="1031" height="758" alt="image" src="https://github.com/user-attachments/assets/e8fbd8a7-3b5f-4335-bea1-94ed4603236d" />
 
 #### 2.2 Create the VM Subnet
 
@@ -174,7 +178,7 @@ xfusion-subnet       10.0.1.0/24  Succeeded
 xfusion-apgw-subnet  10.0.2.0/24  Succeeded
 ```
 
-*Screenshot Placeholder: Subnet list table confirming both subnets provisioned successfully*
+*Screenshots: Subnet list table confirming both subnets provisioned successfully*
 
 ---
 
@@ -710,8 +714,8 @@ The Application Gateway sends TCP health probe traffic from its own subnet to th
 
 
 
-<img width="1034" height="435" alt="image" src="https://github.com/user-attachments/assets/65dc6d89-c1e9-4147-a015-ee39031ee044" />
-<img width="1031" height="758" alt="image" src="https://github.com/user-attachments/assets/e8fbd8a7-3b5f-4335-bea1-94ed4603236d" />
+
+
 <img width="1032" height="856" alt="image" src="https://github.com/user-attachments/assets/64cb05f7-9a9a-4631-9f1a-a273829c0a8b" />
 <img width="1037" height="762" alt="image" src="https://github.com/user-attachments/assets/d3270981-5700-49b3-a086-1590faee15ec" />
 <img width="1034" height="590" alt="image" src="https://github.com/user-attachments/assets/f9877439-de44-43b6-8515-719c7157c858" />
