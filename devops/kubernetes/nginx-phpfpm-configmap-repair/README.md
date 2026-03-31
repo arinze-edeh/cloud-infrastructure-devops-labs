@@ -128,7 +128,11 @@ EOF
 configmap/nginx-config configured
 ```
 
-> **Screenshot Placeholder:** Terminal output showing `configmap/nginx-config configured` after applying the corrected ConfigMap.
+> **Screenshot:**
+
+<img width="1035" height="655" alt="image" src="https://github.com/user-attachments/assets/c2ff07f6-9269-40c6-8f30-a412dedbf6d9" />
+
+> Terminal output showing `configmap/nginx-config configured` after applying the corrected ConfigMap.
 
 ---
 
@@ -326,7 +330,7 @@ The HTML output confirms the full PHP processing pipeline is functional: Nginx a
 
 
 
-<img width="1035" height="655" alt="image" src="https://github.com/user-attachments/assets/c2ff07f6-9269-40c6-8f30-a412dedbf6d9" />
+
 <img width="1032" height="671" alt="image" src="https://github.com/user-attachments/assets/5e906e13-78e2-48c3-987d-b6091718d5dc" />
 <img width="1035" height="867" alt="image" src="https://github.com/user-attachments/assets/4138c35f-1ead-493e-9736-290ead0932ad" />
 <img width="1030" height="705" alt="image" src="https://github.com/user-attachments/assets/f80ee53f-35f7-4df7-9b0a-73e72dee2fec" />
