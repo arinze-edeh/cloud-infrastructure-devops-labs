@@ -570,7 +570,15 @@ done
 
 **Observed:** The gateway reached `Succeeded` on attempt 9 (approximately 4 minutes).
 
-*Screenshot Placeholder: Polling loop output showing Updating states followed by Succeeded on attempt 9*
+*Screenshots: Polling loop output showing Updating states followed by Succeeded on attempt 9*
+
+<img width="1102" height="842" alt="image" src="https://github.com/user-attachments/assets/eb9e623c-2613-4b9c-b39f-50e7feb3ed7c" />
+<img width="1105" height="865" alt="image" src="https://github.com/user-attachments/assets/0e294a29-377e-4091-966b-6059d0dafe5e" />
+<img width="1100" height="867" alt="image" src="https://github.com/user-attachments/assets/590929ca-2ebd-4ae2-830a-8189150d3419" />
+<img width="1105" height="871" alt="image" src="https://github.com/user-attachments/assets/06ae9fb6-5f3e-4f8e-8e76-a3f51f981fe2" />
+<img width="1106" height="862" alt="image" src="https://github.com/user-attachments/assets/f068ee15-79ce-432b-8bf4-342aeccd5868" />
+<img width="1103" height="864" alt="image" src="https://github.com/user-attachments/assets/1e762199-8d27-4b25-9bc6-38b68bf4cb99" />
+<img width="1106" height="861" alt="image" src="https://github.com/user-attachments/assets/bdfd78a7-c161-49c7-aaa6-7cb2df7dd442" />
 
 ---
 
@@ -744,13 +752,7 @@ The Application Gateway sends TCP health probe traffic from its own subnet to th
 
 
 
-<img width="1102" height="842" alt="image" src="https://github.com/user-attachments/assets/eb9e623c-2613-4b9c-b39f-50e7feb3ed7c" />
-<img width="1105" height="865" alt="image" src="https://github.com/user-attachments/assets/0e294a29-377e-4091-966b-6059d0dafe5e" />
-<img width="1100" height="867" alt="image" src="https://github.com/user-attachments/assets/590929ca-2ebd-4ae2-830a-8189150d3419" />
-<img width="1105" height="871" alt="image" src="https://github.com/user-attachments/assets/06ae9fb6-5f3e-4f8e-8e76-a3f51f981fe2" />
-<img width="1106" height="862" alt="image" src="https://github.com/user-attachments/assets/f068ee15-79ce-432b-8bf4-342aeccd5868" />
-<img width="1103" height="864" alt="image" src="https://github.com/user-attachments/assets/1e762199-8d27-4b25-9bc6-38b68bf4cb99" />
-<img width="1106" height="861" alt="image" src="https://github.com/user-attachments/assets/bdfd78a7-c161-49c7-aaa6-7cb2df7dd442" />
+
 <img width="1105" height="638" alt="image" src="https://github.com/user-attachments/assets/3091b60a-55ba-4c23-9b59-e837c8d7c2af" />
 <img width="1102" height="802" alt="image" src="https://github.com/user-attachments/assets/9febfb11-fbd5-4de1-8827-2bd43367e2eb" />
 <img width="1098" height="578" alt="image" src="https://github.com/user-attachments/assets/78daaa0b-113c-4bf1-a614-a8452afe1a87" />
