@@ -1,6 +1,6 @@
 # Azure Blob Container Migration Pipeline
 
-> **Enterprise-grade blob data migration using Azure CLI with full integrity verification.**
+> **Enterprise-style blob data migration using Azure CLI with full integrity verification.**
 > Storage Account: `nautilusst2986` | Source: `nautilus-source-4584` | Destination: `nautilus-dest-30683`
 
 ---
