@@ -17,7 +17,7 @@ repeatability, and auditability.
 - Disk Type: `Standard_LRS`
 - Disk Size: `2 GiB`
 - Provisioning Method: `Azure CLI`
-- 
+  
 ---
 
 ## Tools & Services Used
