@@ -150,7 +150,11 @@ kubectl delete pod nginx-phpfpm --ignore-not-found
 pod "nginx-phpfpm" deleted
 ```
 
-> **Screenshot Placeholder:** Terminal confirming deletion of the `nginx-phpfpm` Pod.
+> **Screenshot:**
+
+<img width="1032" height="671" alt="image" src="https://github.com/user-attachments/assets/5e906e13-78e2-48c3-987d-b6091718d5dc" />
+
+> Terminal confirming deletion of the `nginx-phpfpm` Pod.
 
 ---
 
@@ -331,7 +335,7 @@ The HTML output confirms the full PHP processing pipeline is functional: Nginx a
 
 
 
-<img width="1032" height="671" alt="image" src="https://github.com/user-attachments/assets/5e906e13-78e2-48c3-987d-b6091718d5dc" />
+
 <img width="1035" height="867" alt="image" src="https://github.com/user-attachments/assets/4138c35f-1ead-493e-9736-290ead0932ad" />
 <img width="1030" height="705" alt="image" src="https://github.com/user-attachments/assets/f80ee53f-35f7-4df7-9b0a-73e72dee2fec" />
 <img width="1029" height="725" alt="image" src="https://github.com/user-attachments/assets/58776dcb-ea15-4f08-9751-9c3ec0d930c5" />
