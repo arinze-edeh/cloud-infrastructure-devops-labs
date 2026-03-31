@@ -180,6 +180,10 @@ xfusion-apgw-subnet  10.0.2.0/24  Succeeded
 
 *Screenshots: Subnet list table confirming both subnets provisioned successfully*
 
+<img width="1032" height="856" alt="image" src="https://github.com/user-attachments/assets/64cb05f7-9a9a-4631-9f1a-a273829c0a8b" />
+<img width="1037" height="762" alt="image" src="https://github.com/user-attachments/assets/d3270981-5700-49b3-a086-1590faee15ec" />
+<img width="1034" height="590" alt="image" src="https://github.com/user-attachments/assets/f9877439-de44-43b6-8515-719c7157c858" />
+
 ---
 
 ### Phase 3 - Network Security Group Configuration
@@ -716,9 +720,7 @@ The Application Gateway sends TCP health probe traffic from its own subnet to th
 
 
 
-<img width="1032" height="856" alt="image" src="https://github.com/user-attachments/assets/64cb05f7-9a9a-4631-9f1a-a273829c0a8b" />
-<img width="1037" height="762" alt="image" src="https://github.com/user-attachments/assets/d3270981-5700-49b3-a086-1590faee15ec" />
-<img width="1034" height="590" alt="image" src="https://github.com/user-attachments/assets/f9877439-de44-43b6-8515-719c7157c858" />
+
 <img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/09639fe9-f235-4842-9c20-933fa964452f" />
 <img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/c23aaa52-361c-45a2-9521-83f38c05d56b" />
 <img width="1033" height="857" alt="image" src="https://github.com/user-attachments/assets/b0c23406-4186-4bf7-bb09-6b76955b36df" />
