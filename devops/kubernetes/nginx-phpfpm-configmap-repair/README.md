@@ -281,9 +281,12 @@ The HTML output confirms the full PHP processing pipeline is functional: Nginx a
 > **Screenshots:**
 
 <img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/4192317e-abaa-4c88-a15b-9e71ce4d2746" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/eff67b08-bed3-4e42-8a97-db430a0cd6f0" />
 
 > Terminal output of the `kubectl exec curl` command showing the first five lines of the rendered HTML response.
+
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/eff67b08-bed3-4e42-8a97-db430a0cd6f0" />
+
+> Browser rendering phpinfo() page via Nginx and PHP-FPM on port 30008 confirming PHP 7.2.34 and FPM/FastCGI Server API
 
 ---
 
