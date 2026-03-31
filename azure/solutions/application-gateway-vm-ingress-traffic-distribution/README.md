@@ -383,7 +383,11 @@ curl -s http://52.188.116.122
 # Expected: Welcome to KKE Labs:Version 2
 ```
 
-*Screenshot Placeholder: curl output confirming Version 1 from vm1 and Version 2 from vm2 directly*
+*Screenshots: curl output confirming Version 1 from vm1 and Version 2 from vm2 directly*
+
+<img width="1034" height="867" alt="image" src="https://github.com/user-attachments/assets/3bbbd73b-60b3-4f0d-82ba-f56a6db7512f" />
+<img width="1035" height="852" alt="image" src="https://github.com/user-attachments/assets/2f075281-4bf8-408e-9d96-b92f7cbb0823" />
+<img width="1036" height="807" alt="image" src="https://github.com/user-attachments/assets/6197d711-95c6-447a-828a-79e4f2567538" />
 
 ---
 
@@ -734,9 +738,7 @@ The Application Gateway sends TCP health probe traffic from its own subnet to th
 
 
 
-<img width="1034" height="867" alt="image" src="https://github.com/user-attachments/assets/3bbbd73b-60b3-4f0d-82ba-f56a6db7512f" />
-<img width="1035" height="852" alt="image" src="https://github.com/user-attachments/assets/2f075281-4bf8-408e-9d96-b92f7cbb0823" />
-<img width="1036" height="807" alt="image" src="https://github.com/user-attachments/assets/6197d711-95c6-447a-828a-79e4f2567538" />
+
 <img width="1030" height="818" alt="image" src="https://github.com/user-attachments/assets/64686ee8-2c89-41e3-8579-0c58d4a456e5" />
 <img width="1033" height="842" alt="image" src="https://github.com/user-attachments/assets/7e2cabfb-09a5-41dc-b1c7-485eb556fd2c" />
 <img width="1037" height="671" alt="image" src="https://github.com/user-attachments/assets/4e54b550-d3cf-4016-a9eb-8ae579ba3837" />
