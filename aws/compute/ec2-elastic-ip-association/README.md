@@ -94,6 +94,7 @@ Step 1: Retrieve AWS Credentials
 <img width="1047" height="823" alt="image" src="https://github.com/user-attachments/assets/7cbeff2b-aa9e-48fa-9263-65eae364fa60" />
 
 ## Final Result
+
 - Elastic IP successfully attached
 
 - EC2 instance is publicly reachable
