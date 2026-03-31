@@ -248,7 +248,14 @@ az network nsg rule create \
   --access Allow
 ```
 
-*Screenshot Placeholder: NSG rule list confirming allow-http (1000) and allow-ssh (1010) rules*
+*Screenshots: NSG rule list confirming allow-http (1000) and allow-ssh (1010) rules*
+
+<img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/09639fe9-f235-4842-9c20-933fa964452f" />
+<img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/c23aaa52-361c-45a2-9521-83f38c05d56b" />
+<img width="1033" height="857" alt="image" src="https://github.com/user-attachments/assets/b0c23406-4186-4bf7-bb09-6b76955b36df" />
+<img width="1033" height="861" alt="image" src="https://github.com/user-attachments/assets/a5d9722d-753d-4bcd-9f53-b783c1b1ba05" />
+<img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/2c5d794e-d7da-4391-b447-aa252a77b3d1" />
+<img width="1032" height="860" alt="image" src="https://github.com/user-attachments/assets/bd41a7dc-6fff-4dfd-971a-32d9199dfa51" />
 
 ---
 
@@ -721,12 +728,7 @@ The Application Gateway sends TCP health probe traffic from its own subnet to th
 
 
 
-<img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/09639fe9-f235-4842-9c20-933fa964452f" />
-<img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/c23aaa52-361c-45a2-9521-83f38c05d56b" />
-<img width="1033" height="857" alt="image" src="https://github.com/user-attachments/assets/b0c23406-4186-4bf7-bb09-6b76955b36df" />
-<img width="1033" height="861" alt="image" src="https://github.com/user-attachments/assets/a5d9722d-753d-4bcd-9f53-b783c1b1ba05" />
-<img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/2c5d794e-d7da-4391-b447-aa252a77b3d1" />
-<img width="1032" height="860" alt="image" src="https://github.com/user-attachments/assets/bd41a7dc-6fff-4dfd-971a-32d9199dfa51" />
+
 <img width="1031" height="860" alt="image" src="https://github.com/user-attachments/assets/3ef58efe-3871-4dcc-935b-585ec360abe5" />
 <img width="1035" height="864" alt="image" src="https://github.com/user-attachments/assets/11d9fc00-7670-4d22-bfed-6563c8950dcb" />
 <img width="1031" height="768" alt="image" src="https://github.com/user-attachments/assets/1d9dc4af-6544-4592-92b5-54933e459135" />
