@@ -1,6 +1,6 @@
 # Azure Compute
 
-> Production-focused Azure compute provisioning, configuration, and lifecycle management executed entirely via Azure CLI and Azure Portal, across real lab environments with policy-constrained subscriptions.
+> Production-style Azure compute provisioning, configuration, and lifecycle management executed entirely via Azure CLI and Azure Portal, across real lab environments with policy-constrained subscriptions.
 
 ---
 
