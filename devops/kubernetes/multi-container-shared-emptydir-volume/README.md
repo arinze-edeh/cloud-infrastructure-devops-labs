@@ -108,7 +108,9 @@ CoreDNS is running at https://127.0.0.1:6443/api/v1/namespaces/kube-system/servi
 Metrics-server is running at https://127.0.0.1:6443/api/v1/namespaces/kube-system/services/https:metrics-server:https/proxy
 ```
 
-> **Screenshot Placeholder: Cluster health verification output showing node Ready status and control plane endpoints**
+> **Screenshot: Cluster health verification output showing node Ready status and control plane endpoints**
+
+<img width="1030" height="423" alt="image" src="https://github.com/user-attachments/assets/f5f2a9a5-2f9b-4034-a2dd-365ca93ce067" />
 
 ---
 
@@ -379,7 +381,7 @@ Confirm both containers reference the same volume name (`volume-share`) in their
 If the image variant in use does not include bash, substitute `/bin/sh`. The `fedora:latest` image ships with bash, but this is relevant when adapting this pattern to minimal base images such as `alpine` or `distroless`.
 
 
-<img width="1030" height="423" alt="image" src="https://github.com/user-attachments/assets/f5f2a9a5-2f9b-4034-a2dd-365ca93ce067" />
+
 <img width="1030" height="717" alt="image" src="https://github.com/user-attachments/assets/12087503-b04f-4ee2-993a-8c45992a07b8" />
 <img width="1036" height="865" alt="image" src="https://github.com/user-attachments/assets/0bb3e0b6-6880-4deb-aa25-a2df7f18dacb" />
 <img width="1025" height="626" alt="image" src="https://github.com/user-attachments/assets/afeed81a-c2e2-4842-8bbc-7daab94bc771" />
