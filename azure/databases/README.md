@@ -82,8 +82,6 @@ Each subdirectory contains a self-contained `README.md` runbook with:
 - A verification checklist confirming all acceptance criteria
 - Best practices and lessons learned sections scoped to production readiness
 
-Start with [`sql-database-deployment`](./sql-database-deployment/) for foundational provisioning patterns, then proceed to [`azure-sql-data-protection-and-archival`](./azure-sql-data-protection-and-archival/) for the backup and recovery pipeline built on top of that foundation.
-
 ---
 
 > Part of the [`cloud-infrastructure-devops-labs`](../../) portfolio. See the root README for full repository structure and navigation.
