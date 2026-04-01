@@ -203,7 +203,9 @@ NAME                   READY   STATUS    RESTARTS   AGE
 volume-share-xfusion   2/2     Running   0          2m42s
 ```
 
-> **Screenshot Placeholder: kubectl get pod output showing 2/2 Running state with zero restarts**
+> **Screenshot: kubectl get pod output showing 2/2 Running state with zero restarts**
+
+<img width="1028" height="734" alt="image" src="https://github.com/user-attachments/assets/a38990c7-1e59-4da1-b299-fd61b7110181" />
 
 ---
 
@@ -388,7 +390,7 @@ If the image variant in use does not include bash, substitute `/bin/sh`. The `fe
 
 <img width="1025" height="626" alt="image" src="https://github.com/user-attachments/assets/afeed81a-c2e2-4842-8bbc-7daab94bc771" />
 <img width="1035" height="669" alt="image" src="https://github.com/user-attachments/assets/ef1e0173-4980-4bac-ab45-cbf50ae2a6fe" />
-<img width="1028" height="734" alt="image" src="https://github.com/user-attachments/assets/a38990c7-1e59-4da1-b299-fd61b7110181" />
+
 <img width="1033" height="864" alt="image" src="https://github.com/user-attachments/assets/7088c1d9-1c02-4fb0-836a-3f64ea0106b5" />
 <img width="1031" height="866" alt="image" src="https://github.com/user-attachments/assets/b9042c8f-0085-4b5a-b778-eb7f8a2ef9cf" />
 <img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/1d011f0c-13e0-4f8a-a251-d8a8cd790f38" />
