@@ -100,7 +100,7 @@ Before executing this runbook, confirm the following:
 
 **Screenshot: Console Home (Post-Login):**
 
-![Step 1: AWS Console Home](./screenshots/step1_console_home.png)
+<img width="1819" height="942" alt="image" src="https://github.com/user-attachments/assets/302cb83e-2856-49fd-93f8-c423c4c1384b" />
 
 > The console home displays "No recently visited services," confirming this is a fresh session. Several widgets show "Access denied," which is expected given the scoped IAM policy applied to this lab account; it does not impact the ability to perform EC2 operations.
 
@@ -119,7 +119,7 @@ Before executing this runbook, confirm the following:
 
 **Screenshot: Region Selector Dropdown:**
 
-![Step 2: Region Selection](./screenshots/step2_region_selector.png)
+<img width="1818" height="945" alt="image" src="https://github.com/user-attachments/assets/ed4b9efc-85bd-47cc-9542-62b65d24f501" />
 
 > `us-east-1` is highlighted as the Current Region. No region change was required; the session was already correctly scoped.
 
@@ -141,7 +141,7 @@ Before executing this runbook, confirm the following:
 
 **Screenshot: EC2 Dashboard:**
 
-![Step 3: EC2 Dashboard](./screenshots/step3_ec2_dashboard.png)
+<img width="1839" height="889" alt="image" src="https://github.com/user-attachments/assets/df932739-dbd6-42e2-99a7-2acce0c7841c" />
 
 > The dashboard confirms 1 running instance in `us-east-1`. Some widgets display API errors (e.g., Dedicated Hosts, Capacity Reservations) due to restricted IAM permissions; this is expected and does not affect instance termination.
 
@@ -171,7 +171,7 @@ Before executing this runbook, confirm the following:
 
 **Screenshot: Instance List:**
 
-![Step 4: Instance Located](./screenshots/step4_instance_located.png)
+<img width="1840" height="893" alt="image" src="https://github.com/user-attachments/assets/8b9886c6-3473-40a2-be02-9db11770c87e" />
 
 > The instance is confirmed running with all status checks passing. The Instance ID in the Details pane matches the expected value, providing double confirmation before proceeding.
 
@@ -196,11 +196,11 @@ Before executing this runbook, confirm the following:
 
 **Screenshot: Instance State Dropdown (Terminate Selected):**
 
-![Step 5a: Terminate Option](./screenshots/step5a_terminate_dropdown.png)
+<img width="1802" height="892" alt="image" src="https://github.com/user-attachments/assets/51017336-e867-4939-b36a-deaf5995b441" />
 
 **Screenshot: Termination Initiated (Shutting-down state):**
 
-![Step 5b: Shutting Down](./screenshots/step5b_shutting_down.png)
+<img width="1805" height="892" alt="image" src="https://github.com/user-attachments/assets/543dedde-d4b9-4136-ba33-84c4aee0c6d4" />
 
 > The instance state immediately transitions to `Shutting-down` following confirmation. The success banner at the top of the console confirms: *"Successfully initiated termination (deletion) of i-0d87b86ea4f037cec."*
 
@@ -222,7 +222,7 @@ Before executing this runbook, confirm the following:
 
 **Screenshot: Instance Terminated:**
 
-![Step 6: Terminated State](./screenshots/step6_terminated.png)
+<img width="1844" height="897" alt="image" src="https://github.com/user-attachments/assets/7ca6003f-9dfd-481d-9779-6a114a7ce22b" />
 
 > The instance state is confirmed as `Terminated`. All network attributes (Public IPv4, Private IPv4, Public DNS) have been cleared, which is the expected behavior for a fully terminated instance. The success banner remains visible, confirming the operation completed successfully.
 
