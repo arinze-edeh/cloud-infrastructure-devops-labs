@@ -175,7 +175,36 @@ aws ec2 describe-volumes \
 
 ---
 
-#### 5b: Confirm Full Attachment Details
+#### 5b: Verify Block Device Visibility at OS Level
+
+Run `lsblk` to confirm that the newly attached volume appears as a block device on the instance. This step bridges the AWS API confirmation with actual OS-level visibility.
+
+```bash
+lsblk
+```
+
+**Example output (Nitro-based instance):**
+```
+NAME        MAJ:MIN RM    SIZE RO TYPE MOUNTPOINT
+nvme1n1     259:0    0  476.9G  0 disk
+nvme0n1     259:1    0  476.9G  0 disk
+├─nvme0n1p1 259:6    0    256M  0 part
+├─nvme0n1p2 259:7    0     31G  0 part
+├─nvme0n1p3 259:8    0      1G  0 part
+└─nvme0n1p4 259:9    0  444.7G  0 part
+```
+
+> **Nitro Instance Behavior:** On Nitro-based instances, EBS volumes attached as `/dev/sdb` appear in the OS as `/dev/nvme1n1` or similar NVMe paths. This is expected behavior. The `lsblk` output showing a new disk confirms the OS has recognized the attachment.
+
+> **Next Step (Post-Lab):** If this volume will be used for data storage, the next steps would be to create a filesystem (`mkfs -t xfs /dev/nvme1n1`) and mount it (`mount /dev/nvme1n1 /mnt/data`). For persistent mounts, add the device to `/etc/fstab`.
+
+**Screenshot: OS-level block device listing**
+
+![OS block device listing via lsblk](https://github.com/user-attachments/assets/7596bc69-0f0c-4039-b083-0fe2ee761fcd)
+
+---
+
+#### 5c: Confirm Full Attachment Details
 
 Retrieve the full attachment metadata to verify all parameters are correct, including the device path, instance association, and termination behavior.
 
@@ -205,34 +234,6 @@ aws ec2 describe-volumes \
 
 ![Full attachment metadata](https://github.com/user-attachments/assets/c7cf1337-8ce1-426a-b77b-47bac3402406)
 
----
-
-#### 5c: Verify Block Device Visibility at OS Level
-
-Run `lsblk` to confirm that the newly attached volume appears as a block device on the instance. This step bridges the AWS API confirmation with actual OS-level visibility.
-
-```bash
-lsblk
-```
-
-**Example output (Nitro-based instance):**
-```
-NAME        MAJ:MIN RM    SIZE RO TYPE MOUNTPOINT
-nvme1n1     259:0    0  476.9G  0 disk
-nvme0n1     259:1    0  476.9G  0 disk
-├─nvme0n1p1 259:6    0    256M  0 part
-├─nvme0n1p2 259:7    0     31G  0 part
-├─nvme0n1p3 259:8    0      1G  0 part
-└─nvme0n1p4 259:9    0  444.7G  0 part
-```
-
-> **Nitro Instance Behavior:** On Nitro-based instances, EBS volumes attached as `/dev/sdb` appear in the OS as `/dev/nvme1n1` or similar NVMe paths. This is expected behavior. The `lsblk` output showing a new disk confirms the OS has recognized the attachment.
-
-> **Next Step (Post-Lab):** If this volume will be used for data storage, the next steps would be to create a filesystem (`mkfs -t xfs /dev/nvme1n1`) and mount it (`mount /dev/nvme1n1 /mnt/data`). For persistent mounts, add the device to `/etc/fstab`.
-
-**Screenshot: OS-level block device listing**
-
-![OS block device listing via lsblk](https://github.com/user-attachments/assets/7596bc69-0f0c-4039-b083-0fe2ee761fcd)
 
 ---
 
