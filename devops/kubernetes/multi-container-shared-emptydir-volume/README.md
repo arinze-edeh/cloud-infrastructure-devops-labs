@@ -275,7 +275,9 @@ Exit the container shell:
 exit
 ```
 
-> **Screenshot Placeholder: Interactive exec session into volume-container-xfusion-1 showing the echo write and cat read of blog.txt**
+> **Screenshot: Interactive exec session into volume-container-xfusion-1 showing the echo write and cat read of blog.txt**
+
+<img width="1034" height="419" alt="image" src="https://github.com/user-attachments/assets/0ece8fdd-cec1-4e49-a739-cc5913809b32" />
 
 ---
 
@@ -295,7 +297,9 @@ Welcome to xFusionCorp Industries
 
 This output confirms the `emptyDir` volume is correctly shared between both containers. The file was written to `/tmp/blog/blog.txt` in Container 1 and is visible at `/tmp/apps/blog.txt` in Container 2 because both paths resolve to the same underlying volume.
 
-> **Screenshot Placeholder: kubectl exec output from volume-container-xfusion-2 displaying the contents of blog.txt confirming cross-container volume sharing**
+> **Screenshot: kubectl exec output from volume-container-xfusion-2 displaying the contents of blog.txt confirming cross-container volume sharing**
+
+<img width="1028" height="465" alt="image" src="https://github.com/user-attachments/assets/fb580837-e769-4f43-8598-bea3094fa8db" />
 
 ---
 
@@ -389,15 +393,3 @@ Confirm both containers reference the same volume name (`volume-share`) in their
 
 If the image variant in use does not include bash, substitute `/bin/sh`. The `fedora:latest` image ships with bash, but this is relevant when adapting this pattern to minimal base images such as `alpine` or `distroless`.
 
-
-
-
-<img width="1025" height="626" alt="image" src="https://github.com/user-attachments/assets/afeed81a-c2e2-4842-8bbc-7daab94bc771" />
-<img width="1035" height="669" alt="image" src="https://github.com/user-attachments/assets/ef1e0173-4980-4bac-ab45-cbf50ae2a6fe" />
-
-
-<img width="1033" height="324" alt="image" src="https://github.com/user-attachments/assets/69d76203-712d-4985-ae7e-e51e42a3769f" />
-<img width="1032" height="342" alt="image" src="https://github.com/user-attachments/assets/da44d6b2-8ef1-44fd-9292-1222a1751011" />
-<img width="1032" height="382" alt="image" src="https://github.com/user-attachments/assets/f39d9c41-21ec-40c7-9966-2d1ed3ffe80b" />
-<img width="1034" height="419" alt="image" src="https://github.com/user-attachments/assets/0ece8fdd-cec1-4e49-a739-cc5913809b32" />
-<img width="1028" height="465" alt="image" src="https://github.com/user-attachments/assets/fb580837-e769-4f43-8598-bea3094fa8db" />
