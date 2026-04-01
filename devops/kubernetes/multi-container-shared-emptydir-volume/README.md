@@ -152,7 +152,10 @@ Confirm the file was written correctly before applying:
 cat volume-share-xfusion.yaml
 ```
 
-> **Screenshot Placeholder: Terminal output showing the heredoc written to volume-share-xfusion.yaml and the confirmed cat output**
+> **Screenshots: Terminal output showing the heredoc written to volume-share-xfusion.yaml and the confirmed cat output**
+
+<img width="1030" height="717" alt="image" src="https://github.com/user-attachments/assets/12087503-b04f-4ee2-993a-8c45992a07b8" />
+<img width="1036" height="865" alt="image" src="https://github.com/user-attachments/assets/0bb3e0b6-6880-4deb-aa25-a2df7f18dacb" />
 
 ---
 
@@ -382,8 +385,7 @@ If the image variant in use does not include bash, substitute `/bin/sh`. The `fe
 
 
 
-<img width="1030" height="717" alt="image" src="https://github.com/user-attachments/assets/12087503-b04f-4ee2-993a-8c45992a07b8" />
-<img width="1036" height="865" alt="image" src="https://github.com/user-attachments/assets/0bb3e0b6-6880-4deb-aa25-a2df7f18dacb" />
+
 <img width="1025" height="626" alt="image" src="https://github.com/user-attachments/assets/afeed81a-c2e2-4842-8bbc-7daab94bc771" />
 <img width="1035" height="669" alt="image" src="https://github.com/user-attachments/assets/ef1e0173-4980-4bac-ab45-cbf50ae2a6fe" />
 <img width="1028" height="734" alt="image" src="https://github.com/user-attachments/assets/a38990c7-1e59-4da1-b299-fd61b7110181" />
