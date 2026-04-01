@@ -200,7 +200,8 @@ nvme0n1     259:1    0  476.9G  0 disk
 
 **Screenshot: OS-level block device listing**
 
-![OS block device listing via lsblk](https://github.com/user-attachments/assets/7596bc69-0f0c-4039-b083-0fe2ee761fcd)
+
+![Full attachment metadata](https://github.com/user-attachments/assets/c7cf1337-8ce1-426a-b77b-47bac3402406)
 
 ---
 
@@ -232,8 +233,7 @@ aws ec2 describe-volumes \
 
 **Screenshot: Full attachment metadata**
 
-![Full attachment metadata](https://github.com/user-attachments/assets/c7cf1337-8ce1-426a-b77b-47bac3402406)
-
+![OS block device listing via lsblk](https://github.com/user-attachments/assets/7596bc69-0f0c-4039-b083-0fe2ee761fcd)
 
 ---
 
