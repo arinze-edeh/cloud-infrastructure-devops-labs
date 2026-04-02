@@ -124,6 +124,8 @@ Before initiating this change, confirm the following preconditions are met:
 
 ![EC2 Instances list showing nautilus-ec2 in a running state](https://github.com/user-attachments/assets/d80b6ca9-1bfa-46ad-9aa0-9bb11c03664a)
 
+![EC2 instance status checks showing 2/2 checks passed for nautilus-ec2](https://github.com/user-attachments/assets/34a63182-a9d2-44f3-9ba3-3b3db04b5127)
+
 *EC2 Instances view showing `nautilus-ec2` in a `Running` state with `t2.micro` type confirmed.*
 
 ---
