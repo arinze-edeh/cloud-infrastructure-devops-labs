@@ -1,6 +1,6 @@
 # Provisioning an EC2 Instance with a Static Elastic IP via AWS CLI
 
-> **Enterprise-grade walkthrough** for provisioning, networking, and validating an Amazon EC2 instance with a persistent Elastic IP address using the AWS CLI exclusively. Designed for DevOps engineers, cloud practitioners, and onboarding teams operating in production or lab environments.
+> **Enterprise-style walkthrough** for provisioning, networking, and validating an Amazon EC2 instance with a persistent Elastic IP address using the AWS CLI exclusively. Designed for DevOps engineers, cloud practitioners, and onboarding teams operating in production or lab environments.
 
 ---
 
