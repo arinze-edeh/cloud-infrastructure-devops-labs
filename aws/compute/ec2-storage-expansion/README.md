@@ -30,7 +30,7 @@
 
 ## Overview
 
-This project documents the end-to-end provisioning of an Amazon Elastic Block Store (EBS) volume using the AWS CLI. The exercise reflects a production-grade storage expansion workflow where block storage is provisioned independently of compute resources to support incremental infrastructure scaling.
+This project documents the end-to-end provisioning of an Amazon Elastic Block Store (EBS) volume using the AWS CLI. The exercise reflects a production-style storage expansion workflow where block storage is provisioned independently of compute resources to support incremental infrastructure scaling.
 
 The process covers region verification, Availability Zone selection, volume creation with tagging, state confirmation, and multi-attribute validation, following the operational patterns expected in enterprise AWS environments.
 
