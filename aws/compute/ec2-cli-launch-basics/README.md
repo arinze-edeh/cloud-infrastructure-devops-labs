@@ -164,7 +164,7 @@ head -1 devops-kp.pem   # Must return: -----BEGIN RSA PRIVATE KEY-----
 
 **Screenshot: Key pair creation command executed and private key written to devops-kp.pem**
 
-![Step 2 - Create Key Pair](screenshots/img-07-keypair-only.png)
+<img width="1026" height="720" alt="image" src="https://github.com/user-attachments/assets/bf048f62-7cd0-48dc-8b8e-80df98149cb3" />
 
 ---
 
@@ -191,7 +191,7 @@ ls -l devops-kp.pem
 
 **Screenshot: chmod 400 applied and file permissions verified as -r--------**
 
-![Step 3 - Secure Private Key and chmod verified](screenshots/img-08-keypair-chmod-images.png)
+<img width="1026" height="720" alt="image" src="https://github.com/user-attachments/assets/bf048f62-7cd0-48dc-8b8e-80df98149cb3" />
 
 ---
 
@@ -228,7 +228,7 @@ aws ec2 describe-images \
 
 **Screenshot: Latest Amazon Linux 2023 AMI ID dynamically retrieved as ami-0e3008cbd8722baf0**
 
-![Step 4 - AMI ID Retrieved](screenshots/img-09-keypair-chmod-ami-result.png)
+<img width="1026" height="720" alt="image" src="https://github.com/user-attachments/assets/bf048f62-7cd0-48dc-8b8e-80df98149cb3" />
 
 ---
 
@@ -261,7 +261,7 @@ aws ec2 create-default-vpc
 
 **Screenshot: Default VPC ID vpc-047eb809070ac5824 returned**
 
-![Step 5 - Default VPC Identified](screenshots/img-02-keypair-images-vpc.png)
+<img width="1026" height="720" alt="image" src="https://github.com/user-attachments/assets/bf048f62-7cd0-48dc-8b8e-80df98149cb3" />
 
 ---
 
