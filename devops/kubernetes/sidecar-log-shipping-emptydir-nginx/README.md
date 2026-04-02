@@ -180,7 +180,10 @@ cat webserver-pod.yaml
 
 **Expected output:** The manifest is printed in full with all fields intact, confirming no heredoc truncation or encoding issues.
 
-> **Screenshot: `cat webserver-pod.yaml` output confirming complete and correctly formatted manifest**
+> **Screenshots: `cat webserver-pod.yaml` output confirming complete and correctly formatted manifest**
+
+<img width="1023" height="857" alt="image" src="https://github.com/user-attachments/assets/932a0f78-45d4-4c22-8a25-510a44bf4a83" />
+<img width="1024" height="852" alt="image" src="https://github.com/user-attachments/assets/09a4dfc2-9c27-4ec8-bf2a-bf6edae05523" />
 
 **Manifest Breakdown:**
 
@@ -452,8 +455,7 @@ kubectl get pod webserver -o wide
 
   
 
-<img width="1023" height="857" alt="image" src="https://github.com/user-attachments/assets/932a0f78-45d4-4c22-8a25-510a44bf4a83" />
-<img width="1024" height="852" alt="image" src="https://github.com/user-attachments/assets/09a4dfc2-9c27-4ec8-bf2a-bf6edae05523" />
+
 <img width="1021" height="614" alt="image" src="https://github.com/user-attachments/assets/5637bd89-0e43-461c-9f7c-4f3484073e86" />
 <img width="1024" height="653" alt="image" src="https://github.com/user-attachments/assets/530ae11b-f02b-4fb5-a3bf-a1a28a506806" />
 <img width="1019" height="731" alt="image" src="https://github.com/user-attachments/assets/a8ac7483-ee7f-4e1a-a297-7298a22a1dfa" />
