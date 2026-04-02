@@ -167,7 +167,7 @@ The `-r--------` permission string confirms that only the file owner can read th
 
 > **Screenshot 3: chmod 400 applied and permissions verified with ls -l**
 
-![Step 3 - Permission Hardening and Verification](https://github.com/user-attachments/assets/4dd0aabd-ebcf-45c8-a0c5-440fe9b40481)
+<img width="952" height="584" alt="image" src="https://github.com/user-attachments/assets/9c0a5e93-a37a-432f-9028-6514538819cd" />
 
 ---
 
