@@ -92,7 +92,7 @@ The region dropdown confirms `N. Virginia` highlighted as the active selection (
 
 **Screenshot: AWS Console authenticated with region selector open confirming us-east-1 (N. Virginia) as the active region**
 
-![Step 1 - AWS Console Login and Region Selection](images/step-01-aws-console-region-us-east-1.png)
+<img width="1791" height="941" alt="image" src="https://github.com/user-attachments/assets/30502e7a-8fae-4566-93dc-bfeddb7d7a1c" />
 
 ---
 
@@ -115,7 +115,7 @@ Verify all of the above before proceeding. A running instance in a healthy state
 
 **Screenshot: EC2 Instances view showing nautilus-ec2 in Running state with all health checks passing**
 
-![Step 2 - EC2 Instance List Showing nautilus-ec2](images/step-02-ec2-instance-nautilus-ec2-running.png)
+<img width="1785" height="937" alt="image" src="https://github.com/user-attachments/assets/cf69143b-126a-4e75-998d-2171c3803bab" />
 
 ---
 
@@ -138,7 +138,7 @@ After confirming all settings, scroll down and click **Create image** to submit 
 
 **Screenshot: Create image form populated with nautilus-ec2-ami as the image name, Reboot instance enabled, and root EBS volume confirmed at 8 GiB gp3**
 
-![Step 3 - AMI Configuration Form](images/step-03-create-image-form-nautilus-ec2-ami.png)
+<img width="1793" height="944" alt="image" src="https://github.com/user-attachments/assets/1e8e3179-629c-4970-9e98-c6b755bf1a7e" />
 
 ---
 
@@ -154,7 +154,7 @@ This banner confirms the AMI creation task has been successfully queued. The und
 
 **Screenshot: EC2 Instances view showing the green confirmation banner with AMI ID ami-038c9bf484956b9ad and source instance details**
 
-![Step 4 - AMI Creation Confirmation Banner](images/step-04-ami-creation-confirmation-banner.png)
+<img width="1821" height="943" alt="image" src="https://github.com/user-attachments/assets/86838675-4cf1-4eb6-b4a5-9e1ad27cf5b4" />
 
 ---
 
@@ -176,7 +176,7 @@ The AMI has successfully transitioned from `pending` to `available`, confirming 
 
 **Screenshot: AMIs list view filtered to Owned by me, showing nautilus-ec2-ami with Available status, Private visibility, and creation timestamp**
 
-![Step 5 - AMI Available in AMI List](images/step-05-ami-list-available-status.png)
+<img width="1856" height="940" alt="image" src="https://github.com/user-attachments/assets/0b007ee7-b952-4cda-8860-d366cf4a3861" />
 
 ---
 
@@ -202,7 +202,7 @@ All validation checks pass. The AMI is confirmed as account-private, architectur
 
 **Screenshot: AMI detail panel for ami-038c9bf484956b9ad showing all metadata including Available status, block device mapping, architecture, and owner account confirmation**
 
-![Step 6 - AMI Detail Panel with Full Metadata Validation](images/step-06-ami-detail-panel-full-validation.png)
+<img width="1861" height="945" alt="image" src="https://github.com/user-attachments/assets/8f892b1d-576d-4f36-b16a-1e6400649aaf" />
 
 ---
 
