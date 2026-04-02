@@ -24,7 +24,6 @@
 - [Errors and Resolutions](#errors-and-resolutions)
 - [Best Practices and Operational Considerations](#best-practices-and-operational-considerations)
 - [Key Learnings](#key-learnings)
-- [Next Steps](#next-steps)
 - [Conclusion](#conclusion)
 
 ---
@@ -427,17 +426,6 @@ The IAM principal used for ECR operations should be scoped with the minimum requ
 - **Token-based authentication is stateless and time-bound:** Unlike static registry credentials, ECR tokens expire. Automation scripts and CI systems must handle re-authentication gracefully.
 - **Image digest is the ground truth for integrity:** The manifest digest (`sha256:...`) returned by `docker push` and visible in `ecr list-images` provides cryptographic verification that the pushed artifact and the stored artifact are identical.
 - **Build layer caching significantly affects build time:** The 122-second metadata fetch observed here is expected on a cold host with no cached layers. Subsequent builds on the same host will be substantially faster due to layer cache reuse.
-
----
-
-## Next Steps
-
-- Enable **automated image scanning on push** using Amazon Inspector integration for vulnerability detection
-- Configure **ECR lifecycle policies** to expire untagged images after a defined retention window
-- Apply **immutable image tags** (`IMMUTABLE` mutability) for all production repositories to enforce deployment traceability
-- Integrate this workflow into a **CI/CD pipeline** (Jenkins, GitHub Actions, or AWS CodePipeline) to automate build, tag, push, and verify on every commit
-- Define and apply **IAM repository policies** to restrict cross-account access to the ECR repository explicitly
-- Evaluate the **AWS ECR credential helper** (`amazon-ecr-credential-helper`) to eliminate manual `docker login` steps and remove unencrypted token storage from the delivery host
 
 ---
 
