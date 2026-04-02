@@ -55,14 +55,14 @@ The solution implements the **Sidecar Container pattern**, one of the foundation
 +-------------------------------------------------------+
 |                   Pod: webserver                      |
 |                                                       |
-|  +-----------------+        +---------------------+  |
-|  | nginx-container |        | sidecar-container   |  |
-|  |                 |        |                     |  |
-|  | nginx:latest    |        | ubuntu:latest       |  |
-|  |                 |        |                     |  |
-|  | Writes logs to  |        | Reads logs from     |  |
-|  | /var/log/nginx  |        | /var/log/nginx      |  |
-|  +--------+--------+        +---------+-----------+  |
+|  +-----------------+        +---------------------+   |
+|  | nginx-container |        | sidecar-container   |   |
+|  |                 |        |                     |   |
+|  | nginx:latest    |        | ubuntu:latest       |   |
+|  |                 |        |                     |   |
+|  | Writes logs to  |        | Reads logs from     |   |
+|  | /var/log/nginx  |        | /var/log/nginx      |   |
+|  +--------+--------+        +---------+-----------+   |
 |           |                           |               |
 |           +--------+   +--------------+               |
 |                    |   |                              |
@@ -70,7 +70,7 @@ The solution implements the **Sidecar Container pattern**, one of the foundation
 |           |  emptyDir Volume    |                     |
 |           |  shared-logs        |                     |
 |           |  /var/log/nginx     |                     |
-|           +--------------------+                     |
+|           +--------------------+                      |
 +-------------------------------------------------------+
 ```
 
@@ -379,7 +379,12 @@ shared-logs:
 | 2m38s | Created | sidecar-container created |
 | 2m38s | Started | sidecar-container started |
 
-> **Screenshot: `kubectl describe pod webserver` full output including container states, volume mounts, and event log**
+> **Screenshots: `kubectl describe pod webserver` full output including container states, volume mounts, and event log**
+
+
+<img width="1017" height="846" alt="image" src="https://github.com/user-attachments/assets/4f27e50a-72fe-4f07-a6af-865750b8ce6d" />
+<img width="1018" height="857" alt="image" src="https://github.com/user-attachments/assets/861ebc13-b2ad-4c1c-9a35-10be02cf0854" />
+<img width="1024" height="855" alt="image" src="https://github.com/user-attachments/assets/2606534e-61ae-4e16-8a66-77a191da85a7" />
 
 ---
 
@@ -462,14 +467,3 @@ kubectl get pod webserver -o wide
 **Images Used:**
 * [nginx - Docker Hub](https://hub.docker.com/_/nginx)
 * [ubuntu - Docker Hub](https://hub.docker.com/_/ubuntu)
-
-  
-
-
-
-
-
-
-<img width="1017" height="846" alt="image" src="https://github.com/user-attachments/assets/4f27e50a-72fe-4f07-a6af-865750b8ce6d" />
-<img width="1018" height="857" alt="image" src="https://github.com/user-attachments/assets/861ebc13-b2ad-4c1c-9a35-10be02cf0854" />
-<img width="1024" height="855" alt="image" src="https://github.com/user-attachments/assets/2606534e-61ae-4e16-8a66-77a191da85a7" />
