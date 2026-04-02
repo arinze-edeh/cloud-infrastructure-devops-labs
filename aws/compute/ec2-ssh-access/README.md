@@ -1,7 +1,7 @@
 # EC2 Secure Provisioning with Key-Based SSH Authentication (AWS CLI)
 
 > **Competency Domain:** AWS Compute | Identity and Access | Linux Systems Administration
-> **Environment:** AWS KodeKloud Lab | Region: `us-east-1` | Shell: Bash
+> **Environment:** AWS CLI | Region: `us-east-1` | Shell: Bash
 
 ---
 
