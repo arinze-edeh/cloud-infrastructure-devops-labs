@@ -105,10 +105,6 @@ Before provisioning any resource, confirm the active AWS CLI profile and region 
 
 The shell prompt confirms the active region as `us-east-1`, which is the target deployment region for this lab.
 
-> **Screenshot 1: AWS CLI region context confirmed before key pair creation**
-
-![Step 1 - Region Context](https://github.com/user-attachments/assets/f0f4b053-6032-4924-9152-d2b329c1f20d)
-
 ---
 
 ### Step 2: Create EC2 Key Pair via AWS CLI
@@ -133,7 +129,7 @@ aws ec2 create-key-pair \
 
 **Critical note:** AWS returns the private key material **only once** at creation time. If the file is lost or overwritten before permissions are secured, the key pair must be deleted and recreated. There is no mechanism to retrieve private key material after the initial API response.
 
-> **Screenshot 2: Key pair creation command executed successfully**
+> **Screenshot: Key pair creation command executed successfully**
 
 <img width="934" height="635" alt="image" src="https://github.com/user-attachments/assets/55ccfb33-4a81-41f8-9c92-f406fd41c557" />
 
@@ -166,7 +162,7 @@ ls -l xfusion-kp.pem
 
 The `-r--------` permission string confirms that only the file owner can read the key. The `1679` byte size is consistent with a valid RSA 2048-bit PEM private key.
 
-> **Screenshot 3: chmod 400 applied and permissions verified with ls -l**
+> **Screenshot: chmod 400 applied and permissions verified with ls -l**
 
 <img width="952" height="584" alt="image" src="https://github.com/user-attachments/assets/9c0a5e93-a37a-432f-9028-6514538819cd" />
 
@@ -204,7 +200,7 @@ aws ec2 describe-key-pairs --key-names xfusion-kp
 - `KeyPairId` is the unique AWS identifier for the key pair, useful for referencing in CloudFormation, Terraform, or IAM policies
 - `KeyFingerprint` allows cross-verification if needed between the stored public key and the local private key
 
-> **Screenshot 4: Key pair confirmed registered in AWS EC2 with metadata**
+> **Screenshot: Key pair confirmed registered in AWS EC2 with metadata**
 
 <img width="973" height="743" alt="image" src="https://github.com/user-attachments/assets/61205384-a513-4955-a4c1-de3ab3fdd1d2" />
 
