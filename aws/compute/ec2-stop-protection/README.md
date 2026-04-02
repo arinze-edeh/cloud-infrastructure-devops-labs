@@ -10,7 +10,6 @@
 - [Problem Statement](#problem-statement)
 - [Architecture Context](#architecture-context)
 - [Prerequisites](#prerequisites)
-- [Environment](#environment)
 - [Implementation](#implementation)
   - [Step 1: Log In and Confirm Region](#step-1-log-in-and-confirm-region)
   - [Step 2: Navigate to EC2](#step-2-navigate-to-ec2)
@@ -69,12 +68,6 @@ Without a protection mechanism, these events can cause unplanned downtime. **Sto
 - IAM permissions to modify EC2 instance attributes (`ec2:ModifyInstanceAttribute`)
 - An existing EC2 instance in a Running state
 - Browser access to the AWS Management Console
-
----
-
-## Environment
-
-This lab was executed inside a KodeKloud-provisioned AWS sandbox account. The EC2 instance `datacenter-ec2` was pre-running at lab start. No instance provisioning was required. The objective was exclusively the configuration of Stop Protection on the existing instance.
 
 ---
 
