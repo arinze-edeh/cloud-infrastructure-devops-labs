@@ -269,7 +269,8 @@ aws ec2 associate-address \
 
 **Screenshot: Successful association returning `AssociationId: eipassoc-0578b4e3415869944` confirming the Elastic IP is now linked to the EC2 instance**
 
-![successful association](https://github.com/user-attachments/assets/1cf25c2f-877c-4708-a51a-553b9ad687d9)
+<img width="1018" height="795" alt="image" src="https://github.com/user-attachments/assets/b47e2b61-92bf-4ac0-837f-d8be16e433f3" />
+
 
 ---
 
