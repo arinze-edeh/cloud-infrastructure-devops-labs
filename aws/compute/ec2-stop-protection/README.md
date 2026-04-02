@@ -28,7 +28,7 @@
 
 ## Overview
 
-This lab documents the process of enabling **Stop Protection** on an Amazon EC2 instance using the AWS Management Console. Stop Protection is an instance-level safeguard that blocks stop actions issued through the console, CLI, or API, preventing accidental shutdown of workloads that must remain available.
+This documents the process of enabling **Stop Protection** on an Amazon EC2 instance using the AWS Management Console. Stop Protection is an instance-level safeguard that blocks stop actions issued through the console, CLI, or API, preventing accidental shutdown of workloads that must remain available.
 
 This procedure was executed as part of an infrastructure migration workflow, where protecting running compute resources from inadvertent human or automation-triggered stops is a critical operational requirement.
 
