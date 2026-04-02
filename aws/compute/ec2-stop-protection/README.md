@@ -10,7 +10,7 @@
 - [Problem Statement](#problem-statement)
 - [Architecture Context](#architecture-context)
 - [Prerequisites](#prerequisites)
-- [Lab Environment](#lab-environment)
+- [Environment](#environment)
 - [Implementation](#implementation)
   - [Step 1: Log In and Confirm Region](#step-1-log-in-and-confirm-region)
   - [Step 2: Navigate to EC2](#step-2-navigate-to-ec2)
@@ -72,7 +72,7 @@ Without a protection mechanism, these events can cause unplanned downtime. **Sto
 
 ---
 
-## Lab Environment
+## Environment
 
 This lab was executed inside a KodeKloud-provisioned AWS sandbox account. The EC2 instance `datacenter-ec2` was pre-running at lab start. No instance provisioning was required. The objective was exclusively the configuration of Stop Protection on the existing instance.
 
