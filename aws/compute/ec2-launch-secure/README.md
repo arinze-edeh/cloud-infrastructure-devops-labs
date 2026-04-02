@@ -135,7 +135,8 @@ aws ec2 create-key-pair \
 
 > **Screenshot 2: Key pair creation command executed successfully**
 
-![Step 2 - Key Pair Creation](https://github.com/user-attachments/assets/650da4fc-6985-47d3-aa1f-5526b7674019)
+<img width="934" height="635" alt="image" src="https://github.com/user-attachments/assets/55ccfb33-4a81-41f8-9c92-f406fd41c557" />
+
 
 ---
 
