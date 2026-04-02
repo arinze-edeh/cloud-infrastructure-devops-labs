@@ -1,4 +1,4 @@
-# Provisioning EC2 Instances via AWS CLI: A Production-Grade Infrastructure Workflow
+# Provisioning EC2 Instances via AWS CLI: A Production-Style Infrastructure Workflow
 
 > **Discipline:** Cloud Infrastructure | DevOps Engineering
 > **Domain:** AWS EC2 | CLI Automation | Foundational Provisioning
@@ -122,7 +122,7 @@ aws configure set region us-east-1
 
 **Screenshot: AWS CLI region configuration confirmed as us-east-1**
 
-![Step 1 - AWS CLI Configuration](screenshots/step1-aws-configure.png)
+<img width="1034" height="696" alt="image" src="https://github.com/user-attachments/assets/64b72aaf-dbc2-4e27-b98e-2ab1bfbbee5c" />
 
 ---
 
