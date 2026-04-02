@@ -8,6 +8,37 @@ The task is part of a broader incremental cloud migration workflow executed by t
 
 ---
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Problem Statement](#problem-statement)
+- [Prerequisites](#prerequisites)
+- [Architecture Context](#architecture-context)
+- [Implementation Steps](#implementation-steps)
+  - [Step 1: Verify AWS CLI Region Configuration](#step-1-verify-aws-cli-region-configuration)
+  - [Step 2: Identify the Target EC2 Instance](#step-2-identify-the-target-ec2-instance)
+  - [Step 3: Identify the Target EBS Volume](#step-3-identify-the-target-ebs-volume)
+  - [Step 4: Attach the EBS Volume to the EC2 Instance](#step-4-attach-the-ebs-volume-to-the-ec2-instance)
+  - [Step 5: Verify Volume Attachment](#step-5-verify-volume-attachment)
+    - [5a: Check Attachment State](#5a-check-attachment-state)
+    - [5b: Verify Block Device Visibility at OS Level](#5b-verify-block-device-visibility-at-os-level)
+    - [5c: Confirm Full Attachment Details](#5c-confirm-full-attachment-details)
+- [Final Outcome](#final-outcome)
+- [Lessons Learned and Operational Considerations](#lessons-learned-and-operational-considerations)
+
+---
+
+
+# Attaching an EBS Volume to an EC2 Instance via AWS CLI
+
+## Overview
+
+This document provides a production-grade, step-by-step guide for attaching an existing Amazon EBS volume to a running EC2 instance using the AWS CLI. It is intended for DevOps engineers, cloud administrators, and infrastructure teams working in AWS environments.
+
+The task is part of a broader incremental cloud migration workflow executed by the Nautilus DevOps team. All operations are scoped to the **us-east-1** region and follow AWS best practices for block storage management.
+
+---
+
 ## Problem Statement
 
 The Nautilus DevOps team required a storage expansion for an existing EC2 instance (`nautilus-ec2`). A pre-provisioned EBS volume (`nautilus-volume`) needed to be discovered, correctly identified, attached to the running instance, and verified as operational, all without any console access or manual intervention.
