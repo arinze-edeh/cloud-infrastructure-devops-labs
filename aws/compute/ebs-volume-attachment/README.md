@@ -28,17 +28,6 @@ The task is part of a broader incremental cloud migration workflow executed by t
 
 ---
 
-
-# Attaching an EBS Volume to an EC2 Instance via AWS CLI
-
-## Overview
-
-This document provides a production-grade, step-by-step guide for attaching an existing Amazon EBS volume to a running EC2 instance using the AWS CLI. It is intended for DevOps engineers, cloud administrators, and infrastructure teams working in AWS environments.
-
-The task is part of a broader incremental cloud migration workflow executed by the Nautilus DevOps team. All operations are scoped to the **us-east-1** region and follow AWS best practices for block storage management.
-
----
-
 ## Problem Statement
 
 The Nautilus DevOps team required a storage expansion for an existing EC2 instance (`nautilus-ec2`). A pre-provisioned EBS volume (`nautilus-volume`) needed to be discovered, correctly identified, attached to the running instance, and verified as operational, all without any console access or manual intervention.
