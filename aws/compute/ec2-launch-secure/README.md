@@ -205,7 +205,8 @@ aws ec2 describe-key-pairs --key-names xfusion-kp
 
 > **Screenshot 4: Key pair confirmed registered in AWS EC2 with metadata**
 
-![Step 4 - AWS Key Pair Verification](https://github.com/user-attachments/assets/edd63c96-09dd-4acb-b4fd-d3be90c7ec9b)
+<img width="973" height="743" alt="image" src="https://github.com/user-attachments/assets/61205384-a513-4955-a4c1-de3ab3fdd1d2" />
+
 
 ---
 
