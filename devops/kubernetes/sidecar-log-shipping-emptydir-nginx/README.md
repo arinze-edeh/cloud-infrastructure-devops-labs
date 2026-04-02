@@ -215,6 +215,8 @@ pod/webserver created (dry run)
 
 > **Screenshot: `kubectl apply --dry-run=client` output confirming schema validation passed**
 
+<img width="1021" height="614" alt="image" src="https://github.com/user-attachments/assets/5637bd89-0e43-461c-9f7c-4f3484073e86" />
+
 The `--dry-run=client` flag is a critical pre-flight check. It catches YAML syntax errors, missing required fields, and invalid API versions before any cluster-side processing occurs.
 
 ---
@@ -456,7 +458,7 @@ kubectl get pod webserver -o wide
   
 
 
-<img width="1021" height="614" alt="image" src="https://github.com/user-attachments/assets/5637bd89-0e43-461c-9f7c-4f3484073e86" />
+
 <img width="1024" height="653" alt="image" src="https://github.com/user-attachments/assets/530ae11b-f02b-4fb5-a3bf-a1a28a506806" />
 <img width="1019" height="731" alt="image" src="https://github.com/user-attachments/assets/a8ac7483-ee7f-4e1a-a297-7298a22a1dfa" />
 <img width="1020" height="859" alt="image" src="https://github.com/user-attachments/assets/5a366468-19c2-47ca-9d37-91707059e771" />
