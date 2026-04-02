@@ -260,6 +260,8 @@ The `2/2` in the `READY` column confirms that both `nginx-container` and `sideca
 
 > **Screenshot: `kubectl get pod webserver` output showing 2/2 Running with 0 restarts**
 
+<img width="1019" height="731" alt="image" src="https://github.com/user-attachments/assets/a8ac7483-ee7f-4e1a-a297-7298a22a1dfa" />
+
 ---
 
 ### Step 6: Monitor Pod Stability
@@ -281,6 +283,8 @@ The Pod remained in `Running` state with `0` restarts throughout the watch perio
 
 > **Screenshot: `kubectl get pod webserver -w` output showing sustained Running status**
 
+<img width="1020" height="859" alt="image" src="https://github.com/user-attachments/assets/5a366468-19c2-47ca-9d37-91707059e771" />
+
 Optionally, retrieve extended node-level placement details:
 
 ```bash
@@ -295,6 +299,8 @@ webserver   2/2     Running   0          2m4s   10.22.0.9   jump-host   <none>  
 ```
 
 > **Screenshot: `kubectl get pod webserver -o wide` output showing Pod IP and node assignment**
+
+<img width="1022" height="499" alt="image" src="https://github.com/user-attachments/assets/accefa75-0352-4d24-a54c-e4533adda2f0" />
 
 ---
 
@@ -462,9 +468,8 @@ kubectl get pod webserver -o wide
 
 
 
-<img width="1019" height="731" alt="image" src="https://github.com/user-attachments/assets/a8ac7483-ee7f-4e1a-a297-7298a22a1dfa" />
-<img width="1020" height="859" alt="image" src="https://github.com/user-attachments/assets/5a366468-19c2-47ca-9d37-91707059e771" />
-<img width="1022" height="499" alt="image" src="https://github.com/user-attachments/assets/accefa75-0352-4d24-a54c-e4533adda2f0" />
+
+
 <img width="1017" height="846" alt="image" src="https://github.com/user-attachments/assets/4f27e50a-72fe-4f07-a6af-865750b8ce6d" />
 <img width="1018" height="857" alt="image" src="https://github.com/user-attachments/assets/861ebc13-b2ad-4c1c-9a35-10be02cf0854" />
 <img width="1024" height="855" alt="image" src="https://github.com/user-attachments/assets/2606534e-61ae-4e16-8a66-77a191da85a7" />
