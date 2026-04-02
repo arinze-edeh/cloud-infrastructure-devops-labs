@@ -297,7 +297,7 @@ aws ec2 describe-subnets \
 
 **Screenshot: Subnet ID subnet-03c3f0cfab32f1741 returned within the default VPC**
 
-![Step 6 - Subnet Identified](screenshots/img-05-keypair-images-vpc-subnet.png)
+<img width="1023" height="839" alt="image" src="https://github.com/user-attachments/assets/fbacab15-f778-4cd4-bb7d-5d354a59f312" />
 
 ---
 
@@ -333,7 +333,7 @@ aws ec2 describe-security-groups \
 
 **Screenshot: Default security group ID sg-010a9fc12de2386b2 retrieved, scoped to the default VPC**
 
-![Step 7 - Security Group Retrieved](screenshots/img-06-subnet-secgroup.png)
+<img width="1023" height="839" alt="image" src="https://github.com/user-attachments/assets/fbacab15-f778-4cd4-bb7d-5d354a59f312" />
 
 ---
 
