@@ -1,9 +1,8 @@
-# Provisioning EC2 Instances via AWS CLI: A Production-Style Infrastructure Workflow
+# Provisioning an EC2 Instance via AWS CLI: A Production-Grade Infrastructure Workflow
 
 > **Discipline:** Cloud Infrastructure | DevOps Engineering
 > **Domain:** AWS EC2 | CLI Automation | Foundational Provisioning
-> **Complexity:** Foundational to Intermediate
-> **Environment:** us-east-1 | Amazon Linux | t2.micro
+> **Environment:** us-east-1 | Amazon Linux 2023 | t2.micro
 
 ---
 
@@ -14,14 +13,16 @@
 - [Architecture Summary](#architecture-summary)
 - [Environment Configuration](#environment-configuration)
 - [Tools and Services Used](#tools-and-services-used)
-- [Step 1: Confirm AWS CLI Configuration](#step-1-confirm-aws-cli-configuration)
-- [Step 2: Identify the Default VPC](#step-2-identify-the-default-vpc)
-- [Step 3: Identify a Subnet in the Default VPC](#step-3-identify-a-subnet-in-the-default-vpc)
-- [Step 4: Create the EC2 Key Pair](#step-4-create-the-ec2-key-pair)
-- [Step 5: Secure the Private Key](#step-5-secure-the-private-key)
-- [Step 6: Identify the Amazon Linux AMI](#step-6-identify-the-amazon-linux-ami)
-- [Step 7: Launch the EC2 Instance](#step-7-launch-the-ec2-instance)
-- [Step 8: Verify EC2 Instance Status](#step-8-verify-ec2-instance-status)
+- [Step 1: Confirm AWS CLI Region Configuration](#step-1-confirm-aws-cli-region-configuration)
+- [Step 2: Create the EC2 Key Pair](#step-2-create-the-ec2-key-pair)
+- [Step 3: Secure the Private Key](#step-3-secure-the-private-key)
+- [Step 4: Identify the Latest Amazon Linux 2023 AMI](#step-4-identify-the-latest-amazon-linux-2023-ami)
+- [Step 5: Identify the Default VPC](#step-5-identify-the-default-vpc)
+- [Step 6: Identify a Subnet in the Default VPC](#step-6-identify-a-subnet-in-the-default-vpc)
+- [Step 7: Retrieve the Default Security Group ID](#step-7-retrieve-the-default-security-group-id)
+- [Step 8: Launch the EC2 Instance](#step-8-launch-the-ec2-instance)
+- [Step 9: Verify the Instance ID](#step-9-verify-the-instance-id)
+- [Step 10: Confirm the Instance is Running](#step-10-confirm-the-instance-is-running)
 - [Final Result](#final-result)
 - [Security and Operational Best Practices](#security-and-operational-best-practices)
 - [Troubleshooting and Edge Cases](#troubleshooting-and-edge-cases)
@@ -32,20 +33,20 @@
 
 ## Overview
 
-This project documents the end-to-end provisioning of an Amazon EC2 instance using the **AWS Command Line Interface (CLI)**. The workflow covers network resource discovery, key pair creation, AMI selection, instance launch, and programmatic state validation.
+This project documents the complete, end-to-end provisioning of an Amazon EC2 instance using the **AWS Command Line Interface (CLI)**. Every step follows the exact sequence executed in the terminal, from confirming CLI region configuration through to validating that the instance reached a `running` state.
 
-This documentation follows a **problem-solution-implementation-validation** structure and is intended as a reference for Cloud and DevOps engineers operating in CLI-driven or automation-first environments.
+The workflow demonstrates hands-on competence with programmatic resource discovery, secure key management, and instance lifecycle management. It follows a **problem-solution-implementation-validation** structure throughout and is suitable for onboarding engineers, production handoff documentation, and portfolio reference.
 
 ---
 
 ## Problem Statement
 
-Infrastructure teams frequently need to provision compute resources rapidly, repeatably, and without relying on the AWS Management Console. Console-based provisioning introduces human error, lacks auditability, and cannot be integrated into CI/CD pipelines. The CLI-first approach solves this by:
+Infrastructure teams require a repeatable, auditable, and automation-compatible approach to provisioning compute resources. Console-based provisioning is error-prone, non-scriptable, and cannot be integrated into CI/CD pipelines. The CLI-first approach addresses this by:
 
-- Enabling **scriptable, reproducible** provisioning workflows.
-- Providing **programmatic validation** of resource state.
-- Supporting **infrastructure-as-code** readiness through command composability.
-- Establishing a foundation for tools like **Terraform**, **Ansible**, and **AWS CloudFormation**.
+- Producing **reproducible, scriptable** provisioning sequences.
+- Enabling **programmatic validation** of resource state at each stage.
+- Establishing a direct path toward **infrastructure-as-code** tooling such as Terraform and CloudFormation.
+- Providing a **full audit trail** through CloudTrail logging of every API call.
 
 ---
 
@@ -55,19 +56,20 @@ Infrastructure teams frequently need to provision compute resources rapidly, rep
 IAM Credentials (configured via AWS CLI)
         |
         v
-Default VPC (us-east-1)
+Default VPC: vpc-047eb809070ac5824  (us-east-1)
         |
-        +---> Default Subnet (AZ: us-east-1x)
+        +---> Default Subnet:         subnet-03c3f0cfab32f1741
         |
-        +---> Default Security Group
+        +---> Default Security Group: sg-010a9fc12de2386b2
         |
-        +---> EC2 Key Pair (RSA, devops-kp)
+        +---> EC2 Key Pair:           devops-kp (RSA, devops-kp.pem)
         |
         v
 EC2 Instance: devops-ec2
-  - AMI:           Amazon Linux 2023
-  - Instance Type: t2.micro
-  - State:         running
+  Instance ID:   i-07fbce84650910c86
+  AMI:           ami-0e3008cbd8722baf0 (Amazon Linux 2023)
+  Instance Type: t2.micro
+  State:         running
 ```
 
 ---
@@ -79,136 +81,61 @@ EC2 Instance: devops-ec2
 | **Region** | us-east-1 |
 | **Instance Name** | devops-ec2 |
 | **Instance Type** | t2.micro |
-| **AMI** | Amazon Linux 2023 (al2023-ami-*-x86_64) |
-| **Key Pair** | devops-kp (RSA) |
-| **Security Group** | Default (VPC-scoped) |
-| **Network** | Default VPC and Default Subnet |
+| **AMI** | ami-0e3008cbd8722baf0 (Amazon Linux 2023, x86_64) |
+| **Key Pair Name** | devops-kp |
+| **Key Type** | RSA |
+| **Local Key File** | devops-kp.pem |
+| **VPC** | vpc-047eb809070ac5824 (Default) |
+| **Subnet** | subnet-03c3f0cfab32f1741 |
+| **Security Group** | sg-010a9fc12de2386b2 (Default) |
+| **Instance ID** | i-07fbce84650910c86 |
 
 ---
 
 ## Tools and Services Used
 
-- **AWS EC2** - compute provisioning and instance management
-- **AWS CLI** - programmatic interface for all resource operations
-- **Amazon Linux 2023 AMI** - hardened, AWS-optimized base image
-- **Default VPC and Security Group** - foundational network layer
-- **Linux Shell** - key management, permissions enforcement, and command execution
+- **AWS EC2** - compute provisioning and instance lifecycle management
+- **AWS CLI** - programmatic interface for all AWS resource operations
+- **Amazon Linux 2023 AMI** - AWS-maintained, hardened base image for x86_64
+- **Default VPC and Security Group** - foundational network layer for the region
+- **Linux Shell** - command execution, key management, and permission enforcement
 
 ---
 
-## Step 1: Confirm AWS CLI Configuration
+## Step 1: Confirm AWS CLI Region Configuration
 
-**Intent:** Verify that the AWS CLI is properly configured with valid credentials and the correct target region before executing any provisioning commands. Misconfigured credentials are the most common cause of silent failures or unintended cross-region deployments.
+**Intent:** Verify that the AWS CLI is targeting the correct region before executing any resource operations. All subsequent API calls inherit this region context, making verification the mandatory first gate of any provisioning workflow.
 
 **Command:**
 
 ```bash
-aws configure list
-# Alternatively, to confirm only the active region:
 aws configure get region
 ```
 
-**Expected Output:**
-- Active credentials are present (access key and secret key configured).
-- Region is set to `us-east-1`.
+**Output:**
 
-**Validation:**
-If the region is not `us-east-1`, update it with:
+```
+us-east-1
+```
+
+**Validation:** The command must return `us-east-1`. If the region is incorrect or empty, update it before proceeding:
+
 ```bash
 aws configure set region us-east-1
+aws configure get region   # Re-verify
 ```
 
-> **Operational Note:** In CI/CD pipelines and IAM role-based environments, credentials are injected via environment variables (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_DEFAULT_REGION`) rather than static profiles. Always prefer IAM roles over long-lived access keys in production.
+> **Operational Note:** In role-based or CI/CD environments, the region is typically injected via the `AWS_DEFAULT_REGION` environment variable rather than stored in a named profile. Always verify the active region explicitly before any provisioning run to prevent cross-region resource sprawl and unexpected billing.
 
-**Screenshot: AWS CLI region configuration confirmed as us-east-1**
+**Screenshot: AWS CLI region confirmed as us-east-1**
 
-<img width="1034" height="696" alt="image" src="https://github.com/user-attachments/assets/64b72aaf-dbc2-4e27-b98e-2ab1bfbbee5c" />
+![Step 1 - AWS Configure Get Region](screenshots/img-01-configure-region.png)
 
 ---
 
-## Step 2: Identify the Default VPC
+## Step 2: Create the EC2 Key Pair
 
-**Intent:** Retrieve the VPC ID of the default VPC in the target region. The default VPC provides pre-configured networking (subnets, route tables, internet gateway) and is suitable for non-production and foundational workloads.
-
-**Command:**
-
-```bash
-aws ec2 describe-vpcs \
-  --filters Name=isDefault,Values=true \
-  --query "Vpcs[0].VpcId" \
-  --output text
-```
-
-**Expected Output:**
-```
-vpc-047eb809070ac5824
-```
-
-**Validation:** The returned value must begin with `vpc-`. An empty response or `None` indicates no default VPC exists in the region and one must be created:
-
-```bash
-aws ec2 create-default-vpc
-```
-
-> **Operational Note:** In enterprise environments, the default VPC is typically deleted and replaced with a custom VPC featuring private/public subnet tiers, NAT gateways, and strict network ACLs. For this foundational lab, the default VPC is appropriate.
-
-**Screenshot: Default VPC ID successfully retrieved via AWS CLI**
-
-![Step 2 - Describe VPCs](screenshots/step2-describe-vpcs.png)
-
----
-
-## Step 3: Identify a Subnet in the Default VPC
-
-**Intent:** Retrieve a valid subnet ID within the default VPC. The subnet defines the Availability Zone (AZ) where the instance will be placed and must be reachable from within the VPC.
-
-**Command:**
-
-```bash
-aws ec2 describe-subnets \
-  --filters Name=vpc-id,Values=<DEFAULT_VPC_ID> \
-  --query "Subnets[0].SubnetId" \
-  --output text
-```
-
-Replace `<DEFAULT_VPC_ID>` with the value returned in Step 2. For example:
-
-```bash
-aws ec2 describe-subnets \
-  --filters Name=vpc-id,Values=vpc-047eb809070ac5824 \
-  --query "Subnets[0].SubnetId" \
-  --output text
-```
-
-**Expected Output:**
-```
-subnet-03c3f0cfab32f1741
-```
-
-**Validation:** Confirm the subnet is in a healthy state and associated with the correct VPC:
-
-```bash
-aws ec2 describe-subnets \
-  --filters Name=vpc-id,Values=vpc-047eb809070ac5824 \
-  --query "Subnets[].[SubnetId,AvailabilityZone,State]" \
-  --output table
-```
-
-> **Operational Note:** In production, prefer explicit subnet targeting by AZ for high-availability architectures. Deploying across multiple AZs using Auto Scaling Groups (ASGs) is the standard pattern for resilient workloads.
-
-**Screenshot Part 1: Subnet query command execution**
-
-![Step 3a - Describe Subnets](screenshots/step3a-describe-subnets.png)
-
-**Screenshot Part 2: Subnet ID returned for the default VPC**
-
-![Step 3b - Describe Subnets Output](screenshots/step3b-describe-subnets.png)
-
----
-
-## Step 4: Create the EC2 Key Pair
-
-**Intent:** Generate an RSA key pair to enable SSH access to the EC2 instance. The private key material is returned once at creation time and must be saved immediately. It cannot be retrieved again from AWS.
+**Intent:** Generate an RSA key pair named `devops-kp` and capture the private key locally as `devops-kp.pem`. AWS returns the private key **only once**, at creation time. Failure to save it here means permanent loss of key-based SSH access to any instance using this pair.
 
 **Command:**
 
@@ -220,30 +147,30 @@ aws ec2 create-key-pair \
   --output text > devops-kp.pem
 ```
 
-**Expected Output:**
-- No terminal output (the private key is written directly to `devops-kp.pem`).
-- File `devops-kp.pem` is created in the working directory.
+**Expected Behavior:**
+- No terminal output is printed. The private key material is redirected directly into `devops-kp.pem`.
+- The key pair `devops-kp` is registered in AWS EC2 for the `us-east-1` region.
 
-**Validation:** Confirm the file exists and contains valid PEM content:
+**Validation:**
 
 ```bash
 ls -lh devops-kp.pem
-head -1 devops-kp.pem  # Should output: -----BEGIN RSA PRIVATE KEY-----
+head -1 devops-kp.pem   # Must return: -----BEGIN RSA PRIVATE KEY-----
 ```
 
-> **Risk:** If `devops-kp.pem` is lost, SSH access to the instance is permanently unavailable. The only recovery path is to create a new key pair and replace it via the instance's user data or Systems Manager Session Manager.
+> **Risk:** Loss of `devops-kp.pem` means permanent loss of SSH access to any instance using this key pair. Recovery requires replacing the key via AWS Systems Manager Session Manager or re-imaging from a snapshot.
 
-> **Operational Note:** Never commit `.pem` files to version control. Add `*.pem` to `.gitignore` as a standing rule. For team environments, store private keys in a secrets manager such as AWS Secrets Manager or HashiCorp Vault.
+> **Operational Note:** Never commit `.pem` files to version control. Add `*.pem` to your global `.gitignore`. For team environments, store private keys in AWS Secrets Manager or HashiCorp Vault with fine-grained IAM access controls and full audit trails.
 
-**Screenshot: Key pair created and private key saved to devops-kp.pem**
+**Screenshot: Key pair creation command executed and private key written to devops-kp.pem**
 
-![Step 4 - Create Key Pair](screenshots/step4-create-keypair.png)
+![Step 2 - Create Key Pair](screenshots/img-07-keypair-only.png)
 
 ---
 
-## Step 5: Secure the Private Key
+## Step 3: Secure the Private Key
 
-**Intent:** Restrict file system permissions on the private key to owner-read-only (`400`). SSH clients enforce this requirement and will reject keys with overly permissive permissions with an `UNPROTECTED PRIVATE KEY FILE` error.
+**Intent:** Restrict the private key file permissions to owner-read-only (`400`). The SSH client enforces this requirement and will refuse to use a key file with broader permissions, raising an `UNPROTECTED PRIVATE KEY FILE` error and aborting the connection.
 
 **Commands:**
 
@@ -252,24 +179,25 @@ chmod 400 devops-kp.pem
 ls -l devops-kp.pem
 ```
 
-**Expected Output:**
+**Output:**
+
 ```
 -r-------- 1 root root 1675 Feb  1 16:39 devops-kp.pem
 ```
 
-**Validation:** The permission string must read `-r--------`. Any writable bits indicate an insecure state.
+**Validation:** The permission string must be exactly `-r--------`. Any writable bit indicates an insecure state that must be corrected before attempting SSH access.
 
-> **Operational Note:** On shared or multi-user systems, also verify the file ownership (`chown`) to ensure the key is not accessible by other system users. In containerized or ephemeral environments, consider using AWS Systems Manager Session Manager to eliminate the need for key-based SSH access entirely.
+> **Operational Note:** On shared or multi-user systems, also verify file ownership with `stat devops-kp.pem` to confirm no other system user can access the key via group or world permissions. For production environments, AWS Systems Manager Session Manager eliminates the need for key-based SSH entirely and provides IAM-controlled, audited shell access without opening port 22.
 
-**Screenshot: Private key permissions hardened to read-only (chmod 400 verified)**
+**Screenshot: chmod 400 applied and file permissions verified as -r--------**
 
-![Step 5 - Secure Key Permissions](screenshots/step5-secure-key.png)
+![Step 3 - Secure Private Key and chmod verified](screenshots/img-08-keypair-chmod-images.png)
 
 ---
 
-## Step 6: Identify the Amazon Linux AMI
+## Step 4: Identify the Latest Amazon Linux 2023 AMI
 
-**Intent:** Dynamically retrieve the latest Amazon Linux 2023 AMI ID for the `x86_64` architecture in the target region. Hardcoding AMI IDs is an anti-pattern because AMIs are region-specific and periodically superseded by updated releases.
+**Intent:** Dynamically retrieve the most recent Amazon Linux 2023 AMI ID for the `x86_64` architecture in `us-east-1`. Hardcoding AMI IDs is an operational anti-pattern because AMIs are region-specific, architecture-specific, and periodically superseded by security-patched and feature-updated releases.
 
 **Command:**
 
@@ -281,12 +209,13 @@ aws ec2 describe-images \
   --output text
 ```
 
-**Expected Output:**
+**Output:**
+
 ```
 ami-0e3008cbd8722baf0
 ```
 
-**Validation:** Confirm the AMI is available and not deprecated:
+**Validation:** Confirm the AMI is in `available` state before referencing it in a launch command:
 
 ```bash
 aws ec2 describe-images \
@@ -295,17 +224,122 @@ aws ec2 describe-images \
   --output table
 ```
 
-> **Operational Note:** For production workloads, consider pinning to a specific AMI ID after validation and testing, rather than using the latest dynamically. This ensures environment consistency across deployments. Use AWS Systems Manager Parameter Store (`/aws/service/ami-amazon-linux-latest/`) as a managed source of AMI IDs in automation scripts.
+> **Operational Note:** The `sort_by(@, &CreationDate)[-1]` JMESPath expression selects the newest matching AMI by creation date. For production deployments, pin to a validated, tested AMI ID after qualification to prevent uncontrolled drift from automatic image updates. AWS Systems Manager Parameter Store path `/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64` provides a managed, always-current AMI reference for use in automation.
 
-**Screenshot: Latest Amazon Linux 2023 AMI ID dynamically retrieved**
+**Screenshot: Latest Amazon Linux 2023 AMI ID dynamically retrieved as ami-0e3008cbd8722baf0**
 
-![Step 6 - Describe Images](screenshots/step6-describe-images.png)
+![Step 4 - AMI ID Retrieved](screenshots/img-09-keypair-chmod-ami-result.png)
 
 ---
 
-## Step 7: Launch the EC2 Instance
+## Step 5: Identify the Default VPC
 
-**Intent:** Provision the EC2 instance with all pre-collected resource identifiers. This single command brings together the AMI, instance type, key pair, network placement, security group, and resource tagging in one atomic operation.
+**Intent:** Retrieve the VPC ID of the default VPC in `us-east-1`. The default VPC is pre-configured with a set of public subnets, a main route table with internet gateway attachment, and a default security group. Its ID is required to scope both the subnet and security group discovery steps that follow.
+
+**Command:**
+
+```bash
+aws ec2 describe-vpcs \
+  --filters Name=isDefault,Values=true \
+  --query "Vpcs[0].VpcId" \
+  --output text
+```
+
+**Output:**
+
+```
+vpc-047eb809070ac5824
+```
+
+**Validation:** The returned value must begin with `vpc-`. A `None` response means no default VPC exists and one must be created:
+
+```bash
+aws ec2 create-default-vpc
+```
+
+> **Operational Note:** Enterprise environments typically delete the default VPC as a governance control and replace it with custom VPCs featuring private/public subnet tiers, NAT gateways, VPC Flow Logs, and strict network ACLs enforced via AWS Organizations Service Control Policies. This lab uses the default VPC to keep the focus on the EC2 provisioning workflow itself.
+
+**Screenshot: Default VPC ID vpc-047eb809070ac5824 returned**
+
+![Step 5 - Default VPC Identified](screenshots/img-02-keypair-images-vpc.png)
+
+---
+
+## Step 6: Identify a Subnet in the Default VPC
+
+**Intent:** Retrieve a valid subnet ID within the default VPC. The subnet determines the Availability Zone where the instance will be placed and must be within the same VPC as the security group used in the launch command.
+
+**Command:**
+
+```bash
+aws ec2 describe-subnets \
+  --filters Name=vpc-id,Values=vpc-047eb809070ac5824 \
+  --query "Subnets[0].SubnetId" \
+  --output text
+```
+
+**Output:**
+
+```
+subnet-03c3f0cfab32f1741
+```
+
+**Validation:** List all available subnets in the VPC with their AZ and state to confirm placement options:
+
+```bash
+aws ec2 describe-subnets \
+  --filters Name=vpc-id,Values=vpc-047eb809070ac5824 \
+  --query "Subnets[].[SubnetId,AvailabilityZone,State]" \
+  --output table
+```
+
+> **Operational Note:** In production, subnet selection must be intentional by Availability Zone for high-availability designs. Auto Scaling Groups distribute instances across multiple subnets in different AZs by default, which is the standard pattern for resilient, fault-tolerant workloads. Subnets should also be classified as public (with a route to an internet gateway) or private (with a route to a NAT gateway) based on the intended exposure of the workload.
+
+**Screenshot: Subnet ID subnet-03c3f0cfab32f1741 returned within the default VPC**
+
+![Step 6 - Subnet Identified](screenshots/img-05-keypair-images-vpc-subnet.png)
+
+---
+
+## Step 7: Retrieve the Default Security Group ID
+
+**Intent:** Retrieve the ID of the default security group associated with the default VPC. The default security group permits all inbound traffic from other members of the same group and all outbound traffic. Its ID is required as a parameter for the `run-instances` command.
+
+**Command:**
+
+```bash
+aws ec2 describe-security-groups \
+  --filters Name=vpc-id,Values=vpc-047eb809070ac5824 Name=group-name,Values=default \
+  --query "SecurityGroups[0].GroupId" \
+  --output text
+```
+
+**Output:**
+
+```
+sg-010a9fc12de2386b2
+```
+
+**Validation:** Confirm the security group VPC association and review its rules:
+
+```bash
+aws ec2 describe-security-groups \
+  --group-ids sg-010a9fc12de2386b2 \
+  --query "SecurityGroups[0].[GroupName,VpcId,Description]" \
+  --output table
+```
+
+> **Operational Note:** The default security group is appropriate only for foundational lab use. Production instances must use purpose-built security groups with explicit, least-privilege ingress rules. Port 22 (SSH) must never be open to `0.0.0.0/0` in any production context. Prefer AWS Systems Manager Session Manager to eliminate the need for SSH-based access entirely, removing the port 22 attack surface from the equation.
+
+**Screenshot: Default security group ID sg-010a9fc12de2386b2 retrieved, scoped to the default VPC**
+
+![Step 7 - Security Group Retrieved](screenshots/img-06-subnet-secgroup.png)
+
+---
+
+## Step 8: Launch the EC2 Instance
+
+**Intent:** Provision the EC2 instance by combining all previously collected identifiers into a single atomic `run-instances` command. This step creates the compute resource with the specified image, size, network placement, security group, key pair, and name tag.
 
 **Command:**
 
@@ -314,66 +348,80 @@ aws ec2 run-instances \
   --image-id ami-0e3008cbd8722baf0 \
   --instance-type t2.micro \
   --key-name devops-kp \
-  --subnet-id subnet-03c3f0cfab32f1741 \
   --security-group-ids sg-010a9fc12de2386b2 \
+  --subnet-id subnet-03c3f0cfab32f1741 \
   --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=devops-ec2}]'
 ```
 
-**Expected Output:**
-- A JSON response containing the `InstanceId` and initial state `"Name": "pending"`.
+**Expected Output:** AWS returns a JSON object immediately. Key fields to note and record:
 
-**Key response fields to note:**
-
-| Field | Value | Purpose |
+| JSON Field | Value | Purpose |
 |---|---|---|
-| `InstanceId` | `i-07fbce84650910c86` | Unique identifier for all future operations |
-| `State.Name` | `pending` | Initial launch state (transitions to `running`) |
-| `InstanceType` | `t2.micro` | Confirms correct sizing |
+| `InstanceId` | `i-07fbce84650910c86` | Primary identifier for all subsequent operations |
+| `State.Name` | `pending` | Initial launch state; instance is being allocated |
+| `ImageId` | `ami-0e3008cbd8722baf0` | Confirms correct AMI was used |
+| `InstanceType` | `t2.micro` | Confirms correct instance sizing |
 | `KeyName` | `devops-kp` | Confirms SSH key association |
 | `SubnetId` | `subnet-03c3f0cfab32f1741` | Confirms correct network placement |
+| `VpcId` | `vpc-047eb809070ac5824` | Confirms correct VPC scope |
 
-> **Operational Note:** For production workloads, extend this command with `--user-data` to run bootstrap scripts at launch (e.g., installing agents, configuring services), and `--iam-instance-profile` to attach an IAM role for secure, credential-free access to other AWS services.
+> **Operational Note:** For production workloads, extend this command with `--user-data` to run bootstrap scripts at first boot (agent installation, service configuration, registration with configuration management), and `--iam-instance-profile` to attach an IAM role so the instance can access AWS services without storing credentials on disk.
 
-**Screenshot Part 1: run-instances command execution and JSON response**
+**Screenshot Part 1: run-instances command executed with full JSON response, instance in pending state**
 
-![Step 7 - Run Instances Part 1](screenshots/step7-run-instances-pt1.png)
+![Step 8 Part 1 - Run Instances JSON](screenshots/img-10-run-instances-json.png)
 
-**Screenshot Part 2: Instance metadata confirming launch parameters and pending state**
+**Screenshot Part 2: Continued JSON response confirming InstanceId, State, SubnetId, VpcId, and PrivateIpAddress**
 
-![Step 7 - Run Instances Part 2](screenshots/step7-run-instances-pt2.png)
+![Step 8 Part 2 - Run Instances Metadata](screenshots/img-11-verify-running.png)
 
 ---
 
-## Step 8: Verify EC2 Instance Status
+## Step 9: Verify the Instance ID
 
-**Intent:** Programmatically confirm that the provisioned instance has reached the `running` state. Validation is a non-negotiable step in any provisioning workflow; it confirms the resource is operational and ready for use.
+**Intent:** Programmatically confirm the Instance ID of the newly launched instance by querying against the `Name` tag applied at launch. This validates that the tag was applied correctly and retrieves the canonical identifier for use in all subsequent operational commands.
 
-**Commands:**
+**Command:**
 
 ```bash
-# Retrieve Instance ID by name tag
 aws ec2 describe-instances \
   --filters Name=tag:Name,Values=devops-ec2 \
-  --query "Reservations[].Instances[].[InstanceId]" \
+  --query "Reservations[].Instances[].InstanceId" \
   --output text
+```
 
-# Confirm instance is in running state
+**Output:**
+
+```
+i-07fbce84650910c86
+```
+
+**Validation:** The returned Instance ID must match the `InstanceId` field from the `run-instances` JSON response in Step 8. A mismatch or empty result indicates a tagging error or a filter typo.
+
+> **Operational Note:** Tag-based querying is the standard operational pattern for managing resources at scale. It enables discovery and automation without maintaining external state or hardcoding Instance IDs in scripts. Consistent tagging across all resources is a prerequisite for cost attribution, automated compliance checks, and operational runbook execution.
+
+---
+
+## Step 10: Confirm the Instance is Running
+
+**Intent:** Confirm that the EC2 instance has fully transitioned from `pending` to `running`. This is the final validation gate of the provisioning workflow. An instance in the `running` state has completed hardware allocation, network interface attachment, and initial boot sequence.
+
+**Command:**
+
+```bash
 aws ec2 describe-instances \
   --filters Name=tag:Name,Values=devops-ec2 \
-  --query "Reservations[].Instances[].[InstanceId,State.Name]" \
-  --output table
+  --query "Reservations[].Instances[].State.Name" \
+  --output text
 ```
 
-**Expected Output:**
+**Output:**
+
 ```
--------------------------------------
-|        DescribeInstances          |
-+----------------------+------------+
-|  i-07fbce84650910c86 |  running   |
-+----------------------+------------+
+running
 ```
 
-**Alternative: Wait for running state with built-in waiter**
+**Alternative: Block until running using the built-in waiter**
 
 ```bash
 aws ec2 wait instance-running \
@@ -381,64 +429,61 @@ aws ec2 wait instance-running \
 echo "Instance is now running."
 ```
 
-> **Operational Note:** The `aws ec2 wait` family of commands are ideal for scripted pipelines where subsequent steps depend on instance readiness. They poll the API on a defined interval and block until the desired state is reached or a timeout occurs. For SSH readiness specifically, use `aws ec2 wait instance-status-ok`.
+**Connect via SSH once the instance is running:**
 
-**Screenshot Part 1: Instance state verification showing running status**
+```bash
+# Retrieve the public IP address
+aws ec2 describe-instances \
+  --filters Name=tag:Name,Values=devops-ec2 \
+  --query "Reservations[].Instances[].PublicIpAddress" \
+  --output text
 
-![Step 8 - Verify Status Part 1](screenshots/step8-verify-status-pt1.png)
+# Connect via SSH
+ssh -i devops-kp.pem ec2-user@<PUBLIC_IP>
+```
 
-**Screenshot Part 2: Final confirmation of instance ID and running state in tabular output**
+> **Operational Note:** `aws ec2 wait instance-running` polls the EC2 API every 15 seconds and exits cleanly when `running` state is confirmed, making it ideal for pipeline gate steps. For full SSH readiness validation (system and instance health checks passed), use `aws ec2 wait instance-status-ok` instead.
 
-![Step 8 - Verify Status Part 2](screenshots/step8-verify-status-pt2.png)
+**Screenshot: Instance ID i-07fbce84650910c86 retrieved and state confirmed as running**
+
+![Step 9 and 10 - Instance ID and Running State Confirmed](screenshots/img-11-verify-running.png)
 
 ---
 
 ## Final Result
 
-| Outcome | Status |
-|---|---|
-| EC2 instance provisioned via AWS CLI | Confirmed |
-| Instance named `devops-ec2` in us-east-1 | Confirmed |
-| Key pair `devops-kp` created and secured | Confirmed |
-| Instance state verified as `running` | Confirmed |
-| Resource tagging applied | Confirmed |
-| Private key permissions hardened to `400` | Confirmed |
-
-The instance `i-07fbce84650910c86` is operational and accessible via SSH using:
-
-```bash
-ssh -i devops-kp.pem ec2-user@<PUBLIC_IP>
-```
-
-Retrieve the public IP address with:
-
-```bash
-aws ec2 describe-instances \
-  --filters Name=tag:Name,Values=devops-ec2 \
-  --query "Reservations[].Instances[].PublicIpAddress" \
-  --output text
-```
+| Outcome | Detail | Status |
+|---|---|---|
+| EC2 instance provisioned via AWS CLI | Instance ID: `i-07fbce84650910c86` | Confirmed |
+| Correct AMI used | `ami-0e3008cbd8722baf0` (Amazon Linux 2023) | Confirmed |
+| Instance type correct | `t2.micro` | Confirmed |
+| Key pair created and secured | `devops-kp` / `devops-kp.pem` at `chmod 400` | Confirmed |
+| VPC and subnet correct | `vpc-047eb809070ac5824` / `subnet-03c3f0cfab32f1741` | Confirmed |
+| Security group applied | `sg-010a9fc12de2386b2` (Default) | Confirmed |
+| Resource tagged | `Name=devops-ec2` | Confirmed |
+| Instance state | `running` | Confirmed |
 
 ---
 
 ## Security and Operational Best Practices
 
 **Key Management**
-- Private key files (`.pem`) must never be committed to version control. Add `*.pem` to `.gitignore` globally.
-- In team environments, centralize key storage in AWS Secrets Manager or HashiCorp Vault.
-- Prefer AWS Systems Manager Session Manager over key-based SSH for production access. Session Manager eliminates the need to expose port 22 and provides full audit logging via CloudTrail.
+- Never commit `.pem` files to version control. Add `*.pem` to `.gitignore` globally and enforce this at the repository policy level.
+- Store private keys in AWS Secrets Manager or HashiCorp Vault for team-shared access with full audit trails and automatic rotation capability.
+- Prefer AWS Systems Manager Session Manager over key-based SSH in production. Session Manager requires no open port 22, records all session activity to CloudTrail and S3, and enforces access through IAM policies.
 
 **Network Security**
-- The default security group permits all outbound traffic and inbound traffic from the same security group. For production, define explicit ingress rules with the minimum required ports and source IP ranges.
-- Never use `0.0.0.0/0` as an SSH source CIDR in security group rules. Restrict to known IP ranges or use a bastion host pattern.
+- The default security group is appropriate only for foundational labs. Production instances must use dedicated security groups with explicit, least-privilege ingress rules.
+- Never expose port 22 to `0.0.0.0/0`. Restrict SSH source CIDRs to known IP ranges or eliminate key-based SSH entirely via Session Manager.
+- Enable VPC Flow Logs to capture all accepted and rejected traffic for audit and forensic purposes.
 
 **Resource Governance**
-- Apply consistent tagging (`Name`, `Environment`, `Owner`, `Project`) to all resources for cost attribution and operational traceability.
-- Enable AWS Cost Explorer and set billing alerts to prevent runaway costs from forgotten instances.
+- Apply consistent tags (`Name`, `Environment`, `Owner`, `Project`, `CostCenter`) to all resources at launch time for cost attribution, operational traceability, and automated policy enforcement.
+- Enable AWS Cost Explorer and configure billing alerts to catch runaway costs from forgotten running instances.
 
 **Automation Readiness**
-- This CLI workflow is the direct predecessor to infrastructure-as-code (IaC) tooling. The same parameters map directly to Terraform `aws_instance` resource blocks or AWS CloudFormation templates.
-- Use `--dry-run` flag with supported CLI commands to validate permissions before executing destructive or cost-incurring operations.
+- This CLI workflow maps directly to Terraform `aws_instance` resource definitions, CloudFormation `AWS::EC2::Instance` templates, and Ansible `amazon.aws.ec2_instance` playbooks.
+- Use `--dry-run` with supported AWS CLI commands to validate IAM permissions before executing provisioning or destructive operations.
 
 ---
 
@@ -446,13 +491,14 @@ aws ec2 describe-instances \
 
 | Symptom | Likely Cause | Resolution |
 |---|---|---|
-| `UnauthorizedOperation` error | IAM user lacks `ec2:RunInstances` permission | Attach appropriate IAM policy or escalate to admin |
-| `InvalidKeyPair.NotFound` | Key pair name mismatch | Verify with `aws ec2 describe-key-pairs` |
-| `InvalidAMIID.NotFound` | AMI not available in region | Re-run the `describe-images` query for the target region |
-| `VPCIdNotSpecified` | No default VPC exists | Create one with `aws ec2 create-default-vpc` |
-| `UNPROTECTED PRIVATE KEY FILE` on SSH | Key file permissions too open | Run `chmod 400 devops-kp.pem` |
-| Instance stuck in `pending` | Insufficient capacity for instance type | Retry with a different AZ or instance type |
-| SSH connection timeout | Security group blocks port 22 | Add inbound rule for TCP port 22 from your IP |
+| `UnauthorizedOperation` | IAM user or role lacks `ec2:RunInstances` or related permissions | Attach the required IAM policy or escalate to an administrator |
+| `InvalidKeyPair.NotFound` | Key pair name in the command does not match the registered name | Verify with `aws ec2 describe-key-pairs --key-names devops-kp` |
+| `InvalidAMIID.NotFound` | AMI ID is not available in the target region | Re-run the `describe-images` query scoped to `us-east-1` |
+| `VPCIdNotSpecified` | No default VPC exists in the region | Run `aws ec2 create-default-vpc` |
+| `UNPROTECTED PRIVATE KEY FILE` on SSH | Key file permissions are broader than `400` | Run `chmod 400 devops-kp.pem` and retry |
+| Instance stuck in `pending` | Insufficient On-Demand capacity for the instance type in the AZ | Retry with a subnet in a different AZ or use an alternative instance type |
+| SSH connection times out | Security group does not allow inbound TCP port 22 | Add a security group inbound rule for port 22 from your source IP |
+| `describe-instances` returns empty | Tag filter value mismatch or typo | Verify tag directly with `aws ec2 describe-instances --instance-ids i-07fbce84650910c86` |
 
 ---
 
@@ -460,24 +506,22 @@ aws ec2 describe-instances \
 
 This workflow directly mirrors the operational patterns used by DevOps and Cloud Engineers at scale:
 
-- **CLI-first provisioning** is the baseline competency for scripted infrastructure workflows, GitOps pipelines, and IaC migration projects.
-- **Programmatic resource discovery** (VPC, subnet, AMI) replaces error-prone console navigation and enables dynamic, environment-agnostic scripts.
-- **State validation via CLI** establishes the foundation for health checks, readiness gates, and deployment pipeline integration.
+- **CLI-first provisioning** is the baseline competency for scripted infrastructure workflows, GitOps pipelines, and infrastructure-as-code migration projects.
+- **Dynamic resource discovery** (VPC, subnet, AMI, security group) via CLI replaces error-prone console navigation and produces environment-agnostic, reusable provisioning scripts.
+- **Tag-based state validation** establishes the foundation for health checks, readiness gates, and deployment pipeline integration.
 
-Teams operating at FAANG scale extend this pattern with infrastructure tooling (Terraform, Pulumi), configuration management (Ansible, Chef), and immutable image pipelines (Packer) to achieve repeatable, auditable, and zero-touch deployments.
+Teams operating at scale extend this exact pattern with infrastructure tooling (Terraform, Pulumi), configuration management (Ansible, Chef), and immutable image pipelines (Packer) to achieve repeatable, auditable, and zero-touch deployments across hundreds or thousands of instances.
 
 ---
 
 ## Skills Demonstrated
 
-- **AWS CLI proficiency** - multi-service command execution, JMESPath querying, and output formatting
-- **EC2 provisioning fundamentals** - full instance lifecycle from resource discovery to state validation
-- **Cloud resource discovery** - dynamic retrieval of VPC, subnet, security group, and AMI identifiers
-- **Secure key pair management** - RSA key generation, secure storage, and Linux permission enforcement
-- **Linux permissions handling** - `chmod` enforcement aligned with SSH client security requirements
-- **Operational discipline** - resource tagging, validation steps, and documentation standards consistent with production engineering expectations
-
-
+- **AWS CLI proficiency** - multi-service command execution, JMESPath querying, and output format control
+- **EC2 provisioning fundamentals** - complete instance lifecycle from resource discovery to running-state validation
+- **Cloud resource discovery** - programmatic retrieval of VPC, subnet, security group, and AMI identifiers
+- **Secure key pair management** - RSA key generation, safe local storage, and AWS key registration
+- **Linux permissions enforcement** - `chmod 400` applied and verified for SSH client compliance
+- **Operational discipline** - resource tagging, step-by-step validation, and documentation standards consistent with production engineering expectations
 
 
 
