@@ -1,4 +1,4 @@
-# [Enabling EC2 Termination Protection on a Running Instance](https://github.com/arinze-edeh/cloud-infrastructure-devops-labs)
+# Enabling EC2 Termination Protection on a Running Instance
 
 Preventing accidental deletion of critical compute infrastructure through AWS-native instance protection controls.
 
