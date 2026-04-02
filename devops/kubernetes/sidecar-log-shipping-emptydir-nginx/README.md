@@ -237,6 +237,8 @@ pod/webserver created
 
 > **Screenshot: `kubectl apply -f webserver-pod.yaml` output confirming Pod creation**
 
+<img width="1024" height="653" alt="image" src="https://github.com/user-attachments/assets/530ae11b-f02b-4fb5-a3bf-a1a28a506806" />
+
 ---
 
 ### Step 5: Confirm Pod Status
@@ -459,7 +461,7 @@ kubectl get pod webserver -o wide
 
 
 
-<img width="1024" height="653" alt="image" src="https://github.com/user-attachments/assets/530ae11b-f02b-4fb5-a3bf-a1a28a506806" />
+
 <img width="1019" height="731" alt="image" src="https://github.com/user-attachments/assets/a8ac7483-ee7f-4e1a-a297-7298a22a1dfa" />
 <img width="1020" height="859" alt="image" src="https://github.com/user-attachments/assets/5a366468-19c2-47ca-9d37-91707059e771" />
 <img width="1022" height="499" alt="image" src="https://github.com/user-attachments/assets/accefa75-0352-4d24-a54c-e4533adda2f0" />
