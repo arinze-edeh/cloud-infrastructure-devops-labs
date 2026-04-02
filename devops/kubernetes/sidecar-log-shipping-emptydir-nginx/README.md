@@ -138,6 +138,8 @@ Metrics-server is running at https://127.0.0.1:6443/api/v1/namespaces/kube-syste
 
 > **Screenshot: `kubectl get nodes` and `kubectl cluster-info` output confirming cluster health**
 
+<img width="1021" height="591" alt="image" src="https://github.com/user-attachments/assets/486d49b2-fe1c-4ef8-9a0c-c05370a52835" />
+
 ---
 
 ### Step 2: Author the Pod Manifest
@@ -449,7 +451,7 @@ kubectl get pod webserver -o wide
 * [ubuntu - Docker Hub](https://hub.docker.com/_/ubuntu)
 
   
-<img width="1021" height="591" alt="image" src="https://github.com/user-attachments/assets/486d49b2-fe1c-4ef8-9a0c-c05370a52835" />
+
 <img width="1023" height="857" alt="image" src="https://github.com/user-attachments/assets/932a0f78-45d4-4c22-8a25-510a44bf4a83" />
 <img width="1024" height="852" alt="image" src="https://github.com/user-attachments/assets/09a4dfc2-9c27-4ec8-bf2a-bf6edae05523" />
 <img width="1021" height="614" alt="image" src="https://github.com/user-attachments/assets/5637bd89-0e43-461c-9f7c-4f3484073e86" />
