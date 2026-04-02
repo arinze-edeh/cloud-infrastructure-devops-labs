@@ -446,7 +446,7 @@ ssh -i devops-kp.pem ec2-user@<PUBLIC_IP>
 
 **Screenshot: Instance ID i-07fbce84650910c86 retrieved and state confirmed as running**
 
-![Step 9 and 10 - Instance ID and Running State Confirmed](screenshots/img-11-verify-running.png)
+<img width="1007" height="336" alt="image" src="https://github.com/user-attachments/assets/6ab60357-44f9-4a6f-8731-72c66eab56f6" />
 
 ---
 
