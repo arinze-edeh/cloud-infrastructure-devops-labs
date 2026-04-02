@@ -129,7 +129,7 @@ aws configure get region   # Re-verify
 
 **Screenshot: AWS CLI region confirmed as us-east-1**
 
-![Step 1 - AWS Configure Get Region](screenshots/img-01-configure-region.png)
+<img width="1034" height="696" alt="image" src="https://github.com/user-attachments/assets/64b72aaf-dbc2-4e27-b98e-2ab1bfbbee5c" />
 
 ---
 
