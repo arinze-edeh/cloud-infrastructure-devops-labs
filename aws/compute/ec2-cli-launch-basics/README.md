@@ -334,7 +334,7 @@ aws ec2 describe-security-groups \
 **Screenshot: Default security group ID sg-010a9fc12de2386b2 retrieved, scoped to the default VPC**
 
 <img width="1023" height="839" alt="image" src="https://github.com/user-attachments/assets/fbacab15-f778-4cd4-bb7d-5d354a59f312" />
-<img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/75b1ca3c-b273-41ba-accc-e38bf2dddab8" />
+
 
 ---
 
@@ -371,7 +371,7 @@ aws ec2 run-instances \
 **Screenshot: run-instances command executed with full JSON response, instance in pending state confirming InstanceId, State, SubnetId, VpcId, and PrivateIpAddress**
 
 <img width="1030" height="859" alt="image" src="https://github.com/user-attachments/assets/e3083489-1a78-45f6-be54-0ae227667f25" />
-
+<img width="1035" height="860" alt="image" src="https://github.com/user-attachments/assets/75b1ca3c-b273-41ba-accc-e38bf2dddab8" />
 
 ---
 
