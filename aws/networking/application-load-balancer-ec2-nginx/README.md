@@ -394,7 +394,8 @@ EC2 Security Group (sg-0d5e8ddf23e6d5ab3):
 
 **Screenshot: EC2 security group ingress rule added with ALB security group as the source, confirming ReferencedGroupInfo**
 
-![Terminal showing authorize-security-group-ingress command with source-group sg-0f2b9556d703a6a3c and SecurityGroupRules response with ReferencedGroupInfo](https://github.com/user-attachments/assets/605bc0a2-db1b-44d3-a6f6-db88a4e40e5a)
+<img width="1229" height="861" alt="image" src="https://github.com/user-attachments/assets/335f8db4-a3c4-4c76-a1f5-c0610a9afced" />
+
 
 ---
 
