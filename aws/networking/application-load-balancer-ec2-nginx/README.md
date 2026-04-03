@@ -127,13 +127,14 @@ AZ:             us-east-1b
 
 > **Operational Note:** Always confirm the instance is in a `running` state and is reachable on port 80 before registering it with a target group. A stopped or misconfigured instance will immediately fail health checks.
 
-**Screenshot: EC2 instance describe output showing instance metadata and network configuration**
+**Screenshots: EC2 instance describe output showing instance metadata and network configuration**
 
-![EC2 describe-instances output showing ReservationId, Architecture, BlockDeviceMappings, and NetworkInterfaces](https://github.com/user-attachments/assets/9db485cd-3b2d-4b09-b3b9-d049498a51fb)
+<img width="1039" height="805" alt="image" src="https://github.com/user-attachments/assets/9db485cd-3b2d-4b09-b3b9-d049498a51fb" />
+<img width="1034" height="828" alt="image" src="https://github.com/user-attachments/assets/a96ff6d9-c1e7-4ef8-80cf-5222400f45b8" />
+<img width="1033" height="829" alt="image" src="https://github.com/user-attachments/assets/e9412cb5-c775-4336-9de0-ca9f7f66fcde" />
+<img width="1035" height="870" alt="image" src="https://github.com/user-attachments/assets/fb14a97a-917f-4b14-bd57-19e73b2ff7dc" />
 
-**Screenshot: EC2 instance confirm running state, Instance ID, VPC, Subnet, and IP address details**
-
-![EC2 instance details showing InstanceId i-011ae72a16b4398f6, State running, SubnetId, VpcId, and PublicIpAddress](https://github.com/user-attachments/assets/a96ff6d9-c1e7-4ef8-80cf-5222400f45b8)
+>**EC2 instance confirm running state, Instance ID, VPC, Subnet, and IP address details**
 
 ---
 
