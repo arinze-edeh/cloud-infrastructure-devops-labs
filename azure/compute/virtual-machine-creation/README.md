@@ -313,8 +313,3 @@ This typically indicates the NSG rule was not correctly applied, the VM is still
 ## Conclusion
 
 This document provides a complete, validated walkthrough for provisioning an Azure Virtual Machine via the Portal UI, from initial configuration through SSH connectivity verification. The implementation demonstrates core Azure compute provisioning skills including VM sizing, disk selection, network security group configuration, and key-based authentication.
-
-The provisioned `xfusion-vm` serves as a validated foundational compute resource for subsequent infrastructure workloads within the Nautilus DevOps migration program. For repeatable provisioning at scale, the patterns established here should be codified into Infrastructure as Code using Terraform or Bicep.
-
-
-ccess an Azure Virtual Machine using best practices, forming a core building block for cloud infrastructure migration.
