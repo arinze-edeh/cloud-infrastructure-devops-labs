@@ -148,9 +148,10 @@ aws ec2 authorize-security-group-ingress \
 
 **Purpose:** Permits inbound TCP traffic on port 80 from any source IP. This enables the server to respond to HTTP requests from the public internet, which is the expected behavior for a publicly accessible web application.
 
-**Screenshot: HTTP and SSH ingress rules authorized**
+**Screenshots: HTTP and SSH ingress rules authorized**
 
 <img width="995" height="821" alt="image" src="https://github.com/user-attachments/assets/7f17dc21-9229-4a38-8410-54852d751c5b" />
+<img width="971" height="712" alt="image" src="https://github.com/user-attachments/assets/5133bef5-88f1-47b5-bc07-174954d488d8" />
 
 
 *Both port 80 and port 22 ingress rules are authorized successfully. Each rule returns a `SecurityGroupRuleId` confirming the rule was applied.*
