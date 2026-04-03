@@ -34,7 +34,7 @@
 
 ## Project Overview
 
-This document provides a **production-grade reference implementation** for provisioning a foundational public AWS network topology using the AWS CLI. The infrastructure establishes a custom Virtual Private Cloud (VPC) with internet-facing compute capability, forming a reusable baseline for cloud-native and hybrid workloads deployed to AWS.
+This document provides a **production-style reference implementation** for provisioning a foundational public AWS network topology using the AWS CLI. The infrastructure establishes a custom Virtual Private Cloud (VPC) with internet-facing compute capability, forming a reusable baseline for cloud-native and hybrid workloads deployed to AWS.
 
 All resources are provisioned programmatically via the AWS CLI in the **us-east-1** region, following the principle of infrastructure-as-code and explicit resource ownership.
 
