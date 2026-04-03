@@ -191,7 +191,11 @@ nginx-deployment   3/3     3            3           29s
 
 All three fields `READY`, `UP-TO-DATE`, and `AVAILABLE` must read `3` before the deployment is considered healthy.
 
-> **Screenshot:** `03-deployment-ready.png` - `kubectl get deployment` output showing 3/3 replicas ready and available.
+> **Screenshot:** 
+
+<img width="1035" height="672" alt="image" src="https://github.com/user-attachments/assets/4b7e961a-c80c-4a1e-8305-00bea21e4039" />
+
+>`kubectl get deployment` output showing 3/3 replicas ready and available.
 
 ---
 
@@ -490,7 +494,7 @@ sudo ufw allow 30011/tcp
 
 <img width="1029" height="705" alt="image" src="https://github.com/user-attachments/assets/3463bb7d-5f48-4c03-9e98-15e443758c15" />
 
-<img width="1035" height="672" alt="image" src="https://github.com/user-attachments/assets/4b7e961a-c80c-4a1e-8305-00bea21e4039" />
+
 <img width="1025" height="849" alt="image" src="https://github.com/user-attachments/assets/7ec1d7d8-0e22-4eff-95b1-eec430ae8783" />
 <img width="1029" height="868" alt="image" src="https://github.com/user-attachments/assets/4ef25fb4-a835-415a-8d20-bd0384dd05e1" />
 <img width="1026" height="505" alt="image" src="https://github.com/user-attachments/assets/60b5a9ab-986c-4c53-8332-cb6ef5c199c0" />
