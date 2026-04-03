@@ -150,7 +150,8 @@ aws ec2 authorize-security-group-ingress \
 
 **Screenshot: HTTP and SSH ingress rules authorized**
 
-![Inbound Rule Configuration](https://github.com/user-attachments/assets/5618d954-e849-4621-9fbd-63eef140042d)
+<img width="995" height="821" alt="image" src="https://github.com/user-attachments/assets/7f17dc21-9229-4a38-8410-54852d751c5b" />
+
 
 *Both port 80 and port 22 ingress rules are authorized successfully. Each rule returns a `SecurityGroupRuleId` confirming the rule was applied.*
 
