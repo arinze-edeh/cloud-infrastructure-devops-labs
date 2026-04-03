@@ -227,23 +227,12 @@ aws ec2 describe-security-groups \
 
 **What this does:** Returns the full specification of the security group including its VPC association, all inbound (`IpPermissions`) rules, and all outbound (`IpPermissionsEgress`) rules.
 
-**Screenshot: Full security group verification output (Part 1)**
+**Screenshot: Security group verification output**
 
-![Security Group Describe Output Part 1](https://github.com/user-attachments/assets/02d93e47-5a6e-4c3a-a24b-279a0f6f09eb)
+<img width="999" height="836" alt="image" src="https://github.com/user-attachments/assets/1aaf2143-c059-4dd4-a7b5-9062c9874698" />
 
-*The describe output confirms the group is linked to `vpc-01ebedea54fdb8b6b`, has the correct name and description, and shows both inbound rules for TCP 80 and TCP 22.*
 
-**Screenshot: Full security group verification output (Part 2)**
-
-![Security Group Describe Output Part 2](https://github.com/user-attachments/assets/17853506-e6a6-44a3-bd10-a3113cdf4b4c)
-
-*Continued output confirming the TCP 22 rule with `CidrIp: "0.0.0.0/0"` is active alongside the HTTP rule.*
-
-**Screenshot: Full security group verification output (Part 3)**
-
-![Security Group Describe Output Part 3](https://github.com/user-attachments/assets/8aeca849-6020-4ae5-b0a3-14dbb7435dec)
-
-*Final section of the describe output confirming the egress rule (all traffic allowed outbound by default) and the complete rule set is intact.*
+*Output confirming the egress rule (all traffic allowed outbound by default) and the complete rule set is intact.*
 
 **Validation Checklist:**
 
