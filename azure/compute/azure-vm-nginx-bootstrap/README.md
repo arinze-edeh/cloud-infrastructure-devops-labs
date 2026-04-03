@@ -1,6 +1,6 @@
 # Azure VM Nginx Web Server Deployment
 
-> **Enterprise-Grade Infrastructure Provisioning on Microsoft Azure**
+> **Enterprise-style Infrastructure Provisioning on Microsoft Azure**
 > A production-ready Ubuntu web server deployed via Azure CLI with automated Nginx configuration, network security hardening, and live HTTP validation.
 
 ---
