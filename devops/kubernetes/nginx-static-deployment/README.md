@@ -352,7 +352,11 @@ replicaset.apps/nginx-deployment-6554fcb65f   3         3         3       6m37s
 
 All 3 pods must be in `Running` status with `0` restarts, confirming the containers have started cleanly with no crash-loop behaviour.
 
-> **Screenshot:** `06-full-validation.png` - jsonpath verification outputs and `kubectl get all -l app=nginx` confirming all 3 pods running with 0 restarts.
+> **Screenshot:**
+
+<img width="1031" height="765" alt="image" src="https://github.com/user-attachments/assets/e8992736-7c9d-4fdd-83de-398fc8a0edbb" />
+
+>jsonpath verification outputs and `kubectl get all -l app=nginx` confirming all 3 pods running with 0 restarts.
 
 ---
 
@@ -494,18 +498,3 @@ sudo ufw allow 30011/tcp
 
 ---
 
-
-
-
-
-
-
-<img width="1029" height="705" alt="image" src="https://github.com/user-attachments/assets/3463bb7d-5f48-4c03-9e98-15e443758c15" />
-
-
-<img width="1025" height="849" alt="image" src="https://github.com/user-attachments/assets/7ec1d7d8-0e22-4eff-95b1-eec430ae8783" />
-
-<img width="1026" height="505" alt="image" src="https://github.com/user-attachments/assets/60b5a9ab-986c-4c53-8332-cb6ef5c199c0" />
-
-<img width="1034" height="532" alt="image" src="https://github.com/user-attachments/assets/edca0ab1-d7bb-4db0-a627-2851e785f812" />
-<img width="1031" height="765" alt="image" src="https://github.com/user-attachments/assets/e8992736-7c9d-4fdd-83de-398fc8a0edbb" />
