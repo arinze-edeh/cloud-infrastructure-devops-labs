@@ -240,9 +240,8 @@ Validation is complete when the resource record is visible in the SSH Keys servi
 
 ## Conclusion
 
-This runbook demonstrates that provisioning SSH key pairs via the Azure Portal is the correct, compliant, and operationally sound method for teams operating within Azure-governed environments. By using the Azure Portal's built-in SSH key provisioning flow, engineers ensure that cryptographic resources are registered in the Azure control plane, subject to RBAC, and visible to auditing and monitoring tooling.
+This demonstrates that provisioning SSH key pairs via the Azure Portal is the correct, compliant, and operationally sound method for teams operating within Azure-governed environments. By using the Azure Portal's built-in SSH key provisioning flow, engineers ensure that cryptographic resources are registered in the Azure control plane, subject to RBAC, and visible to auditing and monitoring tooling.
 
 The procedure described in this document establishes a repeatable, enterprise-grade pattern for SSH key lifecycle management. Teams onboarding to Azure infrastructure should adopt this approach as the default standard for all SSH key provisioning activities.
 
 ---
-e ensures compatibility, security, and compliance with Azure-managed workflows.
