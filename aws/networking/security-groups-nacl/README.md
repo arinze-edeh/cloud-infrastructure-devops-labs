@@ -121,7 +121,8 @@ aws ec2 create-security-group \
 
 **Screenshot: Security Group successfully created**
 
-![Security Group Creation Output](https://github.com/user-attachments/assets/11847b2f-bfdf-48b4-855a-d74363241635)
+<img width="992" height="679" alt="image" src="https://github.com/user-attachments/assets/42f4783a-1bae-4456-9f6b-b0f4e7175551" />
+
 
 *The returned `GroupId` (`sg-0ea00d5ddf9da2bac`) is the unique identifier used in all subsequent rule configuration and instance association commands.*
 
