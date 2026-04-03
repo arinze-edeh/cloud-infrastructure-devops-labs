@@ -1,6 +1,6 @@
 # EC2 CPU Utilization Monitoring with CloudWatch Threshold Alerting
 
-> **Production-grade observability setup:** Monitor EC2 compute resources, enforce CPU utilization thresholds, and deliver incident notifications through SNS, all driven through the AWS CLI.
+> **Production-style observability setup:** Monitor EC2 compute resources, enforce CPU utilization thresholds, and deliver incident notifications through SNS, all driven through the AWS CLI.
 
 ---
 
