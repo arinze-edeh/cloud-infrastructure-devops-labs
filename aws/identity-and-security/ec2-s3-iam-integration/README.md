@@ -1,6 +1,6 @@
 # EC2 to S3 Integration via IAM Role and Instance Profile
 
-> **Enterprise DevOps Infrastructure Setup** | AWS | IAM | EC2 | S3 | Ubuntu 22.04
+> **Enterprise-style DevOps Infrastructure Setup** | AWS | IAM | EC2 | S3 | Ubuntu 22.04
 
 ---
 
