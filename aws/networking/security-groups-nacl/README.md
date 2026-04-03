@@ -86,7 +86,8 @@ aws ec2 describe-vpcs \
 
 **Screenshot: VPC ID retrieval and Security Group creation**
 
-![VPC Identification and Security Group Creation](https://github.com/user-attachments/assets/11847b2f-bfdf-48b4-855a-d74363241635)
+<img width="995" height="686" alt="image" src="https://github.com/user-attachments/assets/05781afe-e697-4e8f-ad2b-632c37d1ab87" />
+
 
 *The VPC ID `vpc-01ebedea54fdb8b6b` is retrieved and immediately used to scope the new security group to the correct network boundary.*
 
