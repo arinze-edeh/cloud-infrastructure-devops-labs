@@ -5,14 +5,8 @@
 ---
 
 ![AWS](https://img.shields.io/badge/AWS-VPC%20Peering-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-
 ![Region](https://img.shields.io/badge/Region-us--east--1-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
-
-
 ![IaC](https://img.shields.io/badge/IaC-AWS%20CLI-0078D4?style=for-the-badge&logo=terminal&logoColor=white)
 
 
