@@ -232,7 +232,11 @@ kubectl apply -f nginx-service.yaml
 service/nginx-service created
 ```
 
-> **Screenshot:** `04-service-apply.png` - Terminal output confirming `service/nginx-service created` after applying the Service manifest.
+> **Screenshot:**
+
+<img width="1029" height="868" alt="image" src="https://github.com/user-attachments/assets/4ef25fb4-a835-415a-8d20-bd0384dd05e1" />
+
+>Terminal output confirming `service/nginx-service created` after applying the Service manifest.
 
 ---
 
@@ -496,7 +500,7 @@ sudo ufw allow 30011/tcp
 
 
 <img width="1025" height="849" alt="image" src="https://github.com/user-attachments/assets/7ec1d7d8-0e22-4eff-95b1-eec430ae8783" />
-<img width="1029" height="868" alt="image" src="https://github.com/user-attachments/assets/4ef25fb4-a835-415a-8d20-bd0384dd05e1" />
+
 <img width="1026" height="505" alt="image" src="https://github.com/user-attachments/assets/60b5a9ab-986c-4c53-8332-cb6ef5c199c0" />
 <img width="1028" height="858" alt="image" src="https://github.com/user-attachments/assets/ac8f1310-92e5-4926-9ec5-b0030b08d444" />
 <img width="1034" height="532" alt="image" src="https://github.com/user-attachments/assets/edca0ab1-d7bb-4db0-a627-2851e785f812" />
