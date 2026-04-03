@@ -120,7 +120,11 @@ NAME        STATUS   ROLES           AGE   VERSION
 jump-host   Ready    control-plane   60m   v1.34.1+k3s1
 ```
 
-> **Screenshot:** `01-cluster-info-and-nodes.png` - Cluster info and node readiness output confirming the control plane is reachable and the node is in Ready state.
+> **Screenshot:**
+
+<img width="1033" height="452" alt="image" src="https://github.com/user-attachments/assets/ad20ae68-046c-4a50-bcdf-6886ce0300de" />
+
+Cluster info and node readiness output confirming the control plane is reachable and the node is in Ready state.
 
 ---
 
@@ -479,7 +483,7 @@ sudo ufw allow 30011/tcp
 
 
 
-<img width="1033" height="452" alt="image" src="https://github.com/user-attachments/assets/ad20ae68-046c-4a50-bcdf-6886ce0300de" />
+
 <img width="1029" height="705" alt="image" src="https://github.com/user-attachments/assets/3463bb7d-5f48-4c03-9e98-15e443758c15" />
 <img width="1031" height="643" alt="image" src="https://github.com/user-attachments/assets/b337f925-0455-4914-8d4e-d2c808b61c00" />
 <img width="1035" height="672" alt="image" src="https://github.com/user-attachments/assets/4b7e961a-c80c-4a1e-8305-00bea21e4039" />
