@@ -1,4 +1,4 @@
-# [AWS EBS Snapshot Creation: Point-in-Time Backup for Critical DevOps Volumes](https://github.com/arinze-edeh/cloud-infrastructure-devops-labs)
+# AWS EBS Snapshot Creation: Point-in-Time Backup for Critical DevOps Volumes
 
 ## Table of Contents
 
