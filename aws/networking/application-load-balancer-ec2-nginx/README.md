@@ -201,7 +201,7 @@ aws ec2 authorize-security-group-ingress \
 
 **Screenshot: ALB security group creation and inbound HTTP rule authorization showing GroupId sg-0f2b9556d703a6a3c and CidrIpv4 0.0.0.0/0**
 
-![Terminal showing create-security-group and authorize-security-group-ingress commands with successful SecurityGroupRules response](https://github.com/user-attachments/assets/fb14a97a-917f-4b14-bd57-19e73b2ff7dc)
+<img width="1034" height="695" alt="image" src="https://github.com/user-attachments/assets/6fe4a8c6-5ddf-4c99-b4b0-fb9999ab6218" />
 
 ---
 
