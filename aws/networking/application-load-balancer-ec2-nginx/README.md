@@ -159,7 +159,7 @@ vpc-0c3f56dfe99c83d0d
 
 **Screenshot: Default VPC ID retrieval confirming vpc-0c3f56dfe99c83d0d**
 
-![Terminal output showing aws ec2 describe-vpcs command returning vpc-0c3f56dfe99c83d0d](https://github.com/user-attachments/assets/e9412cb5-c775-4336-9de0-ca9f7f66fcde)
+<img width="1041" height="368" alt="image" src="https://github.com/user-attachments/assets/1ae5db7b-3b6b-4f4d-8404-93d83728d391" />
 
 ---
 
