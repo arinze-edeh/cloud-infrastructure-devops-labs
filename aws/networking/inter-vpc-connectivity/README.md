@@ -1,6 +1,6 @@
 # AWS VPC Peering - Cross-VPC Private Connectivity
 
-> **Enterprise-grade private network connectivity between isolated AWS VPCs using VPC Peering, enabling secure inter-instance communication without traversing the public internet.**
+> **Enterprise-style private network connectivity between isolated AWS VPCs using VPC Peering, enabling secure inter-instance communication without traversing the public internet.**
 
 ---
 
