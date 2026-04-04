@@ -1,9 +1,7 @@
 # Azure VM Disk Expansion and Data Disk Provisioning
 
 ![Azure](https://img.shields.io/badge/Azure-Cloud-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-
 ![Status](https://img.shields.io/badge/Status-Production_Ready-28a745?style=for-the-badge)
 
 ---
