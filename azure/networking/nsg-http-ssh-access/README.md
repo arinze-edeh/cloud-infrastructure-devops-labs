@@ -123,7 +123,7 @@ Your Resource Group is: kml_rg_main-f56fa9d90d7842e1
 
 **Screenshot: Dynamic resource group name resolution via Azure CLI query**
 
-![Resource group resolution output](./screenshots/02-resource-group-resolve.png)
+<img width="1033" height="629" alt="image" src="https://github.com/user-attachments/assets/15612c68-a301-48ff-bbdf-7a7899224078" />
 
 ---
 
