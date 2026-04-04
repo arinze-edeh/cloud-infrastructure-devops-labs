@@ -1,6 +1,6 @@
 # Attaching a Network Interface to an Azure Virtual Machine via Azure CLI
 
-> **Production-Grade Infrastructure Operations Guide**
+> **Production-Style Infrastructure Operations Guide**
 > Authored for enterprise environments, onboarding engineers, and production-level handoff documentation.
 
 ---
