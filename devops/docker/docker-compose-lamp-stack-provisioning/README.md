@@ -1,6 +1,6 @@
 # Containerized Application Stack Deployment with Docker Compose
 
-> **Enterprise DevOps | Nautilus Infrastructure | Stratos Datacenter**
+> **Enterprise-style DevOps | Nautilus Infrastructure | Stratos Datacenter**
 
 > Deploying a production-ready, multi-service containerized stack (PHP/Apache + MariaDB) on Application Server 3 using Docker Compose with persistent volume mounts and environment-based secrets management.
 
