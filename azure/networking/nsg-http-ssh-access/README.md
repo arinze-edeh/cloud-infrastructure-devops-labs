@@ -251,7 +251,7 @@ Allow-SSH   kml_rg_main-f56fa9d90d7842e1    110       *                 *       
 
 **Screenshot: Final NSG rule list in tabular format confirming both Allow-HTTP (priority 100) and Allow-SSH (priority 110) are active and correctly configured**
 
-![Final NSG inbound rules table validation](./screenshots/07-nsg-rule-list-validation.png)
+<img width="1191" height="627" alt="image" src="https://github.com/user-attachments/assets/acafbb42-bef3-4e13-ba85-83f4f0fbf464" />
 
 ---
 
