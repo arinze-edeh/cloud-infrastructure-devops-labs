@@ -5,13 +5,9 @@
 ---
 
 [![Azure](https://img.shields.io/badge/Azure-Cloud-0089D6?style=flat-square&logo=microsoft-azure)](https://azure.microsoft.com)
-
 [![Nginx](https://img.shields.io/badge/Nginx-Web_Server-009639?style=flat-square&logo=nginx)](https://nginx.org)
-
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-E95420?style=flat-square&logo=ubuntu)](https://ubuntu.com)
-
 [![CLI](https://img.shields.io/badge/Azure_CLI-Automated-0078D4?style=flat-square)](https://docs.microsoft.com/cli/azure)
-
 [![Status](https://img.shields.io/badge/Status-Production_Ready-brightgreen?style=flat-square)]()
 
 ---
