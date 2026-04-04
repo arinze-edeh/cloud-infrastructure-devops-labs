@@ -1,4 +1,4 @@
-# [Azure Networking: Provisioning Virtual Networks via Azure CLI](https://github.com/arinze-edeh/cloud-infrastructure-devops-labs)
+# Azure Networking: Provisioning Virtual Networks via Azure CLI
 
 > Foundational network layer provisioning for cloud-native infrastructure using Azure CLI 2.67.0
 
