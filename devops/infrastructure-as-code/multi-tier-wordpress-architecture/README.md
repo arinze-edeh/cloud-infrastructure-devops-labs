@@ -412,6 +412,8 @@ sudo systemctl restart httpd
 
 ![Final httpd restart confirmation from jumphost](https://github.com/user-attachments/assets/27b88a05-1bba-4b23-9344-5345ae9a8388)
 
+<img width="1034" height="786" alt="image" src="https://github.com/user-attachments/assets/3a1970b3-5536-4075-9c3a-99d5c1ef6b0d" />
+
 ---
 
 ## Validation
