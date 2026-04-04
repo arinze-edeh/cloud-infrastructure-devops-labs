@@ -225,11 +225,13 @@ Key fields to confirm in the JSON response:
 | `provisioningState` | `Succeeded` |
 | `publicIPAddress.id` | Full ARM ID of `datacenter-pip` |
 
-![NIC Public IP Attachment Result](./screenshots/step4b-nic-update-result.png)
-*Figure 7: JSON response from the NIC ip-config update command showing `provisioningState: Succeeded` and the linked Public IP resource.*
+<img width="1040" height="834" alt="image" src="https://github.com/user-attachments/assets/fcc044cd-7b7e-4fa6-adb9-29a8fe7047f9" />
 
-![NIC Public IP Attachment Full Output](./screenshots/step4b-nic-update-full.png)
-*Figure 8: Full output of the successful NIC update, confirming the Public IP is now associated with the primary IP configuration.*
+>*JSON response from the NIC ip-config update command showing `provisioningState: Succeeded` and the linked Public IP resource.*
+
+<img width="1040" height="834" alt="image" src="https://github.com/user-attachments/assets/fcc044cd-7b7e-4fa6-adb9-29a8fe7047f9" />
+
+>*Full output of the successful NIC update, confirming the Public IP is now associated with the primary IP configuration.*
 
 ---
 
@@ -245,9 +247,6 @@ az vm list-ip-addresses \
 ```
 
 **Expected output:** The VM's public IP address should display as `23.100.42.173`, confirming successful association.
-
-![Public IP Confirmed on VM](./screenshots/step5-public-ip-confirmed.png)
-*Figure 9: `az vm list-ip-addresses` output confirming Public IP `23.100.42.173` is now actively assigned to the VM.*
 
 ---
 
