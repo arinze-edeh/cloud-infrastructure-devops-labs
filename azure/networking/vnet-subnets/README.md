@@ -114,7 +114,7 @@ kml_rg_main-0e6ddfb2b553417d     eastus      Succeeded
 
 📸 **Screenshot 2: Resource group confirmed via `az group list`**
 
-<img width="1056" height="484" alt="az group list output showing kml_rg_main resource group in eastus" src="https://github.com/user-attachments/assets/c40da632-59aa-4ee6-80cf-85002879e540" />
+<img width="990" height="465" alt="image" src="https://github.com/user-attachments/assets/34b4f1f6-2aaa-4a18-bf3f-3e5a57a8feab" />
 
 ---
 
