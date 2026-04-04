@@ -99,8 +99,9 @@ az group list --query "[].{Name:name, Location:location}" --output table
 
 **Expected output:** Confirms the resource group `kml_rg_main-bf56eb2fed794029` is present and located in `eastus`.
 
-![Resource Group Listing](./screenshots/step2a-resource-group-list.png)
-*Figure 1: Azure CLI output confirming the resource group name and region.*
+<img width="1030" height="696" alt="image" src="https://github.com/user-attachments/assets/561881e2-1d5b-4576-80d9-37ae515aa2ac" />
+
+*Azure CLI output confirming the resource group name and region.*
 
 ---
 
