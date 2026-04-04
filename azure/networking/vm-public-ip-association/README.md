@@ -151,8 +151,9 @@ az network public-ip list \
 
 **Expected output:** Confirms `datacenter-pip` exists in `westus` with IP address `23.100.42.173` and `ProvisioningState: Succeeded`.
 
-![Public IP Verification](./screenshots/step2d-public-ip-list.png)
-*Figure 4: Public IP address listing confirming resource name, region, address, and provisioning state.*
+<img width="1033" height="558" alt="image" src="https://github.com/user-attachments/assets/e6ce3e45-5d44-48ff-9387-080733c47adc" />
+
+>*Public IP address listing confirming resource name, region, address, and provisioning state.*
 
 ---
 
