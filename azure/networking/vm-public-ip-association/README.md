@@ -196,8 +196,9 @@ PIP_ID=$(az network public-ip show \
 
 > Using the full resource ID (`$PIP_ID`) rather than just the resource name is critical when resources span different Azure regions, as it provides an unambiguous reference that bypasses regional name-resolution scope.
 
-![Capturing Public IP Resource ID](./screenshots/step4a-pip-id-capture.png)
-*Figure 6: Public IP resource ID captured into the `$PIP_ID` variable for use in the update command.*
+<img width="1034" height="795" alt="image" src="https://github.com/user-attachments/assets/1b2fe9c1-d95f-4bc6-8400-aedc332749f7" />
+
+>*Public IP resource ID captured into the `$PIP_ID` variable for use in the update command.*
 
 ---
 
