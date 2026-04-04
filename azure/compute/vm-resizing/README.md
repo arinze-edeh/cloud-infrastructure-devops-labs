@@ -1,4 +1,4 @@
-# [Azure VM Compute Optimization: Live SKU Resize via Azure CLI](https://github.com/arinze-edeh/cloud-infrastructure-devops-labs)
+# Azure VM Compute Optimization: Live SKU Resize via Azure CLI
 
 > **Project Type:** Azure Compute | **Service:** Virtual Machines | **Operation:** VM SKU Resize | **Region:** `centralus`
 
