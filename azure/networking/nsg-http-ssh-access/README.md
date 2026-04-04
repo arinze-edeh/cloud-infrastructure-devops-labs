@@ -292,15 +292,15 @@ cat az-nsg-nautilus.sh
 
 **Screenshot: Script authored using heredoc and saved to az-nsg-nautilus.sh, followed by NSG rule table confirming correct output**
 
-![Automation script creation and rule table verification](./screenshots/08-script-create-and-verify.png)
+<img width="1183" height="822" alt="image" src="https://github.com/user-attachments/assets/e62d9a05-72c5-4bce-a648-7945093ca168" />
 
 **Screenshot: Script content confirmed via cat after heredoc creation**
 
-![Script content displayed after heredoc write](./screenshots/09-script-cat-verify.png)
+<img width="1187" height="436" alt="image" src="https://github.com/user-attachments/assets/d2ad0bab-6fb5-4b7b-8fc3-c0feddb64280" />
 
 **Screenshot: Executable permissions granted via chmod +x and final script content verified**
 
-![chmod +x applied and script content confirmed](./screenshots/10-chmod-final-verify.png)
+<img width="1187" height="438" alt="image" src="https://github.com/user-attachments/assets/db576d75-3954-470a-bc18-1a66cd11ac68" />
 
 > **Pipeline Integration Note:** For CI/CD environments, externalize `RG_NAME` and `NSG_NAME` as environment variables or pipeline parameters. Consider using `az deployment group create` with ARM/Bicep templates for full Infrastructure as Code (IaC) compliance and state management.
 
