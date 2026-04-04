@@ -115,6 +115,8 @@ EOF
 
 **Screenshot: Heredoc manifest written to print-envars-greeting.yaml**
 
+<img width="1031" height="416" alt="image" src="https://github.com/user-attachments/assets/25fe4798-5e1e-490c-8c7f-f0f11e72dd96" />
+
 Verify the file contents before applying:
 
 ```bash
@@ -245,7 +247,7 @@ No errors were encountered during this implementation. The manifest applied clea
 | Expected log output | `Welcome to xFusionCorp Datacenter` |
 
 
-<img width="1031" height="416" alt="image" src="https://github.com/user-attachments/assets/25fe4798-5e1e-490c-8c7f-f0f11e72dd96" />
+
 <img width="1034" height="727" alt="image" src="https://github.com/user-attachments/assets/6fe3d77c-df8c-49c9-b92b-6357441d3787" />
 <img width="1025" height="820" alt="image" src="https://github.com/user-attachments/assets/3ad1ddf5-8d79-4679-9ae5-4dc18611dc28" />
 <img width="1034" height="418" alt="image" src="https://github.com/user-attachments/assets/2313843b-3088-4275-96e8-c89d4db08477" />
