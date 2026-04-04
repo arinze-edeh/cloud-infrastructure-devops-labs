@@ -115,8 +115,9 @@ az vm show \
 
 **Expected output:** The full ARM resource ID of the NIC attached to the VM, confirming `datacenter-vm-pipVMNic` is the associated interface.
 
-![NIC Resource ID Discovery](./screenshots/step2b-nic-resource-id.png)
-*Figure 2: NIC ARM resource ID returned from the VM profile query.*
+<img width="1035" height="716" alt="image" src="https://github.com/user-attachments/assets/0b215c29-3c44-462e-826a-784460aad688" />
+
+>*NIC ARM resource ID returned from the VM profile query.*
 
 ---
 
