@@ -1,4 +1,4 @@
-# [Attaching an Existing Managed Disk to an Azure Virtual Machine](https://github.com/arinze-edeh/cloud-infrastructure-devops-labs)
+# Attaching an Existing Managed Disk to an Azure Virtual Machine
 
 ## Table of Contents
 
