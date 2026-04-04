@@ -117,7 +117,7 @@ EOF
 
 **Screenshot: Heredoc manifest written to print-envars-greeting.yaml**
 
-
+<img width="1034" height="727" alt="image" src="https://github.com/user-attachments/assets/6fe3d77c-df8c-49c9-b92b-6357441d3787" />
 
 Verify the file contents before applying:
 
@@ -126,6 +126,8 @@ cat print-envars-greeting.yaml
 ```
 
 **Screenshot: cat output showing full manifest contents**
+
+<img width="1025" height="820" alt="image" src="https://github.com/user-attachments/assets/3ad1ddf5-8d79-4679-9ae5-4dc18611dc28" />
 
 ```yaml
 apiVersion: v1
@@ -158,6 +160,8 @@ kubectl apply -f print-envars-greeting.yaml
 ```
 
 **Screenshot: kubectl apply confirmation output**
+
+<img width="1034" height="418" alt="image" src="https://github.com/user-attachments/assets/2313843b-3088-4275-96e8-c89d4db08477" />
 
 ```
 pod/print-envars-greeting created
@@ -250,8 +254,8 @@ No errors were encountered during this implementation. The manifest applied clea
 
 
 
-<img width="1034" height="727" alt="image" src="https://github.com/user-attachments/assets/6fe3d77c-df8c-49c9-b92b-6357441d3787" />
-<img width="1025" height="820" alt="image" src="https://github.com/user-attachments/assets/3ad1ddf5-8d79-4679-9ae5-4dc18611dc28" />
-<img width="1034" height="418" alt="image" src="https://github.com/user-attachments/assets/2313843b-3088-4275-96e8-c89d4db08477" />
+
+
+
 <img width="1033" height="472" alt="image" src="https://github.com/user-attachments/assets/55290e40-2ee2-47a1-93da-d14c95b22d4f" />
 <img width="1032" height="507" alt="image" src="https://github.com/user-attachments/assets/59efaad6-803e-4cae-bcc8-1c955aa34b17" />
