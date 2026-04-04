@@ -5,7 +5,7 @@
 ![CLI](https://img.shields.io/badge/Azure_CLI-0078D4?style=for-the-badge&logo=windows-terminal&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Production_Ready-brightgreen?style=for-the-badge)
 
-> **Enterprise-grade, repeatable deployment of a publicly accessible Azure SQL Database instance using Azure CLI. Covers server provisioning, firewall configuration, database creation, and full verification.**
+> **Enterprise-style, repeatable deployment of a publicly accessible Azure SQL Database instance using Azure CLI. Covers server provisioning, firewall configuration, database creation, and full verification.**
 
 ---
 
