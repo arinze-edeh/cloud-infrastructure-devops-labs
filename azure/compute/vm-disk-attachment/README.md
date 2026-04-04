@@ -167,12 +167,6 @@ Azure Subscription: Azure Free Labs
 
 > **Operational Note:** Azure allows hot-attach of data disks to running Linux VMs without a reboot. However, the disk will need to be initialized, partitioned, formatted, and mounted inside the OS (via `lsblk`, `fdisk`, `mkfs`, and `/etc/fstab`) before it is usable at the filesystem level.
 
-**Screenshot: devops-vm Disks blade with devops-disk selected for attachment at LUN 0**
-
-![Attach Disk - Apply](https://github.com/user-attachments/assets/ebb5dec2-5d87-493c-9aac-e89486f5c6dc)
-
-*VM Disks settings pane showing devops-disk selected in the Data disks section, ready for attachment.*
-
 **Screenshot: Apply button active, confirming the disk attachment configuration is staged**
 
 ![Attach Disk - Configuration](https://github.com/user-attachments/assets/a929ec8e-dfcf-48ba-bd53-9e3d3f740366)
@@ -200,6 +194,8 @@ Azure Subscription: Azure Free Labs
   - **Encryption:** `SSE with PMK`
 
 **Screenshot: devops-vm Disks blade confirming devops-disk attached as data disk with success notification**
+
+<img width="1869" height="949" alt="image" src="https://github.com/user-attachments/assets/57cea53b-94fc-4ff0-8444-d5d57f10505c" />
 
 ![Disk Attached - Success](https://github.com/user-attachments/assets/c177604c-3614-4571-8452-45bb3d19cc8a)
 
