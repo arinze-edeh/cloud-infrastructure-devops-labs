@@ -1,6 +1,6 @@
 # Provisioning an Azure Virtual Network (VNet) via Azure CLI
 
-> **Enterprise Cloud Networking | Infrastructure as Code | Azure CLI Automation**
+> **Enterprise-style Cloud Networking | Infrastructure as Code | Azure CLI Automation**
 
 ---
 
