@@ -169,13 +169,14 @@ Azure Subscription: Azure Free Labs
 
 **Screenshot: devops-vm Disks blade with devops-disk selected for attachment at LUN 0**
 
-![Attach Disk - Configuration](https://github.com/user-attachments/assets/a929ec8e-dfcf-48ba-bd53-9e3d3f740366)
+![Attach Disk - Apply](https://github.com/user-attachments/assets/ebb5dec2-5d87-493c-9aac-e89486f5c6dc)
 
 *VM Disks settings pane showing devops-disk selected in the Data disks section, ready for attachment.*
 
 **Screenshot: Apply button active, confirming the disk attachment configuration is staged**
 
-![Attach Disk - Apply](https://github.com/user-attachments/assets/ebb5dec2-5d87-493c-9aac-e89486f5c6dc)
+![Attach Disk - Configuration](https://github.com/user-attachments/assets/a929ec8e-dfcf-48ba-bd53-9e3d3f740366)
+
 
 *Data disk configuration with devops-disk at LUN 0 staged for apply. Apply and Discard changes buttons are active.*
 
