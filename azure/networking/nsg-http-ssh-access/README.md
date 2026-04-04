@@ -1,6 +1,5 @@
 # Azure Network Security Group (NSG) Provisioning and Hardening via Azure CLI
 
-> **Project:** Nautilus Infrastructure Migration | **Author:** Senior DevOps / Cloud Infrastructure Engineer
 > **Environment:** Microsoft Azure | **Region:** East US | **Auth Method:** Service Principal (Azure CLI)
 
 ---
@@ -358,7 +357,7 @@ cat az-nsg-nautilus.sh
 - **Azure CLI Proficiency** - Resource provisioning, querying, and validation via CLI
 - **Infrastructure as Code Mindset** - Bash automation, parameterized scripts, repeatable deployments
 - **Secure Network Design** - Least-privilege access, explicit allow rules, production hardening awareness
-- **Operational Documentation** - Enterprise-grade handoff documentation with validation and troubleshooting guidance
+- **Operational Documentation** - Enterprise-style handoff documentation with validation and troubleshooting guidance
 
 
 
