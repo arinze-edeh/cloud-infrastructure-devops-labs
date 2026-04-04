@@ -179,6 +179,8 @@ kubectl get pod print-envars-greeting --watch
 
 **Screenshot: Pod watch output showing Completed status**
 
+<img width="1033" height="472" alt="image" src="https://github.com/user-attachments/assets/55290e40-2ee2-47a1-93da-d14c95b22d4f" />
+
 ```
 NAME                    READY   STATUS      RESTARTS   AGE
 print-envars-greeting   0/1     Completed   0          26s
@@ -199,6 +201,8 @@ kubectl logs -f print-envars-greeting
 ```
 
 **Screenshot: kubectl logs output showing greeting string**
+
+<img width="1032" height="507" alt="image" src="https://github.com/user-attachments/assets/59efaad6-803e-4cae-bcc8-1c955aa34b17" />
 
 ```
 Welcome to xFusionCorp Datacenter
@@ -251,11 +255,3 @@ No errors were encountered during this implementation. The manifest applied clea
 | `GROUP` value | `Datacenter` |
 | Restart policy | `Never` |
 | Expected log output | `Welcome to xFusionCorp Datacenter` |
-
-
-
-
-
-
-<img width="1033" height="472" alt="image" src="https://github.com/user-attachments/assets/55290e40-2ee2-47a1-93da-d14c95b22d4f" />
-<img width="1032" height="507" alt="image" src="https://github.com/user-attachments/assets/59efaad6-803e-4cae-bcc8-1c955aa34b17" />
