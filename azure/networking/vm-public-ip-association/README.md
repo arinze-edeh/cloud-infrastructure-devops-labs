@@ -171,8 +171,9 @@ az network nic show \
 
 **Result:** The actual IP configuration name was identified as **`ipconfigdatacenter-vm-pip`**, not the assumed `ipconfig1`.
 
-![NIC IP Configuration Name Discovery](./screenshots/step3-nic-config-discovery.png)
-*Figure 5: Correct IP configuration name `ipconfigdatacenter-vm-pip` returned from the NIC show query.*
+<img width="1034" height="681" alt="image" src="https://github.com/user-attachments/assets/68af1ea3-4f7b-4309-92b1-cede640a7fbd" />
+
+>*Correct IP configuration name `ipconfigdatacenter-vm-pip` returned from the NIC show query.*
 
 > **Operational Best Practice:** Never assume the IP configuration name follows a default convention. Always query the resource state using `az network nic show` prior to executing update operations.
 
