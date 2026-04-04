@@ -136,8 +136,9 @@ az network nic ip-config update \
 
 This failure confirmed that the IP configuration name on the NIC did not follow the default convention and required explicit discovery.
 
-![Failed ip-config Update Attempt](./screenshots/step2c-failed-ipconfig1.png)
-*Figure 3: ResourceNotFoundError returned when using the assumed default name `ipconfig1`.*
+<img width="1034" height="685" alt="image" src="https://github.com/user-attachments/assets/1ee74a67-910f-4be5-bfa3-9bbfbb5a392c" />
+
+>*ResourceNotFoundError returned when using the assumed default name `ipconfig1`.*
 
 ---
 
