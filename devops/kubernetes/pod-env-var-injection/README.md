@@ -76,6 +76,8 @@ kubectl get nodes
 
 **Screenshot: Cluster info and node status output**
 
+<img width="1031" height="416" alt="image" src="https://github.com/user-attachments/assets/25fe4798-5e1e-490c-8c7f-f0f11e72dd96" />
+
 ```
 Kubernetes control plane is running at https://127.0.0.1:6443
 CoreDNS is running at https://127.0.0.1:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
@@ -115,7 +117,7 @@ EOF
 
 **Screenshot: Heredoc manifest written to print-envars-greeting.yaml**
 
-<img width="1031" height="416" alt="image" src="https://github.com/user-attachments/assets/25fe4798-5e1e-490c-8c7f-f0f11e72dd96" />
+
 
 Verify the file contents before applying:
 
