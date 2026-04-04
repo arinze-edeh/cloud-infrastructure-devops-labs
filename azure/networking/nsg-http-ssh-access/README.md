@@ -218,7 +218,7 @@ az network nsg rule create \
 
 **Screenshot: Allow-SSH NSG rule creation with JSON response confirming priority 110 and inbound TCP access on port 22**
 
-![Allow-SSH inbound rule configuration and provisioning output](./screenshots/06-nsg-rule-allow-ssh.png)
+<img width="1033" height="861" alt="image" src="https://github.com/user-attachments/assets/8b72b5b8-61e0-46d8-9f9a-8c58b39f7724" />
 
 ---
 
