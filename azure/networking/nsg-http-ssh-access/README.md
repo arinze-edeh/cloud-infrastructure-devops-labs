@@ -100,7 +100,7 @@ az account show
 
 **Screenshot: Azure CLI authenticated session displaying active subscription and service principal context**
 
-![Azure CLI authenticated account details](./screenshots/01-az-account-show.png)
+<img width="1034" height="556" alt="image" src="https://github.com/user-attachments/assets/6665d16e-1a21-4a8a-a45c-f257e0430949" />
 
 ---
 
