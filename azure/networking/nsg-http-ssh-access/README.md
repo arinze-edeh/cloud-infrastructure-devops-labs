@@ -149,11 +149,10 @@ az network nsg create \
 
 **Screenshot: NSG creation command and JSON output showing default security rules provisioned by Azure**
 
-![NSG creation output - default rules (AllowVNetInBound and AllowAzureLoadBalancer)](./screenshots/03-nsg-create-default-rules.png)
-
-**Screenshot: NSG creation output - continued, showing DenyAllOutBound default rule and successful provisioning state**
-
-![NSG creation output - DenyAllOutBound rule and final provisioning confirmation](./screenshots/04-nsg-create-provisioning-succeeded.png)
+<img width="1034" height="870" alt="image" src="https://github.com/user-attachments/assets/1a4497d3-66a0-4072-b6c0-c4549f39f23f" />
+<img width="1033" height="863" alt="image" src="https://github.com/user-attachments/assets/8c18d50c-366a-4d35-87da-34ef00b3c2bc" />
+<img width="1034" height="869" alt="image" src="https://github.com/user-attachments/assets/7c5520f2-0b7d-4d10-aace-8abf58acafc4" />
+<img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/1e462635-2045-4919-9727-2cc31023c396" />
 
 ---
 
