@@ -1,6 +1,6 @@
 # Azure Private Virtual Network Infrastructure Provisioning
 
-> **Enterprise Infrastructure Series** | Azure Networking | Security Hardened | IaC Documented
+> **Enterprise-style Infrastructure Series** | Azure Networking | Security Hardened | IaC Documented
 
 ---
 
