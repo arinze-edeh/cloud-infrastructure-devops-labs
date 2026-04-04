@@ -185,7 +185,7 @@ az network nsg rule create \
 
 **Screenshot: Allow-HTTP NSG rule creation with full JSON response confirming rule parameters and provisioning success**
 
-![Allow-HTTP inbound rule configuration and provisioning output](./screenshots/05-nsg-rule-allow-http.png)
+<img width="1038" height="866" alt="image" src="https://github.com/user-attachments/assets/05009582-c13c-40de-bd1b-ec2d892ddbbc" />
 
 ---
 
