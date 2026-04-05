@@ -104,6 +104,8 @@ touch main.tf
 
 *Screenshot: Terminal showing successful creation of `main.tf` with no errors.*
 
+<img width="1048" height="380" alt="image" src="https://github.com/user-attachments/assets/a05c0872-3e6d-4414-8924-91196e24374d" />
+
 > **Why `touch` first?** Using `touch` explicitly creates an empty file before writing content, which is a deliberate and auditable approach. This confirms write access to the directory before committing configuration content.
 
 ---
@@ -452,7 +454,7 @@ No errors were encountered during this implementation. The full workflow from `t
 
 
 
-<img width="1048" height="380" alt="image" src="https://github.com/user-attachments/assets/a05c0872-3e6d-4414-8924-91196e24374d" />
+
 <img width="1042" height="645" alt="image" src="https://github.com/user-attachments/assets/78be3890-0747-4bac-8ac5-d4c7534a4316" />
 <img width="1250" height="767" alt="image" src="https://github.com/user-attachments/assets/30bcce94-9684-4316-95d3-fd5b24d17770" />
 <img width="1265" height="770" alt="image" src="https://github.com/user-attachments/assets/43b69c9b-1e03-49f5-9b93-ee9417ca96ec" />
