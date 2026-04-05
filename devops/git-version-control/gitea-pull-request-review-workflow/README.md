@@ -1,6 +1,6 @@
 # Gitea Pull Request Review Workflow
 
-> **Enterprise Git Collaboration:** Enforcing branch protection, peer code review, and controlled merges using Gitea as a self-hosted Git service in a production-simulated environment.
+> **Enterprise-style Git Collaboration:** Enforcing branch protection, peer code review, and controlled merges using Gitea as a self-hosted Git service in a production-simulated environment.
 
 ---
 
