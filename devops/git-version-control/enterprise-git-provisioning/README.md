@@ -1,4 +1,4 @@
-# Git Repository Provisioning on Nautilus Storage Server
+# Git Repository Clone Provisioning and Integrity Validation from Bare Repository Source
 
 ## Table of Contents
 
