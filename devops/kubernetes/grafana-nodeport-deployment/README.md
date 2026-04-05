@@ -102,6 +102,8 @@ kubectl get pods
 
 > Screenshot: Clean cluster state showing no existing deployments, services, or pods in the default namespace
 
+<img width="1029" height="534" alt="image" src="https://github.com/user-attachments/assets/82f42cdb-9d2e-4fab-96fb-9f98f93ebe7f" />
+
 ---
 
 ## Implementation
@@ -358,8 +360,6 @@ The `302 Found` redirect to `/login` confirms that the Grafana application is ru
 * [Kubernetes Services (NodePort)](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport)
 * [kubectl rollout status](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_rollout/kubectl_rollout_status/)
 
-<img width="1036" height="546" alt="image" src="https://github.com/user-attachments/assets/558792a2-fc80-4529-8290-61a12324d023" />
-<img width="1029" height="534" alt="image" src="https://github.com/user-attachments/assets/82f42cdb-9d2e-4fab-96fb-9f98f93ebe7f" />
 <img width="1034" height="785" alt="image" src="https://github.com/user-attachments/assets/4a8be44a-3802-465d-9c70-a9c28c634e1d" />
 <img width="1033" height="862" alt="image" src="https://github.com/user-attachments/assets/5c4fa96c-164c-487e-ac98-456e70e00f95" />
 <img width="1032" height="684" alt="image" src="https://github.com/user-attachments/assets/aa303f3e-4e1a-4d59-9544-10ac9ee4a157" />
