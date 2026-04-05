@@ -231,6 +231,8 @@ Success! The configuration is valid.
 
 *Screenshot: Terminal showing `Success! The configuration is valid.` output from `terraform validate`.*
 
+<img width="1229" height="481" alt="image" src="https://github.com/user-attachments/assets/ba220f13-986e-4095-b4ab-18af6b3dedee" />
+
 > **Why validate before plan?** `terraform validate` catches HCL syntax errors, invalid resource attribute names, and type mismatches early, before any remote API calls are made. This saves time in automated pipelines where a failed `plan` would otherwise consume billable API quota.
 
 ---
@@ -462,7 +464,7 @@ No errors were encountered during this implementation. The full workflow from `t
 <img width="1042" height="645" alt="image" src="https://github.com/user-attachments/assets/78be3890-0747-4bac-8ac5-d4c7534a4316" />
 
 
-<img width="1229" height="481" alt="image" src="https://github.com/user-attachments/assets/ba220f13-986e-4095-b4ab-18af6b3dedee" />
+
 <img width="1259" height="779" alt="image" src="https://github.com/user-attachments/assets/a54ebe5f-b8a4-4af4-8f1b-c5cd9b05b0b4" />
 <img width="1251" height="774" alt="image" src="https://github.com/user-attachments/assets/51980837-cf00-46f2-b9c9-4e86906c7254" />
 <img width="1268" height="736" alt="image" src="https://github.com/user-attachments/assets/abc279ce-4bdf-4323-8632-3409fff77961" />
