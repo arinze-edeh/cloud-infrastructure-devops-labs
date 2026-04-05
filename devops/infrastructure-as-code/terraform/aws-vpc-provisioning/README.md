@@ -435,3 +435,4 @@ No errors were encountered during this implementation. All commands executed cle
 > In the event of an `Error: error creating VPC` during apply, confirm that the LocalStack container is running and that the EC2 endpoint (`http://aws:4566`) is accessible from the Terraform host. Running `curl http://aws:4566` from the host is a reliable first diagnostic step.
 
 ---
+
