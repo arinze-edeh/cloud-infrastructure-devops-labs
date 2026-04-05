@@ -300,7 +300,10 @@ aws_security_group.nautilus_sg: Creation complete after 1s [id=sg-93e66ef8604d7c
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
-*Screenshot: Terminal showing `Apply complete! Resources: 1 added, 0 changed, 0 destroyed.` with the assigned Security Group ID `sg-93e66ef8604d7ca73`.*
+*Screenshots: Terminal showing `Apply complete! Resources: 1 added, 0 changed, 0 destroyed.` with the assigned Security Group ID `sg-93e66ef8604d7ca73`.*
+
+<img width="1268" height="736" alt="image" src="https://github.com/user-attachments/assets/abc279ce-4bdf-4323-8632-3409fff77961" />
+<img width="1263" height="769" alt="image" src="https://github.com/user-attachments/assets/ac9a8538-cc3d-40b1-bb30-78058c03152e" />
 
 > The security group was assigned the ID `sg-93e66ef8604d7ca73` by AWS and attached to the default VPC (`vpc-7418f8d11727ad17c`) in `us-east-1`.
 
@@ -469,8 +472,7 @@ No errors were encountered during this implementation. The full workflow from `t
 
 
 
-<img width="1268" height="736" alt="image" src="https://github.com/user-attachments/assets/abc279ce-4bdf-4323-8632-3409fff77961" />
-<img width="1263" height="769" alt="image" src="https://github.com/user-attachments/assets/ac9a8538-cc3d-40b1-bb30-78058c03152e" />
+
 <img width="1260" height="299" alt="image" src="https://github.com/user-attachments/assets/fe2f4379-f817-4c61-9867-8a1717be3779" />
 <img width="1268" height="751" alt="image" src="https://github.com/user-attachments/assets/4fb08c95-273f-4fb0-be3e-c406e06bd35c" />
 <img width="1250" height="763" alt="image" src="https://github.com/user-attachments/assets/c81446eb-6988-471f-812d-92d0cdebdcbc" />
