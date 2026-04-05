@@ -225,6 +225,8 @@ deployment "grafana-deployment-nautilus" successfully rolled out
 
 > Screenshot: Rollout status confirming all replicas have reached the desired state
 
+<img width="1034" height="400" alt="image" src="https://github.com/user-attachments/assets/b8403584-9b7e-4cc8-b3fe-14226a993e48" />
+
 ---
 
 ### Step 6: Verify Deployment and Pod Health
@@ -370,7 +372,7 @@ The `302 Found` redirect to `/login` confirms that the Grafana application is ru
 
 <img width="1031" height="595" alt="image" src="https://github.com/user-attachments/assets/94540ee9-0b34-4603-9775-e94f2aad44b3" />
 <img width="1035" height="368" alt="image" src="https://github.com/user-attachments/assets/e56a3a2f-a812-48ec-9dbe-0fd2b61577ba" />
-<img width="1034" height="400" alt="image" src="https://github.com/user-attachments/assets/b8403584-9b7e-4cc8-b3fe-14226a993e48" />
+
 <img width="1035" height="577" alt="image" src="https://github.com/user-attachments/assets/ad5f5a5d-e9ce-4ac5-bc40-d094b833e626" />
 <img width="1199" height="626" alt="image" src="https://github.com/user-attachments/assets/ab3597ac-61ba-4dff-b23d-7256b8a78ed4" />
 <img width="1199" height="814" alt="image" src="https://github.com/user-attachments/assets/3e2934e6-c8ee-462f-b525-77e8509d2820" />
