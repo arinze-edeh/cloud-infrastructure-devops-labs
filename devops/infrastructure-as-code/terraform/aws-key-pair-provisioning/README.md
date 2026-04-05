@@ -157,6 +157,8 @@ Terraform has been successfully initialized!
 
 *Screenshot: terraform init output showing successful provider installations and lock file creation*
 
+<img width="1227" height="769" alt="image" src="https://github.com/user-attachments/assets/d82c3683-0ddb-45d3-bb9f-14023cb2ccf0" />
+
 The `.terraform.lock.hcl` file is generated at this step, pinning exact provider versions for reproducible runs. This file should be committed to version control.
 
 ---
@@ -316,7 +318,7 @@ The `key_pair_id` (`key-d7b36c72a78a73f09`) confirms successful registration wit
 
 <img width="1257" height="559" alt="image" src="https://github.com/user-attachments/assets/5aea0b43-18c2-451f-a1ca-2d27797bffac" />
 
-<img width="1227" height="769" alt="image" src="https://github.com/user-attachments/assets/d82c3683-0ddb-45d3-bb9f-14023cb2ccf0" />
+
 <img width="1407" height="775" alt="image" src="https://github.com/user-attachments/assets/8cb7c1cd-a9c1-45df-acd0-e76a35e65ce5" />
 <img width="1401" height="773" alt="image" src="https://github.com/user-attachments/assets/dfa99929-66c7-4c3e-ad03-6ee47c14738e" />
 <img width="1239" height="280" alt="image" src="https://github.com/user-attachments/assets/adea2578-8de3-4c50-839b-6cc04d7a781a" />
