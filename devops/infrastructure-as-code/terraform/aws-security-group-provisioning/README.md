@@ -209,6 +209,8 @@ Terraform has been successfully initialized!
 
 *Screenshot: Terminal displaying full `terraform init` output with provider installation confirmation.*
 
+<img width="1265" height="770" alt="image" src="https://github.com/user-attachments/assets/43b69c9b-1e03-49f5-9b93-ee9417ca96ec" />
+
 > **Key detail:** The provider version `5.91.0` is pinned and locked via `.terraform.lock.hcl`. This guarantees deterministic provider resolution across all environments and team members. The lock file must be committed to version control.
 
 ---
@@ -459,7 +461,7 @@ No errors were encountered during this implementation. The full workflow from `t
 
 <img width="1042" height="645" alt="image" src="https://github.com/user-attachments/assets/78be3890-0747-4bac-8ac5-d4c7534a4316" />
 
-<img width="1265" height="770" alt="image" src="https://github.com/user-attachments/assets/43b69c9b-1e03-49f5-9b93-ee9417ca96ec" />
+
 <img width="1229" height="481" alt="image" src="https://github.com/user-attachments/assets/ba220f13-986e-4095-b4ab-18af6b3dedee" />
 <img width="1259" height="779" alt="image" src="https://github.com/user-attachments/assets/a54ebe5f-b8a4-4af4-8f1b-c5cd9b05b0b4" />
 <img width="1251" height="774" alt="image" src="https://github.com/user-attachments/assets/51980837-cf00-46f2-b9c9-4e86906c7254" />
