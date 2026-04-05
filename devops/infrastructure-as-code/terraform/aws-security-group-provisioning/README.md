@@ -1,5 +1,4 @@
 # Terraform AWS Security Group Provisioning
-### Nautilus DevOps Infrastructure Migration | Phase 1: Network Security Layer
 
 ---
 
