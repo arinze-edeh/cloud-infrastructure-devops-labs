@@ -276,6 +276,8 @@ The `PORT(S)` column confirms `3000:32000/TCP`, meaning traffic arriving at the 
 
 > Screenshot: Service listing showing correct NodePort mapping `3000:32000/TCP`
 
+<img width="1035" height="577" alt="image" src="https://github.com/user-attachments/assets/ad5f5a5d-e9ce-4ac5-bc40-d094b833e626" />
+
 ---
 
 ### Step 8: Retrieve Node IP for Connectivity Test
