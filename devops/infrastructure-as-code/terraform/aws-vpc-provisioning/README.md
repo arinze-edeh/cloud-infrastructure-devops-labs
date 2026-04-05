@@ -300,6 +300,8 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 > *Screenshot: Full terminal output of `terraform apply -auto-approve` showing the execution plan, creation progress, and final success summary.*
 
+<img width="1244" height="739" alt="image" src="https://github.com/user-attachments/assets/c7c57e53-6ae3-49c9-816d-e67d840d297c" />
+
 The VPC was successfully created and assigned the ID `vpc-a819a7443995df162` by LocalStack.
 
 ---
@@ -346,6 +348,8 @@ resource "aws_vpc" "devops_vpc" {
 ```
 
 > *Screenshot: Terminal output of `terraform state show aws_vpc.devops_vpc` confirming all resource attributes are correctly captured in state.*
+
+<img width="1276" height="676" alt="image" src="https://github.com/user-attachments/assets/40679040-9fdd-4d81-9b86-fa9df13814e2" />
 
 **State attribute highlights:**
 
@@ -431,13 +435,3 @@ No errors were encountered during this implementation. All commands executed cle
 > In the event of an `Error: error creating VPC` during apply, confirm that the LocalStack container is running and that the EC2 endpoint (`http://aws:4566`) is accessible from the Terraform host. Running `curl http://aws:4566` from the host is a reliable first diagnostic step.
 
 ---
-
-
-
-
-
-
-
-
-<img width="1244" height="739" alt="image" src="https://github.com/user-attachments/assets/c7c57e53-6ae3-49c9-816d-e67d840d297c" />
-<img width="1276" height="676" alt="image" src="https://github.com/user-attachments/assets/40679040-9fdd-4d81-9b86-fa9df13814e2" />
