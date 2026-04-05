@@ -144,6 +144,8 @@ cat grafana-deployment.yaml
 
 > Screenshot: Terminal output confirming the contents of `grafana-deployment.yaml`
 
+<img width="1033" height="862" alt="image" src="https://github.com/user-attachments/assets/5c4fa96c-164c-487e-ac98-456e70e00f95" />
+
 ---
 
 ### Step 2: Author the Grafana Service Manifest
@@ -361,7 +363,7 @@ The `302 Found` redirect to `/login` confirms that the Grafana application is ru
 * [kubectl rollout status](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_rollout/kubectl_rollout_status/)
 
 <img width="1034" height="785" alt="image" src="https://github.com/user-attachments/assets/4a8be44a-3802-465d-9c70-a9c28c634e1d" />
-<img width="1033" height="862" alt="image" src="https://github.com/user-attachments/assets/5c4fa96c-164c-487e-ac98-456e70e00f95" />
+
 <img width="1032" height="684" alt="image" src="https://github.com/user-attachments/assets/aa303f3e-4e1a-4d59-9544-10ac9ee4a157" />
 <img width="1037" height="556" alt="image" src="https://github.com/user-attachments/assets/ef4bce03-92ea-42ce-bf37-bc5635c5011f" />
 <img width="1031" height="595" alt="image" src="https://github.com/user-attachments/assets/94540ee9-0b34-4603-9775-e94f2aad44b3" />
