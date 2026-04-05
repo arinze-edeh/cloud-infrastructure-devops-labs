@@ -332,17 +332,6 @@ exit
 
 ---
 
-*Documented as part of the Nautilus DevOps Infrastructure Series - Stratos Datacenter Operations*
-
-
-
-
-
-
-
-
-
-
 
 
 
