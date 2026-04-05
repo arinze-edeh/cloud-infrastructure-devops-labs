@@ -181,6 +181,8 @@ resource "aws_vpc" "devops_vpc" {
 
 > *Screenshot: Terminal showing the heredoc command and subsequent `cat main.tf` output confirming correct file content.*
 
+<img width="1150" height="774" alt="image" src="https://github.com/user-attachments/assets/ad5f7509-4e7e-4e65-bf7b-3109f6b555c6" />
+
 **Configuration breakdown:**
 
 | Field | Value | Purpose |
@@ -431,7 +433,6 @@ No errors were encountered during this implementation. All commands executed cle
 
 
 
-<img width="1150" height="774" alt="image" src="https://github.com/user-attachments/assets/ad5f7509-4e7e-4e65-bf7b-3109f6b555c6" />
 <img width="1245" height="753" alt="image" src="https://github.com/user-attachments/assets/a3fa664b-85d3-4772-a385-7671a14044e0" />
 <img width="1189" height="642" alt="image" src="https://github.com/user-attachments/assets/52856faf-5d7a-4f00-820f-d09422a19a7d" />
 <img width="1244" height="739" alt="image" src="https://github.com/user-attachments/assets/c7c57e53-6ae3-49c9-816d-e67d840d297c" />
