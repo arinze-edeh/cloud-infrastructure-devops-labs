@@ -320,6 +320,8 @@ The `302 Found` redirect to `/login` confirms that the Grafana application is ru
 
 > Screenshot: `curl -I` response showing `HTTP/1.1 302 Found` with `Location: /login`
 
+<img width="1199" height="814" alt="image" src="https://github.com/user-attachments/assets/3e2934e6-c8ee-462f-b525-77e8509d2820" />
+
 ---
 
 ## Validation Summary
@@ -379,5 +381,5 @@ The `302 Found` redirect to `/login` confirms that the Grafana application is ru
 
 
 <img width="1199" height="626" alt="image" src="https://github.com/user-attachments/assets/ab3597ac-61ba-4dff-b23d-7256b8a78ed4" />
-<img width="1199" height="814" alt="image" src="https://github.com/user-attachments/assets/3e2934e6-c8ee-462f-b525-77e8509d2820" />
+
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/25f4ff4a-02ae-4226-8702-0598945d40de" />
