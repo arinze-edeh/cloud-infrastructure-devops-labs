@@ -218,6 +218,8 @@ key_name_prefix = null
 
 *Screenshot: grep output confirming key_name value in Terraform state*
 
+<img width="1239" height="280" alt="image" src="https://github.com/user-attachments/assets/adea2578-8de3-4c50-839b-6cc04d7a781a" />
+
 **4.2 Verify private key file permissions and existence:**
 
 ```bash
@@ -233,6 +235,8 @@ Expected output:
 The `0400` permission set (`-r--------`) confirms owner-only read access with no write or execute bits set for any user.
 
 *Screenshot: ls -la output showing nautilus-kp.pem with 0400 permissions*
+
+<img width="1246" height="592" alt="image" src="https://github.com/user-attachments/assets/3816f74a-6df5-4ba0-9ef0-f1002bfbd0a7" />
 
 **4.3 Verify private key file format:**
 
@@ -250,6 +254,8 @@ MIIJKQIBAAKCAgEAyYl8hMEu5hXcnG7RZsSDb6QiToL7cXvzEH7ajbcMD7Mn3g+t
 The `-----BEGIN RSA PRIVATE KEY-----` header confirms a valid PKCS#1-encoded RSA private key, compatible with standard OpenSSH clients.
 
 *Screenshot: head -2 output confirming RSA private key PEM header*
+
+<img width="1246" height="592" alt="image" src="https://github.com/user-attachments/assets/3816f74a-6df5-4ba0-9ef0-f1002bfbd0a7" />
 
 **4.4 Inspect full AWS key pair state:**
 
@@ -275,6 +281,8 @@ resource "aws_key_pair" "nautilus_kp" {
 ```
 
 *Screenshot: terraform state show output displaying full resource attributes including ARN, fingerprint, and key_pair_id*
+
+<img width="1246" height="592" alt="image" src="https://github.com/user-attachments/assets/3816f74a-6df5-4ba0-9ef0-f1002bfbd0a7" />
 
 The `key_pair_id` (`key-d7b36c72a78a73f09`) confirms successful registration with the AWS EC2 control plane. The MD5 fingerprint can be cross-referenced in the AWS Console under EC2 > Key Pairs.
 
@@ -318,8 +326,3 @@ The `key_pair_id` (`key-d7b36c72a78a73f09`) confirms successful registration wit
 
 **Key pair ARN does not include an account ID segment in this environment.** The ARN returned was `arn:aws:ec2:us-east-1::key-pair/nautilus-kp` (double colon, no account ID). This is expected for EC2 key pairs in sandbox environments where the IAM account context may be scoped differently. In production accounts, the ARN will include the twelve-digit account ID between the region and resource segments.
 
-
-
-
-<img width="1239" height="280" alt="image" src="https://github.com/user-attachments/assets/adea2578-8de3-4c50-839b-6cc04d7a781a" />
-<img width="1246" height="592" alt="image" src="https://github.com/user-attachments/assets/3816f74a-6df5-4ba0-9ef0-f1002bfbd0a7" />
