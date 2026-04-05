@@ -186,7 +186,10 @@ aws_key_pair.nautilus_kp: Creation complete after 0s [id=nautilus-kp]
 Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 ```
 
-*Screenshot: Full terraform apply output with plan summary and resource creation completion messages*
+*Screenshots: Full terraform apply output with plan summary and resource creation completion messages*
+
+<img width="1407" height="775" alt="image" src="https://github.com/user-attachments/assets/8cb7c1cd-a9c1-45df-acd0-e76a35e65ce5" />
+<img width="1401" height="773" alt="image" src="https://github.com/user-attachments/assets/dfa99929-66c7-4c3e-ad03-6ee47c14738e" />
 
 **Creation order observed:**
 
@@ -316,10 +319,7 @@ The `key_pair_id` (`key-d7b36c72a78a73f09`) confirms successful registration wit
 **Key pair ARN does not include an account ID segment in this environment.** The ARN returned was `arn:aws:ec2:us-east-1::key-pair/nautilus-kp` (double colon, no account ID). This is expected for EC2 key pairs in sandbox environments where the IAM account context may be scoped differently. In production accounts, the ARN will include the twelve-digit account ID between the region and resource segments.
 
 
-<img width="1257" height="559" alt="image" src="https://github.com/user-attachments/assets/5aea0b43-18c2-451f-a1ca-2d27797bffac" />
 
 
-<img width="1407" height="775" alt="image" src="https://github.com/user-attachments/assets/8cb7c1cd-a9c1-45df-acd0-e76a35e65ce5" />
-<img width="1401" height="773" alt="image" src="https://github.com/user-attachments/assets/dfa99929-66c7-4c3e-ad03-6ee47c14738e" />
 <img width="1239" height="280" alt="image" src="https://github.com/user-attachments/assets/adea2578-8de3-4c50-839b-6cc04d7a781a" />
 <img width="1246" height="592" alt="image" src="https://github.com/user-attachments/assets/3816f74a-6df5-4ba0-9ef0-f1002bfbd0a7" />
