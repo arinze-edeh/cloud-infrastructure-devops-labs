@@ -138,7 +138,10 @@ provider "aws" {
 }
 ```
 
-> *Screenshot: Terminal output showing `ls -la` and `cat provider.tf` results confirming the pre-existing directory state.*
+> *Screenshots: Terminal output showing `ls -la` and `cat provider.tf` results confirming the pre-existing directory state.*
+
+<img width="1037" height="403" alt="image" src="https://github.com/user-attachments/assets/d5ce5708-fc74-4631-a0a1-0267ba06ec9d" />
+<img width="1252" height="764" alt="image" src="https://github.com/user-attachments/assets/983cb493-b9b5-457e-9fd1-628eefd29f2a" />
 
 ---
 
@@ -427,8 +430,7 @@ No errors were encountered during this implementation. All commands executed cle
 
 
 
-<img width="1037" height="403" alt="image" src="https://github.com/user-attachments/assets/d5ce5708-fc74-4631-a0a1-0267ba06ec9d" />
-<img width="1252" height="764" alt="image" src="https://github.com/user-attachments/assets/983cb493-b9b5-457e-9fd1-628eefd29f2a" />
+
 <img width="1150" height="774" alt="image" src="https://github.com/user-attachments/assets/ad5f7509-4e7e-4e65-bf7b-3109f6b555c6" />
 <img width="1245" height="753" alt="image" src="https://github.com/user-attachments/assets/a3fa664b-85d3-4772-a385-7671a14044e0" />
 <img width="1189" height="642" alt="image" src="https://github.com/user-attachments/assets/52856faf-5d7a-4f00-820f-d09422a19a7d" />
