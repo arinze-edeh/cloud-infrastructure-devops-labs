@@ -264,7 +264,10 @@ Terraform will perform the following actions:
 Plan: 1 to add, 0 to change, 0 to destroy.
 ```
 
-*Screenshot: Full `terraform plan` output showing the planned `aws_security_group.nautilus_sg` creation with both ingress rules.*
+*Screenshots: Full `terraform plan` output showing the planned `aws_security_group.nautilus_sg` creation with both ingress rules.*
+
+<img width="1259" height="779" alt="image" src="https://github.com/user-attachments/assets/a54ebe5f-b8a4-4af4-8f1b-c5cd9b05b0b4" />
+<img width="1251" height="774" alt="image" src="https://github.com/user-attachments/assets/51980837-cf00-46f2-b9c9-4e86906c7254" />
 
 > **Production note:** In automated CI/CD pipelines, always use `terraform plan -out=tfplan.binary` to save the plan to a file and pass it directly to `terraform apply tfplan.binary`. This eliminates plan drift between the review and apply phases. This flag was not used here as the task was executed interactively.
 
@@ -465,8 +468,7 @@ No errors were encountered during this implementation. The full workflow from `t
 
 
 
-<img width="1259" height="779" alt="image" src="https://github.com/user-attachments/assets/a54ebe5f-b8a4-4af4-8f1b-c5cd9b05b0b4" />
-<img width="1251" height="774" alt="image" src="https://github.com/user-attachments/assets/51980837-cf00-46f2-b9c9-4e86906c7254" />
+
 <img width="1268" height="736" alt="image" src="https://github.com/user-attachments/assets/abc279ce-4bdf-4323-8632-3409fff77961" />
 <img width="1263" height="769" alt="image" src="https://github.com/user-attachments/assets/ac9a8538-cc3d-40b1-bb30-78058c03152e" />
 <img width="1260" height="299" alt="image" src="https://github.com/user-attachments/assets/fe2f4379-f817-4c61-9867-8a1717be3779" />
