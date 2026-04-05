@@ -1,10 +1,5 @@
 # Git Branch Management - Feature Branch Creation from Master
 
-> **Domain:** DevOps | Git Version Control
-> **Difficulty:** Intermediate
-> **Environment:** Stratos DC - Nautilus Infrastructure
-> **Status:** ✅ Resolved
-
 ---
 
 ## Table of Contents
