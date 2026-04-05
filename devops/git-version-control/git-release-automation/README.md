@@ -1,6 +1,6 @@
 # Automated Release Governance via Native Git Hook Architecture in Enterprise Bare Repository Environments
 
-> **Enterprise Git Hook Pipeline** | Automated release tagging on push to `master` via `post-update` hook on a bare remote repository hosted on a dedicated Storage Server.
+> **Enterprise-style Git Hook Pipeline** | Automated release tagging on push to `master` via `post-update` hook on a bare remote repository hosted on a dedicated Storage Server.
 
 ---
 
