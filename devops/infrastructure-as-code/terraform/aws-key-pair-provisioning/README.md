@@ -119,6 +119,8 @@ cat main.tf
 
 *Screenshot: main.tf contents displayed in terminal confirming all three resource blocks*
 
+<img width="1230" height="724" alt="image" src="https://github.com/user-attachments/assets/bda574a9-455c-4900-9487-3c9e60257288" />
+
 **Resource breakdown:**
 
 * `tls_private_key.nautilus_key` generates an RSA 4096-bit key pair entirely in Terraform memory. Both the public and private keys are exposed as output attributes.
@@ -313,7 +315,7 @@ The `key_pair_id` (`key-d7b36c72a78a73f09`) confirms successful registration wit
 
 
 <img width="1257" height="559" alt="image" src="https://github.com/user-attachments/assets/5aea0b43-18c2-451f-a1ca-2d27797bffac" />
-<img width="1230" height="724" alt="image" src="https://github.com/user-attachments/assets/bda574a9-455c-4900-9487-3c9e60257288" />
+
 <img width="1227" height="769" alt="image" src="https://github.com/user-attachments/assets/d82c3683-0ddb-45d3-bb9f-14023cb2ccf0" />
 <img width="1407" height="775" alt="image" src="https://github.com/user-attachments/assets/8cb7c1cd-a9c1-45df-acd0-e76a35e65ce5" />
 <img width="1401" height="773" alt="image" src="https://github.com/user-attachments/assets/dfa99929-66c7-4c3e-ad03-6ee47c14738e" />
