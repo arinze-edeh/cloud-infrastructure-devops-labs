@@ -1,10 +1,5 @@
 # Terraform AWS VPC Provisioning on LocalStack
 
-> **Project:** Nautilus DevOps Infrastructure Migration  
-> **Phase:** Incremental Cloud Migration — Stage 1: Network Foundation  
-> **Author:** DevOps Engineering Team  
-> **Environment:** LocalStack (AWS Emulation) via Terraform IaC
-
 ---
 
 ## Table of Contents
@@ -30,7 +25,7 @@
 
 ## Overview
 
-This repository documents the first infrastructure unit of the Nautilus DevOps team's phased AWS cloud migration. Rather than executing a large-scale, monolithic migration, the team has adopted an incremental delivery strategy, decomposing the overall migration into discrete, independently verifiable infrastructure units. This stage provisions a foundational **Virtual Private Cloud (VPC)** using Terraform, targeting a LocalStack-emulated AWS environment to enable safe, cost-free validation before production deployment.
+This documents the first infrastructure unit of the Nautilus DevOps team's phased AWS cloud migration. Rather than executing a large-scale, monolithic migration, the team has adopted an incremental delivery strategy, decomposing the overall migration into discrete, independently verifiable infrastructure units. This stage provisions a foundational **Virtual Private Cloud (VPC)** using Terraform, targeting a LocalStack-emulated AWS environment to enable safe, cost-free validation before production deployment.
 
 ---
 
