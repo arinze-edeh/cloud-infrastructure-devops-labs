@@ -68,19 +68,6 @@ Terraform communicates exclusively with LocalStack endpoints, allowing all AWS A
 
 ---
 
-## Repository Structure
-
-```
-/home/bob/terraform/
-├── README.MD          # Project overview (pre-existing)
-├── provider.tf        # AWS provider and LocalStack endpoint configuration (pre-existing)
-└── main.tf            # VPC resource definition (authored in this task)
-```
-
-> **Constraint:** Only the `main.tf` file is created as part of this task. No additional `.tf` files are introduced, preserving the integrity of the pre-existing directory structure.
-
----
-
 ## Implementation Guide
 
 ### Step 1: Verify Working Directory and Existing Configuration
