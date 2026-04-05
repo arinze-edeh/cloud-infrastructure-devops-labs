@@ -242,6 +242,8 @@ Success! The configuration is valid.
 
 > *Screenshot: Terminal showing `terraform validate` returning a clean success status.*
 
+<img width="1189" height="642" alt="image" src="https://github.com/user-attachments/assets/52856faf-5d7a-4f00-820f-d09422a19a7d" />
+
 Validation confirms that the HCL syntax is well-formed and that all resource arguments conform to the AWS provider schema for `aws_vpc`.
 
 ---
@@ -436,6 +438,6 @@ No errors were encountered during this implementation. All commands executed cle
 
 
 
-<img width="1189" height="642" alt="image" src="https://github.com/user-attachments/assets/52856faf-5d7a-4f00-820f-d09422a19a7d" />
+
 <img width="1244" height="739" alt="image" src="https://github.com/user-attachments/assets/c7c57e53-6ae3-49c9-816d-e67d840d297c" />
 <img width="1276" height="676" alt="image" src="https://github.com/user-attachments/assets/40679040-9fdd-4d81-9b86-fa9df13814e2" />
