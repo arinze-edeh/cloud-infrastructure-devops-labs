@@ -168,6 +168,8 @@ resource "aws_security_group" "nautilus_sg" {
 
 *Screenshot: Terminal output of `cat main.tf` confirming the complete configuration block.*
 
+<img width="1250" height="767" alt="image" src="https://github.com/user-attachments/assets/30bcce94-9684-4316-95d3-fd5b24d17770" />
+
 **Configuration breakdown:**
 
 | Attribute | Value | Purpose |
@@ -456,7 +458,7 @@ No errors were encountered during this implementation. The full workflow from `t
 
 
 <img width="1042" height="645" alt="image" src="https://github.com/user-attachments/assets/78be3890-0747-4bac-8ac5-d4c7534a4316" />
-<img width="1250" height="767" alt="image" src="https://github.com/user-attachments/assets/30bcce94-9684-4316-95d3-fd5b24d17770" />
+
 <img width="1265" height="770" alt="image" src="https://github.com/user-attachments/assets/43b69c9b-1e03-49f5-9b93-ee9417ca96ec" />
 <img width="1229" height="481" alt="image" src="https://github.com/user-attachments/assets/ba220f13-986e-4095-b4ab-18af6b3dedee" />
 <img width="1259" height="779" alt="image" src="https://github.com/user-attachments/assets/a54ebe5f-b8a4-4af4-8f1b-c5cd9b05b0b4" />
