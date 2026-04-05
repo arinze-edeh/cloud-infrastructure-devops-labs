@@ -220,6 +220,8 @@ Terraform has been successfully initialized!
 
 > *Screenshot: Terminal output from `terraform init` confirming successful provider installation and backend initialisation.*
 
+<img width="1245" height="753" alt="image" src="https://github.com/user-attachments/assets/a3fa664b-85d3-4772-a385-7671a14044e0" />
+
 This step produces a `.terraform/` directory and a `.terraform.lock.hcl` lock file. The lock file pins the provider to version `5.91.0`, ensuring deterministic behaviour across all future `terraform init` runs in this repository.
 
 ---
@@ -433,7 +435,7 @@ No errors were encountered during this implementation. All commands executed cle
 
 
 
-<img width="1245" height="753" alt="image" src="https://github.com/user-attachments/assets/a3fa664b-85d3-4772-a385-7671a14044e0" />
+
 <img width="1189" height="642" alt="image" src="https://github.com/user-attachments/assets/52856faf-5d7a-4f00-820f-d09422a19a7d" />
 <img width="1244" height="739" alt="image" src="https://github.com/user-attachments/assets/c7c57e53-6ae3-49c9-816d-e67d840d297c" />
 <img width="1276" height="676" alt="image" src="https://github.com/user-attachments/assets/40679040-9fdd-4d81-9b86-fa9df13814e2" />
