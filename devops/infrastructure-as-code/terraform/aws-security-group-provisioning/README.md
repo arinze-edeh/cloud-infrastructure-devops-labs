@@ -327,6 +327,8 @@ aws_security_group.nautilus_sg
 
 *Screenshot: Terminal showing `aws_security_group.nautilus_sg` as the sole resource in state.*
 
+<img width="1260" height="299" alt="image" src="https://github.com/user-attachments/assets/fe2f4379-f817-4c61-9867-8a1717be3779" />
+
 **Inspect the full resource state:**
 
 ```bash
@@ -368,7 +370,12 @@ resource "aws_security_group" "nautilus_sg" {
 }
 ```
 
-*Screenshot: Full `terraform state show` output confirming all attributes match the specification, including both ingress rules, VPC assignment, and ARN.*
+*Screenshots: Full `terraform state show` output confirming all attributes match the specification, including both ingress rules, VPC assignment, and ARN.*
+
+
+<img width="1268" height="751" alt="image" src="https://github.com/user-attachments/assets/4fb08c95-273f-4fb0-be3e-c406e06bd35c" />
+<img width="1250" height="763" alt="image" src="https://github.com/user-attachments/assets/c81446eb-6988-471f-812d-92d0cdebdcbc" />
+
 
 ---
 
@@ -463,16 +470,3 @@ No errors were encountered during this implementation. The full workflow from `t
 * [HashiCorp: Terraform Best Practices](https://developer.hashicorp.com/terraform/cloud-docs/recommended-practices)
 
 ---
-
-
-
-
-<img width="1042" height="645" alt="image" src="https://github.com/user-attachments/assets/78be3890-0747-4bac-8ac5-d4c7534a4316" />
-
-
-
-
-
-<img width="1260" height="299" alt="image" src="https://github.com/user-attachments/assets/fe2f4379-f817-4c61-9867-8a1717be3779" />
-<img width="1268" height="751" alt="image" src="https://github.com/user-attachments/assets/4fb08c95-273f-4fb0-be3e-c406e06bd35c" />
-<img width="1250" height="763" alt="image" src="https://github.com/user-attachments/assets/c81446eb-6988-471f-812d-92d0cdebdcbc" />
