@@ -1,4 +1,4 @@
-# Apache Static Website Deployment on App Server 2 (stapp02) -- xFusionCorp Industries
+# Apache Static Website Deployment on App Server 2 (stapp02) - xFusionCorp Industries
 
 ## Table of Contents
 
