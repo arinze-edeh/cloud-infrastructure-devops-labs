@@ -9,7 +9,6 @@ Provision a custom AWS Virtual Private Cloud (VPC) using Terraform IaC against a
 - [Overview](#overview)
 - [Architecture](#architecture)
 - [Prerequisites](#prerequisites)
-- [Project Structure](#project-structure)
 - [Implementation](#implementation)
   - [Phase 1: Inspect the Working Directory](#phase-1-inspect-the-working-directory)
   - [Phase 2: Review the Provider Configuration](#phase-2-review-the-provider-configuration)
@@ -75,21 +74,6 @@ The provider is configured with LocalStack endpoint overrides for all relevant A
 
 ---
 
-## Project Structure
-
-```
-/home/bob/terraform/
-|-- provider.tf          # Pre-configured AWS provider with LocalStack endpoints
-|-- main.tf              # VPC resource definition (authored in this lab)
-|-- README.MD            # Task description
-|-- .terraform/          # Created by terraform init
-|-- .terraform.lock.hcl  # Provider lock file created by terraform init
-```
-
-> **Important:** Only `main.tf` is created during this implementation. No additional `.tf` files are introduced. All resource definitions are placed in `main.tf` as specified by the task requirements.
-
----
-
 ## Implementation
 
 ### Phase 1: Inspect the Working Directory
@@ -113,6 +97,8 @@ drwxr-x--- 1 bob bob 4096 Apr  6 03:08 ..
 The directory contains the pre-existing `provider.tf` and `README.MD` only. No `main.tf` exists yet.
 
 *Screenshot: Terminal output of `ls -la` showing initial directory contents*
+
+<img width="1150" height="516" alt="image" src="https://github.com/user-attachments/assets/ba32215a-7a6c-40d0-b305-2aef3c3d9245" />
 
 ---
 
@@ -435,7 +421,7 @@ The `terraform show` output confirmed `enable_dns_hostnames = false`. In VPCs th
 
 
 
-<img width="1150" height="516" alt="image" src="https://github.com/user-attachments/assets/ba32215a-7a6c-40d0-b305-2aef3c3d9245" />
+
 <img width="1135" height="766" alt="image" src="https://github.com/user-attachments/assets/91f93c24-1bd4-4fa1-99d6-ba81e21add6a" />
 <img width="1125" height="655" alt="image" src="https://github.com/user-attachments/assets/b475ad27-2633-4603-b297-2d01e4167175" />
 <img width="1115" height="767" alt="image" src="https://github.com/user-attachments/assets/4d9c9190-4f33-4545-9779-4721e9e3edd4" />
