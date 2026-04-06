@@ -138,7 +138,7 @@ sudo yum install -y cronie
 
 **Screenshot: Installing cronie on stapp02**
 
-
+![crond status on stapp01](https://github.com/user-attachments/assets/7e5bc2a2-ab8f-49e0-8086-f22f134d5741)
 
 *Package upgrade completing on stapp02. Both `cronie` and `cronie-anacron` are upgraded successfully.*
 
@@ -161,7 +161,7 @@ Enabling the service ensures persistence across reboots, which is critical for p
 
 **Screenshot: crond service started and verified on stapp01**
 
-![crond status on stapp01](https://github.com/user-attachments/assets/7e5bc2a2-ab8f-49e0-8086-f22f134d5741)
+
 
 *`systemctl status crond` confirms the service is active (running) and enabled on stapp01. The unit file is loaded from `/usr/lib/systemd/system/crond.service`.*
 
