@@ -167,6 +167,8 @@ A successful rollout status confirms that the desired pod count was met, the new
 
 *Screenshot: kubectl rollout status confirming redis-deployment successfully rolled out*
 
+<img width="1144" height="643" alt="image" src="https://github.com/user-attachments/assets/34880afb-1a9f-4ada-b844-3c26928282ce" />
+
 ---
 
 ### Phase 5: Deployment and Pod State Confirmation
@@ -281,6 +283,6 @@ Deleting and recreating a deployment loses all rollout history and makes `kubect
 
 
 
-<img width="1144" height="643" alt="image" src="https://github.com/user-attachments/assets/34880afb-1a9f-4ada-b844-3c26928282ce" />
+
 <img width="1140" height="599" alt="image" src="https://github.com/user-attachments/assets/4a75a384-e94c-4f0b-ae98-a1670685e8c2" />
 <img width="1142" height="597" alt="image" src="https://github.com/user-attachments/assets/3258bd92-6b02-4b35-aeac-08ce4a832cd9" />
