@@ -144,6 +144,8 @@ sudo yum install -y cronie
 
 **Screenshot: Installing cronie on stapp03**
 
+![cronie installed on stapp02](https://github.com/user-attachments/assets/3c8748f4-1a76-4898-a98c-3a8ce8ba05f1)
+
 ![Installing cronie on stapp03](https://github.com/user-attachments/assets/a715db10-e659-48f9-af15-884f9d19fa0d)
 
 *Package installation initiated on stapp03 with dependency resolution and repository metadata refresh.*
@@ -167,7 +169,7 @@ Enabling the service ensures persistence across reboots, which is critical for p
 
 **Screenshot: cronie upgrade completion on stapp02**
 
-![cronie installed on stapp02](https://github.com/user-attachments/assets/3c8748f4-1a76-4898-a98c-3a8ce8ba05f1)
+
 
 *Upgrade transaction completes successfully on stapp02. crond is then started and enabled in the same session.*
 
