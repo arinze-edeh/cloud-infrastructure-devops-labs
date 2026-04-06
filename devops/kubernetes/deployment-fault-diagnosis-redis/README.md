@@ -145,6 +145,8 @@ This approach is preferred over editing the manifest manually and re-applying fr
 
 *Screenshot: kubectl get/sed/apply pipeline correcting the redis-config typo in the deployment manifest*
 
+<img width="1145" height="499" alt="image" src="https://github.com/user-attachments/assets/885fc47a-e846-4f2f-8e06-6a85465a451d" />
+
 ---
 
 ### Phase 4: Rollout Verification
@@ -278,7 +280,7 @@ Deleting and recreating a deployment loses all rollout history and makes `kubect
 
 
 
-<img width="1145" height="499" alt="image" src="https://github.com/user-attachments/assets/885fc47a-e846-4f2f-8e06-6a85465a451d" />
+
 <img width="1144" height="643" alt="image" src="https://github.com/user-attachments/assets/34880afb-1a9f-4ada-b844-3c26928282ce" />
 <img width="1140" height="599" alt="image" src="https://github.com/user-attachments/assets/4a75a384-e94c-4f0b-ae98-a1670685e8c2" />
 <img width="1142" height="597" alt="image" src="https://github.com/user-attachments/assets/3258bd92-6b02-4b35-aeac-08ce4a832cd9" />
