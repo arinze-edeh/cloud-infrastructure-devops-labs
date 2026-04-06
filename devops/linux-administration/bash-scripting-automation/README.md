@@ -1,6 +1,6 @@
 # Automated Website Backup with SSH Key-Based Remote Transfer
 
-A production-grade bash automation for archiving a static website and securely transferring backups to a remote server using passwordless SSH authentication.
+A production-style bash automation for archiving a static website and securely transferring backups to a remote server using passwordless SSH authentication.
 
 ---
 
