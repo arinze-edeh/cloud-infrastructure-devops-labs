@@ -196,6 +196,10 @@ The default HTTP connector in Tomcat is set to port `8080`. To comply with the d
 ```bash
 sudo vi /etc/tomcat/server.xml
 ```
+**Screenshot:**
+
+![Tomcat Service Enable](https://github.com/user-attachments/assets/9dc42913-2ea2-4692-b829-25fae9cb191a)
+
 
 Locate the HTTP/1.1 Connector block and change the port attribute from `8080` to `3000`:
 
@@ -245,7 +249,7 @@ sudo systemctl status tomcat
 
 **Screenshot: Tomcat service start and enable commands**
 
-![Tomcat Service Enable](https://github.com/user-attachments/assets/9dc42913-2ea2-4692-b829-25fae9cb191a)
+
 
 *The `systemctl enable` command creates the appropriate systemd symlink for boot persistence. The service is confirmed active after the start command.*
 
