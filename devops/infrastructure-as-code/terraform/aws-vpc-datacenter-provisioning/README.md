@@ -317,6 +317,8 @@ The VPC was created in 1 second and assigned the ID `vpc-25fc7ded2b37bd271` by t
 
 *Screenshot: Terminal output of `terraform apply -auto-approve` showing successful resource creation*
 
+<img width="1148" height="776" alt="image" src="https://github.com/user-attachments/assets/5fc7114e-984d-44df-a131-a7011df4be87" />
+
 ---
 
 ### Phase 8: Verify State and Resource
@@ -435,6 +437,5 @@ The `terraform show` output confirmed `enable_dns_hostnames = false`. In VPCs th
 
 
 
-<img width="1148" height="776" alt="image" src="https://github.com/user-attachments/assets/5fc7114e-984d-44df-a131-a7011df4be87" />
 <img width="1157" height="191" alt="image" src="https://github.com/user-attachments/assets/76347b7e-3900-4172-b859-ffe5bcab506b" />
 <img width="1151" height="727" alt="image" src="https://github.com/user-attachments/assets/2d404a39-1613-48dc-80b4-dabe077d22bc" />
