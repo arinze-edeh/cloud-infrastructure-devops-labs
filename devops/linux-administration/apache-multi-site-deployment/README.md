@@ -1,4 +1,4 @@
-# Apache Static Website Deployment on App Server 2 (stapp02) - xFusionCorp Industries
+# Apache HTTP Server Deployment with Custom Port Configuration on CentOS Stream 9
 
 ## Table of Contents
 
@@ -97,7 +97,7 @@ scp -r /home/thor/demo steve@172.16.238.11:/tmp/
 
 **Operational note:** On first connection, the SSH client will prompt to accept the host fingerprint. Confirm by typing `yes`. The fingerprint is then persisted in `~/.ssh/known_hosts` on the jump host, so subsequent connections skip this prompt.
 
-**Screenshot -- SCP transfers completed from jump host to stapp02:**
+**Screenshot: SCP transfers completed from jump host to stapp02:**
 
 ![SCP transfer from jump_host to stapp02](https://github.com/user-attachments/assets/3192f0e8-070b-4298-a452-e75709d4f092)
 
@@ -113,7 +113,7 @@ After the transfers complete, open an interactive session on stapp02 to perform 
 ssh steve@172.16.238.11
 ```
 
-**Screenshot -- Active SSH session on stapp02:**
+**Screenshot: Active SSH session on stapp02:**
 
 ![SSH session established on stapp02](https://github.com/user-attachments/assets/8db66fff-f303-4a49-a3ca-367abd851bab)
 
@@ -129,13 +129,13 @@ Install the `httpd` package and all required dependencies using the system packa
 sudo yum install -y httpd
 ```
 
-**Screenshot -- Apache installation: dependency resolution and download:**
+**Screenshot: Apache installation: dependency resolution and download:**
 
 ![Apache yum install dependency resolution](https://github.com/user-attachments/assets/c88f4c76-b8d6-4624-8bef-3e85b080c884)
 
 *Package manager resolves 13 packages totalling 9.5 MB installed size.*
 
-**Screenshot -- Apache installation: transaction completion:**
+**Screenshot: Apache installation: transaction completion:**
 
 ![Apache yum install transaction complete](https://github.com/user-attachments/assets/a593cf76-4f93-4b93-97d8-4e90bb2b8231)
 
@@ -164,7 +164,7 @@ grep "Listen 8085" /etc/httpd/conf/httpd.conf
 Listen 8085
 ```
 
-**Screenshot -- Port configuration applied and verified:**
+**Screenshot: Port configuration applied and verified:**
 
 ![Apache port 8085 configuration verified](https://github.com/user-attachments/assets/306bd313-3d6a-486b-aa65-295b0dbe76a6)
 
@@ -185,7 +185,7 @@ sudo systemctl enable httpd
 
 The `enable` command creates a systemd symlink in `multi-user.target.wants/`, ensuring `httpd` starts at every boot without manual intervention.
 
-**Screenshot -- Apache started and enabled at boot:**
+**Screenshot: Apache started and enabled at boot:**
 
 ![Apache systemctl start and enable](https://github.com/user-attachments/assets/3f9fefa7-6ffd-43dd-8a0a-80448f67a547)
 
@@ -209,7 +209,7 @@ sudo mv /tmp/ecommerce /var/www/html/
 sudo mv /tmp/demo /var/www/html/
 ```
 
-**Screenshot -- Website directories moved to DocumentRoot:**
+**Screenshot: Website directories moved to DocumentRoot:**
 
 ![Move websites to /var/www/html](https://github.com/user-attachments/assets/578240d7-883c-4421-94f0-77db2aea525c)
 
@@ -228,7 +228,7 @@ sudo chown -R apache:apache /var/www/html/demo
 
 The `-R` flag applies ownership recursively across all files and subdirectories within each site.
 
-**Screenshot -- Ownership set for both website directories:**
+**Screenshot: Ownership set for both website directories:**
 
 ![chown apache ownership applied](https://github.com/user-attachments/assets/3567b2fe-b0c4-4f96-b55b-6a13aef6835a)
 
@@ -256,7 +256,7 @@ Confirm that both websites are served correctly over HTTP on port 8085 by issuin
 curl http://localhost:8085/ecommerce/
 ```
 
-**Screenshot -- Curl response for ecommerce site:**
+**Screenshot: Curl response for ecommerce site:**
 
 ![Curl validation - ecommerce site](https://github.com/user-attachments/assets/1dced30a-cbc0-44f5-89f8-90c69b0780da)
 
@@ -268,7 +268,7 @@ curl http://localhost:8085/ecommerce/
 curl http://localhost:8085/demo/
 ```
 
-**Screenshot -- Curl response for both ecommerce and demo sites:**
+**Screenshot: Curl response for both ecommerce and demo sites:**
 
 ![Curl validation - ecommerce and demo sites](https://github.com/user-attachments/assets/1d252416-c8b9-4b3d-ad29-9e75cdfbf708)
 
