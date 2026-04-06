@@ -129,15 +129,16 @@ sudo yum install -y cronie
 
 > **Note:** On systems where `cronie` is already installed, `yum` will upgrade the package to the latest available version rather than performing a fresh install. Both `cronie` and `cronie-anacron` are upgraded as a unit.
 
-**Screenshot: Installing cronie on stapp01**
+**Screenshots: Installing cronie on stapp01**
 
 ![Installing cronie on stapp01](https://github.com/user-attachments/assets/2f546048-df6a-4433-bb28-4366f66b7506)
+![Installing cronie on stapp02](https://github.com/user-attachments/assets/58da6179-0709-467f-96fc-4f061833f44d)
 
 *`yum install -y cronie` on stapp01. The package manager detects the existing version and triggers an upgrade to 1.5.7-16.el9.*
 
 **Screenshot: Installing cronie on stapp02**
 
-![Installing cronie on stapp02](https://github.com/user-attachments/assets/58da6179-0709-467f-96fc-4f061833f44d)
+
 
 *Package upgrade completing on stapp02. Both `cronie` and `cronie-anacron` are upgraded successfully.*
 
