@@ -161,6 +161,8 @@ Key observations:
 
 *Screenshot: Terminal output of `cat provider.tf` displaying the full provider block*
 
+<img width="1135" height="766" alt="image" src="https://github.com/user-attachments/assets/91f93c24-1bd4-4fa1-99d6-ba81e21add6a" />
+
 ---
 
 ### Phase 3: Author the VPC Resource Configuration
@@ -422,7 +424,7 @@ The `terraform show` output confirmed `enable_dns_hostnames = false`. In VPCs th
 
 
 
-<img width="1135" height="766" alt="image" src="https://github.com/user-attachments/assets/91f93c24-1bd4-4fa1-99d6-ba81e21add6a" />
+
 <img width="1125" height="655" alt="image" src="https://github.com/user-attachments/assets/b475ad27-2633-4603-b297-2d01e4167175" />
 <img width="1115" height="767" alt="image" src="https://github.com/user-attachments/assets/4d9c9190-4f33-4545-9779-4721e9e3edd4" />
 <img width="1160" height="754" alt="image" src="https://github.com/user-attachments/assets/4dd92fe6-1a4b-4dc0-aa39-31a2dd61b224" />
