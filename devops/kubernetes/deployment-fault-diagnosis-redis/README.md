@@ -119,6 +119,8 @@ The `redis:alpine` image is the official, lightweight Redis image published by t
 
 *Screenshot: kubectl set image command confirming image updated for redis-container*
 
+<img width="1143" height="465" alt="image" src="https://github.com/user-attachments/assets/3f98ced0-6aed-4948-88b6-a0b1b4df03a9" />
+
 ---
 
 ### Phase 3: ConfigMap Reference Repair
@@ -275,7 +277,7 @@ Deleting and recreating a deployment loses all rollout history and makes `kubect
 
 
 
-<img width="1143" height="465" alt="image" src="https://github.com/user-attachments/assets/3f98ced0-6aed-4948-88b6-a0b1b4df03a9" />
+
 <img width="1145" height="499" alt="image" src="https://github.com/user-attachments/assets/885fc47a-e846-4f2f-8e06-6a85465a451d" />
 <img width="1144" height="643" alt="image" src="https://github.com/user-attachments/assets/34880afb-1a9f-4ada-b844-3c26928282ce" />
 <img width="1140" height="599" alt="image" src="https://github.com/user-attachments/assets/4a75a384-e94c-4f0b-ae98-a1670685e8c2" />
