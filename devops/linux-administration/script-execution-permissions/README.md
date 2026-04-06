@@ -108,8 +108,6 @@ ssh tony@172.16.238.10
 
 ![SSH connection from thor@jumphost to tony@stapp01 showing host key fingerprint acceptance and password authentication](https://github.com/user-attachments/assets/a752e1df-151a-476c-adc9-e82b0b8d609a)
 
-![Continued view of the SSH session showing successful login and shell prompt on stapp01](https://github.com/user-attachments/assets/06281ee9-e830-4eb5-8fef-832ac18e9f8d)
-
 ---
 
 ### Step 3: Verify Script Existence and Inspect Initial Permissions
