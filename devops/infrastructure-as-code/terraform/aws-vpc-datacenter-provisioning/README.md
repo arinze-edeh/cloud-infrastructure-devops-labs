@@ -253,6 +253,8 @@ Success! The configuration is valid.
 
 *Screenshot: Terminal output of `terraform validate` confirming configuration validity*
 
+<img width="1160" height="638" alt="image" src="https://github.com/user-attachments/assets/f2a12fa0-c642-4aa0-91f3-e03d52295c4b" />
+
 ---
 
 ### Phase 6: Generate and Review the Execution Plan
@@ -289,6 +291,8 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 The plan confirmed that exactly one resource would be created with the intended CIDR block and name tag. No unintended changes were surfaced.
 
 *Screenshot: Terminal output of `terraform plan` showing the full execution plan*
+
+<img width="1155" height="761" alt="image" src="https://github.com/user-attachments/assets/88bf56f5-3857-4fed-bfb8-e3b0ca9fdc91" />
 
 ---
 
@@ -429,8 +433,8 @@ The `terraform show` output confirmed `enable_dns_hostnames = false`. In VPCs th
 
 
 
-<img width="1160" height="638" alt="image" src="https://github.com/user-attachments/assets/f2a12fa0-c642-4aa0-91f3-e03d52295c4b" />
-<img width="1155" height="761" alt="image" src="https://github.com/user-attachments/assets/88bf56f5-3857-4fed-bfb8-e3b0ca9fdc91" />
+
+
 <img width="1148" height="776" alt="image" src="https://github.com/user-attachments/assets/5fc7114e-984d-44df-a131-a7011df4be87" />
 <img width="1157" height="191" alt="image" src="https://github.com/user-attachments/assets/76347b7e-3900-4172-b859-ffe5bcab506b" />
 <img width="1151" height="727" alt="image" src="https://github.com/user-attachments/assets/2d404a39-1613-48dc-80b4-dabe077d22bc" />
