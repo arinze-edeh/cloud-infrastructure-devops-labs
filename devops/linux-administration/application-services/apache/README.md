@@ -247,10 +247,6 @@ sudo systemctl enable tomcat
 sudo systemctl status tomcat
 ```
 
-**Screenshot: Tomcat service start and enable commands**
-
-
-
 *The `systemctl enable` command creates the appropriate systemd symlink for boot persistence. The service is confirmed active after the start command.*
 
 > **Best Practice:** Always run `systemctl enable` alongside `systemctl start` during initial deployments. Omitting `enable` results in the service not surviving reboots, which is a common cause of post-maintenance outages.
