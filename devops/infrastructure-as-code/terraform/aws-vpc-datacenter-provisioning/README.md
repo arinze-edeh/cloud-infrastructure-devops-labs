@@ -233,6 +233,8 @@ The provider was installed and signed by HashiCorp. The `.terraform.lock.hcl` fi
 
 *Screenshot: Terminal output of `terraform init` showing successful provider installation*
 
+<img width="1160" height="754" alt="image" src="https://github.com/user-attachments/assets/4dd92fe6-1a4b-4dc0-aa39-31a2dd61b224" />
+
 ---
 
 ### Phase 5: Validate the Configuration
@@ -427,9 +429,6 @@ The `terraform show` output confirmed `enable_dns_hostnames = false`. In VPCs th
 
 
 
-<img width="1125" height="655" alt="image" src="https://github.com/user-attachments/assets/b475ad27-2633-4603-b297-2d01e4167175" />
-
-<img width="1160" height="754" alt="image" src="https://github.com/user-attachments/assets/4dd92fe6-1a4b-4dc0-aa39-31a2dd61b224" />
 <img width="1160" height="638" alt="image" src="https://github.com/user-attachments/assets/f2a12fa0-c642-4aa0-91f3-e03d52295c4b" />
 <img width="1155" height="761" alt="image" src="https://github.com/user-attachments/assets/88bf56f5-3857-4fed-bfb8-e3b0ca9fdc91" />
 <img width="1148" height="776" alt="image" src="https://github.com/user-attachments/assets/5fc7114e-984d-44df-a131-a7011df4be87" />
