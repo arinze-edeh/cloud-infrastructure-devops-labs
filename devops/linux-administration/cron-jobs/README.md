@@ -167,7 +167,7 @@ Enabling the service ensures persistence across reboots, which is critical for p
 
 **Screenshot: cronie upgrade completion on stapp02**
 
-
+<img width="1010" height="718" alt="image" src="https://github.com/user-attachments/assets/4ca7c75b-ae7e-4cf7-a485-63b0e9095f5b" />
 
 *Upgrade transaction completes successfully on stapp02. crond is then started and enabled in the same session.*
 
