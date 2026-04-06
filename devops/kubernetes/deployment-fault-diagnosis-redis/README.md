@@ -205,7 +205,12 @@ All availability indicators confirmed healthy state: `READY 1/1`, `UP-TO-DATE 1`
 
 *Screenshot: kubectl get pods showing redis-deployment pod in Running state with 0 restarts*
 
+<img width="1140" height="599" alt="image" src="https://github.com/user-attachments/assets/4a75a384-e94c-4f0b-ae98-a1670685e8c2" />
+
 *Screenshot: kubectl get deployment showing redis-deployment with READY 1/1 and AVAILABLE 1*
+
+
+<img width="1142" height="597" alt="image" src="https://github.com/user-attachments/assets/3258bd92-6b02-4b35-aeac-08ce4a832cd9" />
 
 ---
 
@@ -275,14 +280,3 @@ Deleting and recreating a deployment loses all rollout history and makes `kubect
 | Final Pod Status | `Running` |
 | Pod Restarts | `0` |
 | Deployment Ready State | `1/1` |
-
-
-
-
-
-
-
-
-
-<img width="1140" height="599" alt="image" src="https://github.com/user-attachments/assets/4a75a384-e94c-4f0b-ae98-a1670685e8c2" />
-<img width="1142" height="597" alt="image" src="https://github.com/user-attachments/assets/3258bd92-6b02-4b35-aeac-08ce4a832cd9" />
