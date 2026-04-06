@@ -377,6 +377,8 @@ All expected attributes were confirmed:
 
 *Screenshot: Terminal output of `terraform show` displaying full VPC state attributes*
 
+<img width="1151" height="727" alt="image" src="https://github.com/user-attachments/assets/2d404a39-1613-48dc-80b4-dabe077d22bc" />
+
 ---
 
 ## Key Decisions
@@ -427,15 +429,3 @@ Upon VPC creation, AWS (and LocalStack faithfully emulating this behavior) autom
 
 **`dns_hostnames` is disabled by default**
 The `terraform show` output confirmed `enable_dns_hostnames = false`. In VPCs that need to support EC2 instances accessible by public DNS names, this attribute must be explicitly set to `true` in the `aws_vpc` resource block. Omitting it is a common oversight that surfaces only when EC2 public DNS resolution is required downstream.
-
-
-
-
-
-
-
-
-
-
-<img width="1157" height="191" alt="image" src="https://github.com/user-attachments/assets/76347b7e-3900-4172-b859-ffe5bcab506b" />
-<img width="1151" height="727" alt="image" src="https://github.com/user-attachments/assets/2d404a39-1613-48dc-80b4-dabe077d22bc" />
