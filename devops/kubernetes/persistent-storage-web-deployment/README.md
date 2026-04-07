@@ -331,6 +331,8 @@ Endpoints:
 
 > Screenshot: Service web-datacenter created with NodePort 30008, Endpoints field empty
 
+<img width="1046" height="864" alt="image" src="https://github.com/user-attachments/assets/17eaa1cd-9cde-4e17-8b07-ea0377a0c8f9" />
+
 The `Endpoints` field was empty at this stage, indicating the service selector was not matching any pod. This required investigation.
 
 ---
@@ -484,7 +486,7 @@ metadata:
 
 <img width="1055" height="725" alt="image" src="https://github.com/user-attachments/assets/b901b00e-48bb-4dbc-b6f9-2842104bd9ee" />
 <img width="1055" height="759" alt="image" src="https://github.com/user-attachments/assets/2024079e-5183-4d2e-8d8b-582395de959a" />
-<img width="1046" height="864" alt="image" src="https://github.com/user-attachments/assets/17eaa1cd-9cde-4e17-8b07-ea0377a0c8f9" />
+
 <img width="1060" height="553" alt="image" src="https://github.com/user-attachments/assets/53791c55-f0a2-4d79-b19a-8533a44d3e34" />
 <img width="1056" height="592" alt="image" src="https://github.com/user-attachments/assets/1714bf13-d5ca-49f8-9156-a5d49bb3db9a" />
 <img width="1056" height="672" alt="image" src="https://github.com/user-attachments/assets/d3ee3b35-6f71-4d91-ba60-59f21ddef753" />
