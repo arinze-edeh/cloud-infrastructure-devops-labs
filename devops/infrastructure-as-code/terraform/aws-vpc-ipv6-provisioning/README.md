@@ -6,7 +6,6 @@
 * [Problem Statement](#problem-statement)
 * [Solution Architecture](#solution-architecture)
 * [Prerequisites](#prerequisites)
-* [Repository Structure](#repository-structure)
 * [Implementation Guide](#implementation-guide)
   * [Phase 1: Environment Verification](#phase-1-environment-verification)
   * [Phase 2: Terraform Configuration Review](#phase-2-terraform-configuration-review)
@@ -59,19 +58,6 @@ The provider routes all AWS API calls to a LocalStack endpoint, enabling full in
 * LocalStack running and accessible at `http://aws:4566`
 * Write access to the `/home/bob/terraform` working directory
 * Existing `provider.tf` with LocalStack endpoint configuration
-
----
-
-## Repository Structure
-
-```
-/home/bob/terraform/
-├── provider.tf          # AWS provider and LocalStack endpoint configuration
-├── main.tf              # VPC resource definition (created in this lab)
-├── README.MD            # Pre-existing project documentation
-└── .terraform/          # Generated after terraform init
-    └── .terraform.lock.hcl
-```
 
 ---
 
