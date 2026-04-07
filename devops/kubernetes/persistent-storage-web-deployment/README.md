@@ -1,6 +1,6 @@
 # Kubernetes Persistent Volume Provisioning and NodePort Service Exposure
 
-A hands-on infrastructure exercise provisioning a `hostPath`-backed PersistentVolume, binding it via a PersistentVolumeClaim, deploying an nginx pod with persistent storage mounted at the web root, and exposing the workload externally through a NodePort service on a single-node k3s cluster.
+>A hands-on infrastructure exercise provisioning a `hostPath`-backed PersistentVolume, binding it via a PersistentVolumeClaim, deploying an nginx pod with persistent storage mounted at the web root, and exposing the workload externally through a NodePort service on a single-node k3s cluster.
 
 ---
 
@@ -169,7 +169,7 @@ Source:
 
 ### Phase 3: PersistentVolumeClaim Binding
 
-Created the PersistentVolumeClaim requesting `1Gi` of storage with `ReadWriteOnce` access mode and `storageClassName: manual`. Kubernetes static binding matched this PVC to `pv-datacenter` because the storage class and access mode aligned.
+>Created the PersistentVolumeClaim requesting `1Gi` of storage with `ReadWriteOnce` access mode and `storageClassName: manual`. Kubernetes static binding matched this PVC to `pv-datacenter` because the storage class and access mode aligned.
 
 ```bash
 cat <<'EOF' > /tmp/pvc-datacenter.yaml
@@ -222,7 +222,7 @@ Used By:       <none>
 
 <img width="1063" height="671" alt="image" src="https://github.com/user-attachments/assets/79e02f15-71e2-4f4d-940d-ae0ba5c38808" />
 
-Note: The PVC requested `1Gi` but was bound to the entire `3Gi` PV. This is expected Kubernetes behavior. A PVC binds to the smallest available PV that satisfies its constraints; the full PV capacity is allocated, not just the requested amount.
+>Note: The PVC requested `1Gi` but was bound to the entire `3Gi` PV. This is expected Kubernetes behavior. A PVC binds to the smallest available PV that satisfies its constraints; the full PV capacity is allocated, not just the requested amount.
 
 ---
 
@@ -333,7 +333,7 @@ Endpoints:
 
 <img width="1046" height="864" alt="image" src="https://github.com/user-attachments/assets/17eaa1cd-9cde-4e17-8b07-ea0377a0c8f9" />
 
-The `Endpoints` field was empty at this stage, indicating the service selector was not matching any pod. This required investigation.
+>The `Endpoints` field was empty at this stage, indicating the service selector was not matching any pod. This required investigation.
 
 ---
 
@@ -380,6 +380,8 @@ web-datacenter   10.22.0.9:80   3m19s
 
 > Screenshot: Endpoint 10.22.0.9:80 registered under web-datacenter service after label applied
 
+<img width="1056" height="672" alt="image" src="https://github.com/user-attachments/assets/d3ee3b35-6f71-4d91-ba60-59f21ddef753" />
+
 ---
 
 ### Phase 7: Service Connectivity Validation
@@ -404,7 +406,9 @@ curl http://localhost:30008
 
 > Screenshot: curl to localhost:30008 returning HTTP 403 from nginx/1.29.7
 
-The `403 Forbidden` response confirms the nginx container is running and reachable through the NodePort service. The 403 is an expected response: the PersistentVolume mount at `/usr/share/nginx/html` points to an empty host directory (`/mnt/data`), so nginx has no `index.html` to serve and returns a directory listing denial. This is correct behavior given the lab environment pre-condition that the directory exists but is empty.
+<img width="1063" height="817" alt="image" src="https://github.com/user-attachments/assets/31633b34-c290-4425-b176-fa343be373b6" />
+
+>The `403 Forbidden` response confirms the nginx container is running and reachable through the NodePort service. The 403 is an expected response: the PersistentVolume mount at `/usr/share/nginx/html` points to an empty host directory (`/mnt/data`), so nginx has no `index.html` to serve and returns a directory listing denial. This is correct behavior given the lab environment pre-condition that the directory exists but is empty.
 
 ---
 
@@ -489,7 +493,7 @@ metadata:
 
 <img width="1060" height="553" alt="image" src="https://github.com/user-attachments/assets/53791c55-f0a2-4d79-b19a-8533a44d3e34" />
 <img width="1056" height="592" alt="image" src="https://github.com/user-attachments/assets/1714bf13-d5ca-49f8-9156-a5d49bb3db9a" />
-<img width="1056" height="672" alt="image" src="https://github.com/user-attachments/assets/d3ee3b35-6f71-4d91-ba60-59f21ddef753" />
-<img width="1063" height="817" alt="image" src="https://github.com/user-attachments/assets/31633b34-c290-4425-b176-fa343be373b6" />
+
+
 
 
