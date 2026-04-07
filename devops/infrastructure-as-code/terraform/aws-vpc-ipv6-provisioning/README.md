@@ -240,6 +240,8 @@ The lock file `.terraform.lock.hcl` is generated and pins provider version `5.91
 
 *Screenshot: Terminal showing terraform init completion with provider installation confirmation*
 
+<img width="1195" height="586" alt="image" src="https://github.com/user-attachments/assets/50a9e79f-a61c-4361-945f-a6e033be5df8" />
+
 ---
 
 ### Phase 5: Configuration Validation
@@ -423,7 +425,7 @@ A fully functional AWS VPC named `devops-vpc` was provisioned via Terraform IaC 
 
 
 
-<img width="1195" height="586" alt="image" src="https://github.com/user-attachments/assets/50a9e79f-a61c-4361-945f-a6e033be5df8" />
+
 <img width="1193" height="776" alt="image" src="https://github.com/user-attachments/assets/b8528f17-cb9b-4a5c-9dc6-9d15c655a2f4" />
 <img width="1195" height="766" alt="image" src="https://github.com/user-attachments/assets/761f1044-6da0-40a3-9f3a-4ae09bb97cc0" />
 <img width="1191" height="693" alt="image" src="https://github.com/user-attachments/assets/4d47a383-edce-4f3e-a0ce-fed928613d1e" />
