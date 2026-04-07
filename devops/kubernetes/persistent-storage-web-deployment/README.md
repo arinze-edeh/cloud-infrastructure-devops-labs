@@ -163,6 +163,8 @@ Source:
 
 > Screenshot: PV in Available state with hostPath source confirmed
 
+<img width="1062" height="753" alt="image" src="https://github.com/user-attachments/assets/549d73c1-0de0-46c5-bea8-50f5b265526d" />
+
 ---
 
 ### Phase 3: PersistentVolumeClaim Binding
@@ -469,7 +471,7 @@ metadata:
 <img width="1018" height="817" alt="image" src="https://github.com/user-attachments/assets/27adfe6a-7b42-4ece-8c6a-acf187cda477" />
 <img width="1039" height="700" alt="image" src="https://github.com/user-attachments/assets/0dd9f9b5-6a09-45f8-87f6-1c53bce83ad1" />
 <img width="1057" height="697" alt="image" src="https://github.com/user-attachments/assets/63e95eb0-7a4d-4fdb-a91f-b663d7c9c0f8" />
-<img width="1062" height="753" alt="image" src="https://github.com/user-attachments/assets/549d73c1-0de0-46c5-bea8-50f5b265526d" />
+
 <img width="1059" height="739" alt="image" src="https://github.com/user-attachments/assets/c86a25fd-ac4d-47f5-aac6-c5fe3851cc34" />
 <img width="1056" height="783" alt="image" src="https://github.com/user-attachments/assets/f14d157d-8b6e-4f40-964d-70d144d80cad" />
 <img width="1057" height="828" alt="image" src="https://github.com/user-attachments/assets/b5e23e66-585b-4f60-b062-f6168832b8a4" />
