@@ -14,7 +14,6 @@
 - [Problem Statement](#problem-statement)
 - [Solution Architecture](#solution-architecture)
 - [Prerequisites](#prerequisites)
-- [Repository Structure](#repository-structure)
 - [Deployment Walkthrough](#deployment-walkthrough)
   - [Step 1: Inspect the Lambda Function Code](#step-1-inspect-the-lambda-function-code)
   - [Step 2: Write the CloudFormation Template -- First Draft](#step-2-write-the-cloudformation-template----first-draft)
@@ -122,17 +121,6 @@ The Nautilus DevOps team required a reliable, serverless priority queuing system
 | IAM Permissions | `cloudformation:*`, `sqs:*`, `sns:*`, `lambda:*`, `iam:CreateRole`, `iam:AttachRolePolicy` -- `iam:PutRolePolicy` is NOT permitted (see Error 3) |
 | Python | 3.10+ available on the client host -- do NOT use it to validate CloudFormation YAML (see Error 1) |
 | Region | `us-east-1` |
-
----
-
-## Repository Structure
-
-```
-.
-+-- index.py                          # Lambda function source code (pre-existing on client host at /root/index.py)
-+-- nautilus-priority-stack.yml       # CloudFormation IaC template
-+-- README.md                         # This document
-```
 
 ---
 
