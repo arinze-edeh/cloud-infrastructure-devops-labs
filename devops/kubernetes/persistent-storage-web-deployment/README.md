@@ -220,6 +220,8 @@ Used By:       <none>
 
 > Screenshot: PVC status showing Bound to pv-datacenter with 3Gi capacity
 
+<img width="1063" height="671" alt="image" src="https://github.com/user-attachments/assets/79e02f15-71e2-4f4d-940d-ae0ba5c38808" />
+
 Note: The PVC requested `1Gi` but was bound to the entire `3Gi` PV. This is expected Kubernetes behavior. A PVC binds to the smallest available PV that satisfies its constraints; the full PV capacity is allocated, not just the requested amount.
 
 ---
@@ -475,7 +477,7 @@ metadata:
 <img width="1059" height="739" alt="image" src="https://github.com/user-attachments/assets/c86a25fd-ac4d-47f5-aac6-c5fe3851cc34" />
 <img width="1056" height="783" alt="image" src="https://github.com/user-attachments/assets/f14d157d-8b6e-4f40-964d-70d144d80cad" />
 <img width="1057" height="828" alt="image" src="https://github.com/user-attachments/assets/b5e23e66-585b-4f60-b062-f6168832b8a4" />
-<img width="1063" height="671" alt="image" src="https://github.com/user-attachments/assets/79e02f15-71e2-4f4d-940d-ae0ba5c38808" />
+
 <img width="1059" height="745" alt="image" src="https://github.com/user-attachments/assets/9cd84f0c-1bbd-4b52-8836-2235776b5725" />
 <img width="1055" height="839" alt="image" src="https://github.com/user-attachments/assets/da02ef18-ce5b-4fde-a21f-da54c4416a11" />
 <img width="1055" height="725" alt="image" src="https://github.com/user-attachments/assets/b901b00e-48bb-4dbc-b6f9-2842104bd9ee" />
