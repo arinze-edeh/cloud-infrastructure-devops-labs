@@ -210,6 +210,8 @@ Key attributes:
 
 *Screenshot: Terminal showing the cat heredoc command and the resulting main.tf content*
 
+<img width="1196" height="770" alt="image" src="https://github.com/user-attachments/assets/0895da3f-6fe2-401a-9dd1-bd6a2218c160" />
+
 ---
 
 ### Phase 4: Provider Initialization
@@ -418,10 +420,9 @@ AWS resource IDs are auto-generated and opaque. The `Name` tag is what surfaces 
 A fully functional AWS VPC named `devops-vpc` was provisioned via Terraform IaC into a LocalStack environment. The VPC is configured with a `10.0.0.0/16` IPv4 address space and an Amazon-assigned `/56` IPv6 CIDR block (`2400:6500:6198:2400::/56`), supporting dual-stack workloads. Default supporting constructs including a network ACL, route table, security group, and DHCP options set were automatically created by AWS as part of VPC initialization. The Terraform state file accurately reflects all resource attributes, and the configuration is ready for extension with subnets, internet gateways, and route table associations in subsequent provisioning phases.
 
 
-<img width="1062" height="422" alt="image" src="https://github.com/user-attachments/assets/99d9726a-4145-46c2-a73a-150b37e27ce8" />
 
 
-<img width="1196" height="770" alt="image" src="https://github.com/user-attachments/assets/0895da3f-6fe2-401a-9dd1-bd6a2218c160" />
+
 <img width="1195" height="586" alt="image" src="https://github.com/user-attachments/assets/50a9e79f-a61c-4361-945f-a6e033be5df8" />
 <img width="1193" height="776" alt="image" src="https://github.com/user-attachments/assets/b8528f17-cb9b-4a5c-9dc6-9d15c655a2f4" />
 <img width="1195" height="766" alt="image" src="https://github.com/user-attachments/assets/761f1044-6da0-40a3-9f3a-4ae09bb97cc0" />
