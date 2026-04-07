@@ -258,6 +258,8 @@ Success! The configuration is valid.
 
 *Screenshot: Terminal showing terraform validate success output*
 
+<img width="1193" height="776" alt="image" src="https://github.com/user-attachments/assets/b8528f17-cb9b-4a5c-9dc6-9d15c655a2f4" />
+
 ---
 
 ### Phase 6: Infrastructure Provisioning
@@ -316,6 +318,8 @@ The VPC was provisioned successfully with resource ID `vpc-8088692a29dd38c1c`. C
 
 *Screenshot: Terminal showing terraform apply output with plan, creation progress, and completion summary*
 
+<img width="1195" height="766" alt="image" src="https://github.com/user-attachments/assets/761f1044-6da0-40a3-9f3a-4ae09bb97cc0" />
+
 ---
 
 ### Phase 7: State Verification
@@ -367,6 +371,8 @@ All critical attributes are confirmed:
 | `enable_dns_support` | `true` (default) | `true` |
 
 *Screenshot: Terminal showing full terraform show output with all populated VPC attributes*
+
+<img width="1191" height="693" alt="image" src="https://github.com/user-attachments/assets/4d47a383-edce-4f3e-a0ce-fed928613d1e" />
 
 ---
 
@@ -420,12 +426,3 @@ AWS resource IDs are auto-generated and opaque. The `Name` tag is what surfaces 
 ## Outcome
 
 A fully functional AWS VPC named `devops-vpc` was provisioned via Terraform IaC into a LocalStack environment. The VPC is configured with a `10.0.0.0/16` IPv4 address space and an Amazon-assigned `/56` IPv6 CIDR block (`2400:6500:6198:2400::/56`), supporting dual-stack workloads. Default supporting constructs including a network ACL, route table, security group, and DHCP options set were automatically created by AWS as part of VPC initialization. The Terraform state file accurately reflects all resource attributes, and the configuration is ready for extension with subnets, internet gateways, and route table associations in subsequent provisioning phases.
-
-
-
-
-
-
-<img width="1193" height="776" alt="image" src="https://github.com/user-attachments/assets/b8528f17-cb9b-4a5c-9dc6-9d15c655a2f4" />
-<img width="1195" height="766" alt="image" src="https://github.com/user-attachments/assets/761f1044-6da0-40a3-9f3a-4ae09bb97cc0" />
-<img width="1191" height="693" alt="image" src="https://github.com/user-attachments/assets/4d47a383-edce-4f3e-a0ce-fed928613d1e" />
