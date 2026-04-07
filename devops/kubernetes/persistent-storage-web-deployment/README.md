@@ -43,22 +43,22 @@ All resources were provisioned in the `default` namespace on a k3s single-node c
 │                     jump-host (k3s)                     │
 │                                                         │
 │   ┌──────────────┐       ┌──────────────────────────┐   │
-│   │  NodePort    │       │     pod-datacenter        │   │
-│   │  Service     │──────>│  container-datacenter     │   │
-│   │  :30008      │       │  image: nginx:latest      │   │
-│   └──────────────┘       │  mountPath:               │   │
-│                          │  /usr/share/nginx/html    │   │
+│   │  NodePort    │       │     pod-datacenter       │   │
+│   │  Service     │──────>│  container-datacenter    │   │
+│   │  :30008      │       │  image: nginx:latest     │   │
+│   └──────────────┘       │  mountPath:              │   │
+│                          │  /usr/share/nginx/html   │   │
 │                          └────────────┬─────────────┘   │
-│                                       │                  │
+│                                       │                 │
 │                          ┌────────────▼─────────────┐   │
-│                          │    pvc-datacenter         │   │
-│                          │    1Gi / RWO / manual     │   │
+│                          │    pvc-datacenter        │   │
+│                          │    1Gi / RWO / manual    │   │
 │                          └────────────┬─────────────┘   │
-│                                       │                  │
+│                                       │                 │
 │                          ┌────────────▼─────────────┐   │
-│                          │    pv-datacenter          │   │
-│                          │    3Gi / RWO / hostPath   │   │
-│                          │    /mnt/data              │   │
+│                          │    pv-datacenter         │   │
+│                          │    3Gi / RWO / hostPath  │   │
+│                          │    /mnt/data             │   │
 │                          └──────────────────────────┘   │
 └─────────────────────────────────────────────────────────┘
 ```
