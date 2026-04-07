@@ -1,6 +1,6 @@
 # Kubernetes Persistent Volume Provisioning and NodePort Service Exposure
 
-A hands-on infrastructure lab provisioning a `hostPath`-backed PersistentVolume, binding it via a PersistentVolumeClaim, deploying an nginx pod with persistent storage mounted at the web root, and exposing the workload externally through a NodePort service on a single-node k3s cluster.
+A hands-on infrastructure exercise provisioning a `hostPath`-backed PersistentVolume, binding it via a PersistentVolumeClaim, deploying an nginx pod with persistent storage mounted at the web root, and exposing the workload externally through a NodePort service on a single-node k3s cluster.
 
 ---
 
@@ -103,6 +103,8 @@ kube-system       Active   54m
 ```
 
 > Screenshot: Cluster info and node status showing jump-host in Ready state
+
+<img width="1026" height="528" alt="image" src="https://github.com/user-attachments/assets/0059ebbd-3c8e-4a9c-9bd3-aa6db99c0348" />
 
 ---
 
@@ -462,8 +464,8 @@ metadata:
 * **Label-selector alignment is a foundational Kubernetes contract.** Services, Deployments, and NetworkPolicies all rely on label selectors. Establishing a disciplined labeling strategy at manifest authoring time prevents runtime misconfigurations and eliminates the need for post-deployment corrective actions.
 
 
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/22ac02d4-a8e5-4525-ab33-d0e89d4f6ff4" />
-<img width="1026" height="528" alt="image" src="https://github.com/user-attachments/assets/0059ebbd-3c8e-4a9c-9bd3-aa6db99c0348" />
+
+
 <img width="1018" height="817" alt="image" src="https://github.com/user-attachments/assets/27adfe6a-7b42-4ece-8c6a-acf187cda477" />
 <img width="1039" height="700" alt="image" src="https://github.com/user-attachments/assets/0dd9f9b5-6a09-45f8-87f6-1c53bce83ad1" />
 <img width="1057" height="697" alt="image" src="https://github.com/user-attachments/assets/63e95eb0-7a4d-4fdb-a91f-b663d7c9c0f8" />
