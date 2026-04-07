@@ -165,6 +165,8 @@ Key observations:
 
 *Screenshot: Terminal output of provider.tf contents*
 
+<img width="1194" height="766" alt="image" src="https://github.com/user-attachments/assets/e703a598-6187-422e-b453-7180777eaffd" />
+
 ---
 
 ### Phase 3: VPC Resource Definition
@@ -418,7 +420,7 @@ A fully functional AWS VPC named `devops-vpc` was provisioned via Terraform IaC 
 
 <img width="1062" height="422" alt="image" src="https://github.com/user-attachments/assets/99d9726a-4145-46c2-a73a-150b37e27ce8" />
 
-<img width="1194" height="766" alt="image" src="https://github.com/user-attachments/assets/e703a598-6187-422e-b453-7180777eaffd" />
+
 <img width="1196" height="770" alt="image" src="https://github.com/user-attachments/assets/0895da3f-6fe2-401a-9dd1-bd6a2218c160" />
 <img width="1195" height="586" alt="image" src="https://github.com/user-attachments/assets/50a9e79f-a61c-4361-945f-a6e033be5df8" />
 <img width="1193" height="776" alt="image" src="https://github.com/user-attachments/assets/b8528f17-cb9b-4a5c-9dc6-9d15c655a2f4" />
