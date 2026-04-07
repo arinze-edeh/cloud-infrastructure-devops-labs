@@ -273,6 +273,8 @@ pod-datacenter   1/1     Running   0          12s
 
 > Screenshot: Pod pod-datacenter in 1/1 Running state
 
+<img width="1055" height="839" alt="image" src="https://github.com/user-attachments/assets/da02ef18-ce5b-4fde-a21f-da54c4416a11" />
+
 ---
 
 ### Phase 5: NodePort Service Creation
@@ -479,7 +481,7 @@ metadata:
 <img width="1057" height="828" alt="image" src="https://github.com/user-attachments/assets/b5e23e66-585b-4f60-b062-f6168832b8a4" />
 
 <img width="1059" height="745" alt="image" src="https://github.com/user-attachments/assets/9cd84f0c-1bbd-4b52-8836-2235776b5725" />
-<img width="1055" height="839" alt="image" src="https://github.com/user-attachments/assets/da02ef18-ce5b-4fde-a21f-da54c4416a11" />
+
 <img width="1055" height="725" alt="image" src="https://github.com/user-attachments/assets/b901b00e-48bb-4dbc-b6f9-2842104bd9ee" />
 <img width="1055" height="759" alt="image" src="https://github.com/user-attachments/assets/2024079e-5183-4d2e-8d8b-582395de959a" />
 <img width="1046" height="864" alt="image" src="https://github.com/user-attachments/assets/17eaa1cd-9cde-4e17-8b07-ea0377a0c8f9" />
