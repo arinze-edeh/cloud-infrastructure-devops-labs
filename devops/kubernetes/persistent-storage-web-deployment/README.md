@@ -474,26 +474,3 @@ metadata:
 * **Deprecation warnings are informational.** The `v1 Endpoints is deprecated in v1.33+` warning does not affect functionality. The resource continues to work. Migration to `EndpointSlice` is the forward-looking recommendation for new tooling.
 
 * **Label-selector alignment is a foundational Kubernetes contract.** Services, Deployments, and NetworkPolicies all rely on label selectors. Establishing a disciplined labeling strategy at manifest authoring time prevents runtime misconfigurations and eliminates the need for post-deployment corrective actions.
-
-
-
-
-<img width="1018" height="817" alt="image" src="https://github.com/user-attachments/assets/27adfe6a-7b42-4ece-8c6a-acf187cda477" />
-<img width="1039" height="700" alt="image" src="https://github.com/user-attachments/assets/0dd9f9b5-6a09-45f8-87f6-1c53bce83ad1" />
-<img width="1057" height="697" alt="image" src="https://github.com/user-attachments/assets/63e95eb0-7a4d-4fdb-a91f-b663d7c9c0f8" />
-
-<img width="1059" height="739" alt="image" src="https://github.com/user-attachments/assets/c86a25fd-ac4d-47f5-aac6-c5fe3851cc34" />
-<img width="1056" height="783" alt="image" src="https://github.com/user-attachments/assets/f14d157d-8b6e-4f40-964d-70d144d80cad" />
-<img width="1057" height="828" alt="image" src="https://github.com/user-attachments/assets/b5e23e66-585b-4f60-b062-f6168832b8a4" />
-
-<img width="1059" height="745" alt="image" src="https://github.com/user-attachments/assets/9cd84f0c-1bbd-4b52-8836-2235776b5725" />
-
-<img width="1055" height="725" alt="image" src="https://github.com/user-attachments/assets/b901b00e-48bb-4dbc-b6f9-2842104bd9ee" />
-<img width="1055" height="759" alt="image" src="https://github.com/user-attachments/assets/2024079e-5183-4d2e-8d8b-582395de959a" />
-
-<img width="1060" height="553" alt="image" src="https://github.com/user-attachments/assets/53791c55-f0a2-4d79-b19a-8533a44d3e34" />
-<img width="1056" height="592" alt="image" src="https://github.com/user-attachments/assets/1714bf13-d5ca-49f8-9156-a5d49bb3db9a" />
-
-
-
-
