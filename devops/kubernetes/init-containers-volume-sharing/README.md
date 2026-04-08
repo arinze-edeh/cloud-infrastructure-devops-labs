@@ -420,7 +420,9 @@ Init Containers:
       Finished:     Wed, 08 Apr 2026 22:37:27 +0000
 ```
 
-> **Screenshot:** `11-describe-pod-init-containers.png`
+> **Screenshot:** 
+
+<img width="1037" height="490" alt="image" src="https://github.com/user-attachments/assets/c7857523-f2ab-4f53-b54b-e9c314816020" />
 
 Critical observations:
 
@@ -597,6 +599,6 @@ No errors were encountered during this implementation. The following edge cases 
 
 
 
-<img width="1037" height="490" alt="image" src="https://github.com/user-attachments/assets/c7857523-f2ab-4f53-b54b-e9c314816020" />
+
 <img width="1035" height="652" alt="image" src="https://github.com/user-attachments/assets/3617e46c-6b49-4340-afaa-21f3047af2c8" />
 <img width="1033" height="856" alt="image" src="https://github.com/user-attachments/assets/7112e2cb-5d3e-46a2-a5f2-c20f329fa568" />
