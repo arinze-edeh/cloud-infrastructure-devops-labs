@@ -353,7 +353,9 @@ kubectl logs $POD_NAME -c ic-msg-devops
 (empty)
 ```
 
-> **Screenshot:** `09-init-container-logs.png`
+> **Screenshot:** 
+
+<img width="1024" height="335" alt="image" src="https://github.com/user-attachments/assets/f6f47aec-c082-4411-9199-029120bfd0d1" />
 
 The empty log output is correct and expected. The init container used shell redirection (`> /ic/beta`) to write to the file, not `echo` to stdout. There is nothing for the Kubernetes log driver to capture.
 
@@ -591,7 +593,7 @@ No errors were encountered during this implementation. The following edge cases 
 
 
 
-<img width="1024" height="335" alt="image" src="https://github.com/user-attachments/assets/f6f47aec-c082-4411-9199-029120bfd0d1" />
+
 <img width="1036" height="864" alt="image" src="https://github.com/user-attachments/assets/84bc4138-d945-4225-90e8-ffdec7642d48" />
 <img width="1051" height="867" alt="image" src="https://github.com/user-attachments/assets/ae29cd5a-1bec-45d7-964e-380f6b89e23e" />
 <img width="1037" height="490" alt="image" src="https://github.com/user-attachments/assets/c7857523-f2ab-4f53-b54b-e9c314816020" />
