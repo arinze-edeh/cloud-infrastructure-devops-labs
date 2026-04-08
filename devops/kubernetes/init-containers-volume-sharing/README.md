@@ -285,7 +285,9 @@ kubectl rollout status deployment/ic-deploy-devops
 deployment "ic-deploy-devops" successfully rolled out
 ```
 
-> **Screenshot:** `06-rollout-status.png`
+> **Screenshot:** 
+
+<img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/aea77b00-f105-41c2-b1f1-d7b2644a3ee7" />
 
 The deployment controller confirmed all replicas successfully transitioned to the `Available` state. This command is blocking and exits with code `0` on success, making it suitable for CI/CD pipeline gates.
 
@@ -306,7 +308,9 @@ NAME               READY   UP-TO-DATE   AVAILABLE   AGE
 ic-deploy-devops   1/1     1            1           2m31s
 ```
 
-> **Screenshot:** `07-get-deployment.png`
+> **Screenshot:** 
+
+<img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/aea77b00-f105-41c2-b1f1-d7b2644a3ee7" />
 
 All three replica count columns report `1`, confirming the single replica is healthy and serving.
 
@@ -583,7 +587,7 @@ No errors were encountered during this implementation. The following edge cases 
 
 
 
-<img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/aea77b00-f105-41c2-b1f1-d7b2644a3ee7" />
+
 <img width="1030" height="602" alt="image" src="https://github.com/user-attachments/assets/fbc0cffc-0327-49b4-95a9-020c41a94165" />
 <img width="1024" height="335" alt="image" src="https://github.com/user-attachments/assets/f6f47aec-c082-4411-9199-029120bfd0d1" />
 <img width="1036" height="864" alt="image" src="https://github.com/user-attachments/assets/84bc4138-d945-4225-90e8-ffdec7642d48" />
