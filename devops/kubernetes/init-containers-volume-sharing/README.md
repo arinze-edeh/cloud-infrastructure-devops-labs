@@ -378,7 +378,10 @@ Init Done - Welcome to xFusionCorp Industries
 ...
 ```
 
-> **Screenshot:** `10-main-container-logs.png`
+> **Screenshots:** 
+
+<img width="1036" height="864" alt="image" src="https://github.com/user-attachments/assets/84bc4138-d945-4225-90e8-ffdec7642d48" />
+<img width="1051" height="867" alt="image" src="https://github.com/user-attachments/assets/ae29cd5a-1bec-45d7-964e-380f6b89e23e" />
 
 The main container is printing `Init Done - Welcome to xFusionCorp Industries` on a 5-second interval, confirming:
 
@@ -594,8 +597,6 @@ No errors were encountered during this implementation. The following edge cases 
 
 
 
-<img width="1036" height="864" alt="image" src="https://github.com/user-attachments/assets/84bc4138-d945-4225-90e8-ffdec7642d48" />
-<img width="1051" height="867" alt="image" src="https://github.com/user-attachments/assets/ae29cd5a-1bec-45d7-964e-380f6b89e23e" />
 <img width="1037" height="490" alt="image" src="https://github.com/user-attachments/assets/c7857523-f2ab-4f53-b54b-e9c314816020" />
 <img width="1035" height="652" alt="image" src="https://github.com/user-attachments/assets/3617e46c-6b49-4340-afaa-21f3047af2c8" />
 <img width="1033" height="856" alt="image" src="https://github.com/user-attachments/assets/7112e2cb-5d3e-46a2-a5f2-c20f329fa568" />
