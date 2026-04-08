@@ -263,7 +263,9 @@ kubectl apply -f ic-deploy-devops.yaml
 deployment.apps/ic-deploy-devops created
 ```
 
-> **Screenshot:** `05-apply-deployment.png`
+> **Screenshot:** 
+
+<img width="1031" height="761" alt="image" src="https://github.com/user-attachments/assets/66d375c4-3e1e-4bb6-a697-bb55c93afcf8" />
 
 The `created` response confirms the API server accepted and persisted the Deployment object. The ReplicaSet controller and scheduler will now act on this desired state.
 
@@ -580,7 +582,7 @@ No errors were encountered during this implementation. The following edge cases 
 
 
 
-<img width="1031" height="761" alt="image" src="https://github.com/user-attachments/assets/66d375c4-3e1e-4bb6-a697-bb55c93afcf8" />
+
 <img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/aea77b00-f105-41c2-b1f1-d7b2644a3ee7" />
 <img width="1030" height="602" alt="image" src="https://github.com/user-attachments/assets/fbc0cffc-0327-49b4-95a9-020c41a94165" />
 <img width="1024" height="335" alt="image" src="https://github.com/user-attachments/assets/f6f47aec-c082-4411-9199-029120bfd0d1" />
