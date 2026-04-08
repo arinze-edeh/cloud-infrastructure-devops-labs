@@ -131,7 +131,9 @@ NAME        STATUS   ROLES           AGE   VERSION
 jump-host   Ready    control-plane   57m   v1.34.1+k3s1
 ```
 
-> **Screenshot:** `01-cluster-info-and-nodes.png`
+> **Screenshot:** 
+
+<img width="1036" height="633" alt="image" src="https://github.com/user-attachments/assets/13f54b63-769a-469e-a3f0-9f18ef1f53d4" />
 
 The cluster is healthy, the active context is `default`, and the single-node control-plane (`jump-host`) is in `Ready` state running k3s `v1.34.1`.
 
@@ -155,7 +157,9 @@ kube-public       Active   58m
 kube-system       Active   58m
 ```
 
-> **Screenshot:** `02-get-namespaces.png`
+> **Screenshot:** 
+
+<img width="1036" height="633" alt="image" src="https://github.com/user-attachments/assets/13f54b63-769a-469e-a3f0-9f18ef1f53d4" />
 
 The `default` namespace is active. No custom namespaces are required for this task; the deployment targets `default` implicitly.
 
@@ -568,7 +572,7 @@ No errors were encountered during this implementation. The following edge cases 
 
 
 
-<img width="1036" height="633" alt="image" src="https://github.com/user-attachments/assets/13f54b63-769a-469e-a3f0-9f18ef1f53d4" />
+
 <img width="1031" height="855" alt="image" src="https://github.com/user-attachments/assets/229c1b1d-8b56-4b1e-a296-4afbdbe7ef18" />
 <img width="1028" height="862" alt="image" src="https://github.com/user-attachments/assets/d1890b12-de85-4c64-b4e1-1bd8fc482c41" />
 <img width="1029" height="723" alt="image" src="https://github.com/user-attachments/assets/0a69ab64-0593-4b25-8feb-7a72484d6708" />
