@@ -28,7 +28,6 @@
 - [Best Practices Applied](#best-practices-applied)
 - [Lessons Learned](#lessons-learned)
 - [Errors and Resolutions](#errors-and-resolutions)
-- [Repository Structure](#repository-structure)
 
 ---
 
