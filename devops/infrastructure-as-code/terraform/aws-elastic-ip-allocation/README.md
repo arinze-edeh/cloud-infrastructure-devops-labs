@@ -106,7 +106,9 @@ drwxr-x--- 1 bob bob 4096 Apr  8 23:13 ..
 -rw-rw-r-- 1 bob bob 1116 May 13  2025 provider.tf
 ```
 
-> **Screenshot:** `01-terraform-version-and-directory.png`
+> **Screenshot:**
+
+<img width="1059" height="511" alt="image" src="https://github.com/user-attachments/assets/874aab56-fb4b-4cdd-84f5-abb9cad0dca5" />
 
 The directory contains `provider.tf` and `README.MD`. No `main.tf` exists yet. The task requires creating `main.tf` as the sole new file.
 
@@ -507,7 +509,7 @@ An AWS Elastic IP address named `devops-eip` was successfully provisioned using 
 
 
 
-<img width="1059" height="511" alt="image" src="https://github.com/user-attachments/assets/874aab56-fb4b-4cdd-84f5-abb9cad0dca5" />
+
 <img width="1053" height="749" alt="image" src="https://github.com/user-attachments/assets/a87ccb75-e497-4bbb-9b81-6d782994208f" />
 <img width="1049" height="656" alt="image" src="https://github.com/user-attachments/assets/4e2918d4-6399-4b75-883f-48d53fde3e5e" />
 <img width="1050" height="762" alt="image" src="https://github.com/user-attachments/assets/eafd13bf-8964-4434-ae5c-b1f3d7a0efb9" />
