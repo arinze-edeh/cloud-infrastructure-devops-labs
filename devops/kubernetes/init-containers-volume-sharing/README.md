@@ -241,7 +241,9 @@ kubectl apply -f ic-deploy-devops.yaml --dry-run=client
 deployment.apps/ic-deploy-devops created (dry run)
 ```
 
-> **Screenshot:** `04-dry-run-validation.png`
+> **Screenshot:** 
+
+<img width="1029" height="723" alt="image" src="https://github.com/user-attachments/assets/0a69ab64-0593-4b25-8feb-7a72484d6708" />
 
 The `(dry run)` suffix confirms the manifest passed client-side schema validation. No resources were created at this stage.
 
@@ -577,7 +579,7 @@ No errors were encountered during this implementation. The following edge cases 
 
 
 
-<img width="1029" height="723" alt="image" src="https://github.com/user-attachments/assets/0a69ab64-0593-4b25-8feb-7a72484d6708" />
+
 <img width="1031" height="761" alt="image" src="https://github.com/user-attachments/assets/66d375c4-3e1e-4bb6-a697-bb55c93afcf8" />
 <img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/aea77b00-f105-41c2-b1f1-d7b2644a3ee7" />
 <img width="1030" height="602" alt="image" src="https://github.com/user-attachments/assets/fbc0cffc-0327-49b4-95a9-020c41a94165" />
