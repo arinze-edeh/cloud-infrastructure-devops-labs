@@ -67,7 +67,7 @@ The xFusionCorp Industries DevOps team identified a class of applications that r
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                          Pod Lifecycle                       │
+│                          Pod Lifecycle                      │
 │                                                             │
 │  ┌──────────────────────┐        ┌───────────────────────┐  │
 │  │   Init Container     │        │    Main Container     │  │
@@ -85,12 +85,12 @@ The xFusionCorp Industries DevOps team identified a class of applications that r
 │  └──────────┬───────────┘        └──────────┬────────────┘  │
 │             │                               │               │
 │             └──────────┬────────────────────┘               │
-│                        │                                     │
-│             ┌──────────▼────────────┐                        │
-│             │  emptyDir Volume      │                        │
-│             │  ic-volume-devops     │                        │
-│             │  Mounted at: /ic      │                        │
-│             └───────────────────────┘                        │
+│                        │                                    │
+│             ┌──────────▼────────────┐                       │
+│             │  emptyDir Volume      │                       │
+│             │  ic-volume-devops     │                       │
+│             │  Mounted at: /ic      │                       │
+│             └───────────────────────┘                       │
 └─────────────────────────────────────────────────────────────┘
 ```
 
