@@ -484,7 +484,9 @@ kubectl get deployment ic-deploy-devops \
 | `volumes[0].name` | `ic-volume-devops` | `ic-volume-devops` |
 | `volumes[0].emptyDir` | `{}` | `{}` |
 
-> **Screenshot:** `12-jsonpath-spec-verification.png`
+> **Screenshot:** 
+
+<img width="1033" height="856" alt="image" src="https://github.com/user-attachments/assets/7112e2cb-5d3e-46a2-a5f2-c20f329fa568" />
 
 All eight fields match the specification exactly. The empty `{}` for `emptyDir` confirms the volume type is set with default parameters (no size limit, no memory-backed mode), which is correct per the task requirements.
 
@@ -590,15 +592,3 @@ No errors were encountered during this implementation. The following edge cases 
 | Empty main container logs despite running | Wrong container targeted with `kubectl logs` | Used explicit `-c ic-main-devops` flag to select the correct container |
 
 ---
-
-
-
-
-
-
-
-
-
-
-<img width="1035" height="652" alt="image" src="https://github.com/user-attachments/assets/3617e46c-6b49-4340-afaa-21f3047af2c8" />
-<img width="1033" height="856" alt="image" src="https://github.com/user-attachments/assets/7112e2cb-5d3e-46a2-a5f2-c20f329fa568" />
