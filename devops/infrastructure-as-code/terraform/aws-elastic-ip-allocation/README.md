@@ -7,9 +7,8 @@
 
 - [Overview](#overview)
 - [Problem Statement](#problem-statement)
-- [Architecture and Design Intent](#architecture-and-design-intent)
+- [Design Intent](#design-intent)
 - [Prerequisites](#prerequisites)
-- [Repository Structure](#repository-structure)
 - [Implementation Guide](#implementation-guide)
   - [Step 1: Verify Terraform Version and Working Directory](#step-1-verify-terraform-version-and-working-directory)
   - [Step 2: Inspect the Existing Provider Configuration](#step-2-inspect-the-existing-provider-configuration)
@@ -46,16 +45,7 @@ The task mandates that:
 
 ---
 
-## Architecture and Design Intent
-
-```
-/home/bob/terraform/
-├── provider.tf        # Pre-existing: AWS provider targeting LocalStack (port 4566)
-├── main.tf            # Authored: aws_eip resource definition
-├── README.MD          # Pre-existing: Task context
-└── .terraform/        # Generated: Provider plugin cache after terraform init
-    └── .terraform.lock.hcl
-```
+## Design Intent
 
 **LocalStack** serves as the local AWS cloud emulator, exposing all AWS service endpoints on `http://aws:4566`. This allows full Terraform workflows to execute without live AWS credentials or incurring cloud costs, making it ideal for lab-based validation and team onboarding.
 
@@ -72,17 +62,6 @@ The `aws_eip` resource allocates a VPC-domain Elastic IP. In AWS provider v5.x, 
 | LocalStack | Running and accessible at `http://aws:4566` |
 | Working Directory | `/home/bob/terraform` |
 | Shell Access | VS Code Integrated Terminal or SSH session as `bob` |
-
----
-
-## Repository Structure
-
-```
-/home/bob/terraform/
-├── provider.tf          # AWS provider config with LocalStack endpoint overrides
-├── main.tf              # Elastic IP resource definition (authored in this task)
-└── README.MD            # Original task brief
-```
 
 ---
 
