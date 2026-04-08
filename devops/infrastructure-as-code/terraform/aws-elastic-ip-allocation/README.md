@@ -1,7 +1,6 @@
 # Terraform AWS Elastic IP Provisioning via LocalStack
 
-> **Platform:** AWS (LocalStack-emulated) | **IaC Tool:** Terraform v1.11.0 | **Provider:** hashicorp/aws v5.91.0 | **Environment:** Nautilus DevOps / Stratos Datacenter
-
+> **Platform:** AWS (LocalStack-emulated) | **IaC Tool:** Terraform v1.11.0 
 ---
 
 ## Table of Contents
