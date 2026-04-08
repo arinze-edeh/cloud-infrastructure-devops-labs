@@ -213,7 +213,11 @@ Verify the file was written correctly by printing it back to stdout:
 cat ic-deploy-devops.yaml
 ```
 
-> **Screenshot:** `03-manifest-cat-output.png`
+> **Screenshots:** 
+
+
+<img width="1031" height="855" alt="image" src="https://github.com/user-attachments/assets/229c1b1d-8b56-4b1e-a296-4afbdbe7ef18" />
+<img width="1028" height="862" alt="image" src="https://github.com/user-attachments/assets/d1890b12-de85-4c64-b4e1-1bd8fc482c41" />
 
 **Key manifest decisions:**
 
@@ -573,8 +577,6 @@ No errors were encountered during this implementation. The following edge cases 
 
 
 
-<img width="1031" height="855" alt="image" src="https://github.com/user-attachments/assets/229c1b1d-8b56-4b1e-a296-4afbdbe7ef18" />
-<img width="1028" height="862" alt="image" src="https://github.com/user-attachments/assets/d1890b12-de85-4c64-b4e1-1bd8fc482c41" />
 <img width="1029" height="723" alt="image" src="https://github.com/user-attachments/assets/0a69ab64-0593-4b25-8feb-7a72484d6708" />
 <img width="1031" height="761" alt="image" src="https://github.com/user-attachments/assets/66d375c4-3e1e-4bb6-a697-bb55c93afcf8" />
 <img width="1032" height="863" alt="image" src="https://github.com/user-attachments/assets/aea77b00-f105-41c2-b1f1-d7b2644a3ee7" />
