@@ -9,7 +9,6 @@
 - [Problem Statement](#problem-statement)
 - [Architecture and Design Intent](#architecture-and-design-intent)
 - [Prerequisites](#prerequisites)
-- [Repository Structure](#repository-structure)
 - [Implementation Guide](#implementation-guide)
   - [Step 1: Verify Terraform Version and Working Directory](#step-1-verify-terraform-version-and-working-directory)
   - [Step 2: Create the Initial main.tf](#step-2-create-the-initial-maintf)
