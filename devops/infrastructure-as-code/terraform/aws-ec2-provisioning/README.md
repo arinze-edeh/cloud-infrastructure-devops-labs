@@ -266,7 +266,9 @@ provider "aws" {
 
 **Resolution:** Remove the `terraform {}` and `provider "aws" {}` blocks from `main.tf` entirely, retaining only the data source and resource definitions. The authoritative provider configuration must remain solely in `provider.tf`.
 
-> **Screenshot:** `screenshot_04_provider_tf_inspection.png`
+> **Screenshot:** 
+
+<img width="1253" height="697" alt="image" src="https://github.com/user-attachments/assets/54d4c6fa-e455-4b74-84de-f99077c02f1e" />
 
 ---
 
@@ -457,7 +459,7 @@ RSA private key for SSH access to the provisioned instance. Permissions set to `
 
 
 <img width="1254" height="254" alt="image" src="https://github.com/user-attachments/assets/c2f51b7b-67b4-48b3-bf2e-e3e0590ff854" />
-<img width="1253" height="697" alt="image" src="https://github.com/user-attachments/assets/54d4c6fa-e455-4b74-84de-f99077c02f1e" />
+
 <img width="1223" height="734" alt="image" src="https://github.com/user-attachments/assets/d25fa508-3dbc-4b86-a822-1d26e5933435" />
 <img width="1225" height="739" alt="image" src="https://github.com/user-attachments/assets/972d2667-b92d-4272-a07f-b75148966d1c" />
 <img width="1221" height="736" alt="image" src="https://github.com/user-attachments/assets/aef04df1-409f-4734-88fd-7db8d1b72dd7" />
