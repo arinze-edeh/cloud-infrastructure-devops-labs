@@ -190,7 +190,9 @@ A default (non-aliased) provider configuration for "aws" was already given
 at main.tf:10,1-15.
 ```
 
-> **Screenshot:** `screenshot_03_terraform_init_error.png`
+> **Screenshot:** 
+
+<img width="1260" height="739" alt="image" src="https://github.com/user-attachments/assets/cf6d29f0-428b-40ac-b161-e14b209e5f31" />
 
 ---
 
@@ -451,14 +453,9 @@ RSA private key for SSH access to the provisioned instance. Permissions set to `
 
 ---
 
-*Documentation produced following enterprise IaC documentation standards. Verified against the exact execution log recorded on April 9, 2025.*
 
 
-<img width="1229" height="548" alt="image" src="https://github.com/user-attachments/assets/e3a522a7-fb10-4a3f-8e2d-ffbb73a8b8c4" />
-<img width="1222" height="522" alt="image" src="https://github.com/user-attachments/assets/c1ab8a4b-2e3b-4061-8a71-ca79f3ebf036" />
 
-
-<img width="1260" height="739" alt="image" src="https://github.com/user-attachments/assets/cf6d29f0-428b-40ac-b161-e14b209e5f31" />
 <img width="1254" height="254" alt="image" src="https://github.com/user-attachments/assets/c2f51b7b-67b4-48b3-bf2e-e3e0590ff854" />
 <img width="1253" height="697" alt="image" src="https://github.com/user-attachments/assets/54d4c6fa-e455-4b74-84de-f99077c02f1e" />
 <img width="1223" height="734" alt="image" src="https://github.com/user-attachments/assets/d25fa508-3dbc-4b86-a822-1d26e5933435" />
