@@ -119,7 +119,11 @@ kubectl create secret generic news \
 secret/news created
 ```
 
-> **Screenshot:** `step2-create-secret.png` - Terminal output confirming successful secret creation.
+> **Screenshot:**
+
+<img width="1081" height="541" alt="image" src="https://github.com/user-attachments/assets/f0ee3e8c-7ee0-4603-8143-032c998f889e" />
+
+>Terminal output confirming successful secret creation.
 
 Using `--from-file=<key>=<path>` syntax ensures the key name within the Secret's `data` map is exactly `news.txt`, which determines the filename that will appear in the mounted volume.
 
@@ -334,7 +338,7 @@ The value `5ecur3` matches the original content of `/opt/news.txt` on the jump-h
 
 <img width="1083" height="576" alt="image" src="https://github.com/user-attachments/assets/78a1e674-2e77-4d48-8b63-d818ca92f9c8" />
 
-<img width="1081" height="541" alt="image" src="https://github.com/user-attachments/assets/f0ee3e8c-7ee0-4603-8143-032c998f889e" />
+
 <img width="1083" height="652" alt="image" src="https://github.com/user-attachments/assets/eba58b37-94ce-411d-9873-8c53dda4ec5f" />
 <img width="1082" height="848" alt="image" src="https://github.com/user-attachments/assets/ee481e0e-5236-4c46-97e8-3ff0ffe38761" />
 <img width="1082" height="771" alt="image" src="https://github.com/user-attachments/assets/ed76ddd3-79fe-4f33-a052-82f2de4dcb2a" />
