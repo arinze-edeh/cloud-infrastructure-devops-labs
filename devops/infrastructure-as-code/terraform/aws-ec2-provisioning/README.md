@@ -1,10 +1,9 @@
 # Provisioning an AWS EC2 Instance with Terraform (IaC)
 
 > **Project:** Nautilus DevOps Infrastructure Migration Initiative
-> **Author:** Bob (IAC Server)
 > **Environment:** LocalStack (AWS-compatible mock endpoint)
 > **Working Directory:** `/home/bob/terraform`
-> **Date Executed:** April 9, 2025
+
 
 ---
 
