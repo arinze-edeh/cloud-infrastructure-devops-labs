@@ -215,7 +215,11 @@ spec:
       secretName: news
 ```
 
-> **Screenshot:** `step4-pod-manifest.png` - Terminal output showing the heredoc command and the resulting YAML content.
+> **Screenshot:** 
+
+<img width="1082" height="771" alt="image" src="https://github.com/user-attachments/assets/ed76ddd3-79fe-4f33-a052-82f2de4dcb2a" />
+
+>Terminal output showing the heredoc command and the resulting YAML content.
 
 **Key manifest decisions:**
 
@@ -345,7 +349,7 @@ The value `5ecur3` matches the original content of `/opt/news.txt` on the jump-h
 
 
 <img width="1082" height="848" alt="image" src="https://github.com/user-attachments/assets/ee481e0e-5236-4c46-97e8-3ff0ffe38761" />
-<img width="1082" height="771" alt="image" src="https://github.com/user-attachments/assets/ed76ddd3-79fe-4f33-a052-82f2de4dcb2a" />
+
 <img width="1089" height="737" alt="image" src="https://github.com/user-attachments/assets/df5a392d-7b9e-4bdf-a1d6-6c952b4bc266" />
 <img width="1079" height="859" alt="image" src="https://github.com/user-attachments/assets/8d46c966-a4fd-48a6-b583-2ae7f1230f18" />
 <img width="1083" height="529" alt="image" src="https://github.com/user-attachments/assets/492f6c11-c269-4482-83be-4cbce88f4528" />
