@@ -418,7 +418,9 @@ resource "aws_eip" "devops_eip" {
 }
 ```
 
-> **Screenshot:** `09-terraform-state-show.png`
+> **Screenshot:** 
+
+<img width="1050" height="687" alt="image" src="https://github.com/user-attachments/assets/1834ddfb-ec5c-440b-a3ef-b483faa65e8f" />
 
 **Verification checklist:**
 
@@ -521,4 +523,4 @@ An AWS Elastic IP address named `devops-eip` was successfully provisioned using 
 <img width="1071" height="683" alt="image" src="https://github.com/user-attachments/assets/25aa057e-22ab-4978-bcd6-267d810aafb6" />
 <img width="1075" height="683" alt="image" src="https://github.com/user-attachments/assets/e9fe0086-d361-4033-9e94-f26c3eab2857" />
 <img width="1047" height="705" alt="image" src="https://github.com/user-attachments/assets/8c930c9b-86ee-4b86-b756-9cfdb57adf39" />
-<img width="1050" height="687" alt="image" src="https://github.com/user-attachments/assets/1834ddfb-ec5c-440b-a3ef-b483faa65e8f" />
+
