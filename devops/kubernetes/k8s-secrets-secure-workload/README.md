@@ -267,7 +267,11 @@ NAME              READY   STATUS    RESTARTS   AGE
 secret-nautilus   1/1     Running   0          30s
 ```
 
-> **Screenshot:** `step6-pod-running.png` - Terminal output showing pod in `1/1 Running` state with zero restarts.
+> **Screenshot:**
+
+<img width="1079" height="859" alt="image" src="https://github.com/user-attachments/assets/8d46c966-a4fd-48a6-b583-2ae7f1230f18" />
+
+>Terminal output showing pod in `1/1 Running` state with zero restarts.
 
 The `1/1` readiness ratio confirms that the single container within the pod is healthy. The `0` restart count confirms a clean startup with no crash loops.
 
@@ -352,7 +356,7 @@ The value `5ecur3` matches the original content of `/opt/news.txt` on the jump-h
 
 
 
-<img width="1079" height="859" alt="image" src="https://github.com/user-attachments/assets/8d46c966-a4fd-48a6-b583-2ae7f1230f18" />
+
 <img width="1083" height="529" alt="image" src="https://github.com/user-attachments/assets/492f6c11-c269-4482-83be-4cbce88f4528" />
 
 
