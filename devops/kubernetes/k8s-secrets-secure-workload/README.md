@@ -159,7 +159,11 @@ Data
 news.txt:  7 bytes
 ```
 
-> **Screenshot:** `step3-describe-secret.png` - Output of `kubectl describe secret news` confirming the data key and byte size.
+> **Screenshot:** 
+
+<img width="1083" height="652" alt="image" src="https://github.com/user-attachments/assets/eba58b37-94ce-411d-9873-8c53dda4ec5f" />
+
+>Output of `kubectl describe secret news` confirming the data key and byte size.
 
 The Secret type is `Opaque`, which is correct for arbitrary user-defined data. The `DATA` section shows one key (`news.txt`) containing 7 bytes, matching the source file exactly. Note that `kubectl describe` intentionally redacts the actual value; the raw base64 value is only accessible via `kubectl get secret news -o jsonpath='{.data.news\.txt}'`.
 
@@ -336,10 +340,10 @@ The value `5ecur3` matches the original content of `/opt/news.txt` on the jump-h
 
 
 
-<img width="1083" height="576" alt="image" src="https://github.com/user-attachments/assets/78a1e674-2e77-4d48-8b63-d818ca92f9c8" />
 
 
-<img width="1083" height="652" alt="image" src="https://github.com/user-attachments/assets/eba58b37-94ce-411d-9873-8c53dda4ec5f" />
+
+
 <img width="1082" height="848" alt="image" src="https://github.com/user-attachments/assets/ee481e0e-5236-4c46-97e8-3ff0ffe38761" />
 <img width="1082" height="771" alt="image" src="https://github.com/user-attachments/assets/ed76ddd3-79fe-4f33-a052-82f2de4dcb2a" />
 <img width="1089" height="737" alt="image" src="https://github.com/user-attachments/assets/df5a392d-7b9e-4bdf-a1d6-6c952b4bc266" />
