@@ -338,7 +338,10 @@ you run "terraform init" in the future.
 Terraform has been successfully initialized!
 ```
 
-> **Screenshot:** `06-terraform-init.png`
+> **Screenshot:**
+
+
+<img width="1048" height="673" alt="image" src="https://github.com/user-attachments/assets/8e14bbe0-6cfc-4b8a-bbf6-0c59d2f60c3c" />
 
 The provider was downloaded and installed successfully. A `.terraform.lock.hcl` file was generated to pin the provider version for reproducible future initializations.
 
@@ -865,7 +868,7 @@ Terraform has been successfully initialized!
 
 > **Screenshot:** 
 
-<img width="1048" height="673" alt="image" src="https://github.com/user-attachments/assets/8e14bbe0-6cfc-4b8a-bbf6-0c59d2f60c3c" />
+
 
 The provider was downloaded and installed successfully. A `.terraform.lock.hcl` file was generated to pin the provider version for reproducible future initializations.
 
