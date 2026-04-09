@@ -377,7 +377,12 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 | Security Group ID | `sg-6aa94959fe3dc15e6` |
 | Name Tag | `datacenter-ec2` |
 
-> **Screenshot:** `screenshot_06_terraform_apply_complete.png`
+> **Screenshots:** 
+
+<img width="1221" height="736" alt="image" src="https://github.com/user-attachments/assets/aef04df1-409f-4734-88fd-7db8d1b72dd7" />
+<img width="1218" height="744" alt="image" src="https://github.com/user-attachments/assets/7ee0bfcd-b6d6-4ec8-8e44-9ad5d7422885" />
+<img width="1206" height="740" alt="image" src="https://github.com/user-attachments/assets/9c2ffd6a-72cc-4e0b-8c11-b130638ea490" />
+<img width="1224" height="740" alt="image" src="https://github.com/user-attachments/assets/f85571e0-9869-4d33-8217-792451062716" />
 
 ---
 
@@ -456,16 +461,3 @@ resource "aws_instance" "datacenter" {
 RSA private key for SSH access to the provisioned instance. Permissions set to `400`. Never commit this file to version control. Add it to `.gitignore`.
 
 ---
-
-
-
-
-<img width="1254" height="254" alt="image" src="https://github.com/user-attachments/assets/c2f51b7b-67b4-48b3-bf2e-e3e0590ff854" />
-
-<img width="1223" height="734" alt="image" src="https://github.com/user-attachments/assets/d25fa508-3dbc-4b86-a822-1d26e5933435" />
-
-<img width="1221" height="736" alt="image" src="https://github.com/user-attachments/assets/aef04df1-409f-4734-88fd-7db8d1b72dd7" />
-<img width="1218" height="744" alt="image" src="https://github.com/user-attachments/assets/7ee0bfcd-b6d6-4ec8-8e44-9ad5d7422885" />
-<img width="1206" height="740" alt="image" src="https://github.com/user-attachments/assets/9c2ffd6a-72cc-4e0b-8c11-b130638ea490" />
-<img width="1224" height="740" alt="image" src="https://github.com/user-attachments/assets/f85571e0-9869-4d33-8217-792451062716" />
-
