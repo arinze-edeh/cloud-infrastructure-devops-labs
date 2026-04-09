@@ -360,7 +360,9 @@ terraform validate
 Success! The configuration is valid.
 ```
 
-> **Screenshot:** `07-terraform-validate.png`
+> **Screenshot:** 
+
+<img width="1044" height="756" alt="image" src="https://github.com/user-attachments/assets/1a40cd15-807b-4b6c-a013-97888e0dc1dc" />
 
 Validation passed with no errors or warnings. The resource block syntax is correct and the provider reference resolves cleanly.
 
@@ -401,7 +403,9 @@ Terraform will perform the following actions:
 Plan: 1 to add, 0 to change, 0 to destroy.
 ```
 
-> **Screenshot:** `08-terraform-plan.png`
+> **Screenshot:** 
+
+<img width="1071" height="683" alt="image" src="https://github.com/user-attachments/assets/25aa057e-22ab-4978-bcd6-267d810aafb6" />
 
 The plan confirms exactly one resource will be created: `aws_eip.devops_eip`. All computed attributes (allocation ID, ARN, public IP, domain) are marked as `(known after apply)`, which is expected for EIP resources where AWS assigns values at creation time.
 
@@ -425,7 +429,9 @@ aws_eip.devops_eip: Creation complete after 1s [id=eipalloc-83a0519cfa9727816]
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
-> **Screenshot:** `09-terraform-apply.png`
+> **Screenshot:**
+
+<img width="1075" height="683" alt="image" src="https://github.com/user-attachments/assets/e9fe0086-d361-4033-9e94-f26c3eab2857" />
 
 The EIP was successfully allocated. LocalStack assigned the allocation ID `eipalloc-83a0519cfa9727816` and the apply completed in approximately one second.
 
@@ -482,7 +488,9 @@ resource "aws_eip" "devops_eip" {
 }
 ```
 
-> **Screenshot:** `10-terraform-state-show.png`
+> **Screenshot:** 
+
+<img width="1050" height="687" alt="image" src="https://github.com/user-attachments/assets/1834ddfb-ec5c-440b-a3ef-b483faa65e8f" />
 
 **Verification checklist:**
 
@@ -889,7 +897,7 @@ Success! The configuration is valid.
 
 > **Screenshot:** 
 
-<img width="1044" height="756" alt="image" src="https://github.com/user-attachments/assets/1a40cd15-807b-4b6c-a013-97888e0dc1dc" />
+
 
 Validation passed with no errors or warnings. The resource block syntax is correct and the provider reference resolves cleanly.
 
@@ -932,7 +940,7 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 > **Screenshot:** 
 
-<img width="1071" height="683" alt="image" src="https://github.com/user-attachments/assets/25aa057e-22ab-4978-bcd6-267d810aafb6" />
+
 
 The plan confirms exactly one resource will be created: `aws_eip.devops_eip`. All computed attributes (allocation ID, ARN, public IP, domain) are marked as `(known after apply)`, which is expected for EIP resources where AWS assigns values at creation time.
 
@@ -958,7 +966,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 > **Screenshot:** 
 
-<img width="1075" height="683" alt="image" src="https://github.com/user-attachments/assets/e9fe0086-d361-4033-9e94-f26c3eab2857" />
+
 
 The EIP was successfully allocated. LocalStack assigned the allocation ID `eipalloc-83a0519cfa9727816` and the apply completed in approximately one second.
 
@@ -1017,7 +1025,7 @@ resource "aws_eip" "devops_eip" {
 
 > **Screenshot:** 
 
-<img width="1050" height="687" alt="image" src="https://github.com/user-attachments/assets/1834ddfb-ec5c-440b-a3ef-b483faa65e8f" />
+
 
 **Verification checklist:**
 
