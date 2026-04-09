@@ -304,7 +304,9 @@ Verify the corrected file:
 cat main.tf
 ```
 
-> **Screenshot:** `screenshot_05_corrected_maintf.png`
+> **Screenshot:**
+
+<img width="1225" height="739" alt="image" src="https://github.com/user-attachments/assets/972d2667-b92d-4272-a07f-b75148966d1c" />
 
 ---
 
@@ -461,7 +463,7 @@ RSA private key for SSH access to the provisioned instance. Permissions set to `
 <img width="1254" height="254" alt="image" src="https://github.com/user-attachments/assets/c2f51b7b-67b4-48b3-bf2e-e3e0590ff854" />
 
 <img width="1223" height="734" alt="image" src="https://github.com/user-attachments/assets/d25fa508-3dbc-4b86-a822-1d26e5933435" />
-<img width="1225" height="739" alt="image" src="https://github.com/user-attachments/assets/972d2667-b92d-4272-a07f-b75148966d1c" />
+
 <img width="1221" height="736" alt="image" src="https://github.com/user-attachments/assets/aef04df1-409f-4734-88fd-7db8d1b72dd7" />
 <img width="1218" height="744" alt="image" src="https://github.com/user-attachments/assets/7ee0bfcd-b6d6-4ec8-8e44-9ad5d7422885" />
 <img width="1206" height="740" alt="image" src="https://github.com/user-attachments/assets/9c2ffd6a-72cc-4e0b-8c11-b130638ea490" />
