@@ -129,7 +129,9 @@ drwxr-x--- 1 bob bob 4096 Apr  8 23:13 ..
 -rw-rw-r-- 1 bob bob 1116 May 13  2025 provider.tf
 ```
 
-> **Screenshot:** `01-terraform-version-and-directory.png`
+> **Screenshot:** 
+
+<img width="1059" height="511" alt="image" src="https://github.com/user-attachments/assets/874aab56-fb4b-4cdd-84f5-abb9cad0dca5" />
 
 The directory contains `provider.tf` and `README.MD`. No `main.tf` exists yet. The task requires creating `main.tf` as the sole new file.
 
@@ -682,7 +684,7 @@ drwxr-x--- 1 bob bob 4096 Apr  8 23:13 ..
 
 > **Screenshot:**
 
-<img width="1059" height="511" alt="image" src="https://github.com/user-attachments/assets/874aab56-fb4b-4cdd-84f5-abb9cad0dca5" />
+
 
 The directory contains `provider.tf` and `README.MD`. No `main.tf` exists yet. The task requires creating `main.tf` as the sole new file.
 
