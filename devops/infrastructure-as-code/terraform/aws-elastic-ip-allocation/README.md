@@ -307,7 +307,9 @@ resource "aws_eip" "devops_eip" {
 }
 ```
 
-> **Screenshot:** `05-maintf-rewrite-verify.png`
+> **Screenshot:** 
+
+<img width="1047" height="744" alt="image" src="https://github.com/user-attachments/assets/ce685fda-2152-43f6-aa8c-aaa0e0971743" />
 
 `main.tf` now contains only the resource definition. The `terraform` block, `provider` block, `vpc = true`, and the conflicting version constraint have all been removed. Together, `main.tf` and `provider.tf` form the complete root module.
 
@@ -832,7 +834,7 @@ resource "aws_eip" "devops_eip" {
 
 > **Screenshot:** 
 
-<img width="1047" height="744" alt="image" src="https://github.com/user-attachments/assets/ce685fda-2152-43f6-aa8c-aaa0e0971743" />
+
 
 This is the correct, minimal resource definition. The `provider.tf` file retains all provider configuration. The two files together form the complete root module.
 
