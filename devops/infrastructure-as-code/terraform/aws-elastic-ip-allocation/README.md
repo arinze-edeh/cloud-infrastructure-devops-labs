@@ -76,17 +76,6 @@ The `aws_eip` resource allocates a VPC-domain Elastic IP. In AWS provider v5.x, 
 
 ---
 
-## Repository Structure
-
-```
-/home/bob/terraform/
-├── provider.tf          # AWS provider config with LocalStack endpoint overrides
-├── main.tf              # Elastic IP resource definition (authored in this task)
-└── README.MD            # Original task brief
-```
-
----
-
 ## Implementation Guide
 
 ### Step 1: Verify Terraform Version and Working Directory
