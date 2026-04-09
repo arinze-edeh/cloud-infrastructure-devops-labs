@@ -277,7 +277,9 @@ you run "terraform init" in the future.
 Terraform has been successfully initialized!
 ```
 
-> **Screenshot:** `05-terraform-init.png`
+> **Screenshot:** 
+
+<img width="1048" height="673" alt="image" src="https://github.com/user-attachments/assets/8e14bbe0-6cfc-4b8a-bbf6-0c59d2f60c3c" />
 
 The provider was downloaded and installed successfully. A `.terraform.lock.hcl` file was generated to pin the provider version for reproducible future initializations.
 
@@ -524,7 +526,7 @@ An AWS Elastic IP address named `devops-eip` was successfully provisioned using 
 <img width="1049" height="656" alt="image" src="https://github.com/user-attachments/assets/4e2918d4-6399-4b75-883f-48d53fde3e5e" />
 <img width="1050" height="762" alt="image" src="https://github.com/user-attachments/assets/eafd13bf-8964-4434-ae5c-b1f3d7a0efb9" />
 <img width="1047" height="744" alt="image" src="https://github.com/user-attachments/assets/ce685fda-2152-43f6-aa8c-aaa0e0971743" />
-<img width="1048" height="673" alt="image" src="https://github.com/user-attachments/assets/8e14bbe0-6cfc-4b8a-bbf6-0c59d2f60c3c" />
+
 
 
 
