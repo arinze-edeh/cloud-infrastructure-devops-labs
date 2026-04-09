@@ -111,7 +111,9 @@ chmod 400 datacenter-kp.pem && ls -lh datacenter-kp.pem
 -r-------- 1 bob bob 1.7K Apr  9 01:39 datacenter-kp.pem
 ```
 
-> **Screenshot:** `screenshot_01_keypair_created_and_chmod.png`
+> **Screenshot:** 
+
+<img width="1222" height="479" alt="image" src="https://github.com/user-attachments/assets/9ceb453a-29df-4bbf-bab6-64afbcc5ad53" />
 
 ---
 
@@ -452,7 +454,7 @@ RSA private key for SSH access to the provisioned instance. Permissions set to `
 
 <img width="1229" height="548" alt="image" src="https://github.com/user-attachments/assets/e3a522a7-fb10-4a3f-8e2d-ffbb73a8b8c4" />
 <img width="1222" height="522" alt="image" src="https://github.com/user-attachments/assets/c1ab8a4b-2e3b-4061-8a71-ca79f3ebf036" />
-<img width="1222" height="479" alt="image" src="https://github.com/user-attachments/assets/9ceb453a-29df-4bbf-bab6-64afbcc5ad53" />
+
 <img width="1224" height="733" alt="image" src="https://github.com/user-attachments/assets/20bded03-8681-4b0e-bfe0-240a81ee703c" />
 <img width="1223" height="732" alt="image" src="https://github.com/user-attachments/assets/2ecca87d-04be-4971-aa95-749d8a942c56" />
 <img width="1260" height="739" alt="image" src="https://github.com/user-attachments/assets/cf6d29f0-428b-40ac-b161-e14b209e5f31" />
