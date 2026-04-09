@@ -296,7 +296,9 @@ terraform validate
 Success! The configuration is valid.
 ```
 
-> **Screenshot:** `06-terraform-validate.png`
+> **Screenshot:** 
+
+<img width="1044" height="756" alt="image" src="https://github.com/user-attachments/assets/1a40cd15-807b-4b6c-a013-97888e0dc1dc" />
 
 Validation passed with no errors or warnings. The resource block syntax is correct and the provider reference resolves cleanly.
 
@@ -523,7 +525,7 @@ An AWS Elastic IP address named `devops-eip` was successfully provisioned using 
 <img width="1050" height="762" alt="image" src="https://github.com/user-attachments/assets/eafd13bf-8964-4434-ae5c-b1f3d7a0efb9" />
 <img width="1047" height="744" alt="image" src="https://github.com/user-attachments/assets/ce685fda-2152-43f6-aa8c-aaa0e0971743" />
 <img width="1048" height="673" alt="image" src="https://github.com/user-attachments/assets/8e14bbe0-6cfc-4b8a-bbf6-0c59d2f60c3c" />
-<img width="1044" height="756" alt="image" src="https://github.com/user-attachments/assets/1a40cd15-807b-4b6c-a013-97888e0dc1dc" />
+
 
 
 
