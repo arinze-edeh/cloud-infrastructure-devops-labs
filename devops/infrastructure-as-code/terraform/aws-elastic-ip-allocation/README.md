@@ -263,7 +263,9 @@ provider "aws" {
 }
 ```
 
-> **Screenshot:** `04-providertf-cat-inspect.png`
+> **Screenshot:** 
+
+<img width="1050" height="762" alt="image" src="https://github.com/user-attachments/assets/eafd13bf-8964-4434-ae5c-b1f3d7a0efb9" />
 
 Inspecting `provider.tf` revealed three problems with the `main.tf` written in Step 2:
 
@@ -1106,7 +1108,7 @@ An AWS Elastic IP address named `devops-eip` was successfully provisioned using 
 
 
 
-<img width="1050" height="762" alt="image" src="https://github.com/user-attachments/assets/eafd13bf-8964-4434-ae5c-b1f3d7a0efb9" />
+
 
 
 
