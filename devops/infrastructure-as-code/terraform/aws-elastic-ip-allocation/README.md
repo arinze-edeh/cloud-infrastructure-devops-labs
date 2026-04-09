@@ -361,7 +361,9 @@ aws_eip.devops_eip: Creation complete after 1s [id=eipalloc-83a0519cfa9727816]
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
-> **Screenshot:** `08-terraform-apply.png`
+> **Screenshot:** 
+
+<img width="1075" height="683" alt="image" src="https://github.com/user-attachments/assets/e9fe0086-d361-4033-9e94-f26c3eab2857" />
 
 The EIP was successfully allocated. LocalStack assigned the allocation ID `eipalloc-83a0519cfa9727816` and the apply completed in approximately one second.
 
@@ -521,6 +523,6 @@ An AWS Elastic IP address named `devops-eip` was successfully provisioned using 
 <img width="1048" height="673" alt="image" src="https://github.com/user-attachments/assets/8e14bbe0-6cfc-4b8a-bbf6-0c59d2f60c3c" />
 <img width="1044" height="756" alt="image" src="https://github.com/user-attachments/assets/1a40cd15-807b-4b6c-a013-97888e0dc1dc" />
 <img width="1071" height="683" alt="image" src="https://github.com/user-attachments/assets/25aa057e-22ab-4978-bcd6-267d810aafb6" />
-<img width="1075" height="683" alt="image" src="https://github.com/user-attachments/assets/e9fe0086-d361-4033-9e94-f26c3eab2857" />
+
 <img width="1047" height="705" alt="image" src="https://github.com/user-attachments/assets/8c930c9b-86ee-4b86-b756-9cfdb57adf39" />
 
