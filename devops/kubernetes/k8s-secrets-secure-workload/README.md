@@ -293,7 +293,11 @@ kubectl exec -it secret-nautilus \
 5ecur3
 ```
 
-> **Screenshot:** `step7-validate-secret.png` - Terminal output confirming the licence key value is accessible at the expected path inside the container.
+> **Screenshot:** 
+
+<img width="1083" height="529" alt="image" src="https://github.com/user-attachments/assets/492f6c11-c269-4482-83be-4cbce88f4528" />
+
+>Terminal output confirming the licence key value is accessible at the expected path inside the container.
 
 The value `5ecur3` matches the original content of `/opt/news.txt` on the jump-host, confirming that:
 
@@ -349,14 +353,3 @@ The value `5ecur3` matches the original content of `/opt/news.txt` on the jump-h
 | `/opt/cluster/news.txt: No such file or directory` inside container | `secretName` in the volume spec does not match the actual Secret name | Cross-check `volumes[].secret.secretName` in the manifest against `kubectl get secret` output |
 | Exec command returns empty output | Secret was created with an empty source file | Verify `cat /opt/news.txt` on the jump-host and recreate the secret if the file was empty |
 | `Error: container not found` on exec | Container name mismatch | Use `kubectl get pod secret-nautilus -o jsonpath='{.spec.containers[*].name}'` to confirm the exact container name |
-
-
-
-
-
-
-
-
-<img width="1083" height="529" alt="image" src="https://github.com/user-attachments/assets/492f6c11-c269-4482-83be-4cbce88f4528" />
-
-
