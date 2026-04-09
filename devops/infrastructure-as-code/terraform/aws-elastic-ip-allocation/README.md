@@ -337,7 +337,9 @@ Terraform will perform the following actions:
 Plan: 1 to add, 0 to change, 0 to destroy.
 ```
 
-> **Screenshot:** `07-terraform-plan.png`
+> **Screenshot:** 
+
+<img width="1071" height="683" alt="image" src="https://github.com/user-attachments/assets/25aa057e-22ab-4978-bcd6-267d810aafb6" />
 
 The plan confirms exactly one resource will be created: `aws_eip.devops_eip`. All computed attributes (allocation ID, ARN, public IP, domain) are marked as `(known after apply)`, which is expected for EIP resources where AWS assigns values at creation time.
 
@@ -522,7 +524,7 @@ An AWS Elastic IP address named `devops-eip` was successfully provisioned using 
 <img width="1047" height="744" alt="image" src="https://github.com/user-attachments/assets/ce685fda-2152-43f6-aa8c-aaa0e0971743" />
 <img width="1048" height="673" alt="image" src="https://github.com/user-attachments/assets/8e14bbe0-6cfc-4b8a-bbf6-0c59d2f60c3c" />
 <img width="1044" height="756" alt="image" src="https://github.com/user-attachments/assets/1a40cd15-807b-4b6c-a013-97888e0dc1dc" />
-<img width="1071" height="683" alt="image" src="https://github.com/user-attachments/assets/25aa057e-22ab-4978-bcd6-267d810aafb6" />
 
-<img width="1047" height="705" alt="image" src="https://github.com/user-attachments/assets/8c930c9b-86ee-4b86-b756-9cfdb57adf39" />
+
+
 
