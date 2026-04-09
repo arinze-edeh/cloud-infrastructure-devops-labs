@@ -93,7 +93,12 @@ cat /opt/news.txt
 5ecur3
 ```
 
-> **Screenshot:** `step1-verify-news-txt.png` - Terminal output showing file metadata and licence key content.
+> **Screenshot:**
+
+<img width="1078" height="486" alt="image" src="https://github.com/user-attachments/assets/609a672a-25d5-453f-864d-16109683a846" />
+
+>Terminal output showing file metadata and licence key content.
+
 
 The file is 7 bytes (6 characters + newline), owned by `root`, and world-readable. This confirms it is accessible for ingestion by `kubectl`.
 
@@ -328,7 +333,7 @@ The value `5ecur3` matches the original content of `/opt/news.txt` on the jump-h
 
 
 <img width="1083" height="576" alt="image" src="https://github.com/user-attachments/assets/78a1e674-2e77-4d48-8b63-d818ca92f9c8" />
-<img width="1078" height="486" alt="image" src="https://github.com/user-attachments/assets/609a672a-25d5-453f-864d-16109683a846" />
+
 <img width="1081" height="541" alt="image" src="https://github.com/user-attachments/assets/f0ee3e8c-7ee0-4603-8143-032c998f889e" />
 <img width="1083" height="652" alt="image" src="https://github.com/user-attachments/assets/eba58b37-94ce-411d-9873-8c53dda4ec5f" />
 <img width="1082" height="848" alt="image" src="https://github.com/user-attachments/assets/ee481e0e-5236-4c46-97e8-3ff0ffe38761" />
