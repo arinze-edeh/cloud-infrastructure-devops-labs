@@ -166,7 +166,9 @@ resource "aws_eip" "devops_eip" {
 EOF
 ```
 
-> **Screenshot:** `02-initial-maintf-write.png`
+> **Screenshot:** 
+
+<img width="1053" height="749" alt="image" src="https://github.com/user-attachments/assets/a87ccb75-e497-4bbb-9b81-6d782994208f" />
 
 ---
 
@@ -202,7 +204,9 @@ resource "aws_eip" "devops_eip" {
 }
 ```
 
-> **Screenshot:** `03-maintf-cat-verify.png`
+> **Screenshot:** 
+
+<img width="1049" height="656" alt="image" src="https://github.com/user-attachments/assets/4e2918d4-6399-4b75-883f-48d53fde3e5e" />
 
 The file was written correctly. At this point the configuration had not yet been cross-checked against the pre-existing `provider.tf`.
 
@@ -1100,8 +1104,8 @@ An AWS Elastic IP address named `devops-eip` was successfully provisioned using 
 
 
 
-<img width="1053" height="749" alt="image" src="https://github.com/user-attachments/assets/a87ccb75-e497-4bbb-9b81-6d782994208f" />
-<img width="1049" height="656" alt="image" src="https://github.com/user-attachments/assets/4e2918d4-6399-4b75-883f-48d53fde3e5e" />
+
+
 <img width="1050" height="762" alt="image" src="https://github.com/user-attachments/assets/eafd13bf-8964-4434-ae5c-b1f3d7a0efb9" />
 
 
