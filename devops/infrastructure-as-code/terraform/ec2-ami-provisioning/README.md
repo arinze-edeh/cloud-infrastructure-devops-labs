@@ -139,6 +139,8 @@ resource "aws_instance" "ec2" {
 
 > **Screenshot: `cat main.tf` showing the existing EC2 resource block**
 
+<img width="1095" height="564" alt="image" src="https://github.com/user-attachments/assets/e883a733-21b1-4fc2-b9e9-9facd5bc621f" />
+
 Key observations:
 - The instance resource label is `ec2` under the `aws_instance` type.
 - The instance ID (`i-790313c4ff594075c`) is already recorded in state and will be referenced dynamically in the next step.
@@ -479,7 +481,7 @@ All three required conditions are confirmed:
 
 
 
-<img width="1095" height="564" alt="image" src="https://github.com/user-attachments/assets/e883a733-21b1-4fc2-b9e9-9facd5bc621f" />
+
 <img width="1129" height="778" alt="image" src="https://github.com/user-attachments/assets/acaec1c8-b19d-4747-95da-d1acb2a961e4" />
 <img width="1138" height="755" alt="image" src="https://github.com/user-attachments/assets/bd0b46e1-dc63-47a1-823b-735d98e3f58c" />
 <img width="1139" height="773" alt="image" src="https://github.com/user-attachments/assets/b744a8c0-a9f0-4982-b178-21c43eb42edf" />
