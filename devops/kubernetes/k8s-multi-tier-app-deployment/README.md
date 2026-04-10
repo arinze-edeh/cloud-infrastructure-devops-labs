@@ -143,6 +143,8 @@ The namespace is `Active` and ready to accept workloads.
 
 *Screenshot: Namespace creation and verification output*
 
+<img width="1034" height="588" alt="image" src="https://github.com/user-attachments/assets/2c262524-dbd0-4a81-b2e1-bd7f44ac9e12" />
+
 ---
 
 ### Step 3: Deploy Iron Gallery Frontend
@@ -535,7 +537,7 @@ No blocking errors were encountered during this deployment. All manifests applie
 
 
 
-<img width="1034" height="588" alt="image" src="https://github.com/user-attachments/assets/2c262524-dbd0-4a81-b2e1-bd7f44ac9e12" />
+
 <img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/a36e0224-f422-48fa-ad68-bb4d31f7a61c" />
 <img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/dd983238-3114-4aba-99d1-d089d6f7843f" />
 <img width="1025" height="860" alt="image" src="https://github.com/user-attachments/assets/abadcbc0-fd8b-4785-8907-35a10bf13a25" />
