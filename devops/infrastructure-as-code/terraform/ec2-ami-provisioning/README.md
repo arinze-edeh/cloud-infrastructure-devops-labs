@@ -360,6 +360,8 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 > **Screenshot: `terraform plan` output showing the `+create` action for `aws_ami_from_instance.nautilus_ec2_ami`**
 
+<img width="1173" height="800" alt="image" src="https://github.com/user-attachments/assets/3d287026-2992-415d-a142-a31bae611248" />
+
 Key verification points from the plan:
 - `source_instance_id = "i-790313c4ff594075c"` confirms the correct source instance is resolved from state.
 - `Plan: 1 to add, 0 to change, 0 to destroy` confirms no unintended modifications to the existing EC2 instance.
@@ -497,7 +499,7 @@ All three required conditions are confirmed:
 
 
 
-<img width="1173" height="800" alt="image" src="https://github.com/user-attachments/assets/3d287026-2992-415d-a142-a31bae611248" />
+
 <img width="1172" height="815" alt="image" src="https://github.com/user-attachments/assets/d53c3c44-bb40-496c-8837-a6ee434ab4be" />
 <img width="1153" height="819" alt="image" src="https://github.com/user-attachments/assets/2cc97347-84c6-4d2e-a644-5294b90f75fb" />
 <img width="1134" height="734" alt="image" src="https://github.com/user-attachments/assets/d35edca2-e3e1-4e85-9a44-f75b32294de6" />
