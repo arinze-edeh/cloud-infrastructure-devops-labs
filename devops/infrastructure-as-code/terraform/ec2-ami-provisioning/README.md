@@ -390,6 +390,8 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 > **Screenshot: `terraform apply -auto-approve` showing creation complete with AMI ID `ami-9c1d2a2f8e2bd8358`**
 
+<img width="1172" height="815" alt="image" src="https://github.com/user-attachments/assets/d53c3c44-bb40-496c-8837-a6ee434ab4be" />
+
 The AMI was created in approximately 5 seconds within the LocalStack environment.
 
 ---
@@ -419,6 +421,8 @@ aws ec2 describe-images \
 ```
 
 > **Screenshot: AWS CLI `describe-images` output confirming AMI `ami-9c1d2a2f8e2bd8358` is `available`**
+
+<img width="1134" height="734" alt="image" src="https://github.com/user-attachments/assets/d35edca2-e3e1-4e85-9a44-f75b32294de6" />
 
 All three required conditions are confirmed:
 - AMI ID: `ami-9c1d2a2f8e2bd8358`
@@ -494,14 +498,7 @@ All three required conditions are confirmed:
 
 
 
-
-
-
-
-
-
-<img width="1172" height="815" alt="image" src="https://github.com/user-attachments/assets/d53c3c44-bb40-496c-8837-a6ee434ab4be" />
 <img width="1153" height="819" alt="image" src="https://github.com/user-attachments/assets/2cc97347-84c6-4d2e-a644-5294b90f75fb" />
-<img width="1134" height="734" alt="image" src="https://github.com/user-attachments/assets/d35edca2-e3e1-4e85-9a44-f75b32294de6" />
+
 
 
