@@ -558,3 +558,228 @@ No blocking errors were encountered during this deployment. All manifests applie
 **HTTP 200 from the NodePort confirms end-to-end routing health.** The curl validation using `%{http_code}` is a lightweight but effective smoke test. It confirms the NodePort binding, kube-proxy forwarding, container responsiveness, and nginx health within a single command. This pattern should be integrated into any post-deployment verification script.
 
 **Credential management via plain-text env vars is a starting point only.** The database passwords were passed as literal string values in the Deployment spec. In production, these values must be stored in Kubernetes `Secret` objects and referenced via `secretKeyRef` to prevent credential exposure in version-controlled manifests and `kubectl describe` output.
+
+
+
+
+
+
+
+
+
+
+---
+ 
+### Step 7: Final Validation
+ 
+Perform a complete end-state verification across all deployed resources — including full YAML inspection of each resource — then confirm the application is reachable over HTTP.
+ 
+**Verify all deployments:**
+ 
+```bash
+kubectl get deployments -n iron-namespace-devops
+```
+ 
+```
+NAME                             READY   UP-TO-DATE   AVAILABLE   AGE
+iron-db-deployment-devops        1/1     1            1           8m39s
+iron-gallery-deployment-devops   1/1     1            1           11m
+```
+ 
+**Verify all pods:**
+ 
+```bash
+kubectl get pods -n iron-namespace-devops
+```
+ 
+```
+NAME                                              READY   STATUS    RESTARTS   AGE
+iron-db-deployment-devops-5544d79954-t982k        1/1     Running   0          9m22s
+iron-gallery-deployment-devops-7b59878ffd-2wvqf   1/1     Running   0          12m
+```
+ 
+**Verify all services:**
+ 
+```bash
+kubectl get services -n iron-namespace-devops
+```
+ 
+```
+NAME                          TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+iron-db-service-devops        ClusterIP   10.43.252.109   <none>        3306/TCP       6m58s
+iron-gallery-service-devops   NodePort    10.43.165.231   <none>        80:32678/TCP   2m52s
+```
+ 
+*Screenshot: kubectl get deployments, pods, and services showing all resources in Running/Available state*
+
+<img width="1055" height="727" alt="image" src="https://github.com/user-attachments/assets/f828b57c-0f7d-4bb5-b784-6e24183fee94" />
+<img width="1068" height="856" alt="image" src="https://github.com/user-attachments/assets/fd0759f4-741a-4baf-a3a6-005383a5c2ce" />
+<img width="1061" height="860" alt="image" src="https://github.com/user-attachments/assets/1c1fd1cb-c129-4feb-a4ba-7da09e0a903f" />
+<img width="1059" height="857" alt="image" src="https://github.com/user-attachments/assets/b793cf29-f31f-43c4-bc9c-ea7ca8b603e8" />
+<img width="1066" height="865" alt="image" src="https://github.com/user-attachments/assets/c3f9a15c-942a-4851-86cc-b631680d4ba7" />
+<img width="1069" height="867" alt="image" src="https://github.com/user-attachments/assets/c7938702-b182-433b-856b-2a352e5c7f7c" />
+<img width="1067" height="861" alt="image" src="https://github.com/user-attachments/assets/99e12f0a-ede5-4240-9b43-f5b64da8a57f" />
+<img width="1063" height="856" alt="image" src="https://github.com/user-attachments/assets/8d5c87a2-bc69-4e20-8cb6-b03874399871" />
+<img width="1064" height="725" alt="image" src="https://github.com/user-attachments/assets/2cb285f2-8646-408e-ab6e-06830d35dd4b" />
+
+---
+ 
+**Full YAML inspection — Iron Gallery Deployment:**
+ 
+```bash
+kubectl get deployment iron-gallery-deployment-devops -n iron-namespace-devops -o yaml
+```
+ 
+The YAML output confirms the full live spec as reconciled by the API server, including:
+* `replicas: 1`, `selector.matchLabels: run: iron-gallery`
+* Container `iron-gallery-container-devops` with image `kodekloud/irongallery:2.0`, `imagePullPolicy: IfNotPresent`
+* Resource limits: `cpu: 50m`, `memory: 100Mi`
+* Volume mounts: `config` → `/usr/share/nginx/html/data`, `images` → `/usr/share/nginx/html/uploads`
+* Volumes: both `config` and `images` defined as `emptyDir: {}`
+* Status: `availableReplicas: 1`, `readyReplicas: 1`, conditions `Available: True` and `Progressing: True` (ReplicaSet `iron-gallery-deployment-devops-7b59878ffd` successfully progressed)
+ 
+*Screenshot: Full YAML output of iron-gallery-deployment-devops showing spec and status conditions*
+ 
+---
+ 
+**Full YAML inspection — Iron DB Deployment:**
+ 
+```bash
+kubectl get deployment iron-db-deployment-devops -n iron-namespace-devops -o yaml
+```
+ 
+The YAML output confirms:
+* `replicas: 1`, `selector.matchLabels: db: mariadb`
+* Container `iron-db-container-devops` with image `kodekloud/irondb:2.0`, `imagePullPolicy: IfNotPresent`
+* Environment variables: `MYSQL_DATABASE: database_host`, `MYSQL_ROOT_PASSWORD`, `MYSQL_PASSWORD`, `MYSQL_USER: iron_db_user`
+* Volume mount: `db` → `/var/lib/mysql`
+* Volume: `db` defined as `emptyDir: {}`
+* Status: `availableReplicas: 1`, `readyReplicas: 1`, conditions `Available: True` and `Progressing: True` (ReplicaSet `iron-db-deployment-devops-5544d79954` successfully progressed)
+ 
+*Screenshot: Full YAML output of iron-db-deployment-devops showing env vars, volume, and status conditions*
+ 
+---
+ 
+**Full YAML inspection — Iron DB ClusterIP Service:**
+ 
+```bash
+kubectl get service iron-db-service-devops -n iron-namespace-devops -o yaml
+```
+ 
+The YAML output confirms:
+* `type: ClusterIP`, `clusterIP: 10.43.252.109`
+* Port: `3306`, protocol `TCP`, targetPort `3306`
+* Selector: `db: mariadb`
+* `sessionAffinity: None`, `ipFamilyPolicy: SingleStack`, `ipFamilies: [IPv4]`
+ 
+*Screenshot: Full YAML output of iron-db-service-devops confirming ClusterIP spec*
+ 
+---
+ 
+**Full YAML inspection — Iron Gallery NodePort Service:**
+ 
+```bash
+kubectl get service iron-gallery-service-devops -n iron-namespace-devops -o yaml
+```
+ 
+The YAML output confirms:
+* `type: NodePort`, `clusterIP: 10.43.165.231`
+* `nodePort: 32678`, `port: 80`, `targetPort: 80`, protocol `TCP`
+* Selector: `run: iron-gallery`
+* `externalTrafficPolicy: Cluster`, `sessionAffinity: None`
+ 
+*Screenshot: Full YAML output of iron-gallery-service-devops confirming nodePort 32678 configuration*
+ 
+---
+ 
+**HTTP connectivity test:**
+ 
+```bash
+curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:32678
+```
+ 
+```
+200
+```
+ 
+**Application content verification:**
+ 
+```bash
+curl -s http://127.0.0.1:32678 | head -10
+```
+ 
+```
+<!DOCTYPE HTML>
+<html>
+      <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+            <title>Lychee</title>
+            <meta name="author" content="Tobias Reich">
+            <link type="text/css" rel="stylesheet" href="dist/main.css">
+```
+ 
+The application returns HTTP `200` and serves the Lychee gallery installation page, confirming the deployment is fully functional.
+ 
+*Screenshot: curl HTTP 200 response and HTML head output confirming application reachability on NodePort 32678*
+ 
+---
+ 
+## Resource Summary
+ 
+| Resource Kind | Name | Namespace | Key Configuration |
+|---|---|---|---|
+| Namespace | iron-namespace-devops | cluster-wide | Dedicated isolation boundary |
+| Deployment | iron-gallery-deployment-devops | iron-namespace-devops | 1 replica, cpu: 50m, mem: 100Mi, 2x emptyDir |
+| Deployment | iron-db-deployment-devops | iron-namespace-devops | 1 replica, 4 env vars, 1x emptyDir |
+| Service | iron-db-service-devops | iron-namespace-devops | ClusterIP, TCP 3306 |
+| Service | iron-gallery-service-devops | iron-namespace-devops | NodePort, TCP 80:32678 |
+ 
+---
+ 
+## Best Practices
+ 
+**Namespace isolation:** Grouping all application resources under `iron-namespace-devops` enables clean RBAC boundaries, resource quota application, and namespace-scoped deletion without affecting other workloads in the cluster.
+ 
+**Label consistency:** The label schema (`run: iron-gallery`, `db: mariadb`) is applied uniformly across Deployment metadata, pod template metadata, and Service selectors. This eliminates selector drift and ensures services always route to the correct pods.
+ 
+**Resource limits on frontend container:** Setting explicit `cpu: 50m` and `memory: 100Mi` limits on the gallery container prevents a poorly behaved pod from monopolizing node resources, which is critical in shared cluster environments. The absence of resource limits on the database container is acceptable given the controlled lab scope, but should be remedied in production.
+ 
+**Service type selection:** `ClusterIP` for the database correctly restricts network access to intra-cluster traffic only. `NodePort` for the frontend provides a predictable external entry point on a fixed port without requiring an Ingress controller or LoadBalancer provisioner.
+ 
+**emptyDir for transient workloads:** Using `emptyDir` volumes for both application data directories and the database volume is appropriate for ephemeral or stateless lab contexts. The volumes are lifecycle-bound to the pod, ensuring clean state on restart.
+ 
+**Declarative manifests:** All resources were applied using YAML manifest files (`kubectl apply -f`) rather than imperative commands. This ensures the configuration is version-controllable, auditable, and reproducible across environments.
+ 
+**Pre-deployment cluster health check:** Validating cluster-info and node status before resource creation prevents wasted effort against a degraded control plane.
+ 
+**Full YAML inspection as a validation step:** Running `kubectl get ... -o yaml` on each resource after apply is a reliable way to confirm the API server has accepted and persisted the exact spec intended, including fields that may be defaulted or mutated by admission controllers.
+ 
+---
+ 
+## Errors and Resolutions
+ 
+No blocking errors were encountered during this deployment. All manifests applied cleanly on first attempt. The following potential failure modes were proactively avoided:
+ 
+| Potential Issue | Avoidance Strategy Applied |
+|---|---|
+| Service selector mismatch | Label values on Deployment template and Service selector were verified to be identical before apply |
+| NodePort conflict | Port `32678` was confirmed unused by other services in the cluster before manifest creation |
+| Image pull failure | Exact image tags (`kodekloud/irongallery:2.0`, `kodekloud/irondb:2.0`) were specified per task requirements; `imagePullPolicy` defaulted to `IfNotPresent` for cached environments |
+| Pod not reaching Running state | `kubectl describe` was used after each deployment apply to inspect ReplicaSet events and confirm pod scheduling |
+ 
+---
+ 
+## Lessons Learned
+ 
+**ClusterIP endpoints are immediately resolvable via kube-dns.** Once `iron-db-service-devops` was created, the database became reachable at `iron-db-service-devops.iron-namespace-devops.svc.cluster.local:3306` from any pod within the cluster. This reinforces that service-based DNS is the correct mechanism for inter-pod communication rather than hardcoded pod IPs.
+ 
+**emptyDir volumes are non-persistent by design.** If the pod is deleted or rescheduled, all data in emptyDir volumes is lost. For production MariaDB deployments, a `PersistentVolumeClaim` backed by a `StorageClass` is required. This distinction is critical when planning upgrade or restart strategies.
+ 
+**Resource limits without requests can cause scheduling ambiguity.** This deployment specifies `limits` but not `requests` on the gallery container. Kubernetes will treat the request as equal to the limit in this case, which can make bin-packing less efficient on multi-node clusters. Always define both `requests` and `limits` in production manifests.
+ 
+**Full YAML inspection (`-o yaml`) confirms API server reconciliation.** Running `kubectl get ... -o yaml` after each apply reveals the complete server-side state of a resource, including defaulted fields, admission-injected values, and status conditions. This is a more thorough validation than `kubectl describe` alone and should be part of any post-deployment audit procedure.
+ 
+**HTTP 200 from the NodePort confirms end-to-end routing health.** The curl validation using `%{http_code}` is a lightweight but effective smoke test. It confirms the NodePort binding, kube-proxy forwarding, container responsiveness, and nginx health within a single command. This pattern should be integrated into any post-deployment verification script.
+ 
+**Credential management via plain-text env vars is a starting point only.** The database passwords were passed as literal string values in the Deployment spec. In production, these values must be stored in Kubernetes `Secret` objects and referenced via `secretKeyRef` to prevent credential exposure in version-controlled manifests and `kubectl describe` output.
+ 
