@@ -355,7 +355,9 @@ The `describe` output confirms:
 
 *Screenshot: kubectl get and describe output for iron-db-service-devops showing ClusterIP and active endpoint*
 
-*Screenshot: Full YAML output of iron-db-service-devops confirming spec configuration*
+<img width="1061" height="867" alt="image" src="https://github.com/user-attachments/assets/275c4b13-ed88-43d0-9394-2c357b7f6603" />
+
+>*Full YAML output of iron-db-service-devops confirming spec configuration*
 
 ---
 
@@ -556,7 +558,7 @@ No blocking errors were encountered during this deployment. All manifests applie
 <img width="1032" height="589" alt="image" src="https://github.com/user-attachments/assets/e983f1e0-4923-4350-9416-cf833af82415" />
 <img width="1065" height="864" alt="image" src="https://github.com/user-attachments/assets/aead86d9-0be4-4c1e-a7fc-c27d9cb1dae8" />
 <img width="1065" height="622" alt="image" src="https://github.com/user-attachments/assets/8681de3a-435c-46f2-8bec-9aec2ad2a6db" />
-<img width="1061" height="867" alt="image" src="https://github.com/user-attachments/assets/275c4b13-ed88-43d0-9394-2c357b7f6603" />
+
 <img width="1063" height="762" alt="image" src="https://github.com/user-attachments/assets/891b7266-a11c-4b1e-adaf-5b2725ad7b56" />
 <img width="1057" height="802" alt="image" src="https://github.com/user-attachments/assets/c7621d76-15c5-40eb-b2a7-b2b9dba2f7e1" />
 <img width="1066" height="856" alt="image" src="https://github.com/user-attachments/assets/536b1954-80e9-405a-957c-d0c59e07d8c0" />
