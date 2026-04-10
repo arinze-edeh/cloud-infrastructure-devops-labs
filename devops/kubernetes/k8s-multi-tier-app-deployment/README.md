@@ -500,7 +500,7 @@ The application returns HTTP `200` and serves the Lychee gallery installation pa
 
 *Screenshot: curl HTTP 200 response and HTML head output confirming application reachability on NodePort 32678*
 
-<img width="1059" height="274" alt="image" src="https://github.com/user-attachments/assets/a7e56b15-5585-402a-9f99-cd93af9cc2a5" />
+
 
 ---
 
@@ -721,6 +721,8 @@ curl -s http://127.0.0.1:32678 | head -10
 The application returns HTTP `200` and serves the Lychee gallery installation page, confirming the deployment is fully functional.
  
 *Screenshot: curl HTTP 200 response and HTML head output confirming application reachability on NodePort 32678*
+
+<img width="1059" height="274" alt="image" src="https://github.com/user-attachments/assets/a7e56b15-5585-402a-9f99-cd93af9cc2a5" />
  
 ---
  
