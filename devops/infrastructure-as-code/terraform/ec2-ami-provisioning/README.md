@@ -13,8 +13,7 @@
 2. [Problem Statement](#2-problem-statement)
 3. [Solution Architecture](#3-solution-architecture)
 4. [Prerequisites](#4-prerequisites)
-5. [Repository Structure](#5-repository-structure)
-6. [Implementation Guide](#6-implementation-guide)
+5. [Implementation Guide](#6-implementation-guide)
    - [Step 1: Inspect the Working Directory](#step-1-inspect-the-working-directory)
    - [Step 2: Review Existing Terraform Configuration](#step-2-review-existing-terraform-configuration)
    - [Step 3: Review the Provider Configuration](#step-3-review-the-provider-configuration)
@@ -25,10 +24,10 @@
    - [Step 8: Generate the Execution Plan](#step-8-generate-the-execution-plan)
    - [Step 9: Apply the Configuration](#step-9-apply-the-configuration)
    - [Step 10: Verify the AMI via AWS CLI](#step-10-verify-the-ami-via-aws-cli)
-7. [Key Resource Attributes](#7-key-resource-attributes)
-8. [Best Practices Applied](#8-best-practices-applied)
-9. [Lessons Learned](#9-lessons-learned)
-10. [Troubleshooting Reference](#10-troubleshooting-reference)
+6. [Key Resource Attributes](#7-key-resource-attributes)
+7. [Best Practices Applied](#8-best-practices-applied)
+8. [Lessons Learned](#9-lessons-learned)
+9. [Troubleshooting Reference](#10-troubleshooting-reference)
 
 ---
 
@@ -83,21 +82,7 @@ The `aws_ami_from_instance` resource references the `aws_instance.ec2` resource 
 
 ---
 
-## 5. Repository Structure
-
-```
-/home/bob/terraform/
-├── .terraform/                  # Provider plugins (auto-managed)
-├── .terraform.lock.hcl          # Dependency lock file
-├── main.tf                      # Core resource definitions (EC2 + AMI)
-├── provider.tf                  # AWS provider and LocalStack endpoint config
-├── terraform.tfstate            # Current state file
-└── README.MD                    # Original task README
-```
-
----
-
-## 6. Implementation Guide
+## 5. Implementation Guide
 
 ### Step 1: Inspect the Working Directory
 
@@ -424,7 +409,7 @@ All three required conditions are confirmed:
 
 ---
 
-## 7. Key Resource Attributes
+## 6. Key Resource Attributes
 
 ### aws_instance.ec2 (Pre-existing)
 
@@ -450,7 +435,7 @@ All three required conditions are confirmed:
 
 ---
 
-## 8. Best Practices Applied
+## 7. Best Practices Applied
 
 **Resource referencing over hardcoding:** The `source_instance_id` attribute uses `aws_instance.ec2.id` rather than a literal instance ID string. This builds an explicit dependency edge in the Terraform resource graph and ensures idempotency across environments where instance IDs may differ.
 
@@ -464,7 +449,7 @@ All three required conditions are confirmed:
 
 ---
 
-## 9. Lessons Learned
+## 8. Lessons Learned
 
 **State review before resource creation is critical.** Reviewing `terraform.tfstate` prior to writing new resources confirmed the instance ID and operational state without requiring an additional AWS CLI call. In production environments, always verify that source resources are in the expected state before referencing them in dependent resource definitions.
 
@@ -476,7 +461,7 @@ All three required conditions are confirmed:
 
 ---
 
-## 10. Troubleshooting Reference
+## 9. Troubleshooting Reference
 
 | Symptom | Likely Cause | Resolution |
 |---|---|---|
