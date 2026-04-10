@@ -229,7 +229,11 @@ Key values extracted from state:
 | AMI | `ami-0c101f26f147fa7fd` |
 | Instance Type | `t2.micro` |
 
-> **Screenshot: `cat terraform.tfstate` showing the tracked EC2 instance attributes**
+> **Screenshots: `cat terraform.tfstate` showing the tracked EC2 instance attributes**
+
+<img width="1138" height="755" alt="image" src="https://github.com/user-attachments/assets/bd0b46e1-dc63-47a1-823b-735d98e3f58c" />
+<img width="1139" height="773" alt="image" src="https://github.com/user-attachments/assets/b744a8c0-a9f0-4982-b178-21c43eb42edf" />
+<img width="1147" height="773" alt="image" src="https://github.com/user-attachments/assets/b5b7b3ff-6288-4946-a701-bd2d4a5895e8" />
 
 This confirms the source instance is running and tracked, making it a valid target for AMI creation.
 
@@ -485,9 +489,7 @@ All three required conditions are confirmed:
 
 
 
-<img width="1138" height="755" alt="image" src="https://github.com/user-attachments/assets/bd0b46e1-dc63-47a1-823b-735d98e3f58c" />
-<img width="1139" height="773" alt="image" src="https://github.com/user-attachments/assets/b744a8c0-a9f0-4982-b178-21c43eb42edf" />
-<img width="1147" height="773" alt="image" src="https://github.com/user-attachments/assets/b5b7b3ff-6288-4946-a701-bd2d4a5895e8" />
+
 <img width="1139" height="729" alt="image" src="https://github.com/user-attachments/assets/d51f8576-cde3-46ab-92dc-679c28ca1e82" />
 <img width="1136" height="727" alt="image" src="https://github.com/user-attachments/assets/f53a4bfb-86ec-4ce9-a672-f6bc9a5d188f" />
 <img width="1173" height="800" alt="image" src="https://github.com/user-attachments/assets/3d287026-2992-415d-a142-a31bae611248" />
