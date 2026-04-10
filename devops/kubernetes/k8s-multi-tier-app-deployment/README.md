@@ -463,7 +463,7 @@ iron-gallery-service-devops   NodePort    10.43.165.231   <none>        80:32678
 
 ---
  
-**Full YAML inspection — Iron Gallery Deployment:**
+**Full YAML inspection - Iron Gallery Deployment:**
  
 ```bash
 kubectl get deployment iron-gallery-deployment-devops -n iron-namespace-devops -o yaml
@@ -485,7 +485,7 @@ The YAML output confirms the full live spec as reconciled by the API server, inc
 
 ---
  
-**Full YAML inspection — Iron DB Deployment:**
+**Full YAML inspection - Iron DB Deployment:**
  
 ```bash
 kubectl get deployment iron-db-deployment-devops -n iron-namespace-devops -o yaml
@@ -506,7 +506,7 @@ The YAML output confirms:
 
 ---
  
-**Full YAML inspection — Iron DB ClusterIP Service:**
+**Full YAML inspection - Iron DB ClusterIP Service:**
  
 ```bash
 kubectl get service iron-db-service-devops -n iron-namespace-devops -o yaml
@@ -524,7 +524,7 @@ The YAML output confirms:
  
 ---
  
-**Full YAML inspection — Iron Gallery NodePort Service:**
+**Full YAML inspection - Iron Gallery NodePort Service:**
  
 ```bash
 kubectl get service iron-gallery-service-devops -n iron-namespace-devops -o yaml
