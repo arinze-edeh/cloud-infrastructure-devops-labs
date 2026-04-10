@@ -56,7 +56,7 @@ Given an existing, running EC2 instance named `nautilus-ec2` (already tracked in
 Existing State                        New Resource
 +--------------------+                +-------------------------------+
 |  aws_instance.ec2  |   source_id    |  aws_ami_from_instance        |
-|  id: i-790313c4.. | ------------> |  name: nautilus-ec2-ami       |
+|  id: i-790313c4..  | ------------>  |  name: nautilus-ec2-ami       |
 |  name: nautilus-ec2|                |  id: ami-9c1d2a2f8e2bd8358    |
 |  state: running    |                |  state: available             |
 +--------------------+                +-------------------------------+
@@ -260,6 +260,8 @@ EOF
 
 > **Screenshot: Terminal showing successful heredoc append to main.tf**
 
+<img width="1139" height="729" alt="image" src="https://github.com/user-attachments/assets/d51f8576-cde3-46ab-92dc-679c28ca1e82" />
+
 **Design decision:** `source_instance_id = aws_instance.ec2.id` uses an implicit resource reference rather than a hardcoded instance ID. This ensures the AMI creation is always tied to the correct resource as tracked in state, and correctly models the dependency in the Terraform DAG.
 
 ---
@@ -300,6 +302,8 @@ resource "aws_ami_from_instance" "nautilus_ec2_ami" {
 
 > **Screenshot: `cat main.tf` showing both resource blocks present**
 
+<img width="1139" height="729" alt="image" src="https://github.com/user-attachments/assets/d51f8576-cde3-46ab-92dc-679c28ca1e82" />
+
 ---
 
 ### Step 7: Validate the Terraform Configuration
@@ -317,6 +321,8 @@ Success! The configuration is valid.
 ```
 
 > **Screenshot: `terraform validate` returning success**
+
+<img width="1136" height="727" alt="image" src="https://github.com/user-attachments/assets/f53a4bfb-86ec-4ce9-a672-f6bc9a5d188f" />
 
 ---
 
@@ -490,8 +496,7 @@ All three required conditions are confirmed:
 
 
 
-<img width="1139" height="729" alt="image" src="https://github.com/user-attachments/assets/d51f8576-cde3-46ab-92dc-679c28ca1e82" />
-<img width="1136" height="727" alt="image" src="https://github.com/user-attachments/assets/f53a4bfb-86ec-4ce9-a672-f6bc9a5d188f" />
+
 <img width="1173" height="800" alt="image" src="https://github.com/user-attachments/assets/3d287026-2992-415d-a142-a31bae611248" />
 <img width="1172" height="815" alt="image" src="https://github.com/user-attachments/assets/d53c3c44-bb40-496c-8837-a6ee434ab4be" />
 <img width="1153" height="819" alt="image" src="https://github.com/user-attachments/assets/2cc97347-84c6-4d2e-a644-5294b90f75fb" />
