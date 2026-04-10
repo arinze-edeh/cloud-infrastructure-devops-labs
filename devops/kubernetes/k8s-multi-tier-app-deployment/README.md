@@ -302,7 +302,7 @@ The `describe` output confirms:
 <img width="1034" height="861" alt="image" src="https://github.com/user-attachments/assets/8f091a6b-aa81-45ab-ac34-49d41c0d347f" />
 <img width="1032" height="867" alt="image" src="https://github.com/user-attachments/assets/e7107b43-d167-4f89-8017-f7cb897d2684" />
 
-*Screenshot: Full YAML output of iron-db-deployment-devops including status conditions*
+>*Full YAML output of iron-db-deployment-devops including status conditions*
 
 ---
 
