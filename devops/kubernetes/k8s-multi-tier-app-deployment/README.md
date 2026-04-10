@@ -419,7 +419,7 @@ The `describe` output confirms:
  
 ### Step 7: Final Validation
  
-Perform a complete end-state verification across all deployed resources — including full YAML inspection of each resource — then confirm the application is reachable over HTTP.
+Perform a complete end-state verification across all deployed resources, including full YAML inspection of each resource, then confirm the application is reachable over HTTP.
  
 **Verify all deployments:**
  
