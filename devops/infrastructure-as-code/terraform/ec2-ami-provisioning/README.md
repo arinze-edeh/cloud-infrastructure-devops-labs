@@ -201,6 +201,8 @@ provider "aws" {
 
 > **Screenshot: `cat provider.tf` confirming LocalStack endpoints**
 
+<img width="1129" height="778" alt="image" src="https://github.com/user-attachments/assets/acaec1c8-b19d-4747-95da-d1acb2a961e4" />
+
 Notable configuration flags:
 - `skip_credentials_validation = true` and `skip_requesting_account_id = true` are required for LocalStack compatibility, as it does not enforce real AWS credential chains.
 - All service endpoints are uniformly directed to `http://aws:4566`.
@@ -482,7 +484,7 @@ All three required conditions are confirmed:
 
 
 
-<img width="1129" height="778" alt="image" src="https://github.com/user-attachments/assets/acaec1c8-b19d-4747-95da-d1acb2a961e4" />
+
 <img width="1138" height="755" alt="image" src="https://github.com/user-attachments/assets/bd0b46e1-dc63-47a1-823b-735d98e3f58c" />
 <img width="1139" height="773" alt="image" src="https://github.com/user-attachments/assets/b744a8c0-a9f0-4982-b178-21c43eb42edf" />
 <img width="1147" height="773" alt="image" src="https://github.com/user-attachments/assets/b5b7b3ff-6288-4946-a701-bd2d4a5895e8" />
