@@ -108,6 +108,8 @@ drwxr-xr-x 3 bob bob 4096 Apr 10 16:05 .terraform
 
 > **Screenshot: `ls -la` output confirming directory contents**
 
+<img width="1100" height="489" alt="image" src="https://github.com/user-attachments/assets/ef54ba00-7edd-4849-a029-2760c4a7bdc0" />
+
 ---
 
 ### Step 2: Review Existing Terraform Configuration
@@ -476,7 +478,7 @@ All three required conditions are confirmed:
 
 
 
-<img width="1100" height="489" alt="image" src="https://github.com/user-attachments/assets/ef54ba00-7edd-4849-a029-2760c4a7bdc0" />
+
 <img width="1095" height="564" alt="image" src="https://github.com/user-attachments/assets/e883a733-21b1-4fc2-b9e9-9facd5bc621f" />
 <img width="1129" height="778" alt="image" src="https://github.com/user-attachments/assets/acaec1c8-b19d-4747-95da-d1acb2a961e4" />
 <img width="1138" height="755" alt="image" src="https://github.com/user-attachments/assets/bd0b46e1-dc63-47a1-823b-735d98e3f58c" />
