@@ -24,10 +24,10 @@
    - [Step 8: Generate the Execution Plan](#step-8-generate-the-execution-plan)
    - [Step 9: Apply the Configuration](#step-9-apply-the-configuration)
    - [Step 10: Verify the AMI via AWS CLI](#step-10-verify-the-ami-via-aws-cli)
-6. [Key Resource Attributes](#7-key-resource-attributes)
-7. [Best Practices Applied](#8-best-practices-applied)
-8. [Lessons Learned](#9-lessons-learned)
-9. [Troubleshooting Reference](#10-troubleshooting-reference)
+6. [Key Resource Attributes](#6-key-resource-attributes)
+7. [Best Practices Applied](#7-best-practices-applied)
+8. [Lessons Learned](#8-lessons-learned)
+9. [Troubleshooting Reference](#9-troubleshooting-reference)
 
 ---
 
