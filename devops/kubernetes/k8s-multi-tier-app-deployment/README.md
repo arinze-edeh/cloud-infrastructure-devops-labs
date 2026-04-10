@@ -615,7 +615,7 @@ iron-gallery-service-devops   NodePort    10.43.165.231   <none>        80:32678
 <img width="1055" height="727" alt="image" src="https://github.com/user-attachments/assets/f828b57c-0f7d-4bb5-b784-6e24183fee94" />
 
 
-<img width="1067" height="861" alt="image" src="https://github.com/user-attachments/assets/99e12f0a-ede5-4240-9b43-f5b64da8a57f" />
+
 <img width="1063" height="856" alt="image" src="https://github.com/user-attachments/assets/8d5c87a2-bc69-4e20-8cb6-b03874399871" />
 <img width="1064" height="725" alt="image" src="https://github.com/user-attachments/assets/2cb285f2-8646-408e-ab6e-06830d35dd4b" />
 
@@ -677,6 +677,8 @@ The YAML output confirms:
 * `sessionAffinity: None`, `ipFamilyPolicy: SingleStack`, `ipFamilies: [IPv4]`
  
 *Screenshot: Full YAML output of iron-db-service-devops confirming ClusterIP spec*
+
+ <img width="1067" height="861" alt="image" src="https://github.com/user-attachments/assets/99e12f0a-ede5-4240-9b43-f5b64da8a57f" />
  
 ---
  
