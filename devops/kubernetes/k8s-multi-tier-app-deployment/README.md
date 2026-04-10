@@ -485,9 +485,22 @@ curl -s http://127.0.0.1:32678 | head -10
 
 The application returns HTTP `200` and serves the Lychee gallery installation page, confirming the deployment is fully functional.
 
-*Screenshot: kubectl get deployments, pods, and services showing all resources in Running/Available state*
+*Screenshots: kubectl get deployments, pods, and services showing all resources in Running/Available state*
+
+<img width="1055" height="727" alt="image" src="https://github.com/user-attachments/assets/f828b57c-0f7d-4bb5-b784-6e24183fee94" />
+<img width="1068" height="856" alt="image" src="https://github.com/user-attachments/assets/fd0759f4-741a-4baf-a3a6-005383a5c2ce" />
+<img width="1061" height="860" alt="image" src="https://github.com/user-attachments/assets/1c1fd1cb-c129-4feb-a4ba-7da09e0a903f" />
+<img width="1059" height="857" alt="image" src="https://github.com/user-attachments/assets/b793cf29-f31f-43c4-bc9c-ea7ca8b603e8" />
+<img width="1066" height="865" alt="image" src="https://github.com/user-attachments/assets/c3f9a15c-942a-4851-86cc-b631680d4ba7" />
+<img width="1069" height="867" alt="image" src="https://github.com/user-attachments/assets/c7938702-b182-433b-856b-2a352e5c7f7c" />
+<img width="1067" height="861" alt="image" src="https://github.com/user-attachments/assets/99e12f0a-ede5-4240-9b43-f5b64da8a57f" />
+<img width="1063" height="856" alt="image" src="https://github.com/user-attachments/assets/8d5c87a2-bc69-4e20-8cb6-b03874399871" />
+<img width="1064" height="725" alt="image" src="https://github.com/user-attachments/assets/2cb285f2-8646-408e-ab6e-06830d35dd4b" />
+
 
 *Screenshot: curl HTTP 200 response and HTML head output confirming application reachability on NodePort 32678*
+
+<img width="1059" height="274" alt="image" src="https://github.com/user-attachments/assets/a7e56b15-5585-402a-9f99-cd93af9cc2a5" />
 
 ---
 
@@ -545,17 +558,3 @@ No blocking errors were encountered during this deployment. All manifests applie
 **HTTP 200 from the NodePort confirms end-to-end routing health.** The curl validation using `%{http_code}` is a lightweight but effective smoke test. It confirms the NodePort binding, kube-proxy forwarding, container responsiveness, and nginx health within a single command. This pattern should be integrated into any post-deployment verification script.
 
 **Credential management via plain-text env vars is a starting point only.** The database passwords were passed as literal string values in the Deployment spec. In production, these values must be stored in Kubernetes `Secret` objects and referenced via `secretKeyRef` to prevent credential exposure in version-controlled manifests and `kubectl describe` output.
-
-
-
-<img width="1055" height="571" alt="image" src="https://github.com/user-attachments/assets/bd0a16fc-db29-42cf-8467-4998821f8c44" />
-<img width="1055" height="727" alt="image" src="https://github.com/user-attachments/assets/f828b57c-0f7d-4bb5-b784-6e24183fee94" />
-<img width="1068" height="856" alt="image" src="https://github.com/user-attachments/assets/fd0759f4-741a-4baf-a3a6-005383a5c2ce" />
-<img width="1061" height="860" alt="image" src="https://github.com/user-attachments/assets/1c1fd1cb-c129-4feb-a4ba-7da09e0a903f" />
-<img width="1059" height="857" alt="image" src="https://github.com/user-attachments/assets/b793cf29-f31f-43c4-bc9c-ea7ca8b603e8" />
-<img width="1066" height="865" alt="image" src="https://github.com/user-attachments/assets/c3f9a15c-942a-4851-86cc-b631680d4ba7" />
-<img width="1069" height="867" alt="image" src="https://github.com/user-attachments/assets/c7938702-b182-433b-856b-2a352e5c7f7c" />
-<img width="1067" height="861" alt="image" src="https://github.com/user-attachments/assets/99e12f0a-ede5-4240-9b43-f5b64da8a57f" />
-<img width="1063" height="856" alt="image" src="https://github.com/user-attachments/assets/8d5c87a2-bc69-4e20-8cb6-b03874399871" />
-<img width="1064" height="725" alt="image" src="https://github.com/user-attachments/assets/2cb285f2-8646-408e-ab6e-06830d35dd4b" />
-<img width="1059" height="274" alt="image" src="https://github.com/user-attachments/assets/a7e56b15-5585-402a-9f99-cd93af9cc2a5" />
