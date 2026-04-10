@@ -613,9 +613,7 @@ iron-gallery-service-devops   NodePort    10.43.165.231   <none>        80:32678
 *Screenshot: kubectl get deployments, pods, and services showing all resources in Running/Available state*
 
 <img width="1055" height="727" alt="image" src="https://github.com/user-attachments/assets/f828b57c-0f7d-4bb5-b784-6e24183fee94" />
-<img width="1068" height="856" alt="image" src="https://github.com/user-attachments/assets/fd0759f4-741a-4baf-a3a6-005383a5c2ce" />
-<img width="1061" height="860" alt="image" src="https://github.com/user-attachments/assets/1c1fd1cb-c129-4feb-a4ba-7da09e0a903f" />
-<img width="1059" height="857" alt="image" src="https://github.com/user-attachments/assets/b793cf29-f31f-43c4-bc9c-ea7ca8b603e8" />
+
 <img width="1066" height="865" alt="image" src="https://github.com/user-attachments/assets/c3f9a15c-942a-4851-86cc-b631680d4ba7" />
 <img width="1069" height="867" alt="image" src="https://github.com/user-attachments/assets/c7938702-b182-433b-856b-2a352e5c7f7c" />
 <img width="1067" height="861" alt="image" src="https://github.com/user-attachments/assets/99e12f0a-ede5-4240-9b43-f5b64da8a57f" />
@@ -639,7 +637,11 @@ The YAML output confirms the full live spec as reconciled by the API server, inc
 * Status: `availableReplicas: 1`, `readyReplicas: 1`, conditions `Available: True` and `Progressing: True` (ReplicaSet `iron-gallery-deployment-devops-7b59878ffd` successfully progressed)
  
 *Screenshot: Full YAML output of iron-gallery-deployment-devops showing spec and status conditions*
- 
+
+ <img width="1068" height="856" alt="image" src="https://github.com/user-attachments/assets/fd0759f4-741a-4baf-a3a6-005383a5c2ce" />
+<img width="1061" height="860" alt="image" src="https://github.com/user-attachments/assets/1c1fd1cb-c129-4feb-a4ba-7da09e0a903f" />
+<img width="1059" height="857" alt="image" src="https://github.com/user-attachments/assets/b793cf29-f31f-43c4-bc9c-ea7ca8b603e8" />
+
 ---
  
 **Full YAML inspection — Iron DB Deployment:**
