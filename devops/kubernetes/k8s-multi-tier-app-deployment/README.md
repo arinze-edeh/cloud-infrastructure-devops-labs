@@ -117,6 +117,8 @@ The node is `Ready` and the control plane components are healthy. Proceed with r
 
 *Screenshot: kubectl cluster-info and node status confirming healthy control plane*
 
+<img width="1020" height="645" alt="image" src="https://github.com/user-attachments/assets/0be9cf6f-a3ca-4e5c-b04c-d8d564bc9388" />
+
 ---
 
 ### Step 2: Create Namespace
@@ -532,7 +534,7 @@ No blocking errors were encountered during this deployment. All manifests applie
 
 
 
-<img width="1020" height="645" alt="image" src="https://github.com/user-attachments/assets/0be9cf6f-a3ca-4e5c-b04c-d8d564bc9388" />
+
 <img width="1034" height="588" alt="image" src="https://github.com/user-attachments/assets/2c262524-dbd0-4a81-b2e1-bd7f44ac9e12" />
 <img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/a36e0224-f422-48fa-ad68-bb4d31f7a61c" />
 <img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/dd983238-3114-4aba-99d1-d089d6f7843f" />
