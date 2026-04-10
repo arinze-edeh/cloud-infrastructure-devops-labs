@@ -494,11 +494,3 @@ All three required conditions are confirmed:
 | `Error: No valid credential sources found` | Credentials not configured for LocalStack | Ensure `skip_credentials_validation = true` is set in provider block; export dummy `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` env vars if required |
 
 ---
-
-
-
-
-<img width="1153" height="819" alt="image" src="https://github.com/user-attachments/assets/2cc97347-84c6-4d2e-a644-5294b90f75fb" />
-
-
-
