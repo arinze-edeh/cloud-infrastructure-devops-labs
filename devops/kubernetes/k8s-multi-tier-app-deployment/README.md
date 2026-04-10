@@ -295,7 +295,12 @@ The `describe` output confirms:
 * Volume `db` mounted at `/var/lib/mysql` (emptyDir)
 * ReplicaSet `iron-db-deployment-devops-5544d79954` progressed: `1/1` available
 
-*Screenshot: kubectl describe output showing environment variables and volume configuration for iron-db-deployment-devops*
+*Screenshots: kubectl describe output showing environment variables and volume configuration for iron-db-deployment-devops*
+
+<img width="1028" height="858" alt="image" src="https://github.com/user-attachments/assets/ceacb600-6abd-4237-a910-9c519237e85e" />
+<img width="1030" height="842" alt="image" src="https://github.com/user-attachments/assets/1b38333b-f101-4dae-b9d3-d730193db15e" />
+<img width="1034" height="861" alt="image" src="https://github.com/user-attachments/assets/8f091a6b-aa81-45ab-ac34-49d41c0d347f" />
+<img width="1032" height="867" alt="image" src="https://github.com/user-attachments/assets/e7107b43-d167-4f89-8017-f7cb897d2684" />
 
 *Screenshot: Full YAML output of iron-db-deployment-devops including status conditions*
 
@@ -546,10 +551,7 @@ No blocking errors were encountered during this deployment. All manifests applie
 <img width="1030" height="864" alt="image" src="https://github.com/user-attachments/assets/dd983238-3114-4aba-99d1-d089d6f7843f" />
 
 <img width="1036" height="854" alt="image" src="https://github.com/user-attachments/assets/d6d0ad39-5e65-4f46-91a7-59f5c0175d4b" />
-<img width="1028" height="858" alt="image" src="https://github.com/user-attachments/assets/ceacb600-6abd-4237-a910-9c519237e85e" />
-<img width="1030" height="842" alt="image" src="https://github.com/user-attachments/assets/1b38333b-f101-4dae-b9d3-d730193db15e" />
-<img width="1034" height="861" alt="image" src="https://github.com/user-attachments/assets/8f091a6b-aa81-45ab-ac34-49d41c0d347f" />
-<img width="1032" height="867" alt="image" src="https://github.com/user-attachments/assets/e7107b43-d167-4f89-8017-f7cb897d2684" />
+
 <img width="1038" height="552" alt="image" src="https://github.com/user-attachments/assets/cfd64210-b4b1-4395-8b79-65ab5ba66424" />
 <img width="1032" height="589" alt="image" src="https://github.com/user-attachments/assets/e983f1e0-4923-4350-9416-cf833af82415" />
 <img width="1065" height="864" alt="image" src="https://github.com/user-attachments/assets/aead86d9-0be4-4c1e-a7fc-c27d9cb1dae8" />
