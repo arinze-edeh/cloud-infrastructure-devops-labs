@@ -212,6 +212,8 @@ The pod is fully operational with `0` restarts, confirming the image correction 
 
 Screenshot: `kubectl get pods showing 1/1 Running with 0 restarts`
 
+<img width="1117" height="863" alt="image" src="https://github.com/user-attachments/assets/2b8cb3c4-579f-4d35-983c-ff1486dd910c" />
+
 ---
 
 ### Step 6: Inspect the Existing Service
@@ -442,7 +444,7 @@ Error from server (NotFound): services "python-deployment-datacenter" not found
 
 
 
-<img width="1117" height="863" alt="image" src="https://github.com/user-attachments/assets/2b8cb3c4-579f-4d35-983c-ff1486dd910c" />
+
 <img width="1124" height="340" alt="image" src="https://github.com/user-attachments/assets/41820a92-a3d0-474c-a5ed-5df46e0ab195" />
 <img width="1121" height="513" alt="image" src="https://github.com/user-attachments/assets/eb6b9b0a-ae80-4545-aaa6-b120b7afb51f" />
 <img width="1111" height="856" alt="image" src="https://github.com/user-attachments/assets/042cd7f6-147d-4f53-845f-7d45d2938360" />
