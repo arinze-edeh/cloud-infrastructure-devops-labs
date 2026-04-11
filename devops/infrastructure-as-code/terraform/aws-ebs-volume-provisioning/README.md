@@ -446,6 +446,8 @@ guarantee to take exactly these actions if you run "terraform apply" now.
 
 *Screenshot: Terminal showing `terraform plan` output confirming `Plan: 1 to add, 0 to change, 0 to destroy`*
 
+<img width="980" height="734" alt="image" src="https://github.com/user-attachments/assets/0eb30527-ec92-4ae6-8a95-c703662e50e3" />
+
 ---
 
 ### 6.12 Apply the Configuration
@@ -495,6 +497,9 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
 *Screenshot: Terminal showing `terraform apply -auto-approve` completing successfully with volume ID `vol-7846392957bc0d8d6` assigned*
+
+
+<img width="979" height="733" alt="image" src="https://github.com/user-attachments/assets/966b779f-71c2-47f4-94c7-75e2cad42b19" />
 
 ---
 
@@ -563,15 +568,3 @@ The volume is now available with the following confirmed attributes:
 * **`cat >` with a heredoc overwrites, it does not append.** When correcting `main.tf`, the same `cat > main.tf << 'EOF'` pattern was used to overwrite the file in place. This is a reliable, atomic approach for replacing file content in a terminal environment without opening an editor, and is well suited to scripted or task-based workflows.
 
 * **`-auto-approve` is appropriate in controlled, single-resource environments.** In this task, `-auto-approve` was used against a LocalStack environment with a known, single-resource plan. In production pipelines, interactive approval gates or CI-level plan approval workflows should replace this flag for any apply that touches stateful or shared infrastructure.
-
-
-
-
-
-
-
-
-
-
-<img width="980" height="734" alt="image" src="https://github.com/user-attachments/assets/0eb30527-ec92-4ae6-8a95-c703662e50e3" />
-<img width="979" height="733" alt="image" src="https://github.com/user-attachments/assets/966b779f-71c2-47f4-94c7-75e2cad42b19" />
