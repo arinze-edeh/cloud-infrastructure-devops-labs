@@ -455,12 +455,6 @@ Error from server (NotFound): services "python-deployment-datacenter" not found
 
 
 
-<img width="1124" height="340" alt="image" src="https://github.com/user-attachments/assets/41820a92-a3d0-474c-a5ed-5df46e0ab195" />
-<img width="1121" height="513" alt="image" src="https://github.com/user-attachments/assets/eb6b9b0a-ae80-4545-aaa6-b120b7afb51f" />
-
-
-
-
 <img width="1121" height="843" alt="image" src="https://github.com/user-attachments/assets/bab85b8f-dd75-4db4-9921-995d9905c37c" />
 <img width="1123" height="558" alt="image" src="https://github.com/user-attachments/assets/6fdb603b-4165-4e9e-81bf-b115f65577eb" />
 <img width="1095" height="597" alt="image" src="https://github.com/user-attachments/assets/3a07935b-b2aa-431b-8dea-144882f34d8f" />
