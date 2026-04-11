@@ -374,6 +374,9 @@ detect it and remind you to do so if necessary.
 
 *Screenshot: Terminal showing successful `terraform init` with provider download confirmation and lock file creation*
 
+
+<img width="982" height="686" alt="image" src="https://github.com/user-attachments/assets/5e2ff42f-8405-4c5f-b1b5-4fc28574b007" />
+
 ---
 
 ### 6.10 Validate the Configuration
@@ -391,6 +394,8 @@ Success! The configuration is valid.
 ```
 
 *Screenshot: Terminal showing `terraform validate` returning `Success! The configuration is valid.`*
+
+<img width="972" height="543" alt="image" src="https://github.com/user-attachments/assets/1a105582-c390-4de4-8786-eb85bf2799f3" />
 
 ---
 
@@ -567,7 +572,6 @@ The volume is now available with the following confirmed attributes:
 
 
 
-<img width="982" height="686" alt="image" src="https://github.com/user-attachments/assets/5e2ff42f-8405-4c5f-b1b5-4fc28574b007" />
-<img width="972" height="543" alt="image" src="https://github.com/user-attachments/assets/1a105582-c390-4de4-8786-eb85bf2799f3" />
+
 <img width="980" height="734" alt="image" src="https://github.com/user-attachments/assets/0eb30527-ec92-4ae6-8a95-c703662e50e3" />
 <img width="979" height="733" alt="image" src="https://github.com/user-attachments/assets/966b779f-71c2-47f4-94c7-75e2cad42b19" />
