@@ -15,15 +15,18 @@
 4. [Prerequisites](#4-prerequisites)
 5. [Directory Structure](#5-directory-structure)
 6. [Implementation Guide](#6-implementation-guide)
-   - [6.1 Navigate to the Terraform Working Directory](#61-navigate-to-the-terraform-working-directory)
-   - [6.2 Inspect the Pre-existing Provider Configuration](#62-inspect-the-pre-existing-provider-configuration)
-   - [6.3 Attempt 1: Write main.tf with Duplicate Provider Block (Error Encountered)](#63-attempt-1-write-maintf-with-duplicate-provider-block-error-encountered)
-   - [6.4 Root Cause Analysis and Resolution](#64-root-cause-analysis-and-resolution)
-   - [6.5 Attempt 2: Write Corrected main.tf Without Provider Block](#65-attempt-2-write-corrected-maintf-without-provider-block)
-   - [6.6 Initialize Terraform](#66-initialize-terraform)
-   - [6.7 Validate the Configuration](#67-validate-the-configuration)
-   - [6.8 Plan the Deployment](#68-plan-the-deployment)
-   - [6.9 Apply the Configuration](#69-apply-the-configuration)
+   - [6.1 Confirm the Working Directory](#61-confirm-the-working-directory)
+   - [6.2 Write main.tf with Provider and Resource Block](#62-write-maintf-with-provider-and-resource-block)
+   - [6.3 Verify main.tf Content](#63-verify-maintf-content)
+   - [6.4 Run terraform init (First Attempt - Failed)](#64-run-terraform-init-first-attempt---failed)
+   - [6.5 Inspect provider.tf to Diagnose the Error](#65-inspect-providertf-to-diagnose-the-error)
+   - [6.6 Rewrite main.tf Without the Provider Block](#66-rewrite-maintf-without-the-provider-block)
+   - [6.7 Verify the Corrected main.tf Content](#67-verify-the-corrected-maintf-content)
+   - [6.8 Confirm Both Configuration Files Exist](#68-confirm-both-configuration-files-exist)
+   - [6.9 Run terraform init (Second Attempt - Succeeded)](#69-run-terraform-init-second-attempt---succeeded)
+   - [6.10 Validate the Configuration](#610-validate-the-configuration)
+   - [6.11 Plan the Deployment](#611-plan-the-deployment)
+   - [6.12 Apply the Configuration](#612-apply-the-configuration)
 7. [Verification](#7-verification)
 8. [Errors Encountered and Resolutions](#8-errors-encountered-and-resolutions)
 9. [Best Practices Applied](#9-best-practices-applied)
@@ -41,9 +44,9 @@ This task represents one such unit: provisioning a persistent block storage volu
 
 ## 2. Architecture and Design Intent
 
-The storage layer is being established before dependent compute resources are provisioned. An AWS EBS (Elastic Block Store) volume of type `gp3` is created in the `us-east-1a` availability zone. The `gp3` volume type is the current-generation general-purpose SSD offering from AWS, providing a baseline of 3,000 IOPS and 125 MB/s throughput at no extra cost, making it suitable for most workloads.
+The storage layer is established before dependent compute resources are provisioned. An AWS EBS (Elastic Block Store) volume of type `gp3` is created in the `us-east-1a` availability zone. The `gp3` volume type is the current-generation general-purpose SSD offering from AWS, providing a baseline of 3,000 IOPS and 125 MB/s throughput at no added cost, making it suitable for most general workloads.
 
-The provider configuration (including LocalStack endpoint overrides and credential bypass settings) is maintained in a dedicated `provider.tf` file, cleanly separating infrastructure concerns from resource definitions.
+The provider configuration (including LocalStack endpoint overrides and credential bypass settings) is maintained in a pre-existing `provider.tf` file, cleanly separating infrastructure concerns from resource definitions. The task requires that only `main.tf` be created and no additional `.tf` files be introduced.
 
 ---
 
@@ -57,16 +60,16 @@ The provider configuration (including LocalStack endpoint overrides and credenti
 | AWS Region | `us-east-1` |
 | Availability Zone | `us-east-1a` |
 | Working Directory | `/home/bob/terraform` |
-| Configuration File | `main.tf` (only; no new `.tf` files) |
+| Configuration File | `main.tf` only (no new `.tf` files permitted) |
 
 ---
 
 ## 4. Prerequisites
 
 * Terraform CLI installed and available in `PATH`
-* A pre-configured `provider.tf` file already present in `/home/bob/terraform` with the `hashicorp/aws` provider pinned to version `5.91.0`
+* A pre-configured `provider.tf` file already present in `/home/bob/terraform` containing the `terraform` block, the `hashicorp/aws` provider pinned to version `5.91.0`, and LocalStack endpoint overrides
 * LocalStack running and accessible at `http://aws:4566` for all AWS service endpoints
-* Access to the terminal via VS Code: right-click under the **EXPLORER** section and select **Open in Integrated Terminal**
+* Terminal access via VS Code: right-click under the **EXPLORER** section and select **Open in Integrated Terminal**
 
 ---
 
@@ -75,42 +78,142 @@ The provider configuration (including LocalStack endpoint overrides and credenti
 ```
 /home/bob/terraform/
 ├── provider.tf       # Pre-existing: Terraform block, provider config, and LocalStack endpoints
-└── main.tf           # Created during this task: EBS volume resource definition
+└── main.tf           # Created during this task: EBS volume resource definition only
 ```
 
 ---
 
 ## 6. Implementation Guide
 
-### 6.1 Navigate to the Terraform Working Directory
+### 6.1 Confirm the Working Directory
 
-Confirm the active working directory is the designated Terraform workspace.
+Confirm the active working directory is the designated Terraform workspace before writing any configuration.
 
 ```bash
 pwd
 ```
 
-**Expected Output:**
+**Output:**
 
 ```
 /home/bob/terraform
 ```
 
-*Screenshot: Terminal showing `/home/bob/terraform` as the current directory*
-
-<img width="984" height="471" alt="image" src="https://github.com/user-attachments/assets/76d65e56-e091-42fb-a448-e32752b25d89" />
+*Screenshot: Terminal showing `/home/bob/terraform` as the current working directory*
 
 ---
 
-### 6.2 Inspect the Pre-existing Provider Configuration
+### 6.2 Write main.tf with Provider and Resource Block
 
-Before writing any Terraform configuration, inspect `provider.tf` to understand what is already declared. This step is critical to avoid duplicate provider blocks.
+Write `main.tf` using a heredoc. At this point, the contents of `provider.tf` had not yet been inspected, so the initial file included both a `provider "aws"` block and the `aws_ebs_volume` resource definition.
+
+```bash
+cat > main.tf << 'EOF'
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_ebs_volume" "xfusion_volume" {
+  availability_zone = "us-east-1a"
+  size              = 2
+  type              = "gp3"
+
+  tags = {
+    Name = "xfusion-volume"
+  }
+}
+EOF
+```
+
+---
+
+### 6.3 Verify main.tf Content
+
+Confirm the file was written correctly before proceeding.
+
+```bash
+cat main.tf
+```
+
+**Output:**
+
+```hcl
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_ebs_volume" "xfusion_volume" {
+  availability_zone = "us-east-1a"
+  size              = 2
+  type              = "gp3"
+
+  tags = {
+    Name = "xfusion-volume"
+  }
+}
+```
+
+*Screenshot: Terminal showing `cat main.tf` output with both the provider block and resource block*
+
+---
+
+### 6.4 Run terraform init (First Attempt - Failed)
+
+Attempt to initialize the Terraform working directory.
+
+```bash
+terraform init
+```
+
+**Error output:**
+
+```
+Initializing the backend...
+╷
+│ Error: Terraform encountered problems during initialisation, including problems
+│ with the configuration, described below.
+│
+│ The Terraform configuration must be valid before initialization so that
+│ Terraform can determine which modules and providers need to be installed.
+│
+╵
+╷
+│ Error: Duplicate provider configuration
+│
+│   on provider.tf line 10:
+│   10: provider "aws" {
+│
+│ A default (non-aliased) provider configuration for "aws" was already given at
+│ main.tf:1,1-15. If multiple configurations are required, set the "alias"
+│ argument for alternative configurations.
+╵
+╷
+│ Error: Duplicate provider configuration
+│
+│   on provider.tf line 10:
+│   10: provider "aws" {
+│
+│ A default (non-aliased) provider configuration for "aws" was already given at
+│ main.tf:1,1-15. If multiple configurations are required, set the "alias"
+│ argument for alternative configurations.
+╵
+```
+
+*Screenshot: Terminal showing `terraform init` failure with the duplicate provider configuration error printed twice*
+
+**Note:** Terraform emitted the same `Duplicate provider configuration` error twice during this failed initialization pass. This is expected CLI output behavior for this class of error and does not indicate two separate underlying problems.
+
+---
+
+### 6.5 Inspect provider.tf to Diagnose the Error
+
+Following the initialization failure, `provider.tf` was inspected to understand what was already declared in the working directory.
 
 ```bash
 cat provider.tf
 ```
 
-**Output observed:**
+**Output:**
 
 ```hcl
 terraform {
@@ -154,74 +257,15 @@ provider "aws" {
 }
 ```
 
-*Screenshot: Terminal output of `cat provider.tf` showing the full provider block*
+*Screenshot: Terminal showing the full contents of `provider.tf` including the pre-existing `provider "aws"` block with LocalStack endpoint overrides*
 
-**Key Observation:** A default (non-aliased) `provider "aws"` block is already declared in `provider.tf`. Any second `provider "aws"` block without an `alias` argument will cause a fatal initialization error.
-
----
-
-### 6.3 Attempt 1: Write main.tf with Duplicate Provider Block (Error Encountered)
-
-The initial `main.tf` was written including a `provider "aws"` block alongside the resource definition.
-
-```bash
-cat > main.tf << 'EOF'
-provider "aws" {
-  region = "us-east-1"
-}
-
-resource "aws_ebs_volume" "xfusion_volume" {
-  availability_zone = "us-east-1a"
-  size              = 2
-  type              = "gp3"
-
-  tags = {
-    Name = "xfusion-volume"
-  }
-}
-EOF
-```
-
-**Terraform init was then executed:**
-
-```bash
-terraform init
-```
-
-**Error output received:**
-
-```
-╷
-│ Error: Duplicate provider configuration
-│
-│   on provider.tf line 10:
-│   10: provider "aws" {
-│
-│ A default (non-aliased) provider configuration for "aws" was already given
-│ at main.tf:1,1-15. If multiple configurations are required, set the "alias"
-│ argument for alternative configurations.
-╵
-```
-
-*Screenshot: Terminal showing `terraform init` failure with the Duplicate provider configuration error*
+**Diagnosis:** `provider.tf` already contained a fully configured, non-aliased `provider "aws"` block at line 10. The `provider "aws"` block written in `main.tf` created a second default provider configuration for the same provider, which Terraform does not allow within a single module. The resolution is to remove the `provider "aws"` block from `main.tf` entirely, retaining only the resource definition. The provider declared in `provider.tf` is automatically inherited by all resources across all `.tf` files in the same module directory.
 
 ---
 
-### 6.4 Root Cause Analysis and Resolution
+### 6.6 Rewrite main.tf Without the Provider Block
 
-**Root Cause:**
-
-Terraform does not permit more than one default (non-aliased) provider configuration for the same provider within a single module. Since `provider.tf` already contained `provider "aws" { ... }`, adding another `provider "aws"` block in `main.tf` triggered a fatal conflict during the initialization phase, before any provider plugins were downloaded.
-
-**Resolution:**
-
-Remove the `provider "aws"` block entirely from `main.tf`. The provider configuration declared in `provider.tf` applies globally to all `.tf` files within the same module directory. The resource definition in `main.tf` will automatically inherit the provider configuration from `provider.tf`.
-
----
-
-### 6.5 Attempt 2: Write Corrected main.tf Without Provider Block
-
-Overwrite `main.tf` with only the resource definition, omitting any provider block.
+Overwrite `main.tf` using a heredoc, this time containing only the `aws_ebs_volume` resource definition.
 
 ```bash
 cat > main.tf << 'EOF'
@@ -237,13 +281,17 @@ resource "aws_ebs_volume" "xfusion_volume" {
 EOF
 ```
 
-**Verify the file content:**
+---
+
+### 6.7 Verify the Corrected main.tf Content
+
+Confirm the provider block has been removed and only the resource definition remains.
 
 ```bash
 cat main.tf
 ```
 
-**Expected output:**
+**Output:**
 
 ```hcl
 resource "aws_ebs_volume" "xfusion_volume" {
@@ -257,32 +305,38 @@ resource "aws_ebs_volume" "xfusion_volume" {
 }
 ```
 
-**Confirm both configuration files exist:**
+*Screenshot: Terminal showing the corrected `main.tf` containing only the resource block with no provider block*
+
+---
+
+### 6.8 Confirm Both Configuration Files Exist
+
+List all `.tf` files in the working directory to confirm both `main.tf` and `provider.tf` are present with the expected sizes and timestamps.
 
 ```bash
 ls -la *.tf
 ```
 
-**Expected output:**
+**Output:**
 
 ```
 -rw-r--r-- 1 bob bob  178 Apr 11 02:24 main.tf
 -rw-rw-r-- 1 bob bob 1116 May 13  2025 provider.tf
 ```
 
-*Screenshot: Terminal showing `ls -la *.tf` output with both `main.tf` and `provider.tf` listed*
+*Screenshot: Terminal showing `ls -la *.tf` output with both files listed, including their sizes, permissions, and timestamps*
 
 ---
 
-### 6.6 Initialize Terraform
+### 6.9 Run terraform init (Second Attempt - Succeeded)
 
-Initialize the Terraform working directory. This downloads the `hashicorp/aws` provider at the pinned version `5.91.0` and creates the `.terraform.lock.hcl` dependency lock file.
+Re-initialize the Terraform working directory now that the duplicate provider conflict has been resolved.
 
 ```bash
 terraform init
 ```
 
-**Expected output:**
+**Output:**
 
 ```
 Initializing the backend...
@@ -296,21 +350,29 @@ so that Terraform can guarantee to make the same selections by default when
 you run "terraform init" in the future.
 
 Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration, rerun this command
+to reinitialize your working directory. If you forget, other commands will
+detect it and remind you to do so if necessary.
 ```
 
-*Screenshot: Terminal showing successful `terraform init` output with provider installation confirmation*
+*Screenshot: Terminal showing successful `terraform init` with provider download confirmation and lock file creation*
 
 ---
 
-### 6.7 Validate the Configuration
+### 6.10 Validate the Configuration
 
-Run a static validation pass to confirm the configuration is syntactically and semantically correct before incurring any API calls.
+Run a static validation pass to confirm the configuration is syntactically and semantically correct before invoking any provider APIs.
 
 ```bash
 terraform validate
 ```
 
-**Expected output:**
+**Output:**
 
 ```
 Success! The configuration is valid.
@@ -320,17 +382,21 @@ Success! The configuration is valid.
 
 ---
 
-### 6.8 Plan the Deployment
+### 6.11 Plan the Deployment
 
-Generate an execution plan to preview exactly what Terraform will create. This is a dry run and makes no changes to infrastructure.
+Generate and review an execution plan. This is a read-only operation that makes no changes to infrastructure.
 
 ```bash
 terraform plan
 ```
 
-**Expected output (key section):**
+**Output:**
 
 ```
+Terraform used the selected providers to generate the following execution plan.
+Resource actions are indicated with the following symbols:
+  + create
+
 Terraform will perform the following actions:
 
   # aws_ebs_volume.xfusion_volume will be created
@@ -355,23 +421,55 @@ Terraform will perform the following actions:
     }
 
 Plan: 1 to add, 0 to change, 0 to destroy.
+
+──────────────────────────────────────────────────────────────────────────────
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
 ```
 
-*Screenshot: Terminal showing `terraform plan` output with the single resource addition plan*
+*Screenshot: Terminal showing `terraform plan` output confirming `Plan: 1 to add, 0 to change, 0 to destroy`*
 
 ---
 
-### 6.9 Apply the Configuration
+### 6.12 Apply the Configuration
 
-Apply the configuration with auto-approval to provision the EBS volume without an interactive confirmation prompt.
+Apply the configuration with the `-auto-approve` flag to provision the EBS volume without an interactive confirmation prompt.
 
 ```bash
 terraform apply -auto-approve
 ```
 
-**Expected output (key section):**
+**Output:**
 
 ```
+Terraform used the selected providers to generate the following execution plan.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_ebs_volume.xfusion_volume will be created
+  + resource "aws_ebs_volume" "xfusion_volume" {
+      + arn               = (known after apply)
+      + availability_zone = "us-east-1a"
+      + encrypted         = (known after apply)
+      + final_snapshot    = false
+      + id                = (known after apply)
+      + iops              = (known after apply)
+      + kms_key_id        = (known after apply)
+      + size              = 2
+      + snapshot_id       = (known after apply)
+      + tags              = {
+          + "Name" = "xfusion-volume"
+        }
+      + tags_all          = {
+          + "Name" = "xfusion-volume"
+        }
+      + throughput        = (known after apply)
+      + type              = "gp3"
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
 aws_ebs_volume.xfusion_volume: Creating...
 aws_ebs_volume.xfusion_volume: Still creating... [10s elapsed]
 aws_ebs_volume.xfusion_volume: Creation complete after 11s [id=vol-7846392957bc0d8d6]
@@ -379,19 +477,19 @@ aws_ebs_volume.xfusion_volume: Creation complete after 11s [id=vol-7846392957bc0
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
-*Screenshot: Terminal showing `terraform apply -auto-approve` output with the EBS volume creation confirmation and volume ID*
+*Screenshot: Terminal showing `terraform apply -auto-approve` completing successfully with volume ID `vol-7846392957bc0d8d6` assigned*
 
 ---
 
 ## 7. Verification
 
-Upon successful apply, Terraform confirms:
+Upon successful apply, Terraform confirmed the following:
 
 * **Resource created:** `aws_ebs_volume.xfusion_volume`
 * **Volume ID assigned:** `vol-7846392957bc0d8d6`
-* **Summary:** `1 added, 0 changed, 0 destroyed`
+* **Apply summary:** `1 added, 0 changed, 0 destroyed`
 
-The volume is now available in `us-east-1a` with the following confirmed attributes:
+The volume is now available with the following confirmed attributes:
 
 | Attribute | Value |
 |---|---|
@@ -409,48 +507,50 @@ The volume is now available in `us-east-1a` with the following confirmed attribu
 
 | Field | Detail |
 |---|---|
-| **Error Message** | `Duplicate provider configuration` |
-| **Triggered By** | `terraform init` |
-| **Affected File** | `provider.tf` line 10 / `main.tf` line 1 |
-| **Root Cause** | A non-aliased `provider "aws"` block was declared in both `main.tf` and the pre-existing `provider.tf`, violating Terraform's constraint of one default provider configuration per provider per module |
-| **Resolution** | Removed the `provider "aws"` block from `main.tf`, retaining only the `aws_ebs_volume` resource definition. The provider configuration in `provider.tf` is inherited automatically by all resources in the module. |
-| **Lesson** | Always inspect existing `.tf` files in the working directory before authoring new configuration files. In shared or pre-scaffolded environments, provider blocks, backend configurations, and variable declarations may already be present. |
+| **Command that failed** | `terraform init` (first attempt) |
+| **Error message** | `Duplicate provider configuration` |
+| **Reported location** | `provider.tf` line 10 conflicting with `main.tf` line 1 |
+| **Root cause** | A non-aliased `provider "aws"` block was written in `main.tf` without first inspecting the working directory. `provider.tf` already declared a fully configured default `provider "aws"` block at line 10. Terraform does not permit more than one default (non-aliased) provider configuration for the same provider within a single module. |
+| **Discovery method** | The error surfaced during `terraform init`. `provider.tf` was then inspected with `cat provider.tf` to confirm the conflict and understand what was already declared. |
+| **Resolution** | Removed the `provider "aws"` block from `main.tf` entirely and rewrote the file containing only the `aws_ebs_volume` resource definition. The provider declared in `provider.tf` is automatically inherited by all resources across all `.tf` files in the same module directory. |
+| **Error printed twice** | Terraform emitted the same error message twice during the failed init run. This is expected CLI output behavior for this error class and does not represent two distinct problems. |
 
 ---
 
 ## 9. Best Practices Applied
 
-* **Separation of Concerns:** Provider configuration is isolated in `provider.tf`, keeping `main.tf` focused exclusively on resource definitions. This improves readability and reduces the risk of configuration conflicts in team environments.
+* **Provider and resource separation:** Provider configuration is isolated in `provider.tf`, keeping `main.tf` focused exclusively on resource definitions. This is a standard convention in production Terraform codebases and reduces the risk of configuration conflicts in shared or scaffolded environments.
 
-* **Version Pinning:** The AWS provider is pinned to a specific version (`5.91.0`) in the `required_providers` block, ensuring reproducible builds across different environments and over time.
+* **Version pinning:** The AWS provider is pinned to a specific version (`5.91.0`) in the `required_providers` block within `provider.tf`, ensuring reproducible builds across environments and over time.
 
-* **Lock File Committed:** The `.terraform.lock.hcl` file generated by `terraform init` records the exact provider version and hashes. This file should be committed to version control to guarantee consistent provider selection for all team members.
+* **Lock file inclusion:** The `.terraform.lock.hcl` file generated by `terraform init` records the exact provider version and checksums. This file should be committed to version control to guarantee consistent provider selection for all team members.
 
-* **Plan Before Apply:** `terraform plan` was executed before `terraform apply` to review the proposed changes and confirm the expected diff (`1 to add, 0 to change, 0 to destroy`) prior to making any infrastructure changes.
+* **Validate before plan:** `terraform validate` was executed after correcting the configuration to confirm there were no remaining syntax or schema errors before invoking the provider API during `terraform plan`.
 
-* **Validate Before Plan:** `terraform validate` was run after correcting the configuration to catch any remaining syntax or schema errors without triggering provider API calls, saving time and avoiding unnecessary state interactions.
+* **Plan before apply:** `terraform plan` was run before `terraform apply` to review and confirm the proposed diff (`1 to add, 0 to change, 0 to destroy`) prior to making any infrastructure changes.
 
-* **Tagging Strategy:** The EBS volume is tagged with `Name = "xfusion-volume"` at creation time, enabling immediate identification in the AWS console, cost allocation reports, and resource queries.
+* **Modern volume type:** `gp3` is used instead of the legacy `gp2` type. `gp3` decouples IOPS and throughput from storage capacity, offering better price-performance and greater flexibility for future tuning.
 
-* **Modern Volume Type:** `gp3` is used instead of the legacy `gp2` type. `gp3` decouples IOPS and throughput from storage capacity, offering better price-performance and greater tuning flexibility.
+* **Tagging at creation:** The EBS volume is tagged with `Name = "xfusion-volume"` at provisioning time, enabling immediate identification in the AWS console, cost allocation reports, and automated resource queries.
 
 ---
 
 ## 10. Lessons Learned
 
-* **Inspect the environment before writing configuration.** In scaffolded or shared Terraform workspaces, foundational files such as `provider.tf` may already declare providers, backends, or variable definitions. Writing a new provider block without first auditing existing files is a common source of initialization errors that are trivial to avoid.
+* **Always inspect existing `.tf` files before writing new configuration.** In scaffolded or shared Terraform workspaces, foundational files such as `provider.tf` may already declare providers, backend configurations, or variable definitions. The error encountered in this task was a direct consequence of writing a `provider "aws"` block in `main.tf` without first auditing the pre-existing files in the working directory. A single `ls *.tf` followed by `cat provider.tf` before writing any code would have prevented the failed init attempt entirely.
 
-* **Terraform's module-level provider scope is global.** Every `.tf` file within the same directory belongs to the same Terraform module and shares the same provider namespace. A provider block defined in any one file applies to all resources across all files in that module.
+* **Terraform validates configuration before downloading providers.** The `terraform init` failure occurred before any provider plugins were fetched. Terraform performs a configuration validity pass as part of initialization, which means structural errors like duplicate providers surface immediately at init time rather than later during plan or apply.
 
-* **The `terraform init` failure was caught early.** Because Terraform validates configuration before downloading providers, the duplicate provider error surfaced during `init` rather than during `apply`. This is by design and reinforces the importance of running `init`, `validate`, and `plan` as distinct, observable stages rather than skipping directly to `apply`.
+* **The same error appearing twice during init is not a separate issue.** Terraform emitted the `Duplicate provider configuration` error twice during the failed init run. This is a known behavior of the CLI output renderer for this class of error and does not indicate two distinct problems. The underlying cause was a single conflict between two files.
 
-* **`-auto-approve` should be used deliberately.** In this controlled, single-resource task against a LocalStack environment, `-auto-approve` was appropriate. In production pipelines, interactive approval or pipeline-level gate controls should replace this flag to enforce human-in-the-loop validation for destructive or high-impact changes.
+* **`cat >` with a heredoc overwrites, it does not append.** When correcting `main.tf`, the same `cat > main.tf << 'EOF'` pattern was used to overwrite the file in place. This is a reliable, atomic approach for replacing file content in a terminal environment without opening an editor, and is well suited to scripted or task-based workflows.
 
-
-
-
+* **`-auto-approve` is appropriate in controlled, single-resource environments.** In this task, `-auto-approve` was used against a LocalStack environment with a known, single-resource plan. In production pipelines, interactive approval gates or CI-level plan approval workflows should replace this flag for any apply that touches stateful or shared infrastructure.
 
 
+
+
+<img width="984" height="471" alt="image" src="https://github.com/user-attachments/assets/76d65e56-e091-42fb-a448-e32752b25d89" />
 <img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/34fef496-f228-47a2-8460-b4d077a17f69" />
 <img width="983" height="694" alt="image" src="https://github.com/user-attachments/assets/097d4d14-f06f-4e4f-894c-9170f8b4923a" />
 <img width="968" height="730" alt="image" src="https://github.com/user-attachments/assets/38879d69-f80d-480c-a467-51512dc6f882" />
