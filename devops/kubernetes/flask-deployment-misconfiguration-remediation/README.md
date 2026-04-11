@@ -315,6 +315,8 @@ service/python-service-datacenter configured
 
 Screenshot: `kubectl apply confirming service/python-service-datacenter configured`
 
+<img width="1119" height="820" alt="image" src="https://github.com/user-attachments/assets/9ba3120b-f9c8-41d9-9f78-6f811da51854" />
+
 ---
 
 ### Step 10: Validate Service and Endpoint Binding
@@ -458,7 +460,7 @@ Error from server (NotFound): services "python-deployment-datacenter" not found
 
 
 
-<img width="1119" height="820" alt="image" src="https://github.com/user-attachments/assets/9ba3120b-f9c8-41d9-9f78-6f811da51854" />
+
 <img width="1121" height="843" alt="image" src="https://github.com/user-attachments/assets/bab85b8f-dd75-4db4-9921-995d9905c37c" />
 <img width="1123" height="558" alt="image" src="https://github.com/user-attachments/assets/6fdb603b-4165-4e9e-81bf-b115f65577eb" />
 <img width="1095" height="597" alt="image" src="https://github.com/user-attachments/assets/3a07935b-b2aa-431b-8dea-144882f34d8f" />
