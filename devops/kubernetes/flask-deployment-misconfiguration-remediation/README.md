@@ -167,6 +167,8 @@ This triggers a rolling update, creating a new ReplicaSet with the corrected ima
 
 Screenshot: `kubectl set image command confirming image update`
 
+<img width="1121" height="857" alt="image" src="https://github.com/user-attachments/assets/805af6e1-b99b-4076-bd1d-fd66cfedbdef" />
+
 ---
 
 ### Step 4: Confirm Rollout Completion
@@ -436,7 +438,7 @@ Error from server (NotFound): services "python-deployment-datacenter" not found
 
 
 
-<img width="1121" height="857" alt="image" src="https://github.com/user-attachments/assets/805af6e1-b99b-4076-bd1d-fd66cfedbdef" />
+
 <img width="1117" height="861" alt="image" src="https://github.com/user-attachments/assets/63a328f8-f6ca-4385-90ef-5367c6c84400" />
 <img width="1117" height="863" alt="image" src="https://github.com/user-attachments/assets/2b8cb3c4-579f-4d35-983c-ff1486dd910c" />
 <img width="1124" height="340" alt="image" src="https://github.com/user-attachments/assets/41820a92-a3d0-474c-a5ed-5df46e0ab195" />
