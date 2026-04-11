@@ -567,8 +567,6 @@ The volume is now available with the following confirmed attributes:
 
 
 
-<img width="981" height="740" alt="image" src="https://github.com/user-attachments/assets/3f1d86ce-e249-4ea6-a707-a49cb0f06cbb" />
-
 <img width="982" height="686" alt="image" src="https://github.com/user-attachments/assets/5e2ff42f-8405-4c5f-b1b5-4fc28574b007" />
 <img width="972" height="543" alt="image" src="https://github.com/user-attachments/assets/1a105582-c390-4de4-8786-eb85bf2799f3" />
 <img width="980" height="734" alt="image" src="https://github.com/user-attachments/assets/0eb30527-ec92-4ae6-8a95-c703662e50e3" />
