@@ -265,6 +265,8 @@ kubectl get svc python-service-datacenter -o yaml > /tmp/flask-svc.yaml
 
 Screenshot: `kubectl get svc -o yaml command exporting manifest to /tmp/flask-svc.yaml`
 
+<img width="1123" height="759" alt="image" src="https://github.com/user-attachments/assets/5fd529cd-91e9-49ed-8ea4-fdc458fce0a3" />
+
 ---
 
 ### Step 8: Edit and Correct the Service Port Configuration
@@ -450,7 +452,7 @@ Error from server (NotFound): services "python-deployment-datacenter" not found
 <img width="1124" height="340" alt="image" src="https://github.com/user-attachments/assets/41820a92-a3d0-474c-a5ed-5df46e0ab195" />
 <img width="1121" height="513" alt="image" src="https://github.com/user-attachments/assets/eb6b9b0a-ae80-4545-aaa6-b120b7afb51f" />
 
-<img width="1123" height="759" alt="image" src="https://github.com/user-attachments/assets/5fd529cd-91e9-49ed-8ea4-fdc458fce0a3" />
+
 <img width="1118" height="864" alt="image" src="https://github.com/user-attachments/assets/03c0fffc-8302-411b-b174-a97af53819fd" />
 <img width="1121" height="863" alt="image" src="https://github.com/user-attachments/assets/924bd8e0-dbb9-4a27-923e-404270e763cc" />
 <img width="1121" height="781" alt="image" src="https://github.com/user-attachments/assets/9a2d064c-e564-469b-b121-97f4fb50bad8" />
