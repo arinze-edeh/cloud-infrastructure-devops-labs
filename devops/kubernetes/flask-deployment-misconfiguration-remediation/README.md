@@ -59,7 +59,7 @@ Neither defect alone was sufficient to restore service. Both had to be resolved 
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    Kubernetes Cluster                        │
+│                    Kubernetes Cluster                       │
 │                                                             │
 │   ┌──────────────────────────────────────────────────────┐  │
 │   │  Deployment: python-deployment-datacenter            │  │
@@ -67,15 +67,15 @@ Neither defect alone was sufficient to restore service. Both had to be resolved 
 │   │  Container Port: 5000                                │  │
 │   │  Label: app=python_app                               │  │
 │   └──────────────────────────────────────────────────────┘  │
-│                           |                                  │
+│                           |                                 │
 │   ┌──────────────────────────────────────────────────────┐  │
 │   │  Service: python-service-datacenter (NodePort)       │  │
 │   │  Port: 5000  -->  TargetPort: 5000                   │  │
 │   │  NodePort: 32345                                     │  │
 │   │  Selector: app=python_app                            │  │
 │   └──────────────────────────────────────────────────────┘  │
-│                           |                                  │
-│                    NodePort :32345                           │
+│                           |                                 │
+│                    NodePort :32345                          │
 └─────────────────────────────────────────────────────────────┘
                             |
                       External curl
@@ -112,6 +112,8 @@ python-deployment-datacenter   0/1     1            0           4m39s
 The `0/1` under `READY` immediately signals that no replicas are running successfully.
 
 Screenshot: `kubectl get deployment showing 0/1 ready replicas`
+
+<img width="1029" height="610" alt="image" src="https://github.com/user-attachments/assets/90becf41-978d-47d6-8e36-ffdbbf9936ee" />
 
 ---
 
@@ -430,7 +432,7 @@ Error from server (NotFound): services "python-deployment-datacenter" not found
 
 
 
-<img width="1029" height="610" alt="image" src="https://github.com/user-attachments/assets/90becf41-978d-47d6-8e36-ffdbbf9936ee" />
+
 <img width="1117" height="859" alt="image" src="https://github.com/user-attachments/assets/5f2139e9-ad1c-4540-9630-c36a3590bad9" />
 <img width="1121" height="857" alt="image" src="https://github.com/user-attachments/assets/805af6e1-b99b-4076-bd1d-fd66cfedbdef" />
 <img width="1117" height="861" alt="image" src="https://github.com/user-attachments/assets/63a328f8-f6ca-4385-90ef-5367c6c84400" />
