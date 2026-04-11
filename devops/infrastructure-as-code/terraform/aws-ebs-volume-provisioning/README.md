@@ -98,6 +98,8 @@ pwd
 
 *Screenshot: Terminal showing `/home/bob/terraform` as the current directory*
 
+<img width="984" height="471" alt="image" src="https://github.com/user-attachments/assets/76d65e56-e091-42fb-a448-e32752b25d89" />
+
 ---
 
 ### 6.2 Inspect the Pre-existing Provider Configuration
@@ -448,7 +450,7 @@ The volume is now available in `us-east-1a` with the following confirmed attribu
 
 
 
-<img width="984" height="471" alt="image" src="https://github.com/user-attachments/assets/76d65e56-e091-42fb-a448-e32752b25d89" />
+
 <img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/34fef496-f228-47a2-8460-b4d077a17f69" />
 <img width="983" height="694" alt="image" src="https://github.com/user-attachments/assets/097d4d14-f06f-4e4f-894c-9170f8b4923a" />
 <img width="968" height="730" alt="image" src="https://github.com/user-attachments/assets/38879d69-f80d-480c-a467-51512dc6f882" />
