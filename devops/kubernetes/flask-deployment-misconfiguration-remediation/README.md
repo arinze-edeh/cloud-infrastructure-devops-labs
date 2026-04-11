@@ -144,6 +144,8 @@ The image `poroko/flask-app-demo` is incorrect. The required image is `poroko/fl
 
 Screenshot: `kubectl describe deployment output showing incorrect image and MinimumReplicasUnavailable condition`
 
+<img width="1117" height="859" alt="image" src="https://github.com/user-attachments/assets/5f2139e9-ad1c-4540-9630-c36a3590bad9" />
+
 ---
 
 ### Step 3: Patch the Container Image
@@ -433,7 +435,7 @@ Error from server (NotFound): services "python-deployment-datacenter" not found
 
 
 
-<img width="1117" height="859" alt="image" src="https://github.com/user-attachments/assets/5f2139e9-ad1c-4540-9630-c36a3590bad9" />
+
 <img width="1121" height="857" alt="image" src="https://github.com/user-attachments/assets/805af6e1-b99b-4076-bd1d-fd66cfedbdef" />
 <img width="1117" height="861" alt="image" src="https://github.com/user-attachments/assets/63a328f8-f6ca-4385-90ef-5367c6c84400" />
 <img width="1117" height="863" alt="image" src="https://github.com/user-attachments/assets/2b8cb3c4-579f-4d35-983c-ff1486dd910c" />
