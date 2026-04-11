@@ -189,6 +189,8 @@ This confirms the updated ReplicaSet has reached the desired state with `1/1` re
 
 Screenshot: `kubectl rollout status showing successful rollout`
 
+<img width="1117" height="861" alt="image" src="https://github.com/user-attachments/assets/63a328f8-f6ca-4385-90ef-5367c6c84400" />
+
 ---
 
 ### Step 5: Verify Pod Health
@@ -439,7 +441,7 @@ Error from server (NotFound): services "python-deployment-datacenter" not found
 
 
 
-<img width="1117" height="861" alt="image" src="https://github.com/user-attachments/assets/63a328f8-f6ca-4385-90ef-5367c6c84400" />
+
 <img width="1117" height="863" alt="image" src="https://github.com/user-attachments/assets/2b8cb3c4-579f-4d35-983c-ff1486dd910c" />
 <img width="1124" height="340" alt="image" src="https://github.com/user-attachments/assets/41820a92-a3d0-474c-a5ed-5df46e0ab195" />
 <img width="1121" height="513" alt="image" src="https://github.com/user-attachments/assets/eb6b9b0a-ae80-4545-aaa6-b120b7afb51f" />
