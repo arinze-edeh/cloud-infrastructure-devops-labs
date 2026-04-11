@@ -351,6 +351,8 @@ The endpoint now reflects `10.22.0.10:5000`, confirming the service selector is 
 
 Screenshot: `kubectl describe svc and get endpoints confirming port 5000 binding`
 
+<img width="1123" height="558" alt="image" src="https://github.com/user-attachments/assets/6fdb603b-4165-4e9e-81bf-b115f65577eb" />
+
 ---
 
 ### Step 11: End-to-End Application Validation
@@ -370,6 +372,8 @@ Hello World Pyvo 1!
 The application is fully accessible on NodePort `32345`. The remediation is complete.
 
 Screenshot: `curl command returning "Hello World Pyvo 1!" confirming end-to-end connectivity`
+
+<img width="1095" height="597" alt="image" src="https://github.com/user-attachments/assets/3a07935b-b2aa-431b-8dea-144882f34d8f" />
 
 ---
 
@@ -446,15 +450,3 @@ Error from server (NotFound): services "python-deployment-datacenter" not found
 * **Export-edit-apply is safer than kubectl edit for port changes.** Direct `kubectl edit` can auto-close before changes are fully validated. Exporting to a file, editing deliberately, and applying via manifest gives a reviewable intermediate state and is reproducible in automation pipelines.
 
 * **Endpoint objects are the ground truth for service-to-pod routing.** Checking `kubectl get endpoints` after a service update is a more reliable signal than describe output alone, as it confirms that kube-proxy has registered the pod's actual IP and port as a valid backend.
-
-
-
-
-
-
-
-
-
-<img width="1121" height="843" alt="image" src="https://github.com/user-attachments/assets/bab85b8f-dd75-4db4-9921-995d9905c37c" />
-<img width="1123" height="558" alt="image" src="https://github.com/user-attachments/assets/6fdb603b-4165-4e9e-81bf-b115f65577eb" />
-<img width="1095" height="597" alt="image" src="https://github.com/user-attachments/assets/3a07935b-b2aa-431b-8dea-144882f34d8f" />
