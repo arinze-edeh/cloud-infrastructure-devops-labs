@@ -265,6 +265,8 @@ provider "aws" {
 
 *Screenshot: Terminal showing the full contents of `provider.tf` including the pre-existing `provider "aws"` block with LocalStack endpoint overrides*
 
+<img width="1003" height="729" alt="image" src="https://github.com/user-attachments/assets/b37b49db-d119-45d2-9358-0adc5be4195a" />
+
 **Diagnosis:** `provider.tf` already contained a fully configured, non-aliased `provider "aws"` block at line 10. The `provider "aws"` block written in `main.tf` created a second default provider configuration for the same provider, which Terraform does not allow within a single module. The resolution is to remove the `provider "aws"` block from `main.tf` entirely, retaining only the resource definition. The provider declared in `provider.tf` is automatically inherited by all resources across all `.tf` files in the same module directory.
 
 ---
@@ -559,7 +561,7 @@ The volume is now available with the following confirmed attributes:
 
 
 
-<img width="1003" height="729" alt="image" src="https://github.com/user-attachments/assets/b37b49db-d119-45d2-9358-0adc5be4195a" />
+
 <img width="1003" height="772" alt="image" src="https://github.com/user-attachments/assets/2550e41e-818a-4889-bd00-10528f00b115" />
 <img width="981" height="740" alt="image" src="https://github.com/user-attachments/assets/3f1d86ce-e249-4ea6-a707-a49cb0f06cbb" />
 <img width="988" height="514" alt="image" src="https://github.com/user-attachments/assets/812fe9a2-b1c2-4b76-91dc-e9c304588f4c" />
