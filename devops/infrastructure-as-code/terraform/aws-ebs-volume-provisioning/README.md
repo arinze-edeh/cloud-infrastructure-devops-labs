@@ -157,6 +157,8 @@ resource "aws_ebs_volume" "xfusion_volume" {
 
 *Screenshot: Terminal showing `cat main.tf` output with both the provider block and resource block*
 
+<img width="983" height="694" alt="image" src="https://github.com/user-attachments/assets/097d4d14-f06f-4e4f-894c-9170f8b4923a" />
+
 ---
 
 ### 6.4 Run terraform init (First Attempt - Failed)
@@ -554,7 +556,7 @@ The volume is now available with the following confirmed attributes:
 
 
 <img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/34fef496-f228-47a2-8460-b4d077a17f69" />
-<img width="983" height="694" alt="image" src="https://github.com/user-attachments/assets/097d4d14-f06f-4e4f-894c-9170f8b4923a" />
+
 <img width="968" height="730" alt="image" src="https://github.com/user-attachments/assets/38879d69-f80d-480c-a467-51512dc6f882" />
 <img width="1003" height="729" alt="image" src="https://github.com/user-attachments/assets/b37b49db-d119-45d2-9358-0adc5be4195a" />
 <img width="1003" height="772" alt="image" src="https://github.com/user-attachments/assets/2550e41e-818a-4889-bd00-10528f00b115" />
