@@ -315,6 +315,8 @@ resource "aws_ebs_volume" "xfusion_volume" {
 
 *Screenshot: Terminal showing the corrected `main.tf` containing only the resource block with no provider block*
 
+<img width="1003" height="772" alt="image" src="https://github.com/user-attachments/assets/2550e41e-818a-4889-bd00-10528f00b115" />
+
 ---
 
 ### 6.8 Confirm Both Configuration Files Exist
@@ -562,7 +564,7 @@ The volume is now available with the following confirmed attributes:
 
 
 
-<img width="1003" height="772" alt="image" src="https://github.com/user-attachments/assets/2550e41e-818a-4889-bd00-10528f00b115" />
+
 <img width="981" height="740" alt="image" src="https://github.com/user-attachments/assets/3f1d86ce-e249-4ea6-a707-a49cb0f06cbb" />
 <img width="988" height="514" alt="image" src="https://github.com/user-attachments/assets/812fe9a2-b1c2-4b76-91dc-e9c304588f4c" />
 <img width="982" height="686" alt="image" src="https://github.com/user-attachments/assets/5e2ff42f-8405-4c5f-b1b5-4fc28574b007" />
