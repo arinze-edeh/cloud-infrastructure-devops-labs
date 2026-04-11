@@ -251,6 +251,8 @@ The endpoint `10.22.0.10:8080` confirms traffic is being directed to port `8080`
 
 Screenshot: `kubectl describe svc showing targetPort 8080 mismatched against Flask port 5000`
 
+<img width="1111" height="856" alt="image" src="https://github.com/user-attachments/assets/042cd7f6-147d-4f53-845f-7d45d2938360" />
+
 ---
 
 ### Step 7: Export the Service Manifest
@@ -447,7 +449,7 @@ Error from server (NotFound): services "python-deployment-datacenter" not found
 
 <img width="1124" height="340" alt="image" src="https://github.com/user-attachments/assets/41820a92-a3d0-474c-a5ed-5df46e0ab195" />
 <img width="1121" height="513" alt="image" src="https://github.com/user-attachments/assets/eb6b9b0a-ae80-4545-aaa6-b120b7afb51f" />
-<img width="1111" height="856" alt="image" src="https://github.com/user-attachments/assets/042cd7f6-147d-4f53-845f-7d45d2938360" />
+
 <img width="1123" height="759" alt="image" src="https://github.com/user-attachments/assets/5fd529cd-91e9-49ed-8ea4-fdc458fce0a3" />
 <img width="1118" height="864" alt="image" src="https://github.com/user-attachments/assets/03c0fffc-8302-411b-b174-a97af53819fd" />
 <img width="1121" height="863" alt="image" src="https://github.com/user-attachments/assets/924bd8e0-dbb9-4a27-923e-404270e763cc" />
