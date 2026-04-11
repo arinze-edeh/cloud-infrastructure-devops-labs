@@ -205,6 +205,8 @@ Initializing the backend...
 
 *Screenshot: Terminal showing `terraform init` failure with the duplicate provider configuration error printed twice*
 
+<img width="968" height="730" alt="image" src="https://github.com/user-attachments/assets/38879d69-f80d-480c-a467-51512dc6f882" />
+
 **Note:** Terraform emitted the same `Duplicate provider configuration` error twice during this failed initialization pass. This is expected CLI output behavior for this class of error and does not indicate two separate underlying problems.
 
 ---
@@ -555,9 +557,8 @@ The volume is now available with the following confirmed attributes:
 
 
 
-<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/34fef496-f228-47a2-8460-b4d077a17f69" />
 
-<img width="968" height="730" alt="image" src="https://github.com/user-attachments/assets/38879d69-f80d-480c-a467-51512dc6f882" />
+
 <img width="1003" height="729" alt="image" src="https://github.com/user-attachments/assets/b37b49db-d119-45d2-9358-0adc5be4195a" />
 <img width="1003" height="772" alt="image" src="https://github.com/user-attachments/assets/2550e41e-818a-4889-bd00-10528f00b115" />
 <img width="981" height="740" alt="image" src="https://github.com/user-attachments/assets/3f1d86ce-e249-4ea6-a707-a49cb0f06cbb" />
