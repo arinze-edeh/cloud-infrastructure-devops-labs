@@ -324,6 +324,8 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 > Screenshot: Full `terraform apply` output including the execution plan and successful creation confirmation
 
+<img width="1046" height="732" alt="image" src="https://github.com/user-attachments/assets/47f18c11-d1ea-49d6-b07f-1736082cbec4" />
+
 ---
 
 ### Step 6: Validate Provisioned Resources
@@ -395,6 +397,8 @@ resource "aws_ebs_volume" "k8s_volume" {
 | Snapshot ID assigned | Non-null | `snap-a216ce335cea1e4bf` | PASS |
 
 > Screenshot: Full `terraform show` output confirming both `aws_ebs_snapshot.devops_snapshot` and `aws_ebs_volume.k8s_volume` in state with all expected attributes
+
+<img width="1074" height="696" alt="image" src="https://github.com/user-attachments/assets/26cd7a00-bd4d-410f-9637-e3fb06573b8a" />
 
 ---
 
@@ -470,13 +474,3 @@ No errors were encountered during this implementation. The Terraform plan resolv
 * **Heredoc single-quote quoting prevents variable expansion.** The `'EOF'` quoting pattern in `cat >> main.tf << 'EOF'` is intentional. Single-quoting the delimiter prevents the shell from interpreting `$` characters or backticks inside the block, which is essential when the content includes Terraform interpolation syntax or any string that resembles a shell variable.
 
 * **`terraform show` is more complete than apply output for validation.** The apply output confirms creation but does not display all computed attributes. `terraform show` surfaces the full resource schema in its final state, including ARN, owner ID, volume size, and encryption status, making it the correct tool for post-deployment validation and documentation.
-
-
-
-
-
-
-
-
-<img width="1046" height="732" alt="image" src="https://github.com/user-attachments/assets/47f18c11-d1ea-49d6-b07f-1736082cbec4" />
-<img width="1074" height="696" alt="image" src="https://github.com/user-attachments/assets/26cd7a00-bd4d-410f-9637-e3fb06573b8a" />
