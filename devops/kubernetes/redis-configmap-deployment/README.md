@@ -214,7 +214,9 @@ Events:  <none>
 
 The `redis-config` key is present with the correct value `maxmemory 2mb`. The ConfigMap is ready to be referenced in the deployment volume specification.
 
-> **Screenshot:** `03-configmap-describe-verify.png`
+> **Screenshot:**
+
+<img width="1032" height="844" alt="image" src="https://github.com/user-attachments/assets/68f042de-a65f-423d-b1ef-59042873922a" />
 
 ---
 
@@ -518,7 +520,7 @@ No errors were encountered during this implementation. The manifest was construc
 <img width="1029" height="585" alt="image" src="https://github.com/user-attachments/assets/b43cdd98-e743-434b-87a1-77c89eedde18" />
 
 <img width="1031" height="738" alt="image" src="https://github.com/user-attachments/assets/adae63c1-f1de-4b7a-9e17-f3c991680d22" />
-<img width="1032" height="844" alt="image" src="https://github.com/user-attachments/assets/68f042de-a65f-423d-b1ef-59042873922a" />
+
 <img width="1033" height="859" alt="image" src="https://github.com/user-attachments/assets/7da1ec9f-b1be-4d56-8fed-1e56c2038289" />
 <img width="1022" height="778" alt="image" src="https://github.com/user-attachments/assets/22625e4e-8b5a-4291-847f-c9dc0c8d9926" />
 <img width="1025" height="824" alt="image" src="https://github.com/user-attachments/assets/bbd75e6b-1507-4186-86cd-be5be551329b" />
