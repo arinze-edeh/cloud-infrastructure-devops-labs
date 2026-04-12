@@ -224,6 +224,8 @@ EOF
 
 > Screenshot: Terminal showing the heredoc append command executed successfully with no errors
 
+<img width="1034" height="695" alt="image" src="https://github.com/user-attachments/assets/b26513ab-0576-4d25-a63a-fb7aa97ebd0d" />
+
 ---
 
 ### Step 4: Verify the Final main.tf
@@ -258,6 +260,8 @@ resource "aws_ebs_snapshot" "devops_snapshot" {
 ```
 
 > Screenshot: Full `main.tf` content confirming both the EBS volume and EBS snapshot resource blocks are present and correctly structured
+
+<img width="1047" height="734" alt="image" src="https://github.com/user-attachments/assets/34bbef91-1b9d-430d-a040-fd26fe8da573" />
 
 ---
 
@@ -472,7 +476,7 @@ No errors were encountered during this implementation. The Terraform plan resolv
 
 
 
-<img width="1034" height="695" alt="image" src="https://github.com/user-attachments/assets/b26513ab-0576-4d25-a63a-fb7aa97ebd0d" />
-<img width="1047" height="734" alt="image" src="https://github.com/user-attachments/assets/34bbef91-1b9d-430d-a040-fd26fe8da573" />
+
+
 <img width="1046" height="732" alt="image" src="https://github.com/user-attachments/assets/47f18c11-d1ea-49d6-b07f-1736082cbec4" />
 <img width="1074" height="696" alt="image" src="https://github.com/user-attachments/assets/26cd7a00-bd4d-410f-9637-e3fb06573b8a" />
