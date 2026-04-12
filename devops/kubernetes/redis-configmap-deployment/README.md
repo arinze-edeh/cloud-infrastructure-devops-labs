@@ -165,7 +165,9 @@ kubectl apply -f my-redis-config.yaml
 configmap/my-redis-config created
 ```
 
-> **Screenshot:** `02-configmap-create-apply.png`
+> **Screenshot:** 
+
+<img width="1030" height="608" alt="image" src="https://github.com/user-attachments/assets/a3eee2c7-ac06-4c01-8dcf-0abdebdf5345" />
 
 ---
 
@@ -514,7 +516,7 @@ No errors were encountered during this implementation. The manifest was construc
 <img width="1033" height="651" alt="image" src="https://github.com/user-attachments/assets/590d3fc8-b7fe-4f37-9b14-56b1e2f5e5ad" />
 
 <img width="1029" height="585" alt="image" src="https://github.com/user-attachments/assets/b43cdd98-e743-434b-87a1-77c89eedde18" />
-<img width="1030" height="608" alt="image" src="https://github.com/user-attachments/assets/a3eee2c7-ac06-4c01-8dcf-0abdebdf5345" />
+
 <img width="1031" height="738" alt="image" src="https://github.com/user-attachments/assets/adae63c1-f1de-4b7a-9e17-f3c991680d22" />
 <img width="1032" height="844" alt="image" src="https://github.com/user-attachments/assets/68f042de-a65f-423d-b1ef-59042873922a" />
 <img width="1033" height="859" alt="image" src="https://github.com/user-attachments/assets/7da1ec9f-b1be-4d56-8fed-1e56c2038289" />
