@@ -450,7 +450,10 @@ kubectl describe pod $(kubectl get pods -l app=redis -o jsonpath='{.items[0].met
 
 Container port `6379` is correctly exposed. `Host Port: 0/TCP` is expected behavior when no `hostPort` is explicitly bound, as the port is accessible within the cluster through the pod IP and through Services.
 
-> **Screenshot:** `10-port-validation.png`
+> **Screenshot:** 
+
+<img width="1038" height="361" alt="image" src="https://github.com/user-attachments/assets/6374b6c0-1115-49cb-bea0-99b933fe4797" />
+
 
 ---
 
@@ -535,7 +538,4 @@ No errors were encountered during this implementation. The manifest was construc
 
 
 
-
-
-<img width="1038" height="361" alt="image" src="https://github.com/user-attachments/assets/6374b6c0-1115-49cb-bea0-99b933fe4797" />
 
