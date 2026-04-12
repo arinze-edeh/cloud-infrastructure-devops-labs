@@ -58,19 +58,19 @@ The solution implements a single-replica Redis deployment backed by two volume t
 ┌────────────────────────────────────────────────────────────┐
 │                    Kubernetes Cluster                      │
 │                                                            │
-│  ┌────────────────────────────────────────────────────┐   │
-│  │              redis-deployment (1 replica)          │   │
-│  │                                                    │   │
-│  │  ┌──────────────────────────────────────────────┐  │   │
-│  │  │           redis-container (redis:alpine)     │  │   │
-│  │  │                                              │  │   │
-│  │  │  Port: 6379                                  │  │   │
-│  │  │  CPU Request: 1 core                         │  │   │
-│  │  │                                              │  │   │
-│  │  │  /redis-master       <-- ConfigMap Volume    │  │   │
-│  │  │  /redis-master-data  <-- EmptyDir Volume     │  │   │
-│  │  └──────────────────────────────────────────────┘  │   │
-│  └────────────────────────────────────────────────────┘   │
+│  ┌────────────────────────────────────────────────────┐    │
+│  │              redis-deployment (1 replica)          │    │
+│  │                                                    │    │
+│  │  ┌──────────────────────────────────────────────┐  │    │
+│  │  │           redis-container (redis:alpine)     │  │    │
+│  │  │                                              │  │    │
+│  │  │  Port: 6379                                  │  │    │
+│  │  │  CPU Request: 1 core                         │  │    │
+│  │  │                                              │  │    │
+│  │  │  /redis-master       <-- ConfigMap Volume    │  │    │
+│  │  │  /redis-master-data  <-- EmptyDir Volume     │  │    │
+│  │  └──────────────────────────────────────────────┘  │    │
+│  └────────────────────────────────────────────────────┘    │
 │                                                            │
 │  ConfigMap: my-redis-config                                │
 │    redis-config: maxmemory 2mb                             │
