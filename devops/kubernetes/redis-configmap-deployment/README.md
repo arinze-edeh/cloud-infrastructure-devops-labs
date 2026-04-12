@@ -325,7 +325,9 @@ redis-deployment-c795495f4-nks9q   1/1     Running   0          92s
 
 The deployment shows `1/1` ready and the pod status is `Running` with zero restarts, confirming a healthy rollout.
 
-> **Screenshot:** `06-deployment-and-pod-status.png`
+> **Screenshot:**
+
+<img width="1026" height="858" alt="image" src="https://github.com/user-attachments/assets/0994abf2-c77c-4478-9fdd-374d23516ade" />
 
 ---
 
@@ -524,7 +526,7 @@ No errors were encountered during this implementation. The manifest was construc
 
 
 <img width="1025" height="824" alt="image" src="https://github.com/user-attachments/assets/bbd75e6b-1507-4186-86cd-be5be551329b" />
-<img width="1026" height="858" alt="image" src="https://github.com/user-attachments/assets/0994abf2-c77c-4478-9fdd-374d23516ade" />
+
 <img width="1032" height="858" alt="image" src="https://github.com/user-attachments/assets/f61377b1-e790-4b2a-9680-3843219d9da5" />
 <img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/8b463095-9277-456b-9fb6-1525da04b99f" />
 <img width="1036" height="345" alt="image" src="https://github.com/user-attachments/assets/ce27adb4-9b13-441d-b096-47064a01a8fc" />
