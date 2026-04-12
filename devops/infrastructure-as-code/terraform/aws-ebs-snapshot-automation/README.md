@@ -114,6 +114,8 @@ drwxr-xr-x 3 bob bob 4096 Apr 12 00:52 .terraform
 
 > Screenshot: Directory listing confirming all expected Terraform files are present in `/home/bob/terraform`
 
+<img width="1039" height="520" alt="image" src="https://github.com/user-attachments/assets/6543b1b6-99d4-41e4-b848-191937b91349" />
+
 ---
 
 ### Step 2: Inspect Existing Configuration Files
@@ -465,8 +467,7 @@ No errors were encountered during this implementation. The Terraform plan resolv
 
 
 
-<img width="1041" height="498" alt="image" src="https://github.com/user-attachments/assets/e0ed1195-9e9f-463a-b42b-ed7a4e7ec168" />
-<img width="1039" height="520" alt="image" src="https://github.com/user-attachments/assets/6543b1b6-99d4-41e4-b848-191937b91349" />
+
 <img width="1045" height="627" alt="image" src="https://github.com/user-attachments/assets/73c06170-eaf2-410a-bf3f-a14640818280" />
 <img width="1069" height="736" alt="image" src="https://github.com/user-attachments/assets/d3299ea7-aebb-472e-b0ed-1912325476ee" />
 <img width="1034" height="695" alt="image" src="https://github.com/user-attachments/assets/b26513ab-0576-4d25-a63a-fb7aa97ebd0d" />
