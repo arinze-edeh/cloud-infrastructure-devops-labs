@@ -131,7 +131,9 @@ CURRENT   NAME      CLUSTER   AUTHINFO   NAMESPACE
 
 The active context is `default`, targeting the correct cluster. All subsequent operations apply to the `default` namespace.
 
-> **Screenshot:** `01-cluster-info-and-context.png`
+> **Screenshot:**
+
+<img width="1031" height="649" alt="image" src="https://github.com/user-attachments/assets/f61ad952-786f-4165-beba-4381b32ed1c2" />
 
 ---
 
@@ -510,7 +512,7 @@ No errors were encountered during this implementation. The manifest was construc
 
 
 <img width="1033" height="651" alt="image" src="https://github.com/user-attachments/assets/590d3fc8-b7fe-4f37-9b14-56b1e2f5e5ad" />
-<img width="1031" height="649" alt="image" src="https://github.com/user-attachments/assets/f61ad952-786f-4165-beba-4381b32ed1c2" />
+
 <img width="1029" height="585" alt="image" src="https://github.com/user-attachments/assets/b43cdd98-e743-434b-87a1-77c89eedde18" />
 <img width="1030" height="608" alt="image" src="https://github.com/user-attachments/assets/a3eee2c7-ac06-4c01-8dcf-0abdebdf5345" />
 <img width="1031" height="738" alt="image" src="https://github.com/user-attachments/assets/adae63c1-f1de-4b7a-9e17-f3c991680d22" />
