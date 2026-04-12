@@ -427,7 +427,9 @@ kubectl exec -it $(kubectl get pods -l app=redis -o jsonpath='{.items[0].metadat
 
 The directory exists and is empty, which is the expected state for a freshly mounted `emptyDir` volume with no Redis data written yet.
 
-> **Screenshot:** `09-emptydir-volume-validation.png`
+> **Screenshot:** 
+
+<img width="1039" height="306" alt="image" src="https://github.com/user-attachments/assets/39ecdd75-7a3f-439e-8f3a-268736cbcf53" />
 
 ---
 
@@ -534,6 +536,6 @@ No errors were encountered during this implementation. The manifest was construc
 
 
 
-<img width="1039" height="306" alt="image" src="https://github.com/user-attachments/assets/39ecdd75-7a3f-439e-8f3a-268736cbcf53" />
+
 <img width="1038" height="361" alt="image" src="https://github.com/user-attachments/assets/6374b6c0-1115-49cb-bea0-99b933fe4797" />
 
