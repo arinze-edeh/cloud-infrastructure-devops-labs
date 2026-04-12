@@ -405,7 +405,9 @@ maxmemory 2mb
 
 The `redis-config` file at `/redis-master/redis-config` contains the exact directive defined in the ConfigMap. The volume projection is functioning correctly.
 
-> **Screenshot:** `08-configmap-volume-file-validation.png`
+> **Screenshot:** 
+
+<img width="1036" height="345" alt="image" src="https://github.com/user-attachments/assets/ce27adb4-9b13-441d-b096-47064a01a8fc" />
 
 ---
 
@@ -531,7 +533,7 @@ No errors were encountered during this implementation. The manifest was construc
 
 
 
-<img width="1036" height="345" alt="image" src="https://github.com/user-attachments/assets/ce27adb4-9b13-441d-b096-47064a01a8fc" />
+
 <img width="1039" height="306" alt="image" src="https://github.com/user-attachments/assets/39ecdd75-7a3f-439e-8f3a-268736cbcf53" />
 <img width="1038" height="361" alt="image" src="https://github.com/user-attachments/assets/6374b6c0-1115-49cb-bea0-99b933fe4797" />
 
