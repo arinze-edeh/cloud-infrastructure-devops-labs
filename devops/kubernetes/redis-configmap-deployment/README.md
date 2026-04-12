@@ -289,7 +289,9 @@ kubectl apply -f redis-deployment.yaml
 deployment.apps/redis-deployment created
 ```
 
-> **Screenshot:** `05-deployment-apply.png`
+> **Screenshot:**
+
+<img width="1022" height="778" alt="image" src="https://github.com/user-attachments/assets/22625e4e-8b5a-4291-847f-c9dc0c8d9926" />
 
 ---
 
@@ -520,7 +522,7 @@ No errors were encountered during this implementation. The manifest was construc
 
 
 
-<img width="1022" height="778" alt="image" src="https://github.com/user-attachments/assets/22625e4e-8b5a-4291-847f-c9dc0c8d9926" />
+
 <img width="1025" height="824" alt="image" src="https://github.com/user-attachments/assets/bbd75e6b-1507-4186-86cd-be5be551329b" />
 <img width="1026" height="858" alt="image" src="https://github.com/user-attachments/assets/0994abf2-c77c-4478-9fdd-374d23516ade" />
 <img width="1032" height="858" alt="image" src="https://github.com/user-attachments/assets/f61377b1-e790-4b2a-9680-3843219d9da5" />
