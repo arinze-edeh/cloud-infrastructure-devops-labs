@@ -194,6 +194,8 @@ provider "aws" {
 
 > Screenshot: Terminal output showing the contents of `main.tf` and `provider.tf` as inspected before modification
 
+<img width="1069" height="736" alt="image" src="https://github.com/user-attachments/assets/d3299ea7-aebb-472e-b0ed-1912325476ee" />
+
 ---
 
 ### Step 3: Append EBS Snapshot Resource to main.tf
@@ -468,8 +470,8 @@ No errors were encountered during this implementation. The Terraform plan resolv
 
 
 
-<img width="1045" height="627" alt="image" src="https://github.com/user-attachments/assets/73c06170-eaf2-410a-bf3f-a14640818280" />
-<img width="1069" height="736" alt="image" src="https://github.com/user-attachments/assets/d3299ea7-aebb-472e-b0ed-1912325476ee" />
+
+
 <img width="1034" height="695" alt="image" src="https://github.com/user-attachments/assets/b26513ab-0576-4d25-a63a-fb7aa97ebd0d" />
 <img width="1047" height="734" alt="image" src="https://github.com/user-attachments/assets/34bbef91-1b9d-430d-a040-fd26fe8da573" />
 <img width="1046" height="732" alt="image" src="https://github.com/user-attachments/assets/47f18c11-d1ea-49d6-b07f-1736082cbec4" />
