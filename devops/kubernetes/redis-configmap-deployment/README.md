@@ -269,7 +269,9 @@ EOF
 * `volumes[].configMap.name` references `my-redis-config`, binding the previously created ConfigMap
 * `emptyDir: {}` provides ephemeral pod-scoped storage without persistence requirements
 
-> **Screenshot:** `04-deployment-manifest-created.png`
+> **Screenshot:**
+
+<img width="1033" height="859" alt="image" src="https://github.com/user-attachments/assets/7da1ec9f-b1be-4d56-8fed-1e56c2038289" />
 
 ---
 
@@ -517,7 +519,7 @@ No errors were encountered during this implementation. The manifest was construc
 
 
 
-<img width="1033" height="859" alt="image" src="https://github.com/user-attachments/assets/7da1ec9f-b1be-4d56-8fed-1e56c2038289" />
+
 <img width="1022" height="778" alt="image" src="https://github.com/user-attachments/assets/22625e4e-8b5a-4291-847f-c9dc0c8d9926" />
 <img width="1025" height="824" alt="image" src="https://github.com/user-attachments/assets/bbd75e6b-1507-4186-86cd-be5be551329b" />
 <img width="1026" height="858" alt="image" src="https://github.com/user-attachments/assets/0994abf2-c77c-4478-9fdd-374d23516ade" />
