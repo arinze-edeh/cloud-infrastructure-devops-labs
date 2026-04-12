@@ -382,7 +382,10 @@ Events:
 
 All volumes, mounts, resource requests, and container configuration match the declared specifications exactly.
 
-> **Screenshot:** `07-pod-describe-full.png`
+> **Screenshots:** 
+
+<img width="1032" height="858" alt="image" src="https://github.com/user-attachments/assets/f61377b1-e790-4b2a-9680-3843219d9da5" />
+<img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/8b463095-9277-456b-9fb6-1525da04b99f" />
 
 ---
 
@@ -525,10 +528,9 @@ No errors were encountered during this implementation. The manifest was construc
 
 
 
-<img width="1025" height="824" alt="image" src="https://github.com/user-attachments/assets/bbd75e6b-1507-4186-86cd-be5be551329b" />
 
-<img width="1032" height="858" alt="image" src="https://github.com/user-attachments/assets/f61377b1-e790-4b2a-9680-3843219d9da5" />
-<img width="1034" height="857" alt="image" src="https://github.com/user-attachments/assets/8b463095-9277-456b-9fb6-1525da04b99f" />
+
+
 <img width="1036" height="345" alt="image" src="https://github.com/user-attachments/assets/ce27adb4-9b13-441d-b096-47064a01a8fc" />
 <img width="1039" height="306" alt="image" src="https://github.com/user-attachments/assets/39ecdd75-7a3f-439e-8f3a-268736cbcf53" />
 <img width="1038" height="361" alt="image" src="https://github.com/user-attachments/assets/6374b6c0-1115-49cb-bea0-99b933fe4797" />
