@@ -151,7 +151,7 @@ drwxr-x--- 1 bob bob 4096 Apr 13 03:30 ..
 -rw-rw-r-- 1 bob bob 1116 May 13  2025 provider.tf
 ```
 
-> **Screenshot:** `<Step 1: Terminal output showing pwd and ls -la in /home/bob/terraform>`
+> **Screenshot:** `Terminal output showing pwd and ls -la in /home/bob/terraform`
 
 <img width="1038" height="593" alt="image" src="https://github.com/user-attachments/assets/9a63285a-d03f-4a05-ac29-417f57f2c722" />
 
@@ -211,7 +211,9 @@ provider "aws" {
 }
 ```
 
-> **Screenshot:** `<Step 2: Terminal output of cat provider.tf showing provider block and all endpoint overrides>`
+> **Screenshot:** `Terminal output of cat provider.tf showing provider block and all endpoint overrides`
+
+<img width="1062" height="790" alt="image" src="https://github.com/user-attachments/assets/770e0cfd-60d4-440b-980b-62b2eb5480e6" />
 
 Key observations from `provider.tf`:
 
@@ -571,7 +573,7 @@ Destroy complete! Resources: 1 destroyed.
 
 <img width="1039" height="456" alt="image" src="https://github.com/user-attachments/assets/84b855bf-dc72-4bfc-8617-ab9be76405a9" />
 
-<img width="1062" height="790" alt="image" src="https://github.com/user-attachments/assets/770e0cfd-60d4-440b-980b-62b2eb5480e6" />
+
 <img width="1024" height="727" alt="image" src="https://github.com/user-attachments/assets/092f7cc0-3f79-4372-b295-efb138f5c011" />
 <img width="1038" height="732" alt="image" src="https://github.com/user-attachments/assets/9d4e112b-d73e-4b5c-a7f2-46809b1fa4f5" />
 <img width="1044" height="637" alt="image" src="https://github.com/user-attachments/assets/6391368d-6d0d-4f2d-88b4-3146a488c638" />
