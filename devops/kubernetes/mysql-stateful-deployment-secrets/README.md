@@ -418,6 +418,8 @@ persistentvolumeclaim/mysql-pv-claim created
 
 > Screenshot: pvc-recreated-empty-storageclass
 
+<img width="1144" height="686" alt="image" src="https://github.com/user-attachments/assets/6dcd458a-82f1-4f5c-a256-3655630eb1d4" />
+
 ---
 
 ### Step 9: Confirm PV and PVC Are Bound
@@ -442,6 +444,8 @@ mysql-pv-claim   Bound    mysql-pv   250Mi      RWO                           <u
 ***Both resources now show `Bound`, confirming successful static binding between the PV and PVC.***
 
 > Screenshot: pv-pvc-bound-confirmed
+
+<img width="1150" height="724" alt="image" src="https://github.com/user-attachments/assets/d6781290-76d2-4c63-822a-2070b75f785a" />
 
 ---
 
@@ -783,29 +787,3 @@ After the corrected Deployment is applied, the existing pod will be replaced by 
 * [MySQL 5.7 Docker Image](https://hub.docker.com/_/mysql)
 * [k3s Default StorageClass](https://docs.k3s.io/storage)
 * [Kubernetes Volume Binding Modes](https://kubernetes.io/docs/concepts/storage/storage-classes/#volume-binding-mode)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1144" height="686" alt="image" src="https://github.com/user-attachments/assets/6dcd458a-82f1-4f5c-a256-3655630eb1d4" />
-<img width="1150" height="724" alt="image" src="https://github.com/user-attachments/assets/d6781290-76d2-4c63-822a-2070b75f785a" />
-
-
-
-
-
-
-
