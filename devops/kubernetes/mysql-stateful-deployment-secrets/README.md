@@ -555,6 +555,8 @@ service/mysql created
 
 > Screenshot: mysql-service-created
 
+<img width="1155" height="383" alt="image" src="https://github.com/user-attachments/assets/6cfee30a-fe1f-4df1-b824-ee069b98feb0" />
+
 ---
 
 ### Step 13: Verify Service
@@ -798,7 +800,7 @@ After the corrected Deployment is applied, the existing pod will be replaced by 
 <img width="1148" height="857" alt="image" src="https://github.com/user-attachments/assets/ff48fff5-6f5e-4ad8-90e2-e96aee23eb81" />
 <img width="1150" height="862" alt="image" src="https://github.com/user-attachments/assets/9227713b-bc95-4d6c-814f-3437b67e4757" />
 <img width="1155" height="573" alt="image" src="https://github.com/user-attachments/assets/11424933-bde8-48df-a28e-22657b001824" />
-<img width="1155" height="383" alt="image" src="https://github.com/user-attachments/assets/6cfee30a-fe1f-4df1-b824-ee069b98feb0" />
+
 
 
 
