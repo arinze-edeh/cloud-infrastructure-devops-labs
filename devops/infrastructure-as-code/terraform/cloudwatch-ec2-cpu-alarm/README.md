@@ -153,6 +153,8 @@ drwxr-x--- 1 bob bob 4096 Apr 13 03:30 ..
 
 > **Screenshot:** `<Step 1: Terminal output showing pwd and ls -la in /home/bob/terraform>`
 
+<img width="1038" height="593" alt="image" src="https://github.com/user-attachments/assets/9a63285a-d03f-4a05-ac29-417f57f2c722" />
+
 At this stage the directory contains only the task brief (`README.MD`) and the pre-configured provider file (`provider.tf`). No main configuration exists yet.
 
 ---
@@ -568,7 +570,7 @@ Destroy complete! Resources: 1 destroyed.
 
 
 <img width="1039" height="456" alt="image" src="https://github.com/user-attachments/assets/84b855bf-dc72-4bfc-8617-ab9be76405a9" />
-<img width="1038" height="593" alt="image" src="https://github.com/user-attachments/assets/9a63285a-d03f-4a05-ac29-417f57f2c722" />
+
 <img width="1062" height="790" alt="image" src="https://github.com/user-attachments/assets/770e0cfd-60d4-440b-980b-62b2eb5480e6" />
 <img width="1024" height="727" alt="image" src="https://github.com/user-attachments/assets/092f7cc0-3f79-4372-b295-efb138f5c011" />
 <img width="1038" height="732" alt="image" src="https://github.com/user-attachments/assets/9d4e112b-d73e-4b5c-a7f2-46809b1fa4f5" />
