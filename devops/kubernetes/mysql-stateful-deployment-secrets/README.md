@@ -505,7 +505,10 @@ deployment.apps/mysql-deployment created
 
 ***The `spec.volumes` section was not included in this heredoc. The text `claimName: mysql-pv-claim` appeared after `EOF` on the same line and was treated by the shell as a separate command, not as YAML content. The `volumeMounts` block references a volume named `mysql-storage` that was never defined in `spec.volumes`. Despite this, Kubernetes accepted the Deployment without error and the pod reached `Running`. The PVC was not actually mounted into the container as a result. See [Error 2](#error-2-deployment-applied-with-incomplete-volumes-block) for full analysis.***
 
-> Screenshot: mysql-deployment-created
+> Screenshots: mysql-deployment-created
+
+<img width="1148" height="857" alt="image" src="https://github.com/user-attachments/assets/ff48fff5-6f5e-4ad8-90e2-e96aee23eb81" />
+<img width="1150" height="862" alt="image" src="https://github.com/user-attachments/assets/9227713b-bc95-4d6c-814f-3437b67e4757" />
 
 ---
 
@@ -799,8 +802,7 @@ After the corrected Deployment is applied, the existing pod will be replaced by 
 
 <img width="1144" height="686" alt="image" src="https://github.com/user-attachments/assets/6dcd458a-82f1-4f5c-a256-3655630eb1d4" />
 <img width="1150" height="724" alt="image" src="https://github.com/user-attachments/assets/d6781290-76d2-4c63-822a-2070b75f785a" />
-<img width="1148" height="857" alt="image" src="https://github.com/user-attachments/assets/ff48fff5-6f5e-4ad8-90e2-e96aee23eb81" />
-<img width="1150" height="862" alt="image" src="https://github.com/user-attachments/assets/9227713b-bc95-4d6c-814f-3437b67e4757" />
+
 
 
 
