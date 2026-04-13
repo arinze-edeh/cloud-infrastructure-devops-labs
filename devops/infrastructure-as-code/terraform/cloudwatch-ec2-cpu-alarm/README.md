@@ -29,7 +29,6 @@
 11. [Errors and Resolutions](#errors-and-resolutions)
 12. [Verification Output Reference](#verification-output-reference)
 13. [Teardown](#teardown)
-14. [Contributing](#contributing)
 
 ---
 
@@ -266,7 +265,9 @@ resource "aws_cloudwatch_metric_alarm" "datacenter-alarm" {
 }
 ```
 
-> **Screenshot:** `<Step 3: Terminal output of cat main.tf confirming the CloudWatch alarm resource block>`
+> **Screenshot:** `Terminal output of cat main.tf confirming the CloudWatch alarm resource block`
+
+<img width="1038" height="732" alt="image" src="https://github.com/user-attachments/assets/9d4e112b-d73e-4b5c-a7f2-46809b1fa4f5" />
 
 **Field-level rationale:**
 
@@ -575,7 +576,7 @@ Destroy complete! Resources: 1 destroyed.
 
 
 <img width="1024" height="727" alt="image" src="https://github.com/user-attachments/assets/092f7cc0-3f79-4372-b295-efb138f5c011" />
-<img width="1038" height="732" alt="image" src="https://github.com/user-attachments/assets/9d4e112b-d73e-4b5c-a7f2-46809b1fa4f5" />
+
 <img width="1044" height="637" alt="image" src="https://github.com/user-attachments/assets/6391368d-6d0d-4f2d-88b4-3146a488c638" />
 <img width="1036" height="717" alt="image" src="https://github.com/user-attachments/assets/0fdb1004-bffe-44bd-8ae0-152963fc1496" />
 <img width="1033" height="695" alt="image" src="https://github.com/user-attachments/assets/67eaaf01-f65f-42ec-acd6-62f6636d1f0e" />
