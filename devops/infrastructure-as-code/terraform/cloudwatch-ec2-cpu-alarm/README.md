@@ -309,7 +309,9 @@ you run "terraform init" in the future.
 Terraform has been successfully initialized!
 ```
 
-> **Screenshot:** `<Step 4: Terminal output of terraform init showing successful provider installation>`
+> **Screenshot:** `Terminal output of terraform init showing successful provider installation`
+
+<img width="1044" height="637" alt="image" src="https://github.com/user-attachments/assets/6391368d-6d0d-4f2d-88b4-3146a488c638" />
 
 After this step, the `.terraform/` directory is created containing the downloaded provider binary, and `.terraform.lock.hcl` is generated to lock the provider version.
 
@@ -329,7 +331,9 @@ terraform validate
 Success! The configuration is valid.
 ```
 
-> **Screenshot:** `<Step 5: Terminal output of terraform validate showing Success>`
+> **Screenshot:** `Terminal output of terraform validate showing Success`
+
+<img width="1036" height="717" alt="image" src="https://github.com/user-attachments/assets/0fdb1004-bffe-44bd-8ae0-152963fc1496" />
 
 This step catches configuration errors such as misspelled attribute names, incorrect types, and missing required fields without making any changes to infrastructure.
 
@@ -378,7 +382,9 @@ aws_cloudwatch_metric_alarm.datacenter-alarm: Creation complete after 0s [id=dat
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
-> **Screenshot:** `<Step 6: Terminal output of terraform apply -auto-approve showing Plan and Apply completion>`
+> **Screenshot:** `Terminal output of terraform apply -auto-approve showing Plan and Apply completion`
+
+<img width="1033" height="695" alt="image" src="https://github.com/user-attachments/assets/67eaaf01-f65f-42ec-acd6-62f6636d1f0e" />
 
 The plan confirms exactly **1 resource to add, 0 to change, 0 to destroy**, which is the expected diff for a greenfield provisioning. The resource ID is `datacenter-alarm`, confirming successful creation.
 
@@ -427,7 +433,9 @@ aws --endpoint-url=http://aws:4566 cloudwatch describe-alarms --alarm-names "dat
 }
 ```
 
-> **Screenshot:** `<Step 7: Terminal output of aws cloudwatch describe-alarms showing the full alarm JSON response>`
+> **Screenshot:** `Terminal output of aws cloudwatch describe-alarms showing the full alarm JSON response`
+
+<img width="1162" height="608" alt="image" src="https://github.com/user-attachments/assets/848251c7-3048-4c69-bfc9-3ca0f7bf390d" />
 
 The response confirms:
 
@@ -569,15 +577,3 @@ Destroy complete! Resources: 1 destroyed.
 ```
 
 ---
-
-
-
-<img width="1039" height="456" alt="image" src="https://github.com/user-attachments/assets/84b855bf-dc72-4bfc-8617-ab9be76405a9" />
-
-
-<img width="1024" height="727" alt="image" src="https://github.com/user-attachments/assets/092f7cc0-3f79-4372-b295-efb138f5c011" />
-
-<img width="1044" height="637" alt="image" src="https://github.com/user-attachments/assets/6391368d-6d0d-4f2d-88b4-3146a488c638" />
-<img width="1036" height="717" alt="image" src="https://github.com/user-attachments/assets/0fdb1004-bffe-44bd-8ae0-152963fc1496" />
-<img width="1033" height="695" alt="image" src="https://github.com/user-attachments/assets/67eaaf01-f65f-42ec-acd6-62f6636d1f0e" />
-<img width="1162" height="608" alt="image" src="https://github.com/user-attachments/assets/848251c7-3048-4c69-bfc9-3ca0f7bf390d" />
