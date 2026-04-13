@@ -285,6 +285,8 @@ mysql-pv-claim   Pending                                      local-path     <un
 
 > Screenshot: pvc-pending-local-path
 
+<img width="1034" height="835" alt="image" src="https://github.com/user-attachments/assets/b2910067-8107-4eb6-9ef8-ee95a7444744" />
+
 ---
 
 ### Step 5: Diagnose PVC Pending State
@@ -1306,7 +1308,7 @@ Recreate both with `storageClassName: ""` on both manifests. The PVC immediately
 
 
 <img width="1034" height="853" alt="image" src="https://github.com/user-attachments/assets/cacef03e-9f8c-489f-b2c0-83adea609885" />
-<img width="1034" height="835" alt="image" src="https://github.com/user-attachments/assets/b2910067-8107-4eb6-9ef8-ee95a7444744" />
+
 <img width="1150" height="739" alt="image" src="https://github.com/user-attachments/assets/b64aed21-aeb7-4112-8ba6-fb2bdf6ab1a6" />
 <img width="1150" height="783" alt="image" src="https://github.com/user-attachments/assets/1bb5a1d1-32b9-4dc8-aa2f-7119492f9d6b" />
 <img width="1145" height="821" alt="image" src="https://github.com/user-attachments/assets/2762b481-6d00-43c0-8add-58817d2dca69" />
