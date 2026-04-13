@@ -240,6 +240,6 @@ Available for full-time positions, contract engagements, and technical interview
 ---
 
 <div align="center">
-<sub>200+ production-grade implementations across DevOps, AWS, and Azure engineering.</sub>
+<sub>200+ production-style implementations across DevOps, AWS, and Azure engineering.</sub>
 </div>
 
