@@ -572,6 +572,8 @@ mysql   NodePort   10.43.65.229   <none>        3306:30007/TCP   43s
 
 > Screenshot: mysql-service-verified
 
+<img width="1154" height="439" alt="image" src="https://github.com/user-attachments/assets/7b08894e-a835-4e69-aa24-90d1ddb49147" />
+
 ---
 
 ### Step 14: Full Stack Verification
@@ -603,6 +605,8 @@ service/mysql        NodePort    10.43.65.229   <none>        3306:30007/TCP   1
 ```
 
 > Screenshot: full-stack-verification
+
+<img width="1144" height="442" alt="image" src="https://github.com/user-attachments/assets/4ebbb89f-4bf9-407d-a06f-2d61b76d89e6" />
 
 ---
 
@@ -795,7 +799,7 @@ After the corrected Deployment is applied, the existing pod will be replaced by 
 <img width="1150" height="862" alt="image" src="https://github.com/user-attachments/assets/9227713b-bc95-4d6c-814f-3437b67e4757" />
 <img width="1155" height="573" alt="image" src="https://github.com/user-attachments/assets/11424933-bde8-48df-a28e-22657b001824" />
 <img width="1155" height="383" alt="image" src="https://github.com/user-attachments/assets/6cfee30a-fe1f-4df1-b824-ee069b98feb0" />
-<img width="1154" height="439" alt="image" src="https://github.com/user-attachments/assets/7b08894e-a835-4e69-aa24-90d1ddb49147" />
-<img width="1144" height="442" alt="image" src="https://github.com/user-attachments/assets/4ebbb89f-4bf9-407d-a06f-2d61b76d89e6" />
+
+
 
 
