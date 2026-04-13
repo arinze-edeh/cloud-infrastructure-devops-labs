@@ -128,6 +128,8 @@ jump-host   Ready    control-plane   97m   v1.34.1+k3s1
 
 > Screenshot: cluster-info-and-nodes
 
+<img width="1027" height="588" alt="image" src="https://github.com/user-attachments/assets/aa1fe6b9-9aff-442e-8ad1-9a9609693e03" />
+
 ---
 
 ### Step 2: Create Kubernetes Secrets
@@ -191,6 +193,8 @@ mysql-user-pass   Opaque   2      62s
 
 > Screenshot: kubectl-get-secrets
 
+<img width="1033" height="693" alt="image" src="https://github.com/user-attachments/assets/5c471f5b-a644-457e-9a72-3c2617010349" />
+
 ---
 
 ### Step 3: Initial PersistentVolume Creation
@@ -234,6 +238,8 @@ mysql-pv   250Mi      RWO            Retain           Available                 
 ```
 
 > Screenshot: pv-initial-created
+
+<img width="1028" height="826" alt="image" src="https://github.com/user-attachments/assets/664c89c3-96d8-4cf8-a2c2-d37da680a1ca" />
 
 ---
 
@@ -902,7 +908,7 @@ jump-host   Ready    control-plane   97m   v1.34.1+k3s1
 
 > Screenshot: cluster-info-and-nodes
 
-<img width="1027" height="588" alt="image" src="https://github.com/user-attachments/assets/aa1fe6b9-9aff-442e-8ad1-9a9609693e03" />
+
 
 ---
 
@@ -949,7 +955,7 @@ mysql-user-pass   Opaque   2      62s
 
 > Screenshot: kubectl-get-secrets
 
-<img width="1033" height="693" alt="image" src="https://github.com/user-attachments/assets/5c471f5b-a644-457e-9a72-3c2617010349" />
+
 
 ---
 
@@ -989,8 +995,6 @@ mysql-pv   250Mi      RWO            Retain           Available                 
 ```
 
 > Screenshot: pv-created-available
-
-<img width="1028" height="826" alt="image" src="https://github.com/user-attachments/assets/664c89c3-96d8-4cf8-a2c2-d37da680a1ca" />
 
 ---
 
