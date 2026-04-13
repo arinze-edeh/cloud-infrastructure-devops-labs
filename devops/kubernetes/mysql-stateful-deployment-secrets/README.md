@@ -120,6 +120,8 @@ jump-host   Ready    control-plane   97m   v1.34.1+k3s1
 
 > Screenshot: cluster-info-and-nodes
 
+<img width="1027" height="588" alt="image" src="https://github.com/user-attachments/assets/aa1fe6b9-9aff-442e-8ad1-9a9609693e03" />
+
 ---
 
 ### Step 2: Create Kubernetes Secrets
@@ -510,7 +512,7 @@ Recreate both with `storageClassName: ""` on both manifests. The PVC immediately
 
 
 
-<img width="1027" height="588" alt="image" src="https://github.com/user-attachments/assets/aa1fe6b9-9aff-442e-8ad1-9a9609693e03" />
+
 <img width="1035" height="573" alt="image" src="https://github.com/user-attachments/assets/6cece40f-4d14-4b07-8201-51d21b15d270" />
 <img width="1032" height="708" alt="image" src="https://github.com/user-attachments/assets/e7845f4b-7afb-427b-8202-e027e6a6a547" />
 <img width="1039" height="709" alt="image" src="https://github.com/user-attachments/assets/a807c131-c627-4ff5-a1d2-b132d4b5ccc1" />
