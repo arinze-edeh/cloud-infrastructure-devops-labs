@@ -352,6 +352,8 @@ persistentvolume "mysql-pv" deleted
 
 > Screenshot: pv-pvc-deleted
 
+<img width="1145" height="821" alt="image" src="https://github.com/user-attachments/assets/2762b481-6d00-43c0-8add-58817d2dca69" />
+
 ---
 
 ### Step 7: Recreate PV with Explicit Empty StorageClassName
@@ -782,7 +784,7 @@ After the corrected Deployment is applied, the existing pod will be replaced by 
 
 
 <img width="1150" height="783" alt="image" src="https://github.com/user-attachments/assets/1bb5a1d1-32b9-4dc8-aa2f-7119492f9d6b" />
-<img width="1145" height="821" alt="image" src="https://github.com/user-attachments/assets/2762b481-6d00-43c0-8add-58817d2dca69" />
+
 <img width="1144" height="737" alt="image" src="https://github.com/user-attachments/assets/4c1d6a3c-1edc-46f6-b145-013bac148dd7" />
 <img width="1144" height="686" alt="image" src="https://github.com/user-attachments/assets/6dcd458a-82f1-4f5c-a256-3655630eb1d4" />
 <img width="1150" height="724" alt="image" src="https://github.com/user-attachments/assets/d6781290-76d2-4c63-822a-2070b75f785a" />
