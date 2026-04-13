@@ -56,13 +56,13 @@ The implementation encountered and resolved a real PVC binding failure caused by
 │  ┌──────────────┐      ┌─────────────────────────────┐  │
 │  │   Secrets    │      │     mysql-deployment        │  │
 │  │              │      │   (Deployment / 1 replica)  │  │
-│  │ mysql-root-  │─────▶│                             │  │
+│  │ mysql-root-  │─────▶│                            │  │
 │  │ pass         │      │  ┌────────────────────────┐ │  │
 │  │              │      │  │  Container: mysql:5.7  │ │  │
-│  │ mysql-user-  │─────▶│  │  Port: 3306            │ │  │
+│  │ mysql-user-  │─────▶│  │  Port: 3306           │ │  │
 │  │ pass         │      │  │  Env: secretKeyRef     │ │  │
 │  │              │      │  └────────────┬───────────┘ │  │
-│  │ mysql-db-url │─────▶│               │             │  │
+│  │ mysql-db-url │─────▶│               │            │  │
 │  └──────────────┘      └───────────────┼─────────────┘  │
 │                                        │                │
 │  ┌──────────────────────────┐          │                │
@@ -72,7 +72,7 @@ The implementation encountered and resolved a real PVC binding failure caused by
 │  │  HostPath: /tmp/mysql-pv │          │                │
 │  └──────────────────────────┘          │                │
 │  ┌──────────────────────────┐          │                │
-│  │  PersistentVolumeClaim   │◀─────────┘                │
+│  │  PersistentVolumeClaim   │◀─────────┘               │
 │  │  mysql-pv-claim (250Mi)  │                           │
 │  │  storageClassName: ""    │                           │
 │  └──────────────────────────┘                           │
@@ -385,6 +385,8 @@ persistentvolume/mysql-pv created
 ```
 
 > Screenshot: pv-recreated-empty-storageclass
+
+<img width="1144" height="737" alt="image" src="https://github.com/user-attachments/assets/4c1d6a3c-1edc-46f6-b145-013bac148dd7" />
 
 ---
 
@@ -785,7 +787,7 @@ After the corrected Deployment is applied, the existing pod will be replaced by 
 
 <img width="1150" height="783" alt="image" src="https://github.com/user-attachments/assets/1bb5a1d1-32b9-4dc8-aa2f-7119492f9d6b" />
 
-<img width="1144" height="737" alt="image" src="https://github.com/user-attachments/assets/4c1d6a3c-1edc-46f6-b145-013bac148dd7" />
+
 <img width="1144" height="686" alt="image" src="https://github.com/user-attachments/assets/6dcd458a-82f1-4f5c-a256-3655630eb1d4" />
 <img width="1150" height="724" alt="image" src="https://github.com/user-attachments/assets/d6781290-76d2-4c63-822a-2070b75f785a" />
 <img width="1148" height="857" alt="image" src="https://github.com/user-attachments/assets/ff48fff5-6f5e-4ad8-90e2-e96aee23eb81" />
