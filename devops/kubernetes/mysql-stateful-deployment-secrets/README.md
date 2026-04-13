@@ -167,6 +167,8 @@ mysql-user-pass   Opaque   2      62s
 
 > Screenshot: kubectl-get-secrets
 
+<img width="1033" height="693" alt="image" src="https://github.com/user-attachments/assets/5c471f5b-a644-457e-9a72-3c2617010349" />
+
 ---
 
 ### Step 3: Provision PersistentVolume
@@ -516,7 +518,7 @@ Recreate both with `storageClassName: ""` on both manifests. The PVC immediately
 <img width="1035" height="573" alt="image" src="https://github.com/user-attachments/assets/6cece40f-4d14-4b07-8201-51d21b15d270" />
 <img width="1032" height="708" alt="image" src="https://github.com/user-attachments/assets/e7845f4b-7afb-427b-8202-e027e6a6a547" />
 <img width="1039" height="709" alt="image" src="https://github.com/user-attachments/assets/a807c131-c627-4ff5-a1d2-b132d4b5ccc1" />
-<img width="1033" height="693" alt="image" src="https://github.com/user-attachments/assets/5c471f5b-a644-457e-9a72-3c2617010349" />
+
 <img width="1027" height="822" alt="image" src="https://github.com/user-attachments/assets/ad1c9874-5f18-48d4-acde-8bb586a59eba" />
 <img width="1028" height="826" alt="image" src="https://github.com/user-attachments/assets/664c89c3-96d8-4cf8-a2c2-d37da680a1ca" />
 <img width="1034" height="853" alt="image" src="https://github.com/user-attachments/assets/cacef03e-9f8c-489f-b2c0-83adea609885" />
