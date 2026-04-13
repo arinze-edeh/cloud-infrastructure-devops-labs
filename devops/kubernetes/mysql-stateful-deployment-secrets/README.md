@@ -322,6 +322,8 @@ Events:
 
 > Screenshot: pvc-describe-pending-events
 
+<img width="1150" height="739" alt="image" src="https://github.com/user-attachments/assets/b64aed21-aeb7-4112-8ba6-fb2bdf6ab1a6" />
+
 ---
 
 ### Step 6: Delete Failing PVC and PV
@@ -778,7 +780,7 @@ After the corrected Deployment is applied, the existing pod will be replaced by 
 
 <img width="1034" height="853" alt="image" src="https://github.com/user-attachments/assets/cacef03e-9f8c-489f-b2c0-83adea609885" />
 
-<img width="1150" height="739" alt="image" src="https://github.com/user-attachments/assets/b64aed21-aeb7-4112-8ba6-fb2bdf6ab1a6" />
+
 <img width="1150" height="783" alt="image" src="https://github.com/user-attachments/assets/1bb5a1d1-32b9-4dc8-aa2f-7119492f9d6b" />
 <img width="1145" height="821" alt="image" src="https://github.com/user-attachments/assets/2762b481-6d00-43c0-8add-58817d2dca69" />
 <img width="1144" height="737" alt="image" src="https://github.com/user-attachments/assets/4c1d6a3c-1edc-46f6-b145-013bac148dd7" />
