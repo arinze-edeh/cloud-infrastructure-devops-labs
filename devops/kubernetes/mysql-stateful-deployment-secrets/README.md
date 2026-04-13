@@ -658,6 +658,8 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 
 > Screenshot: mysql-database-access-verified
 
+<img width="1150" height="787" alt="image" src="https://github.com/user-attachments/assets/99bc1df5-00cd-43f4-a207-cccecb575a05" />
+
 ---
 
 ## Errors Encountered and Resolutions
@@ -782,10 +784,7 @@ After the corrected Deployment is applied, the existing pod will be replaced by 
 
 
 
-<img width="1034" height="853" alt="image" src="https://github.com/user-attachments/assets/cacef03e-9f8c-489f-b2c0-83adea609885" />
 
-
-<img width="1150" height="783" alt="image" src="https://github.com/user-attachments/assets/1bb5a1d1-32b9-4dc8-aa2f-7119492f9d6b" />
 
 
 <img width="1144" height="686" alt="image" src="https://github.com/user-attachments/assets/6dcd458a-82f1-4f5c-a256-3655630eb1d4" />
@@ -797,4 +796,4 @@ After the corrected Deployment is applied, the existing pod will be replaced by 
 <img width="1154" height="439" alt="image" src="https://github.com/user-attachments/assets/7b08894e-a835-4e69-aa24-90d1ddb49147" />
 <img width="1144" height="442" alt="image" src="https://github.com/user-attachments/assets/4ebbb89f-4bf9-407d-a06f-2d61b76d89e6" />
 <img width="1158" height="615" alt="image" src="https://github.com/user-attachments/assets/f7e2a05d-b857-43f3-aa6b-c35566614fdf" />
-<img width="1150" height="787" alt="image" src="https://github.com/user-attachments/assets/99bc1df5-00cd-43f4-a207-cccecb575a05" />
+
