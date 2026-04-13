@@ -208,6 +208,8 @@ mysql-pv   250Mi      RWO            Retain           Available                 
 
 > Screenshot: pv-created-available
 
+<img width="1028" height="826" alt="image" src="https://github.com/user-attachments/assets/664c89c3-96d8-4cf8-a2c2-d37da680a1ca" />
+
 ---
 
 ### Step 4: Provision PersistentVolumeClaim
@@ -520,7 +522,7 @@ Recreate both with `storageClassName: ""` on both manifests. The PVC immediately
 <img width="1039" height="709" alt="image" src="https://github.com/user-attachments/assets/a807c131-c627-4ff5-a1d2-b132d4b5ccc1" />
 
 <img width="1027" height="822" alt="image" src="https://github.com/user-attachments/assets/ad1c9874-5f18-48d4-acde-8bb586a59eba" />
-<img width="1028" height="826" alt="image" src="https://github.com/user-attachments/assets/664c89c3-96d8-4cf8-a2c2-d37da680a1ca" />
+
 <img width="1034" height="853" alt="image" src="https://github.com/user-attachments/assets/cacef03e-9f8c-489f-b2c0-83adea609885" />
 <img width="1034" height="835" alt="image" src="https://github.com/user-attachments/assets/b2910067-8107-4eb6-9ef8-ee95a7444744" />
 <img width="1150" height="739" alt="image" src="https://github.com/user-attachments/assets/b64aed21-aeb7-4112-8ba6-fb2bdf6ab1a6" />
