@@ -204,7 +204,9 @@ NAME                            READY   STATUS    RESTARTS   AGE
 redis-master-57996cc7cc-2zvwb   1/1     Running   0          42s
 ```
 
-> **Screenshot:** `02-redis-master-deployment-rollout.png`
+> **Screenshot:** 
+
+<img width="1036" height="786" alt="image" src="https://github.com/user-attachments/assets/0c27fd88-c819-41f9-bb9d-e502dcdda3dc" />
 
 ---
 
@@ -605,7 +607,7 @@ No errors were encountered during this implementation. All resources applied cle
 
 
 <img width="1031" height="777" alt="image" src="https://github.com/user-attachments/assets/dd84fb67-16de-430d-aafa-95e71ad5dc1a" />
-<img width="1036" height="786" alt="image" src="https://github.com/user-attachments/assets/0c27fd88-c819-41f9-bb9d-e502dcdda3dc" />
+
 <img width="1030" height="512" alt="image" src="https://github.com/user-attachments/assets/71c3f25d-c6ea-454f-8d64-408aec33796a" />
 <img width="1032" height="816" alt="image" src="https://github.com/user-attachments/assets/d6849cdb-bc4f-4674-bfae-5625e766ea5a" />
 <img width="1033" height="862" alt="image" src="https://github.com/user-attachments/assets/c350ceab-3b21-42b9-bcf7-67f9f2fde8e4" />
