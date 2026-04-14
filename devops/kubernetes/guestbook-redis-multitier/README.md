@@ -545,7 +545,9 @@ redis-master   ClusterIP   10.43.244.32   <none>        6379/TCP       10m
 redis-slave    ClusterIP   10.43.245.45   <none>        6379/TCP       6m10s
 ```
 
-> **Screenshot:** `08-final-validation-all-resources.png`
+> **Screenshot:** 
+
+<img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/994831a5-a3bc-4129-ae35-add41e9fcfed" />
 
 All 6 pods are in `Running` state with `0` restarts. All 3 deployments report full availability. The guestbook application is accessible via the node's external IP on port `30009`.
 
@@ -613,15 +615,3 @@ No errors were encountered during this implementation. All resources applied cle
 * **`kubectl rollout status` provides a synchronous gate for deployment pipelines.** In CI/CD contexts, this command blocks until the rollout is complete or times out, making it the correct mechanism for enforcing sequenced multi-tier deployments in automated pipelines.
 
 ---
-
-
-
-
-<img width="1032" height="867" alt="image" src="https://github.com/user-attachments/assets/e89ac8d5-c2fb-45ba-a34c-28bff35c642a" />
-
-<img width="1035" height="526" alt="image" src="https://github.com/user-attachments/assets/9a9a8896-108f-40d7-9bcd-08e0e14b624c" />
-
-<img width="1032" height="565" alt="image" src="https://github.com/user-attachments/assets/eaaa1ce0-6b65-4514-bf94-d7311561de0d" />
-<img width="1033" height="737" alt="image" src="https://github.com/user-attachments/assets/82bedc82-ce98-41bf-a062-9c6e50e4c397" />
-<img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/994831a5-a3bc-4129-ae35-add41e9fcfed" />
-
