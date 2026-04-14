@@ -137,7 +137,9 @@ kube-public       Active   41m
 kube-system       Active   41m
 ```
 
-> **Screenshot:** `01-cluster-info-and-nodes.png`
+> **Screenshot:** 
+
+<img width="1038" height="564" alt="image" src="https://github.com/user-attachments/assets/83ee1d9a-d511-47d4-a61f-326bea5cad89" />
 
 **Validation criteria:**
 * Control plane is reachable.
@@ -601,7 +603,7 @@ No errors were encountered during this implementation. All resources applied cle
 ---
 
 
-<img width="1038" height="564" alt="image" src="https://github.com/user-attachments/assets/83ee1d9a-d511-47d4-a61f-326bea5cad89" />
+
 <img width="1031" height="777" alt="image" src="https://github.com/user-attachments/assets/dd84fb67-16de-430d-aafa-95e71ad5dc1a" />
 <img width="1036" height="786" alt="image" src="https://github.com/user-attachments/assets/0c27fd88-c819-41f9-bb9d-e502dcdda3dc" />
 <img width="1030" height="512" alt="image" src="https://github.com/user-attachments/assets/71c3f25d-c6ea-454f-8d64-408aec33796a" />
