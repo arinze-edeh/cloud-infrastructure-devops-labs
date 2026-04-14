@@ -496,7 +496,9 @@ NodePort:          <unset>  30009/TCP
 Endpoints:         10.22.0.12:80,10.22.0.13:80,10.22.0.14:80
 ```
 
-> **Screenshot:** `07-frontend-service-nodeport-describe.png`
+> **Screenshot:** 
+
+<img width="1031" height="859" alt="image" src="https://github.com/user-attachments/assets/4b8c9c3c-c7ac-42e3-b902-69fbe1c8a18c" />
 
 Three endpoints confirm all frontend replicas are reachable through the NodePort.
 
@@ -618,7 +620,7 @@ No errors were encountered during this implementation. All resources applied cle
 <img width="1032" height="867" alt="image" src="https://github.com/user-attachments/assets/e89ac8d5-c2fb-45ba-a34c-28bff35c642a" />
 
 <img width="1035" height="526" alt="image" src="https://github.com/user-attachments/assets/9a9a8896-108f-40d7-9bcd-08e0e14b624c" />
-<img width="1031" height="859" alt="image" src="https://github.com/user-attachments/assets/4b8c9c3c-c7ac-42e3-b902-69fbe1c8a18c" />
+
 <img width="1032" height="565" alt="image" src="https://github.com/user-attachments/assets/eaaa1ce0-6b65-4514-bf94-d7311561de0d" />
 <img width="1033" height="737" alt="image" src="https://github.com/user-attachments/assets/82bedc82-ce98-41bf-a062-9c6e50e4c397" />
 <img width="1029" height="860" alt="image" src="https://github.com/user-attachments/assets/994831a5-a3bc-4129-ae35-add41e9fcfed" />
