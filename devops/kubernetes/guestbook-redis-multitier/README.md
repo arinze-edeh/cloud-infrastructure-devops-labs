@@ -325,7 +325,9 @@ redis-slave-cbbd7b9cd-b9bmk   1/1     Running   0          40s
 redis-slave-cbbd7b9cd-tc8xg   1/1     Running   0          40s
 ```
 
-> **Screenshot:** `04-redis-slave-deployment-rollout.png`
+> **Screenshot:** 
+
+<img width="1023" height="854" alt="image" src="https://github.com/user-attachments/assets/1e781915-201b-458d-be1e-1360717a3a93" />
 
 ---
 
@@ -608,12 +610,9 @@ No errors were encountered during this implementation. All resources applied cle
 
 
 
-<img width="1031" height="777" alt="image" src="https://github.com/user-attachments/assets/dd84fb67-16de-430d-aafa-95e71ad5dc1a" />
-
-<img width="1030" height="512" alt="image" src="https://github.com/user-attachments/assets/71c3f25d-c6ea-454f-8d64-408aec33796a" />
 
 <img width="1033" height="862" alt="image" src="https://github.com/user-attachments/assets/c350ceab-3b21-42b9-bcf7-67f9f2fde8e4" />
-<img width="1023" height="854" alt="image" src="https://github.com/user-attachments/assets/1e781915-201b-458d-be1e-1360717a3a93" />
+
 <img width="1032" height="527" alt="image" src="https://github.com/user-attachments/assets/bb7eaae3-0956-450f-86c9-f4edeb81d7a3" />
 <img width="1032" height="821" alt="image" src="https://github.com/user-attachments/assets/0ad8f279-3b85-42f8-9b7f-75e89196f8bc" />
 <img width="1032" height="867" alt="image" src="https://github.com/user-attachments/assets/e89ac8d5-c2fb-45ba-a34c-28bff35c642a" />
