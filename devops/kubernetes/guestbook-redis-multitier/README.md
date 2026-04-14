@@ -442,7 +442,9 @@ frontend-6dbf5877db-r5wgc   1/1     Running   0          34s
 frontend-6dbf5877db-vsp7m   1/1     Running   0          34s
 ```
 
-> **Screenshot:** `06-frontend-deployment-rollout.png`
+> **Screenshot:** 
+
+<img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/af9c8c4c-a11a-4257-9fa3-8e7fbde1bfde" />
 
 ---
 
@@ -613,12 +615,8 @@ No errors were encountered during this implementation. All resources applied cle
 
 
 
-<img width="1033" height="862" alt="image" src="https://github.com/user-attachments/assets/c350ceab-3b21-42b9-bcf7-67f9f2fde8e4" />
-
-<img width="1032" height="527" alt="image" src="https://github.com/user-attachments/assets/bb7eaae3-0956-450f-86c9-f4edeb81d7a3" />
-
 <img width="1032" height="867" alt="image" src="https://github.com/user-attachments/assets/e89ac8d5-c2fb-45ba-a34c-28bff35c642a" />
-<img width="1034" height="864" alt="image" src="https://github.com/user-attachments/assets/af9c8c4c-a11a-4257-9fa3-8e7fbde1bfde" />
+
 <img width="1035" height="526" alt="image" src="https://github.com/user-attachments/assets/9a9a8896-108f-40d7-9bcd-08e0e14b624c" />
 <img width="1031" height="859" alt="image" src="https://github.com/user-attachments/assets/4b8c9c3c-c7ac-42e3-b902-69fbe1c8a18c" />
 <img width="1032" height="565" alt="image" src="https://github.com/user-attachments/assets/eaaa1ce0-6b65-4514-bf94-d7311561de0d" />
