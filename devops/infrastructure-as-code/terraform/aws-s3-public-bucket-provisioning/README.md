@@ -1,7 +1,5 @@
 # Terraform AWS S3 Public Bucket Provisioning
 
-> **Enterprise Infrastructure Lab** | Nautilus DevOps Team | KKE Terraform Labs
->
 > Provisioning a publicly accessible AWS S3 bucket using Terraform and LocalStack, with ACL-based public read access enforced through infrastructure-as-code.
 
 ---
