@@ -352,6 +352,8 @@ Click **Save and Finish** to persist the instance URL.
 
 *Screenshot: Instance Configuration page with Jenkins URL pre-populated*
 
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/297cf368-1a20-43bc-9e8a-b25bea3dcfaf" />
+
 ---
 
 ### Step 14: Confirm Jenkins is Ready
@@ -473,7 +475,7 @@ This is the expected workflow in these environments and is consistent with the t
 
 
 
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/297cf368-1a20-43bc-9e8a-b25bea3dcfaf" />
+
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6328a263-ed8e-45a3-b2ce-24cdc3dfde9c" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/512836ba-82dd-45b2-8384-d6636815b67f" />
 
