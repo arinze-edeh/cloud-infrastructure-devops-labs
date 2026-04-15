@@ -141,6 +141,8 @@ cat /home/bob/terraform/provider.tf
 
 *Screenshot: Terminal output of `cat provider.tf` displaying the full provider and endpoint configuration*
 
+<img width="1067" height="784" alt="image" src="https://github.com/user-attachments/assets/7cb4216a-7555-4961-beab-d5ab323f5c77" />
+
 ---
 
 ### Step 3 - Author the Main Terraform Configuration
@@ -177,6 +179,8 @@ EOF
 
 *Screenshot: Terminal showing the heredoc command being executed to write main.tf*
 
+<img width="1053" height="811" alt="image" src="https://github.com/user-attachments/assets/c20d7e4b-1a2b-46bb-af3d-0d6aeed77a25" />
+
 ---
 
 ### Step 4 - Verify the Written Configuration
@@ -205,6 +209,8 @@ resource "aws_s3_bucket_public_access_block" "private_bucket_access" {
 ```
 
 *Screenshot: Terminal output of `cat main.tf` showing the complete resource configuration*
+
+<img width="1076" height="778" alt="image" src="https://github.com/user-attachments/assets/faee2291-5049-4b77-a5fa-dc7568092721" />
 
 ---
 
@@ -455,9 +461,9 @@ Applies all four S3 Block Public Access controls to the bucket. Using `aws_s3_bu
 
 
 
-<img width="1067" height="784" alt="image" src="https://github.com/user-attachments/assets/7cb4216a-7555-4961-beab-d5ab323f5c77" />
-<img width="1053" height="811" alt="image" src="https://github.com/user-attachments/assets/c20d7e4b-1a2b-46bb-af3d-0d6aeed77a25" />
-<img width="1076" height="778" alt="image" src="https://github.com/user-attachments/assets/faee2291-5049-4b77-a5fa-dc7568092721" />
+
+
+
 <img width="1073" height="542" alt="image" src="https://github.com/user-attachments/assets/56c9e34c-4e9c-474f-8bb2-77202c4e78de" />
 <img width="1063" height="628" alt="image" src="https://github.com/user-attachments/assets/70c88577-3dd7-45b1-86b9-7e9f9f0394f2" />
 <img width="1071" height="491" alt="image" src="https://github.com/user-attachments/assets/e4237265-df33-488c-85f6-8b0f4c727264" />
