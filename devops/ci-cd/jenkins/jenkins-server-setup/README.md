@@ -368,7 +368,11 @@ Click **Start using Jenkins** to land on the Jenkins dashboard.
 
 *Screenshot: Jenkins is ready confirmation screen*
 
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6328a263-ed8e-45a3-b2ce-24cdc3dfde9c" />
+
 *Screenshot: Jenkins dashboard - Welcome to Jenkins home page*
+
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/512836ba-82dd-45b2-8384-d6636815b67f" />
 
 ---
 
@@ -475,8 +479,5 @@ This is the expected workflow in these environments and is consistent with the t
 
 
 
-
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6328a263-ed8e-45a3-b2ce-24cdc3dfde9c" />
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/512836ba-82dd-45b2-8384-d6636815b67f" />
 
 
