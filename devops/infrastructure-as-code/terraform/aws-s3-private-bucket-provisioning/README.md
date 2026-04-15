@@ -119,6 +119,8 @@ Two files exist: the task brief (`README.MD`) and the pre-configured provider (`
 
 *Screenshot: Terminal output showing initial directory listing with two pre-existing files*
 
+<img width="1029" height="525" alt="image" src="https://github.com/user-attachments/assets/ce9a986d-2a68-497f-a500-6ca7443555fe" />
+
 ---
 
 ### Step 2 - Review the Provider Configuration
@@ -452,7 +454,7 @@ Applies all four S3 Block Public Access controls to the bucket. Using `aws_s3_bu
 
 
 
-<img width="1029" height="525" alt="image" src="https://github.com/user-attachments/assets/ce9a986d-2a68-497f-a500-6ca7443555fe" />
+
 <img width="1067" height="784" alt="image" src="https://github.com/user-attachments/assets/7cb4216a-7555-4961-beab-d5ab323f5c77" />
 <img width="1053" height="811" alt="image" src="https://github.com/user-attachments/assets/c20d7e4b-1a2b-46bb-af3d-0d6aeed77a25" />
 <img width="1076" height="778" alt="image" src="https://github.com/user-attachments/assets/faee2291-5049-4b77-a5fa-dc7568092721" />
