@@ -141,7 +141,9 @@ sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
 ```
 
-The file `jenkins-keyring.asc` (3.1 KB) was saved successfully at `07:52:53 UTC`.
+*Screenshots: The file `jenkins-keyring.asc` (3.1 KB) was saved successfully at `07:52:53 UTC`.*
+
+<img width="1029" height="501" alt="image" src="https://github.com/user-attachments/assets/c713a79d-b988-45ea-b8a3-1d7e1a11af77" />
 
 ---
 
@@ -438,7 +440,6 @@ This is the expected workflow in these environments and is consistent with the t
 
 
 
-<img width="1029" height="501" alt="image" src="https://github.com/user-attachments/assets/c713a79d-b988-45ea-b8a3-1d7e1a11af77" />
 <img width="1035" height="461" alt="image" src="https://github.com/user-attachments/assets/73539e62-72fc-4709-86d5-243bdbc435c2" />
 <img width="1034" height="783" alt="image" src="https://github.com/user-attachments/assets/dd878ce5-447f-4ed2-a135-bae071bd020c" />
 <img width="1040" height="668" alt="image" src="https://github.com/user-attachments/assets/49d0e645-8d8c-47dc-9a01-54dd8001ac1a" />
