@@ -395,6 +395,9 @@ All four public access block controls are confirmed `true` in the live state. Th
 
 *Screenshot: Terminal output of `terraform state show` displaying all confirmed resource attributes*
 
+<img width="1071" height="342" alt="image" src="https://github.com/user-attachments/assets/922bd9c2-ca73-4ca7-8953-dc81c5b8e7b4" />
+
+
 ---
 
 ## Resource Definitions
@@ -478,6 +481,4 @@ Applies all four S3 Block Public Access controls to the bucket. Using `aws_s3_bu
 
 
 <img width="1070" height="328" alt="image" src="https://github.com/user-attachments/assets/8cbcb51e-a7d5-437b-93ac-a12b18a8c529" />
-<img width="1071" height="342" alt="image" src="https://github.com/user-attachments/assets/922bd9c2-ca73-4ca7-8953-dc81c5b8e7b4" />
-
 
