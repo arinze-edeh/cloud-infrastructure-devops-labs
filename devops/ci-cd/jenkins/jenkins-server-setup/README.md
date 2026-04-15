@@ -430,6 +430,16 @@ sudo service jenkins start
 
 This is the expected workflow in these environments and is consistent with the task requirement to start Jenkins using the `service` command.
 
+*Screenshots of errors encountered:*
+
+
+<img width="1034" height="783" alt="image" src="https://github.com/user-attachments/assets/dd878ce5-447f-4ed2-a135-bae071bd020c" />
+<img width="1040" height="668" alt="image" src="https://github.com/user-attachments/assets/49d0e645-8d8c-47dc-9a01-54dd8001ac1a" />
+<img width="1033" height="581" alt="image" src="https://github.com/user-attachments/assets/873707d1-813a-47b6-99e8-0543b9604027" />
+<img width="1036" height="556" alt="image" src="https://github.com/user-attachments/assets/8ef42b88-bc5e-49c0-be62-242108df0f31" />
+<img width="1037" height="458" alt="image" src="https://github.com/user-attachments/assets/f315b786-0bf9-4ce5-a6f4-4e080b3d57a8" />
+<img width="1035" height="554" alt="image" src="https://github.com/user-attachments/assets/c2cbaf51-02fa-4880-b1c5-bf059f6898b2" />
+
 ---
 
 ## Best Practices Applied
@@ -463,15 +473,3 @@ This is the expected workflow in these environments and is consistent with the t
 * [APT Secure Apt Key Management (Ubuntu)](https://help.ubuntu.com/community/SecureApt)
 * [OpenJDK 17 on Ubuntu 24.04](https://openjdk.org/projects/jdk/17/)
 * [KodeKloud Nautilus Lab Platform](https://kodekloud.com)
-
-
-
-
-<img width="1034" height="783" alt="image" src="https://github.com/user-attachments/assets/dd878ce5-447f-4ed2-a135-bae071bd020c" />
-<img width="1040" height="668" alt="image" src="https://github.com/user-attachments/assets/49d0e645-8d8c-47dc-9a01-54dd8001ac1a" />
-<img width="1033" height="581" alt="image" src="https://github.com/user-attachments/assets/873707d1-813a-47b6-99e8-0543b9604027" />
-<img width="1036" height="556" alt="image" src="https://github.com/user-attachments/assets/8ef42b88-bc5e-49c0-be62-242108df0f31" />
-<img width="1037" height="458" alt="image" src="https://github.com/user-attachments/assets/f315b786-0bf9-4ce5-a6f4-4e080b3d57a8" />
-<img width="1035" height="554" alt="image" src="https://github.com/user-attachments/assets/c2cbaf51-02fa-4880-b1c5-bf059f6898b2" />
-
-
