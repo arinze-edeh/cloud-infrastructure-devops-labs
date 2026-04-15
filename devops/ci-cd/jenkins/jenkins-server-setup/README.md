@@ -156,6 +156,9 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/" | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 ```
+*Screenshots:*
+
+<img width="1035" height="461" alt="image" src="https://github.com/user-attachments/assets/73539e62-72fc-4709-86d5-243bdbc435c2" />
 
 Then refresh the package index:
 
@@ -440,7 +443,6 @@ This is the expected workflow in these environments and is consistent with the t
 
 
 
-<img width="1035" height="461" alt="image" src="https://github.com/user-attachments/assets/73539e62-72fc-4709-86d5-243bdbc435c2" />
 <img width="1034" height="783" alt="image" src="https://github.com/user-attachments/assets/dd878ce5-447f-4ed2-a135-bae071bd020c" />
 <img width="1040" height="668" alt="image" src="https://github.com/user-attachments/assets/49d0e645-8d8c-47dc-9a01-54dd8001ac1a" />
 <img width="1033" height="581" alt="image" src="https://github.com/user-attachments/assets/873707d1-813a-47b6-99e8-0543b9604027" />
