@@ -472,13 +472,3 @@ Applies all four S3 Block Public Access controls to the bucket. Using `aws_s3_bu
 | `Error: bucket already exists` | Bucket name collision in LocalStack state | Run `terraform destroy` to clean up, or rename the bucket in `main.tf` |
 | Public access block not applied | Resource created before bucket ID was available | Ensure `bucket = aws_s3_bucket.private_bucket.id` (not a hardcoded string) to enforce dependency ordering |
 | `terraform validate` passes but `plan` fails | Provider not initialized | Re-run `terraform init` before `terraform plan` |
-
-
-
-
-
-
-
-
-<img width="1070" height="328" alt="image" src="https://github.com/user-attachments/assets/8cbcb51e-a7d5-437b-93ac-a12b18a8c529" />
-
