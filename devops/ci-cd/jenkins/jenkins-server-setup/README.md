@@ -313,7 +313,10 @@ On the **Customize Jenkins** page, select **Install suggested plugins**. Jenkins
 
 Plugin installation proceeds automatically with a progress view showing per-plugin installation status.
 
-*Screenshot: Getting Started plugin installation progress screen*
+*Screenshots: Getting Started plugin installation progress screen*
+
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/0f386859-15f7-42db-bf80-60ab60df90fc" />
+<img width="1918" height="1014" alt="image" src="https://github.com/user-attachments/assets/9cdea902-03f1-4012-ba54-b17ed555c9db" />
 
 ---
 
@@ -468,8 +471,6 @@ This is the expected workflow in these environments and is consistent with the t
 
 
 
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/0f386859-15f7-42db-bf80-60ab60df90fc" />
-<img width="1918" height="1014" alt="image" src="https://github.com/user-attachments/assets/9cdea902-03f1-4012-ba54-b17ed555c9db" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/8dc413bf-6749-497f-a4b1-54f047741bae" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/297cf368-1a20-43bc-9e8a-b25bea3dcfaf" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6328a263-ed8e-45a3-b2ce-24cdc3dfde9c" />
