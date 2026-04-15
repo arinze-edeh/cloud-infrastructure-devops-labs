@@ -475,9 +475,3 @@ This is the expected workflow in these environments and is consistent with the t
 <img width="1035" height="554" alt="image" src="https://github.com/user-attachments/assets/c2cbaf51-02fa-4880-b1c5-bf059f6898b2" />
 
 
-<img width="1032" height="544" alt="image" src="https://github.com/user-attachments/assets/559d6aff-eb44-44c5-ac4b-b1f82dabe1a9" />
-
-
-
-
-
