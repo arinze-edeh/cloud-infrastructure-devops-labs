@@ -124,7 +124,11 @@ sudo apt install fontconfig openjdk-17-jre -y
 
 This pulled `109` newly installed packages totalling `123 MB` of archives, including OpenJDK 17 JRE headless, Mesa graphics libraries, and all associated GTK and X11 dependencies. Post-install, `update-alternatives` automatically set `/usr/lib/jvm/java-17-openjdk-amd64/bin/java` as the default `java` binary.
 
-*Screenshot: apt install output showing OpenJDK 17 installation completing*
+*Screenshots: apt install output showing OpenJDK 17 installation completing*
+
+<img width="1032" height="852" alt="image" src="https://github.com/user-attachments/assets/64e3da6d-385e-4f46-81db-9f2a170aecdf" />
+<img width="1032" height="852" alt="image" src="https://github.com/user-attachments/assets/c64d4d02-68b4-4aa0-9f3e-72126380e2c7" />
+<img width="1037" height="860" alt="image" src="https://github.com/user-attachments/assets/c10ce0ce-38bb-430b-908d-f8c281ca537f" />
 
 ---
 
@@ -433,9 +437,7 @@ This is the expected workflow in these environments and is consistent with the t
 
 
 
-<img width="1032" height="852" alt="image" src="https://github.com/user-attachments/assets/64e3da6d-385e-4f46-81db-9f2a170aecdf" />
-<img width="1032" height="852" alt="image" src="https://github.com/user-attachments/assets/c64d4d02-68b4-4aa0-9f3e-72126380e2c7" />
-<img width="1037" height="860" alt="image" src="https://github.com/user-attachments/assets/c10ce0ce-38bb-430b-908d-f8c281ca537f" />
+
 <img width="1029" height="501" alt="image" src="https://github.com/user-attachments/assets/c713a79d-b988-45ea-b8a3-1d7e1a11af77" />
 <img width="1035" height="461" alt="image" src="https://github.com/user-attachments/assets/73539e62-72fc-4709-86d5-243bdbc435c2" />
 <img width="1034" height="783" alt="image" src="https://github.com/user-attachments/assets/dd878ce5-447f-4ed2-a135-bae071bd020c" />
