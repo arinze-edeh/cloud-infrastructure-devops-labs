@@ -319,7 +319,10 @@ Plan: 2 to add, 0 to change, 0 to destroy.
 
 > **Note:** No `-out` flag was used to save the plan file in this task. In production workflows, always use `terraform plan -out=tfplan` and apply with `terraform apply tfplan` to guarantee plan-to-apply consistency.
 
-*Screenshot: Terminal output of `terraform plan` showing the full execution plan with 2 resources to add*
+*Screenshots: Terminal output of `terraform plan` showing the full execution plan with 2 resources to add*
+
+<img width="1075" height="732" alt="image" src="https://github.com/user-attachments/assets/3221ed94-60b4-429f-bfac-9e86d276182d" />
+<img width="1071" height="345" alt="image" src="https://github.com/user-attachments/assets/cc28b058-59c3-408e-ac30-37689ffb48dd" />
 
 ---
 
@@ -471,8 +474,6 @@ Applies all four S3 Block Public Access controls to the bucket. Using `aws_s3_bu
 
 
 
-<img width="1075" height="732" alt="image" src="https://github.com/user-attachments/assets/3221ed94-60b4-429f-bfac-9e86d276182d" />
-<img width="1071" height="345" alt="image" src="https://github.com/user-attachments/assets/cc28b058-59c3-408e-ac30-37689ffb48dd" />
 <img width="1064" height="695" alt="image" src="https://github.com/user-attachments/assets/44384778-ca64-4d51-a2ce-3aa823ac8b44" />
 <img width="1072" height="402" alt="image" src="https://github.com/user-attachments/assets/6b035195-d31e-4853-ada2-f21ea1b70509" />
 <img width="1070" height="328" alt="image" src="https://github.com/user-attachments/assets/8cbcb51e-a7d5-437b-93ac-a12b18a8c529" />
