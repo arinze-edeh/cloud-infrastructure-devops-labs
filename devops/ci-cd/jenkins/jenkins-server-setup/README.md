@@ -213,6 +213,8 @@ The final `apt update` succeeded. A deprecation warning appeared noting that the
 
 *Screenshot: apt update succeeding after GPG trust resolution*
 
+<img width="1040" height="444" alt="image" src="https://github.com/user-attachments/assets/19e729aa-6ac6-4ff2-b48b-f657ce8fce83" />
+
 ---
 
 ### Step 7: Install Jenkins via APT
@@ -449,7 +451,7 @@ This is the expected workflow in these environments and is consistent with the t
 <img width="1036" height="556" alt="image" src="https://github.com/user-attachments/assets/8ef42b88-bc5e-49c0-be62-242108df0f31" />
 <img width="1037" height="458" alt="image" src="https://github.com/user-attachments/assets/f315b786-0bf9-4ce5-a6f4-4e080b3d57a8" />
 <img width="1035" height="554" alt="image" src="https://github.com/user-attachments/assets/c2cbaf51-02fa-4880-b1c5-bf059f6898b2" />
-<img width="1040" height="444" alt="image" src="https://github.com/user-attachments/assets/19e729aa-6ac6-4ff2-b48b-f657ce8fce83" />
+
 <img width="1037" height="858" alt="image" src="https://github.com/user-attachments/assets/dfe7e626-9511-441e-8ad7-b9695fed38d6" />
 <img width="1032" height="544" alt="image" src="https://github.com/user-attachments/assets/559d6aff-eb44-44c5-ac4b-b1f82dabe1a9" />
 <img width="1030" height="607" alt="image" src="https://github.com/user-attachments/assets/96cbf244-ba9f-4b0e-84f8-3ac2b78a89b1" />
