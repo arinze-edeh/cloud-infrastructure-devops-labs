@@ -336,6 +336,8 @@ Click **Save and Continue**.
 
 *Screenshot: Create First Admin User form filled with theadmin credentials*
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/8dc413bf-6749-497f-a4b1-54f047741bae" />
+
 ---
 
 ### Step 13: Configure the Jenkins Instance URL
@@ -471,7 +473,6 @@ This is the expected workflow in these environments and is consistent with the t
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/8dc413bf-6749-497f-a4b1-54f047741bae" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/297cf368-1a20-43bc-9e8a-b25bea3dcfaf" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6328a263-ed8e-45a3-b2ce-24cdc3dfde9c" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/512836ba-82dd-45b2-8384-d6636815b67f" />
