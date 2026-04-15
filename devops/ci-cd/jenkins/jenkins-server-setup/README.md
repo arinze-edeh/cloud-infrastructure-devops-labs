@@ -277,6 +277,10 @@ Output:
 29eacffb14c146cf84d13dc3b0e7a24f
 ```
 
+*Screenshot:*
+
+<img width="1032" height="657" alt="image" src="https://github.com/user-attachments/assets/bddc6372-10bb-49e7-b478-1961491f1c53" />
+
 This value is a single-use unlock token and should be treated as a temporary credential. It is superseded once the first admin user is created.
 
 ---
@@ -292,6 +296,8 @@ https://8080-port-<lab-id>.labs.kodekloud.com/
 On the **Unlock Jenkins** page, paste the initial admin password obtained in Step 9 into the **Administrator password** field, then click **Continue**.
 
 *Screenshot: Unlock Jenkins page with administrator password entered*
+
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/04fe6d34-390f-48e5-a2b7-e24e793660e9" />
 
 ---
 
@@ -460,8 +466,8 @@ This is the expected workflow in these environments and is consistent with the t
 
 <img width="1032" height="544" alt="image" src="https://github.com/user-attachments/assets/559d6aff-eb44-44c5-ac4b-b1f82dabe1a9" />
 
-<img width="1032" height="657" alt="image" src="https://github.com/user-attachments/assets/bddc6372-10bb-49e7-b478-1961491f1c53" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/04fe6d34-390f-48e5-a2b7-e24e793660e9" />
+
+
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/0f386859-15f7-42db-bf80-60ab60df90fc" />
 <img width="1918" height="1014" alt="image" src="https://github.com/user-attachments/assets/9cdea902-03f1-4012-ba54-b17ed555c9db" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/8dc413bf-6749-497f-a4b1-54f047741bae" />
