@@ -286,6 +286,8 @@ No errors or warnings. The configuration is syntactically correct and internally
 
 *Screenshot: Terminal output of `terraform validate` confirming configuration validity*
 
+<img width="1071" height="491" alt="image" src="https://github.com/user-attachments/assets/e4237265-df33-488c-85f6-8b0f4c727264" />
+
 ---
 
 ### Step 8 - Plan the Deployment
@@ -469,7 +471,6 @@ Applies all four S3 Block Public Access controls to the bucket. Using `aws_s3_bu
 
 
 
-<img width="1071" height="491" alt="image" src="https://github.com/user-attachments/assets/e4237265-df33-488c-85f6-8b0f4c727264" />
 <img width="1075" height="732" alt="image" src="https://github.com/user-attachments/assets/3221ed94-60b4-429f-bfac-9e86d276182d" />
 <img width="1071" height="345" alt="image" src="https://github.com/user-attachments/assets/cc28b058-59c3-408e-ac30-37689ffb48dd" />
 <img width="1064" height="695" alt="image" src="https://github.com/user-attachments/assets/44384778-ca64-4d51-a2ce-3aa823ac8b44" />
