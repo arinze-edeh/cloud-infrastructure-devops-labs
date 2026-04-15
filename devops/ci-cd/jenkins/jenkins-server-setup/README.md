@@ -110,6 +110,8 @@ The output confirms all configured repositories were reached successfully, inclu
 
 *Screenshot: apt update output confirming repository sync*
 
+<img width="1031" height="793" alt="image" src="https://github.com/user-attachments/assets/9eac248e-77cf-4829-94be-d86566a72d65" />
+
 ---
 
 ### Step 3: Install Java Runtime Environment
@@ -430,7 +432,7 @@ This is the expected workflow in these environments and is consistent with the t
 * [KodeKloud Nautilus Lab Platform](https://kodekloud.com)
 
 
-<img width="1031" height="793" alt="image" src="https://github.com/user-attachments/assets/9eac248e-77cf-4829-94be-d86566a72d65" />
+
 <img width="1032" height="852" alt="image" src="https://github.com/user-attachments/assets/64e3da6d-385e-4f46-81db-9f2a170aecdf" />
 <img width="1032" height="852" alt="image" src="https://github.com/user-attachments/assets/c64d4d02-68b4-4aa0-9f3e-72126380e2c7" />
 <img width="1037" height="860" alt="image" src="https://github.com/user-attachments/assets/c10ce0ce-38bb-430b-908d-f8c281ca537f" />
