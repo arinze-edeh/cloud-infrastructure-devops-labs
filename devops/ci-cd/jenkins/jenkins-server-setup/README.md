@@ -260,6 +260,8 @@ Expected output:
 
 *Screenshot: service jenkins status confirming running state*
 
+<img width="1030" height="607" alt="image" src="https://github.com/user-attachments/assets/96cbf244-ba9f-4b0e-84f8-3ac2b78a89b1" />
+
 ---
 
 ### Step 9: Retrieve the Initial Admin Password
@@ -457,7 +459,7 @@ This is the expected workflow in these environments and is consistent with the t
 
 
 <img width="1032" height="544" alt="image" src="https://github.com/user-attachments/assets/559d6aff-eb44-44c5-ac4b-b1f82dabe1a9" />
-<img width="1030" height="607" alt="image" src="https://github.com/user-attachments/assets/96cbf244-ba9f-4b0e-84f8-3ac2b78a89b1" />
+
 <img width="1032" height="657" alt="image" src="https://github.com/user-attachments/assets/bddc6372-10bb-49e7-b478-1961491f1c53" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/04fe6d34-390f-48e5-a2b7-e24e793660e9" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/0f386859-15f7-42db-bf80-60ab60df90fc" />
