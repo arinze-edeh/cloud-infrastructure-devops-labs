@@ -347,7 +347,10 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
 **Creation sequence:** Terraform correctly resolved the implicit dependency and created the S3 bucket first, then applied the public access block. The bucket was confirmed created with `id=xfusion-s3-14217`.
 
-*Screenshot: Terminal output of `terraform apply -auto-approve` showing both resources created successfully*
+*Screenshots: Terminal output of `terraform apply -auto-approve` showing both resources created successfully*
+
+<img width="1064" height="695" alt="image" src="https://github.com/user-attachments/assets/44384778-ca64-4d51-a2ce-3aa823ac8b44" />
+<img width="1072" height="402" alt="image" src="https://github.com/user-attachments/assets/6b035195-d31e-4853-ada2-f21ea1b70509" />
 
 ---
 
@@ -474,8 +477,6 @@ Applies all four S3 Block Public Access controls to the bucket. Using `aws_s3_bu
 
 
 
-<img width="1064" height="695" alt="image" src="https://github.com/user-attachments/assets/44384778-ca64-4d51-a2ce-3aa823ac8b44" />
-<img width="1072" height="402" alt="image" src="https://github.com/user-attachments/assets/6b035195-d31e-4853-ada2-f21ea1b70509" />
 <img width="1070" height="328" alt="image" src="https://github.com/user-attachments/assets/8cbcb51e-a7d5-437b-93ac-a12b18a8c529" />
 <img width="1071" height="342" alt="image" src="https://github.com/user-attachments/assets/922bd9c2-ca73-4ca7-8953-dc81c5b8e7b4" />
 
