@@ -94,6 +94,8 @@ When prompted, type `yes` to permanently add the host to `known_hosts`, then ent
 
 *Screenshot: SSH login to jenkins node from jumphost*
 
+<img width="1030" height="654" alt="image" src="https://github.com/user-attachments/assets/23ff453d-1879-47cc-933b-0bfd6ac33ad0" />
+
 ---
 
 ### Step 2: Update Package Index
@@ -427,7 +429,7 @@ This is the expected workflow in these environments and is consistent with the t
 * [OpenJDK 17 on Ubuntu 24.04](https://openjdk.org/projects/jdk/17/)
 * [KodeKloud Nautilus Lab Platform](https://kodekloud.com)
 
-<img width="1030" height="654" alt="image" src="https://github.com/user-attachments/assets/23ff453d-1879-47cc-933b-0bfd6ac33ad0" />
+
 <img width="1031" height="793" alt="image" src="https://github.com/user-attachments/assets/9eac248e-77cf-4829-94be-d86566a72d65" />
 <img width="1032" height="852" alt="image" src="https://github.com/user-attachments/assets/64e3da6d-385e-4f46-81db-9f2a170aecdf" />
 <img width="1032" height="852" alt="image" src="https://github.com/user-attachments/assets/c64d4d02-68b4-4aa0-9f3e-72126380e2c7" />
