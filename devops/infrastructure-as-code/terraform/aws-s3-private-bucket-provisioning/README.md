@@ -237,6 +237,8 @@ drwxr-x--- 1 bob bob 4096 Apr 15 01:51 ..
 
 *Screenshot: Terminal output showing updated directory listing with main.tf now present*
 
+<img width="1073" height="542" alt="image" src="https://github.com/user-attachments/assets/56c9e34c-4e9c-474f-8bb2-77202c4e78de" />
+
 ---
 
 ### Step 6 - Initialize Terraform
@@ -261,6 +263,8 @@ Terraform has been successfully initialized!
 ```
 
 *Screenshot: Terminal output of `terraform init` showing provider download and successful initialization*
+
+<img width="1063" height="628" alt="image" src="https://github.com/user-attachments/assets/70c88577-3dd7-45b1-86b9-7e9f9f0394f2" />
 
 ---
 
@@ -464,8 +468,7 @@ Applies all four S3 Block Public Access controls to the bucket. Using `aws_s3_bu
 
 
 
-<img width="1073" height="542" alt="image" src="https://github.com/user-attachments/assets/56c9e34c-4e9c-474f-8bb2-77202c4e78de" />
-<img width="1063" height="628" alt="image" src="https://github.com/user-attachments/assets/70c88577-3dd7-45b1-86b9-7e9f9f0394f2" />
+
 <img width="1071" height="491" alt="image" src="https://github.com/user-attachments/assets/e4237265-df33-488c-85f6-8b0f4c727264" />
 <img width="1075" height="732" alt="image" src="https://github.com/user-attachments/assets/3221ed94-60b4-429f-bfac-9e86d276182d" />
 <img width="1071" height="345" alt="image" src="https://github.com/user-attachments/assets/cc28b058-59c3-408e-ac30-37689ffb48dd" />
