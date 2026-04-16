@@ -197,6 +197,8 @@ From the Jenkins dashboard, navigate to the Plugin Manager:
 
 Screenshot: Manage Jenkins page with Plugins option highlighted under System Configuration
 
+<img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/9b995cc5-0a26-4e2f-88e0-ad0f8ec83957" />
+
 This opens the Plugin Manager at:
 
 ```
@@ -392,11 +394,8 @@ The following criteria confirm successful completion of this implementation:
 
 
 
-<img width="1025" height="825" alt="image" src="https://github.com/user-attachments/assets/a3cc01ff-78d0-4dca-9aa8-7321f4df5e91" />
 
 
-
-<img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/9b995cc5-0a26-4e2f-88e0-ad0f8ec83957" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/cddaa567-f471-45a7-adf8-1cf566f4e60e" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/9d559427-fdf6-4b1e-a127-36e2ed1e023a" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/845c836d-c51d-4eaf-9a46-14465eeaa7a4" />
@@ -411,5 +410,3 @@ The following criteria confirm successful completion of this implementation:
 
 
 
-
-<img width="1116" height="528" alt="image" src="https://github.com/user-attachments/assets/08a0e4d1-9189-4aa7-8618-195d5dd880be" />
