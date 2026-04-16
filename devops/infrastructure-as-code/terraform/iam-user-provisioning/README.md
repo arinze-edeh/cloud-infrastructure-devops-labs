@@ -336,7 +336,9 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 * `path = "/"` is the default IAM path, placing the user in the root namespace.
 * Attributes marked `(known after apply)` are server-assigned values such as `arn`, `id`, and `unique_id`, which will be populated post-creation.
 
-> Screenshot: `07-terraform-plan.png`
+> Screenshot: 
+
+<img width="1051" height="574" alt="image" src="https://github.com/user-attachments/assets/6930ddb9-2a12-48f1-95ec-b2f85a2597e0" />
 
 ---
 
@@ -524,7 +526,7 @@ No errors were encountered during this implementation. The following pre-conditi
 
 
 
-<img width="1051" height="574" alt="image" src="https://github.com/user-attachments/assets/6930ddb9-2a12-48f1-95ec-b2f85a2597e0" />
+
 <img width="1037" height="533" alt="image" src="https://github.com/user-attachments/assets/8154162c-7a9c-48af-9fc4-fd0dc5d46232" />
 <img width="1046" height="591" alt="image" src="https://github.com/user-attachments/assets/100a741f-8c49-4ca6-92e6-466784e5b867" />
 <img width="1048" height="352" alt="image" src="https://github.com/user-attachments/assets/2349df51-91dc-4a92-8802-47f1ce6c4255" />
