@@ -213,7 +213,9 @@ The Plugin Manager opens on the **Updates** tab by default, displaying plugins w
 
 Screenshot: Plugin Manager Updates tab showing Bouncycastle API with one pending update
 
-This tab is informational at this stage. Proceed to the **Available plugins** tab to install the required plugins.
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/cddaa567-f471-45a7-adf8-1cf566f4e60e" />
+
+>This tab is informational at this stage. Proceed to the **Available plugins** tab to install the required plugins.
 
 ---
 
@@ -396,7 +398,7 @@ The following criteria confirm successful completion of this implementation:
 
 
 
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/cddaa567-f471-45a7-adf8-1cf566f4e60e" />
+
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/9d559427-fdf6-4b1e-a127-36e2ed1e023a" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/845c836d-c51d-4eaf-9a46-14465eeaa7a4" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/e9af244b-cb08-4504-84c8-fc5b1f7924c9" />
