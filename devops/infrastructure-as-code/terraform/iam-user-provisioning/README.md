@@ -114,7 +114,9 @@ drwxr-x--- 1 bob bob 4096 Apr 16 00:13 ..
 
 The directory contains only `provider.tf` and the lab `README.MD`. No `main.tf` exists yet. The provider configuration is already in place and does not need to be modified.
 
-> Screenshot: `01-initial-directory-listing.png`
+> Screenshot: 
+
+<img width="1038" height="578" alt="image" src="https://github.com/user-attachments/assets/a403401d-cc6d-490f-9ffd-e1bd036ec85f" />
 
 ---
 
@@ -506,7 +508,7 @@ No errors were encountered during this implementation. The following pre-conditi
 
 
 
-<img width="1038" height="578" alt="image" src="https://github.com/user-attachments/assets/a403401d-cc6d-490f-9ffd-e1bd036ec85f" />
+
 <img width="1074" height="801" alt="image" src="https://github.com/user-attachments/assets/8c8e01ed-048a-4362-bb2b-52a23a3c4b28" />
 <img width="1045" height="590" alt="image" src="https://github.com/user-attachments/assets/efaf1b4d-f2c7-4736-b6b8-67e44c3c31a8" />
 <img width="1045" height="677" alt="image" src="https://github.com/user-attachments/assets/30c56ad9-9701-4353-89d2-1efe093499ed" />
