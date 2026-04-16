@@ -299,6 +299,8 @@ This triggers a safe restart of Jenkins once all plugin downloads complete and n
 
 Screenshot: Download progress page bottom section showing Restart Jenkins checkbox being enabled
 
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/0facbe68-e7a2-4164-8f81-472f380265f0" />
+
 ---
 
 ### Step 11: Wait for Jenkins to Restart
@@ -311,6 +313,8 @@ Jenkins will initiate a restart. The browser will display the Jenkins restarting
 Do not close the browser tab. The page will automatically redirect to the login screen once Jenkins finishes restarting.
 
 Screenshot: Jenkins restarting splash screen with loading indicator and Safe Restart note
+
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/20510d18-4818-41e9-8b9c-c164899f2878" />
 
 ---
 
@@ -406,7 +410,6 @@ The following criteria confirm successful completion of this implementation:
 
 
 
-<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/20510d18-4818-41e9-8b9c-c164899f2878" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/976eca49-5fa0-4c5a-90b0-8c2f11f88a8e" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/943394e4-b2e5-405d-a468-0888b2bae290" />
 
