@@ -292,7 +292,9 @@ Success! The configuration is valid.
 
 No syntax errors, undefined references, or structural issues were detected. This step is a pre-flight check that catches authoring mistakes before any API calls are made.
 
-> Screenshot: `06-terraform-validate.png`
+> Screenshot: 
+
+<img width="1043" height="642" alt="image" src="https://github.com/user-attachments/assets/09765f08-a903-4511-9808-a23a1d14ce65" />
 
 ---
 
@@ -522,7 +524,6 @@ No errors were encountered during this implementation. The following pre-conditi
 
 
 
-<img width="1043" height="642" alt="image" src="https://github.com/user-attachments/assets/09765f08-a903-4511-9808-a23a1d14ce65" />
 <img width="1051" height="574" alt="image" src="https://github.com/user-attachments/assets/6930ddb9-2a12-48f1-95ec-b2f85a2597e0" />
 <img width="1037" height="533" alt="image" src="https://github.com/user-attachments/assets/8154162c-7a9c-48af-9fc4-fd0dc5d46232" />
 <img width="1046" height="591" alt="image" src="https://github.com/user-attachments/assets/100a741f-8c49-4ca6-92e6-466784e5b867" />
