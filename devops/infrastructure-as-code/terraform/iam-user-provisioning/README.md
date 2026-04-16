@@ -13,7 +13,6 @@
 - [Problem Statement](#problem-statement)
 - [Architecture and Design Intent](#architecture-and-design-intent)
 - [Prerequisites](#prerequisites)
-- [Repository Structure](#repository-structure)
 - [Implementation Guide](#implementation-guide)
   - [Step 1: Inspect the Working Directory](#step-1-inspect-the-working-directory)
   - [Step 2: Review the Existing Provider Configuration](#step-2-review-the-existing-provider-configuration)
@@ -76,19 +75,6 @@ LocalStack simulates the AWS API surface on `http://aws:4566`, enabling fully of
 | AWS CLI | Configured to target LocalStack endpoint |
 | LocalStack | Running and accessible at `http://aws:4566` |
 | Working Directory | `/home/bob/terraform` |
-
----
-
-## Repository Structure
-
-```
-/home/bob/terraform/
-    main.tf           # IAM user resource definition (authored in this task)
-    provider.tf       # AWS provider and LocalStack endpoint configuration
-    README.MD         # Original lab readme
-    .terraform/       # Provider plugins (generated after terraform init)
-    .terraform.lock.hcl  # Dependency lock file (generated after terraform init)
-```
 
 ---
 
