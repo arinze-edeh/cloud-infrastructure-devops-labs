@@ -178,7 +178,9 @@ provider "aws" {
 * The `iam` endpoint is mapped to `http://aws:4566`, confirming that all IAM API calls will be intercepted by LocalStack.
 * The provider version is pinned to `5.91.0` to ensure reproducibility.
 
-> Screenshot: `02-provider-tf-contents.png`
+> Screenshot: 
+
+<img width="1074" height="801" alt="image" src="https://github.com/user-attachments/assets/8c8e01ed-048a-4362-bb2b-52a23a3c4b28" />
 
 ---
 
@@ -509,7 +511,7 @@ No errors were encountered during this implementation. The following pre-conditi
 
 
 
-<img width="1074" height="801" alt="image" src="https://github.com/user-attachments/assets/8c8e01ed-048a-4362-bb2b-52a23a3c4b28" />
+
 <img width="1045" height="590" alt="image" src="https://github.com/user-attachments/assets/efaf1b4d-f2c7-4736-b6b8-67e44c3c31a8" />
 <img width="1045" height="677" alt="image" src="https://github.com/user-attachments/assets/30c56ad9-9701-4353-89d2-1efe093499ed" />
 <img width="1046" height="304" alt="image" src="https://github.com/user-attachments/assets/6b2928ae-767f-4dd0-b09b-bd722f0a1bd5" />
