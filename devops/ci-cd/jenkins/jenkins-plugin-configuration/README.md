@@ -147,6 +147,8 @@ jobs
 
 Screenshot: ps aux output showing Jenkins Java process on port 8080 and ls /var/lib/jenkins directory listing
 
+<img width="1036" height="484" alt="image" src="https://github.com/user-attachments/assets/1024e223-0b0c-4ad2-82c7-ace82a469a15" />
+
 ---
 
 ### Step 3: Access the Jenkins Web UI
@@ -385,7 +387,7 @@ The following criteria confirm successful completion of this implementation:
 
 
 <img width="1025" height="825" alt="image" src="https://github.com/user-attachments/assets/a3cc01ff-78d0-4dca-9aa8-7321f4df5e91" />
-<img width="1036" height="484" alt="image" src="https://github.com/user-attachments/assets/1024e223-0b0c-4ad2-82c7-ace82a469a15" />
+
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/36123f00-f40a-40fe-bec6-231dde1b14b3" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/8e928821-b890-4c13-88ac-6c8a654d2e2e" />
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/9b995cc5-0a26-4e2f-88e0-ad0f8ec83957" />
