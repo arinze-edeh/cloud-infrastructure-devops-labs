@@ -163,6 +163,8 @@ The Jenkins login page should appear.
 
 Screenshot: Jenkins login page rendered in browser at port 8080
 
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/36123f00-f40a-40fe-bec6-231dde1b14b3" />
+
 ---
 
 ### Step 4: Log In to Jenkins
@@ -176,9 +178,13 @@ Enter the administrator credentials on the Jenkins sign-in form and click **Sign
 
 Screenshot: Jenkins Sign in form with username admin populated and password entered
 
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/36123f00-f40a-40fe-bec6-231dde1b14b3" />
+
 After successful authentication, the Jenkins dashboard loads and displays the **Welcome to Jenkins!** landing page with no jobs configured.
 
 Screenshot: Jenkins dashboard showing Welcome to Jenkins and empty job list
+
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/8e928821-b890-4c13-88ac-6c8a654d2e2e" />
 
 ---
 
@@ -388,8 +394,8 @@ The following criteria confirm successful completion of this implementation:
 
 <img width="1025" height="825" alt="image" src="https://github.com/user-attachments/assets/a3cc01ff-78d0-4dca-9aa8-7321f4df5e91" />
 
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/36123f00-f40a-40fe-bec6-231dde1b14b3" />
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/8e928821-b890-4c13-88ac-6c8a654d2e2e" />
+
+
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/9b995cc5-0a26-4e2f-88e0-ad0f8ec83957" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/cddaa567-f471-45a7-adf8-1cf566f4e60e" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/9d559427-fdf6-4b1e-a127-36e2ed1e023a" />
