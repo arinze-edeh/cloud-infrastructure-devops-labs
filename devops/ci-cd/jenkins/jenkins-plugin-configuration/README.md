@@ -277,9 +277,15 @@ The Download progress page displays the installation status for each plugin and 
 
 Screenshot: Download progress page showing first set of dependencies all resolving to Success
 
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/845c836d-c51d-4eaf-9a46-14465eeaa7a4" />
+
 Screenshot: Download progress page showing second set of dependencies including Git resolving to Success
 
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/e9af244b-cb08-4504-84c8-fc5b1f7924c9" />
+
 Screenshot: Download progress page showing final entries including GitLab and Loading plugin extensions resolving to Success
+
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/0facbe68-e7a2-4164-8f81-472f380265f0" />
 
 ---
 
@@ -400,10 +406,6 @@ The following criteria confirm successful completion of this implementation:
 
 
 
-
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/845c836d-c51d-4eaf-9a46-14465eeaa7a4" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/e9af244b-cb08-4504-84c8-fc5b1f7924c9" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/0facbe68-e7a2-4164-8f81-472f380265f0" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/20510d18-4818-41e9-8b9c-c164899f2878" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/976eca49-5fa0-4c5a-90b0-8c2f11f88a8e" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/943394e4-b2e5-405d-a468-0888b2bae290" />
