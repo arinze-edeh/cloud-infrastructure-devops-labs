@@ -379,7 +379,9 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 The IAM user `iamuser_jim` was created successfully in under one second. The resource ID is `iamuser_jim`, consistent with the `name` attribute defined in `main.tf`.
 
-> Screenshot: `08-terraform-apply.png`
+> Screenshot: 
+
+<img width="1037" height="533" alt="image" src="https://github.com/user-attachments/assets/8154162c-7a9c-48af-9fc4-fd0dc5d46232" />
 
 ---
 
@@ -527,7 +529,6 @@ No errors were encountered during this implementation. The following pre-conditi
 
 
 
-<img width="1037" height="533" alt="image" src="https://github.com/user-attachments/assets/8154162c-7a9c-48af-9fc4-fd0dc5d46232" />
 <img width="1046" height="591" alt="image" src="https://github.com/user-attachments/assets/100a741f-8c49-4ca6-92e6-466784e5b867" />
 <img width="1048" height="352" alt="image" src="https://github.com/user-attachments/assets/2349df51-91dc-4a92-8802-47f1ce6c4255" />
 
