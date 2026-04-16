@@ -215,7 +215,9 @@ resource "aws_iam_user" "iamuser_jim" {
 * The Terraform resource label `iamuser_jim` mirrors the IAM username for clarity and traceability.
 * No additional arguments (`path`, `tags`, `permissions_boundary`) are specified because the task requires only the user creation with the specified name. The `path` defaults to `/` as confirmed in the plan output.
 
-> Screenshot: `03-main-tf-authored.png`
+> Screenshot: 
+
+<img width="1045" height="677" alt="image" src="https://github.com/user-attachments/assets/30c56ad9-9701-4353-89d2-1efe093499ed" />
 
 ---
 
@@ -513,7 +515,7 @@ No errors were encountered during this implementation. The following pre-conditi
 
 
 <img width="1045" height="590" alt="image" src="https://github.com/user-attachments/assets/efaf1b4d-f2c7-4736-b6b8-67e44c3c31a8" />
-<img width="1045" height="677" alt="image" src="https://github.com/user-attachments/assets/30c56ad9-9701-4353-89d2-1efe093499ed" />
+
 <img width="1046" height="304" alt="image" src="https://github.com/user-attachments/assets/6b2928ae-767f-4dd0-b09b-bd722f0a1bd5" />
 <img width="1045" height="677" alt="image" src="https://github.com/user-attachments/assets/7edfe72d-dae3-4022-8c79-ef217c6d1592" />
 <img width="1043" height="642" alt="image" src="https://github.com/user-attachments/assets/09765f08-a903-4511-9808-a23a1d14ce65" />
