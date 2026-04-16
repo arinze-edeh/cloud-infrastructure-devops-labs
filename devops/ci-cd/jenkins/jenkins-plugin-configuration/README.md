@@ -329,6 +329,8 @@ Once Jenkins finishes restarting, the browser automatically redirects to the log
 
 Screenshot: Jenkins login page reappearing after restart with admin credentials being entered
 
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/976eca49-5fa0-4c5a-90b0-8c2f11f88a8e" />
+
 ---
 
 ### Step 13: Verify Installed Plugins
@@ -344,6 +346,9 @@ After logging back in, navigate to **Manage Jenkins > Plugins > Installed plugin
 | GitLab Plugin | 1.9.13 | 97 | Yes |
 
 Screenshot: Installed plugins tab filtered by "git" showing Git client plugin, Git plugin, and GitLab Plugin all enabled and healthy
+
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/943394e4-b2e5-405d-a468-0888b2bae290" />
+
 
 Both the **Git** and **GitLab** plugins are confirmed installed, enabled, and healthy. The task is complete.
 
@@ -398,23 +403,3 @@ The following criteria confirm successful completion of this implementation:
 | [GitLab Plugin](https://plugins.jenkins.io/gitlab-plugin/) | GitLab webhook and build trigger integration |
 | [Jenkins Managing Plugins](https://www.jenkins.io/doc/book/managing/plugins/) | Official documentation for plugin lifecycle management |
 | `/var/lib/jenkins/plugins/` | On-disk location of all installed Jenkins plugins |
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/976eca49-5fa0-4c5a-90b0-8c2f11f88a8e" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/943394e4-b2e5-405d-a468-0888b2bae290" />
-
-
-
-
-
-
