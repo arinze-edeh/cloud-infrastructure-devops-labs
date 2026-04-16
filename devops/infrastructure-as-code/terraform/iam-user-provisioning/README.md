@@ -401,7 +401,10 @@ aws_iam_user.iamuser_jim
 
 The resource address `aws_iam_user.iamuser_jim` is recorded in the state file. This confirms Terraform has full lifecycle ownership of the resource and will manage future changes or destruction operations against it.
 
-> Screenshot: `09-terraform-state-list.png`
+> Screenshot: 
+
+
+<img width="1046" height="591" alt="image" src="https://github.com/user-attachments/assets/100a741f-8c49-4ca6-92e6-466784e5b867" />
 
 ---
 
@@ -438,7 +441,11 @@ aws --endpoint-url=http://aws:4566 iam list-users
 
 This dual verification (Terraform state + AWS CLI) constitutes a complete end-to-end validation of the provisioning workflow.
 
-> Screenshot: `10-aws-cli-iam-list-users.png`
+> Screenshot: 
+
+
+<img width="1048" height="352" alt="image" src="https://github.com/user-attachments/assets/2349df51-91dc-4a92-8802-47f1ce6c4255" />
+
 
 ---
 
@@ -518,19 +525,4 @@ No errors were encountered during this implementation. The following pre-conditi
 ---
 
 *Authored by Arinze Edeh | Cloud and DevOps Engineer | GitHub: [arinze-edeh](https://github.com/arinze-edeh)*
-
-
-
-
-
-
-
-
-
-
-
-<img width="1046" height="591" alt="image" src="https://github.com/user-attachments/assets/100a741f-8c49-4ca6-92e6-466784e5b867" />
-<img width="1048" height="352" alt="image" src="https://github.com/user-attachments/assets/2349df51-91dc-4a92-8802-47f1ce6c4255" />
-
-
 
