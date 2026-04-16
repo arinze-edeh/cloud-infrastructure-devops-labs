@@ -238,7 +238,9 @@ ls -1 ~/terraform/*.tf
 
 Only the two expected files are present. This satisfies the task constraint of not creating additional `.tf` files.
 
-> Screenshot: `04-tf-files-verified.png`
+> Screenshot: 
+
+<img width="1046" height="304" alt="image" src="https://github.com/user-attachments/assets/6b2928ae-767f-4dd0-b09b-bd722f0a1bd5" />
 
 ---
 
@@ -514,9 +516,9 @@ No errors were encountered during this implementation. The following pre-conditi
 
 
 
-<img width="1045" height="590" alt="image" src="https://github.com/user-attachments/assets/efaf1b4d-f2c7-4736-b6b8-67e44c3c31a8" />
 
-<img width="1046" height="304" alt="image" src="https://github.com/user-attachments/assets/6b2928ae-767f-4dd0-b09b-bd722f0a1bd5" />
+
+
 <img width="1045" height="677" alt="image" src="https://github.com/user-attachments/assets/7edfe72d-dae3-4022-8c79-ef217c6d1592" />
 <img width="1043" height="642" alt="image" src="https://github.com/user-attachments/assets/09765f08-a903-4511-9808-a23a1d14ce65" />
 <img width="1051" height="574" alt="image" src="https://github.com/user-attachments/assets/6930ddb9-2a12-48f1-95ec-b2f85a2597e0" />
