@@ -114,14 +114,20 @@ Upon successful authentication, the Jenkins dashboard will load, showing the exi
 
 *Screenshot: Plugin Manager Updates tab showing bouncycastle API pending update selected*
 
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/be8d3488-efb3-4a25-b5a3-dfba8f77860e" />
+
 8. On the **Download progress** page, confirm that bouncycastle API shows the status: **Downloaded Successfully. Will be activated during the next boot**.
 9. Check the box labeled **Restart Jenkins when installation is complete and no jobs are running**.
 
 *Screenshot: Download progress page with bouncycastle API download success status and restart checkbox selected*
 
+<img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/de429754-be00-41ca-ae32-29ffcbdd9519" />
+
 10. Wait for Jenkins to complete the restart cycle. The browser will display the Jenkins restarting screen.
 
 *Screenshot: Jenkins restarting screen*
+
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/1324d3bb-670a-48ec-b846-ff563ddc595d" />
 
 ---
 
@@ -321,9 +327,6 @@ Global matrix permissions alone do not apply project-level overrides. Each job m
 
 
 
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/be8d3488-efb3-4a25-b5a3-dfba8f77860e" />
-<img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/de429754-be00-41ca-ae32-29ffcbdd9519" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/1324d3bb-670a-48ec-b846-ff563ddc595d" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/0d58d15a-511d-4697-a052-8ce01bf67ca1" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/60421e48-52e6-40e8-8a48-d81a0b59ded8" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/ddbb1ffc-2aac-4340-a6fd-7ff7949b274c" />
