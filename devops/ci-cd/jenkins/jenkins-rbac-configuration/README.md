@@ -1,6 +1,6 @@
 # Jenkins CI/CD User Access Configuration with Project-Based Matrix Authorization Strategy
 
-> **Enterprise-grade Jenkins user access management using the Matrix Authorization Strategy Plugin for granular, project-level permission control in CI/CD pipelines.**
+> **Enterprise-style Jenkins user access management using the Matrix Authorization Strategy Plugin for granular, project-level permission control in CI/CD pipelines.**
 
 ---
 
@@ -87,9 +87,13 @@ Jenkins Server (Port 8080)
 
 *Screenshot: Jenkins login page with admin credentials entered*
 
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/10effea9-4969-4324-a3a8-ea4d58dff6f8" />
+
 Upon successful authentication, the Jenkins dashboard will load, showing the existing job **Helloworld** in the jobs list with no previous build history (Last Success: N/A, Last Failure: N/A, Last Duration: N/A).
 
 *Screenshot: Jenkins dashboard showing the Helloworld job*
+
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/dc1eea89-db71-4abb-a46a-27493b280969" />
 
 ---
 
@@ -315,8 +319,6 @@ Global matrix permissions alone do not apply project-level overrides. Each job m
 
 
 
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/10effea9-4969-4324-a3a8-ea4d58dff6f8" />
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/dc1eea89-db71-4abb-a46a-27493b280969" />
 <img width="1919" height="1026" alt="image" src="https://github.com/user-attachments/assets/68070ae9-a4f8-43a3-bae9-f68f64583148" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/be8d3488-efb3-4a25-b5a3-dfba8f77860e" />
 <img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/de429754-be00-41ca-ae32-29ffcbdd9519" />
