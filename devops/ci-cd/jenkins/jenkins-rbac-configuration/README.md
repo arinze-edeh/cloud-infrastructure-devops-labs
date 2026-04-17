@@ -179,6 +179,8 @@ After Jenkins restarts, log back in as `admin`.
 
 *Screenshot: Installed plugins page confirming Matrix Authorization Strategy Plugin 3.2.9 is enabled*
 
+<img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/799e69cf-43e7-4cff-93fc-4ca29e4d4bd6" />
+
 ---
 
 ### Step 5: Create the Jenkins User `javed`
@@ -335,7 +337,6 @@ Global matrix permissions alone do not apply project-level overrides. Each job m
 
 
 
-<img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/799e69cf-43e7-4cff-93fc-4ca29e4d4bd6" />
 <img width="1916" height="1018" alt="image" src="https://github.com/user-attachments/assets/cf2809d5-0b8a-41df-86ac-3a29e30effe6" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/c5f10db7-03cd-4fe3-8f41-20d485c2599a" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/bba33709-eed3-487c-9555-abcac03afc95" />
