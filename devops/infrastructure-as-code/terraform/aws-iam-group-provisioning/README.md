@@ -235,7 +235,11 @@ resource "aws_iam_group" "james_group" {
 | Resource label | `james_group` | Local Terraform identifier for state references |
 | `name` | `iamgroup_james` | The IAM group name as it will appear in AWS |
 
-Screenshot: `main.tf opened in vi with the aws_iam_group resource block`
+Screenshots: `main.tf opened in vi with the aws_iam_group resource block`
+
+<img width="1038" height="766" alt="image" src="https://github.com/user-attachments/assets/41a04851-3316-4b09-84ec-7bd7323e6522" />
+<img width="1050" height="771" alt="image" src="https://github.com/user-attachments/assets/16a60360-ec6c-453a-acea-796ee02b86b0" />
+<img width="1050" height="598" alt="image" src="https://github.com/user-attachments/assets/ade8ce2a-7098-4887-975a-4827d6f312a4" />
 
 ---
 
@@ -467,12 +471,6 @@ The full provisioning lifecycle completed without errors:
 
 
 
-<img width="1026" height="527" alt="image" src="https://github.com/user-attachments/assets/0c9694f2-763e-4afc-b8b9-2a323294bdd0" />
-
-
-<img width="1038" height="766" alt="image" src="https://github.com/user-attachments/assets/41a04851-3316-4b09-84ec-7bd7323e6522" />
-<img width="1050" height="771" alt="image" src="https://github.com/user-attachments/assets/16a60360-ec6c-453a-acea-796ee02b86b0" />
-<img width="1050" height="598" alt="image" src="https://github.com/user-attachments/assets/ade8ce2a-7098-4887-975a-4827d6f312a4" />
 <img width="1047" height="529" alt="image" src="https://github.com/user-attachments/assets/3339c337-da67-4021-a166-430dd6c38904" />
 <img width="1047" height="606" alt="image" src="https://github.com/user-attachments/assets/a01cb9f3-e0be-4230-880e-e19613b6961d" />
 <img width="1050" height="527" alt="image" src="https://github.com/user-attachments/assets/31b18a74-5753-43bc-9f37-8b9264172e7f" />
