@@ -338,19 +338,3 @@ Global matrix permissions alone do not apply project-level overrides. Each job m
 ---
 
 *This implementation was executed on Jenkins 2.541.2 running on a KodeKloud lab environment accessible via port 8080.*
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/dcf628c6-697e-4820-9287-b8aebaf30d15" />
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/47fc3d70-92cd-4700-a06c-5705cc25984a" />
-<img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/9631bed4-c723-4784-8822-9df13cfcef91" />
