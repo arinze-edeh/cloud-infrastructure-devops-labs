@@ -190,6 +190,8 @@ After Jenkins restarts, log back in as `admin`.
 
 *Screenshot: Manage Jenkins page with Users option highlighted under Security section*
 
+<img width="1916" height="1018" alt="image" src="https://github.com/user-attachments/assets/cf2809d5-0b8a-41df-86ac-3a29e30effe6" />
+
 3. On the **Users** page, only the `admin` user currently exists (Users: 1).
 4. Click the **+ Create User** button.
 
@@ -337,7 +339,6 @@ Global matrix permissions alone do not apply project-level overrides. Each job m
 
 
 
-<img width="1916" height="1018" alt="image" src="https://github.com/user-attachments/assets/cf2809d5-0b8a-41df-86ac-3a29e30effe6" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/c5f10db7-03cd-4fe3-8f41-20d485c2599a" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/bba33709-eed3-487c-9555-abcac03afc95" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/5a801dc8-2fcd-4223-b1ff-071e05084004" />
