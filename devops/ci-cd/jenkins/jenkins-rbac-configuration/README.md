@@ -143,6 +143,8 @@ After Jenkins restarts and the login page reappears, log back in as `admin`.
 
 *Screenshot: Available plugins page showing Matrix Authorization Strategy plugin selected for installation*
 
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/0d58d15a-511d-4697-a052-8ce01bf67ca1" />
+
 6. On the **Download progress** page, confirm all components install successfully:
    - **commons-lang3 v3.x Jenkins API:** Success
    - **Ionicons API:** Success
@@ -327,7 +329,6 @@ Global matrix permissions alone do not apply project-level overrides. Each job m
 
 
 
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/0d58d15a-511d-4697-a052-8ce01bf67ca1" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/60421e48-52e6-40e8-8a48-d81a0b59ded8" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/ddbb1ffc-2aac-4340-a6fd-7ff7949b274c" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/ef966c29-0e6c-4115-a863-9e10f79f82d4" />
