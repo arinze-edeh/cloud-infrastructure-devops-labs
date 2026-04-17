@@ -153,13 +153,19 @@ After Jenkins restarts and the login page reappears, log back in as `admin`.
 
 *Screenshot: Download progress page showing all Matrix Authorization Strategy components installed successfully*
 
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/60421e48-52e6-40e8-8a48-d81a0b59ded8" />
+
 7. Check the box labeled **Restart Jenkins when installation is complete and no jobs are running**.
 
 *Screenshot: Download progress page with restart checkbox selected after successful installation*
 
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/ddbb1ffc-2aac-4340-a6fd-7ff7949b274c" />
+
 8. Wait for Jenkins to restart again.
 
 *Screenshot: Jenkins restarting screen after Matrix Authorization Strategy installation*
+
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/ef966c29-0e6c-4115-a863-9e10f79f82d4" />
 
 ---
 
@@ -329,9 +335,6 @@ Global matrix permissions alone do not apply project-level overrides. Each job m
 
 
 
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/60421e48-52e6-40e8-8a48-d81a0b59ded8" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/ddbb1ffc-2aac-4340-a6fd-7ff7949b274c" />
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/ef966c29-0e6c-4115-a863-9e10f79f82d4" />
 <img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/799e69cf-43e7-4cff-93fc-4ca29e4d4bd6" />
 <img width="1916" height="1018" alt="image" src="https://github.com/user-attachments/assets/cf2809d5-0b8a-41df-86ac-3a29e30effe6" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/c5f10db7-03cd-4fe3-8f41-20d485c2599a" />
