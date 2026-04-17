@@ -249,6 +249,8 @@ After Jenkins restarts, log back in as `admin`.
 
 *Screenshot: Jenkins dashboard after saving security config, showing Helloworld job*
 
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/4ff8b40e-be45-4e55-9850-30fe2153af41" />
+
 2. In the left sidebar of the job, click **Configure**.
 3. On the **Configure** page under the **General** section, check the box labeled **Enable project-based security**.
 4. The **Inheritance Strategy** dropdown will appear, set to **Inherit permissions from parent ACL**.
@@ -258,6 +260,8 @@ After Jenkins restarts, log back in as `admin`.
 8. Click **Save**.
 
 *Screenshot: Helloworld job Configure page showing Enable project-based security checked, with Javed having only Job Read permission selected*
+
+<img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/47bc73df-f5f0-46ce-a261-3d2c960d5979" />
 
 ---
 
@@ -347,8 +351,6 @@ Global matrix permissions alone do not apply project-level overrides. Each job m
 
 
 
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/4ff8b40e-be45-4e55-9850-30fe2153af41" />
-<img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/47bc73df-f5f0-46ce-a261-3d2c960d5979" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/dcf628c6-697e-4820-9287-b8aebaf30d15" />
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/47fc3d70-92cd-4700-a06c-5705cc25984a" />
 <img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/9631bed4-c723-4784-8822-9df13cfcef91" />
