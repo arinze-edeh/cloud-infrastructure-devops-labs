@@ -271,6 +271,8 @@ The `.terraform.lock.hcl` file is generated at this stage and records the exact 
 
 Screenshot: `terraform init completing successfully with provider v5.91.0 installed`
 
+<img width="1047" height="529" alt="image" src="https://github.com/user-attachments/assets/3339c337-da67-4021-a166-430dd6c38904" />
+
 ---
 
 ### Step 5: Validate the Configuration
@@ -290,6 +292,8 @@ Success! The configuration is valid.
 Validation confirms that the `aws_iam_group` resource block is syntactically correct and all required arguments are present according to the provider schema.
 
 Screenshot: `terraform validate returning Success with no errors`
+
+<img width="1047" height="606" alt="image" src="https://github.com/user-attachments/assets/a01cb9f3-e0be-4230-880e-e19613b6961d" />
 
 ---
 
@@ -330,6 +334,9 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 * **Default path:** The group is created at the IAM root path `/` as expected when no explicit `path` argument is provided.
 
 Screenshot: `terraform plan output showing + create for aws_iam_group.james_group`
+
+
+<img width="1050" height="527" alt="image" src="https://github.com/user-attachments/assets/31b18a74-5753-43bc-9f37-8b9264172e7f" />
 
 ---
 
@@ -470,9 +477,5 @@ The full provisioning lifecycle completed without errors:
 
 
 
-
-<img width="1047" height="529" alt="image" src="https://github.com/user-attachments/assets/3339c337-da67-4021-a166-430dd6c38904" />
-<img width="1047" height="606" alt="image" src="https://github.com/user-attachments/assets/a01cb9f3-e0be-4230-880e-e19613b6961d" />
-<img width="1050" height="527" alt="image" src="https://github.com/user-attachments/assets/31b18a74-5753-43bc-9f37-8b9264172e7f" />
 <img width="1053" height="695" alt="image" src="https://github.com/user-attachments/assets/bea5ef63-8278-49c6-96a2-ce3cac4e08cd" />
 <img width="1046" height="720" alt="image" src="https://github.com/user-attachments/assets/5782798d-2324-4746-a211-dd328917bd47" />
