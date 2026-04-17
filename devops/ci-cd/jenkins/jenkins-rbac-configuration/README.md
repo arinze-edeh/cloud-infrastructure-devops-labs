@@ -105,6 +105,8 @@ Upon successful authentication, the Jenkins dashboard will load, showing the exi
 
 *Screenshot: Manage Jenkins page showing Plugins option under System Configuration*
 
+<img width="1919" height="1026" alt="image" src="https://github.com/user-attachments/assets/68070ae9-a4f8-43a3-bae9-f68f64583148" />
+
 4. On the **Plugins** page, click the **Updates** tab in the left sidebar.
 5. A pending update for **bouncycastle API** (version `2.30.1.84-291.v9f17b_21896e2`) is listed.
 6. Select the checkbox next to the bouncycastle API plugin.
@@ -319,7 +321,6 @@ Global matrix permissions alone do not apply project-level overrides. Each job m
 
 
 
-<img width="1919" height="1026" alt="image" src="https://github.com/user-attachments/assets/68070ae9-a4f8-43a3-bae9-f68f64583148" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/be8d3488-efb3-4a25-b5a3-dfba8f77860e" />
 <img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/de429754-be00-41ca-ae32-29ffcbdd9519" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/1324d3bb-670a-48ec-b846-ff563ddc595d" />
