@@ -239,6 +239,8 @@ After Jenkins restarts, log back in as `admin`.
 
 *Screenshot: Security configuration page showing Project-based Matrix Authorization Strategy with admin having Administer, Javed having Overall Read, and Anonymous having no permissions*
 
+<img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/e0346419-4898-4b98-bec7-e3df95c1bcdb" />
+
 ---
 
 ### Step 7: Grant Job-Level Read Permission to `javed` on the Existing Job
@@ -345,7 +347,6 @@ Global matrix permissions alone do not apply project-level overrides. Each job m
 
 
 
-<img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/e0346419-4898-4b98-bec7-e3df95c1bcdb" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/4ff8b40e-be45-4e55-9850-30fe2153af41" />
 <img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/47bc73df-f5f0-46ce-a261-3d2c960d5979" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/dcf628c6-697e-4820-9287-b8aebaf30d15" />
