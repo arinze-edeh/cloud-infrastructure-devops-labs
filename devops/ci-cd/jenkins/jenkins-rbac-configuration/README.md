@@ -197,6 +197,8 @@ After Jenkins restarts, log back in as `admin`.
 
 *Screenshot: Jenkins own user database showing only the admin user*
 
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/c5f10db7-03cd-4fe3-8f41-20d485c2599a" />
+
 5. Fill in the **Create User** form with the following details:
    - **Username:** `javed`
    - **Password:** `BruCStrnMT5`
@@ -206,9 +208,13 @@ After Jenkins restarts, log back in as `admin`.
 
 *Screenshot: Create User form filled with username javed, password, and full name Javed*
 
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/bba33709-eed3-487c-9555-abcac03afc95" />
+
 7. The Users list now shows **Users: 2**, with both `admin` and `javed` (Full Name: `Javed`) listed.
 
 *Screenshot: Jenkins own user database showing admin and javed users with count 2*
+
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/5a801dc8-2fcd-4223-b1ff-071e05084004" />
 
 ---
 
@@ -339,9 +345,6 @@ Global matrix permissions alone do not apply project-level overrides. Each job m
 
 
 
-<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/c5f10db7-03cd-4fe3-8f41-20d485c2599a" />
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/bba33709-eed3-487c-9555-abcac03afc95" />
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/5a801dc8-2fcd-4223-b1ff-071e05084004" />
 <img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/e0346419-4898-4b98-bec7-e3df95c1bcdb" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/4ff8b40e-be45-4e55-9850-30fe2153af41" />
 <img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/47bc73df-f5f0-46ce-a261-3d2c960d5979" />
