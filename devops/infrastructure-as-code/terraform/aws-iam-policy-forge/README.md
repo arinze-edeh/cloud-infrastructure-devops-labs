@@ -182,6 +182,8 @@ aws ec2 describe-regions --region us-east-1 --query "Regions[?RegionName=='us-ea
 
 *Screenshot: Terminal output confirming `sts get-caller-identity` and `ec2 describe-regions` responses*
 
+<img width="1044" height="722" alt="image" src="https://github.com/user-attachments/assets/54f38917-0c99-46c6-a13a-fef99ae17595" />
+
 ---
 
 ### Step 3: Inspect the Working Directory
@@ -611,7 +613,7 @@ No errors were encountered during this implementation. The following is a record
 <img width="1027" height="547" alt="image" src="https://github.com/user-attachments/assets/b920b32f-6452-4d72-9408-aa963e48a32b" />
 
 <img width="1046" height="537" alt="image" src="https://github.com/user-attachments/assets/cbbd1ba5-c809-49b5-b605-32215732ffef" />
-<img width="1044" height="722" alt="image" src="https://github.com/user-attachments/assets/54f38917-0c99-46c6-a13a-fef99ae17595" />
+
 <img width="1046" height="707" alt="image" src="https://github.com/user-attachments/assets/103636f5-930c-4934-96a7-ca251a359d8b" />
 <img width="1044" height="697" alt="image" src="https://github.com/user-attachments/assets/f4680e90-98cb-46f4-b076-0bdf1d725016" />
 <img width="1070" height="697" alt="image" src="https://github.com/user-attachments/assets/934e7a51-dcf7-4b9a-9500-46eb54b67c59" />
