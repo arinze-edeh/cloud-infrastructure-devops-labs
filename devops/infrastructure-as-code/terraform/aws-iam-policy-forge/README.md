@@ -344,6 +344,8 @@ resource "aws_iam_policy" "iampolicy_rose" {
 
 *Screenshot: Terminal output of `cat main.tf` showing the authored resource block*
 
+<img width="1072" height="623" alt="image" src="https://github.com/user-attachments/assets/a8d03fdd-0740-4f22-9d65-44d8caf6c02b" />
+
 ---
 
 ### Step 6: Initialize the Terraform Working Directory
@@ -620,7 +622,7 @@ No errors were encountered during this implementation. The following is a record
 
 
 <img width="1046" height="745" alt="image" src="https://github.com/user-attachments/assets/a0a3c7e3-899c-4a64-a70e-a9976d83a8d1" />
-<img width="1072" height="623" alt="image" src="https://github.com/user-attachments/assets/a8d03fdd-0740-4f22-9d65-44d8caf6c02b" />
+
 <img width="1045" height="738" alt="image" src="https://github.com/user-attachments/assets/8c6ec297-8387-4133-8208-2677f1746e65" />
 <img width="1047" height="476" alt="image" src="https://github.com/user-attachments/assets/49850819-5a2b-470a-95aa-8acaadfa7063" />
 <img width="1068" height="696" alt="image" src="https://github.com/user-attachments/assets/20d39076-effe-4b8f-aa95-5668d134f5be" />
