@@ -626,12 +626,3 @@ No errors were encountered during this implementation. The following is a record
 ---
 
 *All commands, outputs, and configurations reflect the exact execution sequence performed on the target environment.*
-
-
-
-
-
-
-
-
-<img width="1070" height="654" alt="image" src="https://github.com/user-attachments/assets/0ad7dae9-e092-477e-9454-de500b343cc4" />
