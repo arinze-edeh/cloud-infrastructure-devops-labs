@@ -142,6 +142,8 @@ aws-cli/1.40.38 Python/3.10.12 Linux/6.8.0-106-generic botocore/1.38.39
 
 *Screenshot: Terminal output showing `whoami`, `terraform version`, and `aws --version` commands*
 
+<img width="1042" height="507" alt="image" src="https://github.com/user-attachments/assets/fdb9a472-14df-4a55-ac10-5986f69c0c2e" />
+
 ---
 
 ### Step 2: Validate AWS Credentials and Connectivity
@@ -607,7 +609,7 @@ No errors were encountered during this implementation. The following is a record
 
 
 <img width="1027" height="547" alt="image" src="https://github.com/user-attachments/assets/b920b32f-6452-4d72-9408-aa963e48a32b" />
-<img width="1042" height="507" alt="image" src="https://github.com/user-attachments/assets/fdb9a472-14df-4a55-ac10-5986f69c0c2e" />
+
 <img width="1046" height="537" alt="image" src="https://github.com/user-attachments/assets/cbbd1ba5-c809-49b5-b605-32215732ffef" />
 <img width="1044" height="722" alt="image" src="https://github.com/user-attachments/assets/54f38917-0c99-46c6-a13a-fef99ae17595" />
 <img width="1046" height="707" alt="image" src="https://github.com/user-attachments/assets/103636f5-930c-4934-96a7-ca251a359d8b" />
