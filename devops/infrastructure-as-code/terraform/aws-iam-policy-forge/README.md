@@ -375,6 +375,8 @@ Terraform has been successfully initialized!
 
 *Screenshot: Terminal output of `terraform init` showing successful provider installation*
 
+<img width="1045" height="738" alt="image" src="https://github.com/user-attachments/assets/8c6ec297-8387-4133-8208-2677f1746e65" />
+
 ---
 
 ### Step 7: Validate the Configuration
@@ -623,7 +625,6 @@ No errors were encountered during this implementation. The following is a record
 
 <img width="1046" height="745" alt="image" src="https://github.com/user-attachments/assets/a0a3c7e3-899c-4a64-a70e-a9976d83a8d1" />
 
-<img width="1045" height="738" alt="image" src="https://github.com/user-attachments/assets/8c6ec297-8387-4133-8208-2677f1746e65" />
 <img width="1047" height="476" alt="image" src="https://github.com/user-attachments/assets/49850819-5a2b-470a-95aa-8acaadfa7063" />
 <img width="1068" height="696" alt="image" src="https://github.com/user-attachments/assets/20d39076-effe-4b8f-aa95-5668d134f5be" />
 <img width="1075" height="679" alt="image" src="https://github.com/user-attachments/assets/242f040e-0d29-4218-b7a8-3d438172261f" />
