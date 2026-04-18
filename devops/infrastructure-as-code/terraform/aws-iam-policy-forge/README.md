@@ -398,6 +398,8 @@ Success! The configuration is valid.
 
 <img width="1004" height="504" alt="image" src="https://github.com/user-attachments/assets/2fd75bed-2e3a-400d-8a4e-34b982a16ee2" />
 
+<img width="1047" height="476" alt="image" src="https://github.com/user-attachments/assets/49850819-5a2b-470a-95aa-8acaadfa7063" />
+
 
 ---
 
@@ -453,7 +455,6 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 *Screenshot: Terminal output of `terraform plan` showing the execution plan summary*
 
-<img width="1047" height="476" alt="image" src="https://github.com/user-attachments/assets/49850819-5a2b-470a-95aa-8acaadfa7063" />
 
 ---
 
