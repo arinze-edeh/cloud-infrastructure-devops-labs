@@ -216,6 +216,8 @@ drwxr-x--- 1 bob bob 4096 Apr 18 17:20 ..
 
 *Screenshot: Terminal output of `pwd` and `ls -la` in `/home/bob/terraform`*
 
+<img width="1044" height="697" alt="image" src="https://github.com/user-attachments/assets/f4680e90-98cb-46f4-b076-0bdf1d725016" />
+
 ---
 
 ### Step 4: Review the Provider Configuration
@@ -610,12 +612,10 @@ No errors were encountered during this implementation. The following is a record
 *All commands, outputs, and configurations reflect the exact execution sequence performed on the target environment.*
 
 
-<img width="1027" height="547" alt="image" src="https://github.com/user-attachments/assets/b920b32f-6452-4d72-9408-aa963e48a32b" />
 
-<img width="1046" height="537" alt="image" src="https://github.com/user-attachments/assets/cbbd1ba5-c809-49b5-b605-32215732ffef" />
 
-<img width="1046" height="707" alt="image" src="https://github.com/user-attachments/assets/103636f5-930c-4934-96a7-ca251a359d8b" />
-<img width="1044" height="697" alt="image" src="https://github.com/user-attachments/assets/f4680e90-98cb-46f4-b076-0bdf1d725016" />
+
+
 <img width="1070" height="697" alt="image" src="https://github.com/user-attachments/assets/934e7a51-dcf7-4b9a-9500-46eb54b67c59" />
 <img width="1046" height="745" alt="image" src="https://github.com/user-attachments/assets/a0a3c7e3-899c-4a64-a70e-a9976d83a8d1" />
 <img width="1072" height="623" alt="image" src="https://github.com/user-attachments/assets/a8d03fdd-0740-4f22-9d65-44d8caf6c02b" />
