@@ -278,6 +278,9 @@ provider "aws" {
 
 *Screenshot: Terminal output of `cat provider.tf`*
 
+
+<img width="1070" height="697" alt="image" src="https://github.com/user-attachments/assets/934e7a51-dcf7-4b9a-9500-46eb54b67c59" />
+
 ---
 
 ### Step 5: Author the IAM Policy Resource
@@ -616,7 +619,6 @@ No errors were encountered during this implementation. The following is a record
 
 
 
-<img width="1070" height="697" alt="image" src="https://github.com/user-attachments/assets/934e7a51-dcf7-4b9a-9500-46eb54b67c59" />
 <img width="1046" height="745" alt="image" src="https://github.com/user-attachments/assets/a0a3c7e3-899c-4a64-a70e-a9976d83a8d1" />
 <img width="1072" height="623" alt="image" src="https://github.com/user-attachments/assets/a8d03fdd-0740-4f22-9d65-44d8caf6c02b" />
 <img width="1045" height="738" alt="image" src="https://github.com/user-attachments/assets/8c6ec297-8387-4133-8208-2677f1746e65" />
