@@ -536,6 +536,8 @@ aws --endpoint-url=http://aws:4566 iam list-policies --scope Local \
 
 *Screenshot: Terminal output of `terraform state list` and `aws iam list-policies` table showing `iampolicy_rose`*
 
+<img width="1072" height="372" alt="image" src="https://github.com/user-attachments/assets/ccd37da6-97a9-4233-8ba9-62d8ce0906e5" />
+
 ---
 
 ## IAM Policy Definition
@@ -633,5 +635,3 @@ No errors were encountered during this implementation. The following is a record
 
 
 <img width="1070" height="654" alt="image" src="https://github.com/user-attachments/assets/0ad7dae9-e092-477e-9454-de500b343cc4" />
-<img width="1072" height="372" alt="image" src="https://github.com/user-attachments/assets/ccd37da6-97a9-4233-8ba9-62d8ce0906e5" />
-
