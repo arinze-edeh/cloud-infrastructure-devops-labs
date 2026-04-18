@@ -489,6 +489,8 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 *Screenshot: Terminal output of `terraform apply -auto-approve` showing `Apply complete! Resources: 1 added, 0 changed, 0 destroyed.`*
 
+<img width="1075" height="679" alt="image" src="https://github.com/user-attachments/assets/242f040e-0d29-4218-b7a8-3d438172261f" />
+
 ---
 
 ### Step 10: Verify State and Policy Creation
@@ -630,7 +632,6 @@ No errors were encountered during this implementation. The following is a record
 
 
 
-<img width="1075" height="679" alt="image" src="https://github.com/user-attachments/assets/242f040e-0d29-4218-b7a8-3d438172261f" />
 <img width="1070" height="654" alt="image" src="https://github.com/user-attachments/assets/0ad7dae9-e092-477e-9454-de500b343cc4" />
 <img width="1072" height="372" alt="image" src="https://github.com/user-attachments/assets/ccd37da6-97a9-4233-8ba9-62d8ce0906e5" />
 
