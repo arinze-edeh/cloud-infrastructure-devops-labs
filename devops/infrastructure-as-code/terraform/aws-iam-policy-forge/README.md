@@ -396,8 +396,6 @@ Success! The configuration is valid.
 
 *Screenshot: Terminal output of `terraform validate` showing `Success! The configuration is valid.`*
 
-<img width="1004" height="504" alt="image" src="https://github.com/user-attachments/assets/2fd75bed-2e3a-400d-8a4e-34b982a16ee2" />
-
 <img width="1047" height="476" alt="image" src="https://github.com/user-attachments/assets/49850819-5a2b-470a-95aa-8acaadfa7063" />
 
 
@@ -455,6 +453,7 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 *Screenshot: Terminal output of `terraform plan` showing the execution plan summary*
 
+<img width="1068" height="696" alt="image" src="https://github.com/user-attachments/assets/20d39076-effe-4b8f-aa95-5668d134f5be" />
 
 ---
 
@@ -629,10 +628,8 @@ No errors were encountered during this implementation. The following is a record
 
 
 
-<img width="1046" height="745" alt="image" src="https://github.com/user-attachments/assets/a0a3c7e3-899c-4a64-a70e-a9976d83a8d1" />
 
 
-<img width="1068" height="696" alt="image" src="https://github.com/user-attachments/assets/20d39076-effe-4b8f-aa95-5668d134f5be" />
 <img width="1075" height="679" alt="image" src="https://github.com/user-attachments/assets/242f040e-0d29-4218-b7a8-3d438172261f" />
 <img width="1070" height="654" alt="image" src="https://github.com/user-attachments/assets/0ad7dae9-e092-477e-9454-de500b343cc4" />
 <img width="1072" height="372" alt="image" src="https://github.com/user-attachments/assets/ccd37da6-97a9-4233-8ba9-62d8ce0906e5" />
