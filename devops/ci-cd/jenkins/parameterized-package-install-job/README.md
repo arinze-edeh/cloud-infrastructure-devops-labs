@@ -1,3 +1,404 @@
+# Jenkins Parameterized Job: Remote Package Installation via SSH on Storage Server
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Problem Statement](#problem-statement)
+- [Solution Architecture](#solution-architecture)
+- [Prerequisites](#prerequisites)
+- [Implementation Guide](#implementation-guide)
+  - [Step 1: Access the Jenkins UI](#step-1-access-the-jenkins-ui)
+  - [Step 2: Check and Install Pending Plugin Updates](#step-2-check-and-install-pending-plugin-updates)
+  - [Step 3: Install the Publish Over SSH Plugin](#step-3-install-the-publish-over-ssh-plugin)
+  - [Step 4: Restart Jenkins After Plugin Installation](#step-4-restart-jenkins-after-plugin-installation)
+  - [Step 5: Verify SSH Plugin Installation](#step-5-verify-ssh-plugin-installation)
+  - [Step 6: Configure the SSH Server in Jenkins System Settings](#step-6-configure-the-ssh-server-in-jenkins-system-settings)
+  - [Step 7: Create the Parameterized Jenkins Job](#step-7-create-the-parameterized-jenkins-job)
+  - [Step 8: Configure the String Parameter](#step-8-configure-the-string-parameter)
+  - [Step 9: Configure the Build Step to Execute the Remote Install Command](#step-9-configure-the-build-step-to-execute-the-remote-install-command)
+  - [Step 10: Trigger the First Build with PACKAGE=vim-enhanced](#step-10-trigger-the-first-build-with-packagevim-enhanced)
+  - [Step 11: Verify Build Success in Console Output](#step-11-verify-build-success-in-console-output)
+  - [Step 12: Verify Package Installation on the Storage Server](#step-12-verify-package-installation-on-the-storage-server)
+  - [Step 13: Run Repeat Builds to Confirm Reliability](#step-13-run-repeat-builds-to-confirm-reliability)
+- [Errors and Resolutions](#errors-and-resolutions)
+- [Best Practices](#best-practices)
+- [Lessons Learned](#lessons-learned)
+
+---
+
+## Overview
+
+This project documents the end-to-end configuration of a Jenkins parameterized freestyle job named `install-packages` that remotely installs system packages on the Stratos Datacenter storage server (`ststor01`) via SSH. The job accepts a `PACKAGE` string parameter at build time, enabling operators to install any named package on the storage server without requiring direct SSH access or manual intervention.
+
+| Attribute | Value |
+|---|---|
+| Jenkins Job Name | `install-packages` |
+| Job Type | Freestyle Project |
+| Target Server | `ststor01` (Storage Server, Stratos Datacenter) |
+| Remote User | `natasha` |
+| Plugin Required | Publish Over SSH |
+| Parameter Name | `PACKAGE` |
+| Test Package | `vim-enhanced` |
+| Jenkins Version | 2.541.2 |
+
+---
+
+## Problem Statement
+
+The Nautilus DevOps team provisioned a new Jenkins server and required an automated mechanism to install and configure packages on the Stratos Datacenter storage server without direct manual SSH access. The solution needed to be parameterized so that any package name could be supplied at runtime, making the job reusable across operational scenarios.
+
+The specific requirements were:
+
+* Create a Jenkins job named `install-packages`
+* Add a string parameter named `PACKAGE`
+* Configure the job to install the package specified by `$PACKAGE` on `ststor01` via SSH
+* Validate the solution by running the job at least once using `PACKAGE=vim-enhanced`
+* Ensure the job runs reliably on repeated executions
+
+---
+
+## Solution Architecture
+
+The solution uses Jenkins' **Publish Over SSH** plugin to establish an authenticated SSH connection from the Jenkins controller to `ststor01`. At build time, Jenkins substitutes the `$PACKAGE` environment variable into the remote exec command `sudo yum install -y $PACKAGE`, which runs on the storage server under the `natasha` user account. The SSH server configuration is stored in Jenkins System settings and referenced by name within the job's build step, keeping credentials centralized and the job configuration portable.
+
+```
+Jenkins Controller
+      |
+      |  SSH (Publish Over SSH Plugin)
+      |  Exec: sudo yum install -y $PACKAGE
+      v
+ststor01 (Storage Server)
+  natasha@ststor01
+```
+
+---
+
+## Prerequisites
+
+* Jenkins is running and accessible via the web UI
+* The `natasha` user account exists on `ststor01` and has `sudo` privileges for `yum`
+* Network connectivity exists between the Jenkins controller and `ststor01`
+* Jenkins admin credentials: username `admin`, password `Adm!n321`
+* SSH credentials for `natasha` on `ststor01`
+
+---
+
+## Implementation Guide
+
+### Step 1: Access the Jenkins UI
+
+Navigate to the Jenkins web interface using the **Jenkins** button in the top bar of the KodeKloud lab environment. Log in using the following credentials:
+
+* **Username:** `admin`
+* **Password:** `Adm!n321`
+
+> Screenshot: Jenkins login page with username "admin" entered
+
+---
+
+### Step 2: Check and Install Pending Plugin Updates
+
+Before installing new plugins, apply any available plugin updates to keep the Jenkins environment current.
+
+1. Go to **Manage Jenkins** > **Plugins** > **Updates**
+2. Select the available update (the **bouncycastle API** plugin update was pending at health score 100)
+3. Click **Update** to apply
+
+> Screenshot: Jenkins Plugin Manager showing the bouncycastle API update available with health score 100
+
+Applying pending updates before adding new plugins prevents dependency conflicts and ensures the plugin subsystem is in a stable state prior to new installations.
+
+---
+
+### Step 3: Install the Publish Over SSH Plugin
+
+The **Publish Over SSH** plugin is required to enable Jenkins to execute remote commands on `ststor01` over SSH.
+
+1. Navigate to **Manage Jenkins** > **Plugins** > **Available plugins**
+2. Search for **Publish Over SSH**
+3. Check the checkbox next to **Publish Over SSH** (version `390.vb_f56e7405751`)
+4. Click **Install**
+
+> Screenshot: Available plugins tab showing "Publish Over SSH" selected with health score 96
+
+Jenkins will display a **Download progress** page. All dependency plugins must complete with a **Success** status before proceeding.
+
+The dependency chain installed includes: JAXB, JSON Api, Jackson Annotations 2 API, Jakarta Activation API, SnakeYAML API, Jakarta XML Binding API, Woodstox Core API, Jackson 2 API, Infrastructure plugin for Publish Over X, Structs, EDDSA API, Gson API, Trilead API, Variant, commons-lang3 v3.x Jenkins API, Ionicons API, commons-text API, and others.
+
+> Screenshot: Plugin download progress page showing all dependencies resolved with Success status
+
+---
+
+### Step 4: Restart Jenkins After Plugin Installation
+
+Once all plugin downloads complete, restart Jenkins to activate the newly installed plugins.
+
+On the download progress page, select **Restart Jenkins when installation is complete and no jobs are running**.
+
+Jenkins displays a restart screen confirming the service is restarting. The browser reloads automatically when Jenkins is ready.
+
+> Screenshot: Jenkins restarting screen with spinner and "Your browser will reload automatically when Jenkins is ready" message
+
+> Screenshot: Second Jenkins restart screen confirming safe restart in progress
+
+---
+
+### Step 5: Verify SSH Plugin Installation
+
+After Jenkins restarts, confirm the Publish Over SSH plugin is active.
+
+1. Navigate to **Manage Jenkins** > **Plugins** > **Installed plugins**
+2. Search for `ssh`
+3. Confirm **Publish Over SSH** is present and **Enabled** (blue toggle active)
+
+The installed plugin search returns three SSH-related plugins:
+
+| Plugin | Version | Enabled |
+|---|---|---|
+| JSch dependency plugin | 0.2.16-95.v3eecb_55fa_b_78 | Yes (greyed, dependency) |
+| Publish Over SSH | 390.vb_f56e7405751 | **Yes (blue, active)** |
+| SSH Credentials Plugin | 372.va_250881b_08cd | Yes (greyed, dependency) |
+
+> Screenshot: Installed plugins tab filtered by "ssh" showing Publish Over SSH enabled
+
+---
+
+### Step 6: Configure the SSH Server in Jenkins System Settings
+
+Register `ststor01` as a known SSH server so Jenkins can reference it by name in job build steps.
+
+1. Navigate to **Manage Jenkins** > **System**
+2. Scroll down to the **Publish over SSH** section
+3. Under **SSH Servers**, click **Add**
+4. Enter the following values:
+
+| Field | Value |
+|---|---|
+| Name | `ststor01` |
+| Hostname | `ststor01` |
+| Username | `natasha` |
+| Remote Directory | `/tmp` |
+
+5. Expand **Advanced**
+6. Check **Use password authentication, or use a different key**
+7. Enter the SSH password for `natasha` in the **Passphrase / Password** field
+8. Click **Save**
+
+> Screenshot: Jenkins System configuration page showing SSH Server entry for ststor01 with natasha credentials and /tmp as remote directory
+
+---
+
+### Step 7: Create the Parameterized Jenkins Job
+
+Create a new freestyle job named `install-packages`.
+
+1. From the Jenkins dashboard, click **New Item**
+2. Enter the item name: `install-packages`
+3. Select **Freestyle project**
+4. Click **OK**
+
+> Screenshot: New Item page with "install-packages" entered and Freestyle project selected
+
+---
+
+### Step 8: Configure the String Parameter
+
+Enable build parameterization and add the `PACKAGE` string parameter.
+
+1. In the job configuration page, check **This project is parameterized**
+2. Click **Add Parameter** > **String Parameter**
+3. Enter the following values:
+
+| Field | Value |
+|---|---|
+| Name | `PACKAGE` |
+| Default Value | *(leave blank)* |
+| Description | `Package name to install on the storage server` |
+
+4. Click **Apply**
+
+> Screenshot: Job configuration showing "This project is parameterized" checked and PACKAGE String Parameter with description filled in
+
+---
+
+### Step 9: Configure the Build Step to Execute the Remote Install Command
+
+Add a build step that sends the install command to `ststor01` over SSH.
+
+1. Scroll down to **Build Steps**
+2. Click **Add build step** > **Send files or execute commands over SSH**
+3. Under **SSH Publishers** > **SSH Server**, select **Name**: `ststor01` from the dropdown
+4. Under **Transfers** > **Transfer Set**, leave **Source files** blank (no files are being transferred)
+5. In the **Exec command** field, enter:
+
+```bash
+sudo yum install -y $PACKAGE
+```
+
+6. Click **Save**
+
+> Screenshot: Build Steps configuration showing "Send files or execute commands over SSH" step with ststor01 selected and "sudo yum install -y $PACKAGE" in the Exec command field
+
+The `$PACKAGE` variable is automatically substituted by Jenkins with the value provided at build time. The Publish Over SSH plugin supports full Jenkins environment variable substitution in all transfer fields.
+
+---
+
+### Step 10: Trigger the First Build with PACKAGE=vim-enhanced
+
+Run the job for the first time to validate the full pipeline.
+
+1. From the `install-packages` job page, click **Build with Parameters**
+2. In the **PACKAGE** field, enter: `vim-enhanced`
+3. Click **Build**
+
+> Screenshot: Build with Parameters page showing PACKAGE field populated with "vim-enhanced" and the Build button
+
+---
+
+### Step 11: Verify Build Success in Console Output
+
+After the build completes, inspect the console output to confirm the SSH execution succeeded.
+
+Navigate to **install-packages** > **#1** > **Console Output**.
+
+The expected output confirms a successful build:
+
+```
+Started by user admin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/install-packages
+SSH: Connecting from host [jenkins.stratos.xfusioncorp.com]
+SSH: Connecting with configuration [ststor01] ...
+SSH: EXEC: completed after 1,201 ms
+SSH: Disconnecting configuration [ststor01] ...
+SSH: Transferred 0 file(s)
+Build step 'Send files or execute commands over SSH' changed build result to SUCCESS
+Finished: SUCCESS
+```
+
+> Screenshot: Console Output for build #1 showing SSH connection to ststor01 and Finished: SUCCESS
+
+The job status page also shows build **#1** completed successfully at 7:18 PM with a green checkmark.
+
+> Screenshot: install-packages job status page showing build #1 with green success indicator
+
+---
+
+### Step 12: Verify Package Installation on the Storage Server
+
+Confirm that `vim-enhanced` was installed on `ststor01` by SSHing into the storage server from the jump host and querying the RPM database.
+
+**First verification session:**
+
+```bash
+thor@jumphost ~$ ssh natasha@ststor01
+natasha@ststor01's password:
+Last login: Sat Apr 18 19:01:33 2026 from 10.244.49.16
+[natasha@ststor01 ~]$ rpm -q vim-enhanced
+vim-enhanced-8.2.2637-27.el9.x86_64
+[natasha@ststor01 ~]$ exit
+logout
+Connection to ststor01 closed.
+```
+
+> Screenshot: Terminal showing rpm -q vim-enhanced returning vim-enhanced-8.2.2637-27.el9.x86_64 after first build
+
+The installed package version is `vim-enhanced-8.2.2637-27.el9.x86_64`, confirming the Jenkins job successfully executed `sudo yum install -y vim-enhanced` on the storage server.
+
+The full install output captured during an earlier direct SSH session showed the following packages installed as part of the transaction:
+
+| Package | Version | Repository | Size |
+|---|---|---|---|
+| vim-enhanced | 2:8.2.2637-27.el9 | appstream | 1.7 M |
+| gpm-libs | 1.20.7-29.el9 | appstream | 21 k |
+| vim-common | 2:8.2.2637-27.el9 | appstream | 7.0 M |
+| vim-filesystem | 2:8.2.2637-27.el9 | baseos | 13 k |
+
+> Screenshot: Terminal showing full yum install output for vim-enhanced with all 4 packages installed successfully
+
+---
+
+### Step 13: Run Repeat Builds to Confirm Reliability
+
+To ensure the job behaves reliably on subsequent executions (idempotent behavior), the build was triggered additional times. `yum install` with the `-y` flag on an already-installed package exits cleanly without error, making the job safe to re-run.
+
+**Second and third verification sessions on `ststor01`:**
+
+```bash
+thor@jumphost ~$ ssh natasha@ststor01
+natasha@ststor01's password:
+Last login: Sat Apr 18 19:21:30 2026 from 10.244.49.16
+[natasha@ststor01 ~]$ rpm -q vim-enhanced
+vim-enhanced-8.2.2637-27.el9.x86_64
+[natasha@ststor01 ~]$ exit
+logout
+Connection to ststor01 closed.
+```
+
+> Screenshot: Terminal showing repeated ssh and rpm -q vim-enhanced verification across two sessions, both confirming package is installed
+
+The package remained installed and the query returned the same version string across all verification sessions, confirming job reliability and idempotent execution.
+
+---
+
+## Errors and Resolutions
+
+### Error: "Either Source files, Exec command or both must be supplied"
+
+**Context:** When the Build Step was saved with the SSH transfer set left entirely blank (no source files and no exec command), Jenkins displayed a validation error on the build step.
+
+**Root Cause:** The Publish Over SSH plugin requires at least one of `Source files` or `Exec command` to be populated. An empty transfer set is invalid.
+
+**Resolution:** The **Exec command** field was populated with `sudo yum install -y $PACKAGE`. The **Source files** field was intentionally left blank because no files needed to be transferred; only a remote command execution was required.
+
+> Screenshot: Build Steps page showing the validation error "Either Source files, Exec command or both must be supplied" before the exec command was entered
+
+---
+
+## Best Practices
+
+* **Centralize SSH credentials in Jenkins System configuration** rather than embedding them per-job. The SSH server registered under `ststor01` in Manage Jenkins > System is reusable across multiple jobs, reducing credential sprawl.
+
+* **Use parameterized builds for operational flexibility.** A single `install-packages` job handles any package by varying the `PACKAGE` parameter, eliminating the need to create separate jobs per package.
+
+* **Leave Source files blank when only remote execution is needed.** The Publish Over SSH plugin supports exec-only build steps. Do not create dummy files simply to satisfy a source field.
+
+* **Apply plugin updates before installing new plugins.** Updating existing plugins first ensures dependency libraries are at their latest compatible versions, reducing the risk of version conflicts with newly installed plugins.
+
+* **Use `Restart Jenkins when installation is complete and no jobs are running`** rather than restarting manually mid-installation. This option waits for the download pipeline to complete before initiating restart, preventing partial installations.
+
+* **Verify plugin installation after restart** by checking the Installed plugins tab filtered by a keyword. Do not assume a plugin is active without confirming its Enabled toggle is blue.
+
+* **Validate installations via RPM query on the target server** (`rpm -q <package>`), not just by inspecting Jenkins console output. Console output confirms the SSH exec completed successfully, while the RPM query confirms the actual system state.
+
+* **Run builds multiple times to confirm idempotency.** `yum install -y` is idempotent for already-installed packages, which makes the job safe for repeated triggering in operational and automation scenarios.
+
+---
+
+## Lessons Learned
+
+* **The Publish Over SSH plugin installs a substantial dependency chain.** The installation triggered downloads for over a dozen library plugins (Jackson, JAXB, SnakeYAML, Woodstox, EDDSA, Gson, Trilead, and others). This is expected behavior for SSH-capable plugins in Jenkins and is not a cause for concern. Always review the Download progress page and confirm all entries show Success before proceeding.
+
+* **SSH server names in Jenkins are resolved internally, not via DNS in all cases.** The hostname `ststor01` was entered as both the Name and Hostname fields, and Jenkins resolved it correctly within the Stratos Datacenter network. In environments where short hostnames are not resolvable, use the fully qualified domain name or IP address in the Hostname field while keeping the Name field as a human-readable label.
+
+* **Jenkins environment variable substitution in the SSH exec command is reliable but case-sensitive.** The parameter was defined as `PACKAGE` (uppercase) and referenced as `$PACKAGE` in the exec command. Any mismatch in casing between the parameter name and the variable reference will result in an empty substitution and a failed or no-op yum command.
+
+* **The Remote Directory field in the SSH server configuration (`/tmp`) does not affect exec-only build steps.** The remote directory is only relevant when transferring files. For jobs that only run remote commands, this field can be set to any valid path the remote user can access without impacting execution.
+
+* **Build reliability should always be tested across multiple runs, not just validated on the first success.** The first build succeeds under ideal conditions. Subsequent builds expose edge cases such as idempotency behavior, connection timeouts, or lock contention on the package manager. Running the job two or three times before marking it production-ready is a sound operational standard.
+
+* **Pre-verifying connectivity to the storage server before configuring Jenkins** (by SSHing manually from the jump host as `natasha`) helped confirm that credentials were valid and `yum` was functional, isolating Jenkins configuration as the only remaining variable during troubleshooting.
+
+
+
+
+
+
+
+
+
+
+
 <img width="1035" height="603" alt="image" src="https://github.com/user-attachments/assets/e92a69a6-e48d-4730-9786-23eb7cbc2a05" />
 <img width="1031" height="840" alt="image" src="https://github.com/user-attachments/assets/944422dd-fb97-4036-bf3e-2b192e0cc8c0" />
 <img width="1030" height="733" alt="image" src="https://github.com/user-attachments/assets/9781d134-dd06-4c5d-8706-9f835f25748a" />
