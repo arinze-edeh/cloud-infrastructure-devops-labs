@@ -435,6 +435,14 @@ Connection to ststor01 closed.
 
 <img width="1036" height="331" alt="image" src="https://github.com/user-attachments/assets/eefd2a26-7ace-4d79-9dc0-9f788e953d52" />
 
+
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/b19d62d1-8ac1-4e35-8a9d-43b5c6441292" />
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/fccfc2fa-1009-4d95-b5d6-d742bf19b91c" />
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/4a7ab027-8011-43aa-b520-30007eaa376c" />
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/ed70d6af-87d6-4ee6-9c18-2f9514c23bee" />
+
+<img width="1036" height="542" alt="image" src="https://github.com/user-attachments/assets/d0cb6b80-45e3-4e02-9a8b-789c6d5b6b3f" />
+
 The package remained installed and the query returned the same version string across all verification sessions, confirming job reliability and idempotent execution.
 
 ---
@@ -485,34 +493,3 @@ The package remained installed and the query returned the same version string ac
 * **Build reliability should always be tested across multiple runs, not just validated on the first success.** The first build succeeds under ideal conditions. Subsequent builds expose edge cases such as idempotency behavior, connection timeouts, or lock contention on the package manager. Running the job two or three times before marking it production-ready is a sound operational standard.
 
 * **Pre-verifying connectivity to the storage server before configuring Jenkins** was executed as the deliberate first step of this implementation, not as an afterthought. SSHing manually from the jump host as `natasha` and running `sudo yum install -y vim-enhanced` directly confirmed that credentials, sudo privileges, repository access, and internet connectivity were all functional before Jenkins was introduced as a variable. This separation of concerns makes troubleshooting significantly faster: if the Jenkins job had failed, the pre-flight evidence would have immediately ruled out network, credential, or package manager issues as the cause.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/b19d62d1-8ac1-4e35-8a9d-43b5c6441292" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/fccfc2fa-1009-4d95-b5d6-d742bf19b91c" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/4a7ab027-8011-43aa-b520-30007eaa376c" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/ed70d6af-87d6-4ee6-9c18-2f9514c23bee" />
-
-<img width="1036" height="542" alt="image" src="https://github.com/user-attachments/assets/d0cb6b80-45e3-4e02-9a8b-789c6d5b6b3f" />
-
-
-
-
