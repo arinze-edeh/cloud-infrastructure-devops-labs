@@ -449,7 +449,6 @@ The package remained installed and the query returned the same version string ac
 
 **Resolution:** The **Exec command** field was populated with `sudo yum install -y $PACKAGE`. The **Source files** field was intentionally left blank because no files needed to be transferred; only a remote command execution was required.
 
-> Screenshot: Build Steps page showing the validation error "Either Source files, Exec command or both must be supplied" before the exec command was entered
 
 ---
 
@@ -511,8 +510,7 @@ The package remained installed and the query returned the same version string ac
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/fccfc2fa-1009-4d95-b5d6-d742bf19b91c" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/4a7ab027-8011-43aa-b520-30007eaa376c" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/ed70d6af-87d6-4ee6-9c18-2f9514c23bee" />
-<img width="1032" height="447" alt="image" src="https://github.com/user-attachments/assets/ef61a6b1-f8ea-4d92-8f21-3d695a4dc0ba" />
-<img width="1035" height="487" alt="image" src="https://github.com/user-attachments/assets/b241da07-395d-4ab3-ab4c-0d5a6db00dea" />
+
 <img width="1036" height="542" alt="image" src="https://github.com/user-attachments/assets/d0cb6b80-45e3-4e02-9a8b-789c6d5b6b3f" />
 
 
