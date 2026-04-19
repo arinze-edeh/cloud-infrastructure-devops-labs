@@ -518,6 +518,8 @@ The plan shows exactly one resource creation (`aws_dynamodb_table.datacenter_use
 
 > Screenshot: Full `terraform plan` output showing `Plan: 1 to add, 0 to change, 0 to destroy.`
 
+<img width="1077" height="652" alt="image" src="https://github.com/user-attachments/assets/56334133-cb17-4a8e-9672-e7ae5faa8f2c" />
+
 ---
 
 ### Step 12: Apply and Provision the DynamoDB Table
@@ -550,6 +552,8 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 The DynamoDB table `datacenter-users` is successfully provisioned with resource ID `datacenter-users` in 2 seconds.
 
 > Screenshot: `terraform apply` output showing the `yes` confirmation entry and the final "Apply complete! Resources: 1 added, 0 changed, 0 destroyed."
+
+<img width="1075" height="715" alt="image" src="https://github.com/user-attachments/assets/7c17d75b-b48f-44ac-8ece-5a3d5f165a10" />
 
 ---
 
@@ -627,24 +631,3 @@ The DynamoDB table `datacenter-users` is successfully provisioned with resource 
 | Step 10 | `terraform validate` output showing "Success! The configuration is valid." |
 | Step 11 | Full `terraform plan` output showing `Plan: 1 to add, 0 to change, 0 to destroy.` |
 | Step 12 | `terraform apply` output showing `yes` confirmation and "Apply complete! Resources: 1 added, 0 changed, 0 destroyed." |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1077" height="652" alt="image" src="https://github.com/user-attachments/assets/56334133-cb17-4a8e-9672-e7ae5faa8f2c" />
-<img width="1075" height="715" alt="image" src="https://github.com/user-attachments/assets/7c17d75b-b48f-44ac-8ece-5a3d5f165a10" />
