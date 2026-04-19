@@ -151,6 +151,8 @@ Wait for the browser to reload automatically. Once Jenkins is back online, navig
 
 > Screenshot: Installed plugins search for "parameterized" showing the search interface
 
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/244dd79e-ed84-4b81-84fd-713606e3e81a" />
+
 **Note:** In Jenkins 2.x, parameterized builds are supported natively within the Jenkins core. No additional plugin installation is required. The search returns no separate plugin entry, which is the expected result confirming that the capability is bundled into core.
 
 ---
@@ -379,7 +381,6 @@ Finished: SUCCESS
 
 
 
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/244dd79e-ed84-4b81-84fd-713606e3e81a" />
 <img width="1914" height="1018" alt="image" src="https://github.com/user-attachments/assets/35ed3523-95fa-46d3-88f7-93c7a56fad3f" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/85f4e199-1320-4d6b-96a7-c689d1383380" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/820023b4-fa9e-4745-afe5-124104428c93" />
