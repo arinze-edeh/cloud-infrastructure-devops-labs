@@ -132,8 +132,6 @@ Downloaded Successfully. Will be activated during the next boot.
 
 5. Check the **"Restart Jenkins when installation is complete and no jobs are running"** checkbox at the bottom of the download progress page to trigger an automatic safe restart
 
-> Screenshot: Download progress page with Restart Jenkins checkbox enabled
-
 ---
 
 ### Step 3: Restart Jenkins and Verify Plugin State
@@ -146,6 +144,8 @@ Your browser will reload automatically when Jenkins is ready.
 ```
 
 > Screenshot: Jenkins restarting screen with spinning loader
+
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/9d108445-a1e0-478d-80c7-9727f3001883" />
 
 Wait for the browser to reload automatically. Once Jenkins is back online, navigate to **Manage Jenkins** > **Plugins** > **Installed plugins** and search for `parameterized` to confirm that parameterized build support is available in the current Jenkins core installation.
 
@@ -379,7 +379,6 @@ Finished: SUCCESS
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/9d108445-a1e0-478d-80c7-9727f3001883" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/244dd79e-ed84-4b81-84fd-713606e3e81a" />
 <img width="1914" height="1018" alt="image" src="https://github.com/user-attachments/assets/35ed3523-95fa-46d3-88f7-93c7a56fad3f" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/85f4e199-1320-4d6b-96a7-c689d1383380" />
