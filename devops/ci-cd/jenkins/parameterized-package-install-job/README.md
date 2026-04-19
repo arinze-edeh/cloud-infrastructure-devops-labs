@@ -320,7 +320,10 @@ sudo yum install -y $PACKAGE
 
 6. Click **Save**
 
-> Screenshot: Build Steps configuration showing "Send files or execute commands over SSH" step with ststor01 selected and "sudo yum install -y $PACKAGE" in the Exec command field
+> Screenshots: Build Steps configuration showing "Send files or execute commands over SSH" step with ststor01 selected and "sudo yum install -y $PACKAGE" in the Exec command field
+
+<img width="1918" height="1023" alt="image" src="https://github.com/user-attachments/assets/1fbc1e55-024b-4ee3-be6a-7272bed56bf6" />
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/fdb4793d-a3b5-4a30-80cc-4592c34b5a2c" />
 
 The `$PACKAGE` variable is automatically substituted by Jenkins with the value provided at build time. The Publish Over SSH plugin supports full Jenkins environment variable substitution in all transfer fields.
 
@@ -490,8 +493,6 @@ The package remained installed and the query returned the same version string ac
 
 
 
-<img width="1918" height="1023" alt="image" src="https://github.com/user-attachments/assets/1fbc1e55-024b-4ee3-be6a-7272bed56bf6" />
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/fdb4793d-a3b5-4a30-80cc-4592c34b5a2c" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/b93582e2-6061-48bd-bfc1-7495c4ed0c62" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/be5aaaea-a1f4-4d72-961c-94251a324c15" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/981fe58c-21d5-46b6-ba8e-912aa76312b9" />
