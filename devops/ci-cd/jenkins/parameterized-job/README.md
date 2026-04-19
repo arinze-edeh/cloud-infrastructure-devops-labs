@@ -291,9 +291,14 @@ Last completed build (#1), 0.6 sec ago
 
 > Screenshot: parameterized-job status page showing green success indicator and Build #1 in the Builds panel
 
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/d89575bb-950a-4273-b1fa-4a0ae756f259" />
+
 Click **#1** in the Builds panel, then select **Console Output** from the left sidebar to review the full build log.
 
 > Screenshot: Console Output for Build #1 showing full execution log
+
+<img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/fb65e53a-7e8f-4de0-8506-319bd176b29c" />
+
 
 ---
 
@@ -380,18 +385,3 @@ Finished: SUCCESS
 * **Choice parameters enforce valid input at the UI level.** Unlike a String parameter where any value can be typed, a Choice parameter constrains the user to a predefined set of options. This is preferable for environment selection (`Development`, `Staging`, `Production`) where arbitrary input could cause downstream pipeline failures.
 
 * **The workspace path reveals the job name verbatim.** The console output line `Building in workspace /var/lib/jenkins/workspace/parameterized-job` confirms that Jenkins uses the exact job name as the workspace directory. Job renaming changes this path, which can break scripts or integrations that reference the workspace path directly.
-
-
-
-
-
-
-
-
-
-
-
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/d89575bb-950a-4273-b1fa-4a0ae756f259" />
-<img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/fb65e53a-7e8f-4de0-8506-319bd176b29c" />
-
-
