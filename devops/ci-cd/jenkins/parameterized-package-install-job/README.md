@@ -339,6 +339,8 @@ Run the job for the first time to validate the full pipeline.
 
 > Screenshot: Build with Parameters page showing PACKAGE field populated with "vim-enhanced" and the Build button
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/b93582e2-6061-48bd-bfc1-7495c4ed0c62" />
+
 ---
 
 ### Step 12: Verify Build Success in Console Output
@@ -493,7 +495,6 @@ The package remained installed and the query returned the same version string ac
 
 
 
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/b93582e2-6061-48bd-bfc1-7495c4ed0c62" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/be5aaaea-a1f4-4d72-961c-94251a324c15" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/981fe58c-21d5-46b6-ba8e-912aa76312b9" />
 <img width="1034" height="711" alt="image" src="https://github.com/user-attachments/assets/82dec9a9-1a89-402b-848e-ac7203d281c4" />
