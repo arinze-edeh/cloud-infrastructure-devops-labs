@@ -366,6 +366,9 @@ Finished: SUCCESS
 
 > Screenshot: Console Output for build #1 showing SSH connection to ststor01 and Finished: SUCCESS
 
+
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/be5aaaea-a1f4-4d72-961c-94251a324c15" />
+
 The job status page also shows build **#1** completed successfully at 7:18 PM with a green checkmark.
 
 > Screenshot: install-packages job status page showing build #1 with green success indicator
@@ -495,7 +498,6 @@ The package remained installed and the query returned the same version string ac
 
 
 
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/be5aaaea-a1f4-4d72-961c-94251a324c15" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/981fe58c-21d5-46b6-ba8e-912aa76312b9" />
 <img width="1034" height="711" alt="image" src="https://github.com/user-attachments/assets/82dec9a9-1a89-402b-848e-ac7203d281c4" />
 <img width="1032" height="611" alt="image" src="https://github.com/user-attachments/assets/02ea54e0-e28f-4bfc-84ff-a0e15b4c783d" />
