@@ -410,6 +410,8 @@ The full install output captured during an earlier direct SSH session showed the
 
 > Screenshot: Terminal showing full yum install output for vim-enhanced with all 4 packages installed successfully
 
+<img width="1034" height="711" alt="image" src="https://github.com/user-attachments/assets/82dec9a9-1a89-402b-848e-ac7203d281c4" />
+
 ---
 
 ### Step 14: Run Repeat Builds to Confirm Reliability
@@ -501,7 +503,6 @@ The package remained installed and the query returned the same version string ac
 
 
 
-<img width="1034" height="711" alt="image" src="https://github.com/user-attachments/assets/82dec9a9-1a89-402b-848e-ac7203d281c4" />
 <img width="1032" height="611" alt="image" src="https://github.com/user-attachments/assets/02ea54e0-e28f-4bfc-84ff-a0e15b4c783d" />
 <img width="1036" height="331" alt="image" src="https://github.com/user-attachments/assets/eefd2a26-7ace-4d79-9dc0-9f788e953d52" />
 
