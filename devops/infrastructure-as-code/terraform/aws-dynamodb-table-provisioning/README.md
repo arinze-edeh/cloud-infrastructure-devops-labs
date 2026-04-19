@@ -1,7 +1,3 @@
-
-
-
-
 # Terraform AWS DynamoDB Table Provisioning on LocalStack
 
 ## Table of Contents
@@ -119,6 +115,8 @@ Two files are present: `README.MD` containing the task specification, and `provi
 
 > Screenshot: Terminal output of `ls -la` in `/home/bob/terraform` showing `README.MD` and `provider.tf`
 
+<img width="1044" height="673" alt="image" src="https://github.com/user-attachments/assets/73b65a86-85f7-48e8-8ac8-91087106da96" />
+
 ---
 
 ### Step 2: Author main.tf with Full Terraform Configuration
@@ -154,6 +152,8 @@ EOF
 ```
 
 > Screenshot: Terminal showing the heredoc command writing the initial `main.tf`
+
+<img width="1046" height="714" alt="image" src="https://github.com/user-attachments/assets/5e2048dc-4b58-4f83-afe8-20d470b2b432" />
 
 ---
 
@@ -194,6 +194,8 @@ resource "aws_dynamodb_table" "datacenter_users" {
 ```
 
 > Screenshot: `cat main.tf` output confirming the full initial file content
+
+<img width="1073" height="783" alt="image" src="https://github.com/user-attachments/assets/eda4034b-d499-45fa-ba7d-d3f142f5e60b" />
 
 ---
 
@@ -751,7 +753,7 @@ Two files are present: a `README.MD` containing the task specification, and a `p
 
 > Screenshot: Terminal output of `ls -la` in `/home/bob/terraform` showing `README.MD` and `provider.tf`
 
-<img width="1044" height="673" alt="image" src="https://github.com/user-attachments/assets/73b65a86-85f7-48e8-8ac8-91087106da96" />
+
 
 ---
 
@@ -789,7 +791,7 @@ EOF
 
 > Screenshot: Terminal showing the `cat > main.tf << 'EOF'` heredoc command being executed
 
-<img width="1046" height="714" alt="image" src="https://github.com/user-attachments/assets/5e2048dc-4b58-4f83-afe8-20d470b2b432" />
+
 
 ---
 
@@ -831,7 +833,7 @@ resource "aws_dynamodb_table" "datacenter_users" {
 
 > Screenshot: `cat main.tf` output confirming the full file content including terraform block, provider block, and resource block
 
-<img width="1073" height="783" alt="image" src="https://github.com/user-attachments/assets/eda4034b-d499-45fa-ba7d-d3f142f5e60b" />
+
 
 ---
 
