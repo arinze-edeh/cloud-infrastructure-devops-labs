@@ -188,11 +188,17 @@ The **Publish Over SSH** plugin is required to enable Jenkins to execute remote 
 
 > Screenshot: Available plugins tab showing "Publish Over SSH" selected with health score 96
 
+
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/9fb617a7-68bf-4719-a29e-3ffd01347381" />
+
 Jenkins will display a **Download progress** page. All dependency plugins must complete with a **Success** status before proceeding.
 
 The dependency chain installed includes: JAXB, JSON Api, Jackson Annotations 2 API, Jakarta Activation API, SnakeYAML API, Jakarta XML Binding API, Woodstox Core API, Jackson 2 API, Infrastructure plugin for Publish Over X, Structs, EDDSA API, Gson API, Trilead API, Variant, commons-lang3 v3.x Jenkins API, Ionicons API, commons-text API, and others.
 
-> Screenshot: Plugin download progress page showing all dependencies resolved with Success status
+> Screenshots: Plugin download progress page showing all dependencies resolved with Success status
+
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/7b0cdc76-9556-497b-9947-da454d8f20f0" />
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/17d6884e-844d-421d-a0c8-213b9c26dc6a" />
 
 ---
 
@@ -468,9 +474,6 @@ The package remained installed and the query returned the same version string ac
 
 
 
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/9fb617a7-68bf-4719-a29e-3ffd01347381" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/7b0cdc76-9556-497b-9947-da454d8f20f0" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/17d6884e-844d-421d-a0c8-213b9c26dc6a" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/30593a7f-3eb9-481d-934e-af94b19df8c2" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/90906356-9691-426d-8686-2bc6bffe069b" />
 <img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/d69889e2-2db9-444d-9c97-5982e7486045" />
