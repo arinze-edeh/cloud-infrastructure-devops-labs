@@ -212,7 +212,9 @@ Jenkins displays a restart screen confirming the service is restarting. The brow
 
 > Screenshot: Jenkins restarting screen with spinner and "Your browser will reload automatically when Jenkins is ready" message
 
-> Screenshot: Second Jenkins restart screen confirming safe restart in progress
+
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/30593a7f-3eb9-481d-934e-af94b19df8c2" />
+
 
 ---
 
@@ -474,7 +476,6 @@ The package remained installed and the query returned the same version string ac
 
 
 
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/30593a7f-3eb9-481d-934e-af94b19df8c2" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/90906356-9691-426d-8686-2bc6bffe069b" />
 <img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/d69889e2-2db9-444d-9c97-5982e7486045" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/f6b8dab4-a6f8-488e-91fe-6bc87a478798" />
