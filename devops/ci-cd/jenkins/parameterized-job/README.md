@@ -103,6 +103,8 @@ Click **Sign in** to proceed to the Jenkins dashboard.
 
 > Screenshot: Jenkins login screen with admin credentials entered
 
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/50ab1fc1-59e7-4a4e-af47-520435b50886" />
+
 ---
 
 ### Step 2: Apply Pending Plugin Updates
@@ -373,7 +375,6 @@ Finished: SUCCESS
 
 
 
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/50ab1fc1-59e7-4a4e-af47-520435b50886" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/641c9c69-e2de-40a5-b1eb-8e0839ee52ef" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/0f368688-125f-42e9-a2ce-57d89f41cd08" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/034f95b3-73b4-485f-befe-1d63147f6b31" />
