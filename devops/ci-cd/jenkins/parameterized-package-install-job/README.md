@@ -236,6 +236,8 @@ The installed plugin search returns three SSH-related plugins:
 
 > Screenshot: Installed plugins tab filtered by "ssh" showing Publish Over SSH enabled
 
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/90906356-9691-426d-8686-2bc6bffe069b" />
+
 ---
 
 ### Step 7: Configure the SSH Server in Jenkins System Settings
@@ -476,7 +478,6 @@ The package remained installed and the query returned the same version string ac
 
 
 
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/90906356-9691-426d-8686-2bc6bffe069b" />
 <img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/d69889e2-2db9-444d-9c97-5982e7486045" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/f6b8dab4-a6f8-488e-91fe-6bc87a478798" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/8d9f3c9d-b2b7-4fc9-92e7-08bc905066a3" />
