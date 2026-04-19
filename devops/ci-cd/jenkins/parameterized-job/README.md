@@ -233,6 +233,8 @@ These shell commands reference the two parameters by their exact declared names.
 
 > Screenshot: Build Steps section showing Execute shell step with echo commands for both parameters
 
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/dad45a92-d57b-40b8-a095-4e50c20da889" />
+
 ---
 
 ### Step 8: Save the Job Configuration
@@ -385,11 +387,6 @@ Finished: SUCCESS
 
 
 
-
-
-<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/820023b4-fa9e-4745-afe5-124104428c93" />
-
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/dad45a92-d57b-40b8-a095-4e50c20da889" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/86494bf3-28c5-46ad-a0b3-7a6d4b15e832" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/8b8c78b3-c2ff-40c3-8557-fdfe0f0c98dd" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/d89575bb-950a-4273-b1fa-4a0ae756f259" />
