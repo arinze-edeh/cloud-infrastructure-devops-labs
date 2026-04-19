@@ -193,6 +193,8 @@ Leave **Trim the string** unchecked.
 
 > Screenshot: Job Configure page showing String Parameter named "Stage" with default value "Build"
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/85f4e199-1320-4d6b-96a7-c689d1383380" />
+
 ---
 
 ### Step 6: Add the Choice Parameter
@@ -383,7 +385,6 @@ Finished: SUCCESS
 
 
 
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/85f4e199-1320-4d6b-96a7-c689d1383380" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/820023b4-fa9e-4745-afe5-124104428c93" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/acac4f52-f3a6-40c3-b5d1-3781b0446bc2" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/dad45a92-d57b-40b8-a095-4e50c20da889" />
