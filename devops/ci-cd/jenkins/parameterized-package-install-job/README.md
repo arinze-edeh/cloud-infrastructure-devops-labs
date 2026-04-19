@@ -263,6 +263,8 @@ Register `ststor01` as a known SSH server so Jenkins can reference it by name in
 
 > Screenshot: Jenkins System configuration page showing SSH Server entry for ststor01 with natasha credentials and /tmp as remote directory
 
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/f6b8dab4-a6f8-488e-91fe-6bc87a478798" />
+
 ---
 
 ### Step 8: Create the Parameterized Jenkins Job
@@ -479,7 +481,7 @@ The package remained installed and the query returned the same version string ac
 
 
 <img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/d69889e2-2db9-444d-9c97-5982e7486045" />
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/f6b8dab4-a6f8-488e-91fe-6bc87a478798" />
+
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/8d9f3c9d-b2b7-4fc9-92e7-08bc905066a3" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/aa86d3b2-475d-45c7-8619-b517abe222fc" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/d8a56f68-697a-460c-af63-6a45721a4865" />
