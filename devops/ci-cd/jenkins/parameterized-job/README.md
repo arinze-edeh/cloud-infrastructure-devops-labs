@@ -213,6 +213,8 @@ Each choice must be entered on a separate line in the Choices textarea. The firs
 
 > Screenshot: Job Configure page showing Choice Parameter named "env" with Development, Staging, and Production listed
 
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/acac4f52-f3a6-40c3-b5d1-3781b0446bc2" />
+
 ---
 
 ### Step 7: Configure the Shell Build Step
@@ -386,7 +388,7 @@ Finished: SUCCESS
 
 
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/820023b4-fa9e-4745-afe5-124104428c93" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/acac4f52-f3a6-40c3-b5d1-3781b0446bc2" />
+
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/dad45a92-d57b-40b8-a095-4e50c20da889" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/86494bf3-28c5-46ad-a0b3-7a6d4b15e832" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/8b8c78b3-c2ff-40c3-8557-fdfe0f0c98dd" />
