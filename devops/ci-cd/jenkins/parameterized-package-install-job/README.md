@@ -278,6 +278,8 @@ Create a new freestyle job named `install-packages`.
 
 > Screenshot: New Item page with "install-packages" entered and Freestyle project selected
 
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/aa86d3b2-475d-45c7-8619-b517abe222fc" />
+
 ---
 
 ### Step 9: Configure the String Parameter
@@ -480,10 +482,6 @@ The package remained installed and the query returned the same version string ac
 
 
 
-<img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/d69889e2-2db9-444d-9c97-5982e7486045" />
-
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/8d9f3c9d-b2b7-4fc9-92e7-08bc905066a3" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/aa86d3b2-475d-45c7-8619-b517abe222fc" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/d8a56f68-697a-460c-af63-6a45721a4865" />
 <img width="1918" height="1023" alt="image" src="https://github.com/user-attachments/assets/1fbc1e55-024b-4ee3-be6a-7272bed56bf6" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/fdb4793d-a3b5-4a30-80cc-4592c34b5a2c" />
@@ -504,8 +502,4 @@ The package remained installed and the query returned the same version string ac
 
 
 
-
-
-
-<img width="640" height="791" alt="image" src="https://github.com/user-attachments/assets/06509bdb-639b-4364-85b1-f1da7a7e096a" />
 
