@@ -433,6 +433,8 @@ Connection to ststor01 closed.
 
 > Screenshot: Terminal showing repeated ssh and rpm -q vim-enhanced verification across two sessions, both confirming package is installed
 
+<img width="1032" height="611" alt="image" src="https://github.com/user-attachments/assets/02ea54e0-e28f-4bfc-84ff-a0e15b4c783d" />
+
 The package remained installed and the query returned the same version string across all verification sessions, confirming job reliability and idempotent execution.
 
 ---
@@ -503,7 +505,7 @@ The package remained installed and the query returned the same version string ac
 
 
 
-<img width="1032" height="611" alt="image" src="https://github.com/user-attachments/assets/02ea54e0-e28f-4bfc-84ff-a0e15b4c783d" />
+
 <img width="1036" height="331" alt="image" src="https://github.com/user-attachments/assets/eefd2a26-7ace-4d79-9dc0-9f788e953d52" />
 
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/b19d62d1-8ac1-4e35-8a9d-43b5c6441292" />
