@@ -192,6 +192,8 @@ resource "aws_dynamodb_table" "datacenter_users" {
 
 > Screenshot: `cat main.tf` output confirming the full file content including terraform block, provider block, and resource block
 
+<img width="1073" height="783" alt="image" src="https://github.com/user-attachments/assets/eda4034b-d499-45fa-ba7d-d3f142f5e60b" />
+
 ---
 
 ### Step 4: Inspect Existing provider.tf
@@ -541,7 +543,6 @@ The DynamoDB table `datacenter-users` is successfully provisioned with ID `datac
 
 
 
-<img width="1073" height="783" alt="image" src="https://github.com/user-attachments/assets/eda4034b-d499-45fa-ba7d-d3f142f5e60b" />
 <img width="1046" height="545" alt="image" src="https://github.com/user-attachments/assets/70cacf6e-50c8-4649-925d-f59af1bb79e1" />
 <img width="1075" height="753" alt="image" src="https://github.com/user-attachments/assets/e60a6324-b6b4-4171-b2f3-dd3a6a8ec274" />
 <img width="1064" height="650" alt="image" src="https://github.com/user-attachments/assets/a6a6636f-7786-4e4f-b246-c3cb9b44f9cd" />
