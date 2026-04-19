@@ -171,6 +171,8 @@ parameterized-job
 
 > Screenshot: New Item creation page with "parameterized-job" entered and Freestyle project selected
 
+<img width="1914" height="1018" alt="image" src="https://github.com/user-attachments/assets/35ed3523-95fa-46d3-88f7-93c7a56fad3f" />
+
 ---
 
 ### Step 5: Enable Parameterized Builds and Add the String Parameter
@@ -381,7 +383,6 @@ Finished: SUCCESS
 
 
 
-<img width="1914" height="1018" alt="image" src="https://github.com/user-attachments/assets/35ed3523-95fa-46d3-88f7-93c7a56fad3f" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/85f4e199-1320-4d6b-96a7-c689d1383380" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/820023b4-fa9e-4745-afe5-124104428c93" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/acac4f52-f3a6-40c3-b5d1-3781b0446bc2" />
