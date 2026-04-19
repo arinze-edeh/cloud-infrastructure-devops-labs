@@ -118,6 +118,8 @@ Before creating the job, apply any available plugin updates to ensure a stable a
 
 > Screenshot: Plugin Updates page showing bouncycastle API plugin selected for update
 
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/0f368688-125f-42e9-a2ce-57d89f41cd08" />
+
 The plugin download progress page confirms the update status. The **bouncycastle API** plugin shows:
 
 ```
@@ -375,8 +377,6 @@ Finished: SUCCESS
 
 
 
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/641c9c69-e2de-40a5-b1eb-8e0839ee52ef" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/0f368688-125f-42e9-a2ce-57d89f41cd08" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/034f95b3-73b4-485f-befe-1d63147f6b31" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/9d108445-a1e0-478d-80c7-9727f3001883" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/244dd79e-ed84-4b81-84fd-713606e3e81a" />
