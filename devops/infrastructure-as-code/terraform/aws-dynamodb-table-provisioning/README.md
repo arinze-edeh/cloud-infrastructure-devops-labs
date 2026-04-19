@@ -218,6 +218,8 @@ Both files are confirmed. `main.tf` was just created at `Apr 19 09:48` and `prov
 
 > Screenshot: `ls -la *.tf` output showing both `main.tf` and `provider.tf` with their timestamps and file sizes
 
+<img width="1046" height="545" alt="image" src="https://github.com/user-attachments/assets/70cacf6e-50c8-4649-925d-f59af1bb79e1" />
+
 ---
 
 ### Step 5: Attempt terraform init and Encounter Errors
@@ -632,7 +634,6 @@ The DynamoDB table `datacenter-users` is successfully provisioned with resource 
 
 
 
-<img width="1046" height="545" alt="image" src="https://github.com/user-attachments/assets/70cacf6e-50c8-4649-925d-f59af1bb79e1" />
 <img width="1075" height="753" alt="image" src="https://github.com/user-attachments/assets/e60a6324-b6b4-4171-b2f3-dd3a6a8ec274" />
 <img width="1064" height="650" alt="image" src="https://github.com/user-attachments/assets/a6a6636f-7786-4e4f-b246-c3cb9b44f9cd" />
 <img width="1071" height="780" alt="image" src="https://github.com/user-attachments/assets/40381f51-9a30-484e-8feb-8f2302a67155" />
