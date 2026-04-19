@@ -269,6 +269,8 @@ Click the **Build** button to trigger the build.
 
 > Screenshot: "Build with Parameters" form showing Stage=Build and env=Development with Build button visible
 
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/8b8c78b3-c2ff-40c3-8557-fdfe0f0c98dd" />
+
 ---
 
 ### Step 10: Verify Build Success and Console Output
@@ -389,7 +391,6 @@ Finished: SUCCESS
 
 
 
-<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/8b8c78b3-c2ff-40c3-8557-fdfe0f0c98dd" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/d89575bb-950a-4273-b1fa-4a0ae756f259" />
 <img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/fb65e53a-7e8f-4de0-8506-319bd176b29c" />
 
