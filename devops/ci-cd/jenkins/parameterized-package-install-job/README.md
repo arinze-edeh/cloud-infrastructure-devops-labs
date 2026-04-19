@@ -154,6 +154,8 @@ Navigate to the Jenkins web interface using the **Jenkins** button in the top ba
 
 > Screenshot: Jenkins login page with username "admin" entered
 
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/a95a2ebc-3bd5-4e8b-aa69-2c03bcbebfd3" />
+
 ---
 
 ### Step 3: Check and Install Pending Plugin Updates
@@ -459,9 +461,8 @@ The package remained installed and the query returned the same version string ac
 
 
 
-<img width="1035" height="603" alt="image" src="https://github.com/user-attachments/assets/e92a69a6-e48d-4730-9786-23eb7cbc2a05" />
 
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/a95a2ebc-3bd5-4e8b-aa69-2c03bcbebfd3" />
+
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/304b1ebf-c6c6-4045-8871-ec8fd032695f" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/9a597e85-726a-48ca-a1e1-6dc39b689d71" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/67e25e1a-017d-4cb6-bf90-aec1b8012a81" />
