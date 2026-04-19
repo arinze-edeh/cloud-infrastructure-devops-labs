@@ -7,19 +7,20 @@
 - [Solution Architecture](#solution-architecture)
 - [Prerequisites](#prerequisites)
 - [Implementation Guide](#implementation-guide)
-  - [Step 1: Access the Jenkins UI](#step-1-access-the-jenkins-ui)
-  - [Step 2: Check and Install Pending Plugin Updates](#step-2-check-and-install-pending-plugin-updates)
-  - [Step 3: Install the Publish Over SSH Plugin](#step-3-install-the-publish-over-ssh-plugin)
-  - [Step 4: Restart Jenkins After Plugin Installation](#step-4-restart-jenkins-after-plugin-installation)
-  - [Step 5: Verify SSH Plugin Installation](#step-5-verify-ssh-plugin-installation)
-  - [Step 6: Configure the SSH Server in Jenkins System Settings](#step-6-configure-the-ssh-server-in-jenkins-system-settings)
-  - [Step 7: Create the Parameterized Jenkins Job](#step-7-create-the-parameterized-jenkins-job)
-  - [Step 8: Configure the String Parameter](#step-8-configure-the-string-parameter)
-  - [Step 9: Configure the Build Step to Execute the Remote Install Command](#step-9-configure-the-build-step-to-execute-the-remote-install-command)
-  - [Step 10: Trigger the First Build with PACKAGE=vim-enhanced](#step-10-trigger-the-first-build-with-packagevim-enhanced)
-  - [Step 11: Verify Build Success in Console Output](#step-11-verify-build-success-in-console-output)
-  - [Step 12: Verify Package Installation on the Storage Server](#step-12-verify-package-installation-on-the-storage-server)
-  - [Step 13: Run Repeat Builds to Confirm Reliability](#step-13-run-repeat-builds-to-confirm-reliability)
+  - [Step 1: Pre-flight Connectivity and Credential Verification via CLI SSH](#step-1-pre-flight-connectivity-and-credential-verification-via-cli-ssh)
+  - [Step 2: Access the Jenkins UI](#step-2-access-the-jenkins-ui)
+  - [Step 3: Check and Install Pending Plugin Updates](#step-3-check-and-install-pending-plugin-updates)
+  - [Step 4: Install the Publish Over SSH Plugin](#step-4-install-the-publish-over-ssh-plugin)
+  - [Step 5: Restart Jenkins After Plugin Installation](#step-5-restart-jenkins-after-plugin-installation)
+  - [Step 6: Verify SSH Plugin Installation](#step-6-verify-ssh-plugin-installation)
+  - [Step 7: Configure the SSH Server in Jenkins System Settings](#step-7-configure-the-ssh-server-in-jenkins-system-settings)
+  - [Step 8: Create the Parameterized Jenkins Job](#step-8-create-the-parameterized-jenkins-job)
+  - [Step 9: Configure the String Parameter](#step-9-configure-the-string-parameter)
+  - [Step 10: Configure the Build Step to Execute the Remote Install Command](#step-10-configure-the-build-step-to-execute-the-remote-install-command)
+  - [Step 11: Trigger the First Build with PACKAGE=vim-enhanced](#step-11-trigger-the-first-build-with-packagevim-enhanced)
+  - [Step 12: Verify Build Success in Console Output](#step-12-verify-build-success-in-console-output)
+  - [Step 13: Verify Package Installation on the Storage Server](#step-13-verify-package-installation-on-the-storage-server)
+  - [Step 14: Run Repeat Builds to Confirm Reliability](#step-14-run-repeat-builds-to-confirm-reliability)
 - [Errors and Resolutions](#errors-and-resolutions)
 - [Best Practices](#best-practices)
 - [Lessons Learned](#lessons-learned)
@@ -85,7 +86,63 @@ ststor01 (Storage Server)
 
 ## Implementation Guide
 
-### Step 1: Access the Jenkins UI
+### Step 1: Pre-flight Connectivity and Credential Verification via CLI SSH
+
+Before configuring Jenkins, connectivity to `ststor01` and the `natasha` user credentials were verified manually from the jump host. This step also served as an early confirmation that `sudo yum` was functional on the storage server and that the target package was installable.
+
+From `thor@jumphost`, SSH into `ststor01` for the first time:
+
+```bash
+thor@jumphost ~$ ssh natasha@ststor01
+```
+
+Because this was the first connection to `ststor01`, the host key was not yet in the known hosts file. The authenticity prompt was reviewed and accepted:
+
+```
+The authenticity of host 'ststor01 (10.244.234.222)' can't be established.
+ED25519 key fingerprint is SHA256:yEyN8qvzhNxfcKVE+H05zwQPmQMKCXj4JyGWuOP1HIg.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ststor01' (ED25519) to the list of known hosts.
+natasha@ststor01's password:
+```
+
+Once authenticated, a manual install of `vim-enhanced` was run directly on the storage server to confirm package manager availability and internet/repository connectivity:
+
+```bash
+[natasha@ststor01 ~]$ sudo yum install -y vim-enhanced
+```
+
+The following repositories were contacted and resolved dependencies successfully:
+
+| Repository | Speed | Size |
+|---|---|---|
+| CentOS Stream 9 - BaseOS | 9.0 MB/s | 8.9 MB |
+| CentOS Stream 9 - AppStream | 13 MB/s | 27 MB |
+| CentOS Stream 9 - Extras packages | 13 kB/s | 21 kB |
+| Docker CE Stable - x86_64 | 1.3 MB/s | 74 kB |
+| Extra Packages for Enterprise Linux 9 - x86_64 | 55 MB/s | 21 MB |
+| Extra Packages for Enterprise Linux 9 openh264 (From Cisco) | 1.8 MB/s | 2.5 kB |
+| Extra Packages for Enterprise Linux 9 - Next | 320 kB/s | 260 kB |
+
+The transaction resolved and installed 4 packages:
+
+| Package | Architecture | Version | Repository | Size |
+|---|---|---|---|---|
+| vim-enhanced | x86_64 | 2:8.2.2637-27.el9 | appstream | 1.7 M |
+| gpm-libs (dep) | x86_64 | 1.20.7-29.el9 | appstream | 21 k |
+| vim-common (dep) | x86_64 | 2:8.2.2637-27.el9 | appstream | 7.0 M |
+| vim-filesystem (dep) | noarch | 2:8.2.2637-27.el9 | baseos | 13 k |
+
+Total download size: 8.8 M | Installed size: 34 M
+
+The packages were downloaded at a combined rate of 13 MB/s and the transaction check succeeded, confirming the storage server environment was healthy before any Jenkins automation was introduced.
+
+> Screenshot: Terminal output from thor@jumphost showing the initial SSH to ststor01, host key acceptance, sudo yum install -y vim-enhanced execution, repository metadata downloads, and the 4-package transaction summary including vim-enhanced, gpm-libs, vim-common, and vim-filesystem
+
+---
+
+### Step 2: Access the Jenkins UI
 
 Navigate to the Jenkins web interface using the **Jenkins** button in the top bar of the KodeKloud lab environment. Log in using the following credentials:
 
@@ -96,7 +153,7 @@ Navigate to the Jenkins web interface using the **Jenkins** button in the top ba
 
 ---
 
-### Step 2: Check and Install Pending Plugin Updates
+### Step 3: Check and Install Pending Plugin Updates
 
 Before installing new plugins, apply any available plugin updates to keep the Jenkins environment current.
 
@@ -110,7 +167,7 @@ Applying pending updates before adding new plugins prevents dependency conflicts
 
 ---
 
-### Step 3: Install the Publish Over SSH Plugin
+### Step 4: Install the Publish Over SSH Plugin
 
 The **Publish Over SSH** plugin is required to enable Jenkins to execute remote commands on `ststor01` over SSH.
 
@@ -129,7 +186,7 @@ The dependency chain installed includes: JAXB, JSON Api, Jackson Annotations 2 A
 
 ---
 
-### Step 4: Restart Jenkins After Plugin Installation
+### Step 5: Restart Jenkins After Plugin Installation
 
 Once all plugin downloads complete, restart Jenkins to activate the newly installed plugins.
 
@@ -143,7 +200,7 @@ Jenkins displays a restart screen confirming the service is restarting. The brow
 
 ---
 
-### Step 5: Verify SSH Plugin Installation
+### Step 6: Verify SSH Plugin Installation
 
 After Jenkins restarts, confirm the Publish Over SSH plugin is active.
 
@@ -163,7 +220,7 @@ The installed plugin search returns three SSH-related plugins:
 
 ---
 
-### Step 6: Configure the SSH Server in Jenkins System Settings
+### Step 7: Configure the SSH Server in Jenkins System Settings
 
 Register `ststor01` as a known SSH server so Jenkins can reference it by name in job build steps.
 
@@ -188,7 +245,7 @@ Register `ststor01` as a known SSH server so Jenkins can reference it by name in
 
 ---
 
-### Step 7: Create the Parameterized Jenkins Job
+### Step 8: Create the Parameterized Jenkins Job
 
 Create a new freestyle job named `install-packages`.
 
@@ -201,7 +258,7 @@ Create a new freestyle job named `install-packages`.
 
 ---
 
-### Step 8: Configure the String Parameter
+### Step 9: Configure the String Parameter
 
 Enable build parameterization and add the `PACKAGE` string parameter.
 
@@ -221,7 +278,7 @@ Enable build parameterization and add the `PACKAGE` string parameter.
 
 ---
 
-### Step 9: Configure the Build Step to Execute the Remote Install Command
+### Step 10: Configure the Build Step to Execute the Remote Install Command
 
 Add a build step that sends the install command to `ststor01` over SSH.
 
@@ -243,7 +300,7 @@ The `$PACKAGE` variable is automatically substituted by Jenkins with the value p
 
 ---
 
-### Step 10: Trigger the First Build with PACKAGE=vim-enhanced
+### Step 11: Trigger the First Build with PACKAGE=vim-enhanced
 
 Run the job for the first time to validate the full pipeline.
 
@@ -255,7 +312,7 @@ Run the job for the first time to validate the full pipeline.
 
 ---
 
-### Step 11: Verify Build Success in Console Output
+### Step 12: Verify Build Success in Console Output
 
 After the build completes, inspect the console output to confirm the SSH execution succeeded.
 
@@ -284,7 +341,7 @@ The job status page also shows build **#1** completed successfully at 7:18 PM wi
 
 ---
 
-### Step 12: Verify Package Installation on the Storage Server
+### Step 13: Verify Package Installation on the Storage Server
 
 Confirm that `vim-enhanced` was installed on `ststor01` by SSHing into the storage server from the jump host and querying the RPM database.
 
@@ -318,7 +375,7 @@ The full install output captured during an earlier direct SSH session showed the
 
 ---
 
-### Step 13: Run Repeat Builds to Confirm Reliability
+### Step 14: Run Repeat Builds to Confirm Reliability
 
 To ensure the job behaves reliably on subsequent executions (idempotent behavior), the build was triggered additional times. `yum install` with the `-y` flag on an already-installed package exits cleanly without error, making the job safe to re-run.
 
@@ -387,7 +444,7 @@ The package remained installed and the query returned the same version string ac
 
 * **Build reliability should always be tested across multiple runs, not just validated on the first success.** The first build succeeds under ideal conditions. Subsequent builds expose edge cases such as idempotency behavior, connection timeouts, or lock contention on the package manager. Running the job two or three times before marking it production-ready is a sound operational standard.
 
-* **Pre-verifying connectivity to the storage server before configuring Jenkins** (by SSHing manually from the jump host as `natasha`) helped confirm that credentials were valid and `yum` was functional, isolating Jenkins configuration as the only remaining variable during troubleshooting.
+* **Pre-verifying connectivity to the storage server before configuring Jenkins** was executed as the deliberate first step of this implementation, not as an afterthought. SSHing manually from the jump host as `natasha` and running `sudo yum install -y vim-enhanced` directly confirmed that credentials, sudo privileges, repository access, and internet connectivity were all functional before Jenkins was introduced as a variable. This separation of concerns makes troubleshooting significantly faster: if the Jenkins job had failed, the pre-flight evidence would have immediately ruled out network, credential, or package manager issues as the cause.
 
 
 
