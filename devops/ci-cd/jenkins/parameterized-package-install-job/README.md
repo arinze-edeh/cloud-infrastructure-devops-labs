@@ -166,7 +166,12 @@ Before installing new plugins, apply any available plugin updates to keep the Je
 2. Select the available update (the **bouncycastle API** plugin update was pending at health score 100)
 3. Click **Update** to apply
 
-> Screenshot: Jenkins Plugin Manager showing the bouncycastle API update available with health score 100
+> Screenshots: Jenkins Plugin Manager showing the bouncycastle API update available with health score 100
+
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/304b1ebf-c6c6-4045-8871-ec8fd032695f" />
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/9a597e85-726a-48ca-a1e1-6dc39b689d71" />
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/67e25e1a-017d-4cb6-bf90-aec1b8012a81" />
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/1652fe84-61e4-4cf1-acc5-20fe7c67f204" />
 
 Applying pending updates before adding new plugins prevents dependency conflicts and ensures the plugin subsystem is in a stable state prior to new installations.
 
@@ -463,10 +468,6 @@ The package remained installed and the query returned the same version string ac
 
 
 
-<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/304b1ebf-c6c6-4045-8871-ec8fd032695f" />
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/9a597e85-726a-48ca-a1e1-6dc39b689d71" />
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/67e25e1a-017d-4cb6-bf90-aec1b8012a81" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/1652fe84-61e4-4cf1-acc5-20fe7c67f204" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/9fb617a7-68bf-4719-a29e-3ffd01347381" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/7b0cdc76-9556-497b-9947-da454d8f20f0" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/17d6884e-844d-421d-a0c8-213b9c26dc6a" />
