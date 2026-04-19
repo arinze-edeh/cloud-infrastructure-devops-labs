@@ -138,7 +138,10 @@ Total download size: 8.8 M | Installed size: 34 M
 
 The packages were downloaded at a combined rate of 13 MB/s and the transaction check succeeded, confirming the storage server environment was healthy before any Jenkins automation was introduced.
 
-> Screenshot: Terminal output from thor@jumphost showing the initial SSH to ststor01, host key acceptance, sudo yum install -y vim-enhanced execution, repository metadata downloads, and the 4-package transaction summary including vim-enhanced, gpm-libs, vim-common, and vim-filesystem
+> Screenshots: Terminal output from thor@jumphost showing the initial SSH to ststor01, host key acceptance, sudo yum install -y vim-enhanced execution, repository metadata downloads, and the 4-package transaction summary including vim-enhanced, gpm-libs, vim-common, and vim-filesystem
+
+<img width="1031" height="840" alt="image" src="https://github.com/user-attachments/assets/944422dd-fb97-4036-bf3e-2b192e0cc8c0" />
+<img width="1030" height="733" alt="image" src="https://github.com/user-attachments/assets/9781d134-dd06-4c5d-8706-9f835f25748a" />
 
 ---
 
@@ -457,8 +460,7 @@ The package remained installed and the query returned the same version string ac
 
 
 <img width="1035" height="603" alt="image" src="https://github.com/user-attachments/assets/e92a69a6-e48d-4730-9786-23eb7cbc2a05" />
-<img width="1031" height="840" alt="image" src="https://github.com/user-attachments/assets/944422dd-fb97-4036-bf3e-2b192e0cc8c0" />
-<img width="1030" height="733" alt="image" src="https://github.com/user-attachments/assets/9781d134-dd06-4c5d-8706-9f835f25748a" />
+
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/a95a2ebc-3bd5-4e8b-aa69-2c03bcbebfd3" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/304b1ebf-c6c6-4045-8871-ec8fd032695f" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/9a597e85-726a-48ca-a1e1-6dc39b689d71" />
