@@ -128,6 +128,8 @@ Downloaded Successfully. Will be activated during the next boot.
 
 > Screenshot: Plugin Download Progress page confirming bouncycastle API downloaded successfully
 
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/034f95b3-73b4-485f-befe-1d63147f6b31" />
+
 5. Check the **"Restart Jenkins when installation is complete and no jobs are running"** checkbox at the bottom of the download progress page to trigger an automatic safe restart
 
 > Screenshot: Download progress page with Restart Jenkins checkbox enabled
@@ -377,7 +379,6 @@ Finished: SUCCESS
 
 
 
-<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/034f95b3-73b4-485f-befe-1d63147f6b31" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/9d108445-a1e0-478d-80c7-9727f3001883" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/244dd79e-ed84-4b81-84fd-713606e3e81a" />
 <img width="1914" height="1018" alt="image" src="https://github.com/user-attachments/assets/35ed3523-95fa-46d3-88f7-93c7a56fad3f" />
