@@ -371,6 +371,8 @@ EOF
 
 > Screenshot: Terminal showing the second heredoc command rewriting `main.tf` with the resource-only configuration
 
+<img width="1071" height="780" alt="image" src="https://github.com/user-attachments/assets/40381f51-9a30-484e-8feb-8f2302a67155" />
+
 ---
 
 ### Step 8: Verify the Corrected main.tf Content
@@ -638,7 +640,6 @@ The DynamoDB table `datacenter-users` is successfully provisioned with resource 
 
 
 
-<img width="1071" height="780" alt="image" src="https://github.com/user-attachments/assets/40381f51-9a30-484e-8feb-8f2302a67155" />
 <img width="1039" height="739" alt="image" src="https://github.com/user-attachments/assets/37f4bd59-096a-4fc5-8a92-d5d6107f3a59" />
 <img width="1046" height="623" alt="image" src="https://github.com/user-attachments/assets/3b4e6a47-68ab-4052-9a40-f95bf97226bb" />
 <img width="1043" height="697" alt="image" src="https://github.com/user-attachments/assets/94ac4f10-825d-461b-ad3a-845f2d84cd44" />
