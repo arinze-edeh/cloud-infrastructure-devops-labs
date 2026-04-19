@@ -395,6 +395,8 @@ Connection to ststor01 closed.
 
 > Screenshot: Terminal showing rpm -q vim-enhanced returning vim-enhanced-8.2.2637-27.el9.x86_64 after first build
 
+<img width="1037" height="387" alt="image" src="https://github.com/user-attachments/assets/5924b5f0-24db-4130-a0b8-976a587a45cd" />
+
 The installed package version is `vim-enhanced-8.2.2637-27.el9.x86_64`, confirming the Jenkins job successfully executed `sudo yum install -y vim-enhanced` on the storage server.
 
 The full install output captured during an earlier direct SSH session showed the following packages installed as part of the transaction:
@@ -502,7 +504,7 @@ The package remained installed and the query returned the same version string ac
 <img width="1034" height="711" alt="image" src="https://github.com/user-attachments/assets/82dec9a9-1a89-402b-848e-ac7203d281c4" />
 <img width="1032" height="611" alt="image" src="https://github.com/user-attachments/assets/02ea54e0-e28f-4bfc-84ff-a0e15b4c783d" />
 <img width="1036" height="331" alt="image" src="https://github.com/user-attachments/assets/eefd2a26-7ace-4d79-9dc0-9f788e953d52" />
-<img width="1037" height="387" alt="image" src="https://github.com/user-attachments/assets/5924b5f0-24db-4130-a0b8-976a587a45cd" />
+
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/b19d62d1-8ac1-4e35-8a9d-43b5c6441292" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/fccfc2fa-1009-4d95-b5d6-d742bf19b91c" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/4a7ab027-8011-43aa-b520-30007eaa376c" />
