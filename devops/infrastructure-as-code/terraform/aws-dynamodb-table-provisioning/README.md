@@ -439,6 +439,8 @@ Provider `hashicorp/aws v5.91.0` is installed and the lock file `.terraform.lock
 
 > Screenshot: Successful `terraform init` output confirming `hashicorp/aws v5.91.0` installation and "Terraform has been successfully initialized!"
 
+<img width="1046" height="623" alt="image" src="https://github.com/user-attachments/assets/3b4e6a47-68ab-4052-9a40-f95bf97226bb" />
+
 ---
 
 ### Step 10: Validate the Configuration
@@ -456,6 +458,8 @@ Success! The configuration is valid.
 ```
 
 > Screenshot: `terraform validate` output showing "Success! The configuration is valid."
+
+<img width="1043" height="697" alt="image" src="https://github.com/user-attachments/assets/94ac4f10-825d-461b-ad3a-845f2d84cd44" />
 
 ---
 
@@ -642,7 +646,5 @@ The DynamoDB table `datacenter-users` is successfully provisioned with resource 
 
 
 
-<img width="1046" height="623" alt="image" src="https://github.com/user-attachments/assets/3b4e6a47-68ab-4052-9a40-f95bf97226bb" />
-<img width="1043" height="697" alt="image" src="https://github.com/user-attachments/assets/94ac4f10-825d-461b-ad3a-845f2d84cd44" />
 <img width="1077" height="652" alt="image" src="https://github.com/user-attachments/assets/56334133-cb17-4a8e-9672-e7ae5faa8f2c" />
 <img width="1075" height="715" alt="image" src="https://github.com/user-attachments/assets/7c17d75b-b48f-44ac-8ece-5a3d5f165a10" />
