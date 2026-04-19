@@ -346,6 +346,8 @@ provider "aws" {
 
 > Screenshot: `cat provider.tf` output showing the full LocalStack endpoint configuration
 
+<img width="1064" height="650" alt="image" src="https://github.com/user-attachments/assets/a6a6636f-7786-4e4f-b246-c3cb9b44f9cd" />
+
 ---
 
 ### Step 7: Rewrite main.tf as Resource-Only Configuration
@@ -636,7 +638,6 @@ The DynamoDB table `datacenter-users` is successfully provisioned with resource 
 
 
 
-<img width="1064" height="650" alt="image" src="https://github.com/user-attachments/assets/a6a6636f-7786-4e4f-b246-c3cb9b44f9cd" />
 <img width="1071" height="780" alt="image" src="https://github.com/user-attachments/assets/40381f51-9a30-484e-8feb-8f2302a67155" />
 <img width="1039" height="739" alt="image" src="https://github.com/user-attachments/assets/37f4bd59-096a-4fc5-8a92-d5d6107f3a59" />
 <img width="1046" height="623" alt="image" src="https://github.com/user-attachments/assets/3b4e6a47-68ab-4052-9a40-f95bf97226bb" />
