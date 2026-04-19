@@ -300,6 +300,8 @@ Enable build parameterization and add the `PACKAGE` string parameter.
 
 > Screenshot: Job configuration showing "This project is parameterized" checked and PACKAGE String Parameter with description filled in
 
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/d8a56f68-697a-460c-af63-6a45721a4865" />
+
 ---
 
 ### Step 10: Configure the Build Step to Execute the Remote Install Command
@@ -482,7 +484,12 @@ The package remained installed and the query returned the same version string ac
 
 
 
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/d8a56f68-697a-460c-af63-6a45721a4865" />
+
+
+
+
+
+
 <img width="1918" height="1023" alt="image" src="https://github.com/user-attachments/assets/1fbc1e55-024b-4ee3-be6a-7272bed56bf6" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/fdb4793d-a3b5-4a30-80cc-4592c34b5a2c" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/b93582e2-6061-48bd-bfc1-7495c4ed0c62" />
