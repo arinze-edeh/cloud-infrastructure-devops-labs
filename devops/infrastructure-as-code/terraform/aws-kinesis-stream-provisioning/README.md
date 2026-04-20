@@ -267,6 +267,8 @@ Terraform confirms one resource will be created with no changes or destructions.
 
 > **Screenshot:** Terminal output of `terraform plan` showing the `+ create` action for `aws_kinesis_stream.datacenter_stream`.
 
+<img width="1042" height="719" alt="image" src="https://github.com/user-attachments/assets/7e2ad5e9-6498-45d2-9d40-535ca8234b62" />
+
 ---
 
 ### Step 6 - Apply the Configuration
@@ -443,7 +445,6 @@ The configuration is idempotent and the task is complete.
 
 
 
-<img width="1042" height="719" alt="image" src="https://github.com/user-attachments/assets/7e2ad5e9-6498-45d2-9d40-535ca8234b62" />
 <img width="1046" height="734" alt="image" src="https://github.com/user-attachments/assets/4d77a0b4-8572-4e27-a4ac-70dce3fe921d" />
 <img width="1045" height="622" alt="image" src="https://github.com/user-attachments/assets/9296751b-90a6-4d9c-a812-e185ad59194d" />
 <img width="1043" height="725" alt="image" src="https://github.com/user-attachments/assets/2e000131-5723-4f57-9ece-8b321ecf6776" />
