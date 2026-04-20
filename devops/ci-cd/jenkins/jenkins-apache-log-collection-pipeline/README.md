@@ -174,7 +174,10 @@ After Jenkins restarts, configure the SSH connection to the Storage Server so th
 5. Enter the password for the `natasha` user in the **Passphrase / Password** field.
 6. Click **Test Configuration**.
 
-> Screenshot: Jenkins System configuration page showing the SSH Server section populated with ststor01 hostname, natasha username, and /usr/src/itadmin remote directory with password authentication enabled
+> Screenshots: Jenkins System configuration page showing the SSH Server section populated with ststor01 hostname, natasha username, and /usr/src/itadmin remote directory with password authentication enabled
+
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/79c22ced-d268-4ca9-93d7-1faaf93b6543" />
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/1e3b5425-59d3-4f26-8e27-1c5821138ba5" />
 
 ---
 
@@ -428,8 +431,6 @@ Always pre-provision destination directories on remote servers before configurin
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/79c22ced-d268-4ca9-93d7-1faaf93b6543" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/1e3b5425-59d3-4f26-8e27-1c5821138ba5" />
 <img width="1037" height="529" alt="image" src="https://github.com/user-attachments/assets/7068695c-4d37-4dda-90e1-ed8792636a34" />
 <img width="1029" height="634" alt="image" src="https://github.com/user-attachments/assets/30387fb3-bf08-47b1-b69e-e22432684158" />
 <img width="1031" height="593" alt="image" src="https://github.com/user-attachments/assets/2519f13a-f491-4cb1-b8d1-fdf7d25b5046" />
