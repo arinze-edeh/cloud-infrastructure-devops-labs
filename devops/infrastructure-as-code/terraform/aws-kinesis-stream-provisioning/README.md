@@ -220,6 +220,8 @@ Success! The configuration is valid.
 
 > **Screenshot:** Terminal output of `terraform validate` returning a success result.
 
+<img width="1052" height="657" alt="image" src="https://github.com/user-attachments/assets/1d1f5e69-8871-46ab-b567-e05fcd4782de" />
+
 ---
 
 ### Step 5 - Preview the Execution Plan
@@ -440,11 +442,7 @@ The configuration is idempotent and the task is complete.
 
 
 
-<img width="1045" height="692" alt="image" src="https://github.com/user-attachments/assets/4a91be4f-58a5-462b-a645-eb577e39686a" />
 
-<img width="1048" height="606" alt="image" src="https://github.com/user-attachments/assets/75470a3f-2db2-407e-99f8-5cd7ed1eb2cb" />
-
-<img width="1052" height="657" alt="image" src="https://github.com/user-attachments/assets/1d1f5e69-8871-46ab-b567-e05fcd4782de" />
 <img width="1042" height="719" alt="image" src="https://github.com/user-attachments/assets/7e2ad5e9-6498-45d2-9d40-535ca8234b62" />
 <img width="1046" height="734" alt="image" src="https://github.com/user-attachments/assets/4d77a0b4-8572-4e27-a4ac-70dce3fe921d" />
 <img width="1045" height="622" alt="image" src="https://github.com/user-attachments/assets/9296751b-90a6-4d9c-a812-e185ad59194d" />
