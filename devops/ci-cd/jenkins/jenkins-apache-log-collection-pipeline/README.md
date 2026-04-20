@@ -371,7 +371,11 @@ The Build #2 console output confirms the trigger was the scheduler (`Started by 
 
 > Screenshot: copy-logs job status page showing Build #2 (3:45 AM) and Build #1 (3:42 AM) both with green success icons in the Builds panel
 
+<img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/a38daa61-ab1c-47af-92d6-4901c8186269" />
+
 > Screenshot: Console Output for Build #2 showing "Started by timer" and "Finished: SUCCESS" confirming the scheduled execution worked correctly
+
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/ae4939eb-7b98-450b-8abe-602d35770bf2" />
 
 ---
 
@@ -451,6 +455,3 @@ Always pre-provision destination directories on remote servers before configurin
 
 
 <img width="1030" height="704" alt="image" src="https://github.com/user-attachments/assets/0464f920-27e9-40b0-a8fe-d5d0709fd749" />
-
-<img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/a38daa61-ab1c-47af-92d6-4901c8186269" />
-<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/ae4939eb-7b98-450b-8abe-602d35770bf2" />
