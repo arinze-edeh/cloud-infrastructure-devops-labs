@@ -443,15 +443,3 @@ Always pre-provision destination directories on remote servers before configurin
 **Directory ownership must match the SSH user configured in the plugin, not just the sudo-capable user used during provisioning.** Running `sudo mkdir` creates a root-owned directory. The subsequent `chown` to `natasha:natasha` is a mandatory step, not a courtesy, because the plugin connects as `natasha` and requires write access to deposit files.
 
 **Verifying the automated build trigger separately from the manual build is essential.** A job that succeeds manually but fails on a cron trigger typically indicates an environment variable, path, or credential issue that only surfaces when Jenkins runs as `SYSTEM` under the timer context. Observing Build #2 console output showing `Started by timer` with identical success confirmed the cron trigger was wired correctly.
-
-
-
-
-
-
-
-
-
-
-
-<img width="1030" height="704" alt="image" src="https://github.com/user-attachments/assets/0464f920-27e9-40b0-a8fe-d5d0709fd749" />
