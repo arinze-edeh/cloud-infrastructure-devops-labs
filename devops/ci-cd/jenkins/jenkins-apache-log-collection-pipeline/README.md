@@ -236,6 +236,8 @@ Save the system configuration.
 
 > Screenshot: New Item page with "copy-logs" entered as the item name and Freestyle project selected
 
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/07f9a309-1d7d-4f04-8596-47c6bc06eae5" />
+
 ---
 
 ### Step 9: Configure the Build Trigger and Shell Build Step
@@ -444,7 +446,6 @@ Always pre-provision destination directories on remote servers before configurin
 
 
 
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/07f9a309-1d7d-4f04-8596-47c6bc06eae5" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/cf11e15d-dad2-4d02-b550-717675ddbc7b" />
 <img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/fac9806a-029c-4762-927f-1d3141763d4d" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/82be0784-6f40-4e29-80d4-a2806ca56d67" />
