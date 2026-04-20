@@ -106,6 +106,8 @@ The `provider.tf` file is pre-existing and contains the AWS provider configurati
 
 > **Screenshot:** Working directory listing confirming `provider.tf` is present and no `main.tf` exists yet.
 
+<img width="1050" height="656" alt="image" src="https://github.com/user-attachments/assets/1ac1eb84-77ea-44ee-9266-4bf024b41225" />
+
 ---
 
 ### Step 2 - Author the Terraform Configuration
@@ -434,7 +436,6 @@ The configuration is idempotent and the task is complete.
 
 
 
-<img width="1050" height="656" alt="image" src="https://github.com/user-attachments/assets/1ac1eb84-77ea-44ee-9266-4bf024b41225" />
 <img width="1045" height="692" alt="image" src="https://github.com/user-attachments/assets/4a91be4f-58a5-462b-a645-eb577e39686a" />
 <img width="1044" height="702" alt="image" src="https://github.com/user-attachments/assets/44879bf2-5468-4314-9dc5-75c91910faf1" />
 <img width="1048" height="606" alt="image" src="https://github.com/user-attachments/assets/75470a3f-2db2-407e-99f8-5cd7ed1eb2cb" />
