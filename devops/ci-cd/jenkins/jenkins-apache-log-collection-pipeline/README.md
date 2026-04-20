@@ -131,11 +131,10 @@ The `copy-logs` job requires the **Publish Over SSH** plugin to transfer files f
 3. Select **Publish Over SSH** (version 390.vb_f56e7405751).
 4. Click **Install**.
 
-> Screenshots: Available plugins page with "Publish Over SSH" plugin found and selected for installation
+> Screenshot: Available plugins page with "Publish Over SSH" plugin found and selected for installation
 
 <img width="1918" height="1018" alt="image" src="https://github.com/user-attachments/assets/f0dce57c-1807-4df5-9ee5-4e86d9b989e8" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9f590c52-a874-4071-9057-7ae0f3f7891a" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/d5be5c07-36c3-4845-bb0b-2cbb8d08767b" />
+
 
 ---
 
@@ -145,9 +144,14 @@ After the plugin installation completes (all dependencies show **Success** on th
 
 The restart was triggered by selecting **Restart Jenkins when installation is complete and no jobs are running** during the install process.
 
-> Screenshot: Download progress page showing all plugin dependencies (JAXB, JSON Api, Jackson Annotations, Publish Over SSH, etc.) with Success status
+> Screenshots: Download progress page showing all plugin dependencies (JAXB, JSON Api, Jackson Annotations, Publish Over SSH, etc.) with Success status
+
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9f590c52-a874-4071-9057-7ae0f3f7891a" />
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/d5be5c07-36c3-4845-bb0b-2cbb8d08767b" />
 
 > Screenshot: Jenkins restarting screen showing "Jenkins is restarting" message with safe restart notice
+
+<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/99e587cf-9fb6-40ff-951d-afbec2f53564" />
 
 ---
 
@@ -424,7 +428,6 @@ Always pre-provision destination directories on remote servers before configurin
 
 
 
-<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/99e587cf-9fb6-40ff-951d-afbec2f53564" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/79c22ced-d268-4ca9-93d7-1faaf93b6543" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/1e3b5425-59d3-4f26-8e27-1c5821138ba5" />
 <img width="1037" height="529" alt="image" src="https://github.com/user-attachments/assets/7068695c-4d37-4dda-90e1-ed8792636a34" />
