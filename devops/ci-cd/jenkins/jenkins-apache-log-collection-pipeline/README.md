@@ -304,6 +304,8 @@ The bottom of the page shows a **"Build scheduled"** notification confirming the
 
 > Screenshot: copy-logs job status page showing "Build scheduled" notification at the bottom after clicking Build Now
 
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/82be0784-6f40-4e29-80d4-a2806ca56d67" />
+
 ---
 
 ### Step 12: Verify Build 1 Console Output
@@ -436,11 +438,6 @@ Always pre-provision destination directories on remote servers before configurin
 
 
 
-
-
-
-
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/82be0784-6f40-4e29-80d4-a2806ca56d67" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/d4e25c26-8be8-4b44-9cb4-904bb57b19b2" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6273cdef-1eb8-45d0-9795-d83320c534e7" />
 <img width="1030" height="704" alt="image" src="https://github.com/user-attachments/assets/0464f920-27e9-40b0-a8fe-d5d0709fd749" />
