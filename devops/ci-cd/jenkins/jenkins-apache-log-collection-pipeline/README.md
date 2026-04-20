@@ -101,6 +101,9 @@ Navigate to the Jenkins UI via the provided URL on port 8080. Log in using the a
 
 > Screenshot: Jenkins login page with admin username entered and password field populated
 
+
+<img width="1917" height="1021" alt="image" src="https://github.com/user-attachments/assets/a3d4f355-837b-42c0-9f65-cc7ee35e985c" />
+
 ---
 
 ### Step 2: Install Pending Plugin Updates
@@ -413,7 +416,6 @@ Always pre-provision destination directories on remote servers before configurin
 
 
 
-<img width="1917" height="1021" alt="image" src="https://github.com/user-attachments/assets/a3d4f355-837b-42c0-9f65-cc7ee35e985c" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/b343282d-bd94-44da-bd24-21cd0fd0ef60" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/37f3560a-3ada-47f6-be26-9dee6effcfd6" />
 <img width="1918" height="1019" alt="image" src="https://github.com/user-attachments/assets/34a2f279-674a-48fc-9bd9-c58ba9ad5c36" />
