@@ -294,6 +294,8 @@ The stream is successfully provisioned and its ARN is captured in the Terraform 
 
 > **Screenshot:** Terminal output of `terraform apply -auto-approve` confirming `Apply complete! Resources: 1 added, 0 changed, 0 destroyed.`
 
+<img width="1046" height="734" alt="image" src="https://github.com/user-attachments/assets/4d77a0b4-8572-4e27-a4ac-70dce3fe921d" />
+
 ---
 
 ### Step 7 - Detect and Resolve Tag Drift
@@ -444,8 +446,6 @@ The configuration is idempotent and the task is complete.
 
 
 
-
-<img width="1046" height="734" alt="image" src="https://github.com/user-attachments/assets/4d77a0b4-8572-4e27-a4ac-70dce3fe921d" />
 <img width="1045" height="622" alt="image" src="https://github.com/user-attachments/assets/9296751b-90a6-4d9c-a812-e185ad59194d" />
 <img width="1043" height="725" alt="image" src="https://github.com/user-attachments/assets/2e000131-5723-4f57-9ece-8b321ecf6776" />
 <img width="1045" height="357" alt="image" src="https://github.com/user-attachments/assets/c584fc5a-ca38-4fb7-b9a8-b3c18c535da6" />
