@@ -359,6 +359,8 @@ Both `access_log` and `error_log` are present with timestamps matching the build
 
 > Screenshot: Terminal on jump host showing SSH session to ststor01 with ls -lh /usr/src/itadmin output displaying access_log (41 bytes) and error_log (733 bytes) with Apr 20 03:42 timestamps
 
+<img width="1033" height="749" alt="image" src="https://github.com/user-attachments/assets/4f042519-be24-49bb-b22e-fc544f869cd5" />
+
 ---
 
 ### Step 14: Confirm Scheduled Build Execution
@@ -449,6 +451,6 @@ Always pre-provision destination directories on remote servers before configurin
 
 
 <img width="1030" height="704" alt="image" src="https://github.com/user-attachments/assets/0464f920-27e9-40b0-a8fe-d5d0709fd749" />
-<img width="1033" height="749" alt="image" src="https://github.com/user-attachments/assets/4f042519-be24-49bb-b22e-fc544f869cd5" />
+
 <img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/a38daa61-ab1c-47af-92d6-4901c8186269" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/ae4939eb-7b98-450b-8abe-602d35770bf2" />
