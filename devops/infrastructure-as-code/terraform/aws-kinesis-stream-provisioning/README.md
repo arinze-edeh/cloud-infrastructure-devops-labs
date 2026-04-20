@@ -354,7 +354,11 @@ resource "aws_kinesis_stream" "datacenter_stream" {
 
 > **Screenshot:** Terminal output of `terraform plan` showing the tag drift `~ update in-place` action before the configuration was corrected.
 
+<img width="1045" height="622" alt="image" src="https://github.com/user-attachments/assets/9296751b-90a6-4d9c-a812-e185ad59194d" />
+
 > **Screenshot:** Terminal output of `cat main.tf` after the tags block was removed.
+
+<img width="1043" height="725" alt="image" src="https://github.com/user-attachments/assets/2e000131-5723-4f57-9ece-8b321ecf6776" />
 
 ---
 
@@ -446,7 +450,5 @@ The configuration is idempotent and the task is complete.
 
 
 
-<img width="1045" height="622" alt="image" src="https://github.com/user-attachments/assets/9296751b-90a6-4d9c-a812-e185ad59194d" />
-<img width="1043" height="725" alt="image" src="https://github.com/user-attachments/assets/2e000131-5723-4f57-9ece-8b321ecf6776" />
 <img width="1045" height="357" alt="image" src="https://github.com/user-attachments/assets/c584fc5a-ca38-4fb7-b9a8-b3c18c535da6" />
 <img width="1050" height="430" alt="image" src="https://github.com/user-attachments/assets/2fdb89ba-ecf7-4f0b-99e1-b6c574247ce2" />
