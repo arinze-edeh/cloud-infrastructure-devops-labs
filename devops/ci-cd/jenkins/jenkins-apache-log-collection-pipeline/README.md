@@ -270,6 +270,8 @@ These commands copy both log files from the default Apache log location on `stap
 
 > Screenshot: Job Configure page showing Build Triggers section with "Build periodically" checked and schedule */3 * * * * entered, and the Execute shell build step populated with the two sshpass scp commands
 
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/cf11e15d-dad2-4d02-b550-717675ddbc7b" />
+
 ---
 
 ### Step 10: Configure the Post-Build SSH Transfer Action
@@ -436,17 +438,6 @@ Always pre-provision destination directories on remote servers before configurin
 
 
 
-
-<img width="1037" height="529" alt="image" src="https://github.com/user-attachments/assets/7068695c-4d37-4dda-90e1-ed8792636a34" />
-<img width="1029" height="634" alt="image" src="https://github.com/user-attachments/assets/30387fb3-bf08-47b1-b69e-e22432684158" />
-<img width="1031" height="593" alt="image" src="https://github.com/user-attachments/assets/2519f13a-f491-4cb1-b8d1-fdf7d25b5046" />
-<img width="1034" height="570" alt="image" src="https://github.com/user-attachments/assets/6d582487-b4ea-45aa-8202-04e08c1aeea9" />
-
-
-
-
-
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/cf11e15d-dad2-4d02-b550-717675ddbc7b" />
 <img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/fac9806a-029c-4762-927f-1d3141763d4d" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/82be0784-6f40-4e29-80d4-a2806ca56d67" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/d4e25c26-8be8-4b44-9cb4-904bb57b19b2" />
