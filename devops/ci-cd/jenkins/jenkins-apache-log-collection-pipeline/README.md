@@ -114,7 +114,11 @@ Before installing new plugins, apply any available updates to keep the Jenkins i
 2. Select all available updates (in this case, the **bouncycastle API** plugin had an available update).
 3. Click **Update**.
 
-> Screenshot: Plugin Updates page showing the bouncycastle API plugin selected for update
+> Screenshots: Plugin Updates page showing the bouncycastle API plugin selected for update
+
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/b343282d-bd94-44da-bd24-21cd0fd0ef60" />
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/37f3560a-3ada-47f6-be26-9dee6effcfd6" />
+<img width="1918" height="1019" alt="image" src="https://github.com/user-attachments/assets/34a2f279-674a-48fc-9bd9-c58ba9ad5c36" />
 
 ---
 
@@ -416,9 +420,6 @@ Always pre-provision destination directories on remote servers before configurin
 
 
 
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/b343282d-bd94-44da-bd24-21cd0fd0ef60" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/37f3560a-3ada-47f6-be26-9dee6effcfd6" />
-<img width="1918" height="1019" alt="image" src="https://github.com/user-attachments/assets/34a2f279-674a-48fc-9bd9-c58ba9ad5c36" />
 <img width="1918" height="1018" alt="image" src="https://github.com/user-attachments/assets/f0dce57c-1807-4df5-9ee5-4e86d9b989e8" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9f590c52-a874-4071-9057-7ae0f3f7891a" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/d5be5c07-36c3-4845-bb0b-2cbb8d08767b" />
