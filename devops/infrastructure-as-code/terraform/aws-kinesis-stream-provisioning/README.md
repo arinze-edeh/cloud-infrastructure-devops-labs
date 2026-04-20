@@ -358,7 +358,7 @@ resource "aws_kinesis_stream" "datacenter_stream" {
 
 > **Screenshot:** Terminal output of `cat main.tf` after the tags block was removed.
 
-<img width="1043" height="725" alt="image" src="https://github.com/user-attachments/assets/2e000131-5723-4f57-9ece-8b321ecf6776" />
+<img width="1045" height="357" alt="image" src="https://github.com/user-attachments/assets/c584fc5a-ca38-4fb7-b9a8-b3c18c535da6" />
 
 ---
 
@@ -384,6 +384,8 @@ found no differences, so no changes are needed.
 The configuration is idempotent and the task is complete.
 
 > **Screenshot:** Terminal output of final `terraform plan` returning `No changes. Your infrastructure matches the configuration.`
+
+<img width="1050" height="430" alt="image" src="https://github.com/user-attachments/assets/2fdb89ba-ecf7-4f0b-99e1-b6c574247ce2" />
 
 ---
 
@@ -440,15 +442,3 @@ The configuration is idempotent and the task is complete.
 * [Terraform CLI - apply](https://developer.hashicorp.com/terraform/cli/commands/apply)
 * [Terraform CLI - validate](https://developer.hashicorp.com/terraform/cli/commands/validate)
 * [LocalStack AWS Kinesis Simulation](https://docs.localstack.cloud/user-guide/aws/kinesis/)
-
-
-
-
-
-
-
-
-
-
-<img width="1045" height="357" alt="image" src="https://github.com/user-attachments/assets/c584fc5a-ca38-4fb7-b9a8-b3c18c535da6" />
-<img width="1050" height="430" alt="image" src="https://github.com/user-attachments/assets/2fdb89ba-ecf7-4f0b-99e1-b6c574247ce2" />
