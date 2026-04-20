@@ -292,6 +292,8 @@ These commands copy both log files from the default Apache log location on `stap
 
 > Screenshot: Post-build Actions section showing "Send build artifacts over SSH" configured with ststor01 selected as the SSH server and "access_log, error_log" in the Source files field
 
+<img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/fac9806a-029c-4762-927f-1d3141763d4d" />
+
 ---
 
 ### Step 11: Trigger the First Build Manually
@@ -438,7 +440,6 @@ Always pre-provision destination directories on remote servers before configurin
 
 
 
-<img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/fac9806a-029c-4762-927f-1d3141763d4d" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/82be0784-6f40-4e29-80d4-a2806ca56d67" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/d4e25c26-8be8-4b44-9cb4-904bb57b19b2" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6273cdef-1eb8-45d0-9795-d83320c534e7" />
