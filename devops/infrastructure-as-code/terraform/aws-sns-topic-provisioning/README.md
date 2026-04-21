@@ -316,6 +316,8 @@ Terraform reports the error twice. The root cause is that `main.tf:1` and `provi
 
 *Screenshot: terraform init output showing the duplicate provider configuration error reported twice*
 
+<img width="1046" height="708" alt="image" src="https://github.com/user-attachments/assets/15daf16d-3476-4010-a86e-5cfafe489473" />
+
 ---
 
 ### Step 7: Fix main.tf by Removing the Provider Block
@@ -655,9 +657,7 @@ This returned the expected JSON response confirming the topic ARN.
 
 
 
-<img width="1029" height="691" alt="image" src="https://github.com/user-attachments/assets/fdeb825c-f1a8-45d9-a0a8-fa2d59a9dfac" />
 
-<img width="1046" height="708" alt="image" src="https://github.com/user-attachments/assets/15daf16d-3476-4010-a86e-5cfafe489473" />
 <img width="1051" height="303" alt="image" src="https://github.com/user-attachments/assets/085f14d0-418e-4b3c-9bf8-b0f5fb30f581" />
 <img width="1050" height="301" alt="image" src="https://github.com/user-attachments/assets/af22cc51-b8b7-416e-b82f-6b51f68aa0a7" />
 <img width="1048" height="597" alt="image" src="https://github.com/user-attachments/assets/d36d273d-6ef5-4941-ad22-0d82d13e512f" />
