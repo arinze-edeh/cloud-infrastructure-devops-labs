@@ -222,6 +222,8 @@ EOF
 
 *Screenshot: Terminal after the second cat heredoc write, overwriting main.tf with the full provider block*
 
+<img width="1041" height="471" alt="image" src="https://github.com/user-attachments/assets/6951556f-b1ec-40c4-822f-6bba57716d1b" />
+
 ---
 
 ### Step 5: Confirm main.tf Contents and Directory State
@@ -651,7 +653,6 @@ This returned the expected JSON response confirming the topic ARN.
 
 
 
-<img width="1041" height="471" alt="image" src="https://github.com/user-attachments/assets/6951556f-b1ec-40c4-822f-6bba57716d1b" />
 <img width="1029" height="691" alt="image" src="https://github.com/user-attachments/assets/fdeb825c-f1a8-45d9-a0a8-fa2d59a9dfac" />
 <img width="1043" height="496" alt="image" src="https://github.com/user-attachments/assets/d606548a-2173-47ef-aa69-7e0aae29e1ab" />
 <img width="1046" height="708" alt="image" src="https://github.com/user-attachments/assets/15daf16d-3476-4010-a86e-5cfafe489473" />
