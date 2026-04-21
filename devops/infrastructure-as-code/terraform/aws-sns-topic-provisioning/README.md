@@ -356,6 +356,8 @@ resource "aws_sns_topic" "xfusion_notifications" {
 
 *Screenshot: cat main.tf output confirming resource-only content with no provider block*
 
+<img width="1050" height="301" alt="image" src="https://github.com/user-attachments/assets/af22cc51-b8b7-416e-b82f-6b51f68aa0a7" />
+
 ---
 
 ### Step 9: Re-run terraform init Successfully
@@ -660,7 +662,6 @@ This returned the expected JSON response confirming the topic ARN.
 
 
 
-<img width="1050" height="301" alt="image" src="https://github.com/user-attachments/assets/af22cc51-b8b7-416e-b82f-6b51f68aa0a7" />
 <img width="1048" height="597" alt="image" src="https://github.com/user-attachments/assets/d36d273d-6ef5-4941-ad22-0d82d13e512f" />
 <img width="1050" height="676" alt="image" src="https://github.com/user-attachments/assets/ffdee858-d172-4e8c-8a6c-62d2f0579069" />
 <img width="1040" height="661" alt="image" src="https://github.com/user-attachments/assets/d75dfb74-5c01-4756-ad1f-1f6db8349f72" />
