@@ -270,6 +270,8 @@ drwxr-x--- 1 bob bob 4096 Apr 21 18:29 ..
 
 *Screenshot: cat main.tf output showing the duplicate provider block, followed by ls -la confirming both .tf files exist*
 
+<img width="1043" height="496" alt="image" src="https://github.com/user-attachments/assets/d606548a-2173-47ef-aa69-7e0aae29e1ab" />
+
 ---
 
 ### Step 6: Run terraform init - Duplicate Provider Error
@@ -654,7 +656,7 @@ This returned the expected JSON response confirming the topic ARN.
 
 
 <img width="1029" height="691" alt="image" src="https://github.com/user-attachments/assets/fdeb825c-f1a8-45d9-a0a8-fa2d59a9dfac" />
-<img width="1043" height="496" alt="image" src="https://github.com/user-attachments/assets/d606548a-2173-47ef-aa69-7e0aae29e1ab" />
+
 <img width="1046" height="708" alt="image" src="https://github.com/user-attachments/assets/15daf16d-3476-4010-a86e-5cfafe489473" />
 <img width="1051" height="303" alt="image" src="https://github.com/user-attachments/assets/085f14d0-418e-4b3c-9bf8-b0f5fb30f581" />
 <img width="1050" height="301" alt="image" src="https://github.com/user-attachments/assets/af22cc51-b8b7-416e-b82f-6b51f68aa0a7" />
