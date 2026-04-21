@@ -334,6 +334,8 @@ EOF
 
 *Screenshot: Terminal after the corrective cat heredoc write removing the provider block from main.tf*
 
+<img width="1051" height="303" alt="image" src="https://github.com/user-attachments/assets/085f14d0-418e-4b3c-9bf8-b0f5fb30f581" />
+
 ---
 
 ### Step 8: Confirm Corrected main.tf Contents
@@ -658,7 +660,6 @@ This returned the expected JSON response confirming the topic ARN.
 
 
 
-<img width="1051" height="303" alt="image" src="https://github.com/user-attachments/assets/085f14d0-418e-4b3c-9bf8-b0f5fb30f581" />
 <img width="1050" height="301" alt="image" src="https://github.com/user-attachments/assets/af22cc51-b8b7-416e-b82f-6b51f68aa0a7" />
 <img width="1048" height="597" alt="image" src="https://github.com/user-attachments/assets/d36d273d-6ef5-4941-ad22-0d82d13e512f" />
 <img width="1050" height="676" alt="image" src="https://github.com/user-attachments/assets/ffdee858-d172-4e8c-8a6c-62d2f0579069" />
