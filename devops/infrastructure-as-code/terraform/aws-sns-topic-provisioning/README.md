@@ -115,6 +115,8 @@ Two files are present: `README.MD` and `provider.tf`. No `main.tf` exists yet. T
 
 *Screenshot: ls -la output showing README.MD and provider.tf, followed by terraform version output*
 
+<img width="1048" height="512" alt="image" src="https://github.com/user-attachments/assets/ddaecc45-be28-41f7-84be-e2d63c8c8276" />
+
 ---
 
 ### Step 2: Review the Existing Provider Configuration
@@ -171,6 +173,8 @@ The `provider "aws"` block is fully defined here, including `sns = "http://aws:4
 
 *Screenshot: cat output of provider.tf showing the full provider block and all LocalStack endpoint overrides*
 
+<img width="1074" height="705" alt="image" src="https://github.com/user-attachments/assets/cb743707-be27-4ea2-8e45-92f3f9215254" />
+
 ---
 
 ### Step 3: Create main.tf with SNS Resource Only
@@ -186,6 +190,8 @@ EOF
 ```
 
 *Screenshot: Terminal after the first cat heredoc write to main.tf*
+
+<img width="1035" height="579" alt="image" src="https://github.com/user-attachments/assets/06be32cc-99e4-4189-a069-caf1eb6d8536" />
 
 ---
 
@@ -644,11 +650,7 @@ This returned the expected JSON response confirming the topic ARN.
 
 
 
-<img width="1048" height="512" alt="image" src="https://github.com/user-attachments/assets/ddaecc45-be28-41f7-84be-e2d63c8c8276" />
 
-<img width="1074" height="705" alt="image" src="https://github.com/user-attachments/assets/cb743707-be27-4ea2-8e45-92f3f9215254" />
-
-<img width="1035" height="579" alt="image" src="https://github.com/user-attachments/assets/06be32cc-99e4-4189-a069-caf1eb6d8536" />
 <img width="1041" height="471" alt="image" src="https://github.com/user-attachments/assets/6951556f-b1ec-40c4-822f-6bba57716d1b" />
 <img width="1029" height="691" alt="image" src="https://github.com/user-attachments/assets/fdeb825c-f1a8-45d9-a0a8-fa2d59a9dfac" />
 <img width="1043" height="496" alt="image" src="https://github.com/user-attachments/assets/d606548a-2173-47ef-aa69-7e0aae29e1ab" />
