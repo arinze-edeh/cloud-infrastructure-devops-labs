@@ -505,6 +505,8 @@ The SNS topic is provisioned immediately. The assigned ARN `arn:aws:sns:us-east-
 
 *Screenshot: terraform apply -auto-approve output confirming resource creation and the assigned SNS topic ARN*
 
+<img width="1048" height="627" alt="image" src="https://github.com/user-attachments/assets/4f3248c2-4bf1-468d-8b28-4a86becf93e5" />
+
 ---
 
 ### Step 13: Verify Terraform State
@@ -523,6 +525,8 @@ The SNS topic is tracked in state under the resource address `aws_sns_topic.xfus
 
 *Screenshot: terraform state list output confirming the SNS topic is present in Terraform state*
 
+<img width="1044" height="620" alt="image" src="https://github.com/user-attachments/assets/871da1f2-88f1-495a-a2e1-08d256021035" />
+
 ---
 
 ### Step 14: Verify Resource via AWS CLI - localhost Endpoint Failure
@@ -540,6 +544,8 @@ Could not connect to the endpoint URL: "http://localhost:4566/"
 LocalStack is not reachable via `localhost` in this environment. The service is bound to the container network alias `aws`, not the loopback interface.
 
 *Screenshot: AWS CLI error output showing connection failure to localhost:4566*
+
+<img width="1045" height="695" alt="image" src="https://github.com/user-attachments/assets/3f46e6a7-1a2a-4cac-a412-e1f67b4ca6f9" />
 
 ---
 
@@ -564,6 +570,8 @@ aws --endpoint-url=http://aws:4566 sns list-topics
 The SNS topic `xfusion-notifications` is confirmed to exist in LocalStack. The ARN matches what Terraform reported on apply, completing end-to-end verification.
 
 *Screenshot: AWS CLI output listing the xfusion-notifications topic ARN from the correct aws:4566 endpoint*
+
+<img width="1047" height="424" alt="image" src="https://github.com/user-attachments/assets/75fe1320-6e62-4d40-9b96-ada267bd0f71" />
 
 ---
 
@@ -662,13 +670,3 @@ This returned the expected JSON response confirming the topic ARN.
 * **The `terraform init` duplicate provider error is reported twice but represents a single conflict.** Terraform surfaces the error once for each location where the duplicate is detected. Both messages point to the same root cause and require a single fix: removing the extra provider block from `main.tf`.
 
 * **`terraform plan` output is reproduced in full at the start of `terraform apply`.** When using `-auto-approve`, Terraform re-displays the complete plan before executing it, allowing post-apply review of the exact actions that were taken even when no interactive confirmation step occurred.
-
-
-
-
-
-
-<img width="1048" height="627" alt="image" src="https://github.com/user-attachments/assets/4f3248c2-4bf1-468d-8b28-4a86becf93e5" />
-<img width="1044" height="620" alt="image" src="https://github.com/user-attachments/assets/871da1f2-88f1-495a-a2e1-08d256021035" />
-<img width="1045" height="695" alt="image" src="https://github.com/user-attachments/assets/3f46e6a7-1a2a-4cac-a412-e1f67b4ca6f9" />
-<img width="1047" height="424" alt="image" src="https://github.com/user-attachments/assets/75fe1320-6e62-4d40-9b96-ada267bd0f71" />
