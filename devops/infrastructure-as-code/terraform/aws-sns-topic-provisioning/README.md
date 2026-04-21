@@ -394,6 +394,8 @@ The provider plugin `hashicorp/aws v5.91.0` is downloaded and installed successf
 
 *Screenshot: terraform init output confirming successful provider installation and lock file creation*
 
+<img width="1048" height="597" alt="image" src="https://github.com/user-attachments/assets/d36d273d-6ef5-4941-ad22-0d82d13e512f" />
+
 ---
 
 ### Step 10: Validate the Configuration
@@ -409,6 +411,8 @@ Success! The configuration is valid.
 ```
 
 *Screenshot: terraform validate output confirming zero configuration errors*
+
+<img width="1050" height="676" alt="image" src="https://github.com/user-attachments/assets/ffdee858-d172-4e8c-8a6c-62d2f0579069" />
 
 ---
 
@@ -454,6 +458,8 @@ Note: You didn't use the -out option to save this plan, so Terraform can't guara
 The plan confirms one resource will be created: an SNS topic named `xfusion-notifications`. No existing state or infrastructure will be modified or destroyed. The `fifo_topic = false` attribute confirms this is a standard topic, not a FIFO topic.
 
 *Screenshot: terraform plan output showing the complete aws_sns_topic resource attributes and the Plan: 1 to add summary*
+
+<img width="1040" height="661" alt="image" src="https://github.com/user-attachments/assets/d75dfb74-5c01-4756-ad1f-1f6db8349f72" />
 
 ---
 
@@ -662,9 +668,6 @@ This returned the expected JSON response confirming the topic ARN.
 
 
 
-<img width="1048" height="597" alt="image" src="https://github.com/user-attachments/assets/d36d273d-6ef5-4941-ad22-0d82d13e512f" />
-<img width="1050" height="676" alt="image" src="https://github.com/user-attachments/assets/ffdee858-d172-4e8c-8a6c-62d2f0579069" />
-<img width="1040" height="661" alt="image" src="https://github.com/user-attachments/assets/d75dfb74-5c01-4756-ad1f-1f6db8349f72" />
 <img width="1048" height="627" alt="image" src="https://github.com/user-attachments/assets/4f3248c2-4bf1-468d-8b28-4a86becf93e5" />
 <img width="1044" height="620" alt="image" src="https://github.com/user-attachments/assets/871da1f2-88f1-495a-a2e1-08d256021035" />
 <img width="1045" height="695" alt="image" src="https://github.com/user-attachments/assets/3f46e6a7-1a2a-4cac-a412-e1f67b4ca6f9" />
