@@ -398,7 +398,12 @@ Cleanup done. Backup completed successfully.
 Finished: SUCCESS
 ```
 
-Screenshot: Console Output for Build #1 showing all pipeline stages completed and "Finished: SUCCESS"
+Screenshots: Console Output for Build #1 showing all pipeline stages completed and "Finished: SUCCESS"
+
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/2ad4f4d5-2b7f-442c-9bdf-c607fb597dab" />
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/84f61f03-c7a3-47d0-ac5c-d8bc3b665405" />
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/fe924fba-1e81-469a-ad0e-dbdf07619f40" />
+
 
 ---
 
@@ -490,17 +495,3 @@ chmod 700 /var/lib/jenkins/.ssh
 * **Temporary files on application servers require explicit cleanup.** Database dumps can be large. Without the `rm -f` step, every scheduled execution accumulates a new dump file in `/tmp` on the application server. At a 10-minute interval, this adds up quickly and can fill the filesystem.
 
 * **Plugin installation order matters.** Updating existing plugins before installing new ones prevents dependency resolution failures caused by stale plugin versions conflicting with newly installed packages.
-
-
-
-
-
-
-
-
-
-
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/2ad4f4d5-2b7f-442c-9bdf-c607fb597dab" />
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/84f61f03-c7a3-47d0-ac5c-d8bc3b665405" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/fe924fba-1e81-469a-ad0e-dbdf07619f40" />
-
