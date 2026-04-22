@@ -106,6 +106,8 @@ Before installing new plugins, apply any pending updates to ensure dependency co
 
 Screenshot: Plugin Updates page showing bouncycastle API selected for update
 
+<img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/f917d390-c640-4f2e-9463-5dfaaf4f61a3" />
+
 The update page confirmed the plugin downloaded successfully and would activate on the next restart.
 
 Screenshot: Download progress page showing "Downloaded Successfully. Will be activated during the next boot"
@@ -113,7 +115,10 @@ Screenshot: Download progress page showing "Downloaded Successfully. Will be act
 4. Check the **Restart Jenkins when installation is complete and no jobs are running** checkbox
 5. Wait for Jenkins to restart automatically
 
-Screenshot: Jenkins restarting screen ("Jenkins is restarting")
+Screenshots: Jenkins restarting screen ("Jenkins is restarting")
+
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/74770ec7-b458-49f8-b2fb-cdb2c08632a4" />
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/88b8f8d0-e670-402c-b849-2ad902b1e9c5" />
 
 ---
 
@@ -468,9 +473,6 @@ chmod 700 /var/lib/jenkins/.ssh
 
 
 
-<img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/f917d390-c640-4f2e-9463-5dfaaf4f61a3" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/74770ec7-b458-49f8-b2fb-cdb2c08632a4" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/88b8f8d0-e670-402c-b849-2ad902b1e9c5" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9ac890e3-5874-4764-b393-4b2ca5842c39" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/aab3d51c-94b3-4254-b5d9-28185753874e" />
 <img width="1918" height="1018" alt="image" src="https://github.com/user-attachments/assets/69c7b8bf-da61-4f39-a636-e4aaaa6bf4f4" />
