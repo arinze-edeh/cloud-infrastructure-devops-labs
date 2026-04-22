@@ -278,7 +278,7 @@ ssh natasha@ststor01 "mkdir -p /home/natasha/db_backups && ls -la /home/natasha/
 
 Screenshot: Terminal on stapp01 confirming ststor01 connection is passwordless and db_backups directory exists
 
-<img width="1024" height="715" alt="image" src="https://github.com/user-attachments/assets/54ddf492-8f84-4cdf-9b42-92d43fe95edd" />
+<img width="1028" height="857" alt="image" src="https://github.com/user-attachments/assets/f9440326-a706-497f-bafc-493b0cfdcde8" />
 
 Exit stapp01 to return to the Jenkins server:
 
@@ -300,7 +300,7 @@ ssh -i /var/lib/jenkins/.ssh/id_rsa tony@stapp01 "ssh natasha@ststor01 'echo Ful
 
 Screenshot: Terminal on Jenkins server showing "Full chain working" confirming the three-hop SSH chain is operational
 
-<img width="1028" height="857" alt="image" src="https://github.com/user-attachments/assets/f9440326-a706-497f-bafc-493b0cfdcde8" />
+<img width="1031" height="450" alt="image" src="https://github.com/user-attachments/assets/c0c6ab7b-ede2-4cf6-9de7-78ca869625a4" />
 
 ---
 
@@ -502,7 +502,6 @@ chmod 700 /var/lib/jenkins/.ssh
 <img width="1030" height="759" alt="image" src="https://github.com/user-attachments/assets/6be4beca-916b-4177-bbc7-d48b8b347157" />
 <img width="1020" height="845" alt="image" src="https://github.com/user-attachments/assets/7084abd0-c7f5-426a-903c-df30b56f6d4e" />
 
-<img width="1031" height="450" alt="image" src="https://github.com/user-attachments/assets/c0c6ab7b-ede2-4cf6-9de7-78ca869625a4" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/c931777d-9d66-4233-89b0-f121f8a6d138" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/ed891905-2a76-4508-b1a0-481b96341224" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/30274957-1341-4579-bf08-c89b15b783c6" />
