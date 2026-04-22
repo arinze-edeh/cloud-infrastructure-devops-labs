@@ -486,7 +486,7 @@ chmod 700 /var/lib/jenkins/.ssh
 
 
 
-<img width="1028" height="740" alt="image" src="https://github.com/user-attachments/assets/cd022d46-20f4-478b-bdac-6faaf4aaa639" />
+
 
 <img width="1027" height="781" alt="image" src="https://github.com/user-attachments/assets/bf29ed0a-e12b-4d39-9c6e-12018523b2e1" />
 <img width="1030" height="452" alt="image" src="https://github.com/user-attachments/assets/b578f211-e4d4-456e-9dc0-77254b3fd6ec" />
