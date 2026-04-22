@@ -313,6 +313,8 @@ Screenshot: Terminal on Jenkins server showing "Full chain working" confirming t
 
 Screenshot: New Item page with "database-backup" entered and Freestyle project selected
 
+<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/c931777d-9d66-4233-89b0-f121f8a6d138" />
+
 ---
 
 ### Step 8: Configure the Build Trigger
@@ -504,7 +506,6 @@ chmod 700 /var/lib/jenkins/.ssh
 <img width="1030" height="759" alt="image" src="https://github.com/user-attachments/assets/6be4beca-916b-4177-bbc7-d48b8b347157" />
 <img width="1020" height="845" alt="image" src="https://github.com/user-attachments/assets/7084abd0-c7f5-426a-903c-df30b56f6d4e" />
 
-<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/c931777d-9d66-4233-89b0-f121f8a6d138" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/ed891905-2a76-4508-b1a0-481b96341224" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/30274957-1341-4579-bf08-c89b15b783c6" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/2ad4f4d5-2b7f-442c-9bdf-c607fb597dab" />
