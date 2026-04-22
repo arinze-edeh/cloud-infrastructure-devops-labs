@@ -484,12 +484,6 @@ chmod 700 /var/lib/jenkins/.ssh
 
 
 
-<img width="1035" height="778" alt="image" src="https://github.com/user-attachments/assets/8e17bacd-760b-47a0-8d90-ad8efe4e5eaf" />
-<img width="1027" height="750" alt="image" src="https://github.com/user-attachments/assets/de5bcdea-1770-4925-9c6a-326a60abfe21" />
-<img width="1033" height="780" alt="image" src="https://github.com/user-attachments/assets/be5037df-97c9-445e-9b26-919f3c4fc003" />
-
-<img width="1031" height="619" alt="image" src="https://github.com/user-attachments/assets/adfcf076-1c0f-4e05-8f0b-4381555249f6" />
-
 <img width="1028" height="740" alt="image" src="https://github.com/user-attachments/assets/cd022d46-20f4-478b-bdac-6faaf4aaa639" />
 <img width="1036" height="741" alt="image" src="https://github.com/user-attachments/assets/fad2055e-bd4d-4ad7-9f30-1c5649d0eb6b" />
 <img width="1027" height="781" alt="image" src="https://github.com/user-attachments/assets/bf29ed0a-e12b-4d39-9c6e-12018523b2e1" />
