@@ -332,6 +332,8 @@ Jenkins will display a warning suggesting `H/10 * * * *` for load spreading. The
 
 Screenshot: Triggers section showing "Build periodically" checked with schedule set to "*/10 * * * *"
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/ed891905-2a76-4508-b1a0-481b96341224" />
+
 ---
 
 ### Step 9: Write the Build Shell Script
@@ -370,6 +372,8 @@ echo "Cleanup done. Backup completed successfully."
 ```
 
 Screenshot: Build Steps section showing the complete shell script in the Execute shell command box
+
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/30274957-1341-4579-bf08-c89b15b783c6" />
 
 3. Click **Save**
 
@@ -496,8 +500,6 @@ chmod 700 /var/lib/jenkins/.ssh
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/ed891905-2a76-4508-b1a0-481b96341224" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/30274957-1341-4579-bf08-c89b15b783c6" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/2ad4f4d5-2b7f-442c-9bdf-c607fb597dab" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/84f61f03-c7a3-47d0-ac5c-d8bc3b665405" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/fe924fba-1e81-469a-ad0e-dbdf07619f40" />
