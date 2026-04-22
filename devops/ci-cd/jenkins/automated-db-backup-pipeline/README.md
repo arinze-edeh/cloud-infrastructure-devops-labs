@@ -220,6 +220,8 @@ ssh -i /var/lib/jenkins/.ssh/id_rsa tony@stapp01 "echo Successfully connected to
 
 Screenshot: Terminal confirming key copied to stapp01 and passwordless connection validated
 
+<img width="1036" height="741" alt="image" src="https://github.com/user-attachments/assets/fad2055e-bd4d-4ad7-9f30-1c5649d0eb6b" />
+
 ---
 
 ### Step 5: Establish SSH Trust from the App Server to the Storage Server
@@ -485,7 +487,7 @@ chmod 700 /var/lib/jenkins/.ssh
 
 
 <img width="1028" height="740" alt="image" src="https://github.com/user-attachments/assets/cd022d46-20f4-478b-bdac-6faaf4aaa639" />
-<img width="1036" height="741" alt="image" src="https://github.com/user-attachments/assets/fad2055e-bd4d-4ad7-9f30-1c5649d0eb6b" />
+
 <img width="1027" height="781" alt="image" src="https://github.com/user-attachments/assets/bf29ed0a-e12b-4d39-9c6e-12018523b2e1" />
 <img width="1030" height="452" alt="image" src="https://github.com/user-attachments/assets/b578f211-e4d4-456e-9dc0-77254b3fd6ec" />
 <img width="1031" height="402" alt="image" src="https://github.com/user-attachments/assets/4c577205-dce9-49ef-b3e2-301e33ea62d8" />
