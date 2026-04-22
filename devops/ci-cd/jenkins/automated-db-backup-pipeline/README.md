@@ -202,6 +202,8 @@ ls -la /var/lib/jenkins/.ssh/
 
 Screenshot: Terminal showing key generation output and both id_rsa and id_rsa.pub present
 
+<img width="1035" height="676" alt="image" src="https://github.com/user-attachments/assets/2b17569a-537c-4423-9ef2-0edaf0f778aa" />
+
 Copy the public key to stapp01 under the `tony` user account:
 
 ```bash
@@ -487,7 +489,7 @@ chmod 700 /var/lib/jenkins/.ssh
 <img width="1033" height="780" alt="image" src="https://github.com/user-attachments/assets/be5037df-97c9-445e-9b26-919f3c4fc003" />
 
 <img width="1031" height="619" alt="image" src="https://github.com/user-attachments/assets/adfcf076-1c0f-4e05-8f0b-4381555249f6" />
-<img width="1035" height="676" alt="image" src="https://github.com/user-attachments/assets/2b17569a-537c-4423-9ef2-0edaf0f778aa" />
+
 <img width="1028" height="740" alt="image" src="https://github.com/user-attachments/assets/cd022d46-20f4-478b-bdac-6faaf4aaa639" />
 <img width="1036" height="741" alt="image" src="https://github.com/user-attachments/assets/fad2055e-bd4d-4ad7-9f30-1c5649d0eb6b" />
 <img width="1027" height="781" alt="image" src="https://github.com/user-attachments/assets/bf29ed0a-e12b-4d39-9c6e-12018523b2e1" />
