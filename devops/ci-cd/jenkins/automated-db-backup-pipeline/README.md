@@ -146,6 +146,8 @@ Screenshots: Download progress page showing all dependency plugins installed wit
 
 Screenshot: Jenkins restarting screen ("Jenkins is restarting") following plugin install
 
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/0ffb31e1-d3c6-423c-81a1-ad1deb115598" />
+
 ---
 
 ### Step 4: Establish SSH Access from Jenkins to the App Server
@@ -478,7 +480,6 @@ chmod 700 /var/lib/jenkins/.ssh
 
 
 
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/0ffb31e1-d3c6-423c-81a1-ad1deb115598" />
 <img width="1035" height="778" alt="image" src="https://github.com/user-attachments/assets/8e17bacd-760b-47a0-8d90-ad8efe4e5eaf" />
 <img width="1027" height="750" alt="image" src="https://github.com/user-attachments/assets/de5bcdea-1770-4925-9c6a-326a60abfe21" />
 <img width="1033" height="780" alt="image" src="https://github.com/user-attachments/assets/be5037df-97c9-445e-9b26-919f3c4fc003" />
