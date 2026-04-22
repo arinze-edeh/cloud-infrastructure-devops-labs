@@ -242,6 +242,8 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -N ""
 
 Screenshot: Terminal on stapp01 showing key pair generated successfully
 
+<img width="1030" height="613" alt="image" src="https://github.com/user-attachments/assets/aa075a6b-d18b-46a6-9b81-5240f0983d64" />
+
 Verify the `.ssh` directory now contains both the `authorized_keys` file (from the earlier `ssh-copy-id`) and the new key pair:
 
 ```bash
@@ -491,7 +493,7 @@ chmod 700 /var/lib/jenkins/.ssh
 <img width="1027" height="781" alt="image" src="https://github.com/user-attachments/assets/bf29ed0a-e12b-4d39-9c6e-12018523b2e1" />
 <img width="1030" height="452" alt="image" src="https://github.com/user-attachments/assets/b578f211-e4d4-456e-9dc0-77254b3fd6ec" />
 <img width="1031" height="402" alt="image" src="https://github.com/user-attachments/assets/4c577205-dce9-49ef-b3e2-301e33ea62d8" />
-<img width="1030" height="613" alt="image" src="https://github.com/user-attachments/assets/aa075a6b-d18b-46a6-9b81-5240f0983d64" />
+
 <img width="1033" height="752" alt="image" src="https://github.com/user-attachments/assets/a06fcc39-f83b-4c65-8d12-891faa07375b" />
 <img width="1030" height="759" alt="image" src="https://github.com/user-attachments/assets/6be4beca-916b-4177-bbc7-d48b8b347157" />
 <img width="1020" height="845" alt="image" src="https://github.com/user-attachments/assets/7084abd0-c7f5-426a-903c-df30b56f6d4e" />
