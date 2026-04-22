@@ -133,9 +133,14 @@ The Publish Over SSH plugin is required to enable SSH-based artifact transfer fr
 
 Screenshot: Available plugins page with "Publish Over SSH" found and selected
 
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9ac890e3-5874-4764-b393-4b2ca5842c39" />
+
 The installation resolved and downloaded all required dependency plugins (JAXB, JSON Api, Jackson Annotations 2 API, Jakarta Activation API, SnakeYAML API, Jakarta XML Binding API, Woodstox Core API, Jackson 2 API, Infrastructure plugin for Publish Over X, Structs, EDDSA API, Gson API, Trilead API, Variant, commons-lang3 v3.x Jenkins API, Ionicons API, commons-text API, and more), all reporting **Success**.
 
-Screenshot: Download progress page showing all dependency plugins installed with green "Success" status
+Screenshots: Download progress page showing all dependency plugins installed with green "Success" status
+
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/aab3d51c-94b3-4254-b5d9-28185753874e" />
+<img width="1918" height="1018" alt="image" src="https://github.com/user-attachments/assets/69c7b8bf-da61-4f39-a636-e4aaaa6bf4f4" />
 
 5. Jenkins restarted again after the Publish Over SSH installation completed
 
@@ -473,9 +478,6 @@ chmod 700 /var/lib/jenkins/.ssh
 
 
 
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9ac890e3-5874-4764-b393-4b2ca5842c39" />
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/aab3d51c-94b3-4254-b5d9-28185753874e" />
-<img width="1918" height="1018" alt="image" src="https://github.com/user-attachments/assets/69c7b8bf-da61-4f39-a636-e4aaaa6bf4f4" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/0ffb31e1-d3c6-423c-81a1-ad1deb115598" />
 <img width="1035" height="778" alt="image" src="https://github.com/user-attachments/assets/8e17bacd-760b-47a0-8d90-ad8efe4e5eaf" />
 <img width="1027" height="750" alt="image" src="https://github.com/user-attachments/assets/de5bcdea-1770-4925-9c6a-326a60abfe21" />
