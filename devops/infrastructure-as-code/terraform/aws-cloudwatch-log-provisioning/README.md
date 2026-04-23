@@ -264,6 +264,8 @@ Success! The configuration is valid.
 
 > Screenshot: Terminal output confirming `terraform validate` passes with no errors or warnings
 
+<img width="1044" height="473" alt="image" src="https://github.com/user-attachments/assets/3efe1cc2-6c89-43a3-b2d7-d9f0ba18c9b0" />
+
 ---
 
 ### Phase 4: Plan and Apply
@@ -451,7 +453,6 @@ Running `terraform state list` after every apply confirms that the state file re
 
 
 
-<img width="1045" height="582" alt="image" src="https://github.com/user-attachments/assets/1f2ac77d-fc0d-4faa-b263-1c1245538c89" />
 <img width="1044" height="473" alt="image" src="https://github.com/user-attachments/assets/3efe1cc2-6c89-43a3-b2d7-d9f0ba18c9b0" />
 <img width="1046" height="729" alt="image" src="https://github.com/user-attachments/assets/d531fd46-43fc-4e0e-839d-fd1c1640a192" />
 <img width="1046" height="736" alt="image" src="https://github.com/user-attachments/assets/3abae4d4-f927-4a0a-ac6f-6905e751ce1a" />
