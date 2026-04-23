@@ -383,6 +383,8 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 > Screenshot: terraform apply output showing the execution plan, resource creation progress, and apply complete summary
 
+<img width="1047" height="653" alt="image" src="https://github.com/user-attachments/assets/b749200c-bc04-49fe-8f9d-d7fbc5ad722b" />
+
 Key observations from the apply output:
 * `value` is rendered as `(sensitive value)` in the plan. This is the default behavior for SSM parameter values in the Terraform AWS provider and is correct production behavior.
 * `value_wo` appears as a write-only attribute, a provider feature that allows secure value injection without storing the value in Terraform state.
@@ -420,6 +422,9 @@ aws ssm get-parameter \
 ```
 
 > Screenshot: AWS CLI get-parameter JSON response confirming Name, Type, Value, Version, ARN, and DataType
+
+<img width="1050" height="439" alt="image" src="https://github.com/user-attachments/assets/3656535c-daa2-4d92-88f0-0b603ffa3a12" />
+
 
 **Verification checklist:**
 
@@ -507,19 +512,3 @@ No errors were encountered during this implementation. The execution proceeded c
 * **`terraform init` must precede `terraform validate`:** The validate command requires the provider plugin to be installed locally. The correct mandatory sequence is always: init, validate, apply.
 
 * **Explicit endpoint mapping prevents silent real-AWS calls:** Defining every service endpoint individually in the provider block makes it immediately clear which services are emulated. Adding a new resource type without a corresponding endpoint entry in `provider.tf` will fail fast rather than silently routing to real AWS infrastructure.
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1047" height="653" alt="image" src="https://github.com/user-attachments/assets/b749200c-bc04-49fe-8f9d-d7fbc5ad722b" />
-<img width="1050" height="439" alt="image" src="https://github.com/user-attachments/assets/3656535c-daa2-4d92-88f0-0b603ffa3a12" />
-
