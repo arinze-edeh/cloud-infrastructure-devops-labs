@@ -212,6 +212,8 @@ resource "aws_cloudwatch_log_stream" "xfusion_log_stream" {
 
 > Screenshot: Terminal output showing the `cat main.tf` result confirming accurate heredoc write with both resource blocks
 
+<img width="1043" height="737" alt="image" src="https://github.com/user-attachments/assets/c8b59294-a82f-4185-bf47-2e8e0c017872" />
+
 **Configuration notes:**
 
 * The Log Group resource identifier is `aws_cloudwatch_log_group.xfusion_log_group` with `name = "xfusion-log-group"`.
