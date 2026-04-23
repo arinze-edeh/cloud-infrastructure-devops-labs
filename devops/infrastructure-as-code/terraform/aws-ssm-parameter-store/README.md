@@ -114,6 +114,9 @@ is 1.14.9. You can update by downloading from https://www.terraform.io/downloads
 
 > Screenshot: Terraform version output showing v1.11.0 on linux_amd64 with upgrade notice
 
+
+<img width="1051" height="604" alt="image" src="https://github.com/user-attachments/assets/f7ff81c8-1a5b-4306-bdd3-734f0b56ae8e" />
+
 The upgrade notice is informational only and does not block execution. Terraform v1.11.0 is fully functional for this implementation.
 
 ---
@@ -137,6 +140,8 @@ drwxr-x--- 1 bob bob 4096 Apr 22 23:34 ..
 ```
 
 > Screenshot: Working directory listing showing only README.MD and provider.tf present
+
+<img width="1051" height="604" alt="image" src="https://github.com/user-attachments/assets/f7ff81c8-1a5b-4306-bdd3-734f0b56ae8e" />
 
 Only `README.MD` and `provider.tf` exist at this point. The `main.tf` file does not yet exist and will be created in a later step.
 
@@ -502,7 +507,6 @@ No errors were encountered during this implementation. The execution proceeded c
 
 
 
-<img width="1051" height="604" alt="image" src="https://github.com/user-attachments/assets/f7ff81c8-1a5b-4306-bdd3-734f0b56ae8e" />
 <img width="1049" height="659" alt="image" src="https://github.com/user-attachments/assets/88c1b577-01b6-4950-9c94-0e01a30f0749" />
 <img width="1082" height="643" alt="image" src="https://github.com/user-attachments/assets/19b17966-9f28-40eb-9701-36564fdb0327" />
 <img width="1033" height="615" alt="image" src="https://github.com/user-attachments/assets/575354c2-d832-4928-ae89-a48be0f0b1f2" />
