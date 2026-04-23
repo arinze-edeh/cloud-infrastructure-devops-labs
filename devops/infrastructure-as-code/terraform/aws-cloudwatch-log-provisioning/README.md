@@ -454,10 +454,3 @@ Running `terraform state list` after every apply confirms that the state file re
 * [Terraform CLI: apply](https://developer.hashicorp.com/terraform/cli/commands/apply)
 * [Terraform CLI: state list](https://developer.hashicorp.com/terraform/cli/commands/state/list)
 * [LocalStack Documentation](https://docs.localstack.cloud/overview/)
-
-
-
-
-
-<img width="1046" height="736" alt="image" src="https://github.com/user-attachments/assets/3abae4d4-f927-4a0a-ac6f-6905e751ce1a" />
-<img width="1044" height="381" alt="image" src="https://github.com/user-attachments/assets/d652faf2-625f-4bf0-be6d-9246b0cddd5f" />
