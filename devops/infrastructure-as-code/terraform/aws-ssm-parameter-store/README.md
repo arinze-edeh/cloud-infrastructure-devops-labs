@@ -248,6 +248,8 @@ EOF
 
 > Screenshot: Heredoc command writing the aws_ssm_parameter resource block into main.tf
 
+<img width="1033" height="615" alt="image" src="https://github.com/user-attachments/assets/575354c2-d832-4928-ae89-a48be0f0b1f2" />
+
 ---
 
 ### Step 6: Initialize the Terraform Working Directory
@@ -283,6 +285,8 @@ detect it and remind you to do so if necessary.
 ```
 
 > Screenshot: terraform init output confirming provider download, lock file creation, and successful initialization
+
+<img width="1047" height="747" alt="image" src="https://github.com/user-attachments/assets/bccf962b-f291-45b4-8f22-63d5af40ce80" />
 
 The `.terraform.lock.hcl` file is created during this step, locking the provider version for reproducible runs across environments.
 
@@ -512,8 +516,6 @@ No errors were encountered during this implementation. The execution proceeded c
 
 
 
-<img width="1033" height="615" alt="image" src="https://github.com/user-attachments/assets/575354c2-d832-4928-ae89-a48be0f0b1f2" />
-<img width="1047" height="747" alt="image" src="https://github.com/user-attachments/assets/bccf962b-f291-45b4-8f22-63d5af40ce80" />
 <img width="1054" height="673" alt="image" src="https://github.com/user-attachments/assets/1cc7b837-5a72-4ba8-a5cf-d125cc4770a8" />
 <img width="1052" height="614" alt="image" src="https://github.com/user-attachments/assets/e8410197-a141-4ea1-b8e2-3a39262750b8" />
 <img width="1047" height="653" alt="image" src="https://github.com/user-attachments/assets/b749200c-bc04-49fe-8f9d-d7fbc5ad722b" />
