@@ -163,6 +163,8 @@ aws-cli/1.40.38 Python/3.10.12 Linux/6.8.0-106-generic botocore/1.38.39
 
 > Screenshot: AWS CLI version output confirming availability and version details
 
+<img width="1049" height="659" alt="image" src="https://github.com/user-attachments/assets/88c1b577-01b6-4950-9c94-0e01a30f0749" />
+
 ---
 
 ### Step 4: Review the Provider Configuration
@@ -507,7 +509,6 @@ No errors were encountered during this implementation. The execution proceeded c
 
 
 
-<img width="1049" height="659" alt="image" src="https://github.com/user-attachments/assets/88c1b577-01b6-4950-9c94-0e01a30f0749" />
 <img width="1082" height="643" alt="image" src="https://github.com/user-attachments/assets/19b17966-9f28-40eb-9701-36564fdb0327" />
 <img width="1033" height="615" alt="image" src="https://github.com/user-attachments/assets/575354c2-d832-4928-ae89-a48be0f0b1f2" />
 <img width="1047" height="747" alt="image" src="https://github.com/user-attachments/assets/bccf962b-f291-45b4-8f22-63d5af40ce80" />
