@@ -312,6 +312,8 @@ resource "aws_ssm_parameter" "nautilus_param" {
 
 > Screenshot: cat main.tf output confirming the resource block is intact after terraform init
 
+<img width="1054" height="673" alt="image" src="https://github.com/user-attachments/assets/1cc7b837-5a72-4ba8-a5cf-d125cc4770a8" />
+
 The file contents match exactly what was written in Step 5. All three required attributes (`name`, `type`, `value`) are present and correctly set.
 
 ---
@@ -331,6 +333,8 @@ Success! The configuration is valid.
 ```
 
 > Screenshot: terraform validate success message confirming the configuration is syntactically and schema-valid
+
+<img width="1052" height="614" alt="image" src="https://github.com/user-attachments/assets/e8410197-a141-4ea1-b8e2-3a39262750b8" />
 
 Validation confirms the HCL syntax is well-formed and all resource attributes are valid according to the AWS provider schema.
 
@@ -516,8 +520,6 @@ No errors were encountered during this implementation. The execution proceeded c
 
 
 
-<img width="1054" height="673" alt="image" src="https://github.com/user-attachments/assets/1cc7b837-5a72-4ba8-a5cf-d125cc4770a8" />
-<img width="1052" height="614" alt="image" src="https://github.com/user-attachments/assets/e8410197-a141-4ea1-b8e2-3a39262750b8" />
 <img width="1047" height="653" alt="image" src="https://github.com/user-attachments/assets/b749200c-bc04-49fe-8f9d-d7fbc5ad722b" />
 <img width="1050" height="439" alt="image" src="https://github.com/user-attachments/assets/3656535c-daa2-4d92-88f0-0b603ffa3a12" />
 
