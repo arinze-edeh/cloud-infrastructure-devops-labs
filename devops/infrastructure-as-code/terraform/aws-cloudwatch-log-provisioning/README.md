@@ -334,6 +334,8 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
 > Screenshot: Terminal output showing `terraform apply -auto-approve` completing successfully with both resources created in dependency order
 
+<img width="1046" height="736" alt="image" src="https://github.com/user-attachments/assets/3abae4d4-f927-4a0a-ac6f-6905e751ce1a" />
+
 **Observed provisioning sequence:**
 
 1. `aws_cloudwatch_log_group.xfusion_log_group` created first (1 second)
@@ -359,6 +361,8 @@ aws_cloudwatch_log_stream.xfusion_log_stream
 ```
 
 > Screenshot: Terminal output showing `terraform state list` with both provisioned resources confirmed in state
+
+<img width="1044" height="381" alt="image" src="https://github.com/user-attachments/assets/d652faf2-625f-4bf0-be6d-9246b0cddd5f" />
 
 Both resources are present in the state file, confirming the apply was fully successful and the infrastructure is now managed by Terraform.
 
@@ -455,6 +459,5 @@ Running `terraform state list` after every apply confirms that the state file re
 
 
 
-<img width="1046" height="729" alt="image" src="https://github.com/user-attachments/assets/d531fd46-43fc-4e0e-839d-fd1c1640a192" />
 <img width="1046" height="736" alt="image" src="https://github.com/user-attachments/assets/3abae4d4-f927-4a0a-ac6f-6905e751ce1a" />
 <img width="1044" height="381" alt="image" src="https://github.com/user-attachments/assets/d652faf2-625f-4bf0-be6d-9246b0cddd5f" />
