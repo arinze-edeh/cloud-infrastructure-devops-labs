@@ -160,6 +160,8 @@ This confirmed the provider was pre-configured for LocalStack with:
 
 *Screenshot: Terminal output of `ls -la` and `cat provider.tf` confirming the pre-existing workspace state*
 
+<img width="1073" height="804" alt="image" src="https://github.com/user-attachments/assets/f03d8fc3-4b5e-44af-8278-a9b32f933e18" />
+
 ---
 
 ### Phase 2: Terraform Configuration Authoring
@@ -490,7 +492,7 @@ S3 buckets do not enable versioning by default. The `VersioningConfiguration` bl
 
 <img width="1047" height="541" alt="image" src="https://github.com/user-attachments/assets/9cf07f1d-bf20-4387-a126-345e640c69e1" />
 <img width="1049" height="495" alt="image" src="https://github.com/user-attachments/assets/24f36abb-2351-4e2b-8d80-c9b6729e263f" />
-<img width="1073" height="804" alt="image" src="https://github.com/user-attachments/assets/f03d8fc3-4b5e-44af-8278-a9b32f933e18" />
+
 <img width="1047" height="737" alt="image" src="https://github.com/user-attachments/assets/66af70a4-d047-42f4-af6d-8066d2d83a13" />
 <img width="1069" height="600" alt="image" src="https://github.com/user-attachments/assets/bf49094b-ee71-4398-8358-72ed48b08854" />
 <img width="1048" height="695" alt="image" src="https://github.com/user-attachments/assets/e9d54516-be99-445b-83e6-a1982b5c8e79" />
