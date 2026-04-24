@@ -328,6 +328,8 @@ The stack was assigned the ARN `arn:aws:cloudformation:us-east-1:000000000000:st
 
 *Screenshot: Terminal output of `terraform apply -auto-approve` showing the creation sequence and final "Apply complete" confirmation*
 
+<img width="1076" height="682" alt="image" src="https://github.com/user-attachments/assets/1103b6d7-4a51-47ea-b334-dfc3c622ea28" />
+
 ---
 
 ### Phase 6: Post-Deployment Verification
@@ -501,6 +503,5 @@ S3 buckets do not enable versioning by default. The `VersioningConfiguration` bl
 
 
 
-<img width="1076" height="682" alt="image" src="https://github.com/user-attachments/assets/1103b6d7-4a51-47ea-b334-dfc3c622ea28" />
 <img width="1165" height="553" alt="image" src="https://github.com/user-attachments/assets/b44edfba-6eca-4f29-8d69-2330aa053b67" />
 <img width="1166" height="633" alt="image" src="https://github.com/user-attachments/assets/2bc5969a-152e-47a7-8472-15818a32888e" />
