@@ -494,10 +494,8 @@ S3 buckets do not enable versioning by default. The `VersioningConfiguration` bl
 ---
 
 
-<img width="1047" height="541" alt="image" src="https://github.com/user-attachments/assets/9cf07f1d-bf20-4387-a126-345e640c69e1" />
-<img width="1049" height="495" alt="image" src="https://github.com/user-attachments/assets/24f36abb-2351-4e2b-8d80-c9b6729e263f" />
 
-<img width="1047" height="737" alt="image" src="https://github.com/user-attachments/assets/66af70a4-d047-42f4-af6d-8066d2d83a13" />
+
 
 <img width="1043" height="484" alt="image" src="https://github.com/user-attachments/assets/f63c8b4d-a475-442b-8ab0-9457a9a28870" />
 <img width="1080" height="649" alt="image" src="https://github.com/user-attachments/assets/bc420c54-b1ad-4a6b-923e-1288fad0bf90" />
