@@ -296,6 +296,8 @@ The plan output confirmed that no existing resources would be modified or destro
 
 *Screenshot: Terminal output of `terraform validate` returning success*
 
+<img width="1043" height="484" alt="image" src="https://github.com/user-attachments/assets/f63c8b4d-a475-442b-8ab0-9457a9a28870" />
+
 *Screenshot: Terminal output of `terraform plan` showing the full execution plan with resource details and the 1-to-add summary*
 
 ---
@@ -497,7 +499,6 @@ S3 buckets do not enable versioning by default. The `VersioningConfiguration` bl
 
 
 
-<img width="1043" height="484" alt="image" src="https://github.com/user-attachments/assets/f63c8b4d-a475-442b-8ab0-9457a9a28870" />
 <img width="1080" height="649" alt="image" src="https://github.com/user-attachments/assets/bc420c54-b1ad-4a6b-923e-1288fad0bf90" />
 <img width="1076" height="682" alt="image" src="https://github.com/user-attachments/assets/1103b6d7-4a51-47ea-b334-dfc3c622ea28" />
 <img width="1165" height="553" alt="image" src="https://github.com/user-attachments/assets/b44edfba-6eca-4f29-8d69-2330aa053b67" />
