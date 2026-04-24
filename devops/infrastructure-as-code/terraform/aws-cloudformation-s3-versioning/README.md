@@ -224,6 +224,8 @@ resource "aws_cloudformation_stack" "devops_stack" {
 
 *Screenshot: Terminal output of `cat main.tf` confirming correct file content before proceeding*
 
+<img width="1069" height="600" alt="image" src="https://github.com/user-attachments/assets/bf49094b-ee71-4398-8358-72ed48b08854" />
+
 ---
 
 ### Phase 3: Terraform Initialization
@@ -494,7 +496,7 @@ S3 buckets do not enable versioning by default. The `VersioningConfiguration` bl
 <img width="1049" height="495" alt="image" src="https://github.com/user-attachments/assets/24f36abb-2351-4e2b-8d80-c9b6729e263f" />
 
 <img width="1047" height="737" alt="image" src="https://github.com/user-attachments/assets/66af70a4-d047-42f4-af6d-8066d2d83a13" />
-<img width="1069" height="600" alt="image" src="https://github.com/user-attachments/assets/bf49094b-ee71-4398-8358-72ed48b08854" />
+
 <img width="1048" height="695" alt="image" src="https://github.com/user-attachments/assets/e9d54516-be99-445b-83e6-a1982b5c8e79" />
 <img width="1043" height="484" alt="image" src="https://github.com/user-attachments/assets/f63c8b4d-a475-442b-8ab0-9457a9a28870" />
 <img width="1080" height="649" alt="image" src="https://github.com/user-attachments/assets/bc420c54-b1ad-4a6b-923e-1288fad0bf90" />
