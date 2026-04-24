@@ -1,6 +1,6 @@
 # Terraform CloudFormation Stack: S3 Bucket with Versioning Enabled
 
-> **Enterprise Infrastructure Automation** | Terraform + AWS CloudFormation + LocalStack | Production-Grade IaC
+> **Enterprise Infrastructure Automation** | Terraform + AWS CloudFormation + LocalStack | Production-Style IaC
 
 ---
 
