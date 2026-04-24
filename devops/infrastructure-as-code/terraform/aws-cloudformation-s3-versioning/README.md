@@ -23,7 +23,6 @@
 - [Errors and Resolutions](#errors-and-resolutions)
 - [Best Practices Applied](#best-practices-applied)
 - [Lessons Learned](#lessons-learned)
-- [Author](#author)
 
 ---
 
