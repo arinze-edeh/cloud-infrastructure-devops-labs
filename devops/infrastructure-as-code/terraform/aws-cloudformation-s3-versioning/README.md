@@ -389,7 +389,11 @@ This confirmed that the S3 bucket `devops-bucket-21253` was provisioned with ver
 
 *Screenshot: Terminal output of `aws cloudformation describe-stacks` returning `CREATE_COMPLETE` status*
 
+<img width="1165" height="553" alt="image" src="https://github.com/user-attachments/assets/b44edfba-6eca-4f29-8d69-2330aa053b67" />
+
 *Screenshot: Terminal output of `aws s3api get-bucket-versioning` returning `"Status": "Enabled"`*
+
+<img width="1166" height="633" alt="image" src="https://github.com/user-attachments/assets/2bc5969a-152e-47a7-8472-15818a32888e" />
 
 ---
 
@@ -498,10 +502,3 @@ Terraform's state is a representation of what Terraform believes exists, not nec
 S3 buckets do not enable versioning by default. The `VersioningConfiguration` block must be explicitly present in the CloudFormation resource properties. Omitting it would result in a bucket that appears successfully created but silently lacks versioning, which would not be detected until a recovery scenario required it.
 
 ---
-
-
-
-
-
-<img width="1165" height="553" alt="image" src="https://github.com/user-attachments/assets/b44edfba-6eca-4f29-8d69-2330aa053b67" />
-<img width="1166" height="633" alt="image" src="https://github.com/user-attachments/assets/2bc5969a-152e-47a7-8472-15818a32888e" />
