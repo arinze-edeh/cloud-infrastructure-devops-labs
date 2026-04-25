@@ -422,7 +422,13 @@ aws_opensearch_domain.nautilus_es: Creation complete after 10m0s [id=arn:aws:es:
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
-*Screenshot: Full terraform apply output showing creation progress and completion after 10 minutes*
+*Screenshots: Full terraform apply output showing creation progress and completion after 10 minutes*
+
+
+<img width="1051" height="754" alt="image" src="https://github.com/user-attachments/assets/65d2dda1-c781-4e25-a368-9c561f158f62" />
+<img width="1041" height="774" alt="image" src="https://github.com/user-attachments/assets/b63ccd0e-0854-41eb-91c1-7b9e227e1e90" />
+<img width="1045" height="766" alt="image" src="https://github.com/user-attachments/assets/d056bd4c-8563-48a3-ad8d-51b18a8217c7" />
+<img width="1047" height="768" alt="image" src="https://github.com/user-attachments/assets/ddc80664-9dfb-47c5-9010-566b5f0cccd3" />
 
 The domain ARN `arn:aws:es:us-east-1:000000000000:domain/nautilus-es` confirms successful registration within the LocalStack account namespace.
 
@@ -636,10 +642,6 @@ sed -i 's|t3.small.search (http://t3.small.search)||g' ~/terraform/main.tf
 
 
 
-<img width="1051" height="754" alt="image" src="https://github.com/user-attachments/assets/65d2dda1-c781-4e25-a368-9c561f158f62" />
-<img width="1041" height="774" alt="image" src="https://github.com/user-attachments/assets/b63ccd0e-0854-41eb-91c1-7b9e227e1e90" />
-<img width="1045" height="766" alt="image" src="https://github.com/user-attachments/assets/d056bd4c-8563-48a3-ad8d-51b18a8217c7" />
-<img width="1047" height="768" alt="image" src="https://github.com/user-attachments/assets/ddc80664-9dfb-47c5-9010-566b5f0cccd3" />
 <img width="1046" height="761" alt="image" src="https://github.com/user-attachments/assets/29cb79fb-9698-40b3-8058-fc30d81e61de" />
 <img width="1050" height="770" alt="image" src="https://github.com/user-attachments/assets/5aef4c9d-c679-43a0-9765-bb9ed54e52ce" />
 <img width="1045" height="776" alt="image" src="https://github.com/user-attachments/assets/a95401a9-4f04-4b08-8627-01b492a8c6f6" />
