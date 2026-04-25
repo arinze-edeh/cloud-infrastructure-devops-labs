@@ -455,6 +455,8 @@ and found no differences, so no changes are needed.
 
 *Screenshot: terraform plan output confirming No changes after apply*
 
+<img width="1046" height="761" alt="image" src="https://github.com/user-attachments/assets/29cb79fb-9698-40b3-8058-fc30d81e61de" />
+
 ---
 
 ### Step 10 - Verify the Domain via AWS CLI
@@ -642,7 +644,6 @@ sed -i 's|t3.small.search (http://t3.small.search)||g' ~/terraform/main.tf
 
 
 
-<img width="1046" height="761" alt="image" src="https://github.com/user-attachments/assets/29cb79fb-9698-40b3-8058-fc30d81e61de" />
 <img width="1050" height="770" alt="image" src="https://github.com/user-attachments/assets/5aef4c9d-c679-43a0-9765-bb9ed54e52ce" />
 <img width="1045" height="776" alt="image" src="https://github.com/user-attachments/assets/a95401a9-4f04-4b08-8627-01b492a8c6f6" />
 <img width="1052" height="497" alt="image" src="https://github.com/user-attachments/assets/18eef677-f3f1-4775-8284-36199675b95a" />
