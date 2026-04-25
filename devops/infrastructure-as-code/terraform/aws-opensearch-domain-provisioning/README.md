@@ -198,6 +198,8 @@ provider "aws" {
 
 *Screenshot: provider.tf contents confirming LocalStack endpoint overrides and provider version*
 
+<img width="1074" height="801" alt="image" src="https://github.com/user-attachments/assets/869db26e-f89b-4c78-b3b3-0e8123a0c075" />
+
 Key observations noted from this review:
 
 * `skip_credentials_validation = true` and `skip_requesting_account_id = true` are required for LocalStack compatibility
@@ -627,7 +629,6 @@ sed -i 's|t3.small.search (http://t3.small.search)||g' ~/terraform/main.tf
 
 <img width="1048" height="459" alt="image" src="https://github.com/user-attachments/assets/b494f6ed-39cf-4e8c-9472-1ae06eefccf8" />
 
-<img width="1074" height="801" alt="image" src="https://github.com/user-attachments/assets/869db26e-f89b-4c78-b3b3-0e8123a0c075" />
 <img width="1048" height="745" alt="image" src="https://github.com/user-attachments/assets/18116b31-95cd-4e35-8d3a-6ff14fbb9c79" />
 <img width="1059" height="808" alt="image" src="https://github.com/user-attachments/assets/2d752df3-1f71-423c-92ab-4f02a880330f" />
 <img width="1047" height="733" alt="image" src="https://github.com/user-attachments/assets/f60d42fc-86b1-426a-90c3-9398b93de0e6" />
