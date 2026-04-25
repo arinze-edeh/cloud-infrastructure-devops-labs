@@ -336,6 +336,8 @@ Terraform has been successfully initialized!
 
 *Screenshot: terraform init output confirming provider installation and lock file creation*
 
+<img width="1047" height="733" alt="image" src="https://github.com/user-attachments/assets/f60d42fc-86b1-426a-90c3-9398b93de0e6" />
+
 The lock file `.terraform.lock.hcl` was created, pinning the provider binary hash for reproducible runs.
 
 ---
@@ -630,7 +632,6 @@ sed -i 's|t3.small.search (http://t3.small.search)||g' ~/terraform/main.tf
 
 
 
-<img width="1047" height="733" alt="image" src="https://github.com/user-attachments/assets/f60d42fc-86b1-426a-90c3-9398b93de0e6" />
 <img width="1045" height="743" alt="image" src="https://github.com/user-attachments/assets/f56a3e3c-4717-416d-82f7-88dfbbe4a951" />
 <img width="1043" height="509" alt="image" src="https://github.com/user-attachments/assets/c1f4b5c2-6774-403b-8d61-47f0fa0734ac" />
 <img width="1051" height="754" alt="image" src="https://github.com/user-attachments/assets/65d2dda1-c781-4e25-a368-9c561f158f62" />
