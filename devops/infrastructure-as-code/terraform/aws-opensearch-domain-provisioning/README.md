@@ -352,6 +352,8 @@ sed -i 's|t3.small.search (http://t3.small.search)||g' ~/terraform/main.tf
 
 *Screenshot: sed command patching the instance_type field*
 
+<img width="1045" height="743" alt="image" src="https://github.com/user-attachments/assets/f56a3e3c-4717-416d-82f7-88dfbbe4a951" />
+
 > This step is a direct artifact of the tooling environment that rendered the instance type identifier as an inline URL. In a standard editor workflow, this artifact would not be present. The fix ensures `terraform validate` operates on clean HCL syntax.
 
 ---
@@ -371,6 +373,8 @@ Success! The configuration is valid.
 ```
 
 *Screenshot: terraform validate confirming configuration is valid*
+
+<img width="1043" height="509" alt="image" src="https://github.com/user-attachments/assets/c1f4b5c2-6774-403b-8d61-47f0fa0734ac" />
 
 ---
 
@@ -632,8 +636,6 @@ sed -i 's|t3.small.search (http://t3.small.search)||g' ~/terraform/main.tf
 
 
 
-<img width="1045" height="743" alt="image" src="https://github.com/user-attachments/assets/f56a3e3c-4717-416d-82f7-88dfbbe4a951" />
-<img width="1043" height="509" alt="image" src="https://github.com/user-attachments/assets/c1f4b5c2-6774-403b-8d61-47f0fa0734ac" />
 <img width="1051" height="754" alt="image" src="https://github.com/user-attachments/assets/65d2dda1-c781-4e25-a368-9c561f158f62" />
 <img width="1041" height="774" alt="image" src="https://github.com/user-attachments/assets/b63ccd0e-0854-41eb-91c1-7b9e227e1e90" />
 <img width="1045" height="766" alt="image" src="https://github.com/user-attachments/assets/d056bd4c-8563-48a3-ad8d-51b18a8217c7" />
