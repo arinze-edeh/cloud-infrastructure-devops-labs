@@ -1,6 +1,6 @@
 # Terraform AWS OpenSearch Domain Provisioning via LocalStack
 
-> Provisioning a production-grade Amazon OpenSearch Service domain using Terraform IaC against a LocalStack-emulated AWS environment for the Nautilus DevOps infrastructure platform.
+> Provisioning a production-style Amazon OpenSearch Service domain using Terraform IaC against a LocalStack-emulated AWS environment for the Nautilus DevOps infrastructure platform.
 
 ---
 
