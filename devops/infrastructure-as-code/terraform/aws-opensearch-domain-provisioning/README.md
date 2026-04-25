@@ -497,7 +497,11 @@ aws --endpoint-url=http://aws:4566 opensearch describe-domain --domain-name naut
 }
 ```
 
-*Screenshot: AWS CLI describe-domain output confirming domain is Active with correct configuration*
+*Screenshots: AWS CLI describe-domain output confirming domain is Active with correct configuration*
+
+<img width="1050" height="770" alt="image" src="https://github.com/user-attachments/assets/5aef4c9d-c679-43a0-9765-bb9ed54e52ce" />
+<img width="1045" height="776" alt="image" src="https://github.com/user-attachments/assets/a95401a9-4f04-4b08-8627-01b492a8c6f6" />
+<img width="1052" height="497" alt="image" src="https://github.com/user-attachments/assets/18eef677-f3f1-4775-8284-36199675b95a" />
 
 Key attributes verified against the specification:
 
@@ -525,6 +529,8 @@ aws_opensearch_domain.nautilus_es
 ```
 
 *Screenshot: terraform state list confirming resource is tracked in state*
+
+<img width="1044" height="376" alt="image" src="https://github.com/user-attachments/assets/0381ed09-6077-4df9-963b-b2003375ef2c" />
 
 The resource address `aws_opensearch_domain.nautilus_es` matches the logical name defined in `main.tf`, confirming state integrity.
 
@@ -627,24 +633,3 @@ sed -i 's|t3.small.search (http://t3.small.search)||g' ~/terraform/main.tf
 | Bash | System | File authoring, sed patching, and command execution |
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1050" height="770" alt="image" src="https://github.com/user-attachments/assets/5aef4c9d-c679-43a0-9765-bb9ed54e52ce" />
-<img width="1045" height="776" alt="image" src="https://github.com/user-attachments/assets/a95401a9-4f04-4b08-8627-01b492a8c6f6" />
-<img width="1052" height="497" alt="image" src="https://github.com/user-attachments/assets/18eef677-f3f1-4775-8284-36199675b95a" />
-<img width="1044" height="376" alt="image" src="https://github.com/user-attachments/assets/0381ed09-6077-4df9-963b-b2003375ef2c" />
