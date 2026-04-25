@@ -67,7 +67,7 @@ The entire provisioning workflow had to target a **LocalStack** endpoint to enab
 │   Terraform CLI  ──► LocalStack (http://aws:4566)          │
 │                            │                               │
 │                            ▼                               │
-│              aws_opensearch_domain.nautilus_es              │
+│              aws_opensearch_domain.nautilus_es             │
 │              domain-name : nautilus-es                     │
 │              engine      : OpenSearch_1.3                  │
 │              instance    : t3.small.search (x1)            │
@@ -137,6 +137,8 @@ main.tf does not exist yet
 ```
 
 *Screenshot: Working directory listing confirming absence of main.tf*
+
+<img width="1053" height="399" alt="image" src="https://github.com/user-attachments/assets/16501c9d-12ed-45f3-bbcc-82117186d20a" />
 
 This confirmed that `main.tf` was the only file requiring creation and that no prior partial state existed in the directory.
 
@@ -624,7 +626,7 @@ sed -i 's|t3.small.search (http://t3.small.search)||g' ~/terraform/main.tf
 
 
 <img width="1048" height="459" alt="image" src="https://github.com/user-attachments/assets/b494f6ed-39cf-4e8c-9472-1ae06eefccf8" />
-<img width="1053" height="399" alt="image" src="https://github.com/user-attachments/assets/16501c9d-12ed-45f3-bbcc-82117186d20a" />
+
 <img width="1074" height="801" alt="image" src="https://github.com/user-attachments/assets/869db26e-f89b-4c78-b3b3-0e8123a0c075" />
 <img width="1048" height="745" alt="image" src="https://github.com/user-attachments/assets/18116b31-95cd-4e35-8d3a-6ff14fbb9c79" />
 <img width="1059" height="808" alt="image" src="https://github.com/user-attachments/assets/2d752df3-1f71-423c-92ab-4f02a880330f" />
