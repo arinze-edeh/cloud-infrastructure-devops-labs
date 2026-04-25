@@ -306,6 +306,8 @@ resource "aws_opensearch_domain" "nautilus_es" {
 
 *Screenshot: cat main.tf confirming correct heredoc output*
 
+<img width="1059" height="808" alt="image" src="https://github.com/user-attachments/assets/2d752df3-1f71-423c-92ab-4f02a880330f" />
+
 ---
 
 ### Step 5 - Initialize the Terraform Working Directory
@@ -628,7 +630,6 @@ sed -i 's|t3.small.search (http://t3.small.search)||g' ~/terraform/main.tf
 
 
 
-<img width="1059" height="808" alt="image" src="https://github.com/user-attachments/assets/2d752df3-1f71-423c-92ab-4f02a880330f" />
 <img width="1047" height="733" alt="image" src="https://github.com/user-attachments/assets/f60d42fc-86b1-426a-90c3-9398b93de0e6" />
 <img width="1045" height="743" alt="image" src="https://github.com/user-attachments/assets/f56a3e3c-4717-416d-82f7-88dfbbe4a951" />
 <img width="1043" height="509" alt="image" src="https://github.com/user-attachments/assets/c1f4b5c2-6774-403b-8d61-47f0fa0734ac" />
