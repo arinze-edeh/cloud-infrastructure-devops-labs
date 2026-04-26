@@ -444,6 +444,8 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
 > Screenshot: terraform apply -auto-approve output showing both resources created successfully with their ARNs
 
+<img width="1077" height="817" alt="image" src="https://github.com/user-attachments/assets/fe8aa0e6-2208-4b42-bd54-f31216fe404c" />
+
 **Provisioned resource identifiers:**
 
 | Resource | ARN / ID |
@@ -484,6 +486,8 @@ aws secretsmanager describe-secret --secret-id xfusion-secret
 
 > Screenshot: aws secretsmanager describe-secret output showing the secret name, ARN, version ID, and AWSCURRENT stage label
 
+<img width="1047" height="462" alt="image" src="https://github.com/user-attachments/assets/5692742a-74f0-4952-8174-14460eef0245" />
+
 **Retrieve and decode the secret value:**
 
 ```bash
@@ -497,6 +501,8 @@ aws secretsmanager get-secret-value --secret-id xfusion-secret --query SecretStr
 ```
 
 > Screenshot: aws secretsmanager get-secret-value output confirming the JSON payload contains the correct username and password values
+
+<img width="1047" height="529" alt="image" src="https://github.com/user-attachments/assets/d98384bb-752a-4c66-b8b8-a16688c81e30" />
 
 Both validation commands confirm:
 
@@ -559,15 +565,3 @@ A fully versioned AWS Secrets Manager secret named `xfusion-secret` was provisio
 | Secret stage | AWSCURRENT |
 | Payload format | JSON (via jsonencode) |
 | Validation method | AWS CLI describe-secret + get-secret-value |
-
-
-
-
-
-
-
-<img width="1077" height="817" alt="image" src="https://github.com/user-attachments/assets/fe8aa0e6-2208-4b42-bd54-f31216fe404c" />
-<img width="1047" height="462" alt="image" src="https://github.com/user-attachments/assets/5692742a-74f0-4952-8174-14460eef0245" />
-<img width="1047" height="529" alt="image" src="https://github.com/user-attachments/assets/d98384bb-752a-4c66-b8b8-a16688c81e30" />
-
-
