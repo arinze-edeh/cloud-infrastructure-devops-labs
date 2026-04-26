@@ -450,9 +450,9 @@ Navigate to: **Manage Jenkins > Nodes > New Node**
 
 Enter the node name `App_server_2`, select **Permanent Agent**, and click **Create**.
 
-```
-Screenshot: Jenkins "New node" page with "App_server_2" entered as the node name and "Permanent Agent" selected
-```
+>Screenshot: Jenkins "New node" page with "App_server_2" entered as the node name and "Permanent Agent" selected
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/bc0ed2d7-ee44-4491-9a9e-9983178fa2df" />
 
 ---
 
@@ -473,9 +473,10 @@ On the node configuration page, fill in the following fields:
 
 Click **Save**.
 
-```
-Screenshot: Jenkins node configuration form for App_server_2 showing remote root directory "/home/steve/jenkins", label "stapp02", host "stapp02", credentials set to "steve", and Host Key Verification Strategy set to "Non verifying Verification Strategy"
-```
+
+>Screenshot: Jenkins node configuration form for App_server_2 showing remote root directory "/home/steve/jenkins", label "stapp02", host "stapp02", credentials set to "steve", and Host Key Verification Strategy set to "Non verifying Verification Strategy"
+
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c15e67b4-8384-40ab-ba7a-35510c66ac61" />
 
 ---
 
@@ -485,9 +486,9 @@ Navigate to: **Manage Jenkins > Nodes > New Node**
 
 Enter the node name `App_server_3`, select **Permanent Agent**, and click **Create**.
 
-```
-Screenshot: Jenkins "New node" page with "App_server_3" entered as the node name and "Permanent Agent" selected
-```
+>Screenshot: Jenkins "New node" page with "App_server_3" entered as the node name and "Permanent Agent" selected
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/ef69db2d-3500-464f-8985-1a43f686b87e" />
 
 ---
 
@@ -508,9 +509,9 @@ On the node configuration page, fill in the following fields:
 
 Click **Save**.
 
-```
-Screenshot: Jenkins node configuration form for App_server_3 showing remote root directory "/home/banner/jenkins", label "stapp03", host "stapp03", credentials set to "banner", and Host Key Verification Strategy set to "Non verifying Verification Strategy"
-```
+>Screenshot: Jenkins node configuration form for App_server_3 showing remote root directory "/home/banner/jenkins", label "stapp03", host "stapp03", credentials set to "banner", and Host Key Verification Strategy set to "Non verifying Verification Strategy"
+
+<img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/aa06e58c-cff5-4d3f-bfd1-f7f1700d80a1" />
 
 ---
 
@@ -527,9 +528,10 @@ All three nodes, along with the Built-In Node, are listed in the Nodes table. Al
 | App_server_3 | Linux (amd64) | In sync          | 337.40 GiB      | 91ms          |
 | Built-In Node | Linux (amd64) | In sync          | 336.93 GiB      | 0ms           |
 
-```
-Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_server_3, and Built-In Node, all showing "In sync" clock status and active response times, confirming all agents are online
-```
+>Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_server_3, and Built-In Node, all showing "In sync" clock status and active response times, confirming all agents are online
+
+<img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/830e9638-93cc-4043-ae21-7ee4c13e6a53" />
+
 
 ---
 
@@ -569,13 +571,3 @@ Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_
 | Ubuntu 24.04 LTS | Jenkins controller operating system |
 | AlmaLinux 9 | App server operating system |
 | dnf | Package manager for Java installation on app servers |
-
-
-
-
-
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/bc0ed2d7-ee44-4491-9a9e-9983178fa2df" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c15e67b4-8384-40ab-ba7a-35510c66ac61" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/ef69db2d-3500-464f-8985-1a43f686b87e" />
-<img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/aa06e58c-cff5-4d3f-bfd1-f7f1700d80a1" />
-<img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/830e9638-93cc-4043-ae21-7ee4c13e6a53" />
