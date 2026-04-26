@@ -278,9 +278,11 @@ Navigate to: **Manage Jenkins > Plugins > Updates**
 
 The update list shows one pending update: `bouncycastle API 2.30.1.84-291.v9f17b_21896e2`. Select the checkbox and click **Update**.
 
-```
-Screenshot: Jenkins Plugin Manager Updates tab showing the Bouncy Castle API plugin selected for update with a health score of 100
-```
+
+>Screenshots: Jenkins Plugin Manager Updates tab showing the Bouncy Castle API plugin selected for update with a health score of 100
+
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/4375afdc-b33e-4ae0-a9d9-e575bf8129e8" />
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a1953827-a141-4324-a40c-3941aab347a6" />
 
 ---
 
@@ -561,8 +563,6 @@ Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/4375afdc-b33e-4ae0-a9d9-e575bf8129e8" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a1953827-a141-4324-a40c-3941aab347a6" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/12965a3f-0350-40e9-b6f7-e8a49e5d43cf" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/0beb6df8-0fd8-4bd7-8472-d0fb077b621f" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/d663e3b4-ba75-42ab-aa89-bcd8e2d7419b" />
