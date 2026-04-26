@@ -290,9 +290,9 @@ The update list shows one pending update: `bouncycastle API 2.30.1.84-291.v9f17b
 
 After the Bouncy Castle API update is applied, Jenkins triggers a restart. The browser displays the "Jenkins is restarting" page and automatically reloads when the service comes back online.
 
-```
-Screenshot: Jenkins restarting splash screen with the spinning indicator and "Your browser will reload automatically when Jenkins is ready" message
-```
+>Screenshot: Jenkins restarting splash screen with the spinning indicator and "Your browser will reload automatically when Jenkins is ready" message
+
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/12965a3f-0350-40e9-b6f7-e8a49e5d43cf" />
 
 ---
 
@@ -563,7 +563,6 @@ Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_
 
 
 
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/12965a3f-0350-40e9-b6f7-e8a49e5d43cf" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/0beb6df8-0fd8-4bd7-8472-d0fb077b621f" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/d663e3b4-ba75-42ab-aa89-bcd8e2d7419b" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a0944062-aa48-4d68-97e4-72eea77c3dbf" />
