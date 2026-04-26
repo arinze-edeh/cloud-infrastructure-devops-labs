@@ -351,6 +351,8 @@ Success! The configuration is valid.
 
 > Screenshot: terraform validate showing "Success! The configuration is valid."
 
+<img width="1049" height="477" alt="image" src="https://github.com/user-attachments/assets/73678414-4fc2-4732-b819-2e097a8e8817" />
+
 Validation confirms that:
 
 * All resource blocks reference valid resource types in the installed provider
@@ -561,9 +563,7 @@ A fully versioned AWS Secrets Manager secret named `xfusion-secret` was provisio
 
 
 
-<img width="1036" height="737" alt="image" src="https://github.com/user-attachments/assets/f2146d5c-3210-4575-8766-73f6ae8d0246" />
 
-<img width="1049" height="477" alt="image" src="https://github.com/user-attachments/assets/73678414-4fc2-4732-b819-2e097a8e8817" />
 <img width="1068" height="653" alt="image" src="https://github.com/user-attachments/assets/fa161fda-b0b9-40a9-b863-666fdf005951" />
 <img width="1077" height="817" alt="image" src="https://github.com/user-attachments/assets/fe8aa0e6-2208-4b42-bd54-f31216fe404c" />
 <img width="1047" height="462" alt="image" src="https://github.com/user-attachments/assets/5692742a-74f0-4952-8174-14460eef0245" />
