@@ -383,9 +383,11 @@ Click **Add Credentials** again. Select **SSH Username with private key** and co
 
 Click **Create**.
 
-```
-Screenshot: Jenkins credential form for "banner-key" showing username "banner" and the private key field populated, with "tony-key" and "steve-key" already visible in the credentials list background
-```
+>Screenshots: Jenkins credential form for "banner-key" showing username "banner" and the private key field populated, with "tony-key" and "steve-key" already visible in the credentials list background
+
+
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/ad105f60-72b4-4b8c-8f3a-77e3125942f5" />
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/8603dac8-ea68-4b7a-9512-ee91d3a560d9" />
 
 ---
 
@@ -570,8 +572,6 @@ Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_
 
 
 
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/ad105f60-72b4-4b8c-8f3a-77e3125942f5" />
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/8603dac8-ea68-4b7a-9512-ee91d3a560d9" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/22c55f0e-7ad2-41c2-9583-01c04b7e9c06" />
 
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/37ba46b5-ccde-43ab-8a80-cc42c09de134" />
