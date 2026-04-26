@@ -109,7 +109,7 @@ ssh jenkins@jenkins
 Accept the host key fingerprint when prompted. The session authenticates with a password and lands in the Jenkins home directory at `/var/lib/jenkins`.
 
 
-Screenshot: SSH session established to the Jenkins controller from the jump host, showing the Ubuntu 24.04 welcome banner and the jenkins@jenkins prompt
+>Screenshot: SSH session established to the Jenkins controller from the jump host, showing the Ubuntu 24.04 welcome banner and the jenkins@jenkins prompt
 
 <img width="1032" height="738" alt="image" src="https://github.com/user-attachments/assets/cff5c215-7089-4fab-8bf1-cbee3bd1a56c" />
 
