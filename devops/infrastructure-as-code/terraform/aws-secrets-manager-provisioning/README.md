@@ -237,6 +237,8 @@ provider "aws" {
 
 > Screenshot: cat output of provider.tf showing LocalStack endpoint overrides including secretsmanager at http://aws:4566
 
+<img width="1071" height="797" alt="image" src="https://github.com/user-attachments/assets/16c8099f-a216-4e99-a689-2e7025b0012e" />
+
 Key observations:
 
 * `skip_credentials_validation = true` and `skip_requesting_account_id = true` are required for LocalStack compatibility
@@ -555,7 +557,6 @@ A fully versioned AWS Secrets Manager secret named `xfusion-secret` was provisio
 
 
 
-<img width="1071" height="797" alt="image" src="https://github.com/user-attachments/assets/16c8099f-a216-4e99-a689-2e7025b0012e" />
 <img width="1036" height="737" alt="image" src="https://github.com/user-attachments/assets/f2146d5c-3210-4575-8766-73f6ae8d0246" />
 <img width="1046" height="740" alt="image" src="https://github.com/user-attachments/assets/ed5bd41d-0638-4d91-8a27-9f1c1d82d3e1" />
 <img width="1044" height="656" alt="image" src="https://github.com/user-attachments/assets/853a4d21-70e0-4ab5-be8a-df02f18ae12e" />
