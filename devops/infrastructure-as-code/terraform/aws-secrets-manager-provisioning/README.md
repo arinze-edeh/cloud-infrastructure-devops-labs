@@ -410,6 +410,8 @@ Plan: 2 to add, 0 to change, 0 to destroy.
 
 > Screenshot: terraform plan output showing two resources to be created with no changes or destructions planned
 
+<img width="1068" height="653" alt="image" src="https://github.com/user-attachments/assets/fa161fda-b0b9-40a9-b863-666fdf005951" />
+
 Key plan observations:
 
 * `recovery_window_in_days = 30` confirms the default deletion protection window is active
@@ -564,7 +566,6 @@ A fully versioned AWS Secrets Manager secret named `xfusion-secret` was provisio
 
 
 
-<img width="1068" height="653" alt="image" src="https://github.com/user-attachments/assets/fa161fda-b0b9-40a9-b863-666fdf005951" />
 <img width="1077" height="817" alt="image" src="https://github.com/user-attachments/assets/fe8aa0e6-2208-4b42-bd54-f31216fe404c" />
 <img width="1047" height="462" alt="image" src="https://github.com/user-attachments/assets/5692742a-74f0-4952-8174-14460eef0245" />
 <img width="1047" height="529" alt="image" src="https://github.com/user-attachments/assets/d98384bb-752a-4c66-b8b8-a16688c81e30" />
