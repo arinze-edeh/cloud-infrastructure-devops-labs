@@ -137,6 +137,8 @@ is 1.14.9. You can update by downloading from https://www.terraform.io/downloads
 
 > Screenshot: Terraform version output showing v1.11.0 on linux/amd64
 
+<img width="1028" height="600" alt="image" src="https://github.com/user-attachments/assets/edd48fce-c149-4914-be1c-9eba6a997c27" />
+
 **Verify AWS CLI identity and LocalStack connectivity:**
 
 ```bash
@@ -154,6 +156,8 @@ aws sts get-caller-identity
 ```
 
 > Screenshot: AWS STS caller identity output confirming LocalStack connectivity
+
+<img width="1031" height="691" alt="image" src="https://github.com/user-attachments/assets/a1762274-8d64-4d90-ad4f-53c5d02cfefc" />
 
 The `Account: 000000000000` value confirms the CLI is routed through LocalStack rather than a live AWS account.
 
@@ -549,8 +553,6 @@ A fully versioned AWS Secrets Manager secret named `xfusion-secret` was provisio
 
 
 
-<img width="1028" height="600" alt="image" src="https://github.com/user-attachments/assets/edd48fce-c149-4914-be1c-9eba6a997c27" />
-<img width="1031" height="691" alt="image" src="https://github.com/user-attachments/assets/a1762274-8d64-4d90-ad4f-53c5d02cfefc" />
 <img width="1021" height="667" alt="image" src="https://github.com/user-attachments/assets/75f95602-dee8-4023-8e75-47495033b852" />
 <img width="1071" height="797" alt="image" src="https://github.com/user-attachments/assets/16c8099f-a216-4e99-a689-2e7025b0012e" />
 <img width="1036" height="737" alt="image" src="https://github.com/user-attachments/assets/f2146d5c-3210-4575-8766-73f6ae8d0246" />
