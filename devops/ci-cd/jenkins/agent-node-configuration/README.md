@@ -304,9 +304,9 @@ Navigate to: **Manage Jenkins > Plugins > Available plugins**
 
 Search for `SSH build agent`. Select **SSH Build Agents 3.1097.v868116049892** and click **Install**.
 
-```
-Screenshot: Jenkins Available Plugins tab with "SSH build agent" search results showing SSH Build Agents plugin selected with a health score of 100
-```
+>Screenshot: Jenkins Available Plugins tab with "SSH build agent" search results showing SSH Build Agents plugin selected with a health score of 100
+
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/0beb6df8-0fd8-4bd7-8472-d0fb077b621f" />
 
 The download progress page confirms successful installation of all dependency plugins: EDDSA API, Gson API, Trilead API, commons-lang3 v3.x Jenkins API, Ionicons API, Structs, commons-text API, Credentials, Variant, SSH Credentials, SSH Build Agents, and Loading plugin extensions. All items show a green checkmark with "Success".
 
@@ -563,7 +563,6 @@ Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_
 
 
 
-<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/0beb6df8-0fd8-4bd7-8472-d0fb077b621f" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/d663e3b4-ba75-42ab-aa89-bcd8e2d7419b" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a0944062-aa48-4d68-97e4-72eea77c3dbf" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/816646f7-3f47-4333-b534-e9f4a8f63910" />
