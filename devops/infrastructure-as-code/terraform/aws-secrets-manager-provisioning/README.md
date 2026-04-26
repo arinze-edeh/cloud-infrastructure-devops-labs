@@ -329,6 +329,8 @@ Terraform has been successfully initialized!
 
 > Screenshot: terraform init output confirming hashicorp/aws v5.91.0 was installed and the backend was initialized
 
+<img width="1044" height="656" alt="image" src="https://github.com/user-attachments/assets/853a4d21-70e0-4ab5-be8a-df02f18ae12e" />
+
 The `.terraform.lock.hcl` file pins the provider to `v5.91.0`. This file must be committed to version control to guarantee reproducible provider resolution across team members and CI/CD pipelines.
 
 ---
@@ -561,7 +563,6 @@ A fully versioned AWS Secrets Manager secret named `xfusion-secret` was provisio
 
 <img width="1036" height="737" alt="image" src="https://github.com/user-attachments/assets/f2146d5c-3210-4575-8766-73f6ae8d0246" />
 
-<img width="1044" height="656" alt="image" src="https://github.com/user-attachments/assets/853a4d21-70e0-4ab5-be8a-df02f18ae12e" />
 <img width="1049" height="477" alt="image" src="https://github.com/user-attachments/assets/73678414-4fc2-4732-b819-2e097a8e8817" />
 <img width="1068" height="653" alt="image" src="https://github.com/user-attachments/assets/fa161fda-b0b9-40a9-b863-666fdf005951" />
 <img width="1077" height="817" alt="image" src="https://github.com/user-attachments/assets/fe8aa0e6-2208-4b42-bd54-f31216fe404c" />
