@@ -179,6 +179,8 @@ drwxr-x--- 1 bob bob 4096 Apr 26 09:06 ..
 
 > Screenshot: Directory listing confirming only provider.tf and README.MD exist before implementation
 
+<img width="1021" height="667" alt="image" src="https://github.com/user-attachments/assets/75f95602-dee8-4023-8e75-47495033b852" />
+
 ---
 
 ### Phase 2: Inspect the Existing Provider Configuration
@@ -553,7 +555,6 @@ A fully versioned AWS Secrets Manager secret named `xfusion-secret` was provisio
 
 
 
-<img width="1021" height="667" alt="image" src="https://github.com/user-attachments/assets/75f95602-dee8-4023-8e75-47495033b852" />
 <img width="1071" height="797" alt="image" src="https://github.com/user-attachments/assets/16c8099f-a216-4e99-a689-2e7025b0012e" />
 <img width="1036" height="737" alt="image" src="https://github.com/user-attachments/assets/f2146d5c-3210-4575-8766-73f6ae8d0246" />
 <img width="1046" height="740" alt="image" src="https://github.com/user-attachments/assets/ed5bd41d-0638-4d91-8a27-9f1c1d82d3e1" />
