@@ -320,9 +320,10 @@ The download progress page confirms successful installation of all dependency pl
 
 After the SSH Build Agents plugin and all dependencies install successfully, Jenkins restarts again. Wait for the browser to reload automatically.
 
-```
-Screenshot: Jenkins restarting splash screen appearing a second time following the SSH Build Agents plugin installation
-```
+
+>Screenshot: Jenkins restarting splash screen appearing a second time following the SSH Build Agents plugin installation
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a0944062-aa48-4d68-97e4-72eea77c3dbf" />
 
 ---
 
@@ -563,7 +564,6 @@ Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_
 
 
 
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a0944062-aa48-4d68-97e4-72eea77c3dbf" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/816646f7-3f47-4333-b534-e9f4a8f63910" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/eaf222f9-60a8-4ee9-a2c4-e3a6b61a8141" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/41376449-ae6c-4243-9bfc-c6327b0af61d" />
