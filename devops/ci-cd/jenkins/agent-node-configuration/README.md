@@ -343,9 +343,12 @@ Configure the credential as follows:
 
 Click **Create**.
 
-```
-Screenshot: Jenkins "Add SSH Username with private key" credential form showing ID "tony-key", username "tony", and the private key field populated with the OpenSSH PEM content
-```
+
+>Screenshots: Jenkins "Add SSH Username with private key" credential form showing ID "tony-key", username "tony", and the private key field populated with the OpenSSH PEM content
+
+
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/816646f7-3f47-4333-b534-e9f4a8f63910" />
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/eaf222f9-60a8-4ee9-a2c4-e3a6b61a8141" />
 
 ---
 
@@ -564,8 +567,6 @@ Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_
 
 
 
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/816646f7-3f47-4333-b534-e9f4a8f63910" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/eaf222f9-60a8-4ee9-a2c4-e3a6b61a8141" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/41376449-ae6c-4243-9bfc-c6327b0af61d" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/c95c787d-58e7-4257-b0f0-47f216ad8a5c" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/ad105f60-72b4-4b8c-8f3a-77e3125942f5" />
