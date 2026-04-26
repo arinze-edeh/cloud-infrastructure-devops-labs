@@ -414,7 +414,7 @@ Navigate to: **Manage Jenkins > Nodes > New Node**
 
 Enter the node name `App_server_1`, select **Permanent Agent**, and click **Create**.
 
-Screenshot: Jenkins "New node" page with "App_server_1" entered as the node name and "Permanent Agent" selected
+>Screenshot: Jenkins "New node" page with "App_server_1" entered as the node name and "Permanent Agent" selected
 
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/37ba46b5-ccde-43ab-8a80-cc42c09de134" />
 
@@ -437,9 +437,10 @@ On the node configuration page, fill in the following fields:
 
 Click **Save**.
 
-```
-Screenshot: Jenkins node configuration form for App_server_1 showing remote root directory "/home/tony/jenkins", label "stapp01", host "stapp01", credentials set to "tony", and Host Key Verification Strategy set to "Non verifying Verification Strategy"
-```
+
+>Screenshot: Jenkins node configuration form for App_server_1 showing remote root directory "/home/tony/jenkins", label "stapp01", host "stapp01", credentials set to "tony", and Host Key Verification Strategy set to "Non verifying Verification Strategy"
+
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/4813aed9-9452-409b-ab63-264bfaa4ef47" />
 
 ---
 
@@ -573,7 +574,6 @@ Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_
 
 
 
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/4813aed9-9452-409b-ab63-264bfaa4ef47" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/bc0ed2d7-ee44-4491-9a9e-9983178fa2df" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c15e67b4-8384-40ab-ba7a-35510c66ac61" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/ef69db2d-3500-464f-8985-1a43f686b87e" />
