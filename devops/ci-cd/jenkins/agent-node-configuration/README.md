@@ -193,9 +193,19 @@ ssh banner@stapp03 "sudo dnf install -y java-17-openjdk && sudo mkdir -p /home/b
 
 Each server installs `java-17-openjdk` version `1:17.0.18.0.8-2.el9` along with its headless dependency (~45 MB total). The `mkdir` and `chown` commands create and assign ownership of the workspace directory to the respective user.
 
-```
-Screenshot: Terminal output showing successful Java 17 installation and directory creation on all three app servers, with "Complete!" confirmation for each dnf transaction
-```
+
+>Screenshots: Terminal output showing successful Java 17 installation and directory creation on all three app servers, with "Complete!" confirmation for each dnf transaction
+
+<img width="1033" height="655" alt="image" src="https://github.com/user-attachments/assets/8f6c061e-5f15-446a-bd79-91236440daf3" />
+<img width="1040" height="869" alt="image" src="https://github.com/user-attachments/assets/45c9ef7d-5451-4076-bbe3-741a0f9552c1" />
+<img width="1033" height="862" alt="image" src="https://github.com/user-attachments/assets/ff1aabf2-4756-433f-b300-015804a9c0bd" />
+<img width="1033" height="410" alt="image" src="https://github.com/user-attachments/assets/27015800-d82e-4326-a945-98b6388b265d" />
+<img width="1138" height="871" alt="image" src="https://github.com/user-attachments/assets/76d686c1-9d09-400c-bba5-ae87a1ab6a7a" />
+<img width="1134" height="655" alt="image" src="https://github.com/user-attachments/assets/ef916c4d-ad92-42c3-bba8-c65612974e7f" />
+<img width="1135" height="426" alt="image" src="https://github.com/user-attachments/assets/e89a0873-16d4-4330-90eb-759ce3b16fe3" />
+<img width="1134" height="827" alt="image" src="https://github.com/user-attachments/assets/8412f702-7ea0-4848-a378-9a73cc86cb65" />
+<img width="1133" height="654" alt="image" src="https://github.com/user-attachments/assets/95c5cb66-152c-418c-935b-f01b0eb885e0" />
+
 
 ---
 
@@ -221,7 +231,9 @@ steve OK
 banner OK
 ```
 
-All three servers respond without a password prompt, confirming that key-based authentication is fully operational.
+>Screenshots: All three servers respond without a password prompt, confirming that key-based authentication is fully operational.
+
+<img width="1137" height="427" alt="image" src="https://github.com/user-attachments/assets/008ad924-5947-43f0-b904-d469de3211b4" />
 
 ---
 
@@ -234,6 +246,10 @@ cat ~/.ssh/jenkins_slave_rsa | base64 -w 0
 ```
 
 The output is a long base64-encoded string representing the full OpenSSH private key. Copy this to a secure buffer for use in the Jenkins credential configuration steps.
+
+>Screenshots: 
+
+<img width="1133" height="865" alt="image" src="https://github.com/user-attachments/assets/9f5a308d-351c-4013-80f0-59abf946b020" />
 
 ---
 
@@ -542,17 +558,6 @@ Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_
 
 
 
-<img width="1033" height="655" alt="image" src="https://github.com/user-attachments/assets/8f6c061e-5f15-446a-bd79-91236440daf3" />
-<img width="1040" height="869" alt="image" src="https://github.com/user-attachments/assets/45c9ef7d-5451-4076-bbe3-741a0f9552c1" />
-<img width="1033" height="862" alt="image" src="https://github.com/user-attachments/assets/ff1aabf2-4756-433f-b300-015804a9c0bd" />
-<img width="1033" height="410" alt="image" src="https://github.com/user-attachments/assets/27015800-d82e-4326-a945-98b6388b265d" />
-<img width="1138" height="871" alt="image" src="https://github.com/user-attachments/assets/76d686c1-9d09-400c-bba5-ae87a1ab6a7a" />
-<img width="1134" height="655" alt="image" src="https://github.com/user-attachments/assets/ef916c4d-ad92-42c3-bba8-c65612974e7f" />
-<img width="1135" height="426" alt="image" src="https://github.com/user-attachments/assets/e89a0873-16d4-4330-90eb-759ce3b16fe3" />
-<img width="1134" height="827" alt="image" src="https://github.com/user-attachments/assets/8412f702-7ea0-4848-a378-9a73cc86cb65" />
-<img width="1133" height="654" alt="image" src="https://github.com/user-attachments/assets/95c5cb66-152c-418c-935b-f01b0eb885e0" />
-<img width="1137" height="427" alt="image" src="https://github.com/user-attachments/assets/008ad924-5947-43f0-b904-d469de3211b4" />
-<img width="1133" height="865" alt="image" src="https://github.com/user-attachments/assets/9f5a308d-351c-4013-80f0-59abf946b020" />
 
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/bd9c1191-62bf-4ba9-8ae0-4a3a0c218db9" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/4375afdc-b33e-4ae0-a9d9-e575bf8129e8" />
