@@ -293,6 +293,8 @@ resource "aws_secretsmanager_secret_version" "xfusion_secret_version" {
 
 > Screenshot: cat output of main.tf confirming the two resource blocks were written correctly
 
+<img width="1046" height="740" alt="image" src="https://github.com/user-attachments/assets/ed5bd41d-0638-4d91-8a27-9f1c1d82d3e1" />
+
 **Design decisions:**
 
 * `jsonencode()` is used instead of a raw string literal to ensure the secret value is always valid, machine-parseable JSON regardless of special characters in the credential values
@@ -558,7 +560,7 @@ A fully versioned AWS Secrets Manager secret named `xfusion-secret` was provisio
 
 
 <img width="1036" height="737" alt="image" src="https://github.com/user-attachments/assets/f2146d5c-3210-4575-8766-73f6ae8d0246" />
-<img width="1046" height="740" alt="image" src="https://github.com/user-attachments/assets/ed5bd41d-0638-4d91-8a27-9f1c1d82d3e1" />
+
 <img width="1044" height="656" alt="image" src="https://github.com/user-attachments/assets/853a4d21-70e0-4ab5-be8a-df02f18ae12e" />
 <img width="1049" height="477" alt="image" src="https://github.com/user-attachments/assets/73678414-4fc2-4732-b819-2e097a8e8817" />
 <img width="1068" height="653" alt="image" src="https://github.com/user-attachments/assets/fa161fda-b0b9-40a9-b863-666fdf005951" />
