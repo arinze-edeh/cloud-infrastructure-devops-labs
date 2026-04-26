@@ -133,6 +133,10 @@ SHA256:neljaW5bgUmhPCs5NAQwLzW8WNuuw+7c5GY08lfymRQ jenkins-slave-key
 
 The `.ssh/` directory is created automatically since it did not previously exist.
 
+Screenshot:
+
+<img width="1033" height="643" alt="image" src="https://github.com/user-attachments/assets/21f93c43-1d3d-4869-8647-cdbf4eca5f6c" />
+
 ---
 
 #### Step 3: Distribute the Public Key to All App Servers
@@ -538,7 +542,6 @@ Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_
 
 
 
-<img width="1033" height="643" alt="image" src="https://github.com/user-attachments/assets/21f93c43-1d3d-4869-8647-cdbf4eca5f6c" />
 <img width="1033" height="655" alt="image" src="https://github.com/user-attachments/assets/8f6c061e-5f15-446a-bd79-91236440daf3" />
 <img width="1040" height="869" alt="image" src="https://github.com/user-attachments/assets/45c9ef7d-5451-4076-bbe3-741a0f9552c1" />
 <img width="1033" height="862" alt="image" src="https://github.com/user-attachments/assets/ff1aabf2-4756-433f-b300-015804a9c0bd" />
