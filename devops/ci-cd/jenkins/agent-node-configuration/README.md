@@ -262,9 +262,11 @@ Open a browser and navigate to the Jenkins web interface. Log in using the provi
 * **Username:** admin
 * **Password:** Adm!n321
 
-```
-Screenshot: Jenkins login page showing the "Sign in to Jenkins" form with "admin" entered in the username field
-```
+
+>Screenshot: Jenkins login page showing the "Sign in to Jenkins" form with "admin" entered in the username field
+
+
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/bd9c1191-62bf-4ba9-8ae0-4a3a0c218db9" />
 
 ---
 
@@ -559,7 +561,6 @@ Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_
 
 
 
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/bd9c1191-62bf-4ba9-8ae0-4a3a0c218db9" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/4375afdc-b33e-4ae0-a9d9-e575bf8129e8" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a1953827-a141-4324-a40c-3941aab347a6" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/12965a3f-0350-40e9-b6f7-e8a49e5d43cf" />
