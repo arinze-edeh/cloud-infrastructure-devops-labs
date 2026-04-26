@@ -401,9 +401,10 @@ After all three credentials are created, the Global credentials page lists all e
 | steve-key   | steve    |
 | banner-key  | banner   |
 
-```
-Screenshot: Jenkins Global credentials page showing three SSH credentials listed: tony-key (tony), steve-key (steve), and banner-key (banner)
-```
+
+>Screenshot: Jenkins Global credentials page showing three SSH credentials listed: tony-key (tony), steve-key (steve), and banner-key (banner)
+
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/22c55f0e-7ad2-41c2-9583-01c04b7e9c06" />
 
 ---
 
@@ -571,8 +572,6 @@ Screenshot: Jenkins Nodes overview page listing App_server_1, App_server_2, App_
 
 
 
-
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/22c55f0e-7ad2-41c2-9583-01c04b7e9c06" />
 
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/37ba46b5-ccde-43ab-8a80-cc42c09de134" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/4813aed9-9452-409b-ab63-264bfaa4ef47" />
