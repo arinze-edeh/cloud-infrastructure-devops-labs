@@ -181,6 +181,8 @@ At this stage, leave the global matrix rows for Anonymous and Authenticated User
 
 > Screenshot: Jenkins Security configuration page with Project-based Matrix Authorization Strategy selected in the Authorization dropdown, showing the global permission matrix with Anonymous and Authenticated Users rows
 
+<img width="1901" height="1007" alt="image" src="https://github.com/user-attachments/assets/5c18562b-8b27-44a5-b0b7-c3fb2e2e466b" />
+
 ---
 
 ### Phase 8: Add Admin User to Global Security Matrix and Save
@@ -192,6 +194,8 @@ For the `admin` row, check the **Administer** permission checkbox under the **Ov
 Click **Save** to apply the global authorization strategy change.
 
 > Screenshot: Jenkins Security configuration page showing the admin user added to the global matrix with the Overall Administer permission checked, alongside the Anonymous and Authenticated Users rows
+
+<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/a54f7e9f-b1de-4519-89e4-d52bfcbd12f2" />
 
 ---
 
@@ -242,6 +246,8 @@ Click **Add user...** and enter `rohan`. Configure the following permissions for
 Click **Save** to apply all job-level permission changes.
 
 > Screenshot: Packages job Configure page showing Enable project-based security checked, Inheritance Strategy set to Inherit permissions from parent ACL, and the permission matrix with sam granted Build, Configure, and Read, and rohan granted Build, Cancel, Configure, Read, Update, and Tag
+
+<img width="1914" height="1010" alt="image" src="https://github.com/user-attachments/assets/368b18fa-0a14-42c4-a4a4-0ddffa1b0858" />
 
 ---
 
@@ -318,20 +324,3 @@ To validate that permissions are correctly applied, log into Jenkins as each use
 | Bouncy Castle API Plugin | Cryptographic library dependency |
 | Jenkins' own user database | Local user authentication |
 | Project-based Matrix Authorization Strategy | Fine-grained job-level access control |
-
-
-
-
-
-
-
-
-
-
-
-<img width="1901" height="1007" alt="image" src="https://github.com/user-attachments/assets/5c18562b-8b27-44a5-b0b7-c3fb2e2e466b" />
-<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/a54f7e9f-b1de-4519-89e4-d52bfcbd12f2" />
-<img width="1914" height="1010" alt="image" src="https://github.com/user-attachments/assets/368b18fa-0a14-42c4-a4a4-0ddffa1b0858" />
-
-
-
