@@ -390,14 +390,3 @@ The plan in this implementation was not saved with `-out`. In production environ
 | HashiCorp AWS Provider | Terraform provider handling EC2 API calls |
 | `sed` | In-place configuration file modification |
 | Bash | Command execution environment |
-
-
-
-
-
-<img width="1045" height="475" alt="image" src="https://github.com/user-attachments/assets/09cc742e-06a5-4406-9471-d6bc2d0a6e76" />
-
-
-
-
-
