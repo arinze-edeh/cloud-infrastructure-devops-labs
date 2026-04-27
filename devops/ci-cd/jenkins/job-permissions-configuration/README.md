@@ -163,6 +163,8 @@ Return to the Jenkins dashboard. Confirm that the `Packages` job is listed in th
 
 > Screenshot: Jenkins dashboard showing the Packages job listed in the All view with N/A build history columns
 
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/1b9a4bf2-a836-479b-b68a-2974f75a1054" />
+
 ---
 
 ### Phase 7: Configure Project-Based Matrix Authorization Strategy
@@ -326,7 +328,6 @@ To validate that permissions are correctly applied, log into Jenkins as each use
 
 
 
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/1b9a4bf2-a836-479b-b68a-2974f75a1054" />
 
 <img width="1901" height="1007" alt="image" src="https://github.com/user-attachments/assets/5c18562b-8b27-44a5-b0b7-c3fb2e2e466b" />
 <img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/a54f7e9f-b1de-4519-89e4-d52bfcbd12f2" />
