@@ -89,7 +89,10 @@ Before installing the Matrix Authorization Strategy plugin, navigate to **Manage
 
 Select the checkbox next to the available update and click **Update**.
 
-> Screenshot: Jenkins Plugin Manager Updates tab showing Bouncy Castle API plugin available for update, with the plugin checked and the Update button visible
+> Screenshots: Jenkins Plugin Manager Updates tab showing Bouncy Castle API plugin available for update, with the plugin checked and the Update button visible
+
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/1bfa0755-6471-4540-b977-59bbceee9355" />
+<img width="1914" height="1018" alt="image" src="https://github.com/user-attachments/assets/5b92d958-abb0-415a-b896-bef74e1ed6e3" />
 
 ---
 
@@ -315,8 +318,6 @@ To validate that permissions are correctly applied, log into Jenkins as each use
 
 
 
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/1bfa0755-6471-4540-b977-59bbceee9355" />
-<img width="1914" height="1018" alt="image" src="https://github.com/user-attachments/assets/5b92d958-abb0-415a-b896-bef74e1ed6e3" />
 <img width="1916" height="1015" alt="image" src="https://github.com/user-attachments/assets/b384e1ea-5d38-4b44-ae47-b228d14c6f17" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/1b9a4bf2-a836-479b-b68a-2974f75a1054" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/f48394f5-ab63-400f-8548-ffe25b2110b8" />
