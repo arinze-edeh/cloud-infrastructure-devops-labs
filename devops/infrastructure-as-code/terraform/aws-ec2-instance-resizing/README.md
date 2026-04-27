@@ -269,6 +269,8 @@ The modification completed in approximately 20 seconds. The instance ID `i-6da7f
 
 *Screenshot: terraform apply output showing Modifications complete after 20s with 1 changed and 0 destroyed*
 
+<img width="1043" height="762" alt="image" src="https://github.com/user-attachments/assets/25b1bfbf-b3bd-4e91-b710-5ea5ac4ae398" />
+
 ---
 
 ### Phase 5: Validate the Applied Change
@@ -391,7 +393,6 @@ The plan in this implementation was not saved with `-out`. In production environ
 
 
 
-<img width="1043" height="762" alt="image" src="https://github.com/user-attachments/assets/25b1bfbf-b3bd-4e91-b710-5ea5ac4ae398" />
 <img width="1045" height="475" alt="image" src="https://github.com/user-attachments/assets/09cc742e-06a5-4406-9471-d6bc2d0a6e76" />
 <img width="1048" height="620" alt="image" src="https://github.com/user-attachments/assets/53e2d84f-ec49-4d9e-9e87-0449da6e2348" />
 
