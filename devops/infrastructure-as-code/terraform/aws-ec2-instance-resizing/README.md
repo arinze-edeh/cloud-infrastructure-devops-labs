@@ -182,6 +182,8 @@ resource "aws_instance" "ec2" {
 
 *Screenshot: Terminal output of cat main.tf confirming instance_type updated to t2.nano*
 
+<img width="1044" height="588" alt="image" src="https://github.com/user-attachments/assets/b6471f69-c48f-4136-a57c-088ce2423ba0" />
+
 ---
 
 ### Phase 3: Plan the Infrastructure Change
@@ -389,7 +391,7 @@ The plan in this implementation was not saved with `-out`. In production environ
 <img width="1043" height="598" alt="image" src="https://github.com/user-attachments/assets/99a15e56-8183-47de-968e-e3d955e02a81" />
 
 <img width="1050" height="722" alt="image" src="https://github.com/user-attachments/assets/d2d1f3e9-c4b8-4fb0-83c0-9458fd48e96f" />
-<img width="1044" height="588" alt="image" src="https://github.com/user-attachments/assets/b6471f69-c48f-4136-a57c-088ce2423ba0" />
+
 <img width="1045" height="765" alt="image" src="https://github.com/user-attachments/assets/36c611b1-a440-41d4-88b6-3aea23eb4aa8" />
 <img width="1043" height="762" alt="image" src="https://github.com/user-attachments/assets/25b1bfbf-b3bd-4e91-b710-5ea5ac4ae398" />
 <img width="1045" height="475" alt="image" src="https://github.com/user-attachments/assets/09cc742e-06a5-4406-9471-d6bc2d0a6e76" />
