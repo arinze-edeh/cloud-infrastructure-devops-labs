@@ -153,6 +153,8 @@ This confirms the user accounts are present and no account creation steps are re
 
 > Screenshot: Jenkins user database listing showing admin, rohan, and sam accounts with their respective User IDs and Names
 
+<img width="1916" height="1015" alt="image" src="https://github.com/user-attachments/assets/b384e1ea-5d38-4b44-ae47-b228d14c6f17" />
+
 ---
 
 ### Phase 6: Verify the Packages Job Exists
@@ -324,7 +326,6 @@ To validate that permissions are correctly applied, log into Jenkins as each use
 
 
 
-<img width="1916" height="1015" alt="image" src="https://github.com/user-attachments/assets/b384e1ea-5d38-4b44-ae47-b228d14c6f17" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/1b9a4bf2-a836-479b-b68a-2974f75a1054" />
 
 <img width="1901" height="1007" alt="image" src="https://github.com/user-attachments/assets/5c18562b-8b27-44a5-b0b7-c3fb2e2e466b" />
