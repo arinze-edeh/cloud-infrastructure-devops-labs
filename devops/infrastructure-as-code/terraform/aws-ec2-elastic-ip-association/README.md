@@ -198,6 +198,8 @@ The active toolchain is Terraform v1.11.0 with the hashicorp/aws provider at v5.
 
 > Screenshot: `terraform version` output showing Terraform v1.11.0, AWS provider v5.91.0, and the version advisory notice
 
+<img width="1046" height="672" alt="image" src="https://github.com/user-attachments/assets/e0435f8d-6cba-42e4-b7a2-99180e8fad62" />
+
 ---
 
 ### Step 4: Confirm Working Directory Initialization
@@ -220,6 +222,8 @@ drwxr-xr-x 3 bob bob 4096 Apr 28 00:24 providers
 The `.terraform/providers` directory is present, confirming the working directory is initialized and the AWS provider plugin has been downloaded. No `terraform init` is required before proceeding.
 
 > Screenshot: `ls -la .terraform/` output showing the `providers` directory present under the working directory
+
+<img width="1044" height="740" alt="image" src="https://github.com/user-attachments/assets/66e7758c-df16-4726-97e3-692e78017923" />
 
 ---
 
@@ -602,10 +606,7 @@ Terraform state is an internal model. AWS is the source of truth. Running `aws e
 
 
 
-<img width="1048" height="528" alt="image" src="https://github.com/user-attachments/assets/56353cc2-d25f-445e-89e5-6748bf325f34" />
 
-<img width="1046" height="672" alt="image" src="https://github.com/user-attachments/assets/e0435f8d-6cba-42e4-b7a2-99180e8fad62" />
-<img width="1044" height="740" alt="image" src="https://github.com/user-attachments/assets/66e7758c-df16-4726-97e3-692e78017923" />
 <img width="1048" height="659" alt="image" src="https://github.com/user-attachments/assets/0c8fa3c9-a64c-4fc9-9038-286527988421" />
 <img width="1047" height="674" alt="image" src="https://github.com/user-attachments/assets/ce85723c-58da-4a40-9cb5-6b09d62cccd4" />
 <img width="1049" height="667" alt="image" src="https://github.com/user-attachments/assets/585b4461-28dd-475f-bf5d-777b20098d41" />
