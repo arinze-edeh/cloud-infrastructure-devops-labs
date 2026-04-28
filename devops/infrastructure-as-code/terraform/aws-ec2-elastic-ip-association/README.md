@@ -52,7 +52,7 @@ us-east-1
 |  |  |  ID: i-904804de1ba0e9698                     | |  |
 |  |  |  AMI: ami-0c101f26f147fa7fd                  | |  |
 |  |  |  Type: t2.micro                              | |  |
-|  |  |  SG: sg-f6c610043a019b043                   | |  |
+|  |  |  SG: sg-f6c610043a019b043                    | |  |
 |  |  |                                              | |  |
 |  |  |  Elastic IP Association                      | |  |
 |  |  |  AssocID: eipassoc-ba991b707fd6e24b6         | |  |
