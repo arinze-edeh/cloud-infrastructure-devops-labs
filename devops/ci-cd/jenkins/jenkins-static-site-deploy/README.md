@@ -250,21 +250,31 @@ First batch: EDDSA API, Gson API, Trilead API, commons-lang3 v3.x Jenkins API, I
 
 *Screenshot: Plugin download progress page showing the first batch of dependencies all marked Success*
 
+<img width="1898" height="1013" alt="image" src="https://github.com/user-attachments/assets/2a0a468f-bfcb-4d6c-8346-2d711d62051b" />
+
 Second batch: Pipeline Milestone Step, Caffeine API, Script Security, Pipeline Supporting APIs, Durable Task, Pipeline Nodes and Processes, Pipeline Build Step, Pipeline SCM Step, Folders, Pipeline Groovy, Pipeline Groovy Libraries, Plain Credentials, Credentials Binding, Joda Time API, JAXB, JSON Api, Jackson Annotations 2 API, Jakarta Activation API, SnakeYAML API, Jakarta XML Binding API, Woodstox Core API — all marked Success.
 
 *Screenshot: Plugin download progress page showing the second batch of dependencies all marked Success*
+
+<img width="1894" height="1020" alt="image" src="https://github.com/user-attachments/assets/b17d40d4-0256-41ff-bd2c-1bb1cf9c70ff" />
 
 Third batch: Jackson Annotations 2 API, Jakarta Activation API, SnakeYAML API, Jakarta XML Binding API, Woodstox Core API, Jackson 2 API, Pipeline Model API, Pipeline Stage Step, Pipeline Job, Pipeline Declarative Extension Points API, Jakarta Mail API, Display URL API, Mailer, Branch API, Pipeline Multibranch, Pipeline Stage Tags Metadata, Pipeline Input Step, Apache HttpComponents Client 4.x API, Pipeline Basic Steps, Pipeline Declarative, Pipeline — all marked Success.
 
 *Screenshot: Plugin download progress page showing the third batch of dependencies all marked Success*
 
+<img width="1893" height="1015" alt="image" src="https://github.com/user-attachments/assets/18d4ee1c-fec0-41ec-bf75-e6e91d166c55" />
+
 Final batch: Mina SSHD API Common, Mina SSHD API Core, Git client, Git, Loading plugin extensions — all marked Success. The "Restart Jenkins when installation is complete and no jobs are running" checkbox was checked.
 
 *Screenshot: Plugin download progress final page showing Mina SSHD API Common, Mina SSHD API Core, Git client, Git, and Loading plugin extensions all marked Success with restart option available*
 
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/cd20a89e-bd91-479c-bc68-341ec05604ae" />
+
 Jenkins entered its second restart cycle.
 
 *Screenshot: Jenkins restarting screen after the full plugin suite installation*
+
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/61745b6e-c8dd-41c9-ad4e-f28ce7c427cd" />
 
 ---
 
@@ -748,11 +758,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1898" height="1013" alt="image" src="https://github.com/user-attachments/assets/2a0a468f-bfcb-4d6c-8346-2d711d62051b" />
-<img width="1894" height="1020" alt="image" src="https://github.com/user-attachments/assets/b17d40d4-0256-41ff-bd2c-1bb1cf9c70ff" />
-<img width="1893" height="1015" alt="image" src="https://github.com/user-attachments/assets/18d4ee1c-fec0-41ec-bf75-e6e91d166c55" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/cd20a89e-bd91-479c-bc68-341ec05604ae" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/61745b6e-c8dd-41c9-ad4e-f28ce7c427cd" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/a57c98ff-eae1-4eb1-8753-ca46bcd7a8b5" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/7359943e-47e8-499b-b68a-725edfac5865" />
 <img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/1cba644a-1fdc-449b-909f-00b29582c7cd" />
