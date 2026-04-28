@@ -462,6 +462,8 @@ The **OK** button was clicked.
 
 *Screenshot: New Item page with xfusion-webapp-job entered as the item name and Pipeline type selected*
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/52ff2dab-49ed-4860-bea4-3267e3284089" />
+
 **Step 8.2: Configure the Pipeline Script**
 
 On the job configuration page, the **Pipeline** section was opened. The **Definition** was left as **Pipeline script** and the following Jenkinsfile was entered in the Script editor. At this stage, the external Gitea URL (the same URL used in the browser to access Gitea from outside the cluster) was used in the `url` field:
@@ -782,7 +784,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/52ff2dab-49ed-4860-bea4-3267e3284089" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/bcfee91d-65eb-43c9-9e31-83cf82b5c187" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/022c9b35-fd16-4080-a780-fdd0302ddcc7" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/8009108e-7a66-4deb-a382-2d99e8a6e178" />
