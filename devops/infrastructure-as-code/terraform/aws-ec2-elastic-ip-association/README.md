@@ -413,6 +413,8 @@ The plan shows:
 
 > Screenshot: `terraform plan` output showing `Plan: 1 to add, 0 to change, 0 to destroy`
 
+<img width="1044" height="636" alt="image" src="https://github.com/user-attachments/assets/a9a0271a-b776-4fd8-9a22-c76a55c8e627" />
+
 ---
 
 ### Step 10: Apply the Configuration
@@ -615,7 +617,6 @@ Terraform state is an internal model. AWS is the source of truth. Running `aws e
 
 
 
-<img width="1044" height="636" alt="image" src="https://github.com/user-attachments/assets/a9a0271a-b776-4fd8-9a22-c76a55c8e627" />
 <img width="1041" height="762" alt="image" src="https://github.com/user-attachments/assets/e548850b-7524-4672-89d9-c842e9315c1b" />
 <img width="1048" height="494" alt="image" src="https://github.com/user-attachments/assets/6bf5c826-0bdf-4896-bbc3-6d529ee7b93a" />
 <img width="1049" height="551" alt="image" src="https://github.com/user-attachments/assets/386a734e-09ce-4376-8929-3ac241696d5f" />
