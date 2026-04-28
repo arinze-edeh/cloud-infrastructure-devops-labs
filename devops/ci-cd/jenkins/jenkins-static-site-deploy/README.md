@@ -597,6 +597,8 @@ The package `rsync-3.2.5-5.el9.x86_64` was downloaded from the `baseos` reposito
 
 *Screenshot: Terminal output on stapp01 showing the yum install rsync transaction: package details, download, installation, and "Complete!" confirmation*
 
+<img width="1038" height="858" alt="image" src="https://github.com/user-attachments/assets/e66ee1f0-b2c4-467a-879f-ecdf9d8392c0" />
+
 Installation was verified:
 
 ```bash
@@ -605,6 +607,8 @@ Installation was verified:
 ```
 
 *Screenshot: Terminal output showing rsync --version confirming version 3.2.5 with protocol version 31 on stapp01*
+
+<img width="1033" height="790" alt="image" src="https://github.com/user-attachments/assets/4f351478-021a-4465-a8c9-3a5f5cb99ace" />
 
 ---
 
@@ -798,7 +802,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/df47363f-1e7a-4d02-83ae-3ff62f06ca25" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/3a174886-c5e2-4da7-af1a-33b505a06242" />
-<img width="1038" height="858" alt="image" src="https://github.com/user-attachments/assets/e66ee1f0-b2c4-467a-879f-ecdf9d8392c0" />
-<img width="1033" height="790" alt="image" src="https://github.com/user-attachments/assets/4f351478-021a-4465-a8c9-3a5f5cb99ace" />
+
 
 
