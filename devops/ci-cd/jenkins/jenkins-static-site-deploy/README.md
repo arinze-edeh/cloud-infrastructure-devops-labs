@@ -205,15 +205,21 @@ Navigating to **Manage Jenkins > Plugins > Updates** revealed one plugin pending
 
 *Screenshot: Jenkins Plugins Updates page showing the bouncycastle API plugin selected with its checkbox for update*
 
+<img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/34cf9db7-d9b6-4c09-befa-e3f7af9f9206" />
+
 **Step 2.3: Plugin Download and Restart**
 
 The download progress page confirmed the bouncycastle API plugin downloaded successfully with the message "Downloaded Successfully. Will be activated during the next boot." The "Restart Jenkins when installation is complete and no jobs are running" checkbox was checked to trigger a safe restart.
 
 *Screenshot: Plugin download progress page showing bouncycastle API downloaded successfully with restart Jenkins checkbox available*
 
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/7a168e0a-46cf-4572-8bae-9b47a3e7e012" />
+
 Jenkins entered its restart sequence.
 
 *Screenshot: Jenkins restarting screen displaying "Jenkins is restarting" with the browser reload message*
+
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/94245ba3-90d9-4a21-9f7e-9a556ecc871f" />
 
 ---
 
@@ -740,9 +746,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/34cf9db7-d9b6-4c09-befa-e3f7af9f9206" />
-<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/7a168e0a-46cf-4572-8bae-9b47a3e7e012" />
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/94245ba3-90d9-4a21-9f7e-9a556ecc871f" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/6a7f4c7a-ea40-40f3-b71b-b16f8d197de6" />
 <img width="1898" height="1013" alt="image" src="https://github.com/user-attachments/assets/2a0a468f-bfcb-4d6c-8346-2d711d62051b" />
 <img width="1894" height="1020" alt="image" src="https://github.com/user-attachments/assets/b17d40d4-0256-41ff-bd2c-1bb1cf9c70ff" />
