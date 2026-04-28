@@ -445,6 +445,8 @@ Navigating into `sarah/web_app` confirmed the repository contained one file: `in
 
 *Screenshot: sarah/web_app repository page on Gitea showing index.html as the only file on the master branch with 1 commit*
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/7975919f-d801-4baf-9c13-50146c4b68a1" />
+
 ---
 
 ### Phase 8: Jenkins Pipeline Job Creation and Initial Configuration
@@ -780,7 +782,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/7975919f-d801-4baf-9c13-50146c4b68a1" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/52ff2dab-49ed-4860-bea4-3267e3284089" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/bcfee91d-65eb-43c9-9e31-83cf82b5c187" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/022c9b35-fd16-4080-a780-fdd0302ddcc7" />
