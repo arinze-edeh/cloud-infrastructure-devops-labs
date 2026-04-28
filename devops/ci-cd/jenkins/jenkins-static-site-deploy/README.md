@@ -532,6 +532,8 @@ Recv failure: Connection reset by peer
 
 *Screenshot: Build #1 console output top section showing the pipeline running on App Server 1, entering the Deploy stage, and the git clone failing with "Recv failure: Connection reset by peer"*
 
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/8009108e-7a66-4deb-a382-2d99e8a6e178" />
+
 The console continued with the full stack trace from the Git client plugin and concluded:
 
 ```
@@ -541,6 +543,8 @@ Finished: FAILURE
 ```
 
 *Screenshot: Build #1 console output bottom section showing the stack trace tail, the repeated ERROR lines, and Finished: FAILURE*
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/2dbb6cd9-4608-46a8-bc5a-7b8854d91c70" />
 
 **Root Cause**
 
@@ -788,8 +792,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/8009108e-7a66-4deb-a382-2d99e8a6e178" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/2dbb6cd9-4608-46a8-bc5a-7b8854d91c70" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/df47363f-1e7a-4d02-83ae-3ff62f06ca25" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/3a174886-c5e2-4da7-af1a-33b505a06242" />
 <img width="1038" height="858" alt="image" src="https://github.com/user-attachments/assets/e66ee1f0-b2c4-467a-879f-ecdf9d8392c0" />
