@@ -398,6 +398,8 @@ The **Create** button was clicked.
 
 *Screenshot: Add Username with password form showing scope as Global, username as sarah, password entered, and ID as gitea-sarah*
 
+<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/9323cf00-5b6b-4c15-8980-2d93ac0a9e83" />
+
 **Step 6.4: Verify Both Credentials Are Present**
 
 The Global credentials page now listed both credentials:
@@ -772,8 +774,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/57232525-4c49-416b-9493-e0709fd65793" />
-<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/9323cf00-5b6b-4c15-8980-2d93ac0a9e83" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/d85789ce-dbc6-4048-8e81-ce3a32c9aa89" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/227feaca-032f-47da-a083-ddf150cd26af" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/5cb0a45e-974a-4758-ba29-4690522979e0" />
