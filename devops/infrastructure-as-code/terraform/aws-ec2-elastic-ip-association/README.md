@@ -143,6 +143,8 @@ eipalloc-f97a52f19055b1a35
 
 > Screenshot: AWS CLI output confirming EC2 instance ID `i-904804de1ba0e9698` and EIP allocation ID `eipalloc-f97a52f19055b1a35`
 
+<img width="1048" height="532" alt="image" src="https://github.com/user-attachments/assets/c1a4b394-06b3-4b1b-9fef-602da95025b7" />
+
 ---
 
 ### Step 2: Confirm EIP Is Unassociated
@@ -166,6 +168,8 @@ None
 The `None` response confirms the EIP is allocated but not yet associated with any instance.
 
 > Screenshot: AWS CLI output showing `AssociationId` as `None`, confirming the EIP is free to associate
+
+<img width="1044" height="592" alt="image" src="https://github.com/user-attachments/assets/49e7a5cd-5df7-465b-a50d-b408eeb35cba" />
 
 ---
 
@@ -525,8 +529,7 @@ Terraform state is an internal model. AWS is the source of truth. Running `aws e
 
 
 <img width="1048" height="528" alt="image" src="https://github.com/user-attachments/assets/56353cc2-d25f-445e-89e5-6748bf325f34" />
-<img width="1048" height="532" alt="image" src="https://github.com/user-attachments/assets/c1a4b394-06b3-4b1b-9fef-602da95025b7" />
-<img width="1044" height="592" alt="image" src="https://github.com/user-attachments/assets/49e7a5cd-5df7-465b-a50d-b408eeb35cba" />
+
 <img width="1046" height="672" alt="image" src="https://github.com/user-attachments/assets/e0435f8d-6cba-42e4-b7a2-99180e8fad62" />
 <img width="1044" height="740" alt="image" src="https://github.com/user-attachments/assets/66e7758c-df16-4726-97e3-692e78017923" />
 <img width="1048" height="659" alt="image" src="https://github.com/user-attachments/assets/0c8fa3c9-a64c-4fc9-9038-286527988421" />
