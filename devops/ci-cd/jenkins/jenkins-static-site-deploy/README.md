@@ -240,6 +240,8 @@ The **Install** button was clicked to begin batch installation.
 
 *Screenshot: Available plugins page with git searched, showing SSH Build Agents, Credentials, Pipeline, and Git all checked for installation*
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/6a7f4c7a-ea40-40f3-b71b-b16f8d197de6" />
+
 **Step 3.2: Monitor Plugin Installation Progress**
 
 All plugin dependencies resolved and installed successfully across multiple pages of download progress output.
@@ -746,7 +748,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/6a7f4c7a-ea40-40f3-b71b-b16f8d197de6" />
 <img width="1898" height="1013" alt="image" src="https://github.com/user-attachments/assets/2a0a468f-bfcb-4d6c-8346-2d711d62051b" />
 <img width="1894" height="1020" alt="image" src="https://github.com/user-attachments/assets/b17d40d4-0256-41ff-bd2c-1bb1cf9c70ff" />
 <img width="1893" height="1015" alt="image" src="https://github.com/user-attachments/assets/18d4ee1c-fec0-41ec-bf75-e6e91d166c55" />
