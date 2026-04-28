@@ -287,6 +287,8 @@ No output on success. The heredoc appends the block directly to the end of the e
 
 > Screenshot: Terminal showing the `cat >>` heredoc command executed without error
 
+<img width="1047" height="674" alt="image" src="https://github.com/user-attachments/assets/ce85723c-58da-4a40-9cb5-6b09d62cccd4" />
+
 ---
 
 ### Step 7: Verify Updated Configuration
@@ -609,7 +611,6 @@ Terraform state is an internal model. AWS is the source of truth. Running `aws e
 
 
 
-<img width="1047" height="674" alt="image" src="https://github.com/user-attachments/assets/ce85723c-58da-4a40-9cb5-6b09d62cccd4" />
 <img width="1049" height="667" alt="image" src="https://github.com/user-attachments/assets/585b4461-28dd-475f-bf5d-777b20098d41" />
 <img width="1044" height="562" alt="image" src="https://github.com/user-attachments/assets/a818feb6-54b9-4e95-a903-012e4c85b4b8" />
 <img width="1043" height="645" alt="image" src="https://github.com/user-attachments/assets/41f20a80-1ec3-461d-abc4-e3475ac22ccc" />
