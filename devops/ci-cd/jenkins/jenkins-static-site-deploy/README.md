@@ -668,7 +668,11 @@ The `xfusion-webapp-job` status page showed build #4 with a green success indica
 
 *Screenshot: xfusion-webapp-job status page showing build #4 with green success checkmark and builds #1, #2, #3 with failure markers in the Builds panel*
 
+<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/88455d35-6f61-4551-a50f-dae6ad2b1a17" />
+
 *Screenshot: Build #4 full console output showing git authentication using gitea-sarah credential, all git checkout commands, rsync transferring index.html to /var/www/html, 165 bytes sent, and Finished: SUCCESS at the bottom*
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/964afdda-5eae-4b61-99b3-c512e31352fd" />
 
 ---
 
@@ -796,7 +800,5 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/3a174886-c5e2-4da7-af1a-33b505a06242" />
 <img width="1038" height="858" alt="image" src="https://github.com/user-attachments/assets/e66ee1f0-b2c4-467a-879f-ecdf9d8392c0" />
 <img width="1033" height="790" alt="image" src="https://github.com/user-attachments/assets/4f351478-021a-4465-a8c9-3a5f5cb99ace" />
-<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/88455d35-6f61-4551-a50f-dae6ad2b1a17" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/964afdda-5eae-4b61-99b3-c512e31352fd" />
 
 
