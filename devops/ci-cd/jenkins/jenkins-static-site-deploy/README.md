@@ -335,6 +335,8 @@ The **Create** button was clicked.
 
 *Screenshot: New node page with App Server 1 entered as the node name and Permanent Agent type selected*
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/7afae84c-aef0-4aed-84ec-78ec63a3f7e6" />
+
 **Step 5.2: Configure the Agent Node**
 
 On the node configuration page, all required fields were filled in:
@@ -354,11 +356,15 @@ The **Save** button was clicked.
 
 *Screenshot: Agent node configuration page showing all fields populated: name App Server 1, remote root directory /home/sarah/jenkins_agent, label stapp01, Launch agents via SSH selected, host 10.244.13.20, sarah credential selected, and Non verifying Verification Strategy set*
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/27dae380-5bca-402c-9733-9f79d55e66c9" />
+
 **Step 5.3: Verify Agent Connectivity**
 
 After saving, the Nodes list confirmed `App Server 1` came online alongside the Built-In Node. Both nodes showed architecture as Linux (amd64), clock in sync, available disk space, and response time data, confirming the SSH connection from the Jenkins controller to App Server 1 was established successfully.
 
 *Screenshot: Jenkins Nodes page showing both App Server 1 and Built-In Node listed as online with architecture, disk space, and response time columns populated*
+
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/b10af8ee-2723-45ca-a8bb-17350c75684d" />
 
 ---
 
@@ -765,9 +771,7 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/96229ae8-32bd-4795-8e43-07b63a9aab3f" />
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/7afae84c-aef0-4aed-84ec-78ec63a3f7e6" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/27dae380-5bca-402c-9733-9f79d55e66c9" />
-<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/b10af8ee-2723-45ca-a8bb-17350c75684d" />
+
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/f5730c83-c235-40e6-b680-185c642047f9" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/57232525-4c49-416b-9493-e0709fd65793" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/9323cf00-5b6b-4c15-8980-2d93ac0a9e83" />
