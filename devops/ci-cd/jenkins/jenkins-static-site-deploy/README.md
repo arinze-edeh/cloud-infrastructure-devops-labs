@@ -197,6 +197,8 @@ The Jenkins UI was accessed at port 8080. The login page was presented and crede
 
 *Screenshot: Jenkins Sign in page with admin entered in the username field and password filled in*
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/2b3b5697-71d7-4994-bb0d-6b932dc0d10c" />
+
 **Step 2.2: Navigate to Plugin Manager and Update Available Plugins**
 
 Navigating to **Manage Jenkins > Plugins > Updates** revealed one plugin pending an update: `bouncycastle API`, currently at installed version `2.30.1.82-277.v70ca_0b_877184` with an update available to `2.30.1.84-291.v9f17b_21896e2`. The plugin was selected using its checkbox and the **Update** button was clicked.
@@ -738,9 +740,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1033" height="637" alt="image" src="https://github.com/user-attachments/assets/8b3281f9-c6af-4e8b-a772-758eabfe07d9" />
-
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/2b3b5697-71d7-4994-bb0d-6b932dc0d10c" />
 <img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/34cf9db7-d9b6-4c09-befa-e3f7af9f9206" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/7a168e0a-46cf-4572-8bae-9b47a3e7e012" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/94245ba3-90d9-4a21-9f7e-9a556ecc871f" />
