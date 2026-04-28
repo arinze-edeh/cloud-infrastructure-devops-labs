@@ -13,14 +13,16 @@ Attach a pre-provisioned Elastic IP to an existing EC2 instance in AWS using Ter
 * [Implementation](#implementation)
   * [Step 1: Verify Existing Infrastructure State](#step-1-verify-existing-infrastructure-state)
   * [Step 2: Confirm EIP Is Unassociated](#step-2-confirm-eip-is-unassociated)
-  * [Step 3: Review Existing Terraform Configuration](#step-3-review-existing-terraform-configuration)
-  * [Step 4: Append the EIP Association Resource Block](#step-4-append-the-eip-association-resource-block)
-  * [Step 5: Verify Updated Configuration](#step-5-verify-updated-configuration)
-  * [Step 6: Format and Validate](#step-6-format-and-validate)
-  * [Step 7: Plan the Change](#step-7-plan-the-change)
-  * [Step 8: Apply the Configuration](#step-8-apply-the-configuration)
-  * [Step 9: Confirm Association via AWS CLI](#step-9-confirm-association-via-aws-cli)
-  * [Step 10: Verify Terraform State](#step-10-verify-terraform-state)
+  * [Step 3: Verify Terraform Version and Provider](#step-3-verify-terraform-version-and-provider)
+  * [Step 4: Confirm Working Directory Initialization](#step-4-confirm-working-directory-initialization)
+  * [Step 5: Review Existing Terraform Configuration](#step-5-review-existing-terraform-configuration)
+  * [Step 6: Append the EIP Association Resource Block](#step-6-append-the-eip-association-resource-block)
+  * [Step 7: Verify Updated Configuration](#step-7-verify-updated-configuration)
+  * [Step 8: Format and Validate](#step-8-format-and-validate)
+  * [Step 9: Plan the Change](#step-9-plan-the-change)
+  * [Step 10: Apply the Configuration](#step-10-apply-the-configuration)
+  * [Step 11: Confirm Association via AWS CLI](#step-11-confirm-association-via-aws-cli)
+  * [Step 12: Verify Terraform State](#step-12-verify-terraform-state)
 * [Key Decisions](#key-decisions)
 * [Errors and Resolutions](#errors-and-resolutions)
 * [Lessons Learned](#lessons-learned)
@@ -173,7 +175,55 @@ The `None` response confirms the EIP is allocated but not yet associated with an
 
 ---
 
-### Step 3: Review Existing Terraform Configuration
+### Step 3: Verify Terraform Version and Provider
+
+Before modifying any configuration, confirm the installed Terraform binary version and the AWS provider version that is active in the working directory. This documents the exact toolchain used and surfaces any version constraints that may affect behavior.
+
+```bash
+terraform version
+```
+
+**Output:**
+
+```
+Terraform v1.11.0
+on linux_amd64
++ provider registry.terraform.io/hashicorp/aws v5.91.0
+
+Your version of Terraform is out of date! The latest version
+is 1.14.9. You can update by downloading from https://www.terraform.io/downloads.html
+```
+
+The active toolchain is Terraform v1.11.0 with the hashicorp/aws provider at v5.91.0. Terraform flags that v1.14.9 is available but this is an advisory notice only. The installed version is fully functional and the warning does not block any subsequent operations.
+
+> Screenshot: `terraform version` output showing Terraform v1.11.0, AWS provider v5.91.0, and the version advisory notice
+
+---
+
+### Step 4: Confirm Working Directory Initialization
+
+Verify that the Terraform working directory has been initialized and the provider plugins are present. This confirms `terraform init` was previously executed and the provider binary is available for plan and apply operations.
+
+```bash
+ls -la .terraform/
+```
+
+**Output:**
+
+```
+total 16
+drwxr-xr-x 3 bob bob 4096 Apr 28 00:24 .
+drwxr-xr-x 1 bob bob 4096 Apr 28 00:25 ..
+drwxr-xr-x 3 bob bob 4096 Apr 28 00:24 providers
+```
+
+The `.terraform/providers` directory is present, confirming the working directory is initialized and the AWS provider plugin has been downloaded. No `terraform init` is required before proceeding.
+
+> Screenshot: `ls -la .terraform/` output showing the `providers` directory present under the working directory
+
+---
+
+### Step 5: Review Existing Terraform Configuration
 
 Inspect the current `main.tf` to understand the existing resource blocks before appending a new one.
 
@@ -212,7 +262,7 @@ Two resources are already defined: `aws_instance.ec2` and `aws_eip.ec2_eip`. Bot
 
 ---
 
-### Step 4: Append the EIP Association Resource Block
+### Step 6: Append the EIP Association Resource Block
 
 Append the `aws_eip_association` resource to `main.tf` using a heredoc to avoid manual editor errors and ensure exact formatting. The resource uses Terraform attribute references (`aws_instance.ec2.id` and `aws_eip.ec2_eip.id`) rather than hardcoded IDs, preserving configuration portability and dependency graph correctness.
 
@@ -233,7 +283,7 @@ No output on success. The heredoc appends the block directly to the end of the e
 
 ---
 
-### Step 5: Verify Updated Configuration
+### Step 7: Verify Updated Configuration
 
 Confirm the full `main.tf` content after appending to validate the file is structurally complete and no content was lost or duplicated.
 
@@ -278,9 +328,9 @@ All three resource blocks are present and correctly structured.
 
 ---
 
-### Step 6: Format and Validate
+### Step 8: Format and Validate
 
-Run `terraform fmt` to enforce canonical HCL formatting. This resolves any indentation inconsistencies introduced by the heredoc append and ensures the file conforms to Terraform style standards.
+Run `terraform fmt` to enforce canonical HCL formatting across all `.tf` files in the working directory. Terraform reports the name of every file it modifies.
 
 ```bash
 terraform fmt
@@ -292,7 +342,7 @@ terraform fmt
 provider.tf
 ```
 
-Terraform reports `provider.tf` as reformatted. The `main.tf` file required no formatting changes, confirming the heredoc produced properly aligned HCL.
+Terraform reformatted `provider.tf`. The `main.tf` file produced no output, meaning it required no formatting changes and the heredoc append produced correctly aligned HCL. Only `provider.tf` had style inconsistencies that `terraform fmt` corrected.
 
 Validate the configuration for syntax and provider schema compliance:
 
@@ -310,7 +360,7 @@ Success! The configuration is valid.
 
 ---
 
-### Step 7: Plan the Change
+### Step 9: Plan the Change
 
 Generate an execution plan to preview the exact actions Terraform will take. This confirms Terraform correctly reads both existing resources from state and identifies only the association as a new resource to create.
 
@@ -353,15 +403,40 @@ The plan shows:
 
 ---
 
-### Step 8: Apply the Configuration
+### Step 10: Apply the Configuration
 
-Execute the plan and confirm the apply prompt with `yes` to create the EIP association.
+Execute the apply. Terraform refreshes state, replays the execution plan, and waits for explicit confirmation before making any changes.
 
 ```bash
 terraform apply
 ```
 
-At the confirmation prompt:
+Terraform refreshes the existing resources from state and replays the full execution plan before prompting:
+
+```
+aws_eip.ec2_eip: Refreshing state... [id=eipalloc-f97a52f19055b1a35]
+aws_instance.ec2: Refreshing state... [id=i-904804de1ba0e9698]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the
+following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_eip_association.devops_eip_assoc will be created
+  + resource "aws_eip_association" "devops_eip_assoc" {
+      + allocation_id        = "eipalloc-f97a52f19055b1a35"
+      + id                   = (known after apply)
+      + instance_id          = "i-904804de1ba0e9698"
+      + network_interface_id = (known after apply)
+      + private_ip_address   = (known after apply)
+      + public_ip            = (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+```
+
+At the confirmation prompt, enter `yes`:
 
 ```
 Do you want to perform these actions?
@@ -386,7 +461,7 @@ The association was created in under one second. The association ID `eipassoc-ba
 
 ---
 
-### Step 9: Confirm Association via AWS CLI
+### Step 11: Confirm Association via AWS CLI
 
 Query the EIP record directly from AWS to independently verify the association outside of Terraform state. This cross-validates the infrastructure change against the actual AWS control plane.
 
@@ -424,7 +499,7 @@ The EIP is now bound to the correct instance.
 
 ---
 
-### Step 10: Verify Terraform State
+### Step 12: Verify Terraform State
 
 Confirm that all three resources are tracked in Terraform state after the apply.
 
@@ -494,9 +569,9 @@ Querying AWS CLI for both the instance ID and the EIP allocation ID before touch
 
 Hardcoding resource IDs in configuration files is a common shortcut that breaks immediately when IDs change across environment promotions (dev, staging, production). Attribute references like `aws_instance.ec2.id` cost nothing and eliminate an entire category of configuration errors.
 
-**`terraform fmt` output indicates which files changed**
+**`terraform fmt` reports every file it modifies, not the file you edited**
 
-When `terraform fmt` lists a file name in its output, that file was modified. When it produces no output for a given file, that file was already correctly formatted. Understanding this output helps distinguish between formatting-related and logic-related configuration issues.
+When `terraform fmt` lists a file name in its output, that file had style inconsistencies that were corrected. In this implementation, `terraform fmt` reported `provider.tf`, meaning that file needed reformatting while `main.tf` did not. This distinction matters: if `main.tf` had appeared in the output, it would have signalled a formatting problem introduced by the heredoc append. Silence on a file is confirmation it was already clean.
 
 **`terraform plan` is a correctness contract, not just a preview**
 
@@ -518,7 +593,6 @@ Terraform state is an internal model. AWS is the source of truth. Running `aws e
 | AWS CLI `describe-addresses` | https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-addresses.html |
 | AWS CLI `describe-instances` | https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html |
 | Terraform CLI Commands | https://developer.hashicorp.com/terraform/cli/commands |
-
 
 
 
