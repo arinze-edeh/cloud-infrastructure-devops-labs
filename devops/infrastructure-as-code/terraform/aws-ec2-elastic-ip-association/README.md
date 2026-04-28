@@ -473,6 +473,8 @@ The association was created in under one second. The association ID `eipassoc-ba
 
 > Screenshot: `terraform apply` completion output showing `Apply complete! Resources: 1 added, 0 changed, 0 destroyed` and association ID `eipassoc-ba991b707fd6e24b6`
 
+<img width="1041" height="762" alt="image" src="https://github.com/user-attachments/assets/e548850b-7524-4672-89d9-c842e9315c1b" />
+
 ---
 
 ### Step 11: Confirm Association via AWS CLI
@@ -511,6 +513,8 @@ The EIP is now bound to the correct instance.
 
 > Screenshot: AWS CLI table output confirming EIP association with `AssociationId`, `InstanceId`, and `PublicIP` all populated
 
+<img width="1048" height="494" alt="image" src="https://github.com/user-attachments/assets/6bf5c826-0bdf-4896-bbc3-6d529ee7b93a" />
+
 ---
 
 ### Step 12: Verify Terraform State
@@ -532,6 +536,8 @@ aws_instance.ec2
 All three managed resources are present in state. Terraform will manage their full lifecycle going forward, including detection of any out-of-band changes.
 
 > Screenshot: `terraform state list` output showing all three resources tracked
+
+<img width="1049" height="551" alt="image" src="https://github.com/user-attachments/assets/386a734e-09ce-4376-8929-3ac241696d5f" />
 
 ---
 
@@ -607,16 +613,3 @@ Terraform state is an internal model. AWS is the source of truth. Running `aws e
 | AWS CLI `describe-addresses` | https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-addresses.html |
 | AWS CLI `describe-instances` | https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html |
 | Terraform CLI Commands | https://developer.hashicorp.com/terraform/cli/commands |
-
-
-
-
-
-
-
-
-
-
-<img width="1041" height="762" alt="image" src="https://github.com/user-attachments/assets/e548850b-7524-4672-89d9-c842e9315c1b" />
-<img width="1048" height="494" alt="image" src="https://github.com/user-attachments/assets/6bf5c826-0bdf-4896-bbc3-6d529ee7b93a" />
-<img width="1049" height="551" alt="image" src="https://github.com/user-attachments/assets/386a734e-09ce-4376-8929-3ac241696d5f" />
