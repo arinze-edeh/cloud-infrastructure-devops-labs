@@ -368,6 +368,8 @@ Success! The configuration is valid.
 
 > Screenshot: Terminal output of `terraform fmt` and `terraform validate` confirming valid configuration
 
+<img width="1043" height="645" alt="image" src="https://github.com/user-attachments/assets/41f20a80-1ec3-461d-abc4-e3475ac22ccc" />
+
 ---
 
 ### Step 9: Plan the Change
@@ -613,8 +615,6 @@ Terraform state is an internal model. AWS is the source of truth. Running `aws e
 
 
 
-<img width="1044" height="562" alt="image" src="https://github.com/user-attachments/assets/a818feb6-54b9-4e95-a903-012e4c85b4b8" />
-<img width="1043" height="645" alt="image" src="https://github.com/user-attachments/assets/41f20a80-1ec3-461d-abc4-e3475ac22ccc" />
 <img width="1044" height="636" alt="image" src="https://github.com/user-attachments/assets/a9a0271a-b776-4fd8-9a22-c76a55c8e627" />
 <img width="1041" height="762" alt="image" src="https://github.com/user-attachments/assets/e548850b-7524-4672-89d9-c842e9315c1b" />
 <img width="1048" height="494" alt="image" src="https://github.com/user-attachments/assets/6bf5c826-0bdf-4896-bbc3-6d529ee7b93a" />
