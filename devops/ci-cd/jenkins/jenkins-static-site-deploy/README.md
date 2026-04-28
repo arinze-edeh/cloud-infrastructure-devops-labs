@@ -378,6 +378,8 @@ From **Manage Jenkins > Credentials > System > Global credentials (unrestricted)
 
 *Screenshot: Add Credentials dialog appearing with Username with password, SSH Username with private key, Secret file, Secret text, and Certificate options listed*
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/f5730c83-c235-40e6-b680-185c642047f9" />
+
 **Step 6.2: Select Username with Password**
 
 **Username with password** was selected and **Next** was clicked.
@@ -770,9 +772,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/96229ae8-32bd-4795-8e43-07b63a9aab3f" />
-
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/f5730c83-c235-40e6-b680-185c642047f9" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/57232525-4c49-416b-9493-e0709fd65793" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/9323cf00-5b6b-4c15-8980-2d93ac0a9e83" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/d85789ce-dbc6-4048-8e81-ce3a32c9aa89" />
