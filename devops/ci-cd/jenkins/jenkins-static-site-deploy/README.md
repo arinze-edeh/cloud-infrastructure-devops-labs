@@ -581,6 +581,8 @@ Finished: FAILURE
 
 *Screenshot: Build #3 console output showing the git checkout of master succeeding with commit d81ae80e64, then the rsync sh step failing with "rsync: command not found" and exit code 127*
 
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/3a174886-c5e2-4da7-af1a-33b505a06242" />
+
 **Root Cause**
 
 `rsync` is not included in the default CentOS Stream 9 installation. The agent's shell environment could not locate the binary, and the shell returned exit code 127 (command not found).
@@ -801,7 +803,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/df47363f-1e7a-4d02-83ae-3ff62f06ca25" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/3a174886-c5e2-4da7-af1a-33b505a06242" />
 
 
 
