@@ -292,6 +292,8 @@ Navigate to **Manage Jenkins > Credentials > System > Global credentials (unrest
 
 *Screenshot: Add Credentials dialog with SSH Username with private key option highlighted and selected*
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/a57c98ff-eae1-4eb1-8753-ca46bcd7a8b5" />
+
 **Step 4.3: Fill in SSH Credential Details**
 
 The SSH credential form was completed with the following values:
@@ -306,11 +308,15 @@ The **Create** button was clicked.
 
 *Screenshot: Add SSH Username with private key form showing ID as sarah-stapp01, username as sarah, Enter directly selected, and the private key content pasted into the Key text area with the BEGIN and END markers visible*
 
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/7359943e-47e8-499b-b68a-725edfac5865" />
+
 **Step 4.4: Verify SSH Credential Saved**
 
 The Global credentials page confirmed the `sarah-stapp01` SSH credential was saved and appeared in the credentials list.
 
 *Screenshot: Global credentials page showing the sarah-stapp01 SSH credential entry for user sarah*
+
+<img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/1cba644a-1fdc-449b-909f-00b29582c7cd" />
 
 ---
 
@@ -757,10 +763,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/a57c98ff-eae1-4eb1-8753-ca46bcd7a8b5" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/7359943e-47e8-499b-b68a-725edfac5865" />
-<img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/1cba644a-1fdc-449b-909f-00b29582c7cd" />
 
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/96229ae8-32bd-4795-8e43-07b63a9aab3f" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/7afae84c-aef0-4aed-84ec-78ec63a3f7e6" />
