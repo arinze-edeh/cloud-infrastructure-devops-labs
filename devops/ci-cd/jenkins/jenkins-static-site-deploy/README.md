@@ -179,8 +179,6 @@ This confirmed the internal Gitea hostname and the repository path to be used in
 <img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/9f8a8c79-cae7-4f9b-ba85-924d90c900ce" />
 <img width="1031" height="862" alt="image" src="https://github.com/user-attachments/assets/1a9f9ea9-6313-43ce-900a-6742a3ca0350" />
 <img width="1029" height="377" alt="image" src="https://github.com/user-attachments/assets/82ce8966-998a-433d-abac-a12caf404090" />
-<img width="1034" height="518" alt="image" src="https://github.com/user-attachments/assets/ca41f345-03c2-4f69-8111-0e4251c3a791" />
-<img width="1036" height="497" alt="image" src="https://github.com/user-attachments/assets/842f88bb-d3b8-4968-97f9-40f9354e259b" />
 <img width="1029" height="863" alt="image" src="https://github.com/user-attachments/assets/6ed1de45-f77b-4167-a87d-c2eff498e82b" />
 <img width="1035" height="745" alt="image" src="https://github.com/user-attachments/assets/a562c024-d06e-47f5-a93e-0e473badd260" />
 <img width="1055" height="882" alt="image" src="https://github.com/user-attachments/assets/2ab8bef3-c683-4a69-8268-66933355afa9" />
