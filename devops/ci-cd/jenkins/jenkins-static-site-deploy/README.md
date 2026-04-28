@@ -423,6 +423,8 @@ The Gitea UI was accessed at port 3000. Username `sarah` and password `Sarah_pas
 
 *Screenshot: Gitea Sign In page with sarah entered as the username and password filled in*
 
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/227feaca-032f-47da-a083-ddf150cd26af" />
+
 **Step 7.2: Review the Dashboard and Confirm the Repository**
 
 On the Gitea dashboard for `sarah`, the activity feed confirmed:
@@ -434,6 +436,8 @@ On the Gitea dashboard for `sarah`, the activity feed confirmed:
 The Repositories sidebar confirmed `sarah/web_app` as the only repository under this account.
 
 *Screenshot: Gitea dashboard for sarah showing the activity feed with web_app repository creation, push, and branch creation events, and web_app listed in the repositories sidebar*
+
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/5cb0a45e-974a-4758-ba29-4690522979e0" />
 
 **Step 7.3: Inspect the Repository Contents**
 
@@ -776,8 +780,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/227feaca-032f-47da-a083-ddf150cd26af" />
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/5cb0a45e-974a-4758-ba29-4690522979e0" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/7975919f-d801-4baf-9c13-50146c4b68a1" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/52ff2dab-49ed-4860-bea4-3267e3284089" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/bcfee91d-65eb-43c9-9e31-83cf82b5c187" />
