@@ -174,7 +174,18 @@ sudo -u sarah git -C /var/www/html remote -v
 
 This confirmed the internal Gitea hostname and the repository path to be used in the pipeline.
 
-*Screenshot: Terminal session on stapp01 showing the complete sequence: Java 17 installation output, alternatives config selection, java -version confirmation, directory creation and permission commands, git branch output showing master, hostname -I output, SSH key generation output, authorized_keys setup, cat of the private key, exit back to tony, and git remote -v output*
+*Screenshots: Terminal session on stapp01 showing the complete sequence: Java 17 installation output, alternatives config selection, java -version confirmation, directory creation and permission commands, git branch output showing master, hostname -I output, SSH key generation output, authorized_keys setup, cat of the private key, exit back to tony, and git remote -v output*
+
+<img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/9f8a8c79-cae7-4f9b-ba85-924d90c900ce" />
+<img width="1031" height="862" alt="image" src="https://github.com/user-attachments/assets/1a9f9ea9-6313-43ce-900a-6742a3ca0350" />
+<img width="1029" height="377" alt="image" src="https://github.com/user-attachments/assets/82ce8966-998a-433d-abac-a12caf404090" />
+<img width="1031" height="448" alt="image" src="https://github.com/user-attachments/assets/3211aa85-b61e-4b60-aa96-04631d270b8e" />
+<img width="1034" height="518" alt="image" src="https://github.com/user-attachments/assets/ca41f345-03c2-4f69-8111-0e4251c3a791" />
+<img width="1036" height="497" alt="image" src="https://github.com/user-attachments/assets/842f88bb-d3b8-4968-97f9-40f9354e259b" />
+<img width="1029" height="863" alt="image" src="https://github.com/user-attachments/assets/6ed1de45-f77b-4167-a87d-c2eff498e82b" />
+<img width="1035" height="745" alt="image" src="https://github.com/user-attachments/assets/a562c024-d06e-47f5-a93e-0e473badd260" />
+<img width="1055" height="882" alt="image" src="https://github.com/user-attachments/assets/2ab8bef3-c683-4a69-8268-66933355afa9" />
+<img width="1033" height="382" alt="image" src="https://github.com/user-attachments/assets/76a799a3-29b1-404e-a09d-3d3d078d3a47" />
 
 ---
 
@@ -728,16 +739,7 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 <img width="1033" height="637" alt="image" src="https://github.com/user-attachments/assets/8b3281f9-c6af-4e8b-a772-758eabfe07d9" />
-<img width="1035" height="859" alt="image" src="https://github.com/user-attachments/assets/9f8a8c79-cae7-4f9b-ba85-924d90c900ce" />
-<img width="1031" height="862" alt="image" src="https://github.com/user-attachments/assets/1a9f9ea9-6313-43ce-900a-6742a3ca0350" />
-<img width="1029" height="377" alt="image" src="https://github.com/user-attachments/assets/82ce8966-998a-433d-abac-a12caf404090" />
-<img width="1031" height="448" alt="image" src="https://github.com/user-attachments/assets/3211aa85-b61e-4b60-aa96-04631d270b8e" />
-<img width="1034" height="518" alt="image" src="https://github.com/user-attachments/assets/ca41f345-03c2-4f69-8111-0e4251c3a791" />
-<img width="1036" height="497" alt="image" src="https://github.com/user-attachments/assets/842f88bb-d3b8-4968-97f9-40f9354e259b" />
-<img width="1029" height="863" alt="image" src="https://github.com/user-attachments/assets/6ed1de45-f77b-4167-a87d-c2eff498e82b" />
-<img width="1035" height="745" alt="image" src="https://github.com/user-attachments/assets/a562c024-d06e-47f5-a93e-0e473badd260" />
-<img width="1055" height="882" alt="image" src="https://github.com/user-attachments/assets/2ab8bef3-c683-4a69-8268-66933355afa9" />
-<img width="1033" height="382" alt="image" src="https://github.com/user-attachments/assets/76a799a3-29b1-404e-a09d-3d3d078d3a47" />
+
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/2b3b5697-71d7-4994-bb0d-6b932dc0d10c" />
 <img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/34cf9db7-d9b6-4c09-befa-e3f7af9f9206" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/7a168e0a-46cf-4572-8bae-9b47a3e7e012" />
