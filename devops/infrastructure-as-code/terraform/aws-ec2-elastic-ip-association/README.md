@@ -334,6 +334,8 @@ All three resource blocks are present and correctly structured.
 
 > Screenshot: Full `cat main.tf` output showing all three resource blocks including the newly appended `aws_eip_association`
 
+<img width="1049" height="667" alt="image" src="https://github.com/user-attachments/assets/585b4461-28dd-475f-bf5d-777b20098d41" />
+
 ---
 
 ### Step 8: Format and Validate
@@ -611,7 +613,6 @@ Terraform state is an internal model. AWS is the source of truth. Running `aws e
 
 
 
-<img width="1049" height="667" alt="image" src="https://github.com/user-attachments/assets/585b4461-28dd-475f-bf5d-777b20098d41" />
 <img width="1044" height="562" alt="image" src="https://github.com/user-attachments/assets/a818feb6-54b9-4e95-a903-012e4c85b4b8" />
 <img width="1043" height="645" alt="image" src="https://github.com/user-attachments/assets/41f20a80-1ec3-461d-abc4-e3475ac22ccc" />
 <img width="1044" height="636" alt="image" src="https://github.com/user-attachments/assets/a9a0271a-b776-4fd8-9a22-c76a55c8e627" />
