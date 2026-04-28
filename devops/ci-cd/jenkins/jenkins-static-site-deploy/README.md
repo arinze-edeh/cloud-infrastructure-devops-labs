@@ -560,6 +560,8 @@ url: 'http://gitea:3000/sarah/web_app.git'
 
 *Screenshot: Pipeline configure page showing the updated Groovy script with the corrected internal URL http://gitea:3000/sarah/web_app.git replacing the external URL on line 11*
 
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/df47363f-1e7a-4d02-83ae-3ff62f06ca25" />
+
 The job was saved and additional builds were triggered.
 
 #### Error 2: rsync Binary Not Found on Agent (Build #3)
@@ -791,18 +793,3 @@ Jenkins writes internal files during builds: durable task scripts, workspace loc
 **Plugin installations should be batched to minimize restart cycles**
 
 Installing SSH Build Agents, Credentials, Pipeline, and Git together in one operation required only a single restart. Installing them individually would have required four restarts. In environments where Jenkins restarts interrupt running builds, minimizing restart cycles reduces operational risk.
-
-
-
-
-
-
-
-
-
-
-
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/df47363f-1e7a-4d02-83ae-3ff62f06ca25" />
-
-
-
