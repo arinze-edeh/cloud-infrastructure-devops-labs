@@ -264,6 +264,8 @@ Two resources are already defined: `aws_instance.ec2` and `aws_eip.ec2_eip`. Bot
 
 > Screenshot: Terminal output of `cat main.tf` showing the two existing resource blocks
 
+<img width="1048" height="659" alt="image" src="https://github.com/user-attachments/assets/0c8fa3c9-a64c-4fc9-9038-286527988421" />
+
 ---
 
 ### Step 6: Append the EIP Association Resource Block
@@ -607,7 +609,6 @@ Terraform state is an internal model. AWS is the source of truth. Running `aws e
 
 
 
-<img width="1048" height="659" alt="image" src="https://github.com/user-attachments/assets/0c8fa3c9-a64c-4fc9-9038-286527988421" />
 <img width="1047" height="674" alt="image" src="https://github.com/user-attachments/assets/ce85723c-58da-4a40-9cb5-6b09d62cccd4" />
 <img width="1049" height="667" alt="image" src="https://github.com/user-attachments/assets/585b4461-28dd-475f-bf5d-777b20098d41" />
 <img width="1044" height="562" alt="image" src="https://github.com/user-attachments/assets/a818feb6-54b9-4e95-a903-012e4c85b4b8" />
