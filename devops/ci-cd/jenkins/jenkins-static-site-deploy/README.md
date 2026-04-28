@@ -409,6 +409,8 @@ The Global credentials page now listed both credentials:
 
 *Screenshot: Global credentials page listing both sarah-stapp01 SSH credential and gitea-sarah username/password credential*
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/d85789ce-dbc6-4048-8e81-ce3a32c9aa89" />
+
 ---
 
 ### Phase 7: Gitea Repository Verification
@@ -774,7 +776,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/d85789ce-dbc6-4048-8e81-ce3a32c9aa89" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/227feaca-032f-47da-a083-ddf150cd26af" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/5cb0a45e-974a-4758-ba29-4690522979e0" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/7975919f-d801-4baf-9c13-50146c4b68a1" />
