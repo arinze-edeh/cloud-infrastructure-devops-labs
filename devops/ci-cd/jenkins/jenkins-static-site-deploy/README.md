@@ -495,6 +495,8 @@ pipeline {
 
 *Screenshot: Pipeline configuration page showing the Groovy script with agent label stapp01, the Deploy stage, git step referencing gitea-sarah credential and the external Gitea URL, and the rsync shell command*
 
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/bcfee91d-65eb-43c9-9e31-83cf82b5c187" />
+
 **Step 8.3: Initial Job Status Page**
 
 After saving, the `xfusion-webapp-job` status page was displayed with no builds yet recorded and an empty Permalinks section.
@@ -784,7 +786,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/bcfee91d-65eb-43c9-9e31-83cf82b5c187" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/022c9b35-fd16-4080-a780-fdd0302ddcc7" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/8009108e-7a66-4deb-a382-2d99e8a6e178" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/2dbb6cd9-4608-46a8-bc5a-7b8854d91c70" />
