@@ -503,6 +503,8 @@ After saving, the `xfusion-webapp-job` status page was displayed with no builds 
 
 *Screenshot: xfusion-webapp-job status page showing no builds yet and empty Permalinks section*
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/022c9b35-fd16-4080-a780-fdd0302ddcc7" />
+
 The first build was triggered using **Build Now**.
 
 ---
@@ -786,7 +788,6 @@ Installing SSH Build Agents, Credentials, Pipeline, and Git together in one oper
 
 
 
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/022c9b35-fd16-4080-a780-fdd0302ddcc7" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/8009108e-7a66-4deb-a382-2d99e8a6e178" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/2dbb6cd9-4608-46a8-bc5a-7b8854d91c70" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/df47363f-1e7a-4d02-83ae-3ff62f06ca25" />
