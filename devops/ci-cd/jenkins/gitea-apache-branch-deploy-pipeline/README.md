@@ -355,6 +355,8 @@ sarah-stapp01  sarah/******  Sarah credentials for App Server 1
 
 Screenshot: Global credentials page showing sarah-stapp01 credential listed successfully
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c9fb9243-1c66-4466-8876-a1f5cf3c697c" />
+
 ---
 
 ### Phase 8: Registering App Server 1 as a Jenkins Slave Node
@@ -862,7 +864,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c9fb9243-1c66-4466-8876-a1f5cf3c697c" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/e2990525-61f7-4172-9557-2a902cf1047c" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/39ea895e-6870-44ed-8f83-054947d46a25" />
 <img width="1899" height="1018" alt="image" src="https://github.com/user-attachments/assets/55bfe741-2035-4d78-bca8-0bc3510919e4" />
@@ -887,22 +888,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/732073c3-9be7-4c90-a656-4ac0a811a43c" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/24734439-b829-4300-9706-1e5a0db0a66d" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/b5941096-95a0-4e6c-8dd9-cc0c06363676" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
