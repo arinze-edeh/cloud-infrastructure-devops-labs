@@ -546,11 +546,17 @@ Loading plugin extensions              - Success
 
 Screenshot: Pipeline plugin download progress page (part 1) showing first batch of dependencies installed successfully
 
+<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/82a83c27-ba10-470e-9d50-16280d33c068" />
+
 Screenshot: Pipeline plugin download progress page (part 2) showing remaining dependencies through Pipeline: Declarative and Pipeline all installed successfully
+
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/d92c25cd-88f1-448a-b875-34f6f7d3795e" />
 
 Jenkins was restarted after installation.
 
 Screenshot: Jenkins restarting page after Pipeline plugin installation
+
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/8e7a8415-9020-484a-8e03-3514ec8efb65" />
 
 ---
 
@@ -883,9 +889,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/82a83c27-ba10-470e-9d50-16280d33c068" />
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/d92c25cd-88f1-448a-b875-34f6f7d3795e" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/8e7a8415-9020-484a-8e03-3514ec8efb65" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/5aaee61d-bb2c-42a8-a37c-2d54f4da33b0" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/c58d9e3e-195f-4eb3-89a5-0ee6682f8d15" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/b0282ebd-b906-4a9d-82c7-0adcf66a0a4b" />
