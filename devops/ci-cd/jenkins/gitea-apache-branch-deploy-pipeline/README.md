@@ -278,9 +278,13 @@ bouncycastle API - Downloaded Successfully. Will be activated during the next bo
 
 Screenshot: Download progress page showing bouncycastle API downloaded successfully
 
+<img width="1918" height="1015" alt="image" src="https://github.com/user-attachments/assets/b71ec070-0854-4d1d-8b16-5325baff14f4" />
+
 Jenkins was restarted by checking **Restart Jenkins when installation is complete and no jobs are running**.
 
 Screenshot: Jenkins restarting page showing "Jenkins is restarting" spinner
+
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/33d775c3-c4f9-4392-a454-6f855479f0a7" />
 
 ---
 
@@ -855,8 +859,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1918" height="1015" alt="image" src="https://github.com/user-attachments/assets/b71ec070-0854-4d1d-8b16-5325baff14f4" />
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/33d775c3-c4f9-4392-a454-6f855479f0a7" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/a128a080-4d9d-4dc8-9f70-3f3f1dc967d9" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/ebdc0587-887b-48fa-b0c0-01f942cb48dc" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/7193bea5-1e95-4410-9979-780778720d2e" />
