@@ -163,6 +163,8 @@ Both `aws_iam_user.user` and `aws_iam_policy.policy` are present and tracked in 
 
 *Screenshot: Terminal output of cat main.tf showing the existing IAM user and policy resource blocks*
 
+<img width="1079" height="748" alt="image" src="https://github.com/user-attachments/assets/081a17b3-30af-4bde-a18c-d06c89206eba" />
+
 ---
 
 ### Step 3: Append the Policy Attachment Resource to main.tf
@@ -435,7 +437,9 @@ The following failure modes were anticipated and avoided through the approach ta
 * [Terraform Command: apply](https://developer.hashicorp.com/terraform/cli/commands/apply)
 
 
-<img width="1079" height="748" alt="image" src="https://github.com/user-attachments/assets/081a17b3-30af-4bde-a18c-d06c89206eba" />
+
+
+
 <img width="1079" height="557" alt="image" src="https://github.com/user-attachments/assets/bc9a55a1-d24c-480b-821b-6f593ad19dac" />
 <img width="1088" height="606" alt="image" src="https://github.com/user-attachments/assets/f68a967a-2289-44f5-93da-ae15b0e8523f" />
 <img width="1090" height="681" alt="image" src="https://github.com/user-attachments/assets/21578620-2f86-4e5c-a3ac-9a1838ceb98e" />
