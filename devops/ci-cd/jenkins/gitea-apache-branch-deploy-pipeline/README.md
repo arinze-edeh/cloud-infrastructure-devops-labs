@@ -589,6 +589,8 @@ The branch state was confirmed:
 
 Screenshot: Terminal showing git stash saving WIP, git status confirming clean working tree, and git branch showing feature as current branch
 
+<img width="1035" height="576" alt="image" src="https://github.com/user-attachments/assets/53c715a6-abef-4ba0-b8f3-dc96f54512b4" />
+
 ---
 
 ### Phase 14: Creating the devops-webapp-job Pipeline
@@ -596,6 +598,8 @@ Screenshot: Terminal showing git stash saving WIP, git status confirming clean w
 In the Jenkins UI, **New Item** was clicked. The item name was entered as `devops-webapp-job` and the type **Pipeline** was selected (not Multibranch Pipeline).
 
 Screenshot: New Item page with devops-webapp-job entered as item name and Pipeline type selected
+
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/5aaee61d-bb2c-42a8-a37c-2d54f4da33b0" />
 
 The **OK** button was clicked to open the job configuration.
 
@@ -888,14 +892,11 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-
-<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/5aaee61d-bb2c-42a8-a37c-2d54f4da33b0" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/c58d9e3e-195f-4eb3-89a5-0ee6682f8d15" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/b0282ebd-b906-4a9d-82c7-0adcf66a0a4b" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c2c72e7f-e220-4bf3-b095-ce23409a92fc" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/2a177628-0ced-4d71-8b43-c725d4c8cd6d" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/59e5266e-7ca5-4b9b-b7a8-c0b53ecb80cf" />
-<img width="1035" height="576" alt="image" src="https://github.com/user-attachments/assets/53c715a6-abef-4ba0-b8f3-dc96f54512b4" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/732073c3-9be7-4c90-a656-4ac0a811a43c" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/24734439-b829-4300-9706-1e5a0db0a66d" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/b5941096-95a0-4e6c-8dd9-cc0c06363676" />
