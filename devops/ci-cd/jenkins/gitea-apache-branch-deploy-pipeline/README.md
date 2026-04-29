@@ -517,6 +517,8 @@ The Plugin Manager was opened at **Available plugins** and searched for `pipelin
 
 Screenshot: Available plugins search for "pipeline" with the Pipeline plugin checked for installation
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/2f4f4bdd-cf8b-44d8-83ea-11f218b16b2f" />
+
 The download progress page confirmed successful installation of all Pipeline plugin dependencies:
 
 ```
@@ -881,9 +883,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/94d6c961-34f8-4b10-8ce7-44d9428b30a5" />
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/2f4f4bdd-cf8b-44d8-83ea-11f218b16b2f" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/82a83c27-ba10-470e-9d50-16280d33c068" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/d92c25cd-88f1-448a-b875-34f6f7d3795e" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/8e7a8415-9020-484a-8e03-3514ec8efb65" />
