@@ -850,16 +850,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1034" height="714" alt="image" src="https://github.com/user-attachments/assets/1fa3a959-1ba3-4d49-8d8f-f7f526ebef73" />
-<img width="1030" height="675" alt="image" src="https://github.com/user-attachments/assets/28033d22-0dda-4494-8bf0-9727e8ae4877" />
-<img width="1036" height="779" alt="image" src="https://github.com/user-attachments/assets/ca815c67-e323-4fb7-90db-a3dc170af67c" />
-
-<img width="1034" height="786" alt="image" src="https://github.com/user-attachments/assets/3d75f6e8-6aa0-4485-a3ba-db05b27fcb31" />
-<img width="1038" height="477" alt="image" src="https://github.com/user-attachments/assets/b4fa032c-81f0-49a8-8ccf-a8a55943f347" />
-
-<img width="1034" height="690" alt="image" src="https://github.com/user-attachments/assets/eb5f26b9-61c4-481a-afe2-374425a9f65b" />
-
-<img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/6083a6b2-f6ba-4759-90c8-d6742547928a" />
 
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/88cbee5a-b2ff-4569-bff2-080351fcf3e8" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/133f20aa-c19b-4625-882f-75876e9f473b" />
