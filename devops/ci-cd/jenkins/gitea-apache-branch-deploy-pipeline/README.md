@@ -297,6 +297,8 @@ After Jenkins came back online, the Plugin Manager was opened at **Available plu
 
 Screenshot: Available plugins search for "crede" with SSH Build Agents and Credentials checked
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/a128a080-4d9d-4dc8-9f70-3f3f1dc967d9" />
+
 The **Install** button was clicked. The download progress page showed all dependencies resolved and installed successfully:
 
 ```
@@ -859,7 +861,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/a128a080-4d9d-4dc8-9f70-3f3f1dc967d9" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/ebdc0587-887b-48fa-b0c0-01f942cb48dc" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/7193bea5-1e95-4410-9979-780778720d2e" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/ff34994c-6b77-4c67-957f-c52948aa9b76" />
