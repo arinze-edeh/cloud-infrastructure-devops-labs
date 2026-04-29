@@ -383,6 +383,8 @@ The **Create** button was clicked, opening the full node configuration form. The
 
 Screenshot: Node configuration form showing remote root directory /home/sarah/jenkins_agent, label stapp01, SSH launch method, host 10.244.73.162, and sarah credentials selected
 
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/39ea895e-6870-44ed-8f83-054947d46a25" />
+
 The **Save** button was clicked. Immediately after saving, the agent log showed the SSH connection establishing and the remote environment being enumerated. However, the agent appeared offline in the Build Executor Status panel.
 
 Screenshot: App Server 1 agent log showing SSH connection to 10.244.73.162:22 with successful authentication and remote environment dump
@@ -866,7 +868,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/39ea895e-6870-44ed-8f83-054947d46a25" />
 <img width="1899" height="1018" alt="image" src="https://github.com/user-attachments/assets/55bfe741-2035-4d78-bca8-0bc3510919e4" />
 <img width="1033" height="607" alt="image" src="https://github.com/user-attachments/assets/010ace13-a3f5-49b3-ab21-aa960a2aa175" />
 <img width="1035" height="644" alt="image" src="https://github.com/user-attachments/assets/2b6ba855-5238-404f-8bba-d1b8394e6472" />
