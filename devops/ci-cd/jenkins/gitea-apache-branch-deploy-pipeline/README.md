@@ -480,6 +480,8 @@ The configuration form also confirmed:
 
 Screenshot: Node configure page showing JavaPath explicitly set to the java-17-openjdk binary path under Advanced SSH settings
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/a9f75a49-fd93-4aea-8104-5dec61710d18" />
+
 **Save** was clicked.
 
 ---
@@ -876,7 +878,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/a9f75a49-fd93-4aea-8104-5dec61710d18" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/45c096af-e30c-40ad-b973-8cd36b0b3280" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/f4253150-89db-42db-bd79-71e2cff5aeec" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/94d6c961-34f8-4b10-8ce7-44d9428b30a5" />
