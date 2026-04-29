@@ -453,6 +453,8 @@ OpenJDK 64-Bit Server VM (Red_Hat-17.0.18.0.8-2) (build 17.0.18+8-LTS, mixed mod
 
 Screenshot: alternatives --config java showing two selections with java-17 set as active, followed by java -version confirming 17.0.18
 
+<img width="1036" height="749" alt="image" src="https://github.com/user-attachments/assets/43b27b47-ab21-479a-a393-6f8a50b31a5e" />
+
 ---
 
 ### Phase 10: Configuring the JavaPath on the Jenkins Agent Node
@@ -874,7 +876,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1036" height="749" alt="image" src="https://github.com/user-attachments/assets/43b27b47-ab21-479a-a393-6f8a50b31a5e" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/a9f75a49-fd93-4aea-8104-5dec61710d18" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/45c096af-e30c-40ad-b973-8cd36b0b3280" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/f4253150-89db-42db-bd79-71e2cff5aeec" />
