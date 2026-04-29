@@ -389,6 +389,8 @@ The **Save** button was clicked. Immediately after saving, the agent log showed 
 
 Screenshot: App Server 1 agent log showing SSH connection to 10.244.73.162:22 with successful authentication and remote environment dump
 
+<img width="1899" height="1018" alt="image" src="https://github.com/user-attachments/assets/55bfe741-2035-4d78-bca8-0bc3510919e4" />
+
 **Root Cause of Offline Status:** Jenkins attempted to launch the agent using the Java binary from the remote PATH. The system had Java 11 installed (`openjdk version "11.0.20.1"`), but Jenkins 2.541.2 requires Java 17 or later for agent processes.
 
 ---
@@ -871,8 +873,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-
-<img width="1899" height="1018" alt="image" src="https://github.com/user-attachments/assets/55bfe741-2035-4d78-bca8-0bc3510919e4" />
 
 <img width="1036" height="749" alt="image" src="https://github.com/user-attachments/assets/43b27b47-ab21-479a-a393-6f8a50b31a5e" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/a9f75a49-fd93-4aea-8104-5dec61710d18" />
