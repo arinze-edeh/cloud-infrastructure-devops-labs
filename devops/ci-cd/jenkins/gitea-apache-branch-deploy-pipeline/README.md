@@ -262,9 +262,13 @@ The Jenkins UI was accessed at the environment URL on port 8080. Login was perfo
 
 Screenshot: Jenkins Sign In page with admin credentials entered
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/88cbee5a-b2ff-4569-bff2-080351fcf3e8" />
+
 After login, the Plugin Manager was opened at **Manage Jenkins > Plugins > Updates**. The `bouncycastle API` plugin update was pending. It was selected and the **Update** button was clicked.
 
 Screenshot: Plugin Updates page showing bouncycastle API selected for update
+
+<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/133f20aa-c19b-4625-882f-75876e9f473b" />
 
 The download progress page confirmed:
 
@@ -851,8 +855,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/88cbee5a-b2ff-4569-bff2-080351fcf3e8" />
-<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/133f20aa-c19b-4625-882f-75876e9f473b" />
 <img width="1918" height="1015" alt="image" src="https://github.com/user-attachments/assets/b71ec070-0854-4d1d-8b16-5325baff14f4" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/33d775c3-c4f9-4392-a454-6f855479f0a7" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/a128a080-4d9d-4dc8-9f70-3f3f1dc967d9" />
