@@ -617,6 +617,8 @@ In the job configuration under **General**, the **This project is parameterized*
 
 Screenshot: Job configuration showing String Parameter named BRANCH with default value master and description "Branch to deploy (master or feature)"
 
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/c58d9e3e-195f-4eb3-89a5-0ee6682f8d15" />
+
 In the **Pipeline** section, **Definition** was set to **Pipeline script**. The following Declarative pipeline was entered in the script editor:
 
 ```groovy
@@ -651,6 +653,8 @@ pipeline {
 ```
 
 Screenshot: Pipeline script editor showing the conditional Deploy stage with master and feature branch logic targeting /var/www/html
+
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/b0282ebd-b906-4a9d-82c7-0adcf66a0a4b" />
 
 **Save** was clicked. The pipeline job status page appeared showing no builds yet.
 
@@ -892,8 +896,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/c58d9e3e-195f-4eb3-89a5-0ee6682f8d15" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/b0282ebd-b906-4a9d-82c7-0adcf66a0a4b" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c2c72e7f-e220-4bf3-b095-ce23409a92fc" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/2a177628-0ced-4d71-8b43-c725d4c8cd6d" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/59e5266e-7ca5-4b9b-b7a8-c0b53ecb80cf" />
