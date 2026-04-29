@@ -329,6 +329,8 @@ With the Credentials plugin active, the global credential store was opened at **
 
 Screenshot: Add Credentials modal showing three credential type options (Username with password, SSH Username with private key, Certificate)
 
+<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/ff34994c-6b77-4c67-957f-c52948aa9b76" />
+
 The credential type **Username with password** was selected and the **Next** button was clicked.
 
 The following values were entered:
@@ -342,6 +344,8 @@ The following values were entered:
 | Description | Sarah credentials for App Server 1 |
 
 Screenshot: Add Username with password form filled with sarah credentials and ID sarah-stapp01
+
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/297d4a5c-6ce7-40e0-acca-739a40ca48b4" />
 
 The **Create** button was clicked. The credential appeared in the global store:
 
@@ -858,8 +862,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/ff34994c-6b77-4c67-957f-c52948aa9b76" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/297d4a5c-6ce7-40e0-acca-739a40ca48b4" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c9fb9243-1c66-4466-8876-a1f5cf3c697c" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/e2990525-61f7-4172-9557-2a902cf1047c" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/39ea895e-6870-44ed-8f83-054947d46a25" />
