@@ -670,6 +670,8 @@ Screenshot: devops-webapp-job status page showing "No builds" with Build with Pa
 
 Screenshot: Build with Parameters page showing BRANCH parameter field pre-filled with "master"
 
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/2a177628-0ced-4d71-8b43-c725d4c8cd6d" />
+
 Build #1 completed with `Finished: FAILURE`. The console output revealed:
 
 ```
@@ -693,6 +695,8 @@ Finished: FAILURE
 ```
 
 Screenshot: Build #1 console output showing the git checkout master error about local changes that would be overwritten
+
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/59e5266e-7ca5-4b9b-b7a8-c0b53ecb80cf" />
 
 **Root Cause:** Although `git stash` was performed in Phase 13, the stash state may not have persisted, or the pipeline was triggered before the stash completed. The working tree still had uncommitted modifications on the `feature` branch that blocked the `git checkout master` operation.
 
@@ -898,8 +902,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/2a177628-0ced-4d71-8b43-c725d4c8cd6d" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/59e5266e-7ca5-4b9b-b7a8-c0b53ecb80cf" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/732073c3-9be7-4c90-a656-4ac0a811a43c" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/24734439-b829-4300-9706-1e5a0db0a66d" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/b5941096-95a0-4e6c-8dd9-cc0c06363676" />
