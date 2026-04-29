@@ -186,6 +186,8 @@ The resource references `aws_iam_user.user.name` and `aws_iam_policy.policy.arn`
 
 *Screenshot: Terminal showing the heredoc append command being executed against main.tf*
 
+<img width="1079" height="557" alt="image" src="https://github.com/user-attachments/assets/bc9a55a1-d24c-480b-821b-6f593ad19dac" />
+
 ---
 
 ### Step 4: Verify the Updated main.tf Configuration
@@ -233,6 +235,8 @@ resource "aws_iam_user_policy_attachment" "kirsty_policy_attachment" {
 
 *Screenshot: Terminal output of cat main.tf showing the complete configuration including the newly appended attachment block*
 
+<img width="1088" height="606" alt="image" src="https://github.com/user-attachments/assets/f68a967a-2289-44f5-93da-ae15b0e8523f" />
+
 ---
 
 ### Step 5: Validate the Terraform Configuration
@@ -250,6 +254,8 @@ Success! The configuration is valid.
 ```
 
 *Screenshot: Terminal output showing terraform validate returning Success! The configuration is valid.*
+
+<img width="1090" height="681" alt="image" src="https://github.com/user-attachments/assets/21578620-2f86-4e5c-a3ac-9a1838ceb98e" />
 
 ---
 
@@ -286,6 +292,8 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 Terraform correctly identifies the two pre-existing resources from state and determines that only the attachment resource requires creation. No destructive changes are planned.
 
 *Screenshot: Terminal output of terraform plan showing the single resource to be created with policy ARN and user name resolved*
+
+<img width="1092" height="532" alt="image" src="https://github.com/user-attachments/assets/7a343367-2df4-45b4-b80f-92ceca1df81c" />
 
 ---
 
@@ -327,6 +335,8 @@ The attachment resource was created successfully with a system-assigned ID of `i
 
 *Screenshot: Terminal output of terraform apply -auto-approve showing Apply complete! Resources: 1 added, 0 changed, 0 destroyed.*
 
+<img width="1083" height="566" alt="image" src="https://github.com/user-attachments/assets/b2a0470f-b6ea-4cb9-9e07-03419b935b3b" />
+
 ---
 
 ### Step 8: Confirm Policy Attachment via AWS CLI
@@ -353,6 +363,9 @@ aws iam list-attached-user-policies --user-name iamuser_kirsty
 The policy is confirmed attached to the user at the IAM level. The `PolicyArn` matches the ARN resolved during the Terraform apply.
 
 *Screenshot: Terminal output of aws iam list-attached-user-policies showing iampolicy_kirsty attached to iamuser_kirsty*
+
+<img width="1092" height="627" alt="image" src="https://github.com/user-attachments/assets/d8c91340-5923-437f-a1c6-a5e610479779" />
+
 
 ---
 
@@ -435,16 +448,3 @@ The following failure modes were anticipated and avoided through the approach ta
 * [Terraform Command: validate](https://developer.hashicorp.com/terraform/cli/commands/validate)
 * [Terraform Command: plan](https://developer.hashicorp.com/terraform/cli/commands/plan)
 * [Terraform Command: apply](https://developer.hashicorp.com/terraform/cli/commands/apply)
-
-
-
-
-
-<img width="1079" height="557" alt="image" src="https://github.com/user-attachments/assets/bc9a55a1-d24c-480b-821b-6f593ad19dac" />
-<img width="1088" height="606" alt="image" src="https://github.com/user-attachments/assets/f68a967a-2289-44f5-93da-ae15b0e8523f" />
-<img width="1090" height="681" alt="image" src="https://github.com/user-attachments/assets/21578620-2f86-4e5c-a3ac-9a1838ceb98e" />
-<img width="1092" height="532" alt="image" src="https://github.com/user-attachments/assets/7a343367-2df4-45b4-b80f-92ceca1df81c" />
-<img width="1083" height="566" alt="image" src="https://github.com/user-attachments/assets/b2a0470f-b6ea-4cb9-9e07-03419b935b3b" />
-<img width="1092" height="627" alt="image" src="https://github.com/user-attachments/assets/d8c91340-5923-437f-a1c6-a5e610479779" />
-
-
