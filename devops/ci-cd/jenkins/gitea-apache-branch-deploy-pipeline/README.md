@@ -313,9 +313,13 @@ Loading plugin extensions - Success
 
 Screenshot: Plugin download progress showing all credential and SSH agent plugins installed successfully
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/ebdc0587-887b-48fa-b0c0-01f942cb48dc" />
+
 Jenkins was restarted again by enabling the restart checkbox.
 
 Screenshot: Jenkins restarting page after credential and SSH agent plugin installation
+
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/7193bea5-1e95-4410-9979-780778720d2e" />
 
 ---
 
@@ -854,15 +858,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-
-
-
-
-
-
-
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/ebdc0587-887b-48fa-b0c0-01f942cb48dc" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/7193bea5-1e95-4410-9979-780778720d2e" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/ff34994c-6b77-4c67-957f-c52948aa9b76" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/297d4a5c-6ce7-40e0-acca-739a40ca48b4" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c9fb9243-1c66-4466-8876-a1f5cf3c697c" />
