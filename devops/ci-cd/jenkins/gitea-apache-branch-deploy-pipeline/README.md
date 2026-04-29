@@ -244,6 +244,8 @@ The server's IP address was retrieved for use in Jenkins node configuration:
 
 Screenshot: grep confirming Listen 8080 and hostname -I showing 10.244.73.162
 
+<img width="1035" height="713" alt="image" src="https://github.com/user-attachments/assets/8f17b1e2-1871-4fd8-a5f3-89baeb61ffae" />
+
 The first SSH session was then exited:
 
 ```bash
@@ -858,7 +860,7 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 <img width="1034" height="690" alt="image" src="https://github.com/user-attachments/assets/eb5f26b9-61c4-481a-afe2-374425a9f65b" />
 
 <img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/6083a6b2-f6ba-4759-90c8-d6742547928a" />
-<img width="1035" height="713" alt="image" src="https://github.com/user-attachments/assets/8f17b1e2-1871-4fd8-a5f3-89baeb61ffae" />
+
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/88cbee5a-b2ff-4569-bff2-080351fcf3e8" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/133f20aa-c19b-4625-882f-75876e9f473b" />
 <img width="1918" height="1015" alt="image" src="https://github.com/user-attachments/assets/b71ec070-0854-4d1d-8b16-5325baff14f4" />
