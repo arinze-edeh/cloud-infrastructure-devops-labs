@@ -197,6 +197,8 @@ origin  http://sarah:Sarah_pass123@gitea:3000/sarah/web_app.git (push)
 
 Screenshot: git remote -v and git branch -a output confirming origin URL and both local branches
 
+<img width="1038" height="658" alt="image" src="https://github.com/user-attachments/assets/fbcce9a9-8cc7-4fc5-ab2a-e8f5e6e04d89" />
+
 The `.git/config` confirmed the remote URL embeds credentials, and the local working copy was on the `feature` branch.
 
 The same safe directory and credential configuration was applied for the `sarah` user:
@@ -850,7 +852,7 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 <img width="1034" height="786" alt="image" src="https://github.com/user-attachments/assets/3d75f6e8-6aa0-4485-a3ba-db05b27fcb31" />
 <img width="1038" height="477" alt="image" src="https://github.com/user-attachments/assets/b4fa032c-81f0-49a8-8ccf-a8a55943f347" />
-<img width="1038" height="658" alt="image" src="https://github.com/user-attachments/assets/fbcce9a9-8cc7-4fc5-ab2a-e8f5e6e04d89" />
+
 <img width="1034" height="690" alt="image" src="https://github.com/user-attachments/assets/eb5f26b9-61c4-481a-afe2-374425a9f65b" />
 <img width="1029" height="823" alt="image" src="https://github.com/user-attachments/assets/a205afbe-a0e3-4fb8-9785-24c63f648375" />
 <img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/6083a6b2-f6ba-4759-90c8-d6742547928a" />
