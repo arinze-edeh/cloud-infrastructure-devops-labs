@@ -222,6 +222,8 @@ sudo -u sarah git -C /var/www/html branch -a
 
 Screenshot: sudo -u sarah git fetch and branch -a confirming both branches visible with correct tracking refs
 
+<img width="1029" height="823" alt="image" src="https://github.com/user-attachments/assets/a205afbe-a0e3-4fb8-9785-24c63f648375" />
+
 ---
 
 ### Phase 4: Confirming Apache Port and Host Network Identity
@@ -854,7 +856,7 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 <img width="1038" height="477" alt="image" src="https://github.com/user-attachments/assets/b4fa032c-81f0-49a8-8ccf-a8a55943f347" />
 
 <img width="1034" height="690" alt="image" src="https://github.com/user-attachments/assets/eb5f26b9-61c4-481a-afe2-374425a9f65b" />
-<img width="1029" height="823" alt="image" src="https://github.com/user-attachments/assets/a205afbe-a0e3-4fb8-9785-24c63f648375" />
+
 <img width="1030" height="862" alt="image" src="https://github.com/user-attachments/assets/6083a6b2-f6ba-4759-90c8-d6742547928a" />
 <img width="1035" height="713" alt="image" src="https://github.com/user-attachments/assets/8f17b1e2-1871-4fd8-a5f3-89baeb61ffae" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/88cbee5a-b2ff-4569-bff2-080351fcf3e8" />
