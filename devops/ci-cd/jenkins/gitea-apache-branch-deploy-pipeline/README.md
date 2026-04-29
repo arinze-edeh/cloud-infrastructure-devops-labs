@@ -87,6 +87,8 @@ thor@jumphost ~$ ssh tony@stapp01
 
 Screenshot: SSH connection from jumphost to stapp01 with host key acceptance
 
+<img width="1036" height="605" alt="image" src="https://github.com/user-attachments/assets/99531f59-0b08-40ad-bcaa-f455d0aa5438" />
+
 ```bash
 [tony@stapp01 ~]$ sudo mkdir -p /home/sarah/jenkins_agent
 sudo chown -R sarah:sarah /home/sarah/jenkins_agent
@@ -96,6 +98,8 @@ sudo chmod 755 /home/sarah/jenkins_agent
 The directory `/home/sarah/jenkins_agent` serves as the remote root for the Jenkins agent. Setting ownership to `sarah:sarah` ensures the Jenkins process, which authenticates as `sarah`, can write workspace files without privilege escalation.
 
 Screenshot: Creation of /home/sarah/jenkins_agent with correct ownership and permissions
+
+<img width="1034" height="608" alt="image" src="https://github.com/user-attachments/assets/c7f45f5a-64bc-41c7-af2b-117212a54f0d" />
 
 The pre-installed Java version was noted:
 
@@ -835,8 +839,7 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1036" height="605" alt="image" src="https://github.com/user-attachments/assets/99531f59-0b08-40ad-bcaa-f455d0aa5438" />
-<img width="1034" height="608" alt="image" src="https://github.com/user-attachments/assets/c7f45f5a-64bc-41c7-af2b-117212a54f0d" />
+
 <img width="1034" height="714" alt="image" src="https://github.com/user-attachments/assets/1fa3a959-1ba3-4d49-8d8f-f7f526ebef73" />
 <img width="1030" height="675" alt="image" src="https://github.com/user-attachments/assets/28033d22-0dda-4494-8bf0-9727e8ae4877" />
 <img width="1036" height="779" alt="image" src="https://github.com/user-attachments/assets/ca815c67-e323-4fb7-90db-a3dc170af67c" />
@@ -903,109 +906,3 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-
-
-
-SSHLauncher{host='10.244.73.162', port=22, credentialsId='sarah-stapp01', jvmOptions='', javaPath='', prefixStartSlaveCmd='', suffixStartSlaveCmd='', launchTimeoutSeconds=60, maxNumRetries=10, retryWaitTime=15, sshHostKeyVerificationStrategy=hudson.plugins.sshslaves.verifiers.NonVerifyingKeyVerificationStrategy, tcpNoDelay=true, trackCredentials=true}
-[04/29/26 02:39:45] [SSH] Opening SSH connection to 10.244.73.162:22.
-[04/29/26 02:39:45] [SSH] WARNING: SSH Host Keys are not being verified. Man-in-the-middle attacks may be possible against this connection.
-[04/29/26 02:39:45] [SSH] Authentication successful.
-[04/29/26 02:39:45] [SSH] The remote user's environment is:
-BASH=/usr/bin/bash
-BASHOPTS=checkwinsize:cmdhist:complete_fullquote:extquote:force_fignore:globasciiranges:hostcomplete:interactive_comments:progcomp:promptvars:sourcepath
-BASHRCSOURCED=Y
-BASH_ALIASES=()
-BASH_ARGC=([0]="0")
-BASH_ARGV=()
-BASH_CMDS=()
-BASH_EXECUTION_STRING=set
-BASH_LINENO=()
-BASH_REMATCH=()
-BASH_SOURCE=()
-BASH_VERSINFO=([0]="5" [1]="1" [2]="8" [3]="1" [4]="release" [5]="x86_64-redhat-linux-gnu")
-BASH_VERSION='5.1.8(1)-release'
-DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1007/bus
-DIRSTACK=()
-EUID=1007
-GROUPS=()
-HOME=/home/sarah
-HOSTNAME=stapp01
-HOSTTYPE=x86_64
-IFS=$' \t\n'
-LANG=C.utf8
-LESSOPEN='||/usr/bin/lesspipe.sh %s'
-LOGNAME=sarah
-MACHTYPE=x86_64-redhat-linux-gnu
-MOTD_SHOWN=pam
-OPTERR=1
-OPTIND=1
-OSTYPE=linux-gnu
-PATH=/home/sarah/.local/bin:/home/sarah/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
-PIPESTATUS=([0]="0")
-PPID=5688
-PS4='+ '
-PWD=/home/sarah
-SHELL=/bin/bash
-SHELLNAME=bash
-SHELLOPTS=braceexpand:hashall:interactive-comments
-SHLVL=1
-SSH_CLIENT='10.244.234.238 50576 22'
-SSH_CONNECTION='10.244.234.238 50576 10.244.73.162 22'
-TERM=dumb
-UID=1007
-USER=sarah
-XDG_DATA_DIRS=/home/sarah/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
-XDG_RUNTIME_DIR=/run/user/1007
-XDG_SESSION_CLASS=user
-XDG_SESSION_ID=436531
-XDG_SESSION_TYPE=tty
-_=rc
-new_dirs=/home/sarah/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share
-which_declare='declare -f'
-which_opt=-f
-gawklibpath_append () 
-{ 
-    [ -z "$AWKLIBPATH" ] && AWKLIBPATH=`gawk 'BEGIN {print ENVIRON["AWKLIBPATH"]}'`;
-    export AWKLIBPATH="$AWKLIBPATH:$*"
-}
-gawklibpath_default () 
-{ 
-    unset AWKLIBPATH;
-    export AWKLIBPATH=`gawk 'BEGIN {print ENVIRON["AWKLIBPATH"]}'`
-}
-gawklibpath_prepend () 
-{ 
-    [ -z "$AWKLIBPATH" ] && AWKLIBPATH=`gawk 'BEGIN {print ENVIRON["AWKLIBPATH"]}'`;
-    export AWKLIBPATH="$*:$AWKLIBPATH"
-}
-gawkpath_append () 
-{ 
-    [ -z "$AWKPATH" ] && AWKPATH=`gawk 'BEGIN {print ENVIRON["AWKPATH"]}'`;
-    export AWKPATH="$AWKPATH:$*"
-}
-gawkpath_default () 
-{ 
-    unset AWKPATH;
-    export AWKPATH=`gawk 'BEGIN {print ENVIRON["AWKPATH"]}'`
-}
-gawkpath_prepend () 
-{ 
-    [ -z "$AWKPATH" ] && AWKPATH=`gawk 'BEGIN {print ENVIRON["AWKPATH"]}'`;
-    export AWKPATH="$*:$AWKPATH"
-}
-which () 
-{ 
-    ( alias;
-    eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
-}
-[04/29/26 02:39:45] [SSH] Starting sftp client.
-[04/29/26 02:39:45] [SSH] Copying latest remoting.jar...
-Source agent hash is 2EC718000BE952A7E80F64AB21AEF921. Installed agent hash is 2EC718000BE952A7E80F64AB21AEF921
-Verified agent jar. No update is necessary.
-Expanded the channel window size to 4MB
-[04/29/26 02:39:45] [SSH] Starting agent process: cd "/home/sarah/jenkins_agent" && java  -jar remoting.jar -workDir /home/sarah/jenkins_agent -jar-cache /home/sarah/jenkins_agent/remoting/jarCache
-Error: LinkageError occurred while loading main class hudson.remoting.Launcher
-	java.lang.UnsupportedClassVersionError: hudson/remoting/Launcher has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
-Agent JVM has terminated. Exit code=1
-[04/29/26 02:39:45] Launch failed - cleaning up connection
-[04/29/26 02:39:45] [SSH] Connection closed.
