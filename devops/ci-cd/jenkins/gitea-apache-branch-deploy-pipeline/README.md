@@ -416,7 +416,11 @@ Total download: 45 MB.
 
 Screenshot: yum install java-17-openjdk output showing download progress for two packages at 33 MB/s
 
+<img width="1033" height="607" alt="image" src="https://github.com/user-attachments/assets/010ace13-a3f5-49b3-ab21-aa960a2aa175" />
+
 Screenshot: yum transaction output confirming java-17-openjdk and java-17-openjdk-headless installed successfully with "Complete!"
+
+<img width="1035" height="644" alt="image" src="https://github.com/user-attachments/assets/2b6ba855-5238-404f-8bba-d1b8394e6472" />
 
 The Java binary path was verified:
 
@@ -869,8 +873,7 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 <img width="1899" height="1018" alt="image" src="https://github.com/user-attachments/assets/55bfe741-2035-4d78-bca8-0bc3510919e4" />
-<img width="1033" height="607" alt="image" src="https://github.com/user-attachments/assets/010ace13-a3f5-49b3-ab21-aa960a2aa175" />
-<img width="1035" height="644" alt="image" src="https://github.com/user-attachments/assets/2b6ba855-5238-404f-8bba-d1b8394e6472" />
+
 <img width="1036" height="749" alt="image" src="https://github.com/user-attachments/assets/43b27b47-ab21-479a-a393-6f8a50b31a5e" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/a9f75a49-fd93-4aea-8104-5dec61710d18" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/45c096af-e30c-40ad-b973-8cd36b0b3280" />
