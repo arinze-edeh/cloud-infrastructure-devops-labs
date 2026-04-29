@@ -117,6 +117,8 @@ ls -la
 
 *Screenshot: Directory listing showing all Terraform project files in /home/bob/terraform*
 
+<img width="1083" height="544" alt="image" src="https://github.com/user-attachments/assets/28b3f934-28fb-4c00-9129-0074e5c5ff15" />
+
 ---
 
 ### Step 2: Review the Existing main.tf Configuration
@@ -433,7 +435,6 @@ The following failure modes were anticipated and avoided through the approach ta
 * [Terraform Command: apply](https://developer.hashicorp.com/terraform/cli/commands/apply)
 
 
-<img width="1083" height="544" alt="image" src="https://github.com/user-attachments/assets/28b3f934-28fb-4c00-9129-0074e5c5ff15" />
 <img width="1079" height="748" alt="image" src="https://github.com/user-attachments/assets/081a17b3-30af-4bde-a18c-d06c89206eba" />
 <img width="1079" height="557" alt="image" src="https://github.com/user-attachments/assets/bc9a55a1-d24c-480b-821b-6f593ad19dac" />
 <img width="1088" height="606" alt="image" src="https://github.com/user-attachments/assets/f68a967a-2289-44f5-93da-ae15b0e8523f" />
