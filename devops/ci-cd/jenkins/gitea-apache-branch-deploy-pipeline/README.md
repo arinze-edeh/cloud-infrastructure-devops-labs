@@ -660,6 +660,8 @@ Screenshot: Pipeline script editor showing the conditional Deploy stage with mas
 
 Screenshot: devops-webapp-job status page showing "No builds" with Build with Parameters and Configure options in the sidebar
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c2c72e7f-e220-4bf3-b095-ce23409a92fc" />
+
 ---
 
 ### Phase 16: Build 1 Failure and Diagnosis
@@ -896,7 +898,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c2c72e7f-e220-4bf3-b095-ce23409a92fc" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/2a177628-0ced-4d71-8b43-c725d4c8cd6d" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/59e5266e-7ca5-4b9b-b7a8-c0b53ecb80cf" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/732073c3-9be7-4c90-a656-4ac0a811a43c" />
