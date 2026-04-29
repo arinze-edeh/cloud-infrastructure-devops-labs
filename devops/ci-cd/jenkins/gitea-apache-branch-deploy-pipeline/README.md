@@ -156,6 +156,8 @@ httpd.service - The Apache HTTP Server
 
 Screenshot: systemctl status httpd showing active (running) state with PID 1277
 
+<img width="1036" height="864" alt="image" src="https://github.com/user-attachments/assets/15f13839-fa60-4362-9820-372e2fa09926" />
+
 ---
 
 ### Phase 3: Resolving Git Safe Directory and Inspecting Repository
@@ -846,7 +848,6 @@ On a brand-new parameterized pipeline job, Jenkins does not expose the `Build wi
 <img width="1030" height="675" alt="image" src="https://github.com/user-attachments/assets/28033d22-0dda-4494-8bf0-9727e8ae4877" />
 <img width="1036" height="779" alt="image" src="https://github.com/user-attachments/assets/ca815c67-e323-4fb7-90db-a3dc170af67c" />
 
-<img width="1036" height="864" alt="image" src="https://github.com/user-attachments/assets/15f13839-fa60-4362-9820-372e2fa09926" />
 <img width="1034" height="786" alt="image" src="https://github.com/user-attachments/assets/3d75f6e8-6aa0-4485-a3ba-db05b27fcb31" />
 <img width="1038" height="477" alt="image" src="https://github.com/user-attachments/assets/b4fa032c-81f0-49a8-8ccf-a8a55943f347" />
 <img width="1038" height="658" alt="image" src="https://github.com/user-attachments/assets/fbcce9a9-8cc7-4fc5-ab2a-e8f5e6e04d89" />
