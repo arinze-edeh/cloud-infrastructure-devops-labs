@@ -204,6 +204,8 @@ Output confirms `DocumentRoot "/var/www/html"`.
 
 Screenshot: Terminal showing chown, rm, and DocumentRoot grep commands with confirmed output
 
+<img width="1032" height="556" alt="image" src="https://github.com/user-attachments/assets/10b3b31c-ba22-43da-9c48-75a8f7823929" />
+
 Navigate to the cloned repository and verify the Git remote is correctly pointing to Gitea. Then write the initial content to `index.html` and confirm it:
 
 ```bash
@@ -218,6 +220,8 @@ cat index.html
 ```
 
 Screenshot: Terminal showing git remote -v output with Gitea origin URLs, echo command to index.html, and cat confirming content
+
+<img width="1032" height="581" alt="image" src="https://github.com/user-attachments/assets/5ca547f0-f1d3-4018-a5d4-81f9735a395b" />
 
 Verify `httpd` is active and running:
 
@@ -628,12 +632,6 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 
-
-
-
-
-<img width="1032" height="556" alt="image" src="https://github.com/user-attachments/assets/10b3b31c-ba22-43da-9c48-75a8f7823929" />
-<img width="1032" height="581" alt="image" src="https://github.com/user-attachments/assets/5ca547f0-f1d3-4018-a5d4-81f9735a395b" />
 <img width="1043" height="308" alt="image" src="https://github.com/user-attachments/assets/a54ad86a-445d-4f0b-878b-56640525b88d" />
 <img width="1040" height="498" alt="image" src="https://github.com/user-attachments/assets/c9f5ad90-c3ca-49b1-8115-64f6baf7b8b6" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/36164506-e0f9-48bb-8aa8-201b3a66df35" />
