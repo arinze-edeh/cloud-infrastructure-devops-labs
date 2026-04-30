@@ -519,6 +519,8 @@ sudo rm -rf /home/sarah/web-tmp
 
 Screenshot: Jenkins Build Steps configuration showing the updated Exec command with cp -r and find for .git cleanup, remote directory /home/sarah/web-tmp, and source files **\/*
 
+<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/81ce317f-3f84-4f67-8f3f-e38a2622b511" />
+
 Save the updated configuration.
 
 ---
@@ -676,7 +678,6 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 
-<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/81ce317f-3f84-4f67-8f3f-e38a2622b511" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/98ec4cfc-a3ce-4d64-bff4-5297edafd914" />
 <img width="1032" height="447" alt="image" src="https://github.com/user-attachments/assets/ea13ba50-a1a7-45e9-9a8c-ab27e4082fa3" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/965ac60e-dc8f-460a-89ad-abc452efa645" />
