@@ -266,13 +266,19 @@ Configure the global SSH server entry that Jenkins will use to connect to App Se
 
 Screenshot: Jenkins System configuration page showing Publish over SSH section with SSH Server name "appserver1", hostname "stapp01", username "sarah", and remote directory "/"
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/36164506-e0f9-48bb-8aa8-201b3a66df35" />
+
 Expand the **Advanced** section within the SSH Server configuration. Enable **"Use password authentication, or use a different key"** and enter sarah's password in the **Passphrase / Password** field. Set the port to `22` and the timeout to `300000` ms.
 
 Screenshot: Jenkins SSH Server Advanced section showing password authentication enabled with password filled, port 22, and timeout 300000
 
+<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/ab14d682-0c1c-4d58-92e3-58b458a01a83" />
+
 Click **Test Configuration**. The result displays **Success** at the bottom left of the SSH server configuration block, confirming Jenkins can authenticate to `stapp01` as `sarah`.
 
 Screenshot: Jenkins SSH server configuration showing "Success" test result with port 22, timeout 300000, and proxy settings visible
+
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6d10bdc8-9f3d-414e-8e38-2c13c629643d" />
 
 ---
 
@@ -634,11 +640,10 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 
-<img width="1043" height="308" alt="image" src="https://github.com/user-attachments/assets/a54ad86a-445d-4f0b-878b-56640525b88d" />
 
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/36164506-e0f9-48bb-8aa8-201b3a66df35" />
-<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/ab14d682-0c1c-4d58-92e3-58b458a01a83" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6d10bdc8-9f3d-414e-8e38-2c13c629643d" />
+
+
+
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/773e5140-b608-4c34-a5d3-9aec9c9aba9e" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a618934d-782f-46c6-b324-7afe04eb2cf8" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/f4d42d8c-c122-48fe-b556-f1474ccd8388" />
