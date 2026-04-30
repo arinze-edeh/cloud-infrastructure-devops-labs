@@ -455,6 +455,8 @@ Return to Jenkins. The `xfusion-app-deployment` job shows build **#1** completed
 
 Screenshot: Jenkins job status page showing xfusion-app-deployment with green success icon, build #1 at 4:10 AM, and Permalinks section populated
 
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/25b57d4e-4b3d-4238-8cf6-0118af2fb554" />
+
 Open the **Console Output** for build #2 (triggered by the SCM change detection after the git push). The console confirms the full build lifecycle:
 
 ```
@@ -669,8 +671,6 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 
-
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/25b57d4e-4b3d-4238-8cf6-0118af2fb554" />
 
 <img width="1039" height="737" alt="image" src="https://github.com/user-attachments/assets/384b6a91-26b6-4305-9e6a-bd4a48318289" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/47dc4f42-d7f4-48ce-b272-32147843f535" />
