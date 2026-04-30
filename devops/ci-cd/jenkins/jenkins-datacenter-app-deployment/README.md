@@ -247,6 +247,8 @@ ls -la /var/www/html/
 
 Screenshot: Terminal showing httpd active status, curl output returning the default test page, git remote -v, echo to index.html, and empty /var/www/html listing
 
+<img width="1040" height="498" alt="image" src="https://github.com/user-attachments/assets/c9f5ad90-c3ca-49b1-8115-64f6baf7b8b6" />
+
 ---
 
 ### Phase 4: Configuring Publish Over SSH in Jenkins System Settings
@@ -633,7 +635,7 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 <img width="1043" height="308" alt="image" src="https://github.com/user-attachments/assets/a54ad86a-445d-4f0b-878b-56640525b88d" />
-<img width="1040" height="498" alt="image" src="https://github.com/user-attachments/assets/c9f5ad90-c3ca-49b1-8115-64f6baf7b8b6" />
+
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/36164506-e0f9-48bb-8aa8-201b3a66df35" />
 <img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/ab14d682-0c1c-4d58-92e3-58b458a01a83" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6d10bdc8-9f3d-414e-8e38-2c13c629643d" />
