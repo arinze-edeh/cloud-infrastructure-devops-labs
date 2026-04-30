@@ -1,4 +1,4 @@
-# [Provisioning Azure Virtual Machines via CLI: Infrastructure-as-Command Automation](https://github.com/arinze-edeh/cloud-infrastructure-devops-labs)
+# Provisioning Azure Virtual Machines via CLI: Infrastructure-as-Command Automation
 
 > Deploying a production-ready Ubuntu VM on Microsoft Azure using only the Azure CLI — no portal, no GUI, full automation.
 
