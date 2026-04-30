@@ -574,6 +574,8 @@ The Jenkins job status page shows three successful builds: **#3** at 4:22 AM, **
 
 Screenshot: Jenkins job status page for xfusion-app-deployment showing builds #1, #2, and #3 all with green success icons and their respective timestamps
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/98ec4cfc-a3ce-4d64-bff4-5297edafd914" />
+
 The **Console Output** for build **#3** (started by admin via manual trigger for validation) mirrors the same successful execution path as build #2, confirming repeatable behavior:
 
 ```
@@ -591,6 +593,8 @@ Finished: SUCCESS
 ```
 
 Screenshot: Jenkins Console Output for build #3 showing admin-triggered build with same successful SSH transfer and exec flow, Finished: SUCCESS
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/965ac60e-dc8f-460a-89ad-abc452efa645" />
 
 ---
 
@@ -671,32 +675,3 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 * **Clearing the staging directory after deployment prevents state accumulation.** If the `sudo rm -rf /home/sarah/web-tmp` step is omitted, subsequent builds append to an existing staging directory rather than starting clean, which can cause old files from previous commits to persist in the web root if they were deleted from the repository.
 
 * **The `sarah` sudoers entry must exist before the first Jenkins build attempts to run privileged commands.** If the sudoers entry is missing, the `sudo systemctl restart httpd` and `sudo chown` commands in the Exec script will fail with a permission denied error even though Jenkins connected successfully via SSH. Pre-staging the sudoers configuration on the target server is a prerequisite step that must be completed before the Jenkins job is saved and triggered.
-
-
-
-
-
-
-
-
-
-
-
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/98ec4cfc-a3ce-4d64-bff4-5297edafd914" />
-
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/965ac60e-dc8f-460a-89ad-abc452efa645" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
