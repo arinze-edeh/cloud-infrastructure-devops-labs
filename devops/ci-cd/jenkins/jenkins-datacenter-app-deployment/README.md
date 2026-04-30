@@ -173,6 +173,8 @@ Enter sarah's password when prompted by `sudo`. The sudoers entry is echoed back
 
 Screenshot: Terminal showing the sudoers echo command execution, sudo lecture text, password prompt, and the written sudoers line confirmed
 
+<img width="1031" height="579" alt="image" src="https://github.com/user-attachments/assets/3191d2de-2523-415b-a3e4-67cbc6525557" />
+
 Start the `httpd` service and enable it to survive reboots:
 
 ```bash
@@ -181,6 +183,8 @@ sudo systemctl enable httpd
 ```
 
 Screenshot: Terminal showing httpd start and enable commands executed without errors
+
+<img width="1032" height="694" alt="image" src="https://github.com/user-attachments/assets/1a461ed4-5e55-4ba8-be8e-a1e76871393f" />
 
 Take ownership of the web root directory and clear any pre-existing content so Jenkins has a clean target to deploy into. Also remove any stale `.git` metadata from the web root:
 
@@ -628,8 +632,6 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 
-<img width="1031" height="579" alt="image" src="https://github.com/user-attachments/assets/3191d2de-2523-415b-a3e4-67cbc6525557" />
-<img width="1032" height="694" alt="image" src="https://github.com/user-attachments/assets/1a461ed4-5e55-4ba8-be8e-a1e76871393f" />
 <img width="1032" height="556" alt="image" src="https://github.com/user-attachments/assets/10b3b31c-ba22-43da-9c48-75a8f7823929" />
 <img width="1032" height="581" alt="image" src="https://github.com/user-attachments/assets/5ca547f0-f1d3-4018-a5d4-81f9735a395b" />
 <img width="1043" height="308" alt="image" src="https://github.com/user-attachments/assets/a54ad86a-445d-4f0b-878b-56640525b88d" />
