@@ -161,6 +161,8 @@ thor@jumphost ~$ ssh sarah@stapp01
 
 Screenshot: Terminal showing successful SSH from jump host to stapp01 as sarah, including host key acceptance and last login timestamp
 
+<img width="1038" height="471" alt="image" src="https://github.com/user-attachments/assets/45295fd9-fc63-4dde-a46c-3c7ff48f568f" />
+
 Once on `stapp01`, grant `sarah` passwordless sudo access by writing an entry to `/etc/sudoers.d/sarah`. This is required so Jenkins can execute privileged deployment commands (chown, rsync, systemctl) as `sarah` without an interactive password prompt:
 
 ```bash
@@ -622,7 +624,10 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 
-<img width="1038" height="471" alt="image" src="https://github.com/user-attachments/assets/45295fd9-fc63-4dde-a46c-3c7ff48f568f" />
+
+
+
+
 <img width="1031" height="579" alt="image" src="https://github.com/user-attachments/assets/3191d2de-2523-415b-a3e4-67cbc6525557" />
 <img width="1032" height="694" alt="image" src="https://github.com/user-attachments/assets/1a461ed4-5e55-4ba8-be8e-a1e76871393f" />
 <img width="1032" height="556" alt="image" src="https://github.com/user-attachments/assets/10b3b31c-ba22-43da-9c48-75a8f7823929" />
