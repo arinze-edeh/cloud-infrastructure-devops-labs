@@ -93,17 +93,25 @@ Navigate to the Jenkins UI on port 8080 and sign in using:
 
 Screenshot: Jenkins login page with admin credentials entered
 
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/13361c8b-68be-4ed8-a4c2-fddf74ff5c92" />
+
 After login, navigate to **Manage Jenkins > Plugins > Updates**. One pending update is present: the **bouncycastle API** plugin (version 2.30.1.84). Select it and click **Update**.
 
 Screenshot: Jenkins Plugin Manager showing bouncycastle API update available with health score 97
+
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/7e565f37-3bfc-4805-83dc-fb76c87b205c" />
 
 On the Download progress page, the bouncycastle API plugin downloads successfully with the message: *"Downloaded Successfully. Will be activated during the next boot."* Enable the checkbox **"Restart Jenkins when installation is complete and no jobs are running"** to apply the update cleanly.
 
 Screenshot: Plugin download progress page showing bouncycastle API downloaded successfully
 
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/f154f52d-8d3e-4754-ae87-faabbce2e83e" />
+
 Jenkins displays its restarting screen. Wait for the browser to reload automatically before proceeding.
 
 Screenshot: Jenkins restarting screen with "Jenkins is restarting" spinner
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a8e58492-f85f-40a5-8778-3a5ba659405e" />
 
 ---
 
@@ -606,10 +614,6 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/13361c8b-68be-4ed8-a4c2-fddf74ff5c92" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/7e565f37-3bfc-4805-83dc-fb76c87b205c" />
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/f154f52d-8d3e-4754-ae87-faabbce2e83e" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a8e58492-f85f-40a5-8778-3a5ba659405e" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/6fb269db-a29c-4cdd-9b43-58419553b97a" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/4a5c89d0-eb04-4f18-9765-5270f387ec6c" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/42a8d3d4-9db1-4dc3-a60e-33747b72ab4d" />
