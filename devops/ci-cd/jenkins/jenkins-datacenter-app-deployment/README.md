@@ -584,6 +584,8 @@ The content is served directly at the root URL with no subdirectory path, confir
 
 Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcome to the xFusionCorp Industries" at the root path with no subdirectory
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/4a46c962-b11e-4e70-9c2d-55678543b9a8" />
+
 ---
 
 ## Errors Encountered and Resolutions
@@ -672,7 +674,7 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/547ae8e6-1ce2-4efa-a470-744fe60c9a43" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/7a5bcaa4-ef58-4079-aa87-5fe175b4af00" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/020f4cf6-013e-4848-aba2-bb93865259fc" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/4a46c962-b11e-4e70-9c2d-55678543b9a8" />
+
 
 
 
