@@ -226,6 +226,8 @@ Success! The configuration is valid, but there were some validation warnings as 
 
 > Screenshot: `terraform validate` output confirming configuration validity with the `acl` deprecation warning
 
+<img width="1043" height="769" alt="image" src="https://github.com/user-attachments/assets/b1029454-0935-4ae6-bb02-31ff12362fa1" />
+
 ---
 
 ### Phase 4: Plan the Infrastructure Changes
@@ -395,7 +397,6 @@ Running `aws s3api get-bucket-versioning` after apply treats the AWS API as the 
 
 
 
-<img width="1043" height="769" alt="image" src="https://github.com/user-attachments/assets/b1029454-0935-4ae6-bb02-31ff12362fa1" />
 <img width="1049" height="767" alt="image" src="https://github.com/user-attachments/assets/322dda7b-299f-46f9-9a44-38e29295fa31" />
 <img width="1073" height="699" alt="image" src="https://github.com/user-attachments/assets/49aa3293-c90c-4873-8970-5c1f765eed52" />
 <img width="1033" height="321" alt="image" src="https://github.com/user-attachments/assets/7b89a6dc-b2be-41e3-b166-4503446caf63" />
