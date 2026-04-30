@@ -482,6 +482,8 @@ Finished: SUCCESS
 
 Screenshot: Jenkins Console Output for build #2 showing SCM-triggered build, git fetch operations, SSH connection to appserver1, file transfer, exec completion, and Finished: SUCCESS
 
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/47dc4f42-d7f4-48ce-b272-32147843f535" />
+
 ---
 
 ### Phase 14: Diagnosing Initial Deployment Gap and Refining the Exec Command
@@ -498,6 +500,8 @@ curl -s http://localhost:8080 | (head -10; echo "---"; tail -10)
 ```
 
 Screenshot: Terminal showing ls -la /var/www/html showing empty directory, cat failing with no such file, and curl returning the default test page with DOCTYPE and HTML structure
+
+<img width="1039" height="737" alt="image" src="https://github.com/user-attachments/assets/384b6a91-26b6-4305-9e6a-bd4a48318289" />
 
 **Root cause:** The initial Exec command used `rsync` with a source path that did not correctly resolve relative to where Jenkins places the transferred files, or the `rsync` exclude pattern was not properly removing the `.git` directory before copying. The exec command was revised.
 
@@ -672,8 +676,6 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 
-<img width="1039" height="737" alt="image" src="https://github.com/user-attachments/assets/384b6a91-26b6-4305-9e6a-bd4a48318289" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/47dc4f42-d7f4-48ce-b272-32147843f535" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/81ce317f-3f84-4f67-8f3f-e38a2622b511" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/98ec4cfc-a3ce-4d64-bff4-5297edafd914" />
 <img width="1032" height="447" alt="image" src="https://github.com/user-attachments/assets/ea13ba50-a1a7-45e9-9a8c-ab27e4082fa3" />
