@@ -26,7 +26,7 @@
 
 ## Overview
 
-This project documents the end-to-end provisioning of a Microsoft Azure Virtual Machine using exclusively the **Azure CLI** (`az`). The entire workflow — from environment validation to VM state confirmation — is executed programmatically, demonstrating reproducible, auditable infrastructure deployment without any reliance on the Azure Portal.
+This project documents the end-to-end provisioning of a Microsoft Azure Virtual Machine using exclusively the **Azure CLI** (`az`). The entire workflow, from environment validation to VM state confirmation, is executed programmatically, demonstrating reproducible, auditable infrastructure deployment without any reliance on the Azure Portal.
 
 This approach aligns with modern infrastructure engineering standards: scripted, version-controllable, and portable across environments.
 
