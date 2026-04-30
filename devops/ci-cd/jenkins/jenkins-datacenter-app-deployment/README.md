@@ -288,6 +288,8 @@ From the Jenkins dashboard, click **New Item**. Enter the job name `xfusion-app-
 
 Screenshot: Jenkins New Item page showing "xfusion-app-deployment" typed in the name field with Freestyle project selected
 
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/773e5140-b608-4c34-a5d3-9aec9c9aba9e" />
+
 ---
 
 ### Phase 6: Configuring Source Code Management
@@ -644,7 +646,8 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/773e5140-b608-4c34-a5d3-9aec9c9aba9e" />
+
+
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a618934d-782f-46c6-b324-7afe04eb2cf8" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/f4d42d8c-c122-48fe-b556-f1474ccd8388" />
 <img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/73072262-56e6-48a0-aa88-c6061aef9b76" />
