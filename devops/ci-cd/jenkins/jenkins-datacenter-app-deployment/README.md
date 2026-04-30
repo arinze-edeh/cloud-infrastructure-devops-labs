@@ -307,6 +307,8 @@ Configure the repository:
 
 Screenshot: Jenkins job SCM configuration showing Git selected, repository URL with embedded credentials, and branch specifier set to */master
 
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a618934d-782f-46c6-b324-7afe04eb2cf8" />
+
 ---
 
 ### Phase 7: Configuring Build Triggers
@@ -318,6 +320,8 @@ In the **Triggers** section of the job configuration, enable two complementary t
 **Poll SCM:** Enable this with a schedule of `* * * * *` (every minute). This acts as a safety net, ensuring Jenkins picks up changes even if the webhook delivery fails. Jenkins displays an advisory warning that polling every minute is aggressive and suggests `H * * * *` for hourly polling, but the every-minute schedule is intentional here for near-real-time responsiveness.
 
 Screenshot: Jenkins job Triggers section showing "Trigger builds remotely" enabled with token, and Poll SCM enabled with "* * * * *" schedule and the advisory warning visible
+
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/f4d42d8c-c122-48fe-b556-f1474ccd8388" />
 
 ---
 
@@ -346,6 +350,8 @@ sudo rm -rf /home/sarah/web-tmp
 ```
 
 Screenshot: Jenkins Build Steps configuration showing SSH Publisher with server "appserver1", source files **\/*, remote directory /home/sarah/web-tmp, and the full exec command entered in the Exec command field
+
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/73072262-56e6-48a0-aa88-c6061aef9b76" />
 
 ---
 
@@ -648,9 +654,6 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/a618934d-782f-46c6-b324-7afe04eb2cf8" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/f4d42d8c-c122-48fe-b556-f1474ccd8388" />
-<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/73072262-56e6-48a0-aa88-c6061aef9b76" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/1d62700a-80d3-4bdb-a0cc-7a2b6035d56a" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/25b57d4e-4b3d-4238-8cf6-0118af2fb554" />
 <img width="1032" height="799" alt="image" src="https://github.com/user-attachments/assets/f6696d44-b746-42d7-a5c3-fe3ae7ceaff0" />
