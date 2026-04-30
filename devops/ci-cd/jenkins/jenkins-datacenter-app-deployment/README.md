@@ -407,11 +407,17 @@ Open the Gitea UI on port 3000 and sign in as `sarah`. The dashboard activity fe
 
 Screenshot: Gitea login page with username "sarah" and password filled in
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/a7931571-e892-462e-8201-6a07e9183f78" />
+
 Screenshot: Gitea dashboard showing sarah's activity feed with the recent push commit and the sarah/web repository listed
+
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/1f4f2429-1c0d-4b4e-bb86-9a4b2f1d3df5" />
 
 Navigate to the `sarah/web` repository. The repository shows 2 commits on the `master` branch. The most recent commit is `d1bd6bb06b` with message "Update index.html with xFusionCorp Industries" committed 14 minutes ago. The `index.html` file is listed as the only file in the repository.
 
 Screenshot: Gitea sarah/web repository code view showing 2 commits, master branch, index.html file, and the latest commit message
+
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/547ae8e6-1ce2-4efa-a470-744fe60c9a43" />
 
 ---
 
@@ -433,9 +439,13 @@ Click **Add Webhook**.
 
 Screenshot: Gitea Add Webhook page showing the Target URL with Jenkins remote build trigger URL including admin credentials and deploy token, POST method, application/json content type, and Push Events trigger selected
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/7a5bcaa4-ef58-4079-aa87-5fe175b4af00" />
+
 Gitea confirms with a green success banner: **"The webhook has been added."** The webhook appears in the Webhooks list showing the configured Jenkins build URL.
 
 Screenshot: Gitea Webhooks settings page showing success banner and the newly created webhook URL listed
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/020f4cf6-013e-4848-aba2-bb93865259fc" />
 
 ---
 
@@ -669,11 +679,6 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 <img width="1032" height="447" alt="image" src="https://github.com/user-attachments/assets/ea13ba50-a1a7-45e9-9a8c-ab27e4082fa3" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/965ac60e-dc8f-460a-89ad-abc452efa645" />
 <img width="1038" height="405" alt="image" src="https://github.com/user-attachments/assets/d46e2d5a-9071-4ab7-892e-b7d6991cf2e9" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/a7931571-e892-462e-8201-6a07e9183f78" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/1f4f2429-1c0d-4b4e-bb86-9a4b2f1d3df5" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/547ae8e6-1ce2-4efa-a470-744fe60c9a43" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/7a5bcaa4-ef58-4079-aa87-5fe175b4af00" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/020f4cf6-013e-4848-aba2-bb93865259fc" />
 
 
 
