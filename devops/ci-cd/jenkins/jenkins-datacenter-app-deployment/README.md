@@ -548,6 +548,8 @@ The `index.html` file is present, owned by `sarah`, and contains the expected co
 
 Screenshot: Terminal showing ls -la /var/www/html with index.html present owned by sarah, cat confirming content, and curl returning "Welcome to the xFusionCorp Industries"
 
+<img width="1032" height="447" alt="image" src="https://github.com/user-attachments/assets/ea13ba50-a1a7-45e9-9a8c-ab27e4082fa3" />
+
 Run a repeat verification showing the same consistent results:
 
 ```bash
@@ -679,7 +681,7 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/98ec4cfc-a3ce-4d64-bff4-5297edafd914" />
-<img width="1032" height="447" alt="image" src="https://github.com/user-attachments/assets/ea13ba50-a1a7-45e9-9a8c-ab27e4082fa3" />
+
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/965ac60e-dc8f-460a-89ad-abc452efa645" />
 <img width="1038" height="405" alt="image" src="https://github.com/user-attachments/assets/d46e2d5a-9071-4ab7-892e-b7d6991cf2e9" />
 
