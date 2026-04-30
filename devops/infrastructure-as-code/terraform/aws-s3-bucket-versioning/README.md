@@ -271,6 +271,8 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 > Screenshot: `terraform plan` output showing the `aws_s3_bucket_versioning` resource marked for creation with `status = "Enabled"` and the `Plan: 1 to add, 0 to change, 0 to destroy` summary
 
+<img width="1049" height="767" alt="image" src="https://github.com/user-attachments/assets/322dda7b-299f-46f9-9a44-38e29295fa31" />
+
 ---
 
 ### Phase 5: Apply the Configuration
@@ -304,6 +306,8 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 > Screenshot: `terraform apply` execution showing the creation progress and `Apply complete! Resources: 1 added, 0 changed, 0 destroyed.` confirmation
 
+<img width="1073" height="699" alt="image" src="https://github.com/user-attachments/assets/49aa3293-c90c-4873-8970-5c1f765eed52" />
+
 ---
 
 ### Phase 6: Verify Versioning Status via AWS CLI
@@ -325,6 +329,8 @@ aws s3api get-bucket-versioning --bucket nautilus-s3-6053
 **Result:** The AWS API confirms versioning status as `Enabled` on `nautilus-s3-6053`. This independently validates the Terraform apply outcome without relying solely on Terraform state.
 
 > Screenshot: `aws s3api get-bucket-versioning` command output returning `{ "Status": "Enabled" }` confirming successful versioning activation
+
+<img width="1033" height="321" alt="image" src="https://github.com/user-attachments/assets/7b89a6dc-b2be-41e3-b166-4503446caf63" />
 
 ---
 
@@ -388,16 +394,3 @@ Running `aws s3api get-bucket-versioning` after apply treats the AWS API as the 
 - [AWS CLI Reference: get-bucket-versioning](https://docs.aws.amazon.com/cli/latest/reference/s3api/get-bucket-versioning.html)
 - [AWS S3 Versioning Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html)
 - [Terraform v4.x S3 Resource Decomposition Guide](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-4-upgrade#s3-bucket-refactoring)
-
-
-
-
-
-
-
-
-
-<img width="1049" height="767" alt="image" src="https://github.com/user-attachments/assets/322dda7b-299f-46f9-9a44-38e29295fa31" />
-<img width="1073" height="699" alt="image" src="https://github.com/user-attachments/assets/49aa3293-c90c-4873-8970-5c1f765eed52" />
-<img width="1033" height="321" alt="image" src="https://github.com/user-attachments/assets/7b89a6dc-b2be-41e3-b166-4503446caf63" />
-
