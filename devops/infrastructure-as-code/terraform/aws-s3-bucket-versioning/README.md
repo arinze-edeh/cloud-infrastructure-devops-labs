@@ -194,6 +194,9 @@ resource "aws_s3_bucket_versioning" "nautilus_versioning" {
 
 > Screenshot: Updated `main.tf` in terminal showing both the `aws_s3_bucket` and `aws_s3_bucket_versioning` resource blocks after editing with `vi`
 
+<img width="1050" height="766" alt="image" src="https://github.com/user-attachments/assets/08aebacd-1536-4a95-b560-16a4919190da" />
+<img width="1049" height="752" alt="image" src="https://github.com/user-attachments/assets/b4f290bc-efd6-4eef-b0aa-d23cdb422f0a" />
+
 ---
 
 ### Phase 3: Validate the Configuration
@@ -392,9 +395,6 @@ Running `aws s3api get-bucket-versioning` after apply treats the AWS API as the 
 
 
 
-<img width="1050" height="766" alt="image" src="https://github.com/user-attachments/assets/08aebacd-1536-4a95-b560-16a4919190da" />
-<img width="1049" height="653" alt="image" src="https://github.com/user-attachments/assets/911b9b60-def8-4d81-8b8a-5faa73b0ea08" />
-<img width="1049" height="752" alt="image" src="https://github.com/user-attachments/assets/b4f290bc-efd6-4eef-b0aa-d23cdb422f0a" />
 <img width="1043" height="769" alt="image" src="https://github.com/user-attachments/assets/b1029454-0935-4ae6-bb02-31ff12362fa1" />
 <img width="1049" height="767" alt="image" src="https://github.com/user-attachments/assets/322dda7b-299f-46f9-9a44-38e29295fa31" />
 <img width="1073" height="699" alt="image" src="https://github.com/user-attachments/assets/49aa3293-c90c-4873-8970-5c1f765eed52" />
