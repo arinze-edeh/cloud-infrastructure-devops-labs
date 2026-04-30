@@ -127,17 +127,25 @@ Click **Install**.
 
 Screenshot: Available plugins list filtered by "git" showing Publish Over SSH and Git selected with checkboxes
 
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/6fb269db-a29c-4cdd-9b43-58419553b97a" />
+
 The Download progress page shows all dependency plugins resolving successfully in order, including: JAXB, JSON Api, Jackson Annotations 2 API, Jakarta Activation API, SnakeYAML API, Jakarta XML Binding API, Woodstox Core API, Jackson 2 API, Infrastructure plugin for Publish Over X, Structs, EDDSA API, Gson API, Trilead API, Variant, commons-lang3 v3.x Jenkins API, Ionicons API, commons-text API, Credentials, SSH Credentials, JSch dependency, Publish Over SSH, Pipeline: Step API, Plain Credentials, and others.
 
 Screenshot: Download progress page showing all dependency plugins installing with green success indicators (page 1)
+
+<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/4a5c89d0-eb04-4f18-9765-5270f387ec6c" />
 
 The second page of the progress screen confirms remaining dependencies including: SSH Credentials, JSch dependency, Publish Over SSH, Pipeline: Step API, Plain Credentials, Credentials Binding, ASM API, SCM API, Pipeline: SCM Step, Mina SSHD API Common, Mina SSHD API Core, Apache HttpComponents Client 4.x API, Caffeine API, Script Security, Git client, Jakarta Mail API, Display URL API, Mailer, Git, and Loading plugin extensions - all reporting **Success**.
 
 Screenshot: Download progress page showing remaining plugins all succeeded including Git and Publish Over SSH
 
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/42a8d3d4-9db1-4dc3-a60e-33747b72ab4d" />
+
 Enable **"Restart Jenkins when installation is complete and no jobs are running"** again. Jenkins restarts to activate all newly installed plugins.
 
 Screenshot: Jenkins restarting screen after Publish Over SSH and Git plugin installation
+
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/d62bb414-ac05-4973-8bb0-a40408704979" />
 
 ---
 
@@ -614,10 +622,6 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/6fb269db-a29c-4cdd-9b43-58419553b97a" />
-<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/4a5c89d0-eb04-4f18-9765-5270f387ec6c" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/42a8d3d4-9db1-4dc3-a60e-33747b72ab4d" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/d62bb414-ac05-4973-8bb0-a40408704979" />
 <img width="1038" height="471" alt="image" src="https://github.com/user-attachments/assets/45295fd9-fc63-4dde-a46c-3c7ff48f568f" />
 <img width="1031" height="579" alt="image" src="https://github.com/user-attachments/assets/3191d2de-2523-415b-a3e4-67cbc6525557" />
 <img width="1032" height="694" alt="image" src="https://github.com/user-attachments/assets/1a461ed4-5e55-4ba8-be8e-a1e76871393f" />
