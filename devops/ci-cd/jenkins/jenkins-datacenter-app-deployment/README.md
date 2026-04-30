@@ -361,6 +361,8 @@ Click **Save**. The job status page loads showing the `xfusion-app-deployment` j
 
 Screenshot: Jenkins job status page for xfusion-app-deployment showing "No builds" in the Builds panel
 
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/1d62700a-80d3-4bdb-a0cc-7a2b6035d56a" />
+
 ---
 
 ### Phase 10: Developer Workflow - Updating and Pushing Application Code
@@ -654,7 +656,6 @@ Screenshot: Browser showing the load balancer URL on port 8091 rendering "Welcom
 
 
 
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/1d62700a-80d3-4bdb-a0cc-7a2b6035d56a" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/25b57d4e-4b3d-4238-8cf6-0118af2fb554" />
 <img width="1032" height="799" alt="image" src="https://github.com/user-attachments/assets/f6696d44-b746-42d7-a5c3-fe3ae7ceaff0" />
 <img width="1039" height="737" alt="image" src="https://github.com/user-attachments/assets/384b6a91-26b6-4305-9e6a-bd4a48318289" />
