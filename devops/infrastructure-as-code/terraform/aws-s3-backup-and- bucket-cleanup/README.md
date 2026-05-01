@@ -245,6 +245,8 @@ sudo mkdir -p /opt/s3-backup/
 
 > Screenshot: Terminal prompt after successful silent execution of `sudo mkdir -p /opt/s3-backup/` with no error output, confirming idempotent directory creation
 
+<img width="1048" height="376" alt="image" src="https://github.com/user-attachments/assets/f2e18a9c-ce52-4077-bb5f-c22e57fe5a3b" />
+
 ---
 
 ### Step 4: Author the Terraform Configuration
@@ -499,7 +501,6 @@ An error occurred (NoSuchBucket) when calling the ListObjectsV2 operation: The s
 
 
 
-<img width="1048" height="376" alt="image" src="https://github.com/user-attachments/assets/f2e18a9c-ce52-4077-bb5f-c22e57fe5a3b" />
 <img width="1045" height="732" alt="image" src="https://github.com/user-attachments/assets/d6e7b0f3-6054-4aa2-a870-ec7383952c41" />
 <img width="1045" height="775" alt="image" src="https://github.com/user-attachments/assets/9035cf06-5b6d-4c5e-95a8-23e9891502ff" />
 <img width="1052" height="709" alt="image" src="https://github.com/user-attachments/assets/321c46c6-19f4-471b-a266-f902014edd61" />
