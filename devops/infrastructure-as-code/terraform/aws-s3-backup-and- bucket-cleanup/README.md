@@ -384,6 +384,8 @@ drwxr-xr-x 1 root root 4096 May  1 01:50 ..
 
 > Screenshot: `/opt/s3-backup/` directory listing confirming `datacenter.txt` at 27 bytes is present, owned by `bob`, with the original S3 modification timestamp preserved
 
+<img width="1052" height="709" alt="image" src="https://github.com/user-attachments/assets/321c46c6-19f4-471b-a266-f902014edd61" />
+
 The file size matches the original S3 object (27 bytes), confirming a complete and uncorrupted transfer.
 
 ---
@@ -401,6 +403,8 @@ An error occurred (NoSuchBucket) when calling the ListObjectsV2 operation: The s
 ```
 
 > Screenshot: AWS CLI error response confirming `NoSuchBucket` for `datacenter-bck-14899`, verifying permanent deletion
+
+<img width="1048" height="766" alt="image" src="https://github.com/user-attachments/assets/dce33e54-15d7-4cda-9547-42e335d14229" />
 
 The `NoSuchBucket` error is the expected and desired outcome, confirming the bucket has been fully decommissioned.
 
@@ -500,19 +504,3 @@ An error occurred (NoSuchBucket) when calling the ListObjectsV2 operation: The s
 ---
 
 *Implementation executed on terraform-client host | Terraform v1.11.0 | AWS Provider v5.91.0 | LocalStack endpoint http://aws:4566*
-
-
-
-
-
-
-
-<img width="1052" height="709" alt="image" src="https://github.com/user-attachments/assets/321c46c6-19f4-471b-a266-f902014edd61" />
-<img width="1048" height="766" alt="image" src="https://github.com/user-attachments/assets/dce33e54-15d7-4cda-9547-42e335d14229" />
-
-
-
-
-
-
-
