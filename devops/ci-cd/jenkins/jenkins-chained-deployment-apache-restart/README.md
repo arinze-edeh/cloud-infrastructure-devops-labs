@@ -415,6 +415,9 @@ Open the application URL on port `8091` in the browser. The page loads and displ
 
 *Screenshot: Application loaded at port 8091 displaying "Welcome to KodeKloud!"*
 
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/e7efe77d-4bb9-48b6-91fe-53227d4bfb1e" />
+
+
 ---
 
 ### Phase 16: Build Validation - Run #2 (Idempotency Verification)
@@ -430,10 +433,14 @@ The `datacenter-app-deployment` Build #2 console output shows:
 5. Build finishes with `Finished: SUCCESS`
 
 *Screenshot: datacenter-app-deployment Build #2 console output showing idempotent run with SUCCESS result and manage-services triggered*
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/f739c1e0-eafa-46de-9a75-8c7d0284ebd1" />
 
 The `manage-services` Build #2 console output confirms the downstream job was triggered by `datacenter-app-deployment` build number `2` and the `httpd` restart completed successfully again in `1,201 ms`.
 
 *Screenshot: manage-services Build #2 console output showing triggered by upstream build #2 and Finished: SUCCESS*
+
+<img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/69cbb168-accc-49b7-bf3f-2c0c3fb0a4ee" />
+
 
 ---
 
@@ -449,6 +456,9 @@ The `datacenter-app-deployment` job status page shows:
 
 *Screenshot: datacenter-app-deployment status page showing Downstream Projects section with manage-services listed and two successful builds in history*
 
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6a162282-5c8f-4687-8b03-0465b6052851" />
+
+
 The `manage-services` job status page shows:
 
 * Green checkmark status for the most recent build
@@ -456,6 +466,8 @@ The `manage-services` job status page shows:
 * Build history: `#1` at 5:31 AM and `#2` at 5:34 AM, both successful
 
 *Screenshot: manage-services status page showing Upstream Projects section with datacenter-app-deployment listed and two successful builds in history*
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/b5288e2c-20b0-4d47-b09d-2528783213b0" />
 
 ---
 
@@ -518,9 +530,3 @@ The `manage-services` job status page shows:
 
 
 
-
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/e7efe77d-4bb9-48b6-91fe-53227d4bfb1e" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/f739c1e0-eafa-46de-9a75-8c7d0284ebd1" />
-<img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/69cbb168-accc-49b7-bf3f-2c0c3fb0a4ee" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6a162282-5c8f-4687-8b03-0465b6052851" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/b5288e2c-20b0-4d47-b09d-2528783213b0" />
