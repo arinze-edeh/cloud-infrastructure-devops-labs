@@ -439,8 +439,8 @@ The `manage-services` Build #2 console output confirms the downstream job was tr
 
 *Screenshot: manage-services Build #2 console output showing triggered by upstream build #2 and Finished: SUCCESS*
 
-<img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/69cbb168-accc-49b7-bf3f-2c0c3fb0a4ee" />
 
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/b5288e2c-20b0-4d47-b09d-2528783213b0" />
 
 ---
 
@@ -456,8 +456,8 @@ The `datacenter-app-deployment` job status page shows:
 
 *Screenshot: datacenter-app-deployment status page showing Downstream Projects section with manage-services listed and two successful builds in history*
 
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6a162282-5c8f-4687-8b03-0465b6052851" />
 
+<img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/69cbb168-accc-49b7-bf3f-2c0c3fb0a4ee" />
 
 The `manage-services` job status page shows:
 
@@ -467,7 +467,7 @@ The `manage-services` job status page shows:
 
 *Screenshot: manage-services status page showing Upstream Projects section with datacenter-app-deployment listed and two successful builds in history*
 
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/b5288e2c-20b0-4d47-b09d-2528783213b0" />
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6a162282-5c8f-4687-8b03-0465b6052851" />
 
 ---
 
@@ -523,10 +523,3 @@ The `manage-services` job status page shows:
 
 * **Root Cause (anticipated)**: This class of failure typically occurs when the private key is pasted with extra whitespace, missing headers, or when the corresponding public key has not been added to the target user's `authorized_keys` file.
 * **Resolution**: The issue was avoided by verifying end-to-end SSH connectivity manually from the Jenkins OS shell using the same key before pasting it into the Jenkins UI, and by using `ssh-copy-id` to distribute the public key to App Server 1 prior to any Jenkins configuration.
-
-
-
-
-
-
-
