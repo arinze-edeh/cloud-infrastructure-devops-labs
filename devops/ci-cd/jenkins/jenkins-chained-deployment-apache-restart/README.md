@@ -145,6 +145,8 @@ Copy the full private key content including the `-----BEGIN OPENSSH PRIVATE KEY-
 
 *Screenshot: ssh-copy-id output showing 1 key added, remote deployment command output showing ALL_GOOD, and private key content printed to terminal*
 
+<img width="1031" height="624" alt="image" src="https://github.com/user-attachments/assets/b96464e3-fcda-4f93-bd65-b2b3aebfe9f0" />
+
 ---
 
 ### Phase 3: Log In to Jenkins and Update the Bouncy Castle Plugin
@@ -476,7 +478,6 @@ The `manage-services` job status page shows:
 
 
 
-<img width="1031" height="624" alt="image" src="https://github.com/user-attachments/assets/b96464e3-fcda-4f93-bd65-b2b3aebfe9f0" />
 <img width="1034" height="852" alt="image" src="https://github.com/user-attachments/assets/fd1d7f8d-fa37-4fdb-b5ef-73803948f003" />
 <img width="1033" height="859" alt="image" src="https://github.com/user-attachments/assets/f3fa2af9-a6a8-40ae-864d-e1ad0dd1d28a" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/b168f004-680f-4563-bd83-9e7632f4700a" />
