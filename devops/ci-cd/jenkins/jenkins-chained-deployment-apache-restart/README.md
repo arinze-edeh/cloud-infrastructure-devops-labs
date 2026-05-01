@@ -369,6 +369,9 @@ Both jobs show `N/A` for Last Success, Last Failure, and Last Duration since the
 
 *Screenshot: Jenkins dashboard showing both datacenter-app-deployment and manage-services jobs listed with N/A status*
 
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/8baf8b11-8ecc-4bee-b897-f241a92034f9" />
+
+
 ---
 
 ### Phase 14: Build Validation - Run #1
@@ -387,6 +390,8 @@ The console output confirms the following sequence:
 
 *Screenshot: datacenter-app-deployment Build #1 console output showing full execution sequence ending in SUCCESS and downstream manage-services triggered*
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c3384d9e-3bc0-4b80-b4d9-7a769ce1c3d3" />
+
 The `manage-services` Build #1 console output confirms:
 
 1. The job was started by the upstream project `datacenter-app-deployment` build number `1`, originally caused by user `admin`
@@ -396,6 +401,8 @@ The `manage-services` Build #1 console output confirms:
 5. The downstream job finishes with `Finished: SUCCESS`
 
 *Screenshot: manage-services Build #1 console output confirming triggered by upstream and httpd restart completed successfully*
+
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/827a4790-91fe-4de1-bc19-7155fc236a15" />
 
 ---
 
@@ -512,9 +519,6 @@ The `manage-services` job status page shows:
 
 
 
-<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/8baf8b11-8ecc-4bee-b897-f241a92034f9" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c3384d9e-3bc0-4b80-b4d9-7a769ce1c3d3" />
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/827a4790-91fe-4de1-bc19-7155fc236a15" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/e7efe77d-4bb9-48b6-91fe-53227d4bfb1e" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/f739c1e0-eafa-46de-9a75-8c7d0284ebd1" />
 <img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/69cbb168-accc-49b7-bf3f-2c0c3fb0a4ee" />
