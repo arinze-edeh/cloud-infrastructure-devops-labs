@@ -112,6 +112,10 @@ cat main.tf
 ```hcl
 # Add your code below
 ```
+> Screenshot:
+
+
+<img width="1045" height="653" alt="image" src="https://github.com/user-attachments/assets/efcdf9a4-77ae-41c8-85f8-a926750609dc" />
 
 The file exists but contains only a comment placeholder, confirming no infrastructure resources have been defined yet.
 
@@ -165,6 +169,8 @@ provider "aws" {
 
 > Screenshot: Full contents of `provider.tf` showing the LocalStack endpoint overrides for all AWS services
 
+<img width="1040" height="765" alt="image" src="https://github.com/user-attachments/assets/9e31224f-abda-43d8-9a8c-1dc2f440e96b" />
+
 The `skip_credentials_validation = true` and `skip_requesting_account_id = true` flags are required for LocalStack compatibility. The `s3_use_path_style = true` flag forces path-style S3 addressing, which is necessary when using a custom endpoint.
 
 ### Terraform Version Confirmation
@@ -180,6 +186,8 @@ on linux_amd64
 ```
 
 > Screenshot: Terraform version output confirming v1.11.0 is active alongside AWS provider v5.91.0
+
+<img width="1045" height="619" alt="image" src="https://github.com/user-attachments/assets/b649b93e-ec22-4caa-b0e0-63b9463722ed" />
 
 ---
 
@@ -487,9 +495,6 @@ An error occurred (NoSuchBucket) when calling the ListObjectsV2 operation: The s
 
 
 
-<img width="1045" height="653" alt="image" src="https://github.com/user-attachments/assets/efcdf9a4-77ae-41c8-85f8-a926750609dc" />
-<img width="1040" height="765" alt="image" src="https://github.com/user-attachments/assets/9e31224f-abda-43d8-9a8c-1dc2f440e96b" />
-<img width="1045" height="619" alt="image" src="https://github.com/user-attachments/assets/b649b93e-ec22-4caa-b0e0-63b9463722ed" />
 <img width="1043" height="668" alt="image" src="https://github.com/user-attachments/assets/998b4c05-ca3a-40ff-83cc-2c1a578e08f7" />
 <img width="1042" height="769" alt="image" src="https://github.com/user-attachments/assets/54e8e2d8-66f7-44c9-b83e-b635f9429ee4" />
 <img width="1048" height="376" alt="image" src="https://github.com/user-attachments/assets/f2e18a9c-ce52-4077-bb5f-c22e57fe5a3b" />
