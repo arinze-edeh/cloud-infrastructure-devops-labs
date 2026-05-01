@@ -204,11 +204,17 @@ The Download progress page shows all dependencies installing successfully. Key p
 
 *Screenshot: Download progress page showing all plugin dependencies installing with Success status (page 1)*
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/234a8e6b-3eb9-4118-baa7-84a3e2ac0e6b" />
+
 *Screenshot: Download progress page showing remaining dependencies including Publish Over SSH all showing Success*
+
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/571f89a1-a1ef-4d6a-8b4a-f32a45fde2c5" />
 
 After the installation completes, enable **Restart Jenkins when installation is complete and no jobs are running** and allow Jenkins to perform another safe restart.
 
 *Screenshot: Jenkins restarting screen after Publish Over SSH plugin installation*
+
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/c8207a28-b7de-4a4d-965c-562556e58ea8" />
 
 ---
 
@@ -489,9 +495,6 @@ The `manage-services` job status page shows:
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/234a8e6b-3eb9-4118-baa7-84a3e2ac0e6b" />
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/571f89a1-a1ef-4d6a-8b4a-f32a45fde2c5" />
-<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/c8207a28-b7de-4a4d-965c-562556e58ea8" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/074bb4f3-2197-4271-b709-90c6a857749e" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/33635b1b-0c01-4802-a73f-7ff84c1bb069" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c62e9740-ff6c-470d-abf8-1fdb92653267" />
