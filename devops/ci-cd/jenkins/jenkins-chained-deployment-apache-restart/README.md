@@ -308,6 +308,8 @@ Click **Save**.
 
 *Screenshot: Post-build Actions section showing Build other projects configured with manage-services and Trigger only if build is stable selected, with the project-not-found warning visible*
 
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/76e75834-1cbe-48fc-b8d3-5be241734ee8" />
+
 ---
 
 ### Phase 10: Create the Downstream Job manage-services
@@ -315,6 +317,8 @@ Click **Save**.
 From the Jenkins dashboard, click **New Item**. Enter `manage-services` as the item name. Select **Freestyle project**. Click **OK**.
 
 *Screenshot: New Item page with manage-services name entered and Freestyle project selected*
+
+<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/88e38cca-4583-4c95-937a-52cc088e21ab" />
 
 ---
 
@@ -504,9 +508,6 @@ The `manage-services` job status page shows:
 
 
 
-
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/76e75834-1cbe-48fc-b8d3-5be241734ee8" />
-<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/88e38cca-4583-4c95-937a-52cc088e21ab" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9aeb3b03-1559-4491-9a28-a6e42b4d48ac" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/bcfcef45-02fc-4cb4-9465-047f4ca2a319" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/8baf8b11-8ecc-4bee-b897-f241a92034f9" />
