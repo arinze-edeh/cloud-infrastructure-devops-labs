@@ -107,7 +107,10 @@ jenkins@jenkins:~$ ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ""
 
 The output confirms that both the private key (`/var/lib/jenkins/.ssh/id_rsa`) and the public key (`/var/lib/jenkins/.ssh/id_rsa.pub`) have been saved.
 
-*Screenshot: SSH login to Jenkins server from jump host and RSA key pair generation output*
+*Screenshots: SSH login to Jenkins server from jump host and RSA key pair generation output*
+
+<img width="1039" height="807" alt="image" src="https://github.com/user-attachments/assets/ec2e3a5c-7e27-4a78-b124-5c0fd7e9f663" />
+<img width="1037" height="553" alt="image" src="https://github.com/user-attachments/assets/3f75baa7-5bf6-426c-80a5-38cf167b6d83" />
 
 ---
 
@@ -473,8 +476,6 @@ The `manage-services` job status page shows:
 
 
 
-<img width="1039" height="807" alt="image" src="https://github.com/user-attachments/assets/ec2e3a5c-7e27-4a78-b124-5c0fd7e9f663" />
-<img width="1037" height="553" alt="image" src="https://github.com/user-attachments/assets/3f75baa7-5bf6-426c-80a5-38cf167b6d83" />
 <img width="1031" height="624" alt="image" src="https://github.com/user-attachments/assets/b96464e3-fcda-4f93-bd65-b2b3aebfe9f0" />
 <img width="1034" height="852" alt="image" src="https://github.com/user-attachments/assets/fd1d7f8d-fa37-4fdb-b5ef-73803948f003" />
 <img width="1033" height="859" alt="image" src="https://github.com/user-attachments/assets/f3fa2af9-a6a8-40ae-864d-e1ad0dd1d28a" />
