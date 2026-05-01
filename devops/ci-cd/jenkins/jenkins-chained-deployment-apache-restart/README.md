@@ -190,6 +190,8 @@ Click **Install**.
 
 *Screenshot: Available plugins search results showing Git, SSH Agent, and Publish Over SSH selected for installation*
 
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/3fb4b66a-0150-40ee-8108-3e7e193fa79e" />
+
 The Download progress page shows all dependencies installing successfully. Key packages installed include:
 
 * `commons-lang3 v3.x Jenkins API`
@@ -487,7 +489,6 @@ The `manage-services` job status page shows:
 
 
 
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/3fb4b66a-0150-40ee-8108-3e7e193fa79e" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/234a8e6b-3eb9-4118-baa7-84a3e2ac0e6b" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/571f89a1-a1ef-4d6a-8b4a-f32a45fde2c5" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/c8207a28-b7de-4a4d-965c-562556e58ea8" />
