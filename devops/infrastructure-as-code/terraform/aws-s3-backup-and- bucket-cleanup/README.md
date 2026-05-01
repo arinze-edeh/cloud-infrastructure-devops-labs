@@ -99,6 +99,8 @@ drwxr-xr-x 3 bob bob 4096 May  1 01:50 .terraform
 
 > Screenshot: Directory listing showing the pre-existing Terraform workspace contents including `.terraform/`, `main.tf`, and `provider.tf`
 
+<img width="1047" height="712" alt="image" src="https://github.com/user-attachments/assets/099193b0-3748-4ac3-9129-6222cd9af9a1" />
+
 The `.terraform/` directory confirms the workspace was already initialized. The lock file and provider configuration are present, so `terraform init` is not required.
 
 ### Initial main.tf State
@@ -485,7 +487,6 @@ An error occurred (NoSuchBucket) when calling the ListObjectsV2 operation: The s
 
 
 
-<img width="1047" height="712" alt="image" src="https://github.com/user-attachments/assets/099193b0-3748-4ac3-9129-6222cd9af9a1" />
 <img width="1045" height="653" alt="image" src="https://github.com/user-attachments/assets/efcdf9a4-77ae-41c8-85f8-a926750609dc" />
 <img width="1040" height="765" alt="image" src="https://github.com/user-attachments/assets/9e31224f-abda-43d8-9a8c-1dc2f440e96b" />
 <img width="1045" height="619" alt="image" src="https://github.com/user-attachments/assets/b649b93e-ec22-4caa-b0e0-63b9463722ed" />
