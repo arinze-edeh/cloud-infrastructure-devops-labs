@@ -272,6 +272,8 @@ EOF
 
 > Screenshot: Terminal showing the heredoc write command executed against `/home/bob/terraform/main.tf`
 
+<img width="1045" height="732" alt="image" src="https://github.com/user-attachments/assets/d6e7b0f3-6054-4aa2-a870-ec7383952c41" />
+
 **Configuration Design Rationale:**
 
 * **`terraform_data`** is used instead of a `null_resource` because `terraform_data` is a first-class Terraform built-in available since v1.4, requiring no external provider. It is the current best practice for triggering side-effect operations.
@@ -306,6 +308,8 @@ resource "terraform_data" "s3_cleanup" {
 ```
 
 > Screenshot: `cat main.tf` output confirming the complete resource block is written correctly with both provisioners in the correct order
+
+<img width="1045" height="732" alt="image" src="https://github.com/user-attachments/assets/d6e7b0f3-6054-4aa2-a870-ec7383952c41" />
 
 ---
 
@@ -348,6 +352,8 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
 > Screenshot: Full `terraform validate && terraform apply -auto-approve` output showing successful plan, sequential provisioner execution, file download confirmation, bucket deletion, and final `Apply complete!` summary
+
+<img width="1045" height="775" alt="image" src="https://github.com/user-attachments/assets/9035cf06-5b6d-4c5e-95a8-23e9891502ff" />
 
 **Apply Execution Breakdown:**
 
@@ -501,8 +507,6 @@ An error occurred (NoSuchBucket) when calling the ListObjectsV2 operation: The s
 
 
 
-<img width="1045" height="732" alt="image" src="https://github.com/user-attachments/assets/d6e7b0f3-6054-4aa2-a870-ec7383952c41" />
-<img width="1045" height="775" alt="image" src="https://github.com/user-attachments/assets/9035cf06-5b6d-4c5e-95a8-23e9891502ff" />
 <img width="1052" height="709" alt="image" src="https://github.com/user-attachments/assets/321c46c6-19f4-471b-a266-f902014edd61" />
 <img width="1048" height="766" alt="image" src="https://github.com/user-attachments/assets/dce33e54-15d7-4cda-9547-42e335d14229" />
 
