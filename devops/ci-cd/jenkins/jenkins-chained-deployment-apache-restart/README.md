@@ -226,6 +226,8 @@ In the **Key** text area, paste the full RSA private key content that was copied
 
 *Screenshot: Manage Jenkins System page showing Publish over SSH section with private key pasted into the Key field*
 
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/074bb4f3-2197-4271-b709-90c6a857749e" />
+
 Scroll down to the **SSH Servers** section. Click **Add** to define the target server. Fill in the following fields:
 
 | Field | Value |
@@ -240,6 +242,8 @@ Click **Test Configuration**. The result shows **Success**, confirming that Jenk
 Click **Save**.
 
 *Screenshot: SSH Server configuration for app-server-1 showing Name, Hostname, Username, Remote Directory fields and Test Configuration showing Success*
+
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/33635b1b-0c01-4802-a73f-7ff84c1bb069" />
 
 ---
 
@@ -495,8 +499,6 @@ The `manage-services` job status page shows:
 
 
 
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/074bb4f3-2197-4271-b709-90c6a857749e" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/33635b1b-0c01-4802-a73f-7ff84c1bb069" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c62e9740-ff6c-470d-abf8-1fdb92653267" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/ca0cc8df-a4f1-4cac-a8db-85e4b9464ca4" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/92ba219d-bc46-44de-9c1a-07d26e1bf06e" />
@@ -512,14 +514,3 @@ The `manage-services` job status page shows:
 <img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/69cbb168-accc-49b7-bf3f-2c0c3fb0a4ee" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/6a162282-5c8f-4687-8b03-0465b6052851" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/b5288e2c-20b0-4d47-b09d-2528783213b0" />
-
-
-
-
-
-
-
-
-
-
-
