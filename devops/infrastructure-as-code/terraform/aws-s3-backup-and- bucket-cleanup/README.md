@@ -207,6 +207,8 @@ aws s3 ls s3://datacenter-bck-14899 --endpoint-url http://aws:4566 --recursive
 
 > Screenshot: AWS CLI output confirming `datacenter.txt` (27 bytes) exists within the `datacenter-bck-14899` bucket
 
+<img width="1043" height="668" alt="image" src="https://github.com/user-attachments/assets/998b4c05-ca3a-40ff-83cc-2c1a578e08f7" />
+
 The bucket contains a single object: `datacenter.txt` at 27 bytes. This serves as the baseline for validating backup fidelity after the Terraform apply.
 
 ---
@@ -226,6 +228,8 @@ drwxr-xr-x 1 root root 4096 May  1 01:50 ..
 ```
 
 > Screenshot: Empty `/opt/s3-backup/` directory confirming no pre-existing backup files are present
+
+<img width="1042" height="769" alt="image" src="https://github.com/user-attachments/assets/54e8e2d8-66f7-44c9-b83e-b635f9429ee4" />
 
 The directory already exists and is empty, confirming it was pre-provisioned as the intended backup landing zone.
 
@@ -495,8 +499,6 @@ An error occurred (NoSuchBucket) when calling the ListObjectsV2 operation: The s
 
 
 
-<img width="1043" height="668" alt="image" src="https://github.com/user-attachments/assets/998b4c05-ca3a-40ff-83cc-2c1a578e08f7" />
-<img width="1042" height="769" alt="image" src="https://github.com/user-attachments/assets/54e8e2d8-66f7-44c9-b83e-b635f9429ee4" />
 <img width="1048" height="376" alt="image" src="https://github.com/user-attachments/assets/f2e18a9c-ce52-4077-bb5f-c22e57fe5a3b" />
 <img width="1045" height="732" alt="image" src="https://github.com/user-attachments/assets/d6e7b0f3-6054-4aa2-a870-ec7383952c41" />
 <img width="1045" height="775" alt="image" src="https://github.com/user-attachments/assets/9035cf06-5b6d-4c5e-95a8-23e9891502ff" />
