@@ -168,9 +168,13 @@ On the Download progress page, the Bouncy Castle API plugin downloads successful
 
 *Screenshot: Bouncy Castle API download progress showing success and restart pending*
 
+<img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/9ee763fb-95bf-417a-a16a-88bc1cdd0811" />
+
 Jenkins displays the restarting screen. The browser reloads automatically when Jenkins is ready.
 
 *Screenshot: Jenkins restarting screen*
+
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/07c7fb5e-5eb1-4274-a8b8-6c401738857d" />
 
 ---
 
@@ -483,8 +487,6 @@ The `manage-services` job status page shows:
 
 
 
-<img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/9ee763fb-95bf-417a-a16a-88bc1cdd0811" />
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/07c7fb5e-5eb1-4274-a8b8-6c401738857d" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/3fb4b66a-0150-40ee-8108-3e7e193fa79e" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/234a8e6b-3eb9-4118-baa7-84a3e2ac0e6b" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/571f89a1-a1ef-4d6a-8b4a-f32a45fde2c5" />
