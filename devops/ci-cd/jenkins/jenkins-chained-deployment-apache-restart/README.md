@@ -156,9 +156,13 @@ Open the Jenkins web UI at port `8080`. Log in using username `admin` and passwo
 
 *Screenshot: Jenkins login page with admin credentials entered*
 
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/b168f004-680f-4563-bd83-9e7632f4700a" />
+
 Navigate to **Manage Jenkins > Plugins > Updates**. The Updates tab shows one available update: the **Bouncy Castle API** plugin (`2.30.1.84` to `2.30.1.84-291`). This plugin provides cryptographic primitives required by SSH-related plugins. Select the checkbox next to it and click **Update**.
 
 *Screenshot: Jenkins Plugin Manager Updates tab showing Bouncy Castle API update available*
+
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/13aefd68-8fff-4372-8f86-d7f77aeac11e" />
 
 On the Download progress page, the Bouncy Castle API plugin downloads successfully. The page shows the message `Downloaded Successfully. Will be activated during the next boot`. Enable the **Restart Jenkins when installation is complete and no jobs are running** checkbox to trigger a safe restart.
 
@@ -479,8 +483,6 @@ The `manage-services` job status page shows:
 
 
 
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/b168f004-680f-4563-bd83-9e7632f4700a" />
-<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/13aefd68-8fff-4372-8f86-d7f77aeac11e" />
 <img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/9ee763fb-95bf-417a-a16a-88bc1cdd0811" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/07c7fb5e-5eb1-4274-a8b8-6c401738857d" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/3fb4b66a-0150-40ee-8108-3e7e193fa79e" />
