@@ -332,6 +332,8 @@ This configures `manage-services` as a downstream job that will execute automati
 
 *Screenshot: manage-services Triggers section showing Build after other projects are built checked, datacenter-app-deployment entered as the upstream project, and Trigger only if build is stable selected*
 
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9aeb3b03-1559-4491-9a28-a6e42b4d48ac" />
+
 ---
 
 ### Phase 12: Configure the Build Step for manage-services
@@ -351,6 +353,8 @@ sudo systemctl restart httpd
 Click **Save**.
 
 *Screenshot: manage-services Build Steps section showing Send files or execute commands over SSH with app-server-1 selected and sudo systemctl restart httpd as the exec command*
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/bcfcef45-02fc-4cb4-9465-047f4ca2a319" />
 
 ---
 
@@ -508,8 +512,6 @@ The `manage-services` job status page shows:
 
 
 
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9aeb3b03-1559-4491-9a28-a6e42b4d48ac" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/bcfcef45-02fc-4cb4-9465-047f4ca2a319" />
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/8baf8b11-8ecc-4bee-b897-f241a92034f9" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/c3384d9e-3bc0-4b80-b4d9-7a769ce1c3d3" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/827a4790-91fe-4de1-bc19-7155fc236a15" />
