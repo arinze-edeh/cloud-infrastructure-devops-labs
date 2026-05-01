@@ -269,6 +269,8 @@ Leave **Credentials** as `- none -` because the credentials are embedded directl
 
 *Screenshot: Source Code Management section showing Git selected, repository URL with embedded credentials, and branch set to master*
 
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/ca0cc8df-a4f1-4cac-a8db-85e4b9464ca4" />
+
 ---
 
 ### Phase 8: Configure the Build Step for datacenter-app-deployment
@@ -289,6 +291,8 @@ sudo systemctl restart httpd && echo ALL_GOOD
 ```
 
 *Screenshot: Build Steps section showing Send files or execute commands over SSH configured with app-server-1 and exec command deployment script*
+
+<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/92ba219d-bc46-44de-9c1a-07d26e1bf06e" />
 
 ---
 
@@ -501,8 +505,6 @@ The `manage-services` job status page shows:
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/ca0cc8df-a4f1-4cac-a8db-85e4b9464ca4" />
-<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/92ba219d-bc46-44de-9c1a-07d26e1bf06e" />
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/76e75834-1cbe-48fc-b8d3-5be241734ee8" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/88e38cca-4583-4c95-937a-52cc088e21ab" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9aeb3b03-1559-4491-9a28-a6e42b4d48ac" />
