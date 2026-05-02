@@ -105,6 +105,8 @@ The presence of `.terraform/`, `.terraform.lock.hcl`, `main.tf`, `provider.tf`, 
 
 *Screenshot: Terminal output of `ls -la` showing all workspace files*
 
+<img width="1027" height="629" alt="image" src="https://github.com/user-attachments/assets/93e9cb94-f243-47f6-8b96-8dc8bde3003a" />
+
 ---
 
 ### Step 2: Review the Provisioning Configuration
@@ -354,7 +356,7 @@ This is a transient state. EC2 instances pass through `shutting-down` before rea
 
 
 <img width="1025" height="513" alt="image" src="https://github.com/user-attachments/assets/7e890f5b-61e6-41ef-9281-674638dfaeca" />
-<img width="1027" height="629" alt="image" src="https://github.com/user-attachments/assets/93e9cb94-f243-47f6-8b96-8dc8bde3003a" />
+
 <img width="1033" height="707" alt="image" src="https://github.com/user-attachments/assets/e2f437c1-f805-4363-8dd9-668bce93aede" />
 <img width="1031" height="717" alt="image" src="https://github.com/user-attachments/assets/613d25e0-f151-4650-b51a-1ac1bd825a35" />
 <img width="1076" height="818" alt="image" src="https://github.com/user-attachments/assets/f4e1d96b-5df7-4ce3-a04f-ea5cae4ef4d8" />
