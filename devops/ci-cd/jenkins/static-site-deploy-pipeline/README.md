@@ -148,6 +148,8 @@ Navigate to **Manage Jenkins > Plugins > Available plugins** and search for `cre
 
 Screenshot: Jenkins Plugins page showing Git, SSH Build Agents, Pipeline, and Credentials Binding all selected for installation
 
+<img width="1917" height="1013" alt="image" src="https://github.com/user-attachments/assets/f4dfe348-7c93-4098-bfa2-ceac4e299053" />
+
 ---
 
 ### 5. Restart Jenkins After Plugin Installation
@@ -156,9 +158,15 @@ Monitor the **Download progress** page until all plugin components report `Succe
 
 Screenshot: Download progress page showing all plugin dependencies including commons-lang3, Pipeline Step API, SSH Credentials, Credentials Binding, Git, SSH Build Agents, Pipeline API, Pipeline Groovy, Pipeline Declarative, and all supporting libraries reporting Success
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/61104daa-9553-40f2-af73-a9226020e54f" />
+
 Screenshot: Continuation of Download progress page showing additional pipeline components and the Credentials Binding final entry all reporting Success, with the Restart Jenkins checkbox visible at the bottom
 
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/b95ec107-e19a-410f-aa6d-41311c71462d" />
+
 Screenshot: Jenkins restarting screen with the spinning indicator and message confirming the browser will reload automatically when Jenkins is ready
+
+<img width="1917" height="1023" alt="image" src="https://github.com/user-attachments/assets/54815be9-1be3-48fe-b40e-7549f5d68d55" />
 
 ---
 
@@ -377,10 +385,6 @@ Resolution: Refreshed the browser tab manually after waiting for the service to 
 
 
 
-<img width="1917" height="1013" alt="image" src="https://github.com/user-attachments/assets/f4dfe348-7c93-4098-bfa2-ceac4e299053" />
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/61104daa-9553-40f2-af73-a9226020e54f" />
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/b95ec107-e19a-410f-aa6d-41311c71462d" />
-<img width="1917" height="1023" alt="image" src="https://github.com/user-attachments/assets/54815be9-1be3-48fe-b40e-7549f5d68d55" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/3489d1be-fbc1-4b92-9f2f-1499963b91ef" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/a3a78471-50f3-4952-96fd-3ec7dc5c87d5" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/9ab55a73-fcff-462f-94aa-e251c95dbbbd" />
