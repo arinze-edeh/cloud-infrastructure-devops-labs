@@ -202,7 +202,7 @@ The plan confirms:
 
 Terraform issued a warning that resource targeting is in effect. This is expected behavior for `-target` operations and does not indicate an error.
 
-*Screenshot: Full terminal output of `terraform plan -destroy -target=aws_instance.ec2`*
+*Screenshots: Full terminal output of `terraform plan -destroy -target=aws_instance.ec2`*
 
 <img width="1076" height="818" alt="image" src="https://github.com/user-attachments/assets/f4e1d96b-5df7-4ce3-a04f-ea5cae4ef4d8" />
 <img width="1071" height="818" alt="image" src="https://github.com/user-attachments/assets/3f7a4f5b-0c1c-416c-a706-6af9f0264387" />
@@ -360,8 +360,3 @@ This is a transient state. EC2 instances pass through `shutting-down` before rea
 **Preserving configuration after destruction is a reproducibility discipline.** The decision to keep `main.tf` intact after destroying the instance reflects a key IaC principle: the configuration describes desired state, while the state file tracks actual state. Destroying infrastructure does not invalidate the configuration, and teams should treat `main.tf` files as living documents independent of deployment lifecycle.
 
 **Targeted operations create incomplete apply context.** Terraform's warning that "applied changes may be incomplete" after a targeted destroy is accurate. Any subsequent `terraform plan` should be run without `-target` to check for pending drift or mismatches between the configuration and remaining state.
-
-
-
-
-
