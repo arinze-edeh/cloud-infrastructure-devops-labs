@@ -255,6 +255,8 @@ From the Jenkins dashboard, click **New Item**. Enter `deploy-job` as the item n
 
 Screenshot: New Item page with deploy-job entered as the item name and Pipeline type selected
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/4cfb0a87-4629-4dec-a428-89ddba7c2516" />
+
 ---
 
 ### 10. Write the Declarative Pipeline Script
@@ -404,7 +406,6 @@ Resolution: Refreshed the browser tab manually after waiting for the service to 
 
 
 
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/4cfb0a87-4629-4dec-a428-89ddba7c2516" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/30b32547-7eaa-4df1-8f8a-7043c68d8c92" />
 <img width="1915" height="1013" alt="image" src="https://github.com/user-attachments/assets/6324483c-6b85-44e3-99ec-b12be6d91563" />
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9d441531-0ab9-4b18-aa62-390e23915872" />
