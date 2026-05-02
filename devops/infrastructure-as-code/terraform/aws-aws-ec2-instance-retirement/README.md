@@ -204,6 +204,9 @@ Terraform issued a warning that resource targeting is in effect. This is expecte
 
 *Screenshot: Full terminal output of `terraform plan -destroy -target=aws_instance.ec2`*
 
+<img width="1076" height="818" alt="image" src="https://github.com/user-attachments/assets/f4e1d96b-5df7-4ce3-a04f-ea5cae4ef4d8" />
+<img width="1071" height="818" alt="image" src="https://github.com/user-attachments/assets/3f7a4f5b-0c1c-416c-a706-6af9f0264387" />
+
 ---
 
 ### Step 5: Execute the Targeted Destroy
@@ -359,8 +362,6 @@ This is a transient state. EC2 instances pass through `shutting-down` before rea
 
 
 
-<img width="1076" height="818" alt="image" src="https://github.com/user-attachments/assets/f4e1d96b-5df7-4ce3-a04f-ea5cae4ef4d8" />
-<img width="1071" height="818" alt="image" src="https://github.com/user-attachments/assets/3f7a4f5b-0c1c-416c-a706-6af9f0264387" />
 <img width="1075" height="796" alt="image" src="https://github.com/user-attachments/assets/a11a64d2-ed14-483c-b6d0-bc9365e4c58f" />
 <img width="1074" height="814" alt="image" src="https://github.com/user-attachments/assets/281cbe90-20e1-4ab2-b79d-8b102e21d518" />
 <img width="1048" height="584" alt="image" src="https://github.com/user-attachments/assets/6f15374a-f50e-4a7e-ad92-cb20c67a7136" />
