@@ -105,6 +105,8 @@ curl -s http://localhost:8080
 
 Screenshot: Terminal output showing git commit, git push to Gitea master branch, and curl confirming Apache is running on localhost:8080
 
+<img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/2117cd78-b66f-4531-a812-703255202aef" />
+
 ---
 
 ### 3. Install Java 17 and Prepare Jenkins Agent Directory
@@ -122,6 +124,11 @@ Screenshot: yum transaction output showing java-17-openjdk and java-17-openjdk-h
 
 Screenshot: Continuation of yum output confirming Complete, followed by java -version output showing OpenJDK 17.0.18 build 17.0.18+8-LTS, then logout and connection closed back to jump host
 
+
+<img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/2117cd78-b66f-4531-a812-703255202aef" />
+<img width="1036" height="832" alt="image" src="https://github.com/user-attachments/assets/3865b9f0-9e1b-47ed-ae42-6a1d606d9c3f" />
+<img width="1034" height="541" alt="image" src="https://github.com/user-attachments/assets/3cee3a82-253a-400f-8e81-7e2337eb6408" />
+
 ---
 
 ### 4. Log In to Jenkins and Install Required Plugins
@@ -129,6 +136,8 @@ Screenshot: Continuation of yum output confirming Complete, followed by java -ve
 Open the Jenkins UI and authenticate with the `admin` account.
 
 Screenshot: Jenkins login page with username admin entered and password field populated
+
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/2bb2f541-b27c-4109-9398-ef2916aaa082" />
 
 Navigate to **Manage Jenkins > Plugins > Available plugins** and search for `credentials bindi`. Select all four of the following plugins and click **Install**:
 
@@ -368,11 +377,6 @@ Resolution: Refreshed the browser tab manually after waiting for the service to 
 
 
 
-
-<img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/2117cd78-b66f-4531-a812-703255202aef" />
-<img width="1036" height="832" alt="image" src="https://github.com/user-attachments/assets/3865b9f0-9e1b-47ed-ae42-6a1d606d9c3f" />
-<img width="1034" height="541" alt="image" src="https://github.com/user-attachments/assets/3cee3a82-253a-400f-8e81-7e2337eb6408" />
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/2bb2f541-b27c-4109-9398-ef2916aaa082" />
 <img width="1917" height="1013" alt="image" src="https://github.com/user-attachments/assets/f4dfe348-7c93-4098-bfa2-ceac4e299053" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/61104daa-9553-40f2-af73-a9226020e54f" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/b95ec107-e19a-410f-aa6d-41311c71462d" />
