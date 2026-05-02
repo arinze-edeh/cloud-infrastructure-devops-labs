@@ -222,7 +222,11 @@ On the node configuration page, fill in the following fields and click **Save**:
 
 Screenshot: Node configuration form showing Name App Server 1, remote root directory /home/sarah/jenkins_agent, label stapp01, launch method Launch agents via SSH, and host stapp01
 
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/77c0c4b5-58b6-4c12-803b-d8934fae09ea" />
+
 Screenshot: Lower portion of node configuration form showing SSH credentials set to sarah-stapp01 and Host Key Verification Strategy set to Non verifying Verification Strategy
+
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/3ea7015a-a5e8-43fa-8396-c257ea745733" />
 
 ---
 
@@ -393,8 +397,6 @@ Resolution: Refreshed the browser tab manually after waiting for the service to 
 
 
 
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/77c0c4b5-58b6-4c12-803b-d8934fae09ea" />
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/3ea7015a-a5e8-43fa-8396-c257ea745733" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/dc75120c-97db-4f40-bbf2-a9cce37df162" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/32857dbd-8949-43d0-b7e7-dde7509add7b" />
 <img width="1919" height="1008" alt="image" src="https://github.com/user-attachments/assets/741404bf-85fc-4ec2-b541-2cc86143d013" />
