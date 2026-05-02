@@ -236,9 +236,16 @@ Navigate to **Manage Jenkins > Nodes**, confirm `App Server 1` appears in the no
 
 Screenshot: Nodes page showing App Server 1 listed alongside the Built-In Node
 
+<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/dc75120c-97db-4f40-bbf2-a9cce37df162" />
+
 Screenshot: Agent log showing SSH connection opened to stapp01:22, authentication successful, remote environment loaded, sftp client started, remoting.jar copied (1,407,915 bytes), and agent process started at /home/sarah/jenkins_agent
 
-Screenshot: Continuation of agent log showing the Jenkins Remoting channel started, remoting version 3352.v17a_fb_4b_2773f, SSHLauncher communication protocol confirmed, and the final line Agent successfully connected and online
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/32857dbd-8949-43d0-b7e7-dde7509add7b" />
+
+Screenshots: Continuation of agent log showing the Jenkins Remoting channel started, remoting version 3352.v17a_fb_4b_2773f, SSHLauncher communication protocol confirmed, and the final line Agent successfully connected and online
+
+<img width="1919" height="1008" alt="image" src="https://github.com/user-attachments/assets/741404bf-85fc-4ec2-b541-2cc86143d013" />
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/5403722d-0972-487d-bc2c-6bda14a719da" />
 
 ---
 
@@ -397,10 +404,6 @@ Resolution: Refreshed the browser tab manually after waiting for the service to 
 
 
 
-<img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/dc75120c-97db-4f40-bbf2-a9cce37df162" />
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/32857dbd-8949-43d0-b7e7-dde7509add7b" />
-<img width="1919" height="1008" alt="image" src="https://github.com/user-attachments/assets/741404bf-85fc-4ec2-b541-2cc86143d013" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/5403722d-0972-487d-bc2c-6bda14a719da" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/4cfb0a87-4629-4dec-a428-89ddba7c2516" />
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/30b32547-7eaa-4df1-8f8a-7043c68d8c92" />
 <img width="1915" height="1013" alt="image" src="https://github.com/user-attachments/assets/6324483c-6b85-44e3-99ec-b12be6d91563" />
