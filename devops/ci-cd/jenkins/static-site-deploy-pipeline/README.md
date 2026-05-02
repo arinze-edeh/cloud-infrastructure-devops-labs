@@ -265,6 +265,8 @@ In the pipeline configuration page, scroll to the **Pipeline** section. Set the 
 
 Screenshot: Pipeline configuration page showing the complete Groovy script in the editor with both Deploy and Test stages visible
 
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/30b32547-7eaa-4df1-8f8a-7043c68d8c92" />
+
 The full pipeline script is documented in the [Pipeline Script Reference](#pipeline-script-reference) section below.
 
 ---
@@ -275,9 +277,13 @@ From the `deploy-job` status page, click **Build Now**. Build `#1` appears in th
 
 Screenshot: deploy-job status page showing build number 1 completed successfully at 8:18 PM
 
+<img width="1915" height="1013" alt="image" src="https://github.com/user-attachments/assets/6324483c-6b85-44e3-99ec-b12be6d91563" />
+
 Click on build `#1` and open **Console Output** to inspect execution. Confirm both stages completed and the final line reads `Finished: SUCCESS`.
 
 Screenshot: Console output for build 1 showing: pipeline started by admin, running on App Server 1 in /home/sarah/jenkins_agent/workspace/deploy-job, Deploy stage executing git fetch and reset to origin/master with HEAD at a4fce20, Test stage executing curl against http://stlb01:8091 returning Welcome to xFusionCorp Industries, FILE_CONTENT matching WEB_CONTENT, Validation Success: Website matches Repository, and pipeline finishing with Finished: SUCCESS
+
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9d441531-0ab9-4b18-aa62-390e23915872" />
 
 ---
 
@@ -394,26 +400,3 @@ Resolution: Refreshed the browser tab manually after waiting for the service to 
 **Plugin installation order does not matter, but restart timing does.** All four plugins (Git, SSH Build Agents, Pipeline, Credentials Binding) can be selected and installed in a single batch. However, attempting to configure nodes or write pipelines before the restart completes will result in missing form fields or unrecognized pipeline syntax. Always restart before proceeding to configuration steps.
 
 **Credential scope affects agent visibility.** Credentials must be created with **Global** scope to be selectable during agent node configuration. Credentials created with narrower scope will not appear in the SSH credentials dropdown on the node configuration page.
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/30b32547-7eaa-4df1-8f8a-7043c68d8c92" />
-<img width="1915" height="1013" alt="image" src="https://github.com/user-attachments/assets/6324483c-6b85-44e3-99ec-b12be6d91563" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9d441531-0ab9-4b18-aa62-390e23915872" />
-
-
-
-
-
-
-
-
