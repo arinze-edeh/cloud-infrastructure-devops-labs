@@ -241,9 +241,12 @@ Destroy complete! Resources: 1 destroyed.
 
 The instance was fully destroyed in 11 seconds. Terraform removed the resource from state automatically upon successful destruction.
 
-*Screenshot: Terminal output showing the confirmation prompt and destruction progress*
+*Screenshots: Terminal output showing the confirmation prompt and destruction progress & `Destroy complete! Resources: 1 destroyed.`*
 
-*Screenshot: Terminal output showing `Destroy complete! Resources: 1 destroyed.`*
+
+<img width="1075" height="796" alt="image" src="https://github.com/user-attachments/assets/a11a64d2-ed14-483c-b6d0-bc9365e4c58f" />
+<img width="1074" height="814" alt="image" src="https://github.com/user-attachments/assets/281cbe90-20e1-4ab2-b79d-8b102e21d518" />
+
 
 ---
 
@@ -357,21 +360,6 @@ This is a transient state. EC2 instances pass through `shutting-down` before rea
 **Preserving configuration after destruction is a reproducibility discipline.** The decision to keep `main.tf` intact after destroying the instance reflects a key IaC principle: the configuration describes desired state, while the state file tracks actual state. Destroying infrastructure does not invalidate the configuration, and teams should treat `main.tf` files as living documents independent of deployment lifecycle.
 
 **Targeted operations create incomplete apply context.** Terraform's warning that "applied changes may be incomplete" after a targeted destroy is accurate. Any subsequent `terraform plan` should be run without `-target` to check for pending drift or mismatches between the configuration and remaining state.
-
-
-
-
-
-
-
-
-
-<img width="1075" height="796" alt="image" src="https://github.com/user-attachments/assets/a11a64d2-ed14-483c-b6d0-bc9365e4c58f" />
-<img width="1074" height="814" alt="image" src="https://github.com/user-attachments/assets/281cbe90-20e1-4ab2-b79d-8b102e21d518" />
-
-
-
-
 
 
 
