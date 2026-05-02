@@ -275,6 +275,8 @@ The instance `i-a9d81f2edbac50866` is confirmed in `terminated` state. This matc
 
 *Screenshot: AWS CLI table output showing `terminated` state for `nautilus-ec2`*
 
+<img width="1048" height="584" alt="image" src="https://github.com/user-attachments/assets/6f15374a-f50e-4a7e-ad92-cb20c67a7136" />
+
 ---
 
 ### Step 7: Confirm Provisioning Code Is Preserved
@@ -305,6 +307,8 @@ resource "aws_instance" "ec2" {
 The provisioning configuration is fully intact and unchanged. Running `terraform apply` in the future against this configuration will reprovision an identical EC2 instance.
 
 *Screenshot: Terminal output of `cat main.tf` post-destroy, confirming the resource block is unchanged*
+
+<img width="1051" height="546" alt="image" src="https://github.com/user-attachments/assets/07a752f4-b9ea-4c44-98ef-aa9db67f4a77" />
 
 ---
 
@@ -364,8 +368,7 @@ This is a transient state. EC2 instances pass through `shutting-down` before rea
 
 <img width="1075" height="796" alt="image" src="https://github.com/user-attachments/assets/a11a64d2-ed14-483c-b6d0-bc9365e4c58f" />
 <img width="1074" height="814" alt="image" src="https://github.com/user-attachments/assets/281cbe90-20e1-4ab2-b79d-8b102e21d518" />
-<img width="1048" height="584" alt="image" src="https://github.com/user-attachments/assets/6f15374a-f50e-4a7e-ad92-cb20c67a7136" />
-<img width="1051" height="546" alt="image" src="https://github.com/user-attachments/assets/07a752f4-b9ea-4c44-98ef-aa9db67f4a77" />
+
 
 
 
