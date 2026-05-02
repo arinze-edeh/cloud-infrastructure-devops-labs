@@ -203,6 +203,8 @@ Navigate to **Manage Jenkins > Nodes** and click **New Node**. Enter `App Server
 
 Screenshot: New node dialog with App Server 1 entered as the node name and Permanent Agent selected
 
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/13734f23-2fa9-496a-a4a8-e68d3f1e1bd1" />
+
 On the node configuration page, fill in the following fields and click **Save**:
 
 | Field | Value |
@@ -391,7 +393,6 @@ Resolution: Refreshed the browser tab manually after waiting for the service to 
 
 
 
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/13734f23-2fa9-496a-a4a8-e68d3f1e1bd1" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/77c0c4b5-58b6-4c12-803b-d8934fae09ea" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/3ea7015a-a5e8-43fa-8396-c257ea745733" />
 <img width="1919" height="1013" alt="image" src="https://github.com/user-attachments/assets/dc75120c-97db-4f40-bbf2-a9cce37df162" />
