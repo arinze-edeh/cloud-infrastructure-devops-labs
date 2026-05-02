@@ -164,9 +164,11 @@ Screenshot: Continuation of Download progress page showing additional pipeline c
 
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/b95ec107-e19a-410f-aa6d-41311c71462d" />
 
+<img width="1917" height="1023" alt="image" src="https://github.com/user-attachments/assets/54815be9-1be3-48fe-b40e-7549f5d68d55" />
+
 Screenshot: Jenkins restarting screen with the spinning indicator and message confirming the browser will reload automatically when Jenkins is ready
 
-<img width="1917" height="1023" alt="image" src="https://github.com/user-attachments/assets/54815be9-1be3-48fe-b40e-7549f5d68d55" />
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/3489d1be-fbc1-4b92-9f2f-1499963b91ef" />
 
 ---
 
@@ -187,7 +189,11 @@ Click **Create**.
 
 Screenshot: Add Username with password dialog showing all fields populated with sarah credentials, ID sarah-stapp01, and description Sarah - App Server 1
 
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/a3a78471-50f3-4952-96fd-3ec7dc5c87d5" />
+
 Screenshot: Global credentials page confirming the sarah-stapp01 credential has been created and is listed with description Sarah - App Server 1
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/9ab55a73-fcff-462f-94aa-e251c95dbbbd" />
 
 ---
 
@@ -385,9 +391,6 @@ Resolution: Refreshed the browser tab manually after waiting for the service to 
 
 
 
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/3489d1be-fbc1-4b92-9f2f-1499963b91ef" />
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/a3a78471-50f3-4952-96fd-3ec7dc5c87d5" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/9ab55a73-fcff-462f-94aa-e251c95dbbbd" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/13734f23-2fa9-496a-a4a8-e68d3f1e1bd1" />
 <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/77c0c4b5-58b6-4c12-803b-d8934fae09ea" />
 <img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/3ea7015a-a5e8-43fa-8396-c257ea745733" />
