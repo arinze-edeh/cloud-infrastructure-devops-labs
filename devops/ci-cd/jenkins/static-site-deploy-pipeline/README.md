@@ -78,6 +78,8 @@ ssh sarah@stapp01
 
 Screenshot: SSH connection from jump host to stapp01, host key fingerprint accepted and added to known hosts
 
+<img width="1032" height="600" alt="image" src="https://github.com/user-attachments/assets/60b049c4-b150-496e-ac16-577c121ad4f6" />
+
 ---
 
 ### 2. Update index.html and Push to Gitea
@@ -367,7 +369,6 @@ Resolution: Refreshed the browser tab manually after waiting for the service to 
 
 
 
-<img width="1032" height="600" alt="image" src="https://github.com/user-attachments/assets/60b049c4-b150-496e-ac16-577c121ad4f6" />
 <img width="1029" height="861" alt="image" src="https://github.com/user-attachments/assets/2117cd78-b66f-4531-a812-703255202aef" />
 <img width="1036" height="832" alt="image" src="https://github.com/user-attachments/assets/3865b9f0-9e1b-47ed-ae42-6a1d606d9c3f" />
 <img width="1034" height="541" alt="image" src="https://github.com/user-attachments/assets/3cee3a82-253a-400f-8e81-7e2337eb6408" />
