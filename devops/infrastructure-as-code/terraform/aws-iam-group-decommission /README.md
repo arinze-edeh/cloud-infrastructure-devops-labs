@@ -362,6 +362,8 @@ The `Plan: 1 to add, 0 to change, 0 to destroy` output confirms that the configu
 
 *Screenshot: Full `terraform plan` output showing `Plan: 1 to add, 0 to change, 0 to destroy` with the create action for `aws_iam_group.this`*
 
+<img width="1151" height="584" alt="image" src="https://github.com/user-attachments/assets/24a4f6fe-d6f2-41e8-981c-1fa4de7fa46c" />
+
 ---
 
 ### Step 11: Clean Up the Backup File
@@ -373,6 +375,8 @@ rm main.tf.bak
 ```
 
 *Screenshot: Terminal showing `rm main.tf.bak` command execution*
+
+<img width="1149" height="480" alt="image" src="https://github.com/user-attachments/assets/19ee31c8-7487-4f6e-9a0e-7ae897ab934b" />
 
 ---
 
@@ -405,6 +409,8 @@ Key observations from the final state:
 * `terraform.tfstate.backup` is present at 747 bytes, which is Terraform's automatic backup of the pre-destroy state containing the last known attributes of `aws_iam_group.this`
 
 *Screenshot: Terminal showing final `ls -la` output with `terraform.tfstate.backup` present and `main.tf.bak` absent*
+
+<img width="1148" height="699" alt="image" src="https://github.com/user-attachments/assets/3148210b-e19b-444d-849a-a2b2d2cd512e" />
 
 ---
 
@@ -508,10 +514,6 @@ The ARN `arn:aws:iam::000000000000:group/iamgroup_rose` in the plan output uses 
 
 
 <img width="1150" height="479" alt="image" src="https://github.com/user-attachments/assets/077a334a-cd33-4801-9d16-119374539f8c" />
-
-<img width="1151" height="584" alt="image" src="https://github.com/user-attachments/assets/24a4f6fe-d6f2-41e8-981c-1fa4de7fa46c" />
-<img width="1149" height="480" alt="image" src="https://github.com/user-attachments/assets/19ee31c8-7487-4f6e-9a0e-7ae897ab934b" />
-<img width="1148" height="699" alt="image" src="https://github.com/user-attachments/assets/3148210b-e19b-444d-849a-a2b2d2cd512e" />
 
 
 
