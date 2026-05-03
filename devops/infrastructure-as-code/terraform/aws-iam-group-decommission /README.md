@@ -229,6 +229,8 @@ Terraform also issues a `Warning: Resource targeting is in effect`, which is exp
 
 *Screenshot: Full output of `terraform plan -destroy -target="aws_iam_group.this"` showing the destruction plan and attribute nullification*
 
+<img width="1147" height="675" alt="image" src="https://github.com/user-attachments/assets/821ba85a-22f8-46b1-9408-510ad2e30e51" />
+
 ---
 
 ### Step 6: Execute the Targeted Destroy
@@ -496,9 +498,7 @@ The ARN `arn:aws:iam::000000000000:group/iamgroup_rose` in the plan output uses 
 
 
 
-<img width="1129" height="601" alt="image" src="https://github.com/user-attachments/assets/e4fa4b1d-8ed8-4c31-b8cd-89cddd41634f" />
 
-<img width="1147" height="675" alt="image" src="https://github.com/user-attachments/assets/821ba85a-22f8-46b1-9408-510ad2e30e51" />
 <img width="1177" height="756" alt="image" src="https://github.com/user-attachments/assets/8f13c0d5-073c-4f64-926f-d25178934a82" />
 <img width="1152" height="368" alt="image" src="https://github.com/user-attachments/assets/66dae38e-6882-48d3-a273-bb7fa4a1164b" />
 <img width="1152" height="512" alt="image" src="https://github.com/user-attachments/assets/5399000c-6cd5-4d68-8e2a-fea60a52b9f4" />
