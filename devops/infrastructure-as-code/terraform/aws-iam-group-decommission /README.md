@@ -124,6 +124,8 @@ The `.terraform/` directory confirms the workspace is initialized. The `terrafor
 
 *Screenshot: Terminal output showing `ls -la` in `/home/bob/terraform` with all listed files*
 
+<img width="1149" height="526" alt="image" src="https://github.com/user-attachments/assets/f20d8dfd-3a9d-4cf4-8c08-25e5c1a2fbf9" />
+
 ---
 
 ### Step 2: Confirm the Target Resource in Configuration
@@ -488,7 +490,6 @@ The ARN `arn:aws:iam::000000000000:group/iamgroup_rose` in the plan output uses 
 
 
 
-<img width="1149" height="526" alt="image" src="https://github.com/user-attachments/assets/f20d8dfd-3a9d-4cf4-8c08-25e5c1a2fbf9" />
 <img width="1129" height="601" alt="image" src="https://github.com/user-attachments/assets/e4fa4b1d-8ed8-4c31-b8cd-89cddd41634f" />
 <img width="1132" height="649" alt="image" src="https://github.com/user-attachments/assets/2d4746dd-c9f1-4665-9623-538a2a0b259e" />
 <img width="1133" height="680" alt="image" src="https://github.com/user-attachments/assets/d1d439fe-86d4-4a24-8177-0929ab3c5bf5" />
