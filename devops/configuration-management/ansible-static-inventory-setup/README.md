@@ -117,6 +117,8 @@ host_key_checking = False
 
 > Screenshot: Terminal output of `ansible.cfg` showing `host_key_checking = False`.
 
+<img width="1020" height="715" alt="image" src="https://github.com/user-attachments/assets/896efc8e-900b-481e-acbc-f3248402990d" />
+
 `host_key_checking = False` disables SSH host key verification. This is expected in controlled lab-style environments where servers are provisioned dynamically and known host fingerprints are not pre-distributed. In production environments, host key checking should remain enabled.
 
 ---
@@ -149,6 +151,8 @@ cat /home/thor/playbook/playbook.yml
 ```
 
 > Screenshot: Terminal output of `playbook.yml` showing the two tasks: HTTPD package installation and service start.
+
+<img width="1020" height="715" alt="image" src="https://github.com/user-attachments/assets/896efc8e-900b-481e-acbc-f3248402990d" />
 
 Key observations from the playbook:
 
@@ -300,7 +304,6 @@ The following scenarios represent common failure modes in this class of implemen
 
 
 
-<img width="1020" height="715" alt="image" src="https://github.com/user-attachments/assets/896efc8e-900b-481e-acbc-f3248402990d" />
 <img width="1110" height="766" alt="image" src="https://github.com/user-attachments/assets/82df68d0-b37b-4372-942d-708595978b22" />
 <img width="1098" height="780" alt="image" src="https://github.com/user-attachments/assets/b6c038e8-4d79-4256-b06f-d7d3c4fb9772" />
 <img width="1110" height="866" alt="image" src="https://github.com/user-attachments/assets/685c1252-e9a6-4788-a9b3-965effb191f0" />
