@@ -94,6 +94,8 @@ drwx------ 1 thor thor 4096 May  3 06:32 ..
 
 > Screenshot: Terminal output showing the playbook directory listing with `ansible.cfg` and `playbook.yml` present and no inventory file.
 
+<img width="1024" height="647" alt="image" src="https://github.com/user-attachments/assets/a9d9dcfb-5cd7-46b4-8ae6-22926f5c8c98" />
+
 The directory contains only `ansible.cfg` and `playbook.yml`. No inventory file is present. This confirms the inventory must be created before playbook execution can proceed.
 
 ---
@@ -298,7 +300,6 @@ The following scenarios represent common failure modes in this class of implemen
 
 
 
-<img width="1024" height="647" alt="image" src="https://github.com/user-attachments/assets/a9d9dcfb-5cd7-46b4-8ae6-22926f5c8c98" />
 <img width="1020" height="715" alt="image" src="https://github.com/user-attachments/assets/896efc8e-900b-481e-acbc-f3248402990d" />
 <img width="1110" height="766" alt="image" src="https://github.com/user-attachments/assets/82df68d0-b37b-4372-942d-708595978b22" />
 <img width="1098" height="780" alt="image" src="https://github.com/user-attachments/assets/b6c038e8-4d79-4256-b06f-d7d3c4fb9772" />
