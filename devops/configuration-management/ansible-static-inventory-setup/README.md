@@ -175,6 +175,8 @@ EOF
 
 > Screenshot: Terminal showing the heredoc command executed with no errors, returning to the prompt cleanly.
 
+<img width="1110" height="766" alt="image" src="https://github.com/user-attachments/assets/82df68d0-b37b-4372-942d-708595978b22" />
+
 **Inventory variable breakdown:**
 
 | Variable | Value | Purpose |
@@ -206,6 +208,8 @@ stapp02 ansible_host=stapp02 ansible_user=steve ansible_ssh_pass=Am3ric@ ansible
 
 > Screenshot: Terminal output confirming the full inventory line is written correctly with all six variables present.
 
+<img width="1098" height="780" alt="image" src="https://github.com/user-attachments/assets/b6c038e8-4d79-4256-b06f-d7d3c4fb9772" />
+
 The inventory file content matches the intended configuration exactly. All variables are on a single line with no formatting errors, extraneous whitespace, or missing values.
 
 ---
@@ -219,6 +223,8 @@ cd /home/thor/playbook/ && ansible-playbook -i inventory playbook.yml
 ```
 
 > Screenshot: Full terminal output of the `ansible-playbook` run showing PLAY, TASK, and PLAY RECAP sections with all tasks reporting `ok` or `changed` and zero failures.
+
+<img width="1110" height="866" alt="image" src="https://github.com/user-attachments/assets/685c1252-e9a6-4788-a9b3-965effb191f0" />
 
 ---
 
@@ -296,20 +302,3 @@ The following scenarios represent common failure modes in this class of implemen
 * **INI inventory variable syntax is whitespace-sensitive.** All variables on an INI host line must be space-separated key-value pairs with no extraneous whitespace around the `=` sign. Formatting errors here do not always produce obvious error messages and can result in variables being silently ignored.
 
 * **`changed` versus `ok` in PLAY RECAP reflects idempotency state.** A `changed` result on a package install or service start task indicates the resource was not in the desired state before the run. Re-running the playbook against the same host after a successful first run would produce `ok` for both tasks, demonstrating Ansible's idempotency. This distinction is important for auditing playbook impact in production environments.
-
-
-
-
-
-
-
-
-<img width="1110" height="766" alt="image" src="https://github.com/user-attachments/assets/82df68d0-b37b-4372-942d-708595978b22" />
-<img width="1098" height="780" alt="image" src="https://github.com/user-attachments/assets/b6c038e8-4d79-4256-b06f-d7d3c4fb9772" />
-<img width="1110" height="866" alt="image" src="https://github.com/user-attachments/assets/685c1252-e9a6-4788-a9b3-965effb191f0" />
-
-
-
-
-
-
