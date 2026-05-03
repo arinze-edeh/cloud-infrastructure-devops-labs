@@ -328,6 +328,8 @@ The configuration file is intact and unchanged. Terraform confirms the HCL is va
 
 *Screenshot: Terminal showing `cat main.tf` output and `terraform validate` returning `Success! The configuration is valid.`*
 
+<img width="1148" height="554" alt="image" src="https://github.com/user-attachments/assets/1a21b618-e6e6-4b32-8047-2bc92ec47017" />
+
 ---
 
 ### Step 10: Run terraform plan to Confirm Re-Provisioning Readiness
@@ -506,7 +508,7 @@ The ARN `arn:aws:iam::000000000000:group/iamgroup_rose` in the plan output uses 
 
 
 <img width="1150" height="479" alt="image" src="https://github.com/user-attachments/assets/077a334a-cd33-4801-9d16-119374539f8c" />
-<img width="1148" height="554" alt="image" src="https://github.com/user-attachments/assets/1a21b618-e6e6-4b32-8047-2bc92ec47017" />
+
 <img width="1151" height="584" alt="image" src="https://github.com/user-attachments/assets/24a4f6fe-d6f2-41e8-981c-1fa4de7fa46c" />
 <img width="1149" height="480" alt="image" src="https://github.com/user-attachments/assets/19ee31c8-7487-4f6e-9a0e-7ae897ab934b" />
 <img width="1148" height="699" alt="image" src="https://github.com/user-attachments/assets/3148210b-e19b-444d-849a-a2b2d2cd512e" />
