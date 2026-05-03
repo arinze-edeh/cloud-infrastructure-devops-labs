@@ -154,6 +154,8 @@ The resource address is `aws_iam_group.this`. This is the value that will be sup
 
 *Screenshot: Terminal output showing `cat main.tf` with the IAM group resource block*
 
+<img width="1132" height="649" alt="image" src="https://github.com/user-attachments/assets/2d4746dd-c9f1-4665-9623-538a2a0b259e" />
+
 ---
 
 ### Step 3: Inspect Current Terraform State
@@ -491,7 +493,7 @@ The ARN `arn:aws:iam::000000000000:group/iamgroup_rose` in the plan output uses 
 
 
 <img width="1129" height="601" alt="image" src="https://github.com/user-attachments/assets/e4fa4b1d-8ed8-4c31-b8cd-89cddd41634f" />
-<img width="1132" height="649" alt="image" src="https://github.com/user-attachments/assets/2d4746dd-c9f1-4665-9623-538a2a0b259e" />
+
 <img width="1133" height="680" alt="image" src="https://github.com/user-attachments/assets/d1d439fe-86d4-4a24-8177-0929ab3c5bf5" />
 <img width="1134" height="694" alt="image" src="https://github.com/user-attachments/assets/88421922-4e7c-436b-9dd2-244b0b353624" />
 <img width="1147" height="675" alt="image" src="https://github.com/user-attachments/assets/821ba85a-22f8-46b1-9408-510ad2e30e51" />
