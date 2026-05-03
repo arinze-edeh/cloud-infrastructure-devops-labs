@@ -174,6 +174,8 @@ The resource exists in state and is eligible for a targeted destroy. An empty or
 
 *Screenshot: Terminal output of `terraform state list` showing `aws_iam_group.this`*
 
+<img width="1133" height="680" alt="image" src="https://github.com/user-attachments/assets/d1d439fe-86d4-4a24-8177-0929ab3c5bf5" />
+
 ---
 
 ### Step 4: Back Up the Configuration File
@@ -187,6 +189,8 @@ cp main.tf main.tf.bak && diff main.tf main.tf.bak
 The absence of any `diff` output confirms the files are byte-for-byte identical. This backup ensures the configuration is recoverable if the file is accidentally modified or deleted during the cleanup workflow.
 
 *Screenshot: Terminal showing `cp` and `diff` commands with no diff output*
+
+<img width="1134" height="694" alt="image" src="https://github.com/user-attachments/assets/88421922-4e7c-436b-9dd2-244b0b353624" />
 
 ---
 
@@ -494,8 +498,6 @@ The ARN `arn:aws:iam::000000000000:group/iamgroup_rose` in the plan output uses 
 
 <img width="1129" height="601" alt="image" src="https://github.com/user-attachments/assets/e4fa4b1d-8ed8-4c31-b8cd-89cddd41634f" />
 
-<img width="1133" height="680" alt="image" src="https://github.com/user-attachments/assets/d1d439fe-86d4-4a24-8177-0929ab3c5bf5" />
-<img width="1134" height="694" alt="image" src="https://github.com/user-attachments/assets/88421922-4e7c-436b-9dd2-244b0b353624" />
 <img width="1147" height="675" alt="image" src="https://github.com/user-attachments/assets/821ba85a-22f8-46b1-9408-510ad2e30e51" />
 <img width="1177" height="756" alt="image" src="https://github.com/user-attachments/assets/8f13c0d5-073c-4f64-926f-d25178934a82" />
 <img width="1152" height="368" alt="image" src="https://github.com/user-attachments/assets/66dae38e-6882-48d3-a273-bb7fa4a1164b" />
