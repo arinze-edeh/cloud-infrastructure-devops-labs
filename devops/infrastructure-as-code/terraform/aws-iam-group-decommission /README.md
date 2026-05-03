@@ -262,6 +262,8 @@ The `Destruction complete after 0s` output confirms the IAM group was removed fr
 
 *Screenshot: Full `terraform destroy` output including the confirmation prompt, `yes` response, and `Destroy complete! Resources: 1 destroyed.` summary*
 
+<img width="1177" height="756" alt="image" src="https://github.com/user-attachments/assets/8f13c0d5-073c-4f64-926f-d25178934a82" />
+
 ---
 
 ### Step 7: Confirm State is Empty
@@ -275,6 +277,8 @@ terraform state list
 The command returns no output, confirming the state file is now empty and Terraform no longer tracks any managed resources in this workspace.
 
 *Screenshot: Terminal showing `terraform state list` with empty output after destroy*
+
+<img width="1152" height="368" alt="image" src="https://github.com/user-attachments/assets/66dae38e-6882-48d3-a273-bb7fa4a1164b" />
 
 ---
 
@@ -293,6 +297,8 @@ An error occurred (NoSuchEntity) when calling the GetGroup operation: Group iamg
 The `NoSuchEntity` error from the IAM API is the expected response and confirms that `iamgroup_rose` has been fully deleted from AWS. This step validates that the Terraform state reflects actual infrastructure reality.
 
 *Screenshot: AWS CLI output showing `NoSuchEntity` error confirming group deletion*
+
+<img width="1152" height="512" alt="image" src="https://github.com/user-attachments/assets/5399000c-6cd5-4d68-8e2a-fea60a52b9f4" />
 
 ---
 
@@ -499,9 +505,6 @@ The ARN `arn:aws:iam::000000000000:group/iamgroup_rose` in the plan output uses 
 
 
 
-<img width="1177" height="756" alt="image" src="https://github.com/user-attachments/assets/8f13c0d5-073c-4f64-926f-d25178934a82" />
-<img width="1152" height="368" alt="image" src="https://github.com/user-attachments/assets/66dae38e-6882-48d3-a273-bb7fa4a1164b" />
-<img width="1152" height="512" alt="image" src="https://github.com/user-attachments/assets/5399000c-6cd5-4d68-8e2a-fea60a52b9f4" />
 <img width="1150" height="479" alt="image" src="https://github.com/user-attachments/assets/077a334a-cd33-4801-9d16-119374539f8c" />
 <img width="1148" height="554" alt="image" src="https://github.com/user-attachments/assets/1a21b618-e6e6-4b32-8047-2bc92ec47017" />
 <img width="1151" height="584" alt="image" src="https://github.com/user-attachments/assets/24a4f6fe-d6f2-41e8-981c-1fa4de7fa46c" />
