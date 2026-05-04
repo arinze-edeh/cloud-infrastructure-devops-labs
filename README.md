@@ -38,7 +38,7 @@
 
 ## Overview
 
-This repository contains **200+ production-grade engineering implementations** organised across three domains: core DevOps engineering, AWS cloud architecture, and Azure cloud architecture. Each implementation addresses a specific infrastructure, automation, security, or architectural challenge modelled on real-world production environments.
+This repository contains **200+ production-style engineering implementations** organised across three domains: core DevOps engineering, AWS cloud architecture, and Azure cloud architecture. Each implementation addresses a specific infrastructure, automation, security, or architectural challenge modelled on real-world production environments.
 
 The portfolio spans the complete engineering lifecycle: from Linux system hardening and Git workflow design, through container platform operations and Kubernetes cluster administration, to multi-stage CI/CD pipeline architecture, infrastructure-as-code provisioning, and cloud-native service integration across AWS and Azure.
 
