@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**Production-grade infrastructure engineering across Linux, containers, orchestration, CI/CD, IaC, and multi-cloud platforms.**
+**Production-style infrastructure engineering across Linux, containers, orchestration, CI/CD, IaC, and multi-cloud platforms.**
 
 [![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=flat-square&logo=amazonaws&logoColor=white)](./aws)
 [![Azure](https://img.shields.io/badge/Microsoft_Azure-0089D6?style=flat-square&logo=microsoftazure&logoColor=white)](./azure)
