@@ -163,7 +163,9 @@ resource "aws_iam_role" "role" {
 
 The role is defined with an EC2 trust policy, enabling EC2 instances to assume this role via `sts:AssumeRole`.
 
-> Screenshot: `02-cat-main-tf.png`
+> Screenshot: 
+
+<img width="1045" height="704" alt="image" src="https://github.com/user-attachments/assets/d32b10b3-4647-4c27-8632-e8944f0ab2d2" />
 
 ---
 
@@ -382,7 +384,6 @@ Relying solely on `terraform state list` to confirm deletion is insufficient. Th
 * [Terraform State Management](https://developer.hashicorp.com/terraform/language/state)
 
 
-<img width="1045" height="704" alt="image" src="https://github.com/user-attachments/assets/d32b10b3-4647-4c27-8632-e8944f0ab2d2" />
 <img width="1070" height="817" alt="image" src="https://github.com/user-attachments/assets/5bb3e0b8-b3b1-468d-b1b9-f5b7afb5028d" />
 <img width="1077" height="636" alt="image" src="https://github.com/user-attachments/assets/d128cba7-5cfd-4c66-aa2d-b77338adfd69" />
 <img width="1076" height="809" alt="image" src="https://github.com/user-attachments/assets/67b36f4f-22db-42b0-82c0-212641ebf579" />
