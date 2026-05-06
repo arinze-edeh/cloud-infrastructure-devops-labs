@@ -314,9 +314,10 @@ aws_iam_role.role: Destruction complete after 0s
 Destroy complete! Resources: 1 destroyed.
 ```
 
-> Screenshot: `06-terraform-destroy-target-confirm-yes.png`
+> Screenshots: 
 
-> Screenshot: `07-terraform-destroy-complete.png`
+<img width="1077" height="807" alt="image" src="https://github.com/user-attachments/assets/3f4833b5-0935-4af0-8980-2031e2cec2c5" />
+<img width="1072" height="457" alt="image" src="https://github.com/user-attachments/assets/302a6634-12af-4d9d-8fcb-bcaf9c18d3e7" />
 
 ---
 
@@ -336,7 +337,9 @@ terraform state list
 
 No output is returned, confirming the state file has been fully cleared of tracked resources.
 
-> Screenshot: `08-terraform-state-list-empty.png`
+> Screenshot: 
+
+<img width="1077" height="353" alt="image" src="https://github.com/user-attachments/assets/61051eb5-848b-424b-816a-742a3ecf932a" />
 
 ---
 
@@ -356,7 +359,9 @@ An error occurred (NoSuchEntity) when calling the GetRole operation: Role iamrol
 
 The `NoSuchEntity` response from the IAM API is the definitive confirmation that the role has been fully deleted from the simulated AWS environment.
 
-> Screenshot: `09-aws-cli-get-role-no-such-entity.png`
+> Screenshot: 
+
+<img width="1076" height="403" alt="image" src="https://github.com/user-attachments/assets/112449a9-7424-4025-9693-d9dee6b28a04" />
 
 ---
 
@@ -390,7 +395,9 @@ Notable changes from the initial state:
 * `terraform.tfstate.backup` has been automatically created by Terraform, preserving the pre-destroy state snapshot.
 * `main.tf` is unchanged at 353 bytes, confirming the provisioning code is intact.
 
-> Screenshot: `10-post-destroy-ls-la-cat-main-tf.png`
+> Screenshot: 
+
+<img width="1070" height="766" alt="image" src="https://github.com/user-attachments/assets/6ce3e4ff-f886-41d5-9021-e2a69fdce680" />
 
 ---
 
@@ -453,17 +460,3 @@ Relying solely on `terraform state list` to confirm deletion is insufficient. Th
 * [LocalStack AWS Simulation Documentation](https://docs.localstack.cloud/overview/)
 * [AWS CLI IAM get-role Command Reference](https://docs.aws.amazon.com/cli/latest/reference/iam/get-role.html)
 * [Terraform State Management](https://developer.hashicorp.com/terraform/language/state)
-
-
-
-
-
-
-
-
-
-<img width="1077" height="807" alt="image" src="https://github.com/user-attachments/assets/3f4833b5-0935-4af0-8980-2031e2cec2c5" />
-<img width="1072" height="457" alt="image" src="https://github.com/user-attachments/assets/302a6634-12af-4d9d-8fcb-bcaf9c18d3e7" />
-<img width="1077" height="353" alt="image" src="https://github.com/user-attachments/assets/61051eb5-848b-424b-816a-742a3ecf932a" />
-<img width="1076" height="403" alt="image" src="https://github.com/user-attachments/assets/112449a9-7424-4025-9693-d9dee6b28a04" />
-<img width="1070" height="766" alt="image" src="https://github.com/user-attachments/assets/6ce3e4ff-f886-41d5-9021-e2a69fdce680" />
