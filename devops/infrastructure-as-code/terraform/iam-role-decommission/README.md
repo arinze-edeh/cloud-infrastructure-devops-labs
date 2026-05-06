@@ -15,13 +15,14 @@
 - [Repository Structure](#repository-structure)
 - [Implementation Guide](#implementation-guide)
   - [Step 1: Verify Working Directory and Existing Files](#step-1-verify-working-directory-and-existing-files)
-  - [Step 2: Inspect the Terraform Configuration](#step-2-inspect-the-terraform-configuration)
-  - [Step 3: Confirm Current State](#step-3-confirm-current-state)
-  - [Step 4: Run a Targeted Destroy Plan](#step-4-run-a-targeted-destroy-plan)
-  - [Step 5: Execute the Targeted Destroy](#step-5-execute-the-targeted-destroy)
-  - [Step 6: Confirm State Is Empty](#step-6-confirm-state-is-empty)
-  - [Step 7: Verify Deletion Against the AWS Endpoint](#step-7-verify-deletion-against-the-aws-endpoint)
-  - [Step 8: Confirm Provisioning Code Is Retained](#step-8-confirm-provisioning-code-is-retained)
+  - [Step 2: Inspect the Main Terraform Configuration](#step-2-inspect-the-main-terraform-configuration)
+  - [Step 3: Inspect the Provider Configuration](#step-3-inspect-the-provider-configuration)
+  - [Step 4: Confirm Current State](#step-4-confirm-current-state)
+  - [Step 5: Run a Targeted Destroy Plan](#step-5-run-a-targeted-destroy-plan)
+  - [Step 6: Execute the Targeted Destroy](#step-6-execute-the-targeted-destroy)
+  - [Step 7: Confirm State Is Empty](#step-7-confirm-state-is-empty)
+  - [Step 8: Verify Deletion Against the AWS Endpoint](#step-8-verify-deletion-against-the-aws-endpoint)
+  - [Step 9: Confirm Provisioning Code Is Retained](#step-9-confirm-provisioning-code-is-retained)
 - [Best Practices Applied](#best-practices-applied)
 - [Lessons Learned](#lessons-learned)
 - [Errors and Resolutions](#errors-and-resolutions)
@@ -128,7 +129,7 @@ drwxr-xr-x 3 bob bob 4096 May  6 21:41 .terraform
 
 ---
 
-### Step 2: Inspect the Terraform Configuration
+### Step 2: Inspect the Main Terraform Configuration
 
 Review the `main.tf` to confirm the resource being targeted. This also serves as documentation that the configuration will be preserved post-deletion.
 
@@ -167,9 +168,74 @@ The role is defined with an EC2 trust policy, enabling EC2 instances to assume t
 
 <img width="1045" height="704" alt="image" src="https://github.com/user-attachments/assets/d32b10b3-4647-4c27-8632-e8944f0ab2d2" />
 
+
 ---
 
-### Step 3: Confirm Current State
+### Step 3: Inspect the Provider Configuration
+
+Review `provider.tf` to understand how Terraform authenticates and routes API calls. In this environment, all AWS service endpoints are redirected to LocalStack running at `http://aws:4566`, bypassing real AWS credential validation.
+
+```bash
+cat provider.tf
+```
+
+**Output:**
+
+```hcl
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "5.91.0"
+    }
+  }
+}
+
+provider "aws" {
+  region                      = "us-east-1"
+  skip_credentials_validation = true
+  skip_requesting_account_id  = true
+  s3_use_path_style           = true
+
+  endpoints {
+    ec2            = "http://aws:4566"
+    apigateway     = "http://aws:4566"
+    cloudformation = "http://aws:4566"
+    cloudwatch     = "http://aws:4566"
+    dynamodb       = "http://aws:4566"
+    es             = "http://aws:4566"
+    firehose       = "http://aws:4566"
+    iam            = "http://aws:4566"
+    kinesis        = "http://aws:4566"
+    lambda         = "http://aws:4566"
+    route53        = "http://aws:4566"
+    redshift       = "http://aws:4566"
+    s3             = "http://aws:4566"
+    secretsmanager = "http://aws:4566"
+    ses            = "http://aws:4566"
+    sns            = "http://aws:4566"
+    sqs            = "http://aws:4566"
+    ssm            = "http://aws:4566"
+    stepfunctions  = "http://aws:4566"
+    sts            = "http://aws:4566"
+    rds            = "http://aws:4566"
+  }
+}
+```
+
+Key provider settings to note:
+
+* `skip_credentials_validation = true` and `skip_requesting_account_id = true` are required for LocalStack compatibility as the simulated environment does not enforce real AWS credential checks.
+* The `iam` endpoint is explicitly mapped to `http://aws:4566`, which is why the `aws_iam_role` resource is provisioned and deleted against LocalStack rather than real AWS.
+* Provider version is pinned to `5.91.0` via the lock file, ensuring deterministic behavior across team members and CI/CD pipelines.
+
+> Screenshot: 
+
+<img width="1070" height="817" alt="image" src="https://github.com/user-attachments/assets/5bb3e0b8-b3b1-468d-b1b9-f5b7afb5028d" />
+
+---
+
+### Step 4: Confirm Current State
 
 Before executing any destructive operation, list the resources tracked in the Terraform state file to confirm the target resource is present.
 
@@ -185,11 +251,13 @@ aws_iam_role.role
 
 This confirms that `aws_iam_role.role` is the only tracked resource and is the intended deletion target.
 
-> Screenshot: `03-terraform-state-list.png`
+> Screenshot: 
+
+<img width="1077" height="636" alt="image" src="https://github.com/user-attachments/assets/d128cba7-5cfd-4c66-aa2d-b77338adfd69" />
 
 ---
 
-### Step 4: Run a Targeted Destroy Plan
+### Step 5: Run a Targeted Destroy Plan
 
 Execute a dry-run destroy plan scoped to the specific resource. This produces a preview of the actions Terraform will take without making any changes to infrastructure.
 
@@ -212,11 +280,11 @@ Plan: 0 to add, 0 to change, 1 to destroy.
 
 Terraform confirms exactly one resource will be destroyed and zero resources will be created or modified. The `-destroy` flag combined with `-target` produces a safe, auditable preview before committing.
 
-> Screenshot: `04-terraform-plan-destroy-target.png`
+> Screenshot: `05-terraform-plan-destroy-target.png`
 
 ---
 
-### Step 5: Execute the Targeted Destroy
+### Step 6: Execute the Targeted Destroy
 
 With the plan validated, execute the actual destroy operation targeting only `aws_iam_role.role`.
 
@@ -243,13 +311,13 @@ aws_iam_role.role: Destruction complete after 0s
 Destroy complete! Resources: 1 destroyed.
 ```
 
-> Screenshot: `05-terraform-destroy-target-confirm-yes.png`
+> Screenshot: `06-terraform-destroy-target-confirm-yes.png`
 
-> Screenshot: `06-terraform-destroy-complete.png`
+> Screenshot: `07-terraform-destroy-complete.png`
 
 ---
 
-### Step 6: Confirm State Is Empty
+### Step 7: Confirm State Is Empty
 
 After the destroy completes, re-run `terraform state list` to confirm the state file no longer tracks any resources.
 
@@ -265,11 +333,11 @@ terraform state list
 
 No output is returned, confirming the state file has been fully cleared of tracked resources.
 
-> Screenshot: `07-terraform-state-list-empty.png`
+> Screenshot: `08-terraform-state-list-empty.png`
 
 ---
 
-### Step 7: Verify Deletion Against the AWS Endpoint
+### Step 8: Verify Deletion Against the AWS Endpoint
 
 Use the AWS CLI to query the IAM service directly via the LocalStack endpoint and confirm the role no longer exists at the API level.
 
@@ -285,11 +353,11 @@ An error occurred (NoSuchEntity) when calling the GetRole operation: Role iamrol
 
 The `NoSuchEntity` response from the IAM API is the definitive confirmation that the role has been fully deleted from the simulated AWS environment.
 
-> Screenshot: `08-aws-cli-get-role-no-such-entity.png`
+> Screenshot: `09-aws-cli-get-role-no-such-entity.png`
 
 ---
 
-### Step 8: Confirm Provisioning Code Is Retained
+### Step 9: Confirm Provisioning Code Is Retained
 
 Verify that `main.tf` still exists and contains the full role definition, ensuring future reprovisioning is possible without any configuration recovery effort.
 
@@ -319,7 +387,7 @@ Notable changes from the initial state:
 * `terraform.tfstate.backup` has been automatically created by Terraform, preserving the pre-destroy state snapshot.
 * `main.tf` is unchanged at 353 bytes, confirming the provisioning code is intact.
 
-> Screenshot: `09-post-destroy-ls-la-cat-main-tf.png`
+> Screenshot: `10-post-destroy-ls-la-cat-main-tf.png`
 
 ---
 
@@ -384,8 +452,13 @@ Relying solely on `terraform state list` to confirm deletion is insufficient. Th
 * [Terraform State Management](https://developer.hashicorp.com/terraform/language/state)
 
 
-<img width="1070" height="817" alt="image" src="https://github.com/user-attachments/assets/5bb3e0b8-b3b1-468d-b1b9-f5b7afb5028d" />
-<img width="1077" height="636" alt="image" src="https://github.com/user-attachments/assets/d128cba7-5cfd-4c66-aa2d-b77338adfd69" />
+
+
+
+
+
+
+
 <img width="1076" height="809" alt="image" src="https://github.com/user-attachments/assets/67b36f4f-22db-42b0-82c0-212641ebf579" />
 <img width="1077" height="807" alt="image" src="https://github.com/user-attachments/assets/3f4833b5-0935-4af0-8980-2031e2cec2c5" />
 <img width="1072" height="457" alt="image" src="https://github.com/user-attachments/assets/302a6634-12af-4d9d-8fcb-bcaf9c18d3e7" />
