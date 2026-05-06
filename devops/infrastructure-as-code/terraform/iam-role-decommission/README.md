@@ -280,7 +280,10 @@ Plan: 0 to add, 0 to change, 1 to destroy.
 
 Terraform confirms exactly one resource will be destroyed and zero resources will be created or modified. The `-destroy` flag combined with `-target` produces a safe, auditable preview before committing.
 
-> Screenshot: `05-terraform-plan-destroy-target.png`
+> Screenshot: 
+
+<img width="1076" height="809" alt="image" src="https://github.com/user-attachments/assets/67b36f4f-22db-42b0-82c0-212641ebf579" />
+
 
 ---
 
@@ -459,7 +462,6 @@ Relying solely on `terraform state list` to confirm deletion is insufficient. Th
 
 
 
-<img width="1076" height="809" alt="image" src="https://github.com/user-attachments/assets/67b36f4f-22db-42b0-82c0-212641ebf579" />
 <img width="1077" height="807" alt="image" src="https://github.com/user-attachments/assets/3f4833b5-0935-4af0-8980-2031e2cec2c5" />
 <img width="1072" height="457" alt="image" src="https://github.com/user-attachments/assets/302a6634-12af-4d9d-8fcb-bcaf9c18d3e7" />
 <img width="1077" height="353" alt="image" src="https://github.com/user-attachments/assets/61051eb5-848b-424b-816a-742a3ecf932a" />
