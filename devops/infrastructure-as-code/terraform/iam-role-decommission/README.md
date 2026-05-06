@@ -122,7 +122,9 @@ drwxr-xr-x 3 bob bob 4096 May  6 21:41 .terraform
 -rw-rw-r-- 1 bob bob 1396 May  6 21:41 terraform.tfstate
 ```
 
-> Screenshot: `01-working-directory-ls-la.png`
+> Screenshot: 
+
+<img width="1036" height="691" alt="image" src="https://github.com/user-attachments/assets/0229b82e-d13e-4833-a351-fb8f5286dfa7" />
 
 ---
 
@@ -380,7 +382,6 @@ Relying solely on `terraform state list` to confirm deletion is insufficient. Th
 * [Terraform State Management](https://developer.hashicorp.com/terraform/language/state)
 
 
-<img width="1036" height="691" alt="image" src="https://github.com/user-attachments/assets/0229b82e-d13e-4833-a351-fb8f5286dfa7" />
 <img width="1045" height="704" alt="image" src="https://github.com/user-attachments/assets/d32b10b3-4647-4c27-8632-e8944f0ab2d2" />
 <img width="1070" height="817" alt="image" src="https://github.com/user-attachments/assets/5bb3e0b8-b3b1-468d-b1b9-f5b7afb5028d" />
 <img width="1077" height="636" alt="image" src="https://github.com/user-attachments/assets/d128cba7-5cfd-4c66-aa2d-b77338adfd69" />
