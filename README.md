@@ -234,6 +234,7 @@ Serverless and Events           AWS Lambda, S3 triggers, SQS, SNS, Azure Event H
 **Actively seeking DevOps, Cloud Infrastructure, SRE, and Platform Engineering roles.**
 Available for full-time positions, contract engagements, and technical interviews.
 
+---
 
 <div align="center">
 
