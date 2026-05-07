@@ -76,7 +76,9 @@ The portfolio spans the complete engineering lifecycle: from Linux system harden
 | **Messaging and Events** | Amazon SQS, Amazon SNS, Azure Event Hub |
 | **Serverless** | AWS Lambda, S3 event triggers, CloudFormation stacks |
 
+
 ---
+
 
 ## DevOps Engineering
 
