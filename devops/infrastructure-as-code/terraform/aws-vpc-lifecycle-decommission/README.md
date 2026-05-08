@@ -293,9 +293,15 @@ The `main.tf` file remains unchanged with the full VPC resource definition prese
 
 *Screenshot: Empty output from `terraform state list` confirming no managed resources*
 
+<img width="1047" height="262" alt="image" src="https://github.com/user-attachments/assets/238d2dc7-6c44-42ca-91aa-661e3f839ec3" />
+
 *Screenshot: `terraform.tfstate` showing empty `resources` array*
 
+<img width="1051" height="439" alt="image" src="https://github.com/user-attachments/assets/c53fb175-6f79-4ef5-8138-3b8c845309b8" />
+
 *Screenshot: `cat main.tf` confirming provisioning code is preserved and unmodified*
+
+<img width="1050" height="600" alt="image" src="https://github.com/user-attachments/assets/a98b1dab-5425-4e02-a3ee-29008beb882a" />
 
 ---
 
@@ -410,11 +416,3 @@ terraform apply
 ```
 
 Terraform will read the `main.tf` definition, generate a plan to create the VPC with CIDR `10.0.0.0/16` and the `datacenter-vpc` name tag, and provision it against the configured LocalStack endpoint. The state file will be updated automatically upon successful apply.
-
-
-
-
-
-<img width="1047" height="262" alt="image" src="https://github.com/user-attachments/assets/238d2dc7-6c44-42ca-91aa-661e3f839ec3" />
-<img width="1051" height="439" alt="image" src="https://github.com/user-attachments/assets/c53fb175-6f79-4ef5-8138-3b8c845309b8" />
-<img width="1050" height="600" alt="image" src="https://github.com/user-attachments/assets/a98b1dab-5425-4e02-a3ee-29008beb882a" />
