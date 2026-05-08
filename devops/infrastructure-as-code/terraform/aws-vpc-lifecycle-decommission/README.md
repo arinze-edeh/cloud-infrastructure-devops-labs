@@ -186,7 +186,11 @@ Key attributes confirmed:
 
 *Screenshot: Output of `terraform state list` confirming `aws_vpc.this` is tracked*
 
+<img width="1048" height="529" alt="image" src="https://github.com/user-attachments/assets/8c083d6e-51bd-47c8-b738-1476cbe6df1b" />
+
 *Screenshot: Output of `terraform state show aws_vpc.this` displaying full resource attributes*
+
+<img width="1049" height="623" alt="image" src="https://github.com/user-attachments/assets/a6fbb841-857a-4088-b3f2-8f120b641063" />
 
 ---
 
@@ -406,10 +410,7 @@ Terraform will read the `main.tf` definition, generate a plan to create the VPC 
 
 
 
-<img width="1033" height="537" alt="image" src="https://github.com/user-attachments/assets/8b0d8343-895d-4ecf-9317-7bd24b72847b" />
 
-<img width="1048" height="529" alt="image" src="https://github.com/user-attachments/assets/8c083d6e-51bd-47c8-b738-1476cbe6df1b" />
-<img width="1049" height="623" alt="image" src="https://github.com/user-attachments/assets/a6fbb841-857a-4088-b3f2-8f120b641063" />
 <img width="1075" height="692" alt="image" src="https://github.com/user-attachments/assets/f451cc8d-ef09-42f7-a223-7ac9f0c23023" />
 <img width="1073" height="782" alt="image" src="https://github.com/user-attachments/assets/bf235a0c-6ba2-472c-887c-8e0854f30deb" />
 <img width="1047" height="262" alt="image" src="https://github.com/user-attachments/assets/238d2dc7-6c44-42ca-91aa-661e3f839ec3" />
