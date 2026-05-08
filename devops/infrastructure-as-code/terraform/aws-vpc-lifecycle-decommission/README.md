@@ -146,6 +146,8 @@ The provider configuration routes all AWS API calls to LocalStack at `http://aws
 
 *Screenshot: Output of `cat main.tf` and `cat provider.tf` showing resource and provider definitions*
 
+<img width="1075" height="707" alt="image" src="https://github.com/user-attachments/assets/687e964a-9ad8-4912-ad21-5379aa4e6104" />
+
 ---
 
 ### Step 3 - Audit the Current State
@@ -405,7 +407,7 @@ Terraform will read the `main.tf` definition, generate a plan to create the VPC 
 
 
 <img width="1033" height="537" alt="image" src="https://github.com/user-attachments/assets/8b0d8343-895d-4ecf-9317-7bd24b72847b" />
-<img width="1075" height="707" alt="image" src="https://github.com/user-attachments/assets/687e964a-9ad8-4912-ad21-5379aa4e6104" />
+
 <img width="1048" height="529" alt="image" src="https://github.com/user-attachments/assets/8c083d6e-51bd-47c8-b738-1476cbe6df1b" />
 <img width="1049" height="623" alt="image" src="https://github.com/user-attachments/assets/a6fbb841-857a-4088-b3f2-8f120b641063" />
 <img width="1075" height="692" alt="image" src="https://github.com/user-attachments/assets/f451cc8d-ef09-42f7-a223-7ac9f0c23023" />
