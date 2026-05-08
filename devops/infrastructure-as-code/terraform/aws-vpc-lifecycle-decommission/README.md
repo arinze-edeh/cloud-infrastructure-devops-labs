@@ -112,6 +112,8 @@ ls -la
 
 *Screenshot: Directory listing showing all Terraform configuration files present*
 
+<img width="1033" height="525" alt="image" src="https://github.com/user-attachments/assets/0c90f451-7107-4e64-bb45-7e8a19623899" />
+
 ---
 
 ### Step 2 - Inspect the Terraform Configuration
@@ -402,7 +404,6 @@ Terraform will read the `main.tf` definition, generate a plan to create the VPC 
 
 
 
-<img width="1033" height="525" alt="image" src="https://github.com/user-attachments/assets/0c90f451-7107-4e64-bb45-7e8a19623899" />
 <img width="1033" height="537" alt="image" src="https://github.com/user-attachments/assets/8b0d8343-895d-4ecf-9317-7bd24b72847b" />
 <img width="1075" height="707" alt="image" src="https://github.com/user-attachments/assets/687e964a-9ad8-4912-ad21-5379aa4e6104" />
 <img width="1048" height="529" alt="image" src="https://github.com/user-attachments/assets/8c083d6e-51bd-47c8-b738-1476cbe6df1b" />
