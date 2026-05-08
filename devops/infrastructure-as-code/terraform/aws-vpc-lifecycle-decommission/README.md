@@ -214,6 +214,8 @@ Every attribute set to be removed is listed with a `-> null` suffix, providing c
 
 *Screenshot: Output of `terraform plan -destroy` showing the planned destruction of `aws_vpc.this`*
 
+<img width="1075" height="692" alt="image" src="https://github.com/user-attachments/assets/f451cc8d-ef09-42f7-a223-7ac9f0c23023" />
+
 ---
 
 ### Step 5 - Execute the Destroy Operation
@@ -244,6 +246,8 @@ Destroy complete! Resources: 1 destroyed.
 ```
 
 *Screenshot: `terraform destroy` confirmation prompt and successful destruction output*
+
+<img width="1073" height="782" alt="image" src="https://github.com/user-attachments/assets/bf235a0c-6ba2-472c-887c-8e0854f30deb" />
 
 ---
 
@@ -411,8 +415,6 @@ Terraform will read the `main.tf` definition, generate a plan to create the VPC 
 
 
 
-<img width="1075" height="692" alt="image" src="https://github.com/user-attachments/assets/f451cc8d-ef09-42f7-a223-7ac9f0c23023" />
-<img width="1073" height="782" alt="image" src="https://github.com/user-attachments/assets/bf235a0c-6ba2-472c-887c-8e0854f30deb" />
 <img width="1047" height="262" alt="image" src="https://github.com/user-attachments/assets/238d2dc7-6c44-42ca-91aa-661e3f839ec3" />
 <img width="1051" height="439" alt="image" src="https://github.com/user-attachments/assets/c53fb175-6f79-4ef5-8138-3b8c845309b8" />
 <img width="1050" height="600" alt="image" src="https://github.com/user-attachments/assets/a98b1dab-5425-4e02-a3ee-29008beb882a" />
