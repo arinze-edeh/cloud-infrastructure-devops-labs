@@ -183,7 +183,12 @@ Verify the playbook was written correctly:
 cat playbook.yml
 ```
 
-Screenshot: 
+Screenshots:
+
+
+<img width="517" height="411" alt="image" src="https://github.com/user-attachments/assets/99a966e0-4157-4cac-a04a-110fe8f9f40b" />
+<img width="518" height="380" alt="image" src="https://github.com/user-attachments/assets/001a3a0c-a95b-4a4f-bb57-15a29390d8a9" />
+<img width="519" height="323" alt="image" src="https://github.com/user-attachments/assets/f0339c18-583a-4d8f-b5c5-ec10626dd3fe" />
 
 **Design decisions in this playbook:**
 
@@ -325,8 +330,5 @@ ansible/
 
 
 
-<img width="517" height="411" alt="image" src="https://github.com/user-attachments/assets/99a966e0-4157-4cac-a04a-110fe8f9f40b" />
-<img width="518" height="380" alt="image" src="https://github.com/user-attachments/assets/001a3a0c-a95b-4a4f-bb57-15a29390d8a9" />
-<img width="519" height="323" alt="image" src="https://github.com/user-attachments/assets/f0339c18-583a-4d8f-b5c5-ec10626dd3fe" />
 <img width="514" height="369" alt="image" src="https://github.com/user-attachments/assets/2c2d1797-d647-446c-b3a4-7a458ee30a05" />
 <img width="517" height="433" alt="image" src="https://github.com/user-attachments/assets/3f23e268-5028-4551-8715-ed1b0ed747d3" />
