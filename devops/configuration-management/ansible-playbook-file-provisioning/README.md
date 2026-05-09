@@ -148,7 +148,10 @@ The `SUCCESS` status with a `pong` response confirms that:
 
 The warning `Found both group and host with same name: stapp03` is expected behavior when both an inventory group and a host share the identical name. It does not affect functionality and is documented further in the [Errors Encountered and Resolutions](#errors-encountered-and-resolutions) section.
 
-Screenshot: `03-ad-hoc-ping-success.png`
+Screenshot: 
+
+
+<img width="516" height="329" alt="image" src="https://github.com/user-attachments/assets/24f422be-c0a5-41b2-a9c5-8efb0738e3e6" />
 
 ---
 
@@ -180,7 +183,7 @@ Verify the playbook was written correctly:
 cat playbook.yml
 ```
 
-Screenshot: `04-playbook-cat.png`
+Screenshot: 
 
 **Design decisions in this playbook:**
 
@@ -322,7 +325,6 @@ ansible/
 
 
 
-<img width="516" height="329" alt="image" src="https://github.com/user-attachments/assets/24f422be-c0a5-41b2-a9c5-8efb0738e3e6" />
 <img width="517" height="411" alt="image" src="https://github.com/user-attachments/assets/99a966e0-4157-4cac-a04a-110fe8f9f40b" />
 <img width="518" height="380" alt="image" src="https://github.com/user-attachments/assets/001a3a0c-a95b-4a4f-bb57-15a29390d8a9" />
 <img width="519" height="323" alt="image" src="https://github.com/user-attachments/assets/f0339c18-583a-4d8f-b5c5-ec10626dd3fe" />
