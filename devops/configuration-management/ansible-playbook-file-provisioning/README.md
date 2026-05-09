@@ -81,7 +81,10 @@ stapp03 ansible_user=banner ansible_ssh_pass=$pwd ansible_ssh_common_args='-o St
 * The SSH password is set to the literal string `$pwd`, indicating a placeholder that was never replaced with the actual credential
 * No Ansible host group is defined, meaning the inventory cannot be reliably targeted by group name in a playbook
 
-Screenshot: `01-initial-inventory-cat.png`
+Screenshot: 
+
+
+<img width="516" height="307" alt="image" src="https://github.com/user-attachments/assets/45139d17-7560-4152-b2d6-8b68b7114e0a" />
 
 ---
 
@@ -314,7 +317,6 @@ ansible/
 
 
 
-<img width="516" height="307" alt="image" src="https://github.com/user-attachments/assets/45139d17-7560-4152-b2d6-8b68b7114e0a" />
 <img width="512" height="403" alt="image" src="https://github.com/user-attachments/assets/e5d53d9d-4d7b-4bd9-9bc9-81e6c65a1b13" />
 <img width="518" height="269" alt="image" src="https://github.com/user-attachments/assets/a649279c-bbe4-4b1e-ba1c-764cb7454d5b" />
 <img width="517" height="350" alt="image" src="https://github.com/user-attachments/assets/7a4ec7d6-0360-42b1-bbfa-0a326006668a" />
