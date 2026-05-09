@@ -340,6 +340,8 @@ Warning: Argument is deprecated
 
 *Screenshot: terraform plan output showing 1 resource to add with computed etag value*
 
+<img width="538" height="410" alt="image" src="https://github.com/user-attachments/assets/e73b66f6-3b00-4c82-9d86-5195da47e34a" />
+
 ---
 
 ### Step 8: Run terraform apply
@@ -369,6 +371,8 @@ The apply completed immediately (0 seconds), which is consistent with LocalStack
 
 *Screenshot: terraform apply confirming successful creation of aws_s3_object.devops_file*
 
+<img width="538" height="410" alt="image" src="https://github.com/user-attachments/assets/0357f30c-a880-4360-85b2-07f936b3f480" />
+
 ---
 
 ### Step 9: Verify the Uploaded Object via AWS CLI
@@ -388,6 +392,8 @@ aws s3 ls s3://devops-cp-3338/ --endpoint-url http://aws:4566
 The object `devops.txt` is present in the bucket with a size of 27 bytes, matching the source file verified in Step 1. The timestamp confirms it was uploaded during the apply execution. The implementation is complete.
 
 *Screenshot: AWS CLI listing confirming devops.txt (27 bytes) present in bucket devops-cp-3338*
+
+<img width="524" height="255" alt="image" src="https://github.com/user-attachments/assets/315942fa-dc71-4ffb-a77f-a374a9c7da66" />
 
 ---
 
@@ -452,11 +458,3 @@ This warning does not cause plan or apply failure. Since the bucket resource was
 | LocalStack | Latest | AWS service emulation (endpoint: http://aws:4566) |
 | AWS CLI | v2 | Post-apply bucket object verification |
 | Bash | 5.x | Heredoc append for main.tf modification |
-
-
-
-
-
-<img width="538" height="410" alt="image" src="https://github.com/user-attachments/assets/e73b66f6-3b00-4c82-9d86-5195da47e34a" />
-<img width="538" height="410" alt="image" src="https://github.com/user-attachments/assets/0357f30c-a880-4360-85b2-07f936b3f480" />
-<img width="524" height="255" alt="image" src="https://github.com/user-attachments/assets/315942fa-dc71-4ffb-a77f-a374a9c7da66" />
