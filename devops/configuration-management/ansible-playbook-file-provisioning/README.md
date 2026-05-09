@@ -215,7 +215,9 @@ playbook: playbook.yml
 
 A clean syntax check result confirms the playbook YAML structure is valid and Ansible can parse it without errors. The warning is expected and non-blocking.
 
-Screenshot: `05-syntax-check.png`
+Screenshot:
+
+<img width="514" height="369" alt="image" src="https://github.com/user-attachments/assets/2c2d1797-d647-446c-b3a4-7a458ee30a05" />
 
 ---
 
@@ -256,7 +258,9 @@ stapp03                    : ok=2    changed=1    unreachable=0    failed=0    s
 
 The playbook executed successfully end-to-end. The file `/tmp/file.txt` now exists on App Server 3.
 
-Screenshot: `06-playbook-execution-success.png`
+Screenshot:
+
+<img width="517" height="433" alt="image" src="https://github.com/user-attachments/assets/3f23e268-5028-4551-8715-ed1b0ed747d3" />
 
 ---
 
@@ -323,12 +327,3 @@ ansible/
 ---
 
 *Documented by Arinze Edeh | Cloud and DevOps Engineer*
-
-
-
-
-
-
-
-<img width="514" height="369" alt="image" src="https://github.com/user-attachments/assets/2c2d1797-d647-446c-b3a4-7a458ee30a05" />
-<img width="517" height="433" alt="image" src="https://github.com/user-attachments/assets/3f23e268-5028-4551-8715-ed1b0ed747d3" />
