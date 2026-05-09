@@ -261,6 +261,8 @@ EOF
 
 *Screenshot: Terminal command appending the aws_s3_object resource block to main.tf*
 
+<img width="524" height="366" alt="image" src="https://github.com/user-attachments/assets/42d82c43-66e0-4f68-b24c-0a809ff30b16" />
+
 ---
 
 ### Step 6: Verify the Updated main.tf
@@ -293,6 +295,8 @@ resource "aws_s3_object" "devops_file" {
 Both resource blocks are present and syntactically correct.
 
 *Screenshot: Verified main.tf containing both the S3 bucket and S3 object resource blocks*
+
+<img width="526" height="326" alt="image" src="https://github.com/user-attachments/assets/10fc0d83-b215-4f74-89b4-21465d0abec8" />
 
 ---
 
@@ -453,8 +457,6 @@ This warning does not cause plan or apply failure. Since the bucket resource was
 
 
 
-<img width="524" height="366" alt="image" src="https://github.com/user-attachments/assets/42d82c43-66e0-4f68-b24c-0a809ff30b16" />
-<img width="526" height="326" alt="image" src="https://github.com/user-attachments/assets/10fc0d83-b215-4f74-89b4-21465d0abec8" />
 <img width="538" height="410" alt="image" src="https://github.com/user-attachments/assets/e73b66f6-3b00-4c82-9d86-5195da47e34a" />
 <img width="538" height="410" alt="image" src="https://github.com/user-attachments/assets/0357f30c-a880-4360-85b2-07f936b3f480" />
 <img width="524" height="255" alt="image" src="https://github.com/user-attachments/assets/315942fa-dc71-4ffb-a77f-a374a9c7da66" />
