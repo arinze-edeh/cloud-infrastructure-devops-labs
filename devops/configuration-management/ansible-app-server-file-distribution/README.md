@@ -247,6 +247,8 @@ EOF
 
 *Screenshot: heredoc command written to terminal creating the inventory file*
 
+<img width="509" height="318" alt="image" src="https://github.com/user-attachments/assets/bcfaf4e8-f1c9-42ad-bafe-014d750176e2" />
+
 ---
 
 ### Step 8 - Verify the Inventory File
@@ -684,8 +686,6 @@ ls -la /usr/src/itadmin/index.html
 The file is owned by root and readable by all. The `copy` module in the Ansible playbook will read this file as the control node's local file and push it to each managed node.
 
 *Screenshot: ls -la output confirming source file existence and permissions*
-
-<img width="509" height="318" alt="image" src="https://github.com/user-attachments/assets/bcfaf4e8-f1c9-42ad-bafe-014d750176e2" />
 
 ---
 
