@@ -302,7 +302,10 @@ Terraform has created a lock file .terraform.lock.hcl ...
 Terraform has been successfully initialized!
 ```
 
-> **Screenshot:** `step-05-terraform-init-success.png`
+> **Screenshot:** 
+
+
+<img width="524" height="284" alt="image" src="https://github.com/user-attachments/assets/e96974e4-0804-426e-9565-58bb10731b64" />
 
 **What this step does:**
 
@@ -326,7 +329,9 @@ terraform validate
 Success! The configuration is valid.
 ```
 
-> **Screenshot:** `step-06-terraform-validate-success.png`
+> **Screenshot:** 
+
+<img width="524" height="319" alt="image" src="https://github.com/user-attachments/assets/d4d5b26c-395a-46d6-b588-693a48da32bf" />
 
 Validation was run twice as observed in the execution log, confirming idempotency of the validate step.
 
@@ -525,8 +530,6 @@ No errors were encountered during this implementation. All commands executed cle
 
 
 
-<img width="524" height="284" alt="image" src="https://github.com/user-attachments/assets/e96974e4-0804-426e-9565-58bb10731b64" />
-<img width="524" height="319" alt="image" src="https://github.com/user-attachments/assets/d4d5b26c-395a-46d6-b588-693a48da32bf" />
 <img width="525" height="275" alt="image" src="https://github.com/user-attachments/assets/8f3d626c-0704-4c74-8778-058446b0e2aa" />
 <img width="541" height="329" alt="image" src="https://github.com/user-attachments/assets/38f8d926-e9ab-447f-b51e-1c79a85db70d" />
 <img width="540" height="383" alt="image" src="https://github.com/user-attachments/assets/6d4ef6c3-f5b6-4cab-b798-c02d67d59c41" />
