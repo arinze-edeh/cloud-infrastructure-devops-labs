@@ -275,7 +275,9 @@ drwxr-x--- 1 bob bob 4096 May 10 19:47 ..
 
 All three Terraform configuration files (`provider.tf`, `variables.tf`, `main.tf`) were confirmed present before proceeding to initialization.
 
-> **Screenshot:** `step-04-directory-structure-confirmed.png`
+> **Screenshot:** 
+
+<img width="523" height="329" alt="image" src="https://github.com/user-attachments/assets/6330c7fc-d413-4bcd-87f2-d3a191aef226" />
 
 ---
 
@@ -523,14 +525,6 @@ No errors were encountered during this implementation. All commands executed cle
 
 
 
-
-<img width="524" height="337" alt="image" src="https://github.com/user-attachments/assets/3418e06d-87ae-427e-b008-07af1649743c" />
-
-<img width="524" height="308" alt="image" src="https://github.com/user-attachments/assets/d8f75ee6-abda-4fe1-a2e6-97d25496a9a2" />
-
-<img width="524" height="240" alt="image" src="https://github.com/user-attachments/assets/9ddf01c2-49c3-4603-96aa-ae40bc4efa5c" />
-
-<img width="523" height="329" alt="image" src="https://github.com/user-attachments/assets/6330c7fc-d413-4bcd-87f2-d3a191aef226" />
 <img width="524" height="284" alt="image" src="https://github.com/user-attachments/assets/e96974e4-0804-426e-9565-58bb10731b64" />
 <img width="524" height="319" alt="image" src="https://github.com/user-attachments/assets/d4d5b26c-395a-46d6-b588-693a48da32bf" />
 <img width="525" height="275" alt="image" src="https://github.com/user-attachments/assets/8f3d626c-0704-4c74-8778-058446b0e2aa" />
