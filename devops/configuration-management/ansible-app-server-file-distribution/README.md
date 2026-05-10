@@ -171,6 +171,8 @@ The file is confirmed at 35 bytes, owned by root, and world-readable. The `copy`
 
 *Screenshot: ls -la output confirming the source file exists at /usr/src/itadmin/index.html*
 
+<img width="511" height="388" alt="image" src="https://github.com/user-attachments/assets/8e55df4c-2987-4eaa-b61f-d433f23dad39" />
+
 ---
 
 ### Step 5 - Inspect the Ansible Working Directory
@@ -956,7 +958,6 @@ The following are proactive risk items relevant to this pattern:
 
 
 
-<img width="511" height="388" alt="image" src="https://github.com/user-attachments/assets/8e55df4c-2987-4eaa-b61f-d433f23dad39" />
 
 <img width="509" height="365" alt="image" src="https://github.com/user-attachments/assets/022107ad-1691-4ab6-bd59-f158c4c54637" />
 <img width="512" height="320" alt="image" src="https://github.com/user-attachments/assets/8dfec186-6291-48c5-88d8-ca21ff1d5005" />
