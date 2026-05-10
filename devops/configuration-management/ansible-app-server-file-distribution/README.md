@@ -119,6 +119,8 @@ Ansible Core 2.14.18 is confirmed with Python 3.9.19 and the global config file 
 
 *Screenshot: ansible --version output on jump-host*
 
+<img width="510" height="326" alt="image" src="https://github.com/user-attachments/assets/b72e87ce-0b55-4159-892f-b33a0f52567f" />
+
 ---
 
 ### Step 3 - Inspect Home Directory State
@@ -952,7 +954,6 @@ The following are proactive risk items relevant to this pattern:
 
 
 
-<img width="510" height="326" alt="image" src="https://github.com/user-attachments/assets/b72e87ce-0b55-4159-892f-b33a0f52567f" />
 <img width="514" height="366" alt="image" src="https://github.com/user-attachments/assets/a112802e-2925-4736-860f-1778aa588d97" />
 <img width="511" height="388" alt="image" src="https://github.com/user-attachments/assets/8e55df4c-2987-4eaa-b61f-d433f23dad39" />
 
