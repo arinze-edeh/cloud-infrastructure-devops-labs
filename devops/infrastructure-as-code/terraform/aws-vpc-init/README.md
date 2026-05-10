@@ -203,7 +203,9 @@ variable "KKE_vpc" {
 }
 ```
 
-> **Screenshot:** `step-02-variables-tf-created-and-verified.png`
+> **Screenshot:** 
+
+<img width="522" height="152" alt="image" src="https://github.com/user-attachments/assets/1123565b-58d5-4626-a21c-41665da34701" />
 
 **Design rationale:** Declaring the VPC name as an input variable with a `default` value allows the value to be overridden at runtime using `-var` flags or `.tfvars` files without modifying source code, which is critical for multi-environment deployments.
 
@@ -523,7 +525,7 @@ No errors were encountered during this implementation. All commands executed cle
 <img width="524" height="337" alt="image" src="https://github.com/user-attachments/assets/3418e06d-87ae-427e-b008-07af1649743c" />
 
 <img width="524" height="308" alt="image" src="https://github.com/user-attachments/assets/d8f75ee6-abda-4fe1-a2e6-97d25496a9a2" />
-<img width="522" height="152" alt="image" src="https://github.com/user-attachments/assets/1123565b-58d5-4626-a21c-41665da34701" />
+
 <img width="524" height="240" alt="image" src="https://github.com/user-attachments/assets/9ddf01c2-49c3-4603-96aa-ae40bc4efa5c" />
 <img width="525" height="322" alt="image" src="https://github.com/user-attachments/assets/345eb35f-2950-4296-9bc1-20ec95a00a6c" />
 <img width="523" height="329" alt="image" src="https://github.com/user-attachments/assets/6330c7fc-d413-4bcd-87f2-d3a191aef226" />
