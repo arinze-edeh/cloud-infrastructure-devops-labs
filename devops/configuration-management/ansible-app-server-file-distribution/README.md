@@ -309,6 +309,8 @@ EOF
 
 *Screenshot: heredoc command written to terminal creating the playbook file*
 
+<img width="512" height="320" alt="image" src="https://github.com/user-attachments/assets/8dfec186-6291-48c5-88d8-ca21ff1d5005" />
+
 ---
 
 ### Step 10 - Verify the Playbook File
@@ -519,7 +521,6 @@ The following are proactive risk items relevant to this pattern:
 
 
 
-<img width="512" height="320" alt="image" src="https://github.com/user-attachments/assets/8dfec186-6291-48c5-88d8-ca21ff1d5005" />
 <img width="508" height="399" alt="image" src="https://github.com/user-attachments/assets/c616fad9-c51a-4153-ba93-09ac81bf8c41" />
 <img width="511" height="425" alt="image" src="https://github.com/user-attachments/assets/b5597036-f293-439c-8f0c-f8d2e44f4f71" />
 <img width="514" height="425" alt="image" src="https://github.com/user-attachments/assets/5b8426ee-a6f2-42ee-99bd-aa46701c78f4" />
