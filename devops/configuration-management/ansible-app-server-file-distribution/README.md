@@ -345,6 +345,8 @@ YAML structure is confirmed. Indentation, module names, and parameter values all
 
 *Screenshot: cat output of /home/thor/ansible/playbook.yml showing full play and task definitions*
 
+<img width="508" height="399" alt="image" src="https://github.com/user-attachments/assets/c616fad9-c51a-4153-ba93-09ac81bf8c41" />
+
 ---
 
 ### Step 11 - Validate Inventory Connectivity
@@ -521,7 +523,6 @@ The following are proactive risk items relevant to this pattern:
 
 
 
-<img width="508" height="399" alt="image" src="https://github.com/user-attachments/assets/c616fad9-c51a-4153-ba93-09ac81bf8c41" />
 <img width="511" height="425" alt="image" src="https://github.com/user-attachments/assets/b5597036-f293-439c-8f0c-f8d2e44f4f71" />
 <img width="514" height="425" alt="image" src="https://github.com/user-attachments/assets/5b8426ee-a6f2-42ee-99bd-aa46701c78f4" />
 <img width="512" height="410" alt="image" src="https://github.com/user-attachments/assets/561cd050-626a-4388-9efb-a5aa2cfa5cd4" />
