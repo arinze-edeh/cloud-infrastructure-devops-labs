@@ -366,7 +366,9 @@ Terraform will perform the following actions:
 Plan: 1 to add, 0 to change, 0 to destroy.
 ```
 
-> **Screenshot:** `step-07-terraform-plan-output.png`
+> **Screenshot:**
+
+<img width="541" height="329" alt="image" src="https://github.com/user-attachments/assets/38f8d926-e9ab-447f-b51e-1c79a85db70d" />
 
 **Key observations from the plan:**
 
@@ -404,7 +406,10 @@ aws_vpc.main: Creation complete after 1s [id=vpc-d6e2aed23dcdf81ae]
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
-> **Screenshot:** `step-08-terraform-apply-complete.png`
+> **Screenshot:** 
+
+<img width="540" height="383" alt="image" src="https://github.com/user-attachments/assets/6d4ef6c3-f5b6-4cab-b798-c02d67d59c41" />
+
 
 The VPC was successfully provisioned with ID `vpc-d6e2aed23dcdf81ae` within approximately 1 second via the LocalStack endpoint.
 
@@ -525,11 +530,3 @@ No errors were encountered during this implementation. All commands executed cle
 ---
 
 *All steps reflect exact commands executed in sequence with zero omissions or modifications.*
-
-
-
-
-
-<img width="525" height="275" alt="image" src="https://github.com/user-attachments/assets/8f3d626c-0704-4c74-8778-058446b0e2aa" />
-<img width="541" height="329" alt="image" src="https://github.com/user-attachments/assets/38f8d926-e9ab-447f-b51e-1c79a85db70d" />
-<img width="540" height="383" alt="image" src="https://github.com/user-attachments/assets/6d4ef6c3-f5b6-4cab-b798-c02d67d59c41" />
