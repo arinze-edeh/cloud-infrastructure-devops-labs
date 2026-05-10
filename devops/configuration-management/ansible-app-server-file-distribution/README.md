@@ -195,6 +195,8 @@ The directory is empty. No inventory or playbook files exist yet. Both artifacts
 
 *Screenshot: ls -la of /home/thor/ansible showing an empty directory*
 
+<img width="508" height="383" alt="image" src="https://github.com/user-attachments/assets/3746c70f-3d6c-4bd6-9736-1480ddd6590c" />
+
 ---
 
 ### Step 6 - Review Global Ansible Configuration
@@ -661,7 +663,6 @@ host_key_checking = False
 
 *Screenshots: Terminal output confirming ansible version, home directory listing, and ansible.cfg contents*
 
-<img width="508" height="383" alt="image" src="https://github.com/user-attachments/assets/3746c70f-3d6c-4bd6-9736-1480ddd6590c" />
 <img width="512" height="376" alt="image" src="https://github.com/user-attachments/assets/d07fa687-d2c2-4a74-a791-55c9cbefeb31" />
 
 ---
