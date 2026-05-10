@@ -387,6 +387,8 @@ All three nodes returned `SUCCESS` with `pong`. Python 3 was auto-discovered at 
 
 *Screenshot: ansible ping ad-hoc output showing SUCCESS for all three application servers*
 
+<img width="511" height="425" alt="image" src="https://github.com/user-attachments/assets/b5597036-f293-439c-8f0c-f8d2e44f4f71" />
+
 ---
 
 ### Step 12 - Execute the Playbook
@@ -436,6 +438,8 @@ The `file` task returned `ok` (not `changed`) on all hosts, indicating `/opt/ita
 
 *Screenshot: Full ansible-playbook output showing all tasks and PLAY RECAP with 0 failures across all three hosts*
 
+<img width="514" height="425" alt="image" src="https://github.com/user-attachments/assets/5b8426ee-a6f2-42ee-99bd-aa46701c78f4" />
+
 ---
 
 ### Step 13 - Verify Remote File Placement
@@ -467,6 +471,8 @@ The file is confirmed present on all three application servers with consistent a
 | Permissions | `-rw-r--r--` | World-readable, no execute bit, default `copy` module behavior |
 
 *Screenshot: ansible shell ad-hoc output confirming index.html presence on stapp01, stapp02, and stapp03*
+
+<img width="512" height="410" alt="image" src="https://github.com/user-attachments/assets/561cd050-626a-4388-9efb-a5aa2cfa5cd4" />
 
 ---
 
@@ -513,16 +519,3 @@ The following are proactive risk items relevant to this pattern:
 | `[Errno 2] No such file or directory` on source | `/usr/src/itadmin/index.html` does not exist on the control node at execution time | Confirm the source path on the jump host with `ls -la /usr/src/itadmin/index.html` before running the playbook |
 | `copy` task returns `ok` instead of `changed` | File already exists on the managed node with an identical checksum | This is correct idempotent behavior. The file is already in the desired state. No action is needed. |
 | `Missing sudo password` fatal error | `ansible_become_pass` not set for a specific host in the inventory | Add `ansible_become_pass` to the affected host entry in the inventory file |
-
-
-
-
-
-
-
-
-
-
-<img width="511" height="425" alt="image" src="https://github.com/user-attachments/assets/b5597036-f293-439c-8f0c-f8d2e44f4f71" />
-<img width="514" height="425" alt="image" src="https://github.com/user-attachments/assets/5b8426ee-a6f2-42ee-99bd-aa46701c78f4" />
-<img width="512" height="410" alt="image" src="https://github.com/user-attachments/assets/561cd050-626a-4388-9efb-a5aa2cfa5cd4" />
