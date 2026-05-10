@@ -157,6 +157,8 @@ The file is owned by root and readable by all. The `copy` module in the Ansible 
 
 *Screenshot: ls -la output confirming source file existence and permissions*
 
+<img width="509" height="318" alt="image" src="https://github.com/user-attachments/assets/bcfaf4e8-f1c9-42ad-bafe-014d750176e2" />
+
 ---
 
 ### Step 3 - Create the Ansible Inventory
@@ -434,7 +436,6 @@ The following are proactive risk items relevant to this pattern:
 <img width="514" height="366" alt="image" src="https://github.com/user-attachments/assets/a112802e-2925-4736-860f-1778aa588d97" />
 <img width="511" height="388" alt="image" src="https://github.com/user-attachments/assets/8e55df4c-2987-4eaa-b61f-d433f23dad39" />
 
-<img width="509" height="318" alt="image" src="https://github.com/user-attachments/assets/bcfaf4e8-f1c9-42ad-bafe-014d750176e2" />
 <img width="509" height="365" alt="image" src="https://github.com/user-attachments/assets/022107ad-1691-4ab6-bd59-f158c4c54637" />
 <img width="512" height="320" alt="image" src="https://github.com/user-attachments/assets/8dfec186-6291-48c5-88d8-ca21ff1d5005" />
 <img width="508" height="399" alt="image" src="https://github.com/user-attachments/assets/c616fad9-c51a-4153-ba93-09ac81bf8c41" />
