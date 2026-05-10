@@ -149,6 +149,8 @@ The `ansible/` directory exists under `/home/thor/`. All inventory and playbook 
 
 *Screenshot: ls -la output of /home/thor showing the ansible working directory*
 
+<img width="514" height="366" alt="image" src="https://github.com/user-attachments/assets/a112802e-2925-4736-860f-1778aa588d97" />
+
 ---
 
 ### Step 4 - Confirm Source File Exists
@@ -954,7 +956,6 @@ The following are proactive risk items relevant to this pattern:
 
 
 
-<img width="514" height="366" alt="image" src="https://github.com/user-attachments/assets/a112802e-2925-4736-860f-1778aa588d97" />
 <img width="511" height="388" alt="image" src="https://github.com/user-attachments/assets/8e55df4c-2987-4eaa-b61f-d433f23dad39" />
 
 <img width="509" height="365" alt="image" src="https://github.com/user-attachments/assets/022107ad-1691-4ab6-bd59-f158c4c54637" />
