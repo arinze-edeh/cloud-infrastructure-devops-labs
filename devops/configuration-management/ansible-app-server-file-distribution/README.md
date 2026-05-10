@@ -218,6 +218,8 @@ host_key_checking = False
 
 *Screenshot: cat output of /etc/ansible/ansible.cfg showing host_key_checking = False*
 
+<img width="512" height="376" alt="image" src="https://github.com/user-attachments/assets/d07fa687-d2c2-4a74-a791-55c9cbefeb31" />
+
 ---
 
 ### Step 7 - Create the Ansible Inventory
@@ -662,8 +664,6 @@ host_key_checking = False
 > `host_key_checking = False` is pre-configured, removing the need for manual SSH key acceptance on first connection to each managed node. This is appropriate for a controlled internal network environment.
 
 *Screenshots: Terminal output confirming ansible version, home directory listing, and ansible.cfg contents*
-
-<img width="512" height="376" alt="image" src="https://github.com/user-attachments/assets/d07fa687-d2c2-4a74-a791-55c9cbefeb31" />
 
 ---
 
