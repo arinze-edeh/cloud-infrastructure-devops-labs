@@ -245,7 +245,9 @@ resource "aws_vpc" "main" {
 }
 ```
 
-> **Screenshot:** `step-03-main-tf-created-and-verified.png`
+> **Screenshot:** 
+
+<img width="525" height="322" alt="image" src="https://github.com/user-attachments/assets/345eb35f-2950-4296-9bc1-20ec95a00a6c" />
 
 **Design rationale:** The resource logical name `main` follows Terraform convention for singleton resources of a given type per module. The CIDR block `10.0.0.0/16` provides 65,536 IP addresses, which is the standard starting allocation for a primary VPC.
 
@@ -527,7 +529,7 @@ No errors were encountered during this implementation. All commands executed cle
 <img width="524" height="308" alt="image" src="https://github.com/user-attachments/assets/d8f75ee6-abda-4fe1-a2e6-97d25496a9a2" />
 
 <img width="524" height="240" alt="image" src="https://github.com/user-attachments/assets/9ddf01c2-49c3-4603-96aa-ae40bc4efa5c" />
-<img width="525" height="322" alt="image" src="https://github.com/user-attachments/assets/345eb35f-2950-4296-9bc1-20ec95a00a6c" />
+
 <img width="523" height="329" alt="image" src="https://github.com/user-attachments/assets/6330c7fc-d413-4bcd-87f2-d3a191aef226" />
 <img width="524" height="284" alt="image" src="https://github.com/user-attachments/assets/e96974e4-0804-426e-9565-58bb10731b64" />
 <img width="524" height="319" alt="image" src="https://github.com/user-attachments/assets/d4d5b26c-395a-46d6-b588-693a48da32bf" />
