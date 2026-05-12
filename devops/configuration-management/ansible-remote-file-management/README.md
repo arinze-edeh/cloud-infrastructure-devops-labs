@@ -264,6 +264,8 @@ cat playbook.yml
 
 *Screenshot: Terminal output of `cat playbook.yml` confirming correct indentation, module parameters, and Jinja2 variable references.*
 
+<img width="517" height="419" alt="image" src="https://github.com/user-attachments/assets/b715b291-6d7c-4e32-a382-9fe20e8b9d8d" />
+
 ---
 
 ### Step 7: Syntax Check
@@ -283,6 +285,8 @@ playbook: playbook.yml
 A clean output with only the playbook filename confirms no syntax errors were detected.
 
 *Screenshot: Terminal output of `--syntax-check` showing `playbook: playbook.yml` with no error messages.*
+
+<img width="519" height="373" alt="image" src="https://github.com/user-attachments/assets/325328ee-931b-487c-8861-a78176d1841c" />
 
 ---
 
@@ -467,8 +471,7 @@ All three verification checks confirmed:
 
 
 <img width="516" height="355" alt="image" src="https://github.com/user-attachments/assets/64e64697-da43-4915-a7bc-e25f45dedc9c" />
-<img width="517" height="419" alt="image" src="https://github.com/user-attachments/assets/b715b291-6d7c-4e32-a382-9fe20e8b9d8d" />
-<img width="519" height="373" alt="image" src="https://github.com/user-attachments/assets/325328ee-931b-487c-8861-a78176d1841c" />
+
 <img width="516" height="419" alt="image" src="https://github.com/user-attachments/assets/b2b64fdc-9ca0-422d-abc1-75dcd5fc35ac" />
 <img width="518" height="397" alt="image" src="https://github.com/user-attachments/assets/a5d05af4-f4ff-44c6-8790-1510f4a03c7d" />
 <img width="518" height="337" alt="image" src="https://github.com/user-attachments/assets/a04cc27b-05e1-411a-a37d-95f5a98c1e40" />
