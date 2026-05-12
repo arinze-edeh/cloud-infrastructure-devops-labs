@@ -166,6 +166,8 @@ EOF
 
 *Screenshot: Terminal output confirming creation of `ansible.cfg` with `host_key_checking = False`.*
 
+<img width="518" height="389" alt="image" src="https://github.com/user-attachments/assets/6d533bb2-9f16-4e95-b681-1d4bb02ddbfb" />
+
 ---
 
 ### Step 5: Validate Connectivity with Ping Module
@@ -205,6 +207,8 @@ stapp03 | SUCCESS => {
 All three hosts returned `SUCCESS` with `pong`, confirming connectivity and Python interpreter availability on each target.
 
 *Screenshot: Full terminal output of `ansible all -i inventory -m ping` showing `SUCCESS` for `stapp01`, `stapp02`, and `stapp03`.*
+
+<img width="518" height="419" alt="image" src="https://github.com/user-attachments/assets/2b7bb2c3-8f15-4625-84b7-ae6cb40531dd" />
 
 ---
 
@@ -461,12 +465,7 @@ All three verification checks confirmed:
 
 
 
-<img width="506" height="322" alt="image" src="https://github.com/user-attachments/assets/a5c8d5a2-a873-4f32-99c7-4571bbaa9157" />
 
-<img width="508" height="334" alt="image" src="https://github.com/user-attachments/assets/d1cbed11-56a3-4fff-8aa8-213bb9e4fed3" />
-
-<img width="518" height="389" alt="image" src="https://github.com/user-attachments/assets/6d533bb2-9f16-4e95-b681-1d4bb02ddbfb" />
-<img width="518" height="419" alt="image" src="https://github.com/user-attachments/assets/2b7bb2c3-8f15-4625-84b7-ae6cb40531dd" />
 <img width="516" height="355" alt="image" src="https://github.com/user-attachments/assets/64e64697-da43-4915-a7bc-e25f45dedc9c" />
 <img width="517" height="419" alt="image" src="https://github.com/user-attachments/assets/b715b291-6d7c-4e32-a382-9fe20e8b9d8d" />
 <img width="519" height="373" alt="image" src="https://github.com/user-attachments/assets/325328ee-931b-487c-8861-a78176d1841c" />
