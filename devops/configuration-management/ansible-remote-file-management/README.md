@@ -91,6 +91,8 @@ jump-host
 
 *Screenshot: Terminal output of `hostname` returning `jump-host`, confirming the correct control node is active.*
 
+<img width="502" height="332" alt="image" src="https://github.com/user-attachments/assets/50468f12-e82e-4541-9c78-7017f243c6e9" />
+
 ---
 
 ### Step 2: Create and Navigate to the Working Directory
@@ -455,7 +457,6 @@ All three verification checks confirmed:
 
 
 
-<img width="502" height="332" alt="image" src="https://github.com/user-attachments/assets/50468f12-e82e-4541-9c78-7017f243c6e9" />
 <img width="506" height="322" alt="image" src="https://github.com/user-attachments/assets/a5c8d5a2-a873-4f32-99c7-4571bbaa9157" />
 <img width="509" height="306" alt="image" src="https://github.com/user-attachments/assets/304991d6-2ac3-43ec-8e6c-5145f56f3b8f" />
 <img width="508" height="334" alt="image" src="https://github.com/user-attachments/assets/d1cbed11-56a3-4fff-8aa8-213bb9e4fed3" />
