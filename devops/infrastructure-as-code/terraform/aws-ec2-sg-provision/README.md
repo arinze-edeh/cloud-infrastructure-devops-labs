@@ -93,6 +93,8 @@ pwd
 
 > Screenshot: Terminal showing `/home/bob/terraform` as the current directory
 
+<img width="521" height="262" alt="image" src="https://github.com/user-attachments/assets/975c2a90-31d3-4a7c-a7e4-4faa2b2be972" />
+
 ---
 
 ### Step 2: Create the Variables Definition File
@@ -524,7 +526,6 @@ The AWS Security Group `datacenter-sg` was successfully provisioned against the 
 
 
 
-<img width="521" height="262" alt="image" src="https://github.com/user-attachments/assets/975c2a90-31d3-4a7c-a7e4-4faa2b2be972" />
 <img width="521" height="266" alt="image" src="https://github.com/user-attachments/assets/4c8d0c6a-fbed-4f96-8439-c3d1e977d86d" />
 <img width="523" height="287" alt="image" src="https://github.com/user-attachments/assets/40f8cd34-8d18-4bee-a178-86b03750c5b8" />
 <img width="523" height="353" alt="image" src="https://github.com/user-attachments/assets/f218479d-6ac3-456e-b9b5-1c4dfc8db157" />
