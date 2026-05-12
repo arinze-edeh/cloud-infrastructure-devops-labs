@@ -162,6 +162,8 @@ cat main.tf
 
 > Screenshot: Terminal showing `cat main.tf` with the provider and resource blocks
 
+<img width="522" height="338" alt="image" src="https://github.com/user-attachments/assets/f0d26cb1-ded3-4323-b3d6-934dc6a0285d" />
+
 ---
 
 ### Step 4: Investigate and Resolve the Duplicate Provider Error
@@ -531,7 +533,7 @@ The AWS Security Group `datacenter-sg` was successfully provisioned against the 
 <img width="521" height="266" alt="image" src="https://github.com/user-attachments/assets/4c8d0c6a-fbed-4f96-8439-c3d1e977d86d" />
 
 <img width="523" height="353" alt="image" src="https://github.com/user-attachments/assets/f218479d-6ac3-456e-b9b5-1c4dfc8db157" />
-<img width="522" height="338" alt="image" src="https://github.com/user-attachments/assets/f0d26cb1-ded3-4323-b3d6-934dc6a0285d" />
+
 <img width="521" height="367" alt="image" src="https://github.com/user-attachments/assets/2da41054-aa1c-492f-80da-c327e793506c" />
 <img width="536" height="365" alt="image" src="https://github.com/user-attachments/assets/3ae427d6-1781-4cbf-b57d-e434ab2db8f7" />
 <img width="522" height="335" alt="image" src="https://github.com/user-attachments/assets/d91a11dc-0a9d-48c7-ae75-facc24a33343" />
