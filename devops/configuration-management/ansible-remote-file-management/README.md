@@ -149,6 +149,8 @@ stapp03 ansible_user=banner ansible_password=BigGr33n ansible_become=true ansibl
 
 *Screenshot: Terminal output of `cat inventory` confirming all three host entries are correctly defined with their respective credentials and become parameters.*
 
+<img width="522" height="370" alt="image" src="https://github.com/user-attachments/assets/c2726bea-e048-471c-ac03-f57374d3bf5b" />
+
 ---
 
 ### Step 4: Configure Ansible Defaults
@@ -462,7 +464,7 @@ All three verification checks confirmed:
 <img width="506" height="322" alt="image" src="https://github.com/user-attachments/assets/a5c8d5a2-a873-4f32-99c7-4571bbaa9157" />
 
 <img width="508" height="334" alt="image" src="https://github.com/user-attachments/assets/d1cbed11-56a3-4fff-8aa8-213bb9e4fed3" />
-<img width="522" height="370" alt="image" src="https://github.com/user-attachments/assets/c2726bea-e048-471c-ac03-f57374d3bf5b" />
+
 <img width="518" height="389" alt="image" src="https://github.com/user-attachments/assets/6d533bb2-9f16-4e95-b681-1d4bb02ddbfb" />
 <img width="518" height="419" alt="image" src="https://github.com/user-attachments/assets/2b7bb2c3-8f15-4625-84b7-ae6cb40531dd" />
 <img width="516" height="355" alt="image" src="https://github.com/user-attachments/assets/64e64697-da43-4915-a7bc-e25f45dedc9c" />
