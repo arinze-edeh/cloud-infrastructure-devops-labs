@@ -289,6 +289,8 @@ resource "aws_security_group" "datacenter_sg" {
 
 > Screenshot: Terminal showing the corrected `main.tf` with only the resource block
 
+<img width="523" height="365" alt="image" src="https://github.com/user-attachments/assets/d2ae2429-cf78-4743-a8f2-8411bd0e0f9a" />
+
 ---
 
 ### Step 6: Initialize the Terraform Working Directory
@@ -533,7 +535,7 @@ The AWS Security Group `datacenter-sg` was successfully provisioned against the 
 
 
 <img width="522" height="335" alt="image" src="https://github.com/user-attachments/assets/d91a11dc-0a9d-48c7-ae75-facc24a33343" />
-<img width="523" height="365" alt="image" src="https://github.com/user-attachments/assets/d2ae2429-cf78-4743-a8f2-8411bd0e0f9a" />
+
 <img width="524" height="295" alt="image" src="https://github.com/user-attachments/assets/e9dd046f-04b5-42d6-9359-730902fb3cfa" />
 <img width="527" height="329" alt="image" src="https://github.com/user-attachments/assets/edcedc56-4ab6-464a-9340-6ff50137f77c" />
 <img width="525" height="368" alt="image" src="https://github.com/user-attachments/assets/0f14d954-1658-4ef7-ba69-7cbeb0d4e43a" />
