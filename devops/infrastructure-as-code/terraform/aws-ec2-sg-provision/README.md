@@ -532,11 +532,6 @@ The AWS Security Group `datacenter-sg` was successfully provisioned against the 
 
 
 
-
-<img width="521" height="266" alt="image" src="https://github.com/user-attachments/assets/4c8d0c6a-fbed-4f96-8439-c3d1e977d86d" />
-
-<img width="523" height="353" alt="image" src="https://github.com/user-attachments/assets/f218479d-6ac3-456e-b9b5-1c4dfc8db157" />
-
 <img width="522" height="335" alt="image" src="https://github.com/user-attachments/assets/d91a11dc-0a9d-48c7-ae75-facc24a33343" />
 <img width="523" height="365" alt="image" src="https://github.com/user-attachments/assets/d2ae2429-cf78-4743-a8f2-8411bd0e0f9a" />
 <img width="524" height="295" alt="image" src="https://github.com/user-attachments/assets/e9dd046f-04b5-42d6-9359-730902fb3cfa" />
