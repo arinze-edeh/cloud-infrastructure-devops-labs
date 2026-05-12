@@ -317,6 +317,8 @@ Terraform has been successfully initialized!
 
 > Screenshot: Terminal showing successful `terraform init` output with provider installation confirmation
 
+<img width="524" height="295" alt="image" src="https://github.com/user-attachments/assets/e9dd046f-04b5-42d6-9359-730902fb3cfa" />
+
 ---
 
 ### Step 7: Validate the Configuration
@@ -334,6 +336,8 @@ Success! The configuration is valid.
 ```
 
 > Screenshot: Terminal showing `Success! The configuration is valid.`
+
+<img width="527" height="329" alt="image" src="https://github.com/user-attachments/assets/edcedc56-4ab6-464a-9340-6ff50137f77c" />
 
 ---
 
@@ -530,13 +534,5 @@ The AWS Security Group `datacenter-sg` was successfully provisioned against the 
 
 
 
-
-
-
-
-<img width="522" height="335" alt="image" src="https://github.com/user-attachments/assets/d91a11dc-0a9d-48c7-ae75-facc24a33343" />
-
-<img width="524" height="295" alt="image" src="https://github.com/user-attachments/assets/e9dd046f-04b5-42d6-9359-730902fb3cfa" />
-<img width="527" height="329" alt="image" src="https://github.com/user-attachments/assets/edcedc56-4ab6-464a-9340-6ff50137f77c" />
 <img width="525" height="368" alt="image" src="https://github.com/user-attachments/assets/0f14d954-1658-4ef7-ba69-7cbeb0d4e43a" />
 <img width="525" height="368" alt="image" src="https://github.com/user-attachments/assets/aac75d44-776e-4ef0-ab74-bd2dbcc51ce1" />
