@@ -475,9 +475,3 @@ All three verification checks confirmed:
 ├── inventory           # Static inventory with per-host credentials and become parameters
 └── playbook.yml        # Single-play playbook targeting app_servers for file provisioning
 ```
-
-
-
-
-
-<img width="516" height="355" alt="image" src="https://github.com/user-attachments/assets/64e64697-da43-4915-a7bc-e25f45dedc9c" />
