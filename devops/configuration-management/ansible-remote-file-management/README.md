@@ -323,6 +323,8 @@ The check mode output confirms `changed=1` on all three hosts, indicating the fi
 
 *Screenshot: Full terminal output of `ansible-playbook --check` showing `changed: [stapp01]`, `changed: [stapp02]`, and `changed: [stapp03]` with a clean PLAY RECAP and zero failures.*
 
+<img width="516" height="419" alt="image" src="https://github.com/user-attachments/assets/b2b64fdc-9ca0-422d-abc1-75dcd5fc35ac" />
+
 ---
 
 ### Step 9: Execute the Playbook
@@ -358,6 +360,8 @@ All three hosts reported `changed=1` with zero failures, zero unreachable, and z
 
 *Screenshot: Full terminal output of the live `ansible-playbook -i inventory playbook.yml` execution showing `changed` status on all three hosts and a clean PLAY RECAP.*
 
+<img width="518" height="397" alt="image" src="https://github.com/user-attachments/assets/a5d05af4-f4ff-44c6-8790-1510f4a03c7d" />
+
 ---
 
 ### Step 10: Verify File Creation and Permissions on Each Host
@@ -378,6 +382,8 @@ ssh tony@stapp01 "ls -l /usr/src/appdata.txt"
 
 *Screenshot: Terminal output of the SSH command to `stapp01` showing `-rw-r-xr-x 1 tony tony 0` confirming correct permissions and ownership.*
 
+<img width="518" height="337" alt="image" src="https://github.com/user-attachments/assets/a04cc27b-05e1-411a-a37d-95f5a98c1e40" />
+
 ---
 
 **Verify on stapp02:**
@@ -394,6 +400,8 @@ ssh steve@stapp02 "ls -l /usr/src/appdata.txt"
 
 *Screenshot: Terminal output of the SSH command to `stapp02` showing `-rw-r-xr-x 1 steve steve 0` confirming correct permissions and ownership.*
 
+<img width="521" height="373" alt="image" src="https://github.com/user-attachments/assets/248652ab-4b46-4711-ba26-93f436ffed69" />
+
 ---
 
 **Verify on stapp03:**
@@ -409,6 +417,8 @@ ssh banner@stapp03 "ls -l /usr/src/appdata.txt"
 ```
 
 *Screenshot: Terminal output of the SSH command to `stapp03` showing `-rw-r-xr-x 1 banner banner 0` confirming correct permissions and ownership.*
+
+<img width="517" height="410" alt="image" src="https://github.com/user-attachments/assets/ab582ccd-b407-4cbd-a068-b84a19f43265" />
 
 ---
 
@@ -471,9 +481,3 @@ All three verification checks confirmed:
 
 
 <img width="516" height="355" alt="image" src="https://github.com/user-attachments/assets/64e64697-da43-4915-a7bc-e25f45dedc9c" />
-
-<img width="516" height="419" alt="image" src="https://github.com/user-attachments/assets/b2b64fdc-9ca0-422d-abc1-75dcd5fc35ac" />
-<img width="518" height="397" alt="image" src="https://github.com/user-attachments/assets/a5d05af4-f4ff-44c6-8790-1510f4a03c7d" />
-<img width="518" height="337" alt="image" src="https://github.com/user-attachments/assets/a04cc27b-05e1-411a-a37d-95f5a98c1e40" />
-<img width="521" height="373" alt="image" src="https://github.com/user-attachments/assets/248652ab-4b46-4711-ba26-93f436ffed69" />
-<img width="517" height="410" alt="image" src="https://github.com/user-attachments/assets/ab582ccd-b407-4cbd-a068-b84a19f43265" />
