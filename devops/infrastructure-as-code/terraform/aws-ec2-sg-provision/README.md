@@ -246,6 +246,9 @@ The correct resolution is to remove the `provider "aws"` block from `main.tf` en
 
 > Screenshot: Terminal showing the full `terraform init` error output and the contents of `provider.tf`
 
+<img width="521" height="367" alt="image" src="https://github.com/user-attachments/assets/2da41054-aa1c-492f-80da-c327e793506c" />
+<img width="536" height="365" alt="image" src="https://github.com/user-attachments/assets/3ae427d6-1781-4cbf-b57d-e434ab2db8f7" />
+
 ---
 
 ### Step 5: Rewrite the Main Configuration Without the Provider Block
@@ -534,8 +537,6 @@ The AWS Security Group `datacenter-sg` was successfully provisioned against the 
 
 <img width="523" height="353" alt="image" src="https://github.com/user-attachments/assets/f218479d-6ac3-456e-b9b5-1c4dfc8db157" />
 
-<img width="521" height="367" alt="image" src="https://github.com/user-attachments/assets/2da41054-aa1c-492f-80da-c327e793506c" />
-<img width="536" height="365" alt="image" src="https://github.com/user-attachments/assets/3ae427d6-1781-4cbf-b57d-e434ab2db8f7" />
 <img width="522" height="335" alt="image" src="https://github.com/user-attachments/assets/d91a11dc-0a9d-48c7-ae75-facc24a33343" />
 <img width="523" height="365" alt="image" src="https://github.com/user-attachments/assets/d2ae2429-cf78-4743-a8f2-8411bd0e0f9a" />
 <img width="524" height="295" alt="image" src="https://github.com/user-attachments/assets/e9dd046f-04b5-42d6-9359-730902fb3cfa" />
