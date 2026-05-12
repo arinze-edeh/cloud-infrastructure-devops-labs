@@ -115,6 +115,8 @@ All subsequent files (`inventory`, `ansible.cfg`, `playbook.yml`) are created in
 
 *Screenshot: Terminal output showing `mkdir -p ~/playbook`, `cd ~/playbook`, and `pwd` returning `/home/thor/playbook`.*
 
+<img width="509" height="306" alt="image" src="https://github.com/user-attachments/assets/304991d6-2ac3-43ec-8e6c-5145f56f3b8f" />
+
 ---
 
 ### Step 3: Create the Ansible Inventory
@@ -458,7 +460,7 @@ All three verification checks confirmed:
 
 
 <img width="506" height="322" alt="image" src="https://github.com/user-attachments/assets/a5c8d5a2-a873-4f32-99c7-4571bbaa9157" />
-<img width="509" height="306" alt="image" src="https://github.com/user-attachments/assets/304991d6-2ac3-43ec-8e6c-5145f56f3b8f" />
+
 <img width="508" height="334" alt="image" src="https://github.com/user-attachments/assets/d1cbed11-56a3-4fff-8aa8-213bb9e4fed3" />
 <img width="522" height="370" alt="image" src="https://github.com/user-attachments/assets/c2726bea-e048-471c-ac03-f57374d3bf5b" />
 <img width="518" height="389" alt="image" src="https://github.com/user-attachments/assets/6d533bb2-9f16-4e95-b681-1d4bb02ddbfb" />
