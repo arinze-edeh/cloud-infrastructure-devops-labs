@@ -369,6 +369,8 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 > Screenshot: Terminal showing the full `terraform plan` output with the `+ create` annotation on the Security Group resource
 
+<img width="525" height="368" alt="image" src="https://github.com/user-attachments/assets/0f14d954-1658-4ef7-ba69-7cbeb0d4e43a" />
+
 ---
 
 ### Step 9: Apply the Configuration
@@ -389,6 +391,8 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
 > Screenshot: Terminal showing `Apply complete! Resources: 1 added, 0 changed, 0 destroyed.` with the assigned Security Group ID
+
+<img width="525" height="368" alt="image" src="https://github.com/user-attachments/assets/aac75d44-776e-4ef0-ab74-bd2dbcc51ce1" />
 
 ---
 
@@ -528,11 +532,3 @@ The AWS Security Group `datacenter-sg` was successfully provisioned against the 
 | Terraform Resource ID | `sg-d019d41921cf152e2` |
 | Provider Version | hashicorp/aws v5.91.0 |
 | Apply Result | 1 added, 0 changed, 0 destroyed |
-
-
-
-
-
-
-<img width="525" height="368" alt="image" src="https://github.com/user-attachments/assets/0f14d954-1658-4ef7-ba69-7cbeb0d4e43a" />
-<img width="525" height="368" alt="image" src="https://github.com/user-attachments/assets/aac75d44-776e-4ef0-ab74-bd2dbcc51ce1" />
