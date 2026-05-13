@@ -263,6 +263,8 @@ stapp02 | SUCCESS => {
 
 *Screenshot: Ansible ping returning `SUCCESS` with `pong` response after passing explicit user and key flags*
 
+<img width="511" height="290" alt="image" src="https://github.com/user-attachments/assets/250986d0-a443-4096-be6d-40d2bcd65f2e" />
+
 ---
 
 ### Step 10: Update the Inventory File for Key-Based Auth
@@ -373,7 +375,6 @@ The inventory still contained `ansible_ssh_pass=Am3ric@` for `stapp02`. After `s
 
 
 
-<img width="511" height="290" alt="image" src="https://github.com/user-attachments/assets/250986d0-a443-4096-be6d-40d2bcd65f2e" />
 <img width="511" height="425" alt="image" src="https://github.com/user-attachments/assets/17e86cca-215e-4464-83f0-b3f1faf1a74f" />
 <img width="509" height="428" alt="image" src="https://github.com/user-attachments/assets/7ae379df-0b57-42ff-a3ba-2e99b82d323b" />
 <img width="512" height="304" alt="image" src="https://github.com/user-attachments/assets/e5d8f2db-be58-494b-98d6-eb789e1d0321" />
