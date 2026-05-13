@@ -385,6 +385,8 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 > Screenshot: Full `terraform plan` output showing the `aws_eip.eip` resource to be created with `Name = "xfusion-eip"` and `domain = "vpc"`
 
+<img width="537" height="341" alt="image" src="https://github.com/user-attachments/assets/cdd22ac8-04a8-46e1-ae6f-c3638f890676" />
+
 The plan shows exactly one resource addition. The `Name` tag is correctly resolved to `"xfusion-eip"` from the variable default, confirming the variable reference is functioning as intended.
 
 ---
@@ -571,7 +573,6 @@ No errors were encountered during this implementation. The following scenarios r
 
 
 
-<img width="537" height="341" alt="image" src="https://github.com/user-attachments/assets/cdd22ac8-04a8-46e1-ae6f-c3638f890676" />
 <img width="537" height="355" alt="image" src="https://github.com/user-attachments/assets/3c156cc2-3fcd-4cb0-96bd-f709598f7d45" />
 <img width="525" height="347" alt="image" src="https://github.com/user-attachments/assets/5dc47ab8-a2e0-4266-bf8d-e94d92416470" />
 <img width="523" height="346" alt="image" src="https://github.com/user-attachments/assets/428beac9-dae3-4c3b-b1ad-e501ecffe1e7" />
