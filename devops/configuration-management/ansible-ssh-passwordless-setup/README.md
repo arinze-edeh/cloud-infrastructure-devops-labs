@@ -290,7 +290,12 @@ stapp03 ansible_ssh_pass=BigGr33n
 | `ansible_ssh_pass=Am3ric@` | `ansible_user=steve` | Explicit remote user declaration |
 | | `ansible_ssh_private_key_file=/home/thor/.ssh/id_rsa` | Points to the private key for authentication |
 
-*Screenshot: `vi` editor showing the updated `stapp02` inventory line with `ansible_user` and `ansible_ssh_private_key_file` parameters*
+*Screenshots: `vi` editor showing the updated `stapp02` inventory line with `ansible_user` and `ansible_ssh_private_key_file` parameters*
+
+<img width="511" height="425" alt="image" src="https://github.com/user-attachments/assets/17e86cca-215e-4464-83f0-b3f1faf1a74f" />
+<img width="509" height="428" alt="image" src="https://github.com/user-attachments/assets/7ae379df-0b57-42ff-a3ba-2e99b82d323b" />
+<img width="512" height="304" alt="image" src="https://github.com/user-attachments/assets/e5d8f2db-be58-494b-98d6-eb789e1d0321" />
+<img width="511" height="349" alt="image" src="https://github.com/user-attachments/assets/d19980f2-1d56-4647-a769-3b504529ec40" />
 
 ---
 
@@ -312,6 +317,8 @@ stapp02 | SUCCESS => {
 > The `SUCCESS` response with `pong` confirms that passwordless SSH authentication between the Ansible controller (`jump host`) and the managed node (`stapp02`) is fully operational. Ansible can now execute playbooks against `stapp02` without any interactive credential input.
 
 *Screenshot: Final Ansible ping returning `SUCCESS` with `pong` using only the inventory file, no CLI key flags*
+
+<img width="509" height="387" alt="image" src="https://github.com/user-attachments/assets/8e1b8e76-d4b2-4f49-82a1-495f6e60a6c7" />
 
 ---
 
@@ -370,16 +377,3 @@ The inventory still contained `ansible_ssh_pass=Am3ric@` for `stapp02`. After `s
 * **Host key verification (`StrictHostKeyChecking`) matters in automation.** When `ssh-copy-id` prompted for host key acceptance (`Are you sure you want to continue connecting?`), it was answered interactively. In fully automated pipelines, the host key should be pre-populated in `known_hosts` or `StrictHostKeyChecking=accept-new` should be configured in `ansible.cfg` to avoid blocking unattended runs.
 
 ---
-
-
-
-
-
-<img width="511" height="425" alt="image" src="https://github.com/user-attachments/assets/17e86cca-215e-4464-83f0-b3f1faf1a74f" />
-<img width="509" height="428" alt="image" src="https://github.com/user-attachments/assets/7ae379df-0b57-42ff-a3ba-2e99b82d323b" />
-<img width="512" height="304" alt="image" src="https://github.com/user-attachments/assets/e5d8f2db-be58-494b-98d6-eb789e1d0321" />
-<img width="511" height="349" alt="image" src="https://github.com/user-attachments/assets/d19980f2-1d56-4647-a769-3b504529ec40" />
-<img width="509" height="387" alt="image" src="https://github.com/user-attachments/assets/8e1b8e76-d4b2-4f49-82a1-495f6e60a6c7" />
-
-
-
