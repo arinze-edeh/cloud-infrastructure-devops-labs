@@ -564,9 +564,6 @@ No errors were encountered during this implementation. The following scenarios r
 
 
 
-<img width="523" height="311" alt="image" src="https://github.com/user-attachments/assets/87fcad65-79f0-4a1e-8f22-172dd09337ab" />
-
-<img width="525" height="240" alt="image" src="https://github.com/user-attachments/assets/999aba1a-2243-496d-b85a-b6244960ae97" />
 
 <img width="524" height="328" alt="image" src="https://github.com/user-attachments/assets/49102f28-b758-4cdd-9804-009d7453705f" />
 <img width="523" height="281" alt="image" src="https://github.com/user-attachments/assets/9733510e-ccc4-4efe-8a2a-03dc5468b64f" />
