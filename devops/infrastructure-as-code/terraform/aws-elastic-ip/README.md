@@ -260,6 +260,8 @@ resource "aws_eip" "eip" {
 
 > Screenshot: Terminal output of `cat main.tf` confirming the resource block with `domain = "vpc"` and `Name = var.KKE_eip`
 
+<img width="525" height="319" alt="image" src="https://github.com/user-attachments/assets/cd437d2f-f34a-4c5b-aafe-610015f686a2" />
+
 ---
 
 ### Step 5: Verify the Configuration Files
@@ -565,7 +567,7 @@ No errors were encountered during this implementation. The following scenarios r
 <img width="523" height="311" alt="image" src="https://github.com/user-attachments/assets/87fcad65-79f0-4a1e-8f22-172dd09337ab" />
 
 <img width="525" height="240" alt="image" src="https://github.com/user-attachments/assets/999aba1a-2243-496d-b85a-b6244960ae97" />
-<img width="525" height="319" alt="image" src="https://github.com/user-attachments/assets/cd437d2f-f34a-4c5b-aafe-610015f686a2" />
+
 <img width="524" height="328" alt="image" src="https://github.com/user-attachments/assets/49102f28-b758-4cdd-9804-009d7453705f" />
 <img width="523" height="281" alt="image" src="https://github.com/user-attachments/assets/9733510e-ccc4-4efe-8a2a-03dc5468b64f" />
 <img width="524" height="241" alt="image" src="https://github.com/user-attachments/assets/3178c19c-dd67-4a40-b5d0-74aa4fe32c44" />
