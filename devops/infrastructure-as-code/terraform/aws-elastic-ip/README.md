@@ -179,6 +179,8 @@ provider "aws" {
 
 > Screenshot: Terminal output of `cat provider.tf` showing all LocalStack endpoint overrides
 
+<img width="537" height="376" alt="image" src="https://github.com/user-attachments/assets/e563000b-9e1d-4348-ae8e-0b8e3063d4e5" />
+
 **Key observations:**
 * `skip_credentials_validation = true` and `skip_requesting_account_id = true` are required for LocalStack to bypass real AWS credential checks
 * All service endpoints, including `ec2` (which handles EIP allocation), are routed to `http://aws:4566`
@@ -558,7 +560,6 @@ No errors were encountered during this implementation. The following scenarios r
 
 
 
-<img width="537" height="376" alt="image" src="https://github.com/user-attachments/assets/e563000b-9e1d-4348-ae8e-0b8e3063d4e5" />
 <img width="523" height="311" alt="image" src="https://github.com/user-attachments/assets/87fcad65-79f0-4a1e-8f22-172dd09337ab" />
 <img width="523" height="366" alt="image" src="https://github.com/user-attachments/assets/65d5853b-131f-4142-94b1-1b1a070be345" />
 <img width="525" height="240" alt="image" src="https://github.com/user-attachments/assets/999aba1a-2243-496d-b85a-b6244960ae97" />
