@@ -108,6 +108,8 @@ drwx------ 1 thor thor 4096 May 13 05:11 ..
 
 *Screenshot: `ls -la /home/thor/.ssh/` showing an empty directory with no key files*
 
+<img width="508" height="283" alt="image" src="https://github.com/user-attachments/assets/d6f2231c-b0be-482d-9e97-eff9736103fe" />
+
 ---
 
 ### Step 3: Generate RSA Key Pair
@@ -362,7 +364,6 @@ The inventory still contained `ansible_ssh_pass=Am3ric@` for `stapp02`. After `s
 
 <img width="506" height="308" alt="image" src="https://github.com/user-attachments/assets/641420af-5522-4f4b-9406-0b2abc3a07bb" />
 
-<img width="508" height="283" alt="image" src="https://github.com/user-attachments/assets/d6f2231c-b0be-482d-9e97-eff9736103fe" />
 <img width="507" height="380" alt="image" src="https://github.com/user-attachments/assets/d8dd7cb6-c76f-4788-a658-1c821f83d01d" />
 <img width="506" height="406" alt="image" src="https://github.com/user-attachments/assets/b07e4328-57e7-4600-b2af-419982e1303f" />
 <img width="511" height="420" alt="image" src="https://github.com/user-attachments/assets/49df5fea-adef-44e4-80aa-b543088f9001" />
