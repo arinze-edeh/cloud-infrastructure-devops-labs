@@ -219,6 +219,8 @@ stapp03 ansible_ssh_pass=BigGr33n
 
 *Screenshot: `cat /home/thor/ansible/inventory` showing all three app server entries with `ansible_ssh_pass`*
 
+<img width="509" height="381" alt="image" src="https://github.com/user-attachments/assets/e7047ee7-d763-44ee-a9bc-076ab355132d" />
+
 ---
 
 ### Step 8: Test Ansible Ping with Default Inventory
@@ -369,10 +371,6 @@ The inventory still contained `ansible_ssh_pass=Am3ric@` for `stapp02`. After `s
 
 
 
-
-<img width="511" height="428" alt="image" src="https://github.com/user-attachments/assets/a2bdac34-157c-433c-a60d-b22038e41328" />
-
-<img width="509" height="381" alt="image" src="https://github.com/user-attachments/assets/e7047ee7-d763-44ee-a9bc-076ab355132d" />
 <img width="512" height="425" alt="image" src="https://github.com/user-attachments/assets/9f8faa0a-2043-4933-9fab-792ddeb73294" />
 <img width="511" height="290" alt="image" src="https://github.com/user-attachments/assets/250986d0-a443-4096-be6d-40d2bcd65f2e" />
 <img width="511" height="425" alt="image" src="https://github.com/user-attachments/assets/17e86cca-215e-4464-83f0-b3f1faf1a74f" />
