@@ -437,6 +437,8 @@ aws_eip.eip
 
 > Screenshot: Output of `terraform state list` showing `aws_eip.eip` as the single managed resource
 
+<img width="525" height="347" alt="image" src="https://github.com/user-attachments/assets/5dc47ab8-a2e0-4266-bf8d-e94d92416470" />
+
 #### Inspect Full Resource State
 
 Retrieve the complete attribute set of the provisioned EIP from the state file.
@@ -477,6 +479,8 @@ resource "aws_eip" "eip" {
 ```
 
 > Screenshot: Full output of `terraform state show aws_eip.eip` confirming `allocation_id`, `public_ip = "127.231.20.38"`, `domain = "vpc"`, and `Name = "xfusion-eip"`
+
+<img width="523" height="346" alt="image" src="https://github.com/user-attachments/assets/428beac9-dae3-4c3b-b1ad-e501ecffe1e7" />
 
 ---
 
@@ -566,17 +570,3 @@ No errors were encountered during this implementation. The following scenarios r
 * [Terraform CLI: plan](https://developer.hashicorp.com/terraform/cli/commands/plan)
 * [Terraform CLI: state show](https://developer.hashicorp.com/terraform/cli/commands/state/show)
 * [AWS Elastic IP Addresses Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html)
-
-
-
-
-
-
-
-
-
-<img width="525" height="347" alt="image" src="https://github.com/user-attachments/assets/5dc47ab8-a2e0-4266-bf8d-e94d92416470" />
-<img width="523" height="346" alt="image" src="https://github.com/user-attachments/assets/428beac9-dae3-4c3b-b1ad-e501ecffe1e7" />
-
-
-
