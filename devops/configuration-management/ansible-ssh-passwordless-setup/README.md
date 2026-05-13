@@ -200,6 +200,8 @@ Connection to stapp02 closed.
 
 *Screenshot: `ssh steve@stapp02` landing directly at the `stapp02` shell prompt without a password prompt, followed by `exit`*
 
+<img width="512" height="427" alt="image" src="https://github.com/user-attachments/assets/9d3e41fe-4546-4a22-aece-9da272e697d2" />
+
 ---
 
 ### Step 7: Inspect the Ansible Inventory File
@@ -369,7 +371,7 @@ The inventory still contained `ansible_ssh_pass=Am3ric@` for `stapp02`. After `s
 
 
 <img width="511" height="428" alt="image" src="https://github.com/user-attachments/assets/a2bdac34-157c-433c-a60d-b22038e41328" />
-<img width="512" height="427" alt="image" src="https://github.com/user-attachments/assets/9d3e41fe-4546-4a22-aece-9da272e697d2" />
+
 <img width="509" height="381" alt="image" src="https://github.com/user-attachments/assets/e7047ee7-d763-44ee-a9bc-076ab355132d" />
 <img width="512" height="425" alt="image" src="https://github.com/user-attachments/assets/9f8faa0a-2043-4933-9fab-792ddeb73294" />
 <img width="511" height="290" alt="image" src="https://github.com/user-attachments/assets/250986d0-a443-4096-be6d-40d2bcd65f2e" />
