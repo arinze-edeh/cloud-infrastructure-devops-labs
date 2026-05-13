@@ -286,6 +286,8 @@ drwxr-x--- 1 bob bob 4096 May 13 06:09 ..
 
 > Screenshot: Updated directory listing confirming `main.tf` and `variables.tf` are present alongside the pre-existing `provider.tf`
 
+<img width="524" height="328" alt="image" src="https://github.com/user-attachments/assets/49102f28-b758-4cdd-9804-009d7453705f" />
+
 All three configuration files are in place. The working directory is ready for initialization.
 
 ---
@@ -565,7 +567,6 @@ No errors were encountered during this implementation. The following scenarios r
 
 
 
-<img width="524" height="328" alt="image" src="https://github.com/user-attachments/assets/49102f28-b758-4cdd-9804-009d7453705f" />
 <img width="523" height="281" alt="image" src="https://github.com/user-attachments/assets/9733510e-ccc4-4efe-8a2a-03dc5468b64f" />
 <img width="524" height="241" alt="image" src="https://github.com/user-attachments/assets/3178c19c-dd67-4a40-b5d0-74aa4fe32c44" />
 <img width="537" height="341" alt="image" src="https://github.com/user-attachments/assets/cdd22ac8-04a8-46e1-ae6f-c3638f890676" />
