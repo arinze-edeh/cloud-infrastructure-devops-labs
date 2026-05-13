@@ -121,6 +121,8 @@ drwxr-x--- 1 bob bob 4096 May 13 06:09 ..
 
 > Screenshot: Working directory listing showing `provider.tf` and `README.MD` as the only pre-existing files
 
+<img width="523" height="319" alt="image" src="https://github.com/user-attachments/assets/6a8b852a-802d-45b0-b700-89559978ff5e" />
+
 ---
 
 ### Step 2: Review the Provider Configuration
@@ -556,7 +558,6 @@ No errors were encountered during this implementation. The following scenarios r
 
 
 
-<img width="523" height="319" alt="image" src="https://github.com/user-attachments/assets/6a8b852a-802d-45b0-b700-89559978ff5e" />
 <img width="537" height="376" alt="image" src="https://github.com/user-attachments/assets/e563000b-9e1d-4348-ae8e-0b8e3063d4e5" />
 <img width="523" height="311" alt="image" src="https://github.com/user-attachments/assets/87fcad65-79f0-4a1e-8f22-172dd09337ab" />
 <img width="523" height="366" alt="image" src="https://github.com/user-attachments/assets/65d5853b-131f-4142-94b1-1b1a070be345" />
