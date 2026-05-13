@@ -181,6 +181,8 @@ Number of key(s) added: 1
 
 *Screenshot: `ssh-copy-id` output showing `Number of key(s) added: 1` confirming successful key installation on stapp02*
 
+<img width="511" height="420" alt="image" src="https://github.com/user-attachments/assets/49df5fea-adef-44e4-80aa-b543088f9001" />
+
 ---
 
 ### Step 6: Validate Passwordless SSH Login
@@ -366,7 +368,6 @@ The inventory still contained `ansible_ssh_pass=Am3ric@` for `stapp02`. After `s
 
 
 
-<img width="511" height="420" alt="image" src="https://github.com/user-attachments/assets/49df5fea-adef-44e4-80aa-b543088f9001" />
 <img width="511" height="428" alt="image" src="https://github.com/user-attachments/assets/a2bdac34-157c-433c-a60d-b22038e41328" />
 <img width="512" height="427" alt="image" src="https://github.com/user-attachments/assets/9d3e41fe-4546-4a22-aece-9da272e697d2" />
 <img width="509" height="381" alt="image" src="https://github.com/user-attachments/assets/e7047ee7-d763-44ee-a9bc-076ab355132d" />
