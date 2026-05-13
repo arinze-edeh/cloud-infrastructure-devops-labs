@@ -340,6 +340,8 @@ Success! The configuration is valid.
 
 > Screenshot: Terminal output of `terraform validate` showing `Success! The configuration is valid.`
 
+<img width="524" height="241" alt="image" src="https://github.com/user-attachments/assets/3178c19c-dd67-4a40-b5d0-74aa4fe32c44" />
+
 Validation confirms there are no syntax errors, undefined variable references, or type mismatches in the configuration.
 
 ---
@@ -569,7 +571,6 @@ No errors were encountered during this implementation. The following scenarios r
 
 
 
-<img width="524" height="241" alt="image" src="https://github.com/user-attachments/assets/3178c19c-dd67-4a40-b5d0-74aa4fe32c44" />
 <img width="537" height="341" alt="image" src="https://github.com/user-attachments/assets/cdd22ac8-04a8-46e1-ae6f-c3638f890676" />
 <img width="537" height="355" alt="image" src="https://github.com/user-attachments/assets/3c156cc2-3fcd-4cb0-96bd-f709598f7d45" />
 <img width="525" height="347" alt="image" src="https://github.com/user-attachments/assets/5dc47ab8-a2e0-4266-bf8d-e94d92416470" />
