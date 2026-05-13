@@ -158,6 +158,8 @@ drwx------ 1 thor thor 4096 May 13 05:11 ..
 
 *Screenshot: `ls -la /home/thor/.ssh/` showing `id_rsa` at `600` and `id_rsa.pub` at `644`*
 
+<img width="506" height="406" alt="image" src="https://github.com/user-attachments/assets/b07e4328-57e7-4600-b2af-419982e1303f" />
+
 ---
 
 ### Step 5: Copy Public Key to App Server 2
@@ -364,7 +366,6 @@ The inventory still contained `ansible_ssh_pass=Am3ric@` for `stapp02`. After `s
 
 
 
-<img width="506" height="406" alt="image" src="https://github.com/user-attachments/assets/b07e4328-57e7-4600-b2af-419982e1303f" />
 <img width="511" height="420" alt="image" src="https://github.com/user-attachments/assets/49df5fea-adef-44e4-80aa-b543088f9001" />
 <img width="511" height="428" alt="image" src="https://github.com/user-attachments/assets/a2bdac34-157c-433c-a60d-b22038e41328" />
 <img width="512" height="427" alt="image" src="https://github.com/user-attachments/assets/9d3e41fe-4546-4a22-aece-9da272e697d2" />
