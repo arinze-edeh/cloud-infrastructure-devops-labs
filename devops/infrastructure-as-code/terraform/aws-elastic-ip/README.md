@@ -413,6 +413,8 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 > Screenshot: Terminal output of `terraform apply -auto-approve` showing `Apply complete! Resources: 1 added, 0 changed, 0 destroyed.` with allocation ID `eipalloc-94039e2238b43c4c8`
 
+<img width="537" height="355" alt="image" src="https://github.com/user-attachments/assets/3c156cc2-3fcd-4cb0-96bd-f709598f7d45" />
+
 The resource was created in under one second. The allocation ID `eipalloc-94039e2238b43c4c8` is now the stable identifier for this Elastic IP in the LocalStack state.
 
 ---
@@ -573,7 +575,6 @@ No errors were encountered during this implementation. The following scenarios r
 
 
 
-<img width="537" height="355" alt="image" src="https://github.com/user-attachments/assets/3c156cc2-3fcd-4cb0-96bd-f709598f7d45" />
 <img width="525" height="347" alt="image" src="https://github.com/user-attachments/assets/5dc47ab8-a2e0-4266-bf8d-e94d92416470" />
 <img width="523" height="346" alt="image" src="https://github.com/user-attachments/assets/428beac9-dae3-4c3b-b1ad-e501ecffe1e7" />
 
