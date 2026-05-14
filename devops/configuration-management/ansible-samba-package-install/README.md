@@ -88,6 +88,8 @@ ansible [core 2.14.18]
 
 > Screenshot: Ansible version output confirming core 2.14.18 on jump host
 
+<img width="516" height="341" alt="image" src="https://github.com/user-attachments/assets/4a79ef0f-e84a-4f05-8027-679e45d27402" />
+
 ---
 
 ### Step 2: Validate SSH Connectivity to App Servers
@@ -397,7 +399,6 @@ stapp03                    : ok=2    changed=0    unreachable=0    failed=0    s
 
 
 
-<img width="516" height="341" alt="image" src="https://github.com/user-attachments/assets/4a79ef0f-e84a-4f05-8027-679e45d27402" />
 <img width="518" height="279" alt="image" src="https://github.com/user-attachments/assets/f82db5dc-991a-4b0c-88ed-7a0ad32a0a97" />
 <img width="518" height="345" alt="image" src="https://github.com/user-attachments/assets/a275c18b-bd5d-4a71-8c04-00a0008c1bd2" />
 <img width="517" height="368" alt="image" src="https://github.com/user-attachments/assets/8aafd0b5-d587-4565-8442-c6a798355ddc" />
