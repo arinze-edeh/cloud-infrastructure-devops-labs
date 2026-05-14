@@ -292,6 +292,8 @@ All three nodes returned `SUCCESS` with `pong` and auto-discovered Python 3 at `
 
 > Screenshot: Ad-hoc ping output showing SUCCESS and pong response from stapp01, stapp02, and stapp03
 
+<img width="516" height="425" alt="image" src="https://github.com/user-attachments/assets/b23ef89c-c63d-4741-aad5-02ee9ff41f63" />
+
 ---
 
 ### Step 8: Execute the Playbook
@@ -412,5 +414,4 @@ stapp03                    : ok=2    changed=0    unreachable=0    failed=0    s
 
 
 
-<img width="516" height="425" alt="image" src="https://github.com/user-attachments/assets/b23ef89c-c63d-4741-aad5-02ee9ff41f63" />
 <img width="517" height="431" alt="image" src="https://github.com/user-attachments/assets/237ff90f-7b6a-4eba-8ad4-5e266cda47ca" />
