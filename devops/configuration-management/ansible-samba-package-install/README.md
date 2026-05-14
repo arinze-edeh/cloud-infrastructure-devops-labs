@@ -250,6 +250,8 @@ A clean return with the playbook filename and no errors confirms the YAML is syn
 
 > Screenshot: Syntax check output showing `playbook: playbook.yml` with no errors
 
+<img width="517" height="416" alt="image" src="https://github.com/user-attachments/assets/2609d661-26f4-4962-b19e-4d87931157a0" />
+
 ---
 
 ### Step 7: Validate Connectivity with Ping Module
@@ -410,6 +412,5 @@ stapp03                    : ok=2    changed=0    unreachable=0    failed=0    s
 
 
 
-<img width="517" height="416" alt="image" src="https://github.com/user-attachments/assets/2609d661-26f4-4962-b19e-4d87931157a0" />
 <img width="516" height="425" alt="image" src="https://github.com/user-attachments/assets/b23ef89c-c63d-4741-aad5-02ee9ff41f63" />
 <img width="517" height="431" alt="image" src="https://github.com/user-attachments/assets/237ff90f-7b6a-4eba-8ad4-5e266cda47ca" />
