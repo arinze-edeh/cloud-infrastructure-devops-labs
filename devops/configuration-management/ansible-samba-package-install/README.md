@@ -144,6 +144,8 @@ pwd
 
 > Screenshot: Directory creation and confirmed working path at `/home/thor/playbook`
 
+<img width="517" height="404" alt="image" src="https://github.com/user-attachments/assets/b93b06bd-06a0-437d-a7ea-ed8b11c55546" />
+
 ---
 
 ### Step 4: Create the Inventory File
@@ -404,7 +406,6 @@ stapp03                    : ok=2    changed=0    unreachable=0    failed=0    s
 <img width="518" height="279" alt="image" src="https://github.com/user-attachments/assets/f82db5dc-991a-4b0c-88ed-7a0ad32a0a97" />
 <img width="518" height="345" alt="image" src="https://github.com/user-attachments/assets/a275c18b-bd5d-4a71-8c04-00a0008c1bd2" />
 
-<img width="517" height="404" alt="image" src="https://github.com/user-attachments/assets/b93b06bd-06a0-437d-a7ea-ed8b11c55546" />
 <img width="519" height="433" alt="image" src="https://github.com/user-attachments/assets/f684334d-5b82-41ce-bac2-f351e8233167" />
 <img width="517" height="409" alt="image" src="https://github.com/user-attachments/assets/2f4cdd53-c2c9-4442-a192-e4cccc76b4b9" />
 <img width="516" height="407" alt="image" src="https://github.com/user-attachments/assets/a09f9960-ae01-43a6-9bab-a602373deda7" />
