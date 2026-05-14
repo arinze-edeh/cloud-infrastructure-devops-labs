@@ -170,7 +170,11 @@ Verify the file contents after saving:
 cat /home/thor/playbook/inventory
 ```
 
-> Screenshot: `cat` output of the inventory file showing all three app server entries with credentials and become configuration
+> Screenshots: `cat` output of the inventory file showing all three app server entries with credentials and become configuration
+
+<img width="519" height="433" alt="image" src="https://github.com/user-attachments/assets/f684334d-5b82-41ce-bac2-f351e8233167" />
+<img width="517" height="409" alt="image" src="https://github.com/user-attachments/assets/2f4cdd53-c2c9-4442-a192-e4cccc76b4b9" />
+<img width="516" height="407" alt="image" src="https://github.com/user-attachments/assets/a09f9960-ae01-43a6-9bab-a602373deda7" />
 
 **Inventory variable breakdown:**
 
@@ -406,9 +410,6 @@ stapp03                    : ok=2    changed=0    unreachable=0    failed=0    s
 <img width="518" height="279" alt="image" src="https://github.com/user-attachments/assets/f82db5dc-991a-4b0c-88ed-7a0ad32a0a97" />
 <img width="518" height="345" alt="image" src="https://github.com/user-attachments/assets/a275c18b-bd5d-4a71-8c04-00a0008c1bd2" />
 
-<img width="519" height="433" alt="image" src="https://github.com/user-attachments/assets/f684334d-5b82-41ce-bac2-f351e8233167" />
-<img width="517" height="409" alt="image" src="https://github.com/user-attachments/assets/2f4cdd53-c2c9-4442-a192-e4cccc76b4b9" />
-<img width="516" height="407" alt="image" src="https://github.com/user-attachments/assets/a09f9960-ae01-43a6-9bab-a602373deda7" />
 <img width="515" height="431" alt="image" src="https://github.com/user-attachments/assets/75f34007-2ae6-4611-9b7d-368658a42665" />
 <img width="518" height="419" alt="image" src="https://github.com/user-attachments/assets/bfed3be4-3723-43de-945d-0b800b13d926" />
 <img width="518" height="422" alt="image" src="https://github.com/user-attachments/assets/a1653075-2b67-4f30-acc1-40faf83e6659" />
