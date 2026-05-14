@@ -327,6 +327,8 @@ stapp03                    : ok=2    changed=1    unreachable=0    failed=0    s
 
 > Screenshot: Full playbook execution output confirming `changed=1` and `failed=0` across all three app servers
 
+<img width="517" height="431" alt="image" src="https://github.com/user-attachments/assets/237ff90f-7b6a-4eba-8ad4-5e266cda47ca" />
+
 **Play recap interpretation:**
 
 | Field | Value | Meaning |
@@ -353,8 +355,6 @@ stapp01                    : ok=2    changed=0    unreachable=0    failed=0    s
 stapp02                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 stapp03                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
-
-> Screenshot: Second playbook run showing `changed=0` confirming idempotent behavior
 
 ---
 
@@ -405,13 +405,3 @@ stapp03                    : ok=2    changed=0    unreachable=0    failed=0    s
 
 * **Execution order matters for reproducibility.** The sequence of directory creation, inventory authoring, playbook authoring, syntax check, ping validation, and final execution is not arbitrary. Each step builds confidence in the next, and collapsing this sequence risks introducing errors that are harder to isolate.
   
-
-
-
-
-
-
-
-
-
-<img width="517" height="431" alt="image" src="https://github.com/user-attachments/assets/237ff90f-7b6a-4eba-8ad4-5e266cda47ca" />
