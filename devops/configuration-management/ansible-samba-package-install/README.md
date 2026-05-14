@@ -215,7 +215,11 @@ Verify the file contents after saving:
 cat /home/thor/playbook/playbook.yml
 ```
 
-> Screenshot: `cat` output of the playbook confirming correct YAML structure, `hosts: all`, `become: yes`, and `yum` module usage
+> Screenshots: `cat` output of the playbook confirming correct YAML structure, `hosts: all`, `become: yes`, and `yum` module usage
+
+<img width="515" height="431" alt="image" src="https://github.com/user-attachments/assets/75f34007-2ae6-4611-9b7d-368658a42665" />
+<img width="518" height="419" alt="image" src="https://github.com/user-attachments/assets/bfed3be4-3723-43de-945d-0b800b13d926" />
+<img width="518" height="422" alt="image" src="https://github.com/user-attachments/assets/a1653075-2b67-4f30-acc1-40faf83e6659" />
 
 **Playbook directive breakdown:**
 
@@ -406,13 +410,6 @@ stapp03                    : ok=2    changed=0    unreachable=0    failed=0    s
 
 
 
-
-<img width="518" height="279" alt="image" src="https://github.com/user-attachments/assets/f82db5dc-991a-4b0c-88ed-7a0ad32a0a97" />
-<img width="518" height="345" alt="image" src="https://github.com/user-attachments/assets/a275c18b-bd5d-4a71-8c04-00a0008c1bd2" />
-
-<img width="515" height="431" alt="image" src="https://github.com/user-attachments/assets/75f34007-2ae6-4611-9b7d-368658a42665" />
-<img width="518" height="419" alt="image" src="https://github.com/user-attachments/assets/bfed3be4-3723-43de-945d-0b800b13d926" />
-<img width="518" height="422" alt="image" src="https://github.com/user-attachments/assets/a1653075-2b67-4f30-acc1-40faf83e6659" />
 <img width="517" height="416" alt="image" src="https://github.com/user-attachments/assets/2609d661-26f4-4962-b19e-4d87931157a0" />
 <img width="516" height="425" alt="image" src="https://github.com/user-attachments/assets/b23ef89c-c63d-4741-aad5-02ee9ff41f63" />
 <img width="517" height="431" alt="image" src="https://github.com/user-attachments/assets/237ff90f-7b6a-4eba-8ad4-5e266cda47ca" />
