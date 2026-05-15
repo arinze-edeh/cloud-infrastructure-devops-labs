@@ -9,12 +9,13 @@
 * [Prerequisites](#prerequisites)
 * [Repository Structure](#repository-structure)
 * [Implementation Guide](#implementation-guide)
-  * [Phase 1: Inspect Existing Inventory and Configuration](#phase-1-inspect-existing-inventory-and-configuration)
-  * [Phase 2: Update Inventory with Privilege Escalation Credentials](#phase-2-update-inventory-with-privilege-escalation-credentials)
-  * [Phase 3: Author the Ansible Playbook](#phase-3-author-the-ansible-playbook)
-  * [Phase 4: Syntax Validation](#phase-4-syntax-validation)
-  * [Phase 5: Playbook Execution](#phase-5-playbook-execution)
-  * [Phase 6: Post-Deployment Verification](#phase-6-post-deployment-verification)
+  * [Phase 1: Inspect Existing Directory, Configuration, and Inventory](#phase-1-inspect-existing-directory-configuration-and-inventory)
+  * [Phase 2: Author the Ansible Playbook](#phase-2-author-the-ansible-playbook)
+  * [Phase 3: Update Inventory with Privilege Escalation Credentials](#phase-3-update-inventory-with-privilege-escalation-credentials)
+  * [Phase 4: Verify Playbook and Inventory Contents](#phase-4-verify-playbook-and-inventory-contents)
+  * [Phase 5: Syntax Validation](#phase-5-syntax-validation)
+  * [Phase 6: Playbook Execution](#phase-6-playbook-execution)
+  * [Phase 7: Post-Deployment Verification](#phase-7-post-deployment-verification)
 * [Playbook Task Breakdown](#playbook-task-breakdown)
 * [Errors Encountered and Resolutions](#errors-encountered-and-resolutions)
 * [Best Practices Applied](#best-practices-applied)
@@ -41,9 +42,9 @@ The playbook handles the complete server setup lifecycle: package installation, 
 ```
 jump-host (Ansible Control Node)
     |
-    |-- SSH --> stapp01 (tony@stapp01)  | httpd installed, content deployed
-    |-- SSH --> stapp02 (steve@stapp02) | httpd installed, content deployed
-    |-- SSH --> stapp03 (banner@stapp03)| httpd installed, content deployed
+    |-- SSH --> stapp01 (tony@stapp01)   | httpd installed, content deployed
+    |-- SSH --> stapp02 (steve@stapp02)  | httpd installed, content deployed
+    |-- SSH --> stapp03 (banner@stapp03) | httpd installed, content deployed
 ```
 
 All three app servers are targeted simultaneously using `hosts: all`. Privilege escalation via `sudo` is used on each node to perform privileged operations including package installation and service management.
@@ -75,9 +76,11 @@ All three app servers are targeted simultaneously using `hosts: all`. Privilege 
 
 ## Implementation Guide
 
-### Phase 1: Inspect Existing Inventory and Configuration
+### Phase 1: Inspect Existing Directory, Configuration, and Inventory
 
-Before authoring the playbook, the existing environment artifacts were inspected to understand the inventory structure and Ansible configuration in place.
+Before authoring any files, the existing environment artifacts were inspected to understand the working directory structure, Ansible configuration, and inventory in place.
+
+**Inspect the working directory:**
 
 ```bash
 ls -la /home/thor/ansible/
@@ -106,7 +109,7 @@ cat /home/thor/ansible/ansible.cfg
 host_key_checking = False
 ```
 
-`host_key_checking = False` disables SSH host key verification. This is appropriate in ephemeral lab environments where host keys are not pre-registered in `known_hosts`. It should not be used in production without compensating controls.
+`host_key_checking = False` disables SSH host key verification. This is appropriate in ephemeral environments where host keys are not pre-registered in `known_hosts`. It should not be used in production without compensating controls.
 
 **Inspect the existing inventory:**
 
@@ -122,47 +125,15 @@ stapp02 ansible_host=stapp02 ansible_ssh_pass=Am3ric@ ansible_user=steve
 stapp03 ansible_host=stapp03 ansible_ssh_pass=BigGr33n ansible_user=banner
 ```
 
-The inventory was functional for SSH connectivity, but lacked `ansible_become_pass` entries required for `sudo` privilege escalation during playbook execution.
+The inventory was functional for SSH connectivity but lacked `ansible_become_pass` entries required for `sudo` privilege escalation during playbook execution. This was noted for correction after the playbook was authored.
 
 *Screenshot: Terminal output showing `ls -la`, `ansible.cfg` content, and initial inventory content*
 
-<img width="509" height="308" alt="image" src="https://github.com/user-attachments/assets/08066865-2b6c-4884-9370-500f092aa049" />
-
 ---
 
-### Phase 2: Update Inventory with Privilege Escalation Credentials
+### Phase 2: Author the Ansible Playbook
 
-The existing inventory did not include `ansible_become_pass`, which is required when running tasks with `become: yes` and `become_method: sudo` against nodes where the remote user must authenticate to escalate. The inventory was rewritten to include this parameter for all three hosts.
-
-```bash
-cat > /home/thor/ansible/inventory << 'EOF'
-stapp01 ansible_host=stapp01 ansible_ssh_pass=Ir0nM@n ansible_user=tony ansible_become_pass=Ir0nM@n
-stapp02 ansible_host=stapp02 ansible_ssh_pass=Am3ric@ ansible_user=steve ansible_become_pass=Am3ric@
-stapp03 ansible_host=stapp03 ansible_ssh_pass=BigGr33n ansible_user=banner ansible_become_pass=BigGr33n
-EOF
-```
-
-**Verify the updated inventory:**
-
-```bash
-cat /home/thor/ansible/inventory
-```
-
-**Output:**
-
-```ini
-stapp01 ansible_host=stapp01 ansible_ssh_pass=Ir0nM@n ansible_user=tony ansible_become_pass=Ir0nM@n
-stapp02 ansible_host=stapp02 ansible_ssh_pass=Am3ric@ ansible_user=steve ansible_become_pass=Am3ric@
-stapp03 ansible_host=stapp03 ansible_ssh_pass=BigGr33n ansible_user=banner ansible_become_pass=BigGr33n
-```
-
-*Screenshot: Updated inventory file confirming `ansible_become_pass` present for all three hosts*
-
----
-
-### Phase 3: Author the Ansible Playbook
-
-The playbook was written to `/home/thor/ansible/playbook.yml`. It targets all hosts defined in the inventory, escalates privileges using `sudo`, and executes five ordered tasks.
+With the environment understood, the playbook was authored at `/home/thor/ansible/playbook.yml`. It targets all hosts defined in the inventory, escalates privileges using `sudo`, and executes five ordered tasks.
 
 **Note:** The `blockinfile` module was used without a custom `marker` parameter, relying on the default Ansible-managed block markers (`# BEGIN ANSIBLE MANAGED BLOCK` / `# END ANSIBLE MANAGED BLOCK`), as required by the task specification.
 
@@ -212,7 +183,33 @@ cat > /home/thor/ansible/playbook.yml << 'EOF'
 EOF
 ```
 
-**Verify the written playbook:**
+*Screenshot: Terminal after heredoc write confirming playbook.yml created with no errors*
+
+---
+
+### Phase 3: Update Inventory with Privilege Escalation Credentials
+
+With the playbook authored and `become: yes` declared, the inventory was updated to include `ansible_become_pass` for each host. Without this, Ansible cannot authenticate the `sudo` escalation on nodes that require a password for privilege elevation, which would cause failures on every privileged task.
+
+The inventory was rewritten in full using a heredoc to ensure clean output with no residual lines from the original file:
+
+```bash
+cat > /home/thor/ansible/inventory << 'EOF'
+stapp01 ansible_host=stapp01 ansible_ssh_pass=Ir0nM@n ansible_user=tony ansible_become_pass=Ir0nM@n
+stapp02 ansible_host=stapp02 ansible_ssh_pass=Am3ric@ ansible_user=steve ansible_become_pass=Am3ric@
+stapp03 ansible_host=stapp03 ansible_ssh_pass=BigGr33n ansible_user=banner ansible_become_pass=BigGr33n
+EOF
+```
+
+*Screenshot: Terminal confirming inventory heredoc write completed successfully*
+
+---
+
+### Phase 4: Verify Playbook and Inventory Contents
+
+Both files were read back in full to confirm their contents matched the intended configuration before proceeding to validation and execution.
+
+**Verify the playbook:**
 
 ```bash
 cat /home/thor/ansible/playbook.yml
@@ -264,13 +261,27 @@ cat /home/thor/ansible/playbook.yml
         mode: '0655'
 ```
 
-*Screenshot: Playbook file content confirmed with correct task structure and indentation*
+**Verify the updated inventory:**
+
+```bash
+cat /home/thor/ansible/inventory
+```
+
+**Output:**
+
+```ini
+stapp01 ansible_host=stapp01 ansible_ssh_pass=Ir0nM@n ansible_user=tony ansible_become_pass=Ir0nM@n
+stapp02 ansible_host=stapp02 ansible_ssh_pass=Am3ric@ ansible_user=steve ansible_become_pass=Am3ric@
+stapp03 ansible_host=stapp03 ansible_ssh_pass=BigGr33n ansible_user=banner ansible_become_pass=BigGr33n
+```
+
+*Screenshot: Both `cat` outputs confirming playbook structure and updated inventory with `ansible_become_pass` on all three hosts*
 
 ---
 
-### Phase 4: Syntax Validation
+### Phase 5: Syntax Validation
 
-Before executing against live targets, the playbook was validated using Ansible's built-in syntax checker to catch YAML and structural errors without making changes.
+Before executing against live targets, the playbook was validated using Ansible's built-in syntax checker to catch YAML and structural errors without making any changes to the target nodes.
 
 ```bash
 cd /home/thor/ansible && ansible-playbook -i inventory playbook.yml --syntax-check
@@ -288,7 +299,7 @@ A clean return of only the playbook path with no errors confirms the playbook is
 
 ---
 
-### Phase 5: Playbook Execution
+### Phase 6: Playbook Execution
 
 The playbook was executed from the `/home/thor/ansible` directory using the standard invocation format required by the task specification.
 
@@ -337,15 +348,15 @@ stapp02                    : ok=6    changed=4    unreachable=0    failed=0    s
 stapp03                    : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-All three nodes completed with `ok=6`, `changed=4`, `unreachable=0`, and `failed=0`. The `Set owner, group and permissions on index.html` task returned `ok` (not `changed`) on all nodes, confirming the ownership and permissions set during the `file: state: touch` task were already correct and no further changes were needed.
+All three nodes completed with `ok=6`, `changed=4`, `unreachable=0`, and `failed=0`. The `Set owner, group and permissions on index.html` task returned `ok` rather than `changed` on all nodes, confirming the ownership and permissions applied during the `file: state: touch` task were already correct and no further modification was needed.
 
-*Screenshot: Full play recap showing all three app servers with zero failures*
+*Screenshot: Full play recap showing all three app servers with zero failures and zero unreachable*
 
 ---
 
-### Phase 6: Post-Deployment Verification
+### Phase 7: Post-Deployment Verification
 
-Following execution, each app server was verified individually using `sshpass` to authenticate and remotely inspect file content, permissions, and service state.
+Following execution, each app server was verified individually using `sshpass` to authenticate and remotely inspect file content, file metadata, and service state.
 
 **Verify stapp01:**
 
@@ -478,9 +489,23 @@ The rendered permission string on disk is `-rw-r-xr-x`, consistent with what was
 
 ## Errors Encountered and Resolutions
 
-### Error 1: SSH Authentication Failure During Manual Verification
+### Error 1: Missing `ansible_become_pass` in Original Inventory
 
-**Context:** After playbook execution, a manual SSH verification attempt was made using plain `ssh` without credentials, which caused repeated authentication failures on all three nodes.
+**Context:** The original inventory did not include `ansible_become_pass` entries. Without this, Ansible cannot authenticate the `sudo` escalation on nodes that require a password for privilege elevation. This was identified during playbook authoring when `become: yes` and `become_method: sudo` were declared at the play level, making it clear that escalation credentials would be required at runtime.
+
+**Resolution:** After the playbook was written, the inventory was rewritten in full to include `ansible_become_pass` for each host, matching the respective SSH password:
+
+```ini
+stapp01 ansible_host=stapp01 ansible_ssh_pass=Ir0nM@n ansible_user=tony ansible_become_pass=Ir0nM@n
+```
+
+This ensured all privileged tasks executed without escalation failures across all three nodes.
+
+---
+
+### Error 2: SSH Authentication Failure During Manual Post-Deployment Verification
+
+**Context:** After playbook execution, a manual SSH verification attempt was made using plain `ssh` without supplying credentials, which caused repeated authentication failures on all three nodes.
 
 **Commands attempted:**
 
@@ -515,31 +540,21 @@ This resolved the authentication failures and allowed all three nodes to be veri
 
 ---
 
-### Error 2: Missing `ansible_become_pass` in Original Inventory
-
-**Context:** The original inventory did not contain `ansible_become_pass` entries. Without this, Ansible cannot authenticate the `sudo` escalation on nodes that require a password for privilege elevation, which would have caused task failures on any privileged operation.
-
-**Resolution:** The inventory was rewritten before playbook execution to include `ansible_become_pass` for each host, matching the respective SSH password.
-
-```ini
-stapp01 ansible_host=stapp01 ansible_ssh_pass=Ir0nM@n ansible_user=tony ansible_become_pass=Ir0nM@n
-```
-
-This ensured `become: yes` with `become_method: sudo` functioned correctly across all nodes.
-
----
-
 ## Best Practices Applied
 
 * **Idempotent task design:** Each task was written to be safely re-executable. The `blockinfile` module manages its own content block markers to avoid duplicate content on repeated runs. The final `file` task re-enforces ownership and permissions idempotently, confirmed by `ok` status on first run.
 
-* **Privilege escalation scoped to play level:** `become: yes` and `become_method: sudo` were declared at the play level rather than per-task, ensuring all tasks run with the required privileges without redundant declarations.
+* **Privilege escalation scoped to play level:** `become: yes` and `become_method: sudo` were declared at the play level rather than per-task, ensuring all tasks run with the required privileges without redundant per-task declarations.
 
-* **`ansible_become_pass` in inventory:** Privilege escalation credentials were supplied via inventory variables rather than command-line flags, ensuring the playbook can be invoked with the standard `ansible-playbook -i inventory playbook.yml` without additional arguments.
+* **`ansible_become_pass` supplied via inventory:** Privilege escalation credentials were supplied through inventory variables rather than command-line flags, ensuring the playbook can be invoked with the standard `ansible-playbook -i inventory playbook.yml` format without any additional arguments.
 
-* **Syntax validation before execution:** `--syntax-check` was run before live execution to catch YAML or structural issues early, following standard CI pre-flight practice.
+* **Playbook authored before inventory finalized:** Writing the playbook first surfaced exactly which inventory variables were required by the automation. Declaring `become: yes` made it immediately clear that `ansible_become_pass` was missing from the existing inventory, allowing the correction to be made as a deliberate step before any execution attempt.
 
-* **Separation of file creation and content injection:** The `file: state: touch` task and the `blockinfile` task are kept as distinct steps. This maintains clear separation of concerns: existence and ownership are managed by `file`, while content is managed by `blockinfile`.
+* **Pre-execution content verification:** Both the playbook and the updated inventory were read back in full before syntax checking and execution, confirming the written content matched the intended configuration and eliminating the risk of executing against a malformed file.
+
+* **Syntax validation before execution:** `--syntax-check` was run before live execution to catch YAML or structural issues without making any changes to target nodes.
+
+* **Separation of file creation and content injection:** The `file: state: touch` task and the `blockinfile` task are kept as distinct steps, maintaining clear separation of concerns: existence and ownership are managed by `file`, while content is managed by `blockinfile`.
 
 * **Default `blockinfile` markers retained:** No custom `marker` was defined in the `blockinfile` task, intentionally preserving the default `# BEGIN ANSIBLE MANAGED BLOCK` / `# END ANSIBLE MANAGED BLOCK` markers as specified by the task requirements.
 
@@ -549,15 +564,17 @@ This ensured `become: yes` with `become_method: sudo` functioned correctly acros
 
 ## Lessons Learned
 
-* **Always include `ansible_become_pass` when remote users require sudo authentication.** The absence of this variable is a silent failure risk. Ansible will hang or fail at the first privileged task without it, producing non-obvious error output depending on the environment's sudo configuration.
+* **Always include `ansible_become_pass` when remote users require sudo authentication.** The absence of this variable is a silent failure risk. Ansible will hang or fail at the first privileged task without it, producing non-obvious error output depending on the target node's sudo configuration.
 
-* **`blockinfile` is idempotent by design.** It tracks its managed block using `# BEGIN ANSIBLE MANAGED BLOCK` and `# END ANSIBLE MANAGED BLOCK` markers by default. Re-running the playbook will not duplicate the content block. Custom markers should only be introduced when managing multiple distinct blocks in the same file.
+* **Author the playbook before finalizing the inventory.** Writing the playbook first surfaces which inventory variables are actually required. In this case, declaring `become: yes` immediately revealed that `ansible_become_pass` was missing from the original inventory, allowing the gap to be closed before execution rather than discovered through a failed run.
+
+* **`blockinfile` is idempotent by design.** It tracks its managed block using the default `# BEGIN ANSIBLE MANAGED BLOCK` and `# END ANSIBLE MANAGED BLOCK` markers. Re-running the playbook will not duplicate the content block. Custom markers should only be introduced when managing multiple distinct blocks within the same file.
 
 * **`file: state: touch` sets timestamps as well as creates files.** In production workflows, prefer `state: touch` only when you explicitly need creation-without-content behavior. If the file needs content from the start, use `copy` or `template` directly to avoid an extra task.
 
-* **The `ok` status on the final permissions task indicates idempotency, not failure.** When `file` is used to enforce ownership and mode after `blockinfile` has already written the file with those attributes, Ansible correctly reports `ok` rather than `changed`. This is expected and healthy behavior.
+* **The `ok` status on the final permissions task indicates idempotency, not failure.** When `file` is used to enforce ownership and mode after an earlier task has already applied those attributes, Ansible correctly reports `ok` rather than `changed`. This is expected and healthy behavior confirming the desired state was already reached.
 
-* **`sshpass` is essential for interactive password injection in non-interactive shell contexts.** In environments without SSH key-based authentication, `sshpass` is the correct tool for scripted verification against password-authenticated hosts. It should not be used as a long-term substitute for key-based authentication in production.
+* **`sshpass` is essential for non-interactive password injection in scripted verification contexts.** In environments without SSH key-based authentication, `sshpass` is the correct tool for scripted verification against password-authenticated hosts. It should not be used as a long-term substitute for key-based authentication in production.
 
 * **Ansible handles parallel execution across inventory hosts by default.** All three nodes received each task simultaneously based on the default forks configuration, which significantly reduces total deployment time compared to sequential node-by-node execution.
 
@@ -568,9 +585,22 @@ This ensured `become: yes` with `become_method: sudo` functioned correctly acros
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img width="509" height="289" alt="image" src="https://github.com/user-attachments/assets/2ecc57ca-d16d-4a1f-a3ae-ea8ad8453bf7" />
 <img width="506" height="333" alt="image" src="https://github.com/user-attachments/assets/89856969-8ecc-42f9-a1b0-2885a23fbb23" />
-
+<img width="509" height="308" alt="image" src="https://github.com/user-attachments/assets/08066865-2b6c-4884-9370-500f092aa049" />
 <img width="517" height="435" alt="image" src="https://github.com/user-attachments/assets/2a61a559-ab68-4f13-9db3-1fe55ceffb62" />
 <img width="518" height="313" alt="image" src="https://github.com/user-attachments/assets/baa0db9d-8ab9-4ea6-ae98-64e31d387fdd" />
 <img width="530" height="437" alt="image" src="https://github.com/user-attachments/assets/4ab76405-56b1-4a10-962e-d2b81baa6a72" />
