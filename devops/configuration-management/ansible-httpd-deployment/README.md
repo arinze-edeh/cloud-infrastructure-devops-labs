@@ -187,6 +187,8 @@ EOF
 
 *Screenshot: Terminal after heredoc write confirming playbook.yml created with no errors*
 
+<img width="517" height="435" alt="image" src="https://github.com/user-attachments/assets/2a61a559-ab68-4f13-9db3-1fe55ceffb62" />
+
 ---
 
 ### Phase 3: Update Inventory with Privilege Escalation Credentials
@@ -603,7 +605,6 @@ This resolved the authentication failures and allowed all three nodes to be veri
 <img width="509" height="289" alt="image" src="https://github.com/user-attachments/assets/2ecc57ca-d16d-4a1f-a3ae-ea8ad8453bf7" />
 <img width="506" height="333" alt="image" src="https://github.com/user-attachments/assets/89856969-8ecc-42f9-a1b0-2885a23fbb23" />
 
-<img width="517" height="435" alt="image" src="https://github.com/user-attachments/assets/2a61a559-ab68-4f13-9db3-1fe55ceffb62" />
 <img width="518" height="313" alt="image" src="https://github.com/user-attachments/assets/baa0db9d-8ab9-4ea6-ae98-64e31d387fdd" />
 <img width="530" height="437" alt="image" src="https://github.com/user-attachments/assets/4ab76405-56b1-4a10-962e-d2b81baa6a72" />
 <img width="517" height="273" alt="image" src="https://github.com/user-attachments/assets/a8fe8210-69fa-4312-b304-667deba285ac" />
