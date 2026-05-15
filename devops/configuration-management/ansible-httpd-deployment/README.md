@@ -306,6 +306,8 @@ A clean return of only the playbook path with no errors confirms the playbook is
 
 *Screenshot: Syntax check output showing clean validation with no errors*
 
+<img width="515" height="306" alt="image" src="https://github.com/user-attachments/assets/a7468308-baf5-42ab-b0f3-241ba30b80cd" />
+
 ---
 
 ### Phase 6: Playbook Execution
@@ -360,6 +362,8 @@ stapp03                    : ok=6    changed=4    unreachable=0    failed=0    s
 All three nodes completed with `ok=6`, `changed=4`, `unreachable=0`, and `failed=0`. The `Set owner, group and permissions on index.html` task returned `ok` rather than `changed` on all nodes, confirming the ownership and permissions applied during the `file: state: touch` task were already correct and no further modification was needed.
 
 *Screenshot: Full play recap showing all three app servers with zero failures and zero unreachable*
+
+<img width="519" height="434" alt="image" src="https://github.com/user-attachments/assets/515c73e4-e81e-4742-bc1f-159ff2b38432" />
 
 ---
 
@@ -605,13 +609,6 @@ This resolved the authentication failures and allowed all three nodes to be veri
 
 
 
-
-
-<img width="509" height="289" alt="image" src="https://github.com/user-attachments/assets/2ecc57ca-d16d-4a1f-a3ae-ea8ad8453bf7" />
-<img width="506" height="333" alt="image" src="https://github.com/user-attachments/assets/89856969-8ecc-42f9-a1b0-2885a23fbb23" />
-
-<img width="515" height="306" alt="image" src="https://github.com/user-attachments/assets/a7468308-baf5-42ab-b0f3-241ba30b80cd" />
-<img width="519" height="434" alt="image" src="https://github.com/user-attachments/assets/515c73e4-e81e-4742-bc1f-159ff2b38432" />
 <img width="517" height="137" alt="image" src="https://github.com/user-attachments/assets/e5a384ed-c7e1-4dc2-9c02-973635c7c03a" />
 <img width="545" height="228" alt="image" src="https://github.com/user-attachments/assets/cc3f1250-279a-4e14-baa3-e72f5491a7f2" />
 <img width="547" height="331" alt="image" src="https://github.com/user-attachments/assets/de05e44a-7d13-4058-bbb8-cebfe3f74da3" />
