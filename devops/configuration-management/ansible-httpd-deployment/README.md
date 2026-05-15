@@ -410,6 +410,8 @@ enabled
 
 *Screenshot: stapp01 verification showing correct file content, `-rw-r-xr-x` permissions, apache ownership, and httpd active/enabled*
 
+<img width="517" height="137" alt="image" src="https://github.com/user-attachments/assets/e5a384ed-c7e1-4dc2-9c02-973635c7c03a" />
+
 ---
 
 **Verify stapp02:**
@@ -451,6 +453,8 @@ enabled
 
 *Screenshot: stapp02 verification showing correct file content, permissions, apache ownership, and httpd active/enabled*
 
+<img width="545" height="228" alt="image" src="https://github.com/user-attachments/assets/cc3f1250-279a-4e14-baa3-e72f5491a7f2" />
+
 ---
 
 **Verify stapp03:**
@@ -475,6 +479,8 @@ enabled
 ```
 
 *Screenshot: stapp03 verification showing correct file content, permissions, apache ownership, and httpd active/enabled*
+
+<img width="547" height="331" alt="image" src="https://github.com/user-attachments/assets/de05e44a-7d13-4058-bbb8-cebfe3f74da3" />
 
 ---
 
@@ -590,25 +596,3 @@ This resolved the authentication failures and allowed all three nodes to be veri
 * **`sshpass` is essential for non-interactive password injection in scripted verification contexts.** In environments without SSH key-based authentication, `sshpass` is the correct tool for scripted verification against password-authenticated hosts. It should not be used as a long-term substitute for key-based authentication in production.
 
 * **Ansible handles parallel execution across inventory hosts by default.** All three nodes received each task simultaneously based on the default forks configuration, which significantly reduces total deployment time compared to sequential node-by-node execution.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="517" height="137" alt="image" src="https://github.com/user-attachments/assets/e5a384ed-c7e1-4dc2-9c02-973635c7c03a" />
-<img width="545" height="228" alt="image" src="https://github.com/user-attachments/assets/cc3f1250-279a-4e14-baa3-e72f5491a7f2" />
-<img width="547" height="331" alt="image" src="https://github.com/user-attachments/assets/de05e44a-7d13-4058-bbb8-cebfe3f74da3" />
