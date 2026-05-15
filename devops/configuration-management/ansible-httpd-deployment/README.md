@@ -129,6 +129,8 @@ The inventory was functional for SSH connectivity but lacked `ansible_become_pas
 
 *Screenshot: Terminal output showing `ls -la`, `ansible.cfg` content, and initial inventory content*
 
+<img width="509" height="308" alt="image" src="https://github.com/user-attachments/assets/08066865-2b6c-4884-9370-500f092aa049" />
+
 ---
 
 ### Phase 2: Author the Ansible Playbook
@@ -600,7 +602,7 @@ This resolved the authentication failures and allowed all three nodes to be veri
 
 <img width="509" height="289" alt="image" src="https://github.com/user-attachments/assets/2ecc57ca-d16d-4a1f-a3ae-ea8ad8453bf7" />
 <img width="506" height="333" alt="image" src="https://github.com/user-attachments/assets/89856969-8ecc-42f9-a1b0-2885a23fbb23" />
-<img width="509" height="308" alt="image" src="https://github.com/user-attachments/assets/08066865-2b6c-4884-9370-500f092aa049" />
+
 <img width="517" height="435" alt="image" src="https://github.com/user-attachments/assets/2a61a559-ab68-4f13-9db3-1fe55ceffb62" />
 <img width="518" height="313" alt="image" src="https://github.com/user-attachments/assets/baa0db9d-8ab9-4ea6-ae98-64e31d387fdd" />
 <img width="530" height="437" alt="image" src="https://github.com/user-attachments/assets/4ab76405-56b1-4a10-962e-d2b81baa6a72" />
