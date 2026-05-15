@@ -207,6 +207,8 @@ EOF
 
 *Screenshot: Terminal confirming inventory heredoc write completed successfully*
 
+<img width="518" height="313" alt="image" src="https://github.com/user-attachments/assets/baa0db9d-8ab9-4ea6-ae98-64e31d387fdd" />
+
 ---
 
 ### Phase 4: Verify Playbook and Inventory Contents
@@ -605,7 +607,6 @@ This resolved the authentication failures and allowed all three nodes to be veri
 <img width="509" height="289" alt="image" src="https://github.com/user-attachments/assets/2ecc57ca-d16d-4a1f-a3ae-ea8ad8453bf7" />
 <img width="506" height="333" alt="image" src="https://github.com/user-attachments/assets/89856969-8ecc-42f9-a1b0-2885a23fbb23" />
 
-<img width="518" height="313" alt="image" src="https://github.com/user-attachments/assets/baa0db9d-8ab9-4ea6-ae98-64e31d387fdd" />
 <img width="530" height="437" alt="image" src="https://github.com/user-attachments/assets/4ab76405-56b1-4a10-962e-d2b81baa6a72" />
 <img width="517" height="273" alt="image" src="https://github.com/user-attachments/assets/a8fe8210-69fa-4312-b304-667deba285ac" />
 <img width="515" height="306" alt="image" src="https://github.com/user-attachments/assets/a7468308-baf5-42ab-b0f3-241ba30b80cd" />
