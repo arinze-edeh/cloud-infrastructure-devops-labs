@@ -89,6 +89,8 @@ The `ansible.cfg` and `inventory` files are pre-provisioned. The `playbook.yml` 
 
 *Screenshot: Directory listing confirming ansible.cfg and inventory are present*
 
+<img width="506" height="317" alt="image" src="https://github.com/user-attachments/assets/d188976b-6027-4b79-b21c-a40f19adecaf" />
+
 ---
 
 ### Step 2: Review the Ansible Configuration File
@@ -355,7 +357,6 @@ In environments where target hosts may run different distributions (RHEL, CentOS
 
 
 
-<img width="506" height="317" alt="image" src="https://github.com/user-attachments/assets/d188976b-6027-4b79-b21c-a40f19adecaf" />
 <img width="508" height="319" alt="image" src="https://github.com/user-attachments/assets/383ae703-d670-456d-9e02-28d6a8c6d394" />
 <img width="508" height="336" alt="image" src="https://github.com/user-attachments/assets/f0084738-7129-4127-bd41-3782f777a8ae" />
 <img width="511" height="419" alt="image" src="https://github.com/user-attachments/assets/cbf27550-400f-4f65-8516-c80b78d8ef8d" />
