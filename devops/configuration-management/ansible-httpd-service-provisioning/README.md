@@ -136,6 +136,8 @@ Three app servers are defined with individual SSH usernames and passwords. At th
 
 *Screenshot: Initial inventory file contents*
 
+<img width="508" height="336" alt="image" src="https://github.com/user-attachments/assets/f0084738-7129-4127-bd41-3782f777a8ae" />
+
 ---
 
 ### Step 4: Author the Ansible Playbook
@@ -359,7 +361,6 @@ In environments where target hosts may run different distributions (RHEL, CentOS
 
 
 
-<img width="508" height="336" alt="image" src="https://github.com/user-attachments/assets/f0084738-7129-4127-bd41-3782f777a8ae" />
 <img width="511" height="419" alt="image" src="https://github.com/user-attachments/assets/cbf27550-400f-4f65-8516-c80b78d8ef8d" />
 <img width="506" height="313" alt="image" src="https://github.com/user-attachments/assets/a7b4cb07-8c53-4517-87c1-bd2ba9f953dd" />
 <img width="530" height="421" alt="image" src="https://github.com/user-attachments/assets/2c3865f2-a0ab-4d89-a916-6f26e91a24af" />
