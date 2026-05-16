@@ -112,6 +112,8 @@ host_key_checking = False
 
 *Screenshot: ansible.cfg content showing host_key_checking disabled*
 
+<img width="508" height="319" alt="image" src="https://github.com/user-attachments/assets/383ae703-d670-456d-9e02-28d6a8c6d394" />
+
 ---
 
 ### Step 3: Review the Inventory File
@@ -357,7 +359,6 @@ In environments where target hosts may run different distributions (RHEL, CentOS
 
 
 
-<img width="508" height="319" alt="image" src="https://github.com/user-attachments/assets/383ae703-d670-456d-9e02-28d6a8c6d394" />
 <img width="508" height="336" alt="image" src="https://github.com/user-attachments/assets/f0084738-7129-4127-bd41-3782f777a8ae" />
 <img width="511" height="419" alt="image" src="https://github.com/user-attachments/assets/cbf27550-400f-4f65-8516-c80b78d8ef8d" />
 <img width="506" height="313" alt="image" src="https://github.com/user-attachments/assets/a7b4cb07-8c53-4517-87c1-bd2ba9f953dd" />
