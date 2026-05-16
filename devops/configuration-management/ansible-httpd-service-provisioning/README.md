@@ -205,7 +205,10 @@ Verify the final inventory state:
 cat /home/thor/ansible/inventory
 ```
 
-*Screenshot: Updated inventory file with ansible_become_pass added for all three hosts*
+*Screenshots: Updated inventory file with ansible_become_pass added for all three hosts*
+
+<img width="530" height="421" alt="image" src="https://github.com/user-attachments/assets/2c3865f2-a0ab-4d89-a916-6f26e91a24af" />
+<img width="532" height="353" alt="image" src="https://github.com/user-attachments/assets/777999f8-0a97-45e4-9391-91df67392cf6" />
 
 ---
 
@@ -364,8 +367,6 @@ In environments where target hosts may run different distributions (RHEL, CentOS
 
 
 
-<img width="530" height="421" alt="image" src="https://github.com/user-attachments/assets/2c3865f2-a0ab-4d89-a916-6f26e91a24af" />
-<img width="532" height="353" alt="image" src="https://github.com/user-attachments/assets/777999f8-0a97-45e4-9391-91df67392cf6" />
 <img width="530" height="422" alt="image" src="https://github.com/user-attachments/assets/67001fd6-ea92-4bc6-9042-5a82d1eb8933" />
 <img width="529" height="419" alt="image" src="https://github.com/user-attachments/assets/c94de91e-f479-413f-8564-76337845e76b" />
 <img width="530" height="332" alt="image" src="https://github.com/user-attachments/assets/51987884-87d8-464b-955e-499b2ca81ea5" />
