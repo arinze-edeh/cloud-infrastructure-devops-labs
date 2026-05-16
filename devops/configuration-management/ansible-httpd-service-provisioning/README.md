@@ -239,6 +239,8 @@ The playbook content matches exactly what was written in Step 4. All indentation
 
 *Screenshot: cat output of playbook.yml confirming correct content*
 
+<img width="530" height="422" alt="image" src="https://github.com/user-attachments/assets/67001fd6-ea92-4bc6-9042-5a82d1eb8933" />
+
 ---
 
 ### Step 7: Verify the Updated Inventory Content
@@ -260,6 +262,8 @@ stapp03 ansible_host=stapp03 ansible_ssh_pass=BigGr33n ansible_user=banner ansib
 All three hosts are confirmed with SSH credentials and privilege escalation passwords correctly set. The inventory is ready for use.
 
 *Screenshot: cat output of the updated inventory confirming ansible_become_pass is present for all hosts*
+
+<img width="529" height="419" alt="image" src="https://github.com/user-attachments/assets/c94de91e-f479-413f-8564-76337845e76b" />
 
 ---
 
@@ -432,8 +436,6 @@ Ansible executes tasks across hosts in parallel by default, which is why the com
 
 
 
-<img width="530" height="422" alt="image" src="https://github.com/user-attachments/assets/67001fd6-ea92-4bc6-9042-5a82d1eb8933" />
-<img width="529" height="419" alt="image" src="https://github.com/user-attachments/assets/c94de91e-f479-413f-8564-76337845e76b" />
 <img width="530" height="332" alt="image" src="https://github.com/user-attachments/assets/51987884-87d8-464b-955e-499b2ca81ea5" />
 <img width="530" height="407" alt="image" src="https://github.com/user-attachments/assets/201e7022-be88-4eff-9ee4-da855e830815" />
 
