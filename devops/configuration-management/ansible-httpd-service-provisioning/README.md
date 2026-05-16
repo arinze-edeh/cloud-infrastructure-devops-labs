@@ -286,6 +286,8 @@ A clean output with only the playbook name returned confirms the playbook passes
 
 *Screenshot: Syntax check output showing playbook.yml with no errors*
 
+<img width="530" height="332" alt="image" src="https://github.com/user-attachments/assets/51987884-87d8-464b-955e-499b2ca81ea5" />
+
 ---
 
 ### Step 9: Execute the Playbook
@@ -436,7 +438,6 @@ Ansible executes tasks across hosts in parallel by default, which is why the com
 
 
 
-<img width="530" height="332" alt="image" src="https://github.com/user-attachments/assets/51987884-87d8-464b-955e-499b2ca81ea5" />
 <img width="530" height="407" alt="image" src="https://github.com/user-attachments/assets/201e7022-be88-4eff-9ee4-da855e830815" />
 
 
