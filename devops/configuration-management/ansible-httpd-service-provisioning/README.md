@@ -174,7 +174,10 @@ Write the following content:
 * The `package` module is used instead of `yum` or `dnf` to keep the playbook distribution-agnostic.
 * The `service` module handles both the immediate start (`state: started`) and boot persistence (`enabled: yes`) in a single task.
 
-*Screenshot: playbook.yml open in vi with the completed content*
+*Screenshots: playbook.yml open in vi with the completed content*
+
+<img width="511" height="419" alt="image" src="https://github.com/user-attachments/assets/cbf27550-400f-4f65-8516-c80b78d8ef8d" />
+<img width="506" height="313" alt="image" src="https://github.com/user-attachments/assets/a7b4cb07-8c53-4517-87c1-bd2ba9f953dd" />
 
 ---
 
@@ -361,8 +364,6 @@ In environments where target hosts may run different distributions (RHEL, CentOS
 
 
 
-<img width="511" height="419" alt="image" src="https://github.com/user-attachments/assets/cbf27550-400f-4f65-8516-c80b78d8ef8d" />
-<img width="506" height="313" alt="image" src="https://github.com/user-attachments/assets/a7b4cb07-8c53-4517-87c1-bd2ba9f953dd" />
 <img width="530" height="421" alt="image" src="https://github.com/user-attachments/assets/2c3865f2-a0ab-4d89-a916-6f26e91a24af" />
 <img width="532" height="353" alt="image" src="https://github.com/user-attachments/assets/777999f8-0a97-45e4-9391-91df67392cf6" />
 <img width="530" height="422" alt="image" src="https://github.com/user-attachments/assets/67001fd6-ea92-4bc6-9042-5a82d1eb8933" />
