@@ -302,6 +302,8 @@ Ansible connects to each host, gathers facts, installs `httpd`, and starts and e
 
 *Screenshot: Full playbook execution output showing PLAY RECAP with ok=3 changed=2 failed=0 for all hosts*
 
+<img width="530" height="407" alt="image" src="https://github.com/user-attachments/assets/201e7022-be88-4eff-9ee4-da855e830815" />
+
 ---
 
 ## Playbook Reference
@@ -422,22 +424,3 @@ Ansible executes tasks across hosts in parallel by default, which is why the com
 | `changed=0` when `httpd` was expected to install | Package was already present on the host | No action required; idempotency is working as expected |
 | Playbook runs but service is not accessible externally | Firewall blocking port 80 or 443 | Open the required ports using `firewalld` or `iptables` on the target hosts |
 | Syntax check passes but execution fails immediately | Connectivity or credential issue, not a YAML issue | Verify SSH reachability and confirm inventory credentials are correct |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="530" height="407" alt="image" src="https://github.com/user-attachments/assets/201e7022-be88-4eff-9ee4-da855e830815" />
-
-
