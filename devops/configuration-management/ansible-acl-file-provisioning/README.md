@@ -285,7 +285,10 @@ The inspection confirmed the file had been written correctly and completely, des
         state: present
 ```
 
-Screenshot: *cat output confirming the complete and correct playbook content on disk*
+Screenshots: *cat output confirming the complete and correct playbook content on disk*
+
+<img width="515" height="421" alt="image" src="https://github.com/user-attachments/assets/7c38208e-594d-4302-a9a1-1a931aa1b8de" />
+<img width="515" height="376" alt="image" src="https://github.com/user-attachments/assets/403b90a8-8530-42eb-8ef7-0885b8b55763" />
 
 ---
 
@@ -511,8 +514,6 @@ The informational message `getfacl: Removing leading '/' from absolute path name
 
 
 
-<img width="515" height="421" alt="image" src="https://github.com/user-attachments/assets/7c38208e-594d-4302-a9a1-1a931aa1b8de" />
-<img width="515" height="376" alt="image" src="https://github.com/user-attachments/assets/403b90a8-8530-42eb-8ef7-0885b8b55763" />
 <img width="515" height="230" alt="image" src="https://github.com/user-attachments/assets/d6547161-854a-4dc8-b5b2-0a0401431dde" />
 <img width="518" height="427" alt="image" src="https://github.com/user-attachments/assets/8480891e-ec99-42e9-bfcd-de464098ff30" />
 <img width="517" height="214" alt="image" src="https://github.com/user-attachments/assets/49bfc88c-b055-46bf-b543-94e14c197e53" />
