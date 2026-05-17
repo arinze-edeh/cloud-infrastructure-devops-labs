@@ -318,10 +318,13 @@ The clean output with no errors or warnings confirmed the playbook was structura
 
 Screenshot: *Syntax check output confirming no errors detected*
 
+<img width="515" height="230" alt="image" src="https://github.com/user-attachments/assets/d6547161-854a-4dc8-b5b2-0a0401431dde" />
+
 ### Step 7: Execute the Playbook
 
 ```bash
 ansible-playbook -i inventory playbook.yml
+```
 ```
 
 **Output:** ********************************************************************************************
@@ -367,6 +370,8 @@ All three hosts report `ok=3 changed=2`, confirming two state changes per host: 
 
 Screenshot: *Full playbook execution output from the Jump Host terminal*
 
+<img width="518" height="427" alt="image" src="https://github.com/user-attachments/assets/8480891e-ec99-42e9-bfcd-de464098ff30" />
+
 ---
 
 ## Verification
@@ -397,6 +402,8 @@ The ACL entry `group:tony:r--` confirms that group `tony` has been granted read-
 
 Screenshot: *getfacl output on stapp01 confirming group:tony read ACL*
 
+<img width="517" height="214" alt="image" src="https://github.com/user-attachments/assets/49bfc88c-b055-46bf-b543-94e14c197e53" />
+
 ---
 
 ### Verifying ACL on stapp02
@@ -423,6 +430,8 @@ The ACL entry `user:steve:rw-` confirms that user `steve` has been granted read 
 
 Screenshot: *getfacl output on stapp02 confirming user:steve read-write ACL*
 
+<img width="518" height="302" alt="image" src="https://github.com/user-attachments/assets/37f0a3fe-3ce2-45c8-b5e1-89c7c689b141" />
+
 ---
 
 ### Verifying ACL on stapp03
@@ -448,6 +457,8 @@ other::r--
 The ACL entry `group:banner:rw-` confirms that group `banner` has been granted read and write access, with the effective mask updated accordingly.
 
 Screenshot: *getfacl output on stapp03 confirming group:banner read-write ACL*
+
+<img width="518" height="367" alt="image" src="https://github.com/user-attachments/assets/59e45683-c59a-4680-a459-c70c84b1efc1" />
 
 ---
 
@@ -501,22 +512,3 @@ The informational message `getfacl: Removing leading '/' from absolute path name
 | `unreachable` hosts in PLAY RECAP | SSH connectivity issue or wrong credentials in inventory | Validate credentials and SSH access manually before re-running |
 | `Permission denied` during `become` | The remote user does not have sudo rights | Confirm sudoers configuration on the target host for the Ansible user |
 | ACL not reflected in `getfacl` output | Playbook ran without errors but ACL module silently skipped | Check that `state: present` is set and the `acl` package is functional with `setfacl -m u:test:r /tmp/test` manually |
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="515" height="230" alt="image" src="https://github.com/user-attachments/assets/d6547161-854a-4dc8-b5b2-0a0401431dde" />
-<img width="518" height="427" alt="image" src="https://github.com/user-attachments/assets/8480891e-ec99-42e9-bfcd-de464098ff30" />
-<img width="517" height="214" alt="image" src="https://github.com/user-attachments/assets/49bfc88c-b055-46bf-b543-94e14c197e53" />
-<img width="518" height="302" alt="image" src="https://github.com/user-attachments/assets/37f0a3fe-3ce2-45c8-b5e1-89c7c689b141" />
-<img width="518" height="367" alt="image" src="https://github.com/user-attachments/assets/59e45683-c59a-4680-a459-c70c84b1efc1" />
-
