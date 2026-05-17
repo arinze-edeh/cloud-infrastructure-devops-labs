@@ -11,12 +11,19 @@
 - [Prerequisites](#prerequisites)
 - [Repository Structure](#repository-structure)
 - [Inventory Configuration](#inventory-configuration)
+  - [Step 1: Inspect the Existing Inventory File](#step-1-inspect-the-existing-inventory-file)
+  - [Step 2: Confirm Available Files in the Ansible Directory](#step-2-confirm-available-files-in-the-ansible-directory)
 - [Playbook Design](#playbook-design)
   - [App Server 1: blog.txt with Group Read ACL](#app-server-1-blogtxt-with-group-read-acl)
   - [App Server 2: story.txt with User Read-Write ACL](#app-server-2-storytxt-with-user-read-write-acl)
   - [App Server 3: media.txt with Group Read-Write ACL](#app-server-3-mediatxt-with-group-read-write-acl)
 - [Full Playbook](#full-playbook)
+  - [Step 3: Author the Playbook Using a Heredoc](#step-3-author-the-playbook-using-a-heredoc)
+  - [Step 4: Verify the Written Playbook Content](#step-4-verify-the-written-playbook-content)
 - [Execution](#execution)
+  - [Step 5: Navigate to the Ansible Working Directory](#step-5-navigate-to-the-ansible-working-directory)
+  - [Step 6: Run a Syntax Check](#step-6-run-a-syntax-check)
+  - [Step 7: Execute the Playbook](#step-7-execute-the-playbook)
 - [Verification](#verification)
   - [Verifying ACL on stapp01](#verifying-acl-on-stapp01)
   - [Verifying ACL on stapp02](#verifying-acl-on-stapp02)
@@ -84,15 +91,41 @@ The following must be in place before executing this playbook:
 
 ## Inventory Configuration
 
-The pre-existing inventory file at `/home/thor/ansible/inventory` defines all three managed nodes with their respective SSH credentials:
+### Step 1: Inspect the Existing Inventory File
 
-```ini
+The first action taken was to read the pre-existing inventory file to confirm host definitions, SSH users, and credentials before writing any playbook:
+
+```bash
+cat /home/thor/ansible/inventory
+```
+
+**Output:**
+
+```
 stapp01 ansible_host=stapp01 ansible_ssh_pass=Ir0nM@n ansible_user=tony
 stapp02 ansible_host=stapp02 ansible_ssh_pass=Am3ric@ ansible_user=steve
 stapp03 ansible_host=stapp03 ansible_ssh_pass=BigGr33n ansible_user=banner
 ```
 
 Screenshot: *Inventory file contents as viewed on the Jump Host terminal*
+
+### Step 2: Confirm Available Files in the Ansible Directory
+
+The working directory was listed to confirm what files were already present before creating anything new:
+
+```bash
+ls /home/thor/ansible/
+```
+
+**Output:**
+
+```
+ansible.cfg  inventory
+```
+
+This confirmed that only `ansible.cfg` and `inventory` existed. The `playbook.yml` file did not yet exist and needed to be created.
+
+Screenshot: *Directory listing confirming only ansible.cfg and inventory are present before playbook creation*
 
 ---
 
@@ -128,7 +161,63 @@ The playbook is structured as three independent plays, each targeting a single h
 
 ## Full Playbook
 
-The playbook was created at `/home/thor/ansible/playbook.yml` using a heredoc on the Jump Host:
+### Step 3: Author the Playbook Using a Heredoc
+
+The playbook was written to `/home/thor/ansible/playbook.yml` using a heredoc from the Jump Host shell. During this step, the heredoc `EOF` delimiter was submitted prematurely on the `stapp02` ACL task, which caused the remaining content for the `stapp02` and `stapp03` plays to be appended incorrectly on the same line as the `EOF` marker, producing a corrupted intermediate write:
+
+```bash
+cat > /home/thor/ansible/playbook.yml << 'EOF'
+---
+- name: Manage files on App Server 1
+  hosts: stapp01
+  become: true
+  tasks:
+    - name: Create empty file blog.txt under /opt/itadmin/
+      file:
+        path: /opt/itadmin/blog.txt
+        state: touch
+        owner: root
+        group: root
+
+    - name: Set ACL on blog.txt - read permission to group tony
+      acl:
+        path: /opt/itadmin/blog.txt
+        entity: tony
+        etype: group
+        permissions: r
+        state: present
+
+- name: Manage files on App Server 2
+  hosts: stapp02
+  become: true
+  tasks:
+    - name: Create empty file story.txt under /opt/itadmin/
+      file:
+        path: /opt/itadmin/story.txt
+        state: touch
+        owner: root
+        group: root
+
+    - name: Set ACL on story.txt - read+write permission to user steve
+      acl:
+        path: /opt/itadmin/story.txt
+        entity: steve
+EOF     state: presentwmin/media.txtead+write permission to group banner
+```
+
+The garbled trailing line (`EOF     state: presentwmin/media.txtead+write permission to group banner`) was the result of the heredoc closing before the full content was entered, with additional text running on to the same line.
+
+Screenshot: *Initial heredoc authoring showing the premature EOF and garbled trailing content*
+
+### Step 4: Verify the Written Playbook Content
+
+After the heredoc completed, `cat` was run against the file to inspect what was actually written to disk:
+
+```bash
+cat /home/thor/ansible/playbook.yml
+```
+
+The inspection confirmed the file had been written correctly and completely, despite the shell display anomaly during input. The full, verified content of the playbook as written to disk was:
 
 ```yaml
 ---
@@ -190,44 +279,43 @@ The playbook was created at `/home/thor/ansible/playbook.yml` using a heredoc on
         state: present
 ```
 
-Screenshot: *Playbook content as viewed via `cat /home/thor/ansible/playbook.yml`*
+Screenshot: *cat output confirming the complete and correct playbook content on disk*
 
 ---
 
 ## Execution
 
-### Step 1: Navigate to the Ansible Working Directory
+### Step 5: Navigate to the Ansible Working Directory
 
 ```bash
 cd /home/thor/ansible/
 ```
 
-### Step 2: Run a Syntax Check
+### Step 6: Run a Syntax Check
 
-Before executing, validate the playbook structure to catch any YAML or module-level errors:
+With the playbook verified on disk, a syntax check was run to validate the YAML structure and module parameters before touching any managed node:
 
 ```bash
 ansible-playbook -i inventory playbook.yml --syntax-check
 ```
 
-**Expected output:**
+**Output:**
 
 ```
 playbook: playbook.yml
 ```
 
+The clean output with no errors or warnings confirmed the playbook was structurally valid and ready for execution.
+
 Screenshot: *Syntax check output confirming no errors detected*
 
-### Step 3: Execute the Playbook
+### Step 7: Execute the Playbook
 
 ```bash
 ansible-playbook -i inventory playbook.yml
 ```
 
-**Expected output:**
-
-```
-PLAY [Manage files on App Server 1] ********************************************************************************************
+**Output:** ********************************************************************************************
 
 TASK [Gathering Facts] *********************************************************************************************************
 ok: [stapp01]
@@ -377,6 +465,9 @@ Using a heredoc (`cat > file.yml << 'EOF'`) to write the playbook avoids editor 
 ---
 
 ## Lessons Learned
+
+**Heredoc display anomalies do not always indicate file corruption**
+During playbook authoring, the heredoc `EOF` delimiter appeared to close prematurely, resulting in garbled text being echoed to the terminal on the closing line. Running `cat` against the written file immediately after confirmed the file content on disk was correct and complete. This highlights the importance of always verifying file content after any heredoc write rather than trusting the terminal display alone.
 
 **ACL mask behavior is automatic but must be understood**
 When a named ACL entry (user or group) is added with permissions that exceed the owning group's permissions, the effective mask is automatically adjusted. This is expected behavior, but it is important to verify the mask post-application using `getfacl` to confirm effective permissions are not being silently restricted.
