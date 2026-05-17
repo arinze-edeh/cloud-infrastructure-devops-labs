@@ -213,6 +213,8 @@ The garbled trailing line (`EOF     state: presentwmin/media.txtead+write permis
 
 Screenshot: *Initial heredoc authoring showing the premature EOF and garbled trailing content*
 
+<img width="517" height="431" alt="image" src="https://github.com/user-attachments/assets/845a917d-dfad-46d0-812e-e6f706dcceeb" />
+
 ### Step 4: Verify the Written Playbook Content
 
 After the heredoc completed, `cat` was run against the file to inspect what was actually written to disk:
@@ -509,7 +511,6 @@ The informational message `getfacl: Removing leading '/' from absolute path name
 
 
 
-<img width="517" height="431" alt="image" src="https://github.com/user-attachments/assets/845a917d-dfad-46d0-812e-e6f706dcceeb" />
 <img width="515" height="421" alt="image" src="https://github.com/user-attachments/assets/7c38208e-594d-4302-a9a1-1a931aa1b8de" />
 <img width="515" height="376" alt="image" src="https://github.com/user-attachments/assets/403b90a8-8530-42eb-8ef7-0885b8b55763" />
 <img width="515" height="230" alt="image" src="https://github.com/user-attachments/assets/d6547161-854a-4dc8-b5b2-0a0401431dde" />
