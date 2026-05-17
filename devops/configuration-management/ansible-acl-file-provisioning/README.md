@@ -109,6 +109,8 @@ stapp03 ansible_host=stapp03 ansible_ssh_pass=BigGr33n ansible_user=banner
 
 Screenshot: *Inventory file contents as viewed on the Jump Host terminal*
 
+<img width="509" height="371" alt="image" src="https://github.com/user-attachments/assets/b2063e16-5dc6-43a6-9414-b3dc70d8a4f0" />
+
 ### Step 2: Confirm Available Files in the Ansible Directory
 
 The working directory was listed to confirm what files were already present before creating anything new:
@@ -505,7 +507,6 @@ The informational message `getfacl: Removing leading '/' from absolute path name
 
 
 
-<img width="509" height="371" alt="image" src="https://github.com/user-attachments/assets/b2063e16-5dc6-43a6-9414-b3dc70d8a4f0" />
 <img width="509" height="361" alt="image" src="https://github.com/user-attachments/assets/fe6953df-424f-4979-94cd-1a981228a216" />
 <img width="517" height="431" alt="image" src="https://github.com/user-attachments/assets/845a917d-dfad-46d0-812e-e6f706dcceeb" />
 <img width="515" height="421" alt="image" src="https://github.com/user-attachments/assets/7c38208e-594d-4302-a9a1-1a931aa1b8de" />
