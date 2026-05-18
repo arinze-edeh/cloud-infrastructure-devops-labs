@@ -341,6 +341,8 @@ All five tasks (including `Gathering Facts`) completed with `ok=5` and `changed=
 
 **Screenshot: Full playbook execution output with PLAY RECAP showing ok=5 changed=4 on all three hosts**
 
+<img width="516" height="393" alt="image" src="https://github.com/user-attachments/assets/41dd05a9-fcc4-4891-8647-199cbaf6cbe4" />
+
 ---
 
 ### Step 8: Post-Deployment Verification
@@ -470,7 +472,6 @@ Verification confirmed:
 
 <img width="512" height="348" alt="image" src="https://github.com/user-attachments/assets/d6e3dbb2-b141-4c5b-b2b1-3f8e2f8f9292" />
 
-<img width="516" height="393" alt="image" src="https://github.com/user-attachments/assets/41dd05a9-fcc4-4891-8647-199cbaf6cbe4" />
 <img width="518" height="388" alt="image" src="https://github.com/user-attachments/assets/3a297613-b891-4750-b170-22938b419dab" />
 <img width="518" height="250" alt="image" src="https://github.com/user-attachments/assets/6b6c96d9-3213-45c3-9845-6dbc52d214c4" />
 
