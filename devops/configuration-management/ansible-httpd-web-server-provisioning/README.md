@@ -201,6 +201,8 @@ All three application servers returned `pong`, confirming SSH connectivity and P
 
 **Screenshot: Ansible ping output confirming connectivity to stapp01, stapp02, stapp03**
 
+<img width="511" height="319" alt="image" src="https://github.com/user-attachments/assets/b0b5387a-0c9a-47d4-8231-01c4ea558207" />
+
 ---
 
 ### Step 4: Author the Ansible Playbook
@@ -254,6 +256,8 @@ EOF
 ```
 
 **Screenshot: Heredoc playbook write command on jump-host**
+
+<img width="517" height="435" alt="image" src="https://github.com/user-attachments/assets/2501467f-22f1-4d59-83d4-b60bd0512c77" />
 
 ---
 
@@ -462,8 +466,6 @@ Verification confirmed:
 
 <img width="512" height="348" alt="image" src="https://github.com/user-attachments/assets/d6e3dbb2-b141-4c5b-b2b1-3f8e2f8f9292" />
 
-<img width="511" height="319" alt="image" src="https://github.com/user-attachments/assets/b0b5387a-0c9a-47d4-8231-01c4ea558207" />
-<img width="517" height="435" alt="image" src="https://github.com/user-attachments/assets/2501467f-22f1-4d59-83d4-b60bd0512c77" />
 <img width="514" height="434" alt="image" src="https://github.com/user-attachments/assets/afdde6e9-9c37-4d3f-9af3-9370bbf4e769" />
 <img width="514" height="401" alt="image" src="https://github.com/user-attachments/assets/5cb75ae0-b571-4b3b-94c6-3f87c1f58f95" />
 <img width="516" height="393" alt="image" src="https://github.com/user-attachments/assets/41dd05a9-fcc4-4891-8647-199cbaf6cbe4" />
