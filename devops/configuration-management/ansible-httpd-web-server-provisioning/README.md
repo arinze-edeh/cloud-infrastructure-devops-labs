@@ -160,6 +160,8 @@ host_key_checking = False
 
 **Screenshot: Ansible version output and ansible.cfg contents**
 
+<img width="511" height="386" alt="image" src="https://github.com/user-attachments/assets/aaa52578-aeba-4ce2-858c-dbd1a3d433c2" />
+
 ---
 
 ### Step 3: Change into Working Directory and Validate Connectivity
@@ -459,7 +461,7 @@ Verification confirmed:
 <img width="511" height="312" alt="image" src="https://github.com/user-attachments/assets/0aa7ef92-a5a7-46ef-a250-0d4ba9fb1557" />
 
 <img width="512" height="348" alt="image" src="https://github.com/user-attachments/assets/d6e3dbb2-b141-4c5b-b2b1-3f8e2f8f9292" />
-<img width="511" height="386" alt="image" src="https://github.com/user-attachments/assets/aaa52578-aeba-4ce2-858c-dbd1a3d433c2" />
+
 <img width="511" height="319" alt="image" src="https://github.com/user-attachments/assets/b0b5387a-0c9a-47d4-8231-01c4ea558207" />
 <img width="517" height="435" alt="image" src="https://github.com/user-attachments/assets/2501467f-22f1-4d59-83d4-b60bd0512c77" />
 <img width="514" height="434" alt="image" src="https://github.com/user-attachments/assets/afdde6e9-9c37-4d3f-9af3-9370bbf4e769" />
