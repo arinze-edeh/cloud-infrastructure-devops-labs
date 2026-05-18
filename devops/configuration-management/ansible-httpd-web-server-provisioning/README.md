@@ -464,15 +464,3 @@ Verification confirmed:
 | File ownership set to `apache:apache` | Confirmed |
 | File permissions set to `0655` | Confirmed |
 | Zero failures across all hosts | Confirmed (PLAY RECAP: failed=0 on all) |
-
-
-
-
-
-
-<img width="511" height="312" alt="image" src="https://github.com/user-attachments/assets/0aa7ef92-a5a7-46ef-a250-0d4ba9fb1557" />
-
-<img width="512" height="348" alt="image" src="https://github.com/user-attachments/assets/d6e3dbb2-b141-4c5b-b2b1-3f8e2f8f9292" />
-
-<img width="518" height="388" alt="image" src="https://github.com/user-attachments/assets/3a297613-b891-4750-b170-22938b419dab" />
-
