@@ -125,6 +125,8 @@ stapp03 ansible_host=stapp03 ansible_ssh_pass=BigGr33n ansible_user=banner
 
 **Screenshot: Directory listing and inventory file contents on jump-host**
 
+<img width="511" height="369" alt="image" src="https://github.com/user-attachments/assets/de1a8bcc-012b-42a3-ac2e-e0c75d940403" />
+
 ---
 
 ### Step 2: Verify Ansible Version and Runtime Configuration
@@ -455,7 +457,7 @@ Verification confirmed:
 
 
 <img width="511" height="312" alt="image" src="https://github.com/user-attachments/assets/0aa7ef92-a5a7-46ef-a250-0d4ba9fb1557" />
-<img width="511" height="369" alt="image" src="https://github.com/user-attachments/assets/de1a8bcc-012b-42a3-ac2e-e0c75d940403" />
+
 <img width="512" height="348" alt="image" src="https://github.com/user-attachments/assets/d6e3dbb2-b141-4c5b-b2b1-3f8e2f8f9292" />
 <img width="511" height="386" alt="image" src="https://github.com/user-attachments/assets/aaa52578-aeba-4ce2-858c-dbd1a3d433c2" />
 <img width="511" height="319" alt="image" src="https://github.com/user-attachments/assets/b0b5387a-0c9a-47d4-8231-01c4ea558207" />
