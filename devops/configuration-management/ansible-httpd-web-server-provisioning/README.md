@@ -271,6 +271,8 @@ cat /home/thor/ansible/playbook.yml
 
 **Screenshot: Full playbook content displayed via cat on jump-host**
 
+<img width="514" height="434" alt="image" src="https://github.com/user-attachments/assets/afdde6e9-9c37-4d3f-9af3-9370bbf4e769" />
+
 ---
 
 ### Step 6: Syntax Validation
@@ -288,6 +290,8 @@ playbook: playbook.yml
 The clean output (returning only the playbook filename with no errors) confirmed the playbook was syntactically valid and safe to execute.
 
 **Screenshot: Syntax check output confirming zero errors**
+
+<img width="514" height="401" alt="image" src="https://github.com/user-attachments/assets/5cb75ae0-b571-4b3b-94c6-3f87c1f58f95" />
 
 ---
 
@@ -466,8 +470,6 @@ Verification confirmed:
 
 <img width="512" height="348" alt="image" src="https://github.com/user-attachments/assets/d6e3dbb2-b141-4c5b-b2b1-3f8e2f8f9292" />
 
-<img width="514" height="434" alt="image" src="https://github.com/user-attachments/assets/afdde6e9-9c37-4d3f-9af3-9370bbf4e769" />
-<img width="514" height="401" alt="image" src="https://github.com/user-attachments/assets/5cb75ae0-b571-4b3b-94c6-3f87c1f58f95" />
 <img width="516" height="393" alt="image" src="https://github.com/user-attachments/assets/41dd05a9-fcc4-4891-8647-199cbaf6cbe4" />
 <img width="518" height="388" alt="image" src="https://github.com/user-attachments/assets/3a297613-b891-4750-b170-22938b419dab" />
 <img width="518" height="250" alt="image" src="https://github.com/user-attachments/assets/6b6c96d9-3213-45c3-9845-6dbc52d214c4" />
