@@ -268,6 +268,8 @@ The single-quoted `'EOF'` delimiter prevents the shell from expanding any variab
 
 > Screenshot: heredoc command overwriting playbook.yml with stapp03 as the target host
 
+<img width="514" height="299" alt="image" src="https://github.com/user-attachments/assets/c47d3e0d-14b6-4136-8fe6-54717c84ec39" />
+
 ---
 
 ### Step 7: Verify the Updated Playbook
@@ -290,6 +292,8 @@ thor@jump-host ~$ cat ~/ansible/playbook.yml
 The `hosts` field now correctly points to `stapp03`. Privilege escalation is retained and the `role/httpd` role reference is intact.
 
 > Screenshot: Updated playbook.yml confirming stapp03 is set as the target host
+
+<img width="515" height="386" alt="image" src="https://github.com/user-attachments/assets/313d9125-e646-4726-9e06-631c926ca3a7" />
 
 ---
 
@@ -569,8 +573,6 @@ Connection to stapp03 closed.
 
 
 
-<img width="514" height="299" alt="image" src="https://github.com/user-attachments/assets/c47d3e0d-14b6-4136-8fe6-54717c84ec39" />
-<img width="515" height="386" alt="image" src="https://github.com/user-attachments/assets/313d9125-e646-4726-9e06-631c926ca3a7" />
 <img width="519" height="233" alt="image" src="https://github.com/user-attachments/assets/119e6545-7603-4c4f-8d7c-640c38460cba" />
 <img width="515" height="269" alt="image" src="https://github.com/user-attachments/assets/78075f9e-721b-43a7-a5d1-01886063bb6f" />
 <img width="515" height="296" alt="image" src="https://github.com/user-attachments/assets/4c917aa4-95d1-4d11-b170-fcac1a5b3c88" />
