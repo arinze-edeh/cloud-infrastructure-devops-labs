@@ -577,19 +577,3 @@ Connection to stapp03 closed.
 | `service` module | Service lifecycle management (start/enable) |
 | `template` module | Jinja2 template rendering and remote file deployment |
 | SSH | Secure remote access from jump-host to application server |
-
-
-
-
-
-
-
-
-
-
-
-
-<img width="513" height="323" alt="image" src="https://github.com/user-attachments/assets/3f2d9f82-08b0-41d2-b0a3-742167a45be7" />
-<img width="514" height="378" alt="image" src="https://github.com/user-attachments/assets/f68528b1-22de-499d-85b8-156e1008245c" />
-
-
