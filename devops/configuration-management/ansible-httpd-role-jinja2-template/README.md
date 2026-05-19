@@ -343,6 +343,8 @@ The Jinja2 syntax is preserved exactly as written. The `{{ inventory_hostname }}
 
 > Screenshot: Template file content confirming the Jinja2 variable is intact on disk
 
+<img width="515" height="296" alt="image" src="https://github.com/user-attachments/assets/4c917aa4-95d1-4d11-b170-fcac1a5b3c88" />
+
 ---
 
 ### Step 11: Append the Template Deployment Task to the Role
@@ -373,6 +375,8 @@ The `>>` operator appends to the existing file, preserving the two original task
 | `mode` | `"0744"` | Owner read/write/execute; group and others read-only |
 
 > Screenshot: Appending the template deployment task to tasks/main.yml using the append heredoc operator
+
+<img width="515" height="319" alt="image" src="https://github.com/user-attachments/assets/a1522844-d31f-421f-94b2-bdb66ec144ec" />
 
 ---
 
@@ -577,8 +581,6 @@ Connection to stapp03 closed.
 
 
 
-<img width="515" height="296" alt="image" src="https://github.com/user-attachments/assets/4c917aa4-95d1-4d11-b170-fcac1a5b3c88" />
-<img width="515" height="319" alt="image" src="https://github.com/user-attachments/assets/a1522844-d31f-421f-94b2-bdb66ec144ec" />
 <img width="514" height="416" alt="image" src="https://github.com/user-attachments/assets/72aeef5b-d171-482a-9168-93b0ef1f1a72" />
 <img width="518" height="325" alt="image" src="https://github.com/user-attachments/assets/3a251137-103f-45b8-a6eb-54534bd2a0a0" />
 <img width="517" height="322" alt="image" src="https://github.com/user-attachments/assets/0ff15429-70db-46e3-ae9b-0a5a227b96ff" />
