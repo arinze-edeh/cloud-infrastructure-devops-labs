@@ -307,6 +307,8 @@ The `-p` flag ensures the command succeeds without error even if any parent dire
 
 > Screenshot: mkdir command creating the templates directory inside the httpd role
 
+<img width="519" height="233" alt="image" src="https://github.com/user-attachments/assets/119e6545-7603-4c4f-8d7c-640c38460cba" />
+
 ---
 
 ### Step 9: Create the Jinja2 Template File
@@ -320,6 +322,8 @@ EOF
 The template contains a single line with the `{{ inventory_hostname }}` Jinja2 variable. Ansible resolves this variable at runtime to the name of the host being targeted, which in this case will render as `stapp03`. The quoted heredoc delimiter `'EOF'` ensures the Jinja2 syntax is written to disk literally and is not interpreted by the shell.
 
 > Screenshot: heredoc command writing the Jinja2 template file with the inventory_hostname variable
+
+<img width="515" height="269" alt="image" src="https://github.com/user-attachments/assets/78075f9e-721b-43a7-a5d1-01886063bb6f" />
 
 ---
 
@@ -573,8 +577,6 @@ Connection to stapp03 closed.
 
 
 
-<img width="519" height="233" alt="image" src="https://github.com/user-attachments/assets/119e6545-7603-4c4f-8d7c-640c38460cba" />
-<img width="515" height="269" alt="image" src="https://github.com/user-attachments/assets/78075f9e-721b-43a7-a5d1-01886063bb6f" />
 <img width="515" height="296" alt="image" src="https://github.com/user-attachments/assets/4c917aa4-95d1-4d11-b170-fcac1a5b3c88" />
 <img width="515" height="319" alt="image" src="https://github.com/user-attachments/assets/a1522844-d31f-421f-94b2-bdb66ec144ec" />
 <img width="514" height="416" alt="image" src="https://github.com/user-attachments/assets/72aeef5b-d171-482a-9168-93b0ef1f1a72" />
