@@ -159,6 +159,8 @@ Three application servers are defined. `stapp03` is managed via the `banner` use
 
 > Screenshot: Inventory file showing all three application servers with their respective users and credentials
 
+<img width="517" height="347" alt="image" src="https://github.com/user-attachments/assets/b37c25d5-1903-41ce-9354-60cb2c13b488" />
+
 ---
 
 ### Step 3: Inspect the Existing Playbook
@@ -181,6 +183,8 @@ thor@jump-host ~$ cat ~/ansible/playbook.yml
 The `hosts` key is empty. The playbook has no execution target as written and must be corrected before it can run against any host.
 
 > Screenshot: Original playbook.yml showing the empty hosts field
+
+<img width="514" height="380" alt="image" src="https://github.com/user-attachments/assets/ec1a9c7e-c4b9-490f-80e6-98c8944630aa" />
 
 ---
 
@@ -561,8 +565,6 @@ Connection to stapp03 closed.
 
 
 
-<img width="517" height="347" alt="image" src="https://github.com/user-attachments/assets/b37c25d5-1903-41ce-9354-60cb2c13b488" />
-<img width="514" height="380" alt="image" src="https://github.com/user-attachments/assets/ec1a9c7e-c4b9-490f-80e6-98c8944630aa" />
 <img width="514" height="338" alt="image" src="https://github.com/user-attachments/assets/e9732a5a-0877-48d1-9e4b-7db851419ef6" />
 <img width="514" height="349" alt="image" src="https://github.com/user-attachments/assets/b18426ff-2a04-4c37-b080-ad6e756dfe6c" />
 <img width="514" height="299" alt="image" src="https://github.com/user-attachments/assets/c47d3e0d-14b6-4136-8fe6-54717c84ec39" />
