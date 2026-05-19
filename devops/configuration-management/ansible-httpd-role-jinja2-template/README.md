@@ -137,6 +137,8 @@ The `ansible/` directory is confirmed present under the `thor` home directory.
 
 > Screenshot: Jump-host home directory listing confirming the ansible directory is present
 
+<img width="498" height="311" alt="image" src="https://github.com/user-attachments/assets/e411b8f6-ea1d-426f-ae7e-fb15a10b2fa9" />
+
 ---
 
 ### Step 2: Review the Ansible Inventory
@@ -559,7 +561,6 @@ Connection to stapp03 closed.
 
 
 
-<img width="498" height="311" alt="image" src="https://github.com/user-attachments/assets/e411b8f6-ea1d-426f-ae7e-fb15a10b2fa9" />
 <img width="517" height="347" alt="image" src="https://github.com/user-attachments/assets/b37c25d5-1903-41ce-9354-60cb2c13b488" />
 <img width="514" height="380" alt="image" src="https://github.com/user-attachments/assets/ec1a9c7e-c4b9-490f-80e6-98c8944630aa" />
 <img width="514" height="338" alt="image" src="https://github.com/user-attachments/assets/e9732a5a-0877-48d1-9e4b-7db851419ef6" />
