@@ -529,6 +529,8 @@ Connection to stapp03 closed.
 
 > Screenshot: SSH session on stapp03 showing cat output and ls -la confirming rendered content, ownership, and permissions
 
+<img width="514" height="417" alt="image" src="https://github.com/user-attachments/assets/2e16452c-cba6-4b60-a864-271282f2baae" />
+
 ---
 
 ## Best Practices Applied
@@ -589,6 +591,5 @@ Connection to stapp03 closed.
 
 <img width="513" height="323" alt="image" src="https://github.com/user-attachments/assets/3f2d9f82-08b0-41d2-b0a3-742167a45be7" />
 <img width="514" height="378" alt="image" src="https://github.com/user-attachments/assets/f68528b1-22de-499d-85b8-156e1008245c" />
-<img width="514" height="417" alt="image" src="https://github.com/user-attachments/assets/2e16452c-cba6-4b60-a864-271282f2baae" />
 
 
