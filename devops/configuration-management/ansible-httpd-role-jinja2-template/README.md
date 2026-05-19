@@ -414,6 +414,8 @@ All three tasks are present in the correct order: package installation, service 
 
 > Screenshot: Final tasks/main.yml showing all three tasks in the correct sequence
 
+<img width="514" height="416" alt="image" src="https://github.com/user-attachments/assets/72aeef5b-d171-482a-9168-93b0ef1f1a72" />
+
 ---
 
 ### Step 13: Run Playbook Syntax Check
@@ -433,6 +435,8 @@ playbook: playbook.yml
 The clean output with no errors confirms the playbook structure, role reference, and task YAML are all syntactically valid. The directory was changed to `~/ansible` before running so that relative paths in `ansible.cfg` and the inventory resolve correctly.
 
 > Screenshot: Syntax check output returning cleanly with no errors
+
+<img width="518" height="325" alt="image" src="https://github.com/user-attachments/assets/3a251137-103f-45b8-a6eb-54534bd2a0a0" />
 
 ---
 
@@ -474,6 +478,8 @@ stapp03                    : ok=4    changed=3    unreachable=0    failed=0    s
 | `skipped` | 0 | No tasks were conditionally skipped |
 
 > Screenshot: Full ansible-playbook run output showing the play recap with ok=4 and changed=3
+
+<img width="517" height="322" alt="image" src="https://github.com/user-attachments/assets/0ff15429-70db-46e3-ae9b-0a5a227b96ff" />
 
 ---
 
@@ -581,9 +587,6 @@ Connection to stapp03 closed.
 
 
 
-<img width="514" height="416" alt="image" src="https://github.com/user-attachments/assets/72aeef5b-d171-482a-9168-93b0ef1f1a72" />
-<img width="518" height="325" alt="image" src="https://github.com/user-attachments/assets/3a251137-103f-45b8-a6eb-54534bd2a0a0" />
-<img width="517" height="322" alt="image" src="https://github.com/user-attachments/assets/0ff15429-70db-46e3-ae9b-0a5a227b96ff" />
 <img width="513" height="323" alt="image" src="https://github.com/user-attachments/assets/3f2d9f82-08b0-41d2-b0a3-742167a45be7" />
 <img width="514" height="378" alt="image" src="https://github.com/user-attachments/assets/f68528b1-22de-499d-85b8-156e1008245c" />
 <img width="514" height="417" alt="image" src="https://github.com/user-attachments/assets/2e16452c-cba6-4b60-a864-271282f2baae" />
