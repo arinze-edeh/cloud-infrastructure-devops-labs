@@ -214,6 +214,8 @@ The standard Ansible role skeleton is in place. Notably, there is no `templates/
 
 > Screenshot: find command output showing the full file tree with no templates directory present
 
+<img width="514" height="338" alt="image" src="https://github.com/user-attachments/assets/e9732a5a-0877-48d1-9e4b-7db851419ef6" />
+
 ---
 
 ### Step 5: Review the Existing Role Task File
@@ -242,6 +244,8 @@ thor@jump-host ~$ cat /home/thor/ansible/role/httpd/tasks/main.yml
 Two tasks are currently defined: package installation via `yum` and service activation via `service`. A third task for template-based file deployment will be appended after the template infrastructure is created.
 
 > Screenshot: Existing tasks/main.yml showing the two initial tasks before any modification
+
+<img width="514" height="349" alt="image" src="https://github.com/user-attachments/assets/b18426ff-2a04-4c37-b080-ad6e756dfe6c" />
 
 ---
 
@@ -565,8 +569,6 @@ Connection to stapp03 closed.
 
 
 
-<img width="514" height="338" alt="image" src="https://github.com/user-attachments/assets/e9732a5a-0877-48d1-9e4b-7db851419ef6" />
-<img width="514" height="349" alt="image" src="https://github.com/user-attachments/assets/b18426ff-2a04-4c37-b080-ad6e756dfe6c" />
 <img width="514" height="299" alt="image" src="https://github.com/user-attachments/assets/c47d3e0d-14b6-4136-8fe6-54717c84ec39" />
 <img width="515" height="386" alt="image" src="https://github.com/user-attachments/assets/313d9125-e646-4726-9e06-631c926ca3a7" />
 <img width="519" height="233" alt="image" src="https://github.com/user-attachments/assets/119e6545-7603-4c4f-8d7c-640c38460cba" />
