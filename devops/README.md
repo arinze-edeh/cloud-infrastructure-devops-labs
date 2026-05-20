@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**Production-grade DevOps engineering across Linux administration, containerization, Kubernetes orchestration, CI/CD pipeline architecture, configuration management, infrastructure-as-code, networking, and scripting automation.**
+**Production-style DevOps engineering across Linux administration, containerization, Kubernetes orchestration, CI/CD pipeline architecture, configuration management, infrastructure-as-code, networking, and scripting automation.**
 
 [![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)](./linux-administration)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](./docker)
@@ -19,7 +19,7 @@
 
 ## Overview
 
-This directory contains **100+ production-grade DevOps engineering implementations** organised across nine core domains. Each implementation addresses a specific infrastructure, automation, security, or operational challenge modelled on real-world production environments. The work spans the complete DevOps engineering lifecycle: from Linux system hardening and network security through container platform operations, Kubernetes cluster administration, multi-stage CI/CD pipeline architecture, Ansible configuration management, Terraform infrastructure provisioning, and Bash scripting automation.
+This directory contains **100+ production-style DevOps engineering implementations** organised across nine core domains. Each implementation addresses a specific infrastructure, automation, security, or operational challenge modelled on real-world production environments. The work spans the complete DevOps engineering lifecycle: from Linux system hardening and network security through container platform operations, Kubernetes cluster administration, multi-stage CI/CD pipeline architecture, Ansible configuration management, Terraform infrastructure provisioning, and Bash scripting automation.
 
 Every implementation is fully documented with configuration details, architectural decisions, and validation outcomes.
 
