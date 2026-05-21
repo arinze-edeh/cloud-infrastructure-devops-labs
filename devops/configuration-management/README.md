@@ -210,13 +210,7 @@ Each subdirectory is a self-contained project with its own `README.md` covering:
 - **Errors encountered and resolutions** where applicable
 - **Best practices and lessons learned**
 
-To reproduce any task, navigate to the relevant directory, review its `README.md`, and run:
-
-```bash
-ansible-playbook -i inventory playbook.yml
-```
-
-from within that directory. All tasks were executed on a RHEL-based jump host with Ansible Core 2.14.x and Python 3.9.
+All tasks were executed on a RHEL-based jump host with Ansible Core 2.14.x and Python 3.9.
 
 ---
 
