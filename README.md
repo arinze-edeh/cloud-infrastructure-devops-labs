@@ -250,5 +250,3 @@ Available for full-time positions, contract engagements, and technical interview
 </div>
 
 
-
-
