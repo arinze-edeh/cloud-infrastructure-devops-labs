@@ -1,6 +1,4 @@
 
-
-
 # Cloud and DevOps Engineering Portfolio 
 
 <div align="center">
