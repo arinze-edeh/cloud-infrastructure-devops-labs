@@ -1,4 +1,4 @@
-# Kubernetes DevOps Labs
+# Kubernetes
 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-v1.34.1-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 ![K3s](https://img.shields.io/badge/Distribution-K3s-FFC61C?style=flat-square&logo=k3s&logoColor=black)
