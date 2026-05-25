@@ -289,3 +289,7 @@ Each subdirectory is self-contained with its own `README.md` covering environmen
 - **Database and infrastructure:** `mariadb-service-recovery` → `postgresql-infrastructure` → `java-webapp-tomcat-systemd-deployment`
 
 All projects use the same Stratos Datacenter infrastructure (jump host + three application servers + dedicated DB and backup servers), so environment context carries across documents.
+
+
+
+
