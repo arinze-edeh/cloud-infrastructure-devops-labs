@@ -17,7 +17,7 @@
 
 ## Overview
 
-This directory contains **50+ production-grade Azure implementations** organized by service domain. Each project was executed against live Azure Free Labs subscriptions under organizational policy enforcement, mirroring real-world enterprise constraints: SKU restrictions, policy-blocked resource types, pre-existing resource groups, and multi-region deployment requirements.
+This directory contains **50+ production-style Azure implementations** organized by service domain. Each project was executed against live Azure Free Labs subscriptions under organizational policy enforcement, mirroring real-world enterprise constraints: SKU restrictions, policy-blocked resource types, pre-existing resource groups, and multi-region deployment requirements.
 
 The work spans foundational cloud administration through advanced multi-service architectures, and is documented to a standard suitable for audit trails, onboarding, and portfolio review. All implementations follow CLI-first patterns with explicit post-deployment verification before sign-off.
 
